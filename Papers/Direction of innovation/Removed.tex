@@ -1,0 +1,30 @@
+%the entrant to have a cost $c_{e1}$ that can reduce but not nullify the profits of the incumbent.\footnote{The model also works if we assume that every period there is probability p of transitioning to the next cost} In Bertrand this would be between $ [c_i,p_m]$, which represents the interval where the cost is low enough to bother the incumbent but has zero profits. If the first step of the incremental innovation is achieved, the second step of the process will occur automatically in the next period. In the second step of innovation, the cost of the entrant, $c_{e2}$ will be lower than the incumbents cost, $c_{e2}\in [c_{min},c_i]$. 
+
+%The incumbent is a firm which maximizes profit every period. The incumbent has the lowest starting cost $c_i$. The demand function faced by the incumbent is a linear function, $D(x)=1-x$ and so is the corresponding cost function.  In Bertrand competition the incumbent sets the price, which is $min[p^m,c_{ei}]$. 
+
+%\textcolor{orange}{The incumbent, his cost, his price, his demand}
+
+%The entrant chooses a technology and attempts to catch up to the incumbent. Initially the entrant begins with a non-competitive technology and develops its technology to reduce the cost. The initial cost of the entrant, $c_e$, is higher than the monopoly price of the incumbent, and subsequently, does not affect the price. The entrant has the option between two types of technologies, an incremental technology and a radical technology. 
+
+%\textcolor{orange}{The entrant, his choice and initial cost}
+
+
+
+
+
+\begin{comment}\begin{tikzpicture}
+    [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        node distance =.8cm,
+        place/.style={rectangle,draw=blue!50,fill=blue!20,thick,
+                      inner sep=0pt,minimum size=6mm}
+    ]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \node[place] (1) {$c_{e1}$};
+    \node[place] (2) [right=of 1] {$c_{e2}$};
+    
+    \draw [->,thick] (1.south west) to [bend left=55]  node[left]  {(1-q)}    (1.north west);
+    \draw [->,thick] (1.north east) to [bend left=15]  node[above] {q}  (2.north west);
+
+\end{tikzpicture}
+\end{comment}
+
+For the entrant the payoffs depend on the competitive framework. The most relevant thing to note about the entrants payoffs is that in Cournot profits can be achieved for a wider array of costs than in Bertrand. So in Bertrand, there is only one payoff, the entrant can only earn a profit with the superior technology. The initial technology, $c_i$ is too costly, the first stage innovation, $c_{e1}$ is not competitive relative to the incumbent and the profit with the second stage innovation is simply: $\pi_{e2}^m=(1-c_i)(c_{e2}-c_i)$.

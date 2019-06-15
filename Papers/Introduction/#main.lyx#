@@ -1,0 +1,1418 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\documentclass[AER]{AEA}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{tabularx}%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+
+
+\usepackage{enumitem}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{proposition}{Proposition}\newtheorem{definition}{Definition}\newtheorem{axiom}{Axiom}\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdftex,colorlinks,linkcolor={blue!50!black},citecolor={blue!50!black},urlcolor={blue!50!black}"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 2
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style unsrtnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0.4em
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The goal of this introduction will be to give the reader a general introduction
+ to how economics treats property rights.
+ We will give a brief exposition of the various methods by which economics
+ justifies the granting of property rights.
+ We will briefly first discuss the Coasian paradigm of property rights,
+ and the Hart Moore property rights as well as some other views.
+ We will then proceed to discuss how these approaches shed light on the
+ economic justification of intellectual property rights and the limitations
+ of such methods.
+\end_layout
+
+\begin_layout Standard
+We will then give a brief introduction to each article.
+ The first article aims to show that even if it is desirable to give a monopoly
+ on a good, this does not entail that property rights should also be used
+ against consumers.
+\end_layout
+
+\begin_layout Standard
+The second article uses the coase theorem but shows that the ability to
+ negotiate for the buyout of innovations causes firms to pursue innovations
+ that increase externalities.
+\end_layout
+
+\begin_layout Standard
+The third article is a general model of discounting, the aim of this paper
+ is to show that it is possible to define discounting as something other
+ than a preference, under this interpretation, the choices entrepreneurs
+ make is not a function of their preferences but a function of their environment.
+\end_layout
+
+\begin_layout Standard
+Finally the fourth model presents a general model of sequential innovation
+ in a network in an aim to show that royalties are in fact subject to Bertrand
+ like competition which.
+\end_layout
+
+\begin_layout Section
+The origins of the debate about private property
+\end_layout
+
+\begin_layout Standard
+Plato's most famous work, the Republic, is a treatise on an idealized society,
+ one that has managed to halt to a minimum it's own deterioration from the
+ perfect form.
+ Plato's view of property rights is purely instrumental in that it is something
+ that will help maintain the ideal society from deteriorating.
+ Plato views ownership as an important source of corruption that creates
+ clannish self interest and considerw the pannacea of this influence to
+ be the abolition of private property, .
+ In 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Politics
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ Aristotle takes a stand against his mentor and defends private property.
+ Aristotle reasons that without private property people would interfere
+ in each others affairs without being motivated by love.
+ Indeed Aristotle viewed the act of waiving your rights to property against
+ an individual a way to be virtuous, and a limitation of this right would
+ limit the ability to be virtuous.
+\end_layout
+
+\begin_layout Standard
+The debate has echoed for millennia, the modern reverbations of Plato and
+ Aristotle are to be found in Marx and Locke, repsectivvely.
+ At the time Marx was studying, the vogue of the times was to follow in
+ Hegels footsteps who espoused a more limited version of dialectics(the
+ process of thesis/antithesis/synethsis), and although Hegel ultimately
+ defended property rights based on his theory of person-hood, stating that
+ people are defined by their will and the only way to manifest their will
+ is through physical objects, Marx would take the platonic position.
+ Karl Marx claimed property rights is the means by which workers become
+ alienated from their labor.
+ The logic behind this is rather simple, if an employee adds 10 hours worth
+ of labor, he will necessarily be compensated less than 10 hours worth by
+ the property owner otherwise there would be no way of making a profit.
+ The echo of Aristotle, found in Lockes' second treatise on Government takes
+ a view of property that is both descriptive and normative.
+ Locke views property rights as a method of linking a person who is adding
+ value to that value.
+ This is done by mixing one's labor with the object or land which makes
+ the physical object inseparable from its founder.
+\end_layout
+
+\begin_layout Standard
+This debate has given rise to third paradigm of property rights devised
+ by Henry George.
+ In poverty and progress Henry George devised a system where property is
+ temporarily allocated to the highest bidder.
+ What is ingenious about the modern version of the Georgist scheme is that
+ it aims to eliminate land rends by making tenants bid their own rents.
+ This is claimed to be a method by which persons can be linked to the value
+ of their labor without also be attached to the value of the land.
+ The logic behind this is that if an agent knows he can gain 10 worth of
+ value due to her own effort and 20 due to the land, this agent will be
+ willing to pay 30.
+ Since anybody can bid for this land, the minimum value people are willing
+ to bid is 20(in the case when they cannot create value with the land).
+ In other words, whatever the bidding mechanism, the agents minimum bid
+ will be 20, which means the agent will not extract the value of the land
+ for herself.
+\end_layout
+
+\begin_layout Standard
+Modern economics has superceded much of the analysis that links value to
+ labor.
+ Value in the modern sense has been associated not with inputs but by the
+ tastes of agents and the relative scarcity of resources and profit by the
+ the relative advantage firms have in information, whether it be an edge
+ in production, taste, impulses of consumers etc.
+ This does not entail that property is disconnected from value, merely that
+ value is not an objective criterion.
+ In other words, the property is meant to protect the idiosyncatic priorities
+ of its owner and not value as an objective right per se.
+ Nevertheless modern economics is often concerned about efficiency and even
+ with such a restrictive criterion as subjective value, a surprising number
+ of conclusions are possible.
+ Economics treats property rights like it treats most legal fields, as instrumen
+ts to pareto or kaldor hicks or just brute utility maximization, as such
+ the difference between property/tort/contract law is simply the kind of
+ laws that are tweeked to achieve the same outcomes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+What is a property right?
+\end_layout
+
+\begin_layout Standard
+What is a property right? 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The presentation borrows from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Munzer1990"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ From an economics point of view the answer is quite simple: A property
+ right is simply the default contract, that is, if people do not agree on
+ a contract, property is what is taken as the baseline for settling disputes.
+ 'Property as the default' view is simple enough: Person A can contract
+ with person B that person B will not touch or use item Z without A's permission.
+ This in fact requires no property right at all.
+ What does require a property right is that all other people will also not
+ be able to do with z as they please.
+ If agents could all simultaneously consent or if there were but two agents
+ who could contract, there would be no need for property rights.
+ This inability to instantly discuss and resolve conflict with every individual
+ is called a transaction cost, this concept will be elaborated below.
+\end_layout
+
+\begin_layout Section
+The language of property rights
+\end_layout
+
+\begin_layout Standard
+Discussion of property rights can be broken down into four distinct questions.
+ 1) What are the assets that property rights protects? 2) From who is the
+ property protected? 3) What is the content of property protection.
+ 4) What is the enforcement mechanism by which property is to be protected.
+ Because answering these questions often lacks precision we use some legal
+ language 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hohfeld"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ It is convenient to speak of two categories of rights.
+ First order rights and second order rights.
+ First order rights are what is often called, the right to use or the right
+ to exclude.
+ The right to use is often called a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+privilege
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ and the right to exclude is called a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+claim
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Second order rights are rights about first order rights.
+ For instance when one talks of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+power
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ this is in reference to the right to transfer, waive or annul 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+claim
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ rights.
+ As such, the right to transfer property to someone else is a second order
+ right.
+ One can also speak of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+immunity
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+, which means that one has the right for his claim or privilege to something
+ to not be affected by others.
+ The idea of second order rights entirely entails the right to destroy and
+ to abandon, if someone does not have second order rights this entails the
+ agent has no right to destroy or abandon.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+for an interesting analysis of the right to destroy/abandon see, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Strahilevitz2005"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Strahilevitz2009"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Historically it seems like most ancient societies had widespread first
+ oder rights but it is only in the period preceeding the industrial revolution
+ that second order rights have have been expanded.
+\end_layout
+
+\begin_layout Standard
+To develop some intuition it isuseful to know how this taxonomy matches
+ with traditional economic ideas: A law that requires property owners to
+ allow access to some parties, this is a limitation of the first order right
+ of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+privilege
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+; A regulation stating that one may not consume or use one's land in a specific
+ way is similarly a reduction in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+claim
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ rights; A price control is a limitation on what price one can sell their
+ good for, as such it is a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+power
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ limitation, that is the condition under which ones transfers his right
+ is limited; A constitutional constraint increasing the cost of changes
+ in property rights is an example of a second order right of immunity.
+\end_layout
+
+\begin_layout Standard
+Similarly, the types of arrangements possible(corporations, partnerships,
+ non-profits, licenses, bailments, non-voting common stock, trusts, agencies,
+ employee-employer relationships marriages etc) entirely depend on theabove
+ taxonomy.
+ For instance a company is predicated on second order rights, the ability
+ to transfer assets to a non-(physically)existing entitiy is a relatively
+ new right.
+ The notion of an economic transaction is alsoentirely explained by the
+ above categories.
+ A transaction is inherently about the exchange of rights and the kind of
+ rights an agent has entirely specifies what he can contract over.
+\end_layout
+
+\begin_layout Standard
+With this in mind we clarify how some property right paradigms fit into
+ this conceptual framework, though these terms have a widely divergent definitio
+ns, the purpose here is to use them with the above definitions, property
+ is characteristic of assets.
+ If it is said that an asset is private property, that means that it is
+ associated with the groups of rights associated with private property.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Personal property
+\shape default
+ is a regime granting full first order rights and immunity.
+ For instance someone may have a right to use and the right to exclude,
+ and no institution has a right to reduce these rights.
+ Since individuals have no right to transfer, the decision of transfering
+ is left to the state, many historical regimes have given personal property
+ rights to families or the first born to avoid confusions upon death.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Private property
+\shape default
+ grants all of the above rights.
+ Private property gives the right to use, the right to exclude, the right
+ to transfer/waive the exclusion and immunity from someone others altering
+ ones claim.
+ 
+\shape italic
+Private property
+\shape default
+ has been defined as the ability to use ones property in any way one wishes
+ as long as the 
+\shape italic
+physical
+\shape default
+ characteristics of others private property is not affected 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Alchian1965"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ This definition of private property has the advantage of setting an objective
+ standard and requires no reference to subjective clauses.
+ To see an example of the issues with defining private property rights as
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+the right to do with your property as you wish as long as nobody else is
+ harmed by it
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+, one need only notice how ambiguous this standard is if the question is
+ about the right of someone to build a skyscraper given that it blocks the
+ view of a neighbor.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Communal/Public/ property
+\shape default
+ on the other hand gives all agents in society the right to use but not
+ the right to exclude.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+what is deemed the right of the absentee owner see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Alchian1973"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Communal property gives second order rights to the state.
+ In practice, the distinction between communal and public ownership is whether
+ the state exercises its second order rights.
+ If it exercises it for setting up things such as a military reservations,
+ then we we call it 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+public
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Communal property is technically a first come first served type of property.
+ It has been said that agents with communal rights tend to ignore the cost
+ of use 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Alchian1973"
+literal "false"
+
+\end_inset
+
+ mentions how the Canadian government in 1970 set an upper limit to the
+ number of seals to be clubbed which caused speed of hunting to be the competiti
+ve trait
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Georgian system of property
+\shape default
+.
+ The Georgian system of property is a system which temporarily grants first
+ order rights to individuals.
+ The system does not have discretion like public property has, however,
+ second order rights like power and immunity are still in the hands of the
+ state, as such it is merely about how the state decides to use, which is
+ simply to create an auction for temporary rental.
+\end_layout
+
+\begin_layout Standard
+Is the change in allocation of rights substantive? In other words is this
+ whole exercise just a redefinition but does not imply any changes in resulting
+ actions? We will see that depending on the structure of the economy, the
+ kind of rights bestowed can have drastically different effects, even if
+ the pursuit of goals is identical(eg, profits/charity).
+ The limitation of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+power
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ can lead to the agent choosing differently.
+ For instance in the price control case, if an agent is bounded at how high
+ a rent he can charge for an apartment he may prefer childless/petless adults
+ to avoid noise or damage to his property, similarly if the future revenue
+ is lower then he might not invest to renew it and prefer some alternative
+ investment.
+ In other words, limitation of power has important allocative effects and
+ investment effect.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The economic value of static property rights
+\end_layout
+
+\begin_layout Standard
+The economics way of tackiling the effects of property rights leans on two
+ kinds of efficiency: allocative efficiency and investment efficiency.
+ Allocative efficiency means either to give it to the agent who values it
+ the most or the agent who has the lowest cost to operate it.
+ Both of these dynamic notions require the static concepts of value.
+ Value in economics is usually described by market value and subjective
+ value.
+ These notions are important in that the whole framework of analyzing property
+ rights leans on their interaction.
+ We quickly analyze some cases of how these notions interact.
+ One of the achievement of economics is the deduction of the market value
+ of an asset by the description of the subjective value.
+ Note that a positive market value does not imply that exchange occurs,
+ indeed subjective value is key to whole framework of the optimal allocation
+ of property rights.
+\end_layout
+
+\begin_layout Subsubsection
+Identical and strictly positive subjective value for all agents
+\end_layout
+
+\begin_layout Standard
+If an asset has an identical positive value for all agents then it has a
+ positive market value but no exchange occurs.
+\end_layout
+
+\begin_layout Subsubsection
+Identical and null value for all agents
+\end_layout
+
+\begin_layout Standard
+Suppose an asset has zero subjective value for all agents, then it also
+ has zero market value because nobody is willing to buy it.
+\end_layout
+
+\begin_layout Subsubsection
+Identical and negative value for all agents
+\end_layout
+
+\begin_layout Standard
+Then the market value is negative and the allocation of property rights
+ just means, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+who will be targeted to receive this asset
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ In such a case, there is a demand for abandonment or destruction.
+ The decision whether to force the ownership of the asset to occur should
+ depend on whether the asset is best left abandoned or destroyed, if the
+ optimal use of the asset is its destruction then ownership should be forced,
+ if its optimal use is abandonment then no property right is necessary.
+ Of course there may also be a situation when one requires someone to own
+ something without giving that person the right to abandon or destroy(keys).
+\end_layout
+
+\begin_layout Subsubsection
+Variable and weakly positive value for all agents
+\end_layout
+
+\begin_layout Standard
+Suppose now that we introduce variance into the mix.
+ If agents have differential positive value for the asset, then a positive
+ market value exists and an exchange occurs unless the highest value user
+ is one who is allocated the property.
+\end_layout
+
+\begin_layout Subsubsection
+Variable and weakly negative value for all agents
+\end_layout
+
+\begin_layout Standard
+Hot potato: Similarly if all agents have a differential negative value of
+ the good then there is still a value market value to the good unless the
+ highest value user owns it.
+ This is because if anyone other than the highest value user owns the good,
+ they would be willing to pay the highest value user to own it.
+ In this case they would consider the lowest cost alternative between subsidizin
+g the highest value user to own it versus destroying it or abandoning it.
+\end_layout
+
+\begin_layout Subsubsection
+Variable, positive and negative value
+\end_layout
+
+\begin_layout Standard
+Some difficulty arises when we mix the cases, for instance if the distribution
+ of subjective value include both positive and negative values, then clearly
+ if transaction costs are zero then there will occur a trade if the good
+ is given to anyone but the highest value user.
+\end_layout
+
+\begin_layout Subsection
+Other factors
+\end_layout
+
+\begin_layout Standard
+This kind of analysis implicitely takes into account many things.
+ For instance if there are n objects the price only needs to be high enough
+ to deter n+1 highest valuation agent from purchasing(this does not rule
+ out that an agent may have two of the highest valuations because she has
+ utility for two of the goods).
+ As such the distribution of prices sold depends on both the number of buyers
+ and and the number of objects.
+ If there is but one buyer, then extreme value theory may describe the price
+ realizations, if there are always half as many objects as as agents and
+ agents only have use of one item then the distribution of prices will represent
+ the median valuation.
+\end_layout
+
+\begin_layout Standard
+The above above, assumes a zero transaction cost environment.
+ A transaction cost can be defined as the cost associated with accessing
+ the market value.
+ If there are transaction costs then, the question of making destruction
+ or abandonment illegal become relatively more attractive because with transacti
+on costs there may be efficiency losses due to over-destruction or over-abandonm
+ent.There is also the question of liquidity constraints(also called pecuniary
+ externality), if the agents find themselves liquidity constrained then
+ we cannot the distribution of subjective value from prices alone.
+\end_layout
+
+\begin_layout Standard
+One must then ask what the relationship of property rights is to the creation
+ of other property rights.
+ For instance suppose some agent bids for some asset A that also has some
+ other asset B attached to it, should the agent get property rights over
+ the second asset, B.
+ In a zero transaction cost world, perfect information world, the answer
+ is, it does not matter for allocational efficiency.
+ Perhaps a more concrete example is the discovery of oil in one's backyard.
+\end_layout
+
+\begin_layout Standard
+Value does not neccesarily stem from an object directly, it can stem from
+ complementarity between the object and something else.
+ For instance the value of an object may coincidentally come the kind of
+ work that can be done with the object.
+ This kind of complication does not in fact change anything in the above
+ analysis, however it does lead us to the concept of time which can complicate
+ the analysis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dynamic creation of property rights
+\end_layout
+
+\begin_layout Standard
+Perhaps the most important concept in economics is the allocation of property
+ rights on things that do not exist initially but exist eventually.
+ For instance if someone buys an object and either because of the characteristic
+s of the object or because the user did something to the obejct, a new asset
+ is created.
+ If the rights to the new asset also belong to the agent then the implications
+ are clear: if the asset is created conditional on some action the agent
+ will take that action or auction off the right to take that action to somebody
+ who has a lower cost associated with that action or if the cost is too
+ high will just not create the asset.
+ If the asset is created unconditionally then the agent would have evaluated
+ the asset
+\end_layout
+
+\begin_layout Standard
+The productivity of a resource is also an important factor to consider.
+ However productivity is inherently a dynamic concept as it is about the
+ evolution of productivity of a piece of land or an asset.
+ Indeed the question of how to allocate property rights for things that
+ do NOT yet exist can be framed as the most important question in economics.
+\end_layout
+
+\begin_layout Subsection
+Conditionality in property rights
+\end_layout
+
+\begin_layout Standard
+The above analysis is sufficient when there is no question of dynamic creation
+ of property rights.
+ The problem occurs when assets generate other assets.
+ For instance if a piece of land is found to generate a certain natural
+ gas then the question naturally arises, does the owner of the land also
+ own the gas? It seems intuitive that if one owns a dog, they also own the
+ puppies of that dog.
+ On the other hand, it is less clear how the ownership of wild animals is
+ to be treated.
+ For instance if a deer is owned, then presumably the usual rules of asset
+ allocational efficiency hold, he will keep the deer if his subjective value
+ is higher than the market value.
+ If on the other hand, the deer is owned conditionally on being on the land,
+ then this creates incentives for fencing the deer in as long as the deer
+ has a higher subjective or market value than zero.
+ If deer is only owned if killed, then this creates an incentive to kill
+ it.
+ If land is lost conditionally on having deer on it, then this creates an
+ incentive to kill/abandon or sell the deer.
+\end_layout
+
+\begin_layout Standard
+In the case where all property rights are allocated a priori, the above
+ analysis is correct.
+ However in the real world, much of the complexity of property rights arises
+ because in practice new property rights are constantly being created and
+ strategic or competitive action occurs because of the creation of property
+ rights 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Alchian1973"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conditionality, can tell us a lot about the effects of private property.
+ For instance Locke's theory that something is owned conditionally on mixing
+ ones labor with it, whilst a moral theory, from the point of view of economics
+ has descriptive content in the sense that such a property rights paradigm
+ incentivizes people to put their labor into things.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Nozick, Anarchy State and Utopia
+\end_layout
+
+\end_inset
+
+ From the point of view of productivity this is not necessarily optimal
+ since this would encourage effort but not output.
+\end_layout
+
+\begin_layout Standard
+The economic question for allocational and investment efficiency then becomes
+ interwined on the conditionality of property rights.
+ Many of the problems that economists perceive are not necessarily about
+ property rights themselves but about the procedure of the creation of property
+ rights.
+ For instance in the tragedy of commons, the issue is not that there are
+ no property rights on land but that there are property rights on fish condition
+al on fishing them.
+ This leads to three solutions.
+\end_layout
+
+\begin_layout Standard
+Tragedy of the commons is a special case of conditional property rights
+ on action.
+ For instance if we define action as fishing/hunting/drilling etc.
+ We can then say that if people wish to acquire property rights they are
+ incentivized to take the action, especially when not taking the action
+ does not grant property rights.
+ The tragedy of the commons arises when first order rights and second right
+ order rights are granted conditionally.
+\end_layout
+
+\begin_layout Standard
+Of course if there are no conditional property rights at all.
+ No matter what action you do, you cannot get property rights on the fish,
+ then this immediately eliminates the tragedy of the commons because there
+ will be no overfising, this will also result in no fishing at all.
+\end_layout
+
+\begin_layout Standard
+The tragedy of the commons disappears with a number property right regimes,
+ what they have in common is elimination of some sort of conditionality.
+ For instance if fishing does not give you the right to sell(power) the
+ fish but gives you the right to use(privilege) it, then whether the level
+ of fishing depends entirely on the cost of fishing and the demand for fishing,
+ the problem then becomes purely a problem of population, clearly as the
+ population increases it causes increases in fishing.
+\end_layout
+
+\begin_layout Standard
+Alternatively the priori setting of property rights(for animals, this could
+ be branding), that is before action is taken, also does not lead to a tragedy
+ of the commons.
+ To see why consider an agent who is considering whether to fish his fish
+ or not.
+ Clearly the price of fish will drop if everyone fishes this period, so
+ it may be optimal to delay fishing until next period.
+ Additionally if a priori rights are set so that the owner of the fish owns
+ any fish stemming from the fish, this will cause the agent to consider
+ the future value of his fish as even more valuable.
+ This will lead to a more sustainable steady state of fishing per period.
+\end_layout
+
+\begin_layout Standard
+In the case of public property rights often the conditionality is on geography.
+ For instance if some property's fruits are shared based on some geographical
+ specification, this incentivizes entering the geographical area in question.
+ In a sense the only way to sell one's share in the property is to move.
+ In other words dilution of ones share is decided by the public property.
+\end_layout
+
+\begin_layout Standard
+In the case of private property a similar dilution may occur in the case
+ of stock ownership, but it is usually for an associated sum with the idea
+ of increasing the value of the shares held by investors by more than their
+ dilution.
+ In other words, when production plays a role, property is best attributed
+ more directly to the people who are responsible for the production, this
+ could be because they have knowledge of how to use it, or because they
+ have some characteristic, such as risk bearing ability which would create
+ higher productivity.
+\end_layout
+
+\begin_layout Standard
+To take an example, suppose that some person can produce k units if he were
+ to work on a specific asset.
+ Suppose there are 10 assets and 20 citizens.
+ The citizens own assets equally, so each citizen owns 
+\begin_inset Formula $5\%$
+\end_inset
+
+ .
+ If a citizen can work on a specific asset to produce 20 units of a good,
+ then he will only receive 1 of those goods in the end.
+ Which means his willingness to expend effort is 1.
+ If on the other hand, the assets are redistributed in such a way that every
+ citizen still owns 
+\begin_inset Formula $5\%$
+\end_inset
+
+ but the the citizens own higher shares of the assets they work on, if for
+ example that same citizen had 
+\begin_inset Formula $10\%$
+\end_inset
+
+ share of the asset he worked on then, his willingness to expend effort
+ had doubled.
+ In other words, we can say that the distribution of ownership does NOT
+ matter if every citizen works on every asset and their productivity of
+ every citizen is the same.
+\end_layout
+
+\begin_layout Standard
+To make ownership of an asset illegal is to make its market value zero or
+ negative.
+\end_layout
+
+\begin_layout Standard
+The Coasian view of property rights claims that allocative efficiency is
+ in fact irrelevant as long as there are no transaction costs and barganing
+ is possible.
+\end_layout
+
+\begin_layout Standard
+The question of what assets property rights protects can be quite complex.
+ Some possible categories to consider, are tangible vs intangible; the ratio
+ of subjective value to market value.
+ One could also have alienable vs inalienable.
+ Or one could define assets as having market value, in this formulation
+ an asset only acquires property rights when it has accumulated sufficient
+ components to acquire either subjective or market value.
+ The market value component could also be used to justify the scope of protectio
+n.
+\end_layout
+
+\begin_layout Standard
+Note that positive market value exists only if at least one non-possessor
+ of the good has a subjective value for it.
+ If the only person with positive subjective value of the good acquires
+ it, then by definition the good no longer has market value.
+ It is also possible for a good to have negative market value or subjective
+ value.
+ If the possessor of the good has a negative subjective value of the good
+ AND no property rights to it, then the person is likely to either destroy
+ it or abandon it.
+\end_layout
+
+\begin_layout Standard
+If a good only has value for a single person, then it has no market value.
+ If it has value for more than a single person then it does have market
+ value.
+ ue
+\end_layout
+
+\begin_layout Subsection
+Externalities
+\end_layout
+
+\begin_layout Standard
+To define the Coase theorem we need the concept of externalities.
+ Externalities are usually defined on a set of actions, it is when an action
+ of A, has an effect on anybody else but A.
+ Contracts can be framed as trying to create incentives for positive externaliti
+es, in other words to increase the payoff of an agent by A by taking a specific
+ action.
+\end_layout
+
+\begin_layout Standard
+If an agent tries to
+\end_layout
+
+\begin_layout Subsubsection
+Coasian
+\end_layout
+
+\begin_layout Standard
+The coasian view of property rights aims to explain or justify property
+ through two categories.
+ Transaction costs and negative externalities.
+ The Coasian approach has a simple statement of the form: externalities
+ will only matter if transaction costs are large.
+\end_layout
+
+\begin_layout Standard
+If ownership and possession are not identical, this creates the possibility
+ of temporary transfer of assets to higher value users or to lower cost
+ producers.
+ Similarly there is the investment efficiency from stable ownership, this
+ is asset related skills.
+\end_layout
+
+\begin_layout Standard
+The value of assets is not only direct, it can be expected to increase the
+ value of other assets that are complementary to the asset itself.
+\end_layout
+
+\begin_layout Standard
+There is also of course a subjective value from ownership.
+ For instance, suppose an owner who does not intend to use the asset but
+ intends to rent it forever.
+ If this owner discounts, the asset merely represents a series of cash flows,
+ for which he should able to exchange a lump sum for.
+ If we suppose that someone prefers to own rather than rent, liquidity is
+ only constraint for transfer to occur.
+\end_layout
+
+\begin_layout Standard
+Economies of scope between monitoring and apprehension.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "intro"
+options "abbrv"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
