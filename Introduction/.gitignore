@@ -1,0 +1,8 @@
+*.aux
+*.bbl
+*.log
+*.gz
+*.zip
+*.lyx
+*.dvi
+*.lyx#
