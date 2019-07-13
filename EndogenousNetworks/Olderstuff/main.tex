@@ -1,0 +1,1063 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{asymptote}
+\usepackage[font=small,skip=0pt]{caption}
+\captionsetup[figure]{font=small,skip=0pt}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{pst-plot,pst-math,pstricks-add}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{arydshln}
+\usepackage{breqn}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{nth}
+\usepackage{enumerate}
+%\usepackage{enuitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[affil-it]{authblk}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepgflibrary{arrows}
+\usepackage{float}
+\pgfplotsset{compat=1.12}
+\usepackage{setspace}
+\doublespacing 
+\newtheorem{theorem}{Theorem}	
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+\usepackage{natbib}
+\usepackage{color}
+\bibliographystyle{agsm}
+
+\begin{document}
+
+
+\section{Introduction}
+
+Royalty stacking is the phenomenon that when a firm enters a market it must pay numerous royalties because its product builds upon numerous previous innovations. This occurs because there is no legal obligation that the total royalty fees must remain below some threshold (such as a fixed monetary amount or a proportion of the cost of the product). Royalty stacking is similar to the the term "Patent stacking" except that the latter implies a single owner whilst the former is indifferent to the ownership structure of the stack. 
+
+The question this phenomenon raises is under what conditions would a firm prefer to use the latest technology and pay a higher royalty cost rather than use a less cutting edge technology and diminish its royalty cost? To answer this question one must look at both the firm seeking permission and the firm giving permission. If giving permission has no cost associated with it\footnote{ the cost does not have to be direct, it could be a cost on the value of its license, this is explored in \cite{Katz1986} } then the entrant will always attach himself to the highest firm it can. So necessarily for any other structure but a chain of increasingly better innovations to occur either a cost must be present for incumbent or some behavioral assumption must be assumed. 
+
+The empirical evidence, though limited is that the cost of royalty stacking can be quite significant. In smartphones, the cost of royalties has been estimated to be higher than the cost of components. \cite{Armstrong2014} Royalties come to represent such a significant portion because of innovation is sequential. When each innovation builds on the previous innovations it leads to firms forming a chain of innovation. If strong intellectual property rights are available then this is equivalent to saying that an entrant must find at least one predecessor who has property rights to consent to the entry. 
+
+The usual analysis of the fragmented ownership is through the hold up problem.  In the usual analysis, the more fragmented is the ownership structure of the chain, the more difficult it will be to create a new product. However the hold up problem is only a sort of worst case scenario. In practice, even if it is assumed that royalties are fixed and there is no hold up problem, there are structural issues that can arise due to royalty stacking. This paper aims to highlight the conditions under which a new innovation is preferred with sequential innovation. 
+
+Why does patent stacking occur? Though formally courts are meant to recognize that royalty fees must be proportional to the value added of the innovation and not using the entire value of the product there are practical difficulties that prevents this from occurring. In practice the value added of a given royalty is not an observable quantity. This means that the value must be inferred and the metric usually employed is the difference in price between non-patented and patented innovation. Non-patented products have stronger competition: their costs of components are generally cheaper, which implies that the difference between the two prices is not only the value added of the patented technology but also the difference between industry efficiency. For a full discussion about why royalties end up in practice being a larger share than their value added, \cite{Elhauge2008}
+
+Royalty stacking implies that costs associated to royalties gets more important as innovations increase. There is a nuance here between royalty related \textit{total costs} and royalties \textit{paid}. We find that the later a firm enters, the higher the \textit{total royalty costs}, however we also find that later entry implies a lower royalty \textit{paid}. This is because the two costs are not independent: the royalties paid will be related to future royalty revenue and hence if a firm enters later, the willingness to accept to pay a royalty because of future royalties is decreased. Thenceforth the royalty paid depends on how much money the patent infringement permission is ultimately worth. 
+
+The reason for our result is that each patent owner can extract the surplus of all future patent holders by charging the appropriate price. This means that patentees can only earn as a function of other market opportunities they had available at the time. Intuitively, if there is only one firm in the market, an entrant can either earn the infringement profits or the non-infringement profits, however as the number of firms increases, the infringement options increase and it can make previous firms that have entered will compete to sell their respective licenses.  
+
+If we assume the firms are operating on the same market the effects of competition change the willingness to license. A firm may get a license from another firm that is currently producing or from one that has stopped producing. Ceteris Paribus, a firm that is not producing should charge less for patent than one that is currently producing; this is because the presence of a competitor imposes a direct cost on the profit of a producing firm, while it imposes only the indirect cost of reducing patent value if the said firm is not producing. 
+
+The framework presented here allows for a structural interpretation of patent length. That is the disagreement payoff of an entrant is increasing as the patent length decreases. However our model shows that unless there are market complementarities, the patent length does not matter. That is, firms that are not on the cutting edge cannot charge for their license because they have less to offer than cutting edge firms. This means that whether the patent length is long or short does not matter since the disagreement payoff of the entrant is not affected. 
+
+The structure of the paper will be as follows. In the second section we will present the model and clarify our three main assumptions of market symmetry, foresightedness and monotonicity in technology.  The third section will describe the equilibrium concept and the main results of the model. The fourth section will discuss what other assumptions are usually made in economic theory and how those affect the model. In the fifth section we fully resolve the three firm case. Finally in the sixth section we discuss some extensions and relaxations of the model. 
+
+\section{The model}
+
+\indent Consider a set of firms that each decides sequentially to enter the market of a given good. Let $i$ be any typical firm in the former set, let $N$ be the set of firms that enter the market and let $n=|N|$ the cardinal of this set. All firms in $N$ pay a fixed cost $F\in \mathbb{R}_+$ upon entering the market, irrespective of their production decisions. All firms which decide not to enter the market never pay the entry cost $F$.  \\
+
+\indent A firm in $N$ is characterized by two payoffs: a market payoff $p_i(k_i,.)$ and a royalty payoff $r_i$. The \textit{market payoff} of firm $i$ can be interpreted as how much profit the firm can achieve by freely competing. It is a function of its technological level, that we denote $k_i$. Here, $k_i$ refers to an integer that takes on any value between 1 and $i$. A firms technology cannot be larger than its index $i$ because a firm can only build upon the technologies of its \textit{predecessors}, i.e. these firms that entered the market before $i$. We assume that the larger $k_i$, the more efficient firm $i$ at producing the good; thence $p_i(k_i,.)$ is increasing in $k_i$. \\
+\indent The \textit{royalty payoff} on the other hand corresponds to a net transfer from a firm to some other firms. A firm $i$'s total royalties received and payed are given respectively by $r_i^+$ and $r_i^-$. The net royalties of firm $i$ are: $r_i=r_i^++r_i^-$. (With $r_i^+$ is always positive and $r_i^-$ is always negative, for all $i\in N$.) If $r_i$ is positive, hence $r^+_i\geq -r^-_i$, firm $i$ is called a \textit{net receiver}. If it is negative, $i$ is said to be a \textit{net payer}. \\
+
+\indent We shall now present the game played by the firms. Prior to their entry on the market, all firms have the same production technology, which is $k=1$. Then firms enter the market sequentially: firm $1$ is the first to enter (if it decides to do so), then $2,\ldots$ until firm $n$. If a firm $i$ enters the market, then it can improve the level of its technology (which is $k=1$ for now) by building upon pre-existing technologies in the industry. By \textit{build upon}, we mean improvement upon some of the technologies that already existed in the market prior to $i$'s entry. For the sake of simplicity, we assume that a firm takes its entry and technology decisions simultaneously. This process of accessing the technologies in the industry and innovating upon them enables the firms to increase their market payoff. \\
+
+\indent In our paper, the technology decisions of the firms which enter the market is modeled as an endogenous network formation process. If firm $i$ builds upon $h$'s technology, we represent this transmission of technology from $h$ to $i$ has a directed link $h\rightarrow i$ (and $1\leq k_h<k_i$ in this case). In other words, if a firm builds upon the technology of an existing firm, the former has necessarily a superior technology than the later. A strategy of link formation is denoted $s_i$ for any firm $i\in N$. It is an element of the class of all subsets of $\{1,\ldots , i-1\}$. The set of all strategies of $i$ is $\mathcal{S}_i$; it is the collection of all possible subsets of firms with which $i$ can form links\footnote{A firm cannot form a link with any of its successors. Therefore $i$ can only choose from the set of its predecessors for forming links.}. It follows that $|\mathcal{S}_i|=2^{i-1}$. All $n$ firms' decisions in link formation map a technological network. Generally, a network \text{g}$=(V,E)$ is defined on its set of vertices $V$ (i.e. the nodes of the network, thus here $V=N$) and its set of edges (or links). Thence if $h\in s_i$ and $i$ is a vertex of some network \text{g}, $i$'s technology is building upon that of $h$, and the link $h\rightarrow i$ exists in the technological network \text{g}.\\
+\indent If a firm has infringed upon many technologies, then we assume that it will choose to produce with the most efficient technology it can use. This means that the level of technology $k_i$ of firm $i$ is the length of the \textbf{longest directed path} that starts at vertex $i$ in \text{g}. The longer this longest path, the more efficient $i$ at producing the good. (Note that the longest path that starts at vertex $i$ always has a length between zero and $i-1$; if it is equal to zero, then $k_i=1$.) If no path from vertex $i$ exist in \text{g}, then $k_i=1$. Note that firm $1$'s technology level is $k_1=1$ always.  \\
+\indent Improving upon some technologies does not come at no cost. We assume that a firm $i$ which wants to achieve some technological level $K$ will bargain with all firms $h$ which currently use a level of technology $K-1$. The outcome of the bargaining between $i$ and $h$ is the royalty $r^{i}_h$ that $i$ will pay to $h$; it is the price asked by $h$ to $i$ for letting the later use and improve upon its own technology. One can consider $r^{i}_h$ as the cost of the link $h\rightarrow i$. It follows that $r^{-}_i=\sum_{\forall h\in s_i}r^{i}_h$. By the same principle, firm $i$ may receive royalties paid by some of its successors which choose to infringe upon $i$'s technology. It follows that: $r^{+}_i=\sum_{\forall j \text{ s.t. } i\in s_j}r^{j}_i$, where $r^{j}_i$ is the royalty paid by $j$ to $i$.  \\
+
+\indent The total payoff of firm $i$, given the technological network \text{g} and $i$'s technology $k_i$ is: 
+\begin{equation}
+    \pi_i(k_i,\text{g})=p_i(k_i,\text{g})+r_i -F. 
+\end{equation}
+where $p_i(k_i,\text{g})$ is firm $i$'s market payoff. \\
+
+\indent The next assumption imposes a direct relation between a firm's position in the network and its market payoff.\\  
+
+\begin{assumption}{Market Symmetry} \label{ass1}
+
+$ \forall i, j \text{ such that } k_i=k_j,~~ p_j(k_j,.)= p_i(k_i,.)$
+\end{assumption}
+\textit{If two firms have the same level of technology, they have the same market profits.}\\ 
+
+Note that this assumption does not mean that two firms that have the same technology have the same total payoff; this because their own royalty revenues may not be identical. The next assumptions are crucial for solving for the equilibria of the game. \\
+
+\begin{assumption}{Foresightedness} \label{ass2}
+
+Firms are foresighted: they anticipate the arrival of successor firms on the market, and take decisions accordingly.  
+\end{assumption}
+
+\begin{assumption}{Technology} \label{ass3}
+
+Firms with higher technology have a higher market payoffs. If $k_i>k_j$, then $p(k_i,.)>p(k_j,.)$
+\end{assumption}
+
+
+\indent The next section of the paper is devoted to characterizing the subgame perfect Nash equilibria of the game. We will use backward induction in order first to get the best-response functions for the firms that decide to enter the market, then the optimal strategies in link formation, and finally solve for the entry decision. 
+
+\section{SPNEs of the game }
+
+\indent We solve for the SPNEs of this sequential game using backward induction. We first clarify the stages of the game as well as the actions taken by the representative firm $i$ in each of these stages. \\
+
+\textit{First stage: entry, negotiation and link formation }\\
+
+\indent In the first stage, the firms sequentially decide whether or not to enter the market. If $i$ decides not to enter the market, the game ends for this firm and its payoff is zero. If $i$ enters instead, therefore expecting a positive profit from doing so, it chooses its technology level which depends on its strategy of link formation $s_i$. This strategy of link formation determines which of the existing technologies $i$'s is infringing upon. An infringement between $i$ and $h<i$ gives lieu to a bilateral agreement where $i$ pays a royalty $r^i_h$ to $h$ in exchange for building upon $h$'s technology (and therefore having a superior market payoff). A firm may always opt to enter the market and infringe on no existing technology (therefore operating with the technology $k=1$). \\
+
+\textit{Second stage: Market competition}\\
+
+\indent All firms in $N$ compete on the market with the level of technology chosen in stage 1. By the beginning of stage 2, the technological network \text{g} is realized. If a firm has no market payoff but is still in the game, then this firm is referred to as a \textbf{rent seeker}. If $i$ does have a strictly positive market payoff, then we refer to $i$ as a \textbf{producer}. The market payoff of $i$ is always higher than the payoff of all firms with inferior technologies; and it is always lower than the payoff of all firms with superior technologies. \\
+
+\textit{Third stage: the payoffs are realized}\\
+
+\indent Since we did not specify any particular model of competition between the firms, we cannot solve for the second stage of the game. Therefore we only provide an analysis of the optimal decisions made at $t=1$, which corresponds to the network formation process. In the remainder of the section, we feature some properties that the equilibrium strategies of link formation must verify.  \\
+
+\begin{proposition}
+In equilibrium, a firm that infringes on another one's technology always pays a positive royalty cost for doing so (i.e., there is no case where a firm subsidizes another one in equilibrium).
+\end{proposition}
+\begin{proof}
+Consider the following scenario: there are $i-1$ firms which entered the market, and the highest technology level used so far is denoted $\Bar{k}$. Consider firm $i$. Assume that a predecessor of $i$, that we shall call firm $f$, offers to subsidize a link from $i$ to herself. Note that firm $f$ has a technology $k_f$ that is strictly worse than $\Bar{k}$. This offer is rational if $f$ intends here to deter $i$ from further innovating beyond the technology level $k_f+1$. Assume that $i$ accepts the offer: it forms a link to $f$ and gets paid for it. If a firm among all these in $1,\ldots, i-1$ and which has a strictly higher technology than $k_f+1$ negotiates with $i$, and if the negotiation is successful, then $i$ gets attached to this firm as well. But then $i$ uses the technology it paid for since it is better than $k_f+1$. Thus $f$ subsidized $i$ for nothing. Therefore offering a subsidy was irrational for $f$. Now, if $i$'s negotiations with all other firms were unsuccessful, then $f$ would have been better off by offering a positive price for the link from $i$ to her. 
+\end{proof}
+
+\begin{proposition}\label{prop:onelink} 
+Maintaining one link is a weakly dominant strategy
+\end{proposition}
+
+\begin{proof}
+This is a direct proof. Take any firm $i\in \Omega$. Let $s_i\in \mathcal{S}_i$ be any strategy for firm $i$ that consists of maintaining at least two links in the industry. Let $h\in s_i$ be the firm that has the largest technological level among all firms in $s_i$. And consider the alternate strategy $s_i'\subset s_i$  for firm $i$ that consists of forming one single link to this firm $h$. We show that $s'_i$ always weakly dominates $s_i$. By assumption, only the longest path that starts at vertex $i$ determines the technological level of $i$. The longest path that starts at $i$ has the same length whether $i$ plays $s_i$ or $s'_i$. Therefore $s'_i$ gives the same market payoff to $i$ than $s_i$ does.
+Now, the royalty revenue of firm $i$. If $i$ maintains a single link to $i$, then $i$ receives revenues from its successors which infringe upon its technological level $k_i=k_h+1$. If $i$ maintains its two links, with $e$ and $h$ let's say, then given that $k_e<k_h$, there is at least one other firm than $i$ that has access to the technology level $k_e+1$. Let us call this firm $f$. Now consider the revenue that $i$ could get from its technology $e+1$. If a successor of $i$ wants to infringe upon $e+1$, then $f$ and $i$ will be in competition for this successor's attachment. In the end, $i$ and $f$ will each offer the connection to them for free. Thus the expected revenue from $i$'s attachment to $e$ is zero. \\
+Since the only difference between $s_i$ and $s'_i$ is the number of links maintained, and since a link is never subsidized by proposition 1, then $r_i^- = {r'}_i^{-}$ if and only if the extra links are costless to $i$, and $r_i^- > {r'}_i^{-}$ if not. So we have the result. 
+\end{proof}
+
+
+\begin{remark}\label{rem:lastproduces}
+The last firm which enters the market is always a producer. 
+\end{remark}
+
+\begin{proof}
+If $n$ is the last firm to enter the market, then $r^+_n=0$. Thus if $n$ does not have a market payoff, its total payoff is $-F$ when $n$ does not produce. But then no entry would have been preferable over entry and not producing for $n$. Therefore a contradiction. \\
+\indent \textit{The market payoff of firm $n$ must exceed the sum of its royalties expenditures and the fixed cost.}
+\end{proof}
+
+\begin{proposition}\label{prop:twoiszero}
+If $m$ firms have the same technological level, and $m\geq 2$, then any successor to these $m$ firms that wishes to form a link to any of them pays zero royalties. 
+\end{proposition}
+
+\begin{proof}
+Suppose there are $m$ firms with the same level of technology. Suppose there is an entrant, $j$ who wants to build upon the technology used by these $m$ firms. Since the market payoffs do not depend on which of the $m$ firms $j$ chooses, there is a prisoners dilemma situation with royalty offerings, where the Nash equilibrium is zero. 
+\end{proof}
+
+\begin{corollary}\label{cor:atleast}
+If there are $m\geq 2$ firms at the level of technology $\tilde{k}$, and $j$ is the latest firm who entered the market among these $m$ firms, then all successors of $j$ have a technology that is at least as good as firm $j$'s. 
+\end{corollary}
+\begin{proof}
+There is no instance in which a successor of $j$ chooses a technological level that is less than $k_j$. To see this: (i) since there are no subsidies in equilibrium, a link from $j$'s successor to any firm that has a lower technology level than $k_j$ is paid at a positive price. But then the successor could have gotten a superior technology (here $k_j+1$) for free instead. Which gives the later a better market payoff. Also, if the successor forms a link to any firm that has a technological level less than $j$'s, then the successor's expected royalty revenue $r^+$ is always zero by proposition 3 above. Hence proved. 
+\end{proof}
+
+\begin{corollary}
+If there are more than two firms that have the same level of technology, then each of these firms is a \textit{net payer}. 
+\end{corollary}
+%Ask Dio. Not sure... (see example on the board) isn't it instead: "if i has a tech level k_i; and there is in g another firm j with k_j=k_i: then both i and j are net payers."
+\begin{proof}
+This follows from proposition 3. All firms that have a same level of technology will make other firm that have a link to them pay zero. Thus $r^+=0$ for all of these firms with a same level of technology, so long as there are at least two. 
+\end{proof}
+
+
+Said otherwise, if the $i$th firm to enter does not have a level of technology $k_i$ that is equal to $i$ then it will face competition when setting any royalty and can only be a \textit{net payer} or have net royalties be null in equilibrium. This is due to proposition 1, that states that a firm which gets a technology that is less than its index is never subsidized; and from proposition 3, which highlights the competition effect between any two firms with a same technology  which drives the cost of a link from a successor to any of them to zero. An equivalent way of stating this is that royalty revenue is maximized by extending the chain.
+
+
+
+\begin{corollary}
+There are never more than two firms on a level of technology k. 
+\end{corollary}
+
+\begin{proof}
+We need only note that by proposition 3, if two firms have the same level of technology, $k_i$, then a firm can reach technology $k_i+1$ without paying any royalties. 
+\end{proof}
+
+\begin{corollary}
+If an entrant,$i$ attaches to a firm $j$, and $j$ is not the highest technology firm, then $i$ does not receive royalties from future entrants. 
+\end{corollary}
+
+\begin{proof}
+If $i$ attaches to any firm other than the latest firm, then $i$ must be the second owner of that technology, therefore we have a direct application of proposition 2. 
+\end{proof}
+
+
+
+\begin{remark}
+If firm $i$ is a \textit{net payer}, $r_i<0$, then $p_i(k,g)>r_i+F$
+\end{remark}
+
+\begin{proof}
+This trivially follows from perfect foresightedness.
+\end{proof}
+
+\begin{proposition}
+If \text{g} is disconnected and not weakly connected, all firms who entered have strictly positive market payoff. 
+\end{proposition}
+
+\begin{proof}
+A disconnected graph that is not weakly connected implies that there exists in \text{g} a firm that has the lowest technology level $k=0$ yet this firm is not firm $1$. Since not extending the chain means being a \textit{net payer}, then the only way to earn sufficient profits is to be a producer. Thus if firm $1$ does not produce, then $j\neq 1$ with technology $k_j=1$ does not produce either. But then $j$'s payoff is $-F$. 
+\end{proof}
+
+\begin{corollary}
+If the first firm is not a producer, $p_1(1,g)=0$. Then \text{g} is weakly connected.
+\end{corollary}
+
+\begin{proof}
+If the first firm has no market profits, and the graph is not weakly connected, this implies that some other firm than $1$ has the technology level $k=1$. And this firm has no royalty revenue $r^+$. Thus it must produce. But if it this firm produce, then so does $1$ since they have the same technology level. A contradiction.  
+\end{proof}
+
+\begin{proposition}
+If $k$ is the lowest technological level that is common to two firms, and $k>1$, then \text{g} is an equilibrium network if and only if \text{g} is weakly connected. 
+\end{proposition} 
+\begin{proof}
+If $(h,j)$ verifies the definition in the proposition, and if $h$ is a predecessor of $j$, then all predecessors of $h$ have distinct technologies. Therefore, $k_1=1, k_2=2,\ldots, k_h=h$. Also, all successors $i$ of $h$ have a technology level that is greater than $1$ (otherwise, $(1,i)$ would be the pair of firms in some network \text{g} that have the least efficient technology in common however $k_i=1$). And all successors of $j$ have a technology level that is strictly larger than $k_j$ (by corollary 1). Thus all firms in \text{g} have a path to firm $1$. Therefore \text{g} is weakly connected. 
+\end{proof}
+
+\begin{proposition}
+If firm $i+1$ enters the market, then all firms $1,\ldots, i$ have entered the market.
+\end{proposition}
+\begin{proof}
+Assume not. Let $s_{i+1}$ the link formation strategy played by $i$ in $\text{g}$. If $i+1$ is in \text{g}, then $(i+1)$'s payoff from $s_{i+1}$ is positive. Thence if $i$ had played $s_{i}=s_{i+1}$, $i$ would have had the same payoff as $(i+1)$ in \text{g}. (Note that the link decisions of all firms $j$ that are successors of $i$ in \text{g} would be the same as the decisions of $j-1$ if $i$ had entered and played $s_i=s_{i+1}$.) Which is positive. Thence not entering cannot be a best-response of $i$. 
+\end{proof}
+
+Note that this is not necessarily as obvious as it sounds since there could be strategic considerations for finite numbers of firms. That is, if we know that the third player will be the last to enter but the second will not be then the offers may differ and cause different entry decisions. 
+
+\begin{definition}{Strong royalty monotonicity:}
+Let N be strict total ordered set, representing the order in which the firms have entered the market. For any pair$i,j \in N$ where $i\neq j$ and $i>j$. The strong royalty monotonicity property is said to hold iff $i>j$ entails $r_i(.)>r_j(.)$. 
+\end{definition}
+
+The above definition just says that if a firm enters the market later, it will pay more royalties. 
+
+\begin{proposition}
+Strong Royalty monotonicity does not exist if the network structure is not a chain
+\end{proposition}
+
+\begin{proof}
+We show that if a firm attaches anywhere else than the latest firm, it has zero royalties. 
+Suppose that at some point, some firm deviated from its index, $i$ and does not have the latest possible technology it could have, $k_i$. This entails that it must be somewhere else in the network and by corollary 4, its royalty revenue is 0. Therefore if the network structure is not a chain, we do not have Strong Royalty monotonicity. 
+\end{proof}
+
+\begin{proposition}
+If the chain is an equilibrium, the royalty paid is decreasing in the level of technology. 
+\end{proposition}
+
+\begin{proof}
+Let $\Delta_i p$ be the difference in market payoff for firm $i$ if it attaches to the highest technology available, $k$ and the second highest technology $k'$.
+Denote by $h_i$ the firm offering the highest technology for firm $i$, and denote by $s_i$ the firm offering the second highest technology for firm $i$. The maximum firm $h_i$ can charge $i$ and still be incentive compatible for $i$ is $r_{h_i}^i \leq \Delta_i p +r_{h_i+1}^{i+1} $. For the last firm in the chain, firm n, the highest tech firms royalty will be simply: $r_{h_n}^n = \Delta_n p $. 
+
+\begin{align*}
+r_{i-1}^i & \leq \Delta_i p +r_{i}^{i+1}  \\
+ & \leq \Delta_i p + \Delta_{i+1} p + r_{i+1}^{i+2}  \\
+ & \leq \Delta_i p + \Delta_{i+1} p +\Delta_{i+2} p + r_{i+2}^{i+3} \\
+ & \leq \sum_{j=i}^{i+2} \Delta_j p + r_{i+2}^{i+3}  \\
+ &\leq \sum_{j=i}^{i+k} \Delta_j p + r_{i+k}^{i+k+1} \\
+ & \leq \sum_{j=i}^{n} \Delta_j p + r_{n}^{n+1}  \\
+ & \leq \sum_{j=i}^{n} \Delta_j p  \\
+\end{align*}
+
+This is the maximum that the firm can charge. The only reason this will not result is because the firm does not find it optimal for the chain to emerge and will therefore charge a higher amount than this so as to prohibit attachment. It is clear that the royalty charged is decreasing, with the last firm paying the lowest in royalties. 
+\end{proof}
+
+Note that the above proposition is about royalties paid, not net royalty revenue. Net royalty revenue/costs will depend on the distribution of $\Delta p$.
+Thus far, we have made no assumptions about what happens to the payoff of an incumbent if the entrant enters the market. So the chain may not be an equilibrium depending on other assumptions made.  \footnote{The individual rationality constraint for $i$ is:
+\begin{align*}
+p_i - r^i_{i-1}+ r^{i+1}_{i} \geq F \\
+\textit{If the IC is binding this is:} \\
+p_i - \Delta_i p \geq F \\
+p_i' \geq F
+\end{align*}}
+
+\section{Assumptions of competition and extensions}
+
+To see how our model fits into traditional models of competitions we now make two additional assumptions to discuss what the model implies about the chain network under those assumptions.  
+
+\begin{assumption}{Substituability:}
+Consider some network \text{g} on $n$ firms. If firm $n+1$ enters the market, and $\text{g}'$ is the resulting network; then the market payoffs of all $n$ firms in $\text{g}$ is at least larger than in $\text{g}'$.
+\end{assumption}
+
+This assumption merely states that the more firms there are in the network, the lower are the market profits of every existing firm. Note that this does not imply that the total profits are decreasing in the number of firms. Note that this assumption does not help in determining market structure. This is because firms are still in competition when choosing a royalty. As long as a firm is indifferent to which firm the entrant will attach then there is still no incentive to offer any worse an offer than before. However this assumption may create existence issues, that is, if the payoff is decreased significantly enough, then the length of the chain can only decrease.  
+
+\begin{assumption}{Increasing externality:}
+Consider a network, $g$ with n firms. If firm n+1 enters with technology $k$ or technology $k'$ where $k'>k$, then $\forall i \in g, p'(.,.)<p(.,.)$
+\end{assumption}
+
+This assumption states that a more advanced technological rival renders existing technologies less profitable than a less advanced rival. This assumption does allow for more specific conditions to emerge. The entrant will not necessarily attach himself to the most advanced firm because the most advanced firm will not only charge the the different in payoff of the entrant but also the difference in externality. If the difference in externality is larger than the difference in payoff then a non-chain structure will emerge.
+
+\subsubsection{Exclusive contract or when are there subsidies?}
+
+There are two scenarios where subsidies can occur in equilibrium. The first is when substitutability is dropped and instead there are complementarities. If the positive externalities are either uniform or increasing this would imply a chain, the firm would always be subsidized by the later firm because this one is able to bargain over higher market payoff's. 
+
+Subsidies can also occur with substitutability, but this requires exclusive contracts. If a link can be guaranteed to be the only link maintained then it can be credible to subsidize. The firm subsidizing will never be the most innovative firm if the increasing externalities assumption holds. This is because the latest firm can fully internalize the externality by just increasing the royalty charged or just increase it to such a point where the offer will not be accepted. On the other hand firms other than the cutting edge firm have an incentive to attract an entrant and subsidize her because this will avoid the larger externality from the entrant attaching to the most advanced firm. *
+
+\subsection{Patent length}
+
+An advantage of the model presented here is that patent length has a trivial representation. If the patent length is large enough then a firm must always pay to form an attachment. If patent length is zero, a firm can costlessly attach to any firm in the network and if the patent length is somewhere in middle, otherwise intermediate lengths trivially imply that only attachments to early firms is free. Nevertheless the model implies that if the market structure is a chain, only the protection of the latest firm truly matters, so any non-zero patent length will yield the same results. 
+
+The effect length of the patent ultimately only depends on the externality imposed on the most advanced firm. If the sum of the the payoffs of the cutting edge firm and the entrant are not larger than the cutting edge firms without the entrant attachment, then patent length can inhibit the chain from forming. 
+
+\section{The chain network: three firms}
+
+\textcolor{red}{Note that I am not sure we have used this!}
+\begin{figure}[H]
+    \begin{tikzpicture}[scale=0.9]
+    \node at (0,-4) {The network $\text{g}_1$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (0,0) {2};
+    \node (1) at (0,3) {1};
+    \node (3) at (0,-3) {3};
+\end{scope}
+
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_1)$} (2);
+    \path [->] (2) edge node {$r^2_3(\text{g}_1)$} (3);
+\end{scope}
+
+\node at (5,-4) {The network $\text{g}_2$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (3,0) {2};
+    \node (1) at (5,3) {1};
+    \node (3) at (7,0) {3};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_2)$} (2);
+    \path [->] (1) edge node {$r^1_3(\text{g}_2)$} (3);
+\end{scope}
+
+
+\node at (11.5,-4) {The network $\text{g}_3$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (10,0) {2};
+    \node (1) at (10,3) {1};
+    \node (3) at (12,3) {3};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_3)$} (2);
+\end{scope}
+
+\node at (16.5,-4) {The network $\text{g}_4$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (15,0) {3};
+    \node (1) at (15,3) {1};
+    \node (2) at (17,3) {2};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_3(\text{g}_4)$} (3);
+\end{scope}
+    
+ \node at (0,-12) {The network $\text{g}_5$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (0,-10) {2};
+    \node (1) at (0,-7) {1};
+\end{scope}  
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_5)$} (2);
+\end{scope}
+
+\node at (5,-12) {The network $\text{g}_6$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (5,-10) {3};
+    \node (1) at (5,-7) {1};
+\end{scope}  
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_3(\text{g}_6)$} (3);
+\end{scope}
+
+
+\node at (11,-12) {The network $\text{g}_7$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (10,-7) {1};
+    \node (2) at (12,-7) {2};
+    \node (3) at (11,-10) {3};
+\end{scope}  
+
+
+\node at (16.5,-12) {The network $\text{g}_8$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (17,-10) {3};
+    \node (1) at (15,-7) {1};
+    \node (2) at (17,-7) {2};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (2) edge node {$r^2_3(\text{g}_8)$} (3);
+\end{scope}
+
+
+\node at (0,-17) {The network $\text{g}_9$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (-1,-15) {1};
+    \node (2) at (1,-15) {2};
+\end{scope}  
+
+\node at (5,-17) {The network $\text{g}_{10}$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (4,-15) {1};
+    \node (3) at (6,-15) {3};
+\end{scope}  
+
+\node at (12,-17) {The network $\text{g}_{11}$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (12,-15) {1};
+\end{scope}  
+    \end{tikzpicture}
+\end{figure}
+
+In this section we study the case of the chain network with three firms. We want to make explicit the optimal strategies played by all firms. For the sake of simplicity we assume throughout that only three firms may potentially enter the market. Each firm decides over (i) entering the market or not and which links to form with its predecessors, then (ii) the royalty it will make one of its successor pay if the later attaches to the former. \\
+
+\indent Given that the game is sequential, we solve using backward induction. Meaning, we start with the decisions taken by firm $3$. This one takes only one decision, which is to enter the market and to maintain a link with firm $2$. We need thence to make sure that these actions of $3$ in the chain constitute a best-response. \\
+
+The chain is labeled as the network $\text{g}_1$ in the graph appendix. 
+
+\indent \chapter{\textbf{Firm 3}}\\
+Consider the payoff of firm $3$ in the chain. This firm is the most efficient at producing, and pays a royalty that we denote $r^2_3(\text{g}_1)$ to firm $2$. It follows that: 
+\begin{equation*}
+    \pi_3(\text{g}_1)= p_3(3,\text{g}_1)-r^2_3(\text{g}_1)-F. 
+\end{equation*}
+
+Consider the set of deviations $\mathcal{S}_3$ available to firm $3$. Since only three firms can enter the market, a deviation of $3$ can only consist of a deviation in the link formation and entry strategy of the firm. It follows that: $\mathcal{S}_3=\{(E,1),(E,\emptyset), NE\}$, i.e. if $3$ does not attach to firm $2$, then it may either form a link to firm $1$ ($(E,1)$), to no firm at all $(E,\emptyset)$, or not even enter the market ($NE$). Therefore, the strategy $(E,2)$ is a best-response of firm $3$ to the strategies played by its predecessors if and only if: 
+\begin{equation*}
+    \pi_3(\text{g}_1)\geq \max\{\pi_3(\text{g}_2), \pi_3(\text{g}_3), 0\},
+\end{equation*}
+where the first term in the maximum function is the payoff of $3$ in network $\text{g}_2$, the second term is the payoff of the firm in the network $\text{g}_3$ and the zero corresponds to the payoff of $3$ if it does not enter the market. \\
+\indent For the sake of comparing the payoffs, we must first determine the royalty $3$ would pay to $1$ in the network $\text{g}_2$. We know from the theoretical results that $1$ offers $r^1_3(\text{g}_2)=0$. The corresponding payoff of firm $3$ in $\text{g}_2$ if it accepts $1$'s offer would  be: 
+\begin{equation}
+    \pi_3(\text{g}_2)= p_3(2,\text{g}_2)  -F. 
+\end{equation}
+Note that the deviation $(E,1)$ of $3$ strictly dominates the deviations $(E,\emptyset)$ and $(NE)$. Thence, we only need make sure that $3$ prefers to form a link to $2$ instead of $1$. \\
+\indent Consider the offer made by firm $2$. The later knows that $1$ cannot compete, since it does not have the financial means to compensate $3$ through the subsidy $r^1_3(\text{g}_2)$. Therefore, it is rational for firm $2$ only to set the royalty cost on $3$ to the maximum level that $3$ can accept: 
+\begin{equation*}
+    r^2_3(\text{g}_1)= p_3(3,\text{g}_1)-F-\pi_3(\text{g}_2), 
+\end{equation*}
+where $\pi_3(\text{g}_2)$ is the payoff of $3$ if he had attached to $1$ instead. Thence, we find that the equilibrium royalty paid by $3$ to $2$ is: 
+\begin{equation}
+    r^2_3(\text{g}_1)= p_3(3,\text{g}_1)-p_3(2,\text{g}_2). \label{r23}
+\end{equation}
+
+
+\indent \chapter{\textbf{Firm 2}}\\
+We now study the decisions of firm $2$ in the chain. The last action taken by firm $2$ is offering $r^2_3(\text{g}_1)$ to firm $3$. We determined that the level of $r^2_3(\text{g}_1)$ is the value in \eqref{r23}. Therefore, we need to make sure that $2$'s decision of winning the attachment of $3$ is an optimal one. That is: 
+\begin{equation*}
+    r^2_3(\text{g}_1)\geq p_2(2,\text{g}_2)-p_2(2,\text{g}_1).
+\end{equation*}
+Therefore, the value of $r^2_3(\text{g}_1)$ in \eqref{r23} is a best-response of firm $2$ if and only if: 
+\begin{equation}
+   p_3(3,\text{g}_1)-p_3(2,\text{g}_2)\geq p_2(2,\text{g}_2)-p_2(2,\text{g}_1),
+\end{equation}
+that is, the marginal profit from the technology level $3$ to firm $3$ must compensate the marginal loss in firm $2$'s profit.\\
+
+Now we study the other decision taken by $2$ in the chain, which is his link formation. Let $\mathcal{S}_2$ be the set of deviations in terms of link formation strategy available to firm $2$. Firm $2$'s alternate options are either not to form a link to $1$ or not to enter the market at all. Thence, $\mathcal{S}_2=\{(E,\emptyset), (NE)\}$.  \\ 
+Let us consider first the deviation $(E,\emptyset)$ of firm $2$. There are two options: either $3$ enters the market or it does not. If $3$ enters the market, it will always form a link with either $1$ or $2$. The reason is fairly simple: $3$ can get a technological level of $2$ for free. The only reason for which $3$ would not enter is that its market payoff in the network $\text{g}_4$ is negative. In conclusion, $2$'s strategy in the chain is a best-response if and only if: 
+\begin{equation*}
+    \pi_2(\text{g}_1)\geq \max\{0, p_2(1,\text{g}_4)-F\}.
+\end{equation*}
+We divide the rest of the analysis between two cases when $2$ plays the deviation $(E,\emptyset)$: (i) $3$ enters and attaches to either $1$ or $2$, and (ii) $3$ does not enter. \\
+
+\textit{Case 1. If $2$ plays $s_2=\emptyset$, then $3$ enters and plays $s_3=1$ (or $s_3=2$):}\\
+Therefore, it is true that $p_3(2,\text{g}_4)-F\geq 0$ for firm $3$ in the network $\text{g}_4$.\\
+It is a best-response for $2$ to form a link to firm $1$ if and only if: 
+\begin{equation*}
+    \pi_2(\text{g}_1)=p_2(2,\text{g}_1)-r^1_2(\text{g}_1)-F \geq \max\{0, \pi_2(1,\text{g}_4)\}
+\end{equation*}
+where $\pi_2(1,\text{g}_4)=p_2(1,\text{g}_4)-F$. We need now determine the royalty $r^1_2(\text{g}_1)$ that $1$ charges to firm $2$. Firm $1$ is rational; therefore, it fixes the level of the royalty to the maximum $2$ is ready to pay: 
+\begin{equation*}
+    r^1_2(\text{g}_1)= p_2(2,\text{g}_1)+r^2_3(\text{g}_1)-F - \max\{0, p_2(1,\text{g}_4)-F\}
+\end{equation*}
+and $r^2_3(\text{g}_1)$ is the value we obtained in \eqref{r23}. Replacing, we find that the equilibrium value of $r^1_2(\text{g}_1)$ is: 
+\begin{equation}
+    r^1_2(\text{g}_1)= p_2(2,\text{g}_1)+[ p_3(3,\text{g}_1)-p_3(2,\text{g}_2)]-F - \max\{0, p_2(1,\text{g}_4)-F\}. \label{r12}
+\end{equation}
+
+\textit{Case 2. If $2$ plays $s_2=\emptyset$, then $3$ does not enter:}\\
+Therefore, it is true that: $p_3(2,\text{g}_4)-F\leq 0$. \\
+Given that $3$ does not enter if $2$ plays its alternate strategy $s_2=\emptyset$, it is a best-response for firm $2$ to form a link to $1$ if and only if: 
+\begin{equation*}
+    \pi_2(\text{g}_1)\geq \max\{0, \pi_2(\text{g}_9)\},
+\end{equation*}
+where $\pi_2(\text{g}_9)=p_2(1,\text{g}_9)-F$. We proceed as in the previous case: we shall get now the level of the royalty $r^1_2(\text{g}_1)$ taht $2$ pays to $1$ in the chain. This is: 
+\begin{equation*}
+    r^1_2(\text{g}_1)=p_2(2,\text{g}_1) +r^2_3(\text{g}_1)-F- \max\{0, p_2(1,\text{g}_9)-F\}. 
+\end{equation*}
+Replacing, the equilibrium level of $r^1_2(\text{g}_1)$ for this case is: 
+\begin{equation}
+    r^1_2(\text{g}_1)=p_2(1,\text{g}_1)+[ p_3(3,\text{g}_1)-p_3(2,\text{g}_2)]-F - \max\{0, p_2(1,\text{g}_9)-F\}.\label{r12bis}
+\end{equation}
+
+\chapter{\textbf{Firm 1}}\\
+We finish with the analysis of the decisions taken by firm $1$ in the chain. The last action the later takes is to decide about the level of the royalty $r^1_2(\text{g}_1)$. We showed that the equilibrium level if $r^1_2(\text{g}_1)$ can only be that in \eqref{r12} or \eqref{r12bis}, depending on the cases. \\
+\indent However, it remains to be proved that letting $2$ getting attached to $1$ and pay the consequential royalty is incentive compatible for $1$. If $1$ does not let $2$ getting attached, then there are multiple different networks that may form. These alternate networks are $\text{g}_2, \text{g}_9, \text{g}_{10},\text{g}_6$ and finally $g_{11}$. We investigate the conditions for which each of those networks may form: 
+\begin{enumerate}
+    \item[\textit{Case 1:}] the network $\text{g}_2$ is realized if both firms $2$ and $3$ can expect a positive payoff. Given that $3$'s payoff in $\text{g}_4$ is always strictly larger than that of $2$ (because $3$ is more efficent at producing, thus $p_3(2,\text{g}_4)>p_2(1,\text{g}_4)$, and $3$ gets its technology for free). Thus if $1$ prevents $2$ from attaching, $\text{g}_2$ is realized if and only if: 
+    \begin{equation*}
+         p_2(1,\text{g}_4)-F \geq 0.
+    \end{equation*}
+   \item[\textit{Case 2:}] the network $\text{g}_9$ is realized if $2$ can expect a positive payoff however $3$ cannot and therefore refrains from entering the market. Given that if $3$ enters the market then it always attaches to any one of its predecessors, it must be that $p_3(2,\text{g}_4)-F<0$. The set of conditions that ensures the realization of $\text{g}_9$ is: 
+   \begin{align*}
+       & p_3(2,\text{g}_4)-F<0, \\
+       \mbox{ and : } & p_2(1,\text{g}_9)-F\geq 0.
+   \end{align*}
+   
+   \item[\textit{Case 3:}] the network $\text{g}_{10}$ is realized when $2$ does not enter for the reason that its payoff in $\text{g}_4$ would be negative (recall that if $2$ enters and gets the technology level 1, then if 3 enters it attaches to either 1 or 2). In fact, so long as $3$ enters the market in the network $\text{g}_6$, then $3$ would have entered the market if $2$ had as well. Now, and given that $2$ did not enter the market, firm $3$ must prefer not to form a link to $1$ instead of the opposite. The set of conditions for which $g_{10}$ is realized is then:
+   \begin{align*}
+      & p_2(1,\text{g}_4)-F<0,\\
+      & p_3(2,\text{g}_4)-F\geq 0,\\
+       \mbox{ and : } & p_3(1,g_{10})-F \geq \max\{0, p_3(2,g_{6})-r^1_3(\text{g}_6)-F\}.
+   \end{align*}
+    \item[\textit{Case 4:}] the network $\text{g}_6$ is realized for the same conditions as above, instead that $3$ prefers now to form a link to firm $1$:
+     \begin{align*}
+      & p_2(1,\text{g}_4)-F<0,\\
+      & p_3(2,\text{g}_4)-F\geq 0,\\
+       \mbox{ and : } & p_3(1,g_6)-r^1_3(\text{g}_6)-F \geq \max\{0, p_3(2,g_{10})-F\}.
+   \end{align*}
+  \item[\textit{Case 5:}] the network $\text{g}_{11}$ is realized. Note that the profit of firm $2$ in $\text{g}_9$ must be negative. Otherwise, $3$ would have entered and $\text{g}_4$ would have been formed instead. At last, note that firm $3$'s profit in $\text{g}_6$ must be negative as well. All in all, the full set of conditions that is needed for $\text{g}_{11}$ to be realized when $1$ does not let $2$ attach to her is: 
+  \begin{align*}
+      & p_3(1,\text{g}_{10})-F=p_2(1,\text{g}_9)-F<0 \mbox{ (a),}\\
+      & p_3(2,\text{g}_6)-r^1_3(\text{g}_6)-F <0 \mbox{ (b).}
+  \end{align*}
+\end{enumerate}
+
+For every and each of these five cases, we need ensure that it is incentive compatible for firm $1$ to make an offer to $2$ in the chain. We proceed case by case. \\
+
+\textit{Case 1: if $1$ does not let $2$ attach to her, then $\text{g}_{4}$ is realized instead.}\\
+
+The payoff of firm $1$ in the chain is: 
+\begin{equation*}
+    \pi_1(\text{g}_1)=p_1(1,\text{g}_1)+r^1_2(\text{g}_1) -F.
+\end{equation*}
+If $1$ does not want $2$ to attach to her (it would suffice for $1$ to propose $r^1_2(\text{g}_1)=\infty$), then firm $1$ - given the conditions on the payoffs structure - knows that $\text{g}_4$ will be
+realized. Thence $r^1_2(\text{g}_1)$ is a best-response of $1$ if the firm does not prefer to get its payoff in $\text{g}_4$ instead:\\
+\begin{equation*}
+    p_1(1,\text{g}_1)+r^1_2(\text{g}_1)-F\geq p_1(1,\text{g}_4)-F.
+\end{equation*}
+that is, $r^1_2(\text{g}_1)\geq p_1(1,\text{g}_4)-p_1(1,\text{g}_1)$. 
+(Recall that even if $3$ attaches to $1$ in $\text{g}_4$, the unique stable royalty offer is $r^1_3(\text{g}_4)=0$). Given that $3$'s payoff in $\text{g}_4$ is positive, then the optimal value of $r^1_2(\text{g}_1)$ is the one in \eqref{r12}. Also, $2$'s profit in $\text{g}_4$ is positive (otherwise, $\text{g}_4$ could not have formed). It follows that:
+\begin{equation*}
+    p_2(2,\text{g}_1)+r^2_3(\text{g}_1)-F -p_2(1,\text{g}_4)-F \geq p_1(1,\text{g}_4)-p_1(1,\text{g}_1).
+\end{equation*}
+Given the equilibrium value of $r^2_3(\text{g}_1)$ provided in \eqref{r23}, this condition is: 
+\begin{equation*}
+    p_2(2,\text{g}_1)+[p_3(3,\text{g}_1)-p_3(2,\text{g}_2)]-p_2(1,\text{g}_4)\geq p_1(1,\text{g}_4)-p_1(1,\text{g}_1). 
+\end{equation*}
+which can be rearranged as: 
+\begin{equation}
+    \sum_{i=1,2,3} p_i(i,\text{g}_1)\geq \sum_{i=1,2,3}p_i(k_i,\text{g}_4)-[p_3(2,\text{g}_4)-p_3(2,\text{g}_2)].
+\end{equation}
+
+
+\textit{Case 2: if $1$ does not let $2$ get attached to her, then $\text{g}_9$ is realized.}\\
+\indent Given the payoff that $1$ gets in the chain network $\text{g}_1$, $1$ prefers it over its profit in the network $\text{g}_9$ if and only if:
+\begin{equation*}
+    p_1(1,\text{g}_1)+r^1_2(\text{g}_1)-F\geq p_1(1,\text{g}_9) -F. 
+\end{equation*}
+Now, given that $3$ does not enter while $1$ and $2$ both operate with the level of technology $1$, the level of the royalty paid by $2$ to firm $1$ in $\text{g}_1$ is that in \eqref{r12bis}. Also, note that if $2$ enters the market, then it expects a positive payoff. Replacing, we get: 
+\begin{equation*}
+    p_1(1,\text{g}_1)+p_2(2,\text{g}_1) +r^2_3(\text{g}_1)- p_2(1,\text{g}_9)\geq p_1(1,\text{g}_9)
+\end{equation*}
+For the equilibrium value of $r^2_3(\text{g}_1)$ given in expression \eqref{r23}, the incentive compatibility constraint of firm $1$ in the chain is here: 
+\begin{equation}
+    \sum_{i=1,2,3} p_i(i,\text{g}_1)\geq \sum_{i=1,2} p_i(k_i,\text{g}_9)+p_3(2,\text{g}_2)
+\end{equation}
+
+\textit{Case 3: if $1$ does not let $2$ get attached to her, then $\text{g}_{10}$ is realized.}\\
+Here, a first point to note is that $2$'s payoff in $\text{g}_4$ would be negative, due to $3$'s subsequent entry on the market. In fact, if $3$'s payoff in $\text{g}_4$ were negative, then $2$ would get its payoff in network $\text{g}_9$, which is the same as $3$'s payoff in $\text{g}_{10}$ - and this last payoff is assumed here to be positive. Thus this case implies that $p_2(1,\text{g}_4)-F< 0$ and $p_3(2,\text{g}_4)-F\geq 0$. Thus, $r^1_2(\text{g}_1)$ is given by the expression in $\eqref{r12}$, where the maximum payoff of firm $2$ between its payoff in $\text{g}_4$ and zero is zero. Thence,  
+\begin{equation*}
+    r^1_2(\text{g}_1)=p_2(2,\text{g}_1)+r^2_3(\text{g}_1)-F. 
+\end{equation*}
+We can replace the equilibrium value of $r^2_3(\text{g}_1)$ by its expression \eqref{r23}. All in all, the value of $r^1_2(\text{g}_1)$ is a best-response of $1$ if the following relation holds in equilibrium: 
+\begin{equation*}
+    p_1(1,\text{g}_1)+p_2(2,\text{g}_1)+[ p_3(3,\text{g}_1)-p_3(2,\text{g}_2)]-F  \geq p_1(1,\text{g}_{10}),
+\end{equation*}
+which is equivalent to: 
+\begin{equation}
+    \sum_{i=1,2,3}p_i(i,\text{g}_1)\geq p_3(2,\text{g}_2)+p_1(1,\text{g}_{10})+F.
+\end{equation}
+\textit{Case 4: if 1 does not let 2 get attached to her, then $\text{g}_6$ is realized.}\\
+Once again, firm $2$ does not enter the market because its profit in $\text{g}_4$ would be negative. In fact, the point is that if $3$ enters the market in $\text{g}_6$, then $3$ would always enter if $2$ had entered and get the technology $1$ (i.e. $\pi_3(\text{g}_4)\geq \pi_3(\text{g}_6)$). Thence, the royalty paid by firm $2$ to firm $1$ in $\text{g}_1$ is the value in \eqref{r12}, where $2$'s maximum profit between not entering the market and operating in $\text{g}_4$ would be zero.\\
+Given this, $1$'s payoff in the chain is: 
+\begin{equation*}
+    \pi_1(\text{g}_1)=p_1(1,\text{g}_1)+p_2(2,\text{g}_1)+r^2_3(\text{g}_1)-2F,
+\end{equation*}
+with $r^2_3(\text{g}_1)$ at its equilibrium value \eqref{r23}. \\
+
+We need to determine now $1$'s payoff in $\text{g}_6$. For this we need first to obtain the value $r^1_3(\text{g}_6)$, that is what $1$ would make $3$ pay in $\text{g}_6$
+to let $3$ infringe on her technology. Let us consider this network $\text{g}_6$. If firm $1$ is rational, then it charges to firm $3$ the maximal level of royalty acceptable by $3$. This is the value that makes $3$ indifferent between (i) either not entering the market at all (see network $\text{g}_{11}$), or (ii) entering and producing with the level of technology 1 (see network $\text{g}_{10}$). That is, 
+\begin{equation}
+    r^1_3(\text{g}_6)= p_3(2,\text{g}_6)-F - \max\{0, p_3(1,\text{g}_{10})-F\}. \label{r13}
+\end{equation}
+Thus, the level of the royalty in \eqref{r12}
+is a best-response of firm $1$ if and only if: 
+\begin{equation*}
+    p_1(1,\text{g}_1) +p_2(2,\text{g}_1)+ [ p_3(3,\text{g}_1)-p_3(2,\text{g}_2)] \geq p_1(1,\text{g}_6)+p_3(2,\text{g}_6) - \max\{0, p_3(1,\text{g}_{10})-F\}
+\end{equation*}
+Note that firm $2$'s payoff in the chain is always null. This means that $2$ could never operate on the market with any other level of technology. \\
+The above expression is the incentive compatibility constraint of firm $1$. It can be rearranged as: 
+\begin{equation}
+    \sum_{i=1,2,3}p_i(i,\text{g}_1)\geq \sum_{i=1,3}p_i(k_i, \text{g}_6) +p_3(2,\text{g}_2)-\max\{0,p_3(1,\text{g}_{10})-F\}.
+\end{equation}
+
+\textit{Case 5: if $1$ does not let $2$ get attached to her, then $1$ is the only firm on the market $(\text{g}_{11})$.}\\
+This case is the easiest of all. Note that if $2$ does not enter the market when $1$ does not let her infringe on its technology, then $\max\{p_2(1,\text{g}_9)-F,p_2(1,\text{g}_4)-F\}=p_2(1,\text{g}_9)-F<0$. Also, $3$ cannot operate on a market where the technological network is not a chain, which implies that $\max\{\pi_3(\text{g}_6),\pi_3(\text{g}_{10})\}< 0$. Note that we cannot infer from the previous relations anything about the sign of $\pi_3(\text{g}_4)$, that nonetheless we must know for determining the equilibrium level of $r^1_2(\text{g}_1)$. It turns out that this does not matter when $2$'s payoff in both $\text{g}_4$ and $\text{g}_9$ is always negative. Thence, the equilibrium value of $r^1_2(\text{g}_1)$ is: 
+    \begin{equation*}
+        r^1_2(\text{g}_1)= p_2(2,\text{g}_1)+r^2_3(\text{g}_1)-F,
+    \end{equation*}
+
+Regarding case 4, note that we could add that it was not rational for $1$ to let $3$ enter as in $\text{g}_6$. Meaning, maybe that $3$'s profit in $\text{g}_6$ could have been positive for the value of the royalty $r^1_3(\text{g}_6)$ determined in \eqref{r13}, however $1$ preferred not to have this network been formed. (Note that in this case, it would be true that $\pi_3(\text{g}_4)\geq 0$.) Then $3$'s payoff in $\text{g}_{10}$ must be negative. This implies:
+\begin{equation*}
+    p_1(1,\text{g}_6)+p_3(2,\text{g}_6)-F - \max\{0, p_3(1,\text{g}_{10})-F\}\leq p_1(1,\text{g}_{11})-F~~\Longleftrightarrow~~p_1(1,\text{g}_6)+p_3(2,\text{g}_6)\leq p_1(1,\text{g}_{11})
+\end{equation*}
+In the chain, firm $1$ receives the royalty payment $r^1_2(\text{g}_1)$ from firm $2$. This level of royalty is a best-response of firm $1$ if: 
+\begin{equation*}
+  p_1(1,\text{g}_1)+ p_2(2,\text{g}_1)-F+[ p_3(3,\text{g}_1)-p_3(2,\text{g}_2)]\geq p_1(1,\text{g}_{11}).  
+\end{equation*}
+This incentive compatibility constraint of $1$ in the chain may be re-expressed as: 
+\begin{equation}
+    \sum_{i=1,2,3} p_i(i,\text{g}_1) \geq p_3(2,\text{g}_2)+p_1(1,\text{g}_{11})+F. 
+\end{equation}
+\indent Finally, $1$'s very first decision was whether to enter the market or not. Thence, it must be that $1$'s payoff in the chain is weakly positive. 
+
+
+\bibliography{end.bib}
+
+\end{document}
+
+\section{Case study: the chain network with all firms producing}
+
+Consider the following network: all $n$ firms which entered the market formed a chain network. A chain is a sequence of links $i\rightarrow j$ such that $j=i+1$ and $j= s_i$, for all firms $i\in N\setminus \{1\}$. Assume further that all firms in the chain produce in equilibrium: $\Omega = N$. The payoff of a typical firm indexed $i$ is given by: 
+\begin{equation*}
+    \pi_i((q_i,q_{-i}), (s_i,s_{-i}), r) = \dfrac{1}{(n+1)^2}\Big[A+c\Big(\dfrac{1-\beta^n}{1-\beta}-(n+1)\beta^{i-1}\Big)\Big]^2 + (n-2i+1)r-F.
+\end{equation*}
+The payoff of any firm $i$ in a chain where all firms produce is denoted $\pi_i$ for the sake of clarity. \\
+We are interested in the relation between a firm's payoff and its position in the chain. Here, $i$'s position is simply the value $i$ of its index. Therefore, the larger $i$, the more efficient the later at producing compared to the rest of the firms; however, the larger its royalty expenditures. We study the sign of the first derivative of $i$'s profit with respect to its index: 
+\begin{equation}
+    \dfrac{\partial \pi_i}{\partial i}= -2 c ~q_i (i-1)ln(\beta)\beta^{i-1}-2r,
+\end{equation}
+for $q_i$ the quantity supplied by $i$. The first term is monotonic and decreasing in $i$; and it is always strictly positive. The second one is always negatively valued since $r\geq 0$ by assumption. Thence, if the derivative changes sign, it is first positive then negative (single-crossing from above). We may have then one of the three cases: 
+\begin{enumerate}
+    \item the royalty $r$ is small enough so that the payoffs are increasing in the chain: $\pi_i\geq \pi_j$ for any $i$ and $j<i$; 
+    \item the royalty $r$ is large enough so that the payoffs are decreasing in the chain: $\pi_i\leq \pi_j$ for any $i$ and $j<i$;
+    \item the royalty revenue $r$ takes on a intermediate value for which the derivative is single-crossing. I.e. there exists $1<k<n$ such that: (i) $\pi_i\geq \pi_j$ for all $i\leq k$ and $j<i$, and (ii) $\pi_i\leq \pi_j$ for all $j\leq k$ and $j<i$. 
+\end{enumerate}
+
+\begin{proposition}
+Consider the chain network where all firms produce in equilibrium. If $\pi_1> \pi_2$, then profits are decreasing along the chain. That is: for 
+\begin{equation*}
+    r>c(1-\beta)\Big(p-\dfrac{c(1+\beta)}{2}\Big)
+\end{equation*}
+then the relation $\pi_i\geq \pi_j$ is verified, for all $i\in N\setminus\{n\}$ and $j>i$. 
+\end{proposition} 
+\begin{proof}
+    Go back to the study of the profit of firm $i$ with respect to its index. The derivative is single-crossing from above if we consider that $i\in \mathbb{R}_{+}$. If $\pi_1>\pi_2$, we are in the negative part of the derivative. Therefore the result. 
+\end{proof}
+
+\begin{proposition}
+Consider the same chain network where all firms produce. If $\pi_{n-1}<\pi_n$, then profits are increasing along the chain. That is: for
+\begin{equation*}
+    r< c\beta^{n-2}(1-\beta)\Big(p-\dfrac{c\beta^{n-2}(1+\beta)}{2}\Big)
+\end{equation*}
+then the relation $\pi_i\leq \pi_j$ is verified, for all $i\in N\setminus\{n\}$ and $j>i$. 
+\end{proposition} 
+\begin{proof}
+    Again, the derivative of $i$'s profit with respect to $i$ would be single-crossing from below if $i\in \mathbb{R}_+$. If $\pi_{n-1}<\pi_n$, then we are on the positive part of the derivative. The result follows.  
+\end{proof}
+
+\begin{corollary}
+In a chain network where all firms produce in equilibrium, the fixed cost must verify: 
+\begin{equation}
+    F\leq \min \{\pi_1,\pi_n\}. 
+\end{equation}
+\end{corollary} 
+\begin{proof}
+Payoffs along the chain when all firms produce are either (i) increasing along the chain, (ii) decreasing along the chain, or (iii) first increasing from $1$ to some $<1k<n$, then decreasing till $n$. Let us consider case (i). Then firm $1$ is the firm with the lowest payoff in the network. For it to enter, then $F\leq \pi_1$. The two statements imply that all of the $n$ firms enter the market. For case (ii), the reasoning is the same, except that the it is $n$ which gets the lowest payoff among all firms. Finally, for case (iii), payoffs are increasing up to some firm $k$, then they decrease. Thence $\min_{i\in N}\pi_i \in \{\pi_1,\pi_n\}$. 
+\end{proof}
+
+We now provide an upper bound for the royalty cost that guarantees that $n$'s best-response is indeed to form a link to $n-1$ in the chain. We prove this result in two steps. The first part of the demonstration consists of deriving the maximal value of $r$ for which $n$ is indifferent between linking to $n-1$ and linking to any firm in the chain that is not $(n-1)$. Then, we show that this bound on $r$ is sufficient to prove that connecting to $n-1$ is a best-response for $n$. \\
+\indent Consider the deviation $s'_n$ for $n$ that consists of forming a link to $1\leq k\leq n-2$ (and $s'_n=k\neq n-1$). Let $q'_n$ be the (best-response) quantities supplied by $n$ after the later played the strategy $s'_n$. Note that $n$ always produces in equilibrium as it is the last firm to enter the market. Let $q'$ be the vector $(q'_1, \ldots, q'_n)$ of all firms' equilibrium outputs. We assumed in this section that all firms produce in the chain of length $n$. Thence if $n$ changes strategy by choosing a less efficient technology, then all firms in the resulting network should be all producing. Assume that $n$'s change in strategy does not affect $(n+1)$'s entry decision. That is, although $n$ is less efficient at producing, no other firm find it profitable to enter the market. The pair of alternate strategies $(s'_n,q'_n)$ gives $n$ (at most) the following payoff:   
+\begin{equation}
+    \pi((s'_n,s_{-n}),(q'_n,q'_{-n}), r)\leq \dfrac{1}{(n+1)^2}\Big[ A +c \Big( \dfrac{1-\beta^{n-1}}{1-\beta}-n\beta^{k}\Big)\Big]^2-rkc-F\equiv \tilde{\pi}_n(k) 
+\end{equation}
+
+\begin{definition}
+Let $r^*$ be the the value of the royalty cost such that, absent any deterrence and any production structure considerations, all r below this $r^*$ would lead the nth firm to prefer to expand the chain. Defined as: 
+\begin{equation*}
+    r=r^* \Rightarrow \pi_n=\max_{1\leq k\leq n-2}\pi_n(k) 
+\end{equation*}
+\end{definition}
+
+\begin{proposition}
+If $r<r^*$, then the best-response in link formation of the last firm that enters the market is $s_n=n-1$.  
+\begin{proof}
+An alternate strategy for $n$ is $s'_n=k$ with $1\leq k\leq n-1 $. The payoff associated with any deviation $s'_n=k$ is always less than $\tilde{\pi}_n(k)$. Let $s'_n=k^*$ the most profitable deviation for $n$, for $1\leq k^*\leq n$. Since $s_n=n-1$ is a best-response for $n$, then forming a link to $k^*$ gives $n$ a lower payoff than $\pi_n$. Also, this payoff is lower than $\pi_n(k^*)$. Thus, the loss in $n$'s payoff from this move would be less than $\pi_n-\pi_n(k^*)$. The result follows.   
+\end{proof}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The three firm case}
+
+The discussion until now has been quite abstract, so we take a simple 3 firm example and show what kind of equilibria can be ruled out. We proceed by backward induction. 
+
+
+\subsection{3rd firm}
+When the third firm enters it can only see one of two scenarios. It can either observe two singletons, or it can observe a two firm chain. \footnote{We rule out the case where the second firm did not enter because it would imply the third firm also does not enter}.  If the third firm observes two singletons, then the the relevant payoff vector is given by:
+
+\begin{align*}
+& \text{max} 
+\{ No~ entry,
+No~ Attachment, 
+Attach~ to~1
+\}& \\
+& \text{max} 
+\{ 0,
+\left(\frac{A-c}{4}\right)^2-F, 
+ \left( \frac{1}{4}(A+c(2-3b))\right)^2-r-F
+\} &
+\end{align*}
+
+The royalty cost for which the firm will not attach itself is given by:
+
+\begin{align*}
+& \left(\frac{A-c}{4}\right)^2> \left(\frac{1}{4}(A+c(2-3b))\right)^2-r & \\
+\rightarrow 
+& r> r_{sym} = \frac{3c}{16}(1-b)(2A+c-3bc) &
+\end{align*}
+
+If instead, the entrant observes a chain, the relevant payoff vector will be
+
+\begin{align*}
+& \text{max} \{No~ entry, No~ attachment, Attach ~to ~1, Attach~ to~ 2 \} &\\
+& \text{max} \{
+0,
+\frac{1}{4}(A+(b-2)c), \frac{1}{4} (A+c(1-2b))-r, \frac{1}{4}(A+c(1+b-3b^2))-2r \} &
+\end{align*}
+
+This means that there are now three conditions to establish the firms preferences over attaching. The third firm Will prefer no attachment to attaching to the 1st firm iff:
+
+\begin{equation*}
+r> \frac{3}{16} c \left(2 A (1-b)-c(1-b^2 ) \right) = r_1
+\end{equation*}
+
+Will prefer no attachment to attachment 2nd firm iff:
+
+\begin{equation*}
+r > \frac{3}{32} \left(1-b^2\right) c \left(2 A-c(1-2b+3 b^2) \right) = r_2
+\end{equation*}
+
+
+Will prefer attach to 1st over 2nd iff:
+
+\begin{equation*}
+r > \frac{3}{16} (1 - b) b c (2 A + (2 - b - 3 b^2) c) = r_3
+\end{equation*}
+
+
+The third firm can only attach itself to firm 1 if:
+
+\begin{align*}
+\frac{3}{16} (1 - b) b c (2 A + (2 - b - 3 b^2) c)<\frac{3}{16} c \left(2 A (1-b)+c(b^2 -1) \right) \\ 
+\Leftrightarrow 
+2A>c(1+b(4+3b))
+\end{align*}
+
+We will now create a strategy space for the 3rd firm. The strategy space will simplify the analysis by separating the subcases for the analysis from the point of view of the second firm. The strategy space will be given by a two element response vector, where the first element represents the reaction if there are two singletons and the second element the reaction if there is a two firm chain. We label each of the six cases. 
+
+\begin{align*}
+Luddite: ~&S_{lud} =  
+\{ No~ Attachment, 
+No~ Attachment
+\}& \\
+ Copycat:~& S_{cop} =  
+\{ No~ Attachment, 
+Attach~to~1
+\}& \\
+Double~or~nothing:~ & S_{don} = 
+\{ No~ Attachment, 
+Attach~to~2
+\}& \\ 
+Ego:~& S_{ego} =  
+\{ Attach~to~1, 
+No~ Attachment
+\}& \\
+ Moderate~Innovator:~ & S_{mod} =  
+\{  Attach~to~1, 
+Attach~to~1
+\}& \\
+ Unconditional~Expansion:~ & S_{unc} = 
+\{  Attach~to~1, 
+Attach~to~2
+\}& \\ 
+\end{align*}
+
+\begin{proposition}
+The copycat strategy never exists
+\end{proposition}
+
+\begin{proof}
+The definition of copycat implies that when the 2nd firm does not attach then 3 also does not attach(symmetric outcome). $r > \frac{3 c(1-b)}{16}(2A+c-3bc)=r_{sym}$. When firm 2 does attach to the first firm, then the third firm also attaches to the first firm. $r< \frac{3}{16} c \left(2 A (1-b)-c(1-b^2 ) \right)=r_{1}$ and $r > \frac{3}{16} (1 - b) b c (2 A + (2 - b - 3 b^2) c)=r_{3} $ Therefore the copycat strategy is Nash iff $r \in [max\{r_{sym}, r_{3} \}, r_{1}]$. We need only note that $r_{sym}$ is strictly greater than $r_{1}$, therefore the set is empty and the result follows
+\end{proof}
+
+\subsection{2nd firm}
+
+Will be using the strategy space specified for the third firm to discuss the strategies of the 2nd firm. 
+
+\subsubsection{Luddite}
+
+If the third firm will always choose to be a singleton the second firm has the choice of either enabling the three way Cournot competition or to be downstream firm against two upstream firms. The relevant payoff vector is then:
+
+\begin{align*}
+&\text{max} \{No~entry, No~attachment, Attach~to~1 \} &\\
+&\text{max} \{ 
+0, \frac{A-c}{4}, \frac{1}{4}(A+c(2-3b))-r
+\}&
+\end{align*}
+
+The second firm will only prefer no attachment if r is higher than a certain threshold. This is intuitive because if r is 0, then it can get an advantage on the other two firms at no cost. The relevant r that will determine this decision(as lon as at least one of the payoff is greater 0) will be given by: 
+
+\begin{equation*}
+r> r_{lud} = \frac{3}{16} (1-b) c (2 A-3 b c+c)
+\end{equation*}
+
+\begin{proposition} \label{symislud}
+If the third firm is a luddite $\Rightarrow$ the second firm does not attach
+\end{proposition}
+
+\begin{proof}
+Need only note that the r for making the decision is the same in both cases. ($r_{sym}=r_{lud}$)
+\end{proof}
+
+\subsubsection{Double or nothing}
+
+If it is the case that the third firm will either expand the two person chain or be a singleton then this creates a clear cut scenario for the second firm. The relevant payoff vector is: 
+
+\begin{align*}
+&\text{max} \{No~entry, No~attachment, Attach~to~1 \} &\\
+& \text{max} \{ 
+0, \left(\frac{A-C}{4} \right)^2, \left(\frac{1}{4}(A+c(1-3b+b^2)) \right)^2
+\} &
+\end{align*}
+
+Notice that no matter the outcome, the second firm will never have to pay any royalties. This occurs because if it does not attach itself then it will have the symmetric competition outcome and no royalties will be paid. If the firm does attach itself to the first firm, then the third firm want to make a chain which means that the second firm will be paying a royalty to the first firm and receiving a royalty from the third firm, therefore it will be royalty neutral. 
+
+\begin{proposition}
+If the third firm plays Double or nothing $\Rightarrow$ the second firm always attaches to 1
+\end{proposition}
+
+\begin{proof}
+To see this we need only note that  $No~ attachment<Attach~to~1 \rightarrow 3b-2<b^2$ which is always verified for $b \in [0,1]$
+\end{proof}
+
+\subsubsection{Entrepreneur with an ego}
+
+If the third firm is playing entrepreneur with an ego then we have that it wants to be the first firm to innovate, if the second firm innovates first, then the third firm will simply be a singleton. The relevant payoff vector of the second firm is then: 
+
+\begin{equation*}
+\text{max} \{ 
+0, \left(\frac{1}{4}(A+ c(b-2)) \right)^2+\frac{1}{2}r, \left( \frac{1}{4} (A+c(2-3b) )\right)^2-r
+\}
+\end{equation*}
+
+Note that here in the no attachment case, the royalty is divided by two because if the second firm decides to be a singleton, it has probability $\frac{1}{2}$ of being selected by the entrepreneur. The relevant cutoff point for the firm to prefer no attachment to attachment is given by: 
+
+\begin{equation*}
+r> r_{ego} = \frac{1}{3} (1-b) c (A-b c)
+\end{equation*}
+
+\begin{proposition}\label{egolud}
+$r_{ego}<r_{lud}$. This implies that if 2 attaches when 3 plays luddite, then it always attaches when 3 plays ego.   
+\end{proposition}
+
+\begin{proof}
+trivial
+\end{proof}
+
+\subsubsection{Moderate Innovator} 
+If the third firm expands to the second tier and never to the third tier. Then the second firm has the choice of either being one of two downstream firms paying royalties to the upstream firm, or it can be one of two upstream firms with some probability of receiving royalties from one downstream firm. 
+
+\begin{equation*}
+\text{max} \{ 
+0, \left(\frac{1}{4}(A+ c(b-2)) \right)^2+\frac{1}{2}r, \left( \frac{1}{4}(A+c(1-2b)) \right)^2 -r
+\}
+\end{equation*}
+
+The relevant cutoff point for the second firm to prefer no attachment to attachment is then given by:
+
+\begin{equation*}
+r>r_{mod}= \frac{3}{8} c \left(2 a (1-b)-c(1-b^2)\right)    
+\end{equation*}
+
+\begin{proposition}\label{egomod}
+$r_{ego}<r_{mod}$. This implies that if 2 attaches when 3 plays mod, then it always attaches when 3 plays ego.   
+\end{proposition}
+
+\begin{proof}
+trivial
+\end{proof}
+
+\subsubsection{Unconditional expansion } Finally, we look at the case where r is low enough than no matter what the scenario, the third firm firm will always expand the chain. From the point of view of the second firm, we have that either it will be optimal for the second firm to play the rent seeking game and be a singleton with some probability of the third firm paying it, or its best to be the firm in the middle chain. The relevant vector the second firm will be considering is: 
+
+\begin{equation*}
+\text{max} \{ 
+0, \left(\frac{1}{4}(A+ c(b-2)) \right)^2+\frac{1}{2}r, \left(\frac{1}{4}(A+c(1-3b+b^2)) \right)^2
+\}
+\end{equation*}
+
+Which gives the following cutoff point. 
+
+\begin{equation*}
+r>r_{unc}=\frac{1}{8} \left(b^2-4 b+3\right) c \left(2 a+\left(b^2-2 b-1\right) c\right)
+\end{equation*}
+
+\subsubsection{Lowest r results}
+
+\begin{proposition}\label{uncmod}
+$r_{unc}<r_{mod}$. This implies that if 2 attaches when 3 played mod, then 2 always attaches when 3 plays unc. 
+\end{proposition}
+
+
+\begin{proof}
+trivial
+\end{proof}
+
+\begin{proposition}\label{uncego}
+$r_{unc}<r_{ego}$. This implies that if 2 attaches when 3 plays unconditional, then it always attaches when 3 plays ego.  
+\end{proposition}
+
+\begin{proof}
+trivial
+\end{proof}
+
+\begin{proposition}\label{minr}
+The lowest cutoff point is given by: 
+$r_{unc}$. 
+\end{proposition}
+
+\begin{proof}
+The corrolary is given by transitivity. Since by proposition \ref{egolud}, we have that $r_{ego}<r_{lud}$ and by proposition \ref{egomod} that $r_{ego}<r_{lud}$, and by proposition \ref{uncmod}, we also have that $r_{unc}<r_{mod}$, it follows from $r_{unc}<r_{ego}$ that $r_{unc}$ is the lowest cutoff point. 
+\end{proof}
+
+
+
+\subsubsection{Upper r results}
+
+\begin{proposition}
+If  $r<  r_{unc}$ then a Nash equilibrium is either a chain or a tree.
+\end{proposition}
+
+\begin{proof}
+If $r$ is lower than $   r_{unc}, r_{copy} $ then by \ref{minr} firm 2 always attaches to firm 1. Now, firm 3 prefers to attach to firm 1 over not getting attach at all if $r<r_1$. We need only note that the relation $r_1<r_{unc}$ is always verified.  
+\end{proof}
+
+
+\begin{corollary}
+If $r<  r_{unc}$ then 3 plays either unc expansion, OR moderate innovator in equilibriuim.
+\end{corollary}
+
+\begin{corollary}
+If $r>$ max$\{ r_{mod},r_{luddite} \}$ then firm 3 only plays either luddite or entrepreneur with ego in equilibrium. 
+\end{corollary}
+
+\begin{proposition} \label{Symmetric}
+If $r>$ max$\{ r_{mod},r_{luddite} \}$, then the only Nash equilibrium is the symmetric outcome. 
+\end{proposition}
+
+\begin{proof}
+First note that max$\{ r_{mod},r_{luddite} \}$ is the maximum over all the bounds. So if r is larger than these two, it is larger than all the bounds. Which implies that firm 2 never attaches itself, regardless of 3's strategy. 
+
+Firm 3 will only attach to either firm 1 or 2 iff $r \leq r_{sym}$. But by proposition \ref{symislud} $r_{sym}=r_{lud}$; and by hypothesis $r > r_{lud}$. Thus firm 3 never attaches. 
+\end{proof}
+
+
+\section{Bertrand}
+
+In the setup of our model, only the firms that are producing have to pay royalties. If the firms compete a la Bertrand, all firms' decisions in link formation would form a chain, which length $\rho=n$ is such that $n+1$'s profit would be strictly negative if he were to extend the chain. First, we show that Bertrand competition between the firms which produce implies that the network is a chain. Then, we demonstrate that only the last firm produces in equilibrium. And this firm, since the network is a chain, is the firm that is the most efficient at producing.  
+
+\begin{proposition}
+If $F=0$, then only the first firm enters
+\end{proposition}
+
+\begin{proof}
+In Bertrand, cournot profit is 0 for producers. 
+\end{proof}
+
+\begin{proposition}
+If we are in Bertrand competition then there is never a tree as long as $F>0$
+\end{proposition}
+
+\begin{proof}
+To be made
+\end{proof}
+
+
+
+\begin{proposition}
+Suppose the maximal profit possible is $\overline{\pi}$, then the innovation is expanded to its maximum iff: $\overline{\pi}-n r-F>0$ or $\frac{\overline{\pi}-F}{n}$
+\end{proposition}
+
+\begin{proof}
+To be done
+\end{proof}
+
+
+\begin{corollary}
+If the maximum is not pursued then, the optimum number of n is given by:
+\begin{equation*}
+max_n\{\overline{\pi}(n)-n r-F  \}
+\end{equation*}
+\end{corollary}
+
+\subsection{Reduced form notes}
+
+Let the market profit of firm i in an n firm chain be given by: $\pi(i,n)$. 
+
+If this is strictly increasing in i, then we trivially have something that is Nash stable. What can we say about profit as a function of n? 
+
+If it is strictly decreasing, it may still be stable, depending on how profitable it is to be a singleton. 
+
+We may be able to combine these two insights for the single crossing notes. 
+
