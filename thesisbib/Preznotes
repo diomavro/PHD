@@ -1,0 +1,32 @@
+What i am doing
+-Objective discounting
+-Three reasons traditionally used
+-Show that a single axiom gets you all the way without them
+
+SLIDE 1: 
+Empirical Phenomenon, NOW VS LATER
+
+Discount rate transforms the future payment(if it is between 0-1, ask me later why the model may imply it isn't)
+
+The functional forms are generally exponential and hyperbolic
+
+Thus, the longer an event does not occur, the more likely it is that it will not occur (decreasing estimated hazard rate). Implied prior of hyperbolic discount is an exponential distribution. 
+
+Maskin, The mechanics behind the model are that since an event will occur by some future time, the closer we are to that future time the more certain one of the events will occur very soon.
+
+Goal:
+-Simple
+-Without bias
+-Without preference
+-Single axiom
+
+One of the main results of ergodicity economics is mapping a utility function to a dynamic. 
+
+Results:
+-Classical results
+-New result
+
+Scale parameter of time, how does the payoff scale as a function of time. 
+
+
+Vg54YsNK

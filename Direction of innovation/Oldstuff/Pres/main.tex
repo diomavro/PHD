@@ -1,0 +1,472 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{tikz,pgfplots,smartdiagram}
+\usepackage{preview}	
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage[english]{babel}	
+%\usepackage{natbib}
+%\usepackage{color}
+\usepackage{blindtext}
+\usepackage{xcolor}
+\usepackage{bbm}
+
+
+\usetikzlibrary{math}
+
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage[utf8]{inputenc}
+
+\colorlet{shadecolor}{blue!15}
+
+\newcommand{\propnumber}{} % initialize
+\newtheorem*{prop}{Remark}
+\newenvironment{propc}[1]
+  {\renewcommand{\propnumber}{#1}%
+   \begin{shaded}\begin{prop}}
+  {\end{prop}\end{shaded}}
+
+
+\bibliographystyle{agsm}
+% \usepackage[colorinlistoftodos]{todonotes}
+
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+\usetheme{Marburg}
+\usecolortheme{orchid}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Buyouts and the direction of innovation]{Buyouts and the direction of innovation} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Diomides Mavroyiannis} % Your name
+\institute[Dauphine] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+University of Paris 9, Paris Dauphine \\ % Your institution for the title page
+\medskip% Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\setcounter{tocdepth}{1}
+\section{Introduction}
+%------------------------------------------------
+\subsection{Motivation}
+\begin{frame}{Motivation}
+\begin{itemize}
+    \item \textbf{Definition:} A buyout will be used to refer to the purchase of technological assets
+    \item Buyouts are prevalent, the basic effect of buyouts is that they decrease the price elasticity of the market.  
+    \item From an economic theory point of view, buyouts are a double edged sword.  
+    \item \textbf{Positive:} Increase potential payoff for entrepreneurs, more projects undertaken, more innovation
+    \item \textbf{Negative:} Increases monopoly power
+    \item Sometimes buyouts can occur without these side effects, value buyers. 
+\end{itemize}
+\end{frame}
+
+\subsection{Literature review}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\smartdiagram[descriptive diagram]{
+  {Complementary,{The property increases in value if owned together with another property}},
+  {Substitution, {The property decreases the value of another property if held separately}},
+  {Cheap, The expected future profits are higher than the cost of buying out}}
+\end{frame}
+
+\begin{frame}{Literature review}
+\begin{itemize}
+    \item Empirically firms which are less innovative are more likely to engage in buyouts. Higgins and Rodriguez (2006) and Zhao (2009)
+    \item Coase theorem works here because substitutability can be framed in terms of externalities.See Kuechle $\&$ Rios  (2012)
+    \item Large firms avoid engaging in competition effects, Aghion (2005)
+    \item Cabal (2003) has an R$\&$D race where two firms choose R$\&$D technologies. 
+\end{itemize}
+\end{frame}
+
+\subsection{Section}
+\subsubsection{Players}
+\begin{frame}{Model:Players}
+\begin{itemize}
+    \item There are two firms, an entrant and incumbent engaged in Bertrand competition
+    \item Three relevant costs, intermediate default and innovative. $p_{im}^*(c_i)>c_{i1}>c_i>c_{i2}$
+    \item Incumbent has default cost,$c_i$
+    \item Entrant starts with a high cost that does not bother the incumbent.
+    \item \textbf{Timing:} \\
+    negotiation $\rightarrow$  Incumbent chooses  $\rightarrow$ competition
+    Entrant chooses $\rightarrow$ negotiation $\rightarrow$ competition
+\end{itemize}
+\end{frame}
+
+\subsubsection{Technology}
+\begin{frame}{Model:Technology}
+\begin{itemize}
+    \item The entrant has the choice between two technologies, a sequential and a radical technology, with costs $k_s$ and $k_r$ respectively.  
+    \item The sequential technology takes two periods to innovate. In the first period the entrants cost is $c_{i1}$ and in the second it is $c_{i2}$
+    \item In the radical technology, with probability q, the cost will be $c_{i2}$ in the first period.
+    \item If the technology fails then with probability q it will succeed in the second period. 
+
+\end{itemize}
+\end{frame}
+
+\subsection{A priori buyout}
+
+\begin{frame}{A priori}
+\begin{block}{A priori cutoff}
+If the buyouts are priori, the decision criteria for the radical innovation to be chosen by the incumbent is: 
+\begin{equation*}
+\frac{3-\sqrt{5}}{2}<q^{p}
+\end{equation*}
+\end{block}
+
+\begin{proof}
+We need only set: 
+\begin{align*}
+\Pi_{IR}^m >\Pi_{IS}^m \\
+\pi_{i}^m (1-q) (2-q)+\pi_{i2}^m q (3-q)>\pi_{i}^m +  \pi_{i2}^m 
+\end{align*}
+\end{proof}
+\end{frame}
+
+
+\section{Bertrand}
+\subsubsection{Sequential}
+\begin{frame}{Bertrand: Sequential}
+\begin{itemize}
+    \item The market profits of the incumbent in the sequential technology case is:
+    \begin{equation*}
+        \overline{\Pi}_{IS} = \pi_{i1}=(1-c_{i1})(c_{i1}-c_i) 
+    \end{equation*}
+    \item The market payoffs of the entrant 
+    \begin{equation*}
+        \overline{\Pi}_{ES} =  
+ \pi_{e2}=(1-c_{i})(c_i-c_{e2}) 
+    \end{equation*}
+    \item The monopoly profit of the incumbent with a buyout is
+    \begin{equation*}
+        \Pi_{IS} = \pi_{i} +  \pi_{i2} 
+    \end{equation*}
+    \item Therefore the bargaining payoff if there is a buyout of the entrant is: 
+    \begin{equation*}
+       B_{ES}(\omega)=  \pi_{e2}(1-\omega)+ \omega (\pi_{i} +  \pi_{i2} - \pi_{i1} )
+    \end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model: Sequential 2}
+\begin{itemize}
+    \item We can also compute the difference between the entrant buyout profits to the non-buyout profits as
+    \begin{equation*}
+        B_{ES}(\omega) - \overline{\Pi}_{ES} = 
+\omega (\pi_{i} +  \pi_{i2} - \pi_{i1}-\pi_{e2} )
+    \end{equation*}
+    \item This is the incentive effect of buyouts
+    \item Note the effect of barganing power. 
+\end{itemize}
+\end{frame}
+
+\subsubsection{Radical}
+
+\begin{frame}{Model: Radical}
+\begin{itemize}
+    \item The market profits of the incumbent in the radical  technology case is:
+    \begin{equation*}
+       \overline{\Pi}_{IR} = (1-q)(2-q) \pi_{i}
+    \end{equation*}
+    \item The market payoffs of the entrant 
+    \begin{equation*}
+\overline{\Pi}_{ER} =
+q 2 \pi_{e2}+(1-q)q\pi_{e2}=q\pi_{e2}(3-q)
+    \end{equation*}
+    \item The market profits of the incumbent with a buyout is
+    \begin{equation*}
+       \Pi_{IR} = \pi_{i} (1-q) (2-q)+\pi_{i2} q (3-q)
+    \end{equation*}
+    \item Therefore the bargaining payoff if there is a buyout of the entrant is: 
+    \begin{equation*}
+       B_{ER}(\omega)=  (3-q)q(\pi_{e2}+\omega  (\pi_{i2} - \pi_{e2}))
+    \end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model: Radical 2}
+\begin{itemize}
+    \item Incentive effect of the buyout is therefore:
+    \begin{equation*}
+B_{ER}-\overline{\Pi}_{ER} 
+=\omega (3-q)q 
+\left(
+\pi_{i2} 
+-\pi_{e2}
+\right) 
+    \end{equation*}
+\item Notice that once again this heavily depends on bargaining power*
+\end{itemize}
+\end{frame}
+
+\subsubsection{Results}
+
+\begin{frame}{Model: Results}
+\begin{block}{Proposition 1}
+The entrant will choose the radical innovation over the incremental innovation if there are no buyout iff: 
+\begin{equation*}
+\pi_{e2}(q(3-q)-1)+k_S-k_R > 0
+\end{equation*}
+\end{block}
+This is found simply by setting:
+\begin{equation*}
+\overline{\Pi}_{ER}-k_R > \overline{\Pi}_{ES}-k_S 
+\end{equation*}
+\end{frame}
+
+
+\begin{frame}{Corollary 1}
+\begin{block}{Cutoff probability}
+If costs are identical then the required q for the radical innovation to prefered is given by: 
+\begin{equation*}
+q > \frac{3-\sqrt{5}}{2}=q^{b}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Results 2}
+\begin{block}{Proposition 2}
+If costs are identical then a buyout will neccesarily require a higher $q^{b*}$ than $q^b$ to incite the entrant to pursue the radical innovation. 
+\end{block}
+This follows by setting 
+\begin{align*}
+B_{ER}(\omega)-k_R>B_{ES}(\omega)-k_S \\
+\rightarrow (1-\omega) \pi_{e2}(q(3-q)-1)
++ \omega \pi_{i2} (q(3-q)-1) \\  -\omega(\pi_i- \pi_{i1})
+> 0
+\end{align*}
+Note that the third term is negative, $-\omega(\pi_i- \pi_{i1})$, which implies higher $q$
+\end{frame}
+
+\subsubsection{Example}
+
+\begin{frame}{Example}
+\begin{itemize}
+    \item Let $\pi_{e2}=40$, $\pi_{i2}=100$, $\pi_{e1}=20$ $\pi_{i}=80$. $\omega = .5, q=0.5$ \\
+    \item \textbf{No buyouts Sequential:} Entrant earns $40$. \textbf{Radical} entrant earns $.5(40+40)+(.5)^2(40)=50$. \newline Radical$>$Sequential 
+    \item \textbf{Buyouts, Sequential bargaining surplus:}  $NS_S = 100+80-20-40=120$. Therefore the payoff of the entrant is $40+\frac{1}{2}(120)=100$. \newline \textbf{Radical innovation surplus:} $ .5(200)+(.5)^2 180+(.5)^2 160-(.5)^2 80-(.5)^2-50=75$. Therefore the payoff after bargaining is $50+\frac{1}{2}(75)=87.5$ 
+    \newline
+    Sequential $>$ Radical
+\end{itemize}
+\end{frame}
+
+
+\section{Cournot}
+
+\subsubsection{Sequential}
+\begin{frame}{Cournot: Sequential}
+\begin{itemize}
+    \item The market profits of the incumbent in the sequential technology case is:
+    \begin{equation*}
+        \overline{\Pi}_{ES} =
+        \left(\frac{1-2 c_{i1}+c_{i}}{3}  \right)^2
+        +
+        \left(\frac{1-2 c_{i2}+c_{i}}{3}  \right)^2
+    \end{equation*}
+    \item The market payoffs of the entrant 
+    \begin{equation*}
+        \overline{\Pi}_{IS} =  
+\left(\frac{1+ c_{i1}-2c_{i}}{3}  \right)^2
++ \left(\frac{1+ c_{i2}-2c_{i}}{3}  \right)^2
+    \end{equation*}
+    \item The monopoly profit is unchanged relative to Bertrand
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cournot: Sequential 2}
+\begin{itemize}
+\item The Nash surplus is given by:
+\begin{equation*}
+NS_{S}^{c} = \pi^m+\pi^m_{2}- \pi_{i1}^{c}-\pi_{i2}^{c}-\pi_{e1}^{c}-\pi_{e2}^{c}
+\end{equation*}
+
+\item The Bargaining payoff of the entrant is: 
+\begin{equation*}
+B_{ES}^{c} = \Pi_{ES}^{c} + \omega NS_{S}^{c} 
+\end{equation*}
+    
+\item The barganing payoff of the incumbent is: \begin{equation*}
+B_{IS}^{c} = \Pi_{IS}^{c}+ (1-\omega) NS_{S}^{c}
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+\subsubsection{Radical}
+
+\begin{frame}{Model: Radical}
+\begin{itemize}
+    \item The market profits of the incumbent in the radical  technology case is:
+    \begin{equation*}
+       \overline{\Pi}_{IR} = (1-q) (2-q)\pi^{m}  + q \pi_{i1}^{c}(3-q)
+    \end{equation*}
+    \item The market payoffs of the entrant 
+    \begin{equation*}
+\overline{\Pi}_{ER} =
+q \pi_{e2}^{c} (3-q)
+    \end{equation*}
+    \item The monopoly profits are given by:
+\begin{equation*}
+\Pi_{R}^{m} = \pi^{m} (1-q) (2-q)+\pi_{2}^{m} q (3-q)
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cournot: Radical 2}
+\begin{itemize}
+\item The Nash surplus is given by:
+\begin{align*}
+NS_{R}^{c} = \pi^{m} (1-q) (2-q)+\pi_{2}^{m} q (3-q)- \Pi_{IR}^{c} - \Pi_{ER}^{c} \\
+= q(3-q) (\pi_{2}^{m}-\pi_{e2}^{c}-\pi_{i1}^{c})
+\end{align*}
+
+
+
+\item The Bargaining payoff of the entrant is: 
+\begin{equation*}
+B_{ER}^{c} = \Pi_{ER}^{c} + \omega NS_{R}^{c} 
+\end{equation*}
+    
+\item The barganing payoff of the incumbent is: \begin{equation*}
+B_{IR}^{c} = \Pi_{IR}^{c} + (1-\omega) NS_{R}^{c}
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Results}
+\begin{frame}{Cournot no buyout cutoff}
+\begin{block}{Cournot Cutoff preferences}
+The cutoff point for the entrant to prefer th radical innovation without buyouts is given by: 
+\begin{equation*}
+\frac{3}{2}-\frac{ \sqrt{5 \pi_{e2}^{c}-4 \pi_{e1}^{c}}}{2 \sqrt{\pi_{e2}^{c}}}=q^{c}
+\end{equation*}
+\end{block}
+Proof:
+\begin{align*}
+\Pi_{ER}^{c}>\Pi_{ES}^{c} \\
+q \pi_{e2}^{c} (3-q) > \pi_{e1}^{c}+\pi_{e2}^{c} \\
+q> 
+\frac{3 \pi_{e2}^{c}-\sqrt{\pi_{e2}^{c}} \sqrt{5 \pi_{e2}^{c}-4 \pi_{e1}^{c}}}{2 \pi_{e2}^{c}} 
+\end{align*}
+\end{frame}
+
+\begin{frame}{With buyout cutoff point}
+\begin{block}{Cutoff with buyouts}
+With buyouts, the cutoff efficiency of the radical innovation for it to be pursued is lower in Cournot competition than in Bertrand
+\end{block}
+\end{frame}
+
+\subsection{Bertrand vs Cournot without buyout}
+\begin{frame}{Bertrand vs Cournot}
+\begin{block}{Cournot radical preferences entail Bertrand}
+Without buyouts, if the radical innovation is preferred in Cournot competition, it is also preferred in Bertrand. 
+\end{block}
+We note that $q^c$ cutoff is strictly increasing in $\pi_{e1}^{c}$ and that if $\pi_{e1}^{c}=0$ we have the Bertrand payoff.
+\begin{tikzpicture}[scale=1]
+\node[align=center] at (0,1.5) {$q^b$};
+\draw [thick,->] (0,1) -- (0,0.15);
+\node[align=center] at (0,-.7) {No buyout \\ Bertrand};
+%%%%%%%%%%%%%%%%
+\node[align=center] at (2.3,1.5) {$q^c$};
+\draw [thick,->] (2.3,1) -- (2.3,0.15);
+\node[align=center] at (2.3,-.7) 
+{No buyout \\ Cournot };
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+\node[align=center] at (4.6,1.5) {$q^{c*}$};
+\node[align=center] at (4.6,-.7) { buyout \\ Cournot  };
+\draw [thick,->] (4.6,1) -- (4.6,0.15);
+%%%%%%%%%%%%%%%%
+\node[align=center] at (6.5,1.5) {$q^{b*}$};
+\node[align=center] at (6.5,-.7) {buyout \\ Bertrand};
+\draw [thick,->] (6.5,1) -- (6.5,0.15);
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+\draw [thick,->] (0,0) -- (7,0);
+\end{tikzpicture}
+\end{frame}
+
+\section{Welfare}
+
+\begin{frame}{Main welfare result}
+\begin{block}{Welfare proposition}
+The cutoff point for welfare to be maximized by radical innovation with buyouts, $q^{w*}$ is the same as the a priori cutoff point,$q^{*}$ and the posterior no buyout cutoff point, $q^{b}$
+\end{block}
+This follows by setting: 
+\begin{equation*}
+W_R> W_S \rightarrow  w_{m2}(3q-q^2-1)-w_{mI}(3q-q^2-1)>0
+\end{equation*}
+%welfare is only aligned if there is no bargaining power
+\end{frame}
+
+
+\subsection{Policy implications}
+
+
+\AtBeginSection[]
+{
+\begin{frame}{Table of Contents}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+
+\begin{frame}{Conclusive comments }
+\begin{itemize}
+    \item Allowing buyouts has distortion effects on the market if the entrant has bargaining power
+    \item Therefore any cost benefit analysis that evaluates the effects of buyouts should include the costs and benefits of industry diversification
+    \item Intellectual property may cause industry convergence
+    \item Convergence effect vs a divergence effect
+\end{itemize}
+\end{frame}
+
+\end{document}
