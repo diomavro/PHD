@@ -267,23 +267,23 @@ A firm that chooses not to improve upon the current best technology lowers by it
 \indent The next proposition compares the payoffs of the first firms that enter the industry and that form a chain. We first clarify the set of firms on which the result applies then feature our statement. \\
 
 \begin{definition}
-Consider some technological network $\text{g}=(s_1,\ldots, s_n)$ and assume that there is a subgraph $\text{g}'$ on $m\leq n$ firms that is a chain such that: $s_i=i-1$ for all $1\leq i \leq m$, with $2\leq m\leq n$. The subgraph $\text{g}'$ will be referred to as the chain of the $m$ incumbents of \text{g}.
+Consider some technological network $\text{g}=(s_1,\ldots, s_n)$ and assume that there is a subgraph $\text{g}'$ on $m\leq n$ firms that is a chain such that: $s_i=i-1$ for all $1\leq i \leq m$, with $2\leq m\leq n$. The subgraph $\mathcal{C}_1^m$ will be referred to as the chain of the $m$ incumbents of \text{g}.
 \end{definition}
 
-If \text{g} has a chain $\text{g}'$ of $m$ incumbent firms, then the first $m$ firms that have entered the market have played a linking strategy that consists in forming a link to their direct predecessor in the industry. The next proposition features a result on the relative royalty expenditures paid by the firms along the chain $\text{g}'$ in any network \text{g} with $\text{g}'\subset \text{g}$.\\
+If \text{g} has a chain $\mathcal{C}_1^m$ of $m$ incumbent firms, then the first $m$ firms that have entered the market have played a linking strategy that consists in forming a link to their direct predecessor in the industry. The next proposition features a result on the relative royalty expenditures paid by the firms along the chain $\mathcal{C}_1^m$ in any network \text{g} with $\mathcal{C}_1^m\subset \text{g}$.\\
 
 \begin{proposition}\label{monotonicity in royalty in the chain}
-Consider some technological subgame perfect Nash network \text{g} that has a chain $\text{g}'$ of $m$ incumbents, with $2\leq m\leq n$. Along $\text{g}'$, the royalty paid by a firm in equilibrium is decreasing in its index: $r^-_i(\text{g})$ is decreasing in $i$, for all $i\in \{1,2,\ldots, m\}$.  
+Consider some technological subgame perfect Nash network \text{g} that has a chain $\mathcal{C}_1^m$ of $m$ incumbents, with $2\leq m\leq n$. Along $\mathcal{C}_1^m$, the royalty paid by a firm in equilibrium is decreasing in its index: $r^-_i(\text{g})$ is decreasing in $i$, for all $i\in \{1,2,\ldots, m\}$.  
 \end{proposition}  
 \begin{proof}
-Consider $\text{g}'$ the chain of $m$ incumbents in \text{g}. All firms in $\{1,2,\ldots, m\}$ could afford to pay for the \textit{negative externality} they are imposing on their direct predecessor (we mean by \textit{negative externality} what we have been defining as so in point (i) in the discussion paragraph). Because the network \text{g} is subgame perfect Nash and royalties paid are in equilibrium, both individual rationality and incentive compatibility constraints are satisfied for every firm along $\text{g}'$. Given firm $i$'s linking strategy $s_i$ such that $i-1\in s_i$, the royalty paid by $i$ to $i-1$, $r^-_i(\text{g})=r^{i-1}_{i}(\text{g}) $, to reach the technology level $k_i=i$ is in equilibrium if: 
+Consider $\mathcal{C}_1^m$ the chain of $m$ incumbents in \text{g}. All firms in $\{1,2,\ldots, m\}$ could afford to pay for the \textit{negative externality} they are imposing on their direct predecessor (we mean by \textit{negative externality} what we have been defining as so in point (i) in the discussion paragraph). Because the network \text{g} is subgame perfect Nash and royalties paid are in equilibrium, both individual rationality and incentive compatibility constraints are satisfied for every firm along $\text{g}'$. Given firm $i$'s linking strategy $s_i$ such that $i-1\in s_i$, the royalty paid by $i$ to $i-1$, $r^-_i(\text{g})=r^{i-1}_{i}(\text{g}) $, to reach the technology level $k_i=i$ is in equilibrium if: 
 \begin{align*}
 & (\text{IR}_i) ~~ \pi_i(i, \text{g})\geq 0~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq 0\\
 &  (\text{IC}_i) ~~ \pi_i(i, \text{g})\geq \max\{\pi_i(\tilde{k}_i,\tilde{\text{g}}),0\} ~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq \max\{p_i(\tilde{k}_i,\tilde{\text{g}})-r^{h}_i(\tilde{\text{g}})-F,0\}
 \end{align*}
 where: $\pi_i(\tilde{k}_i,\tilde{\text{g}})$ is the maximum payoff $i$ would get by attaching to any firm $h<i-1$ instead of $i-1$, and $\tilde{\text{g}}$ the network that would result if $i$ was playing the linking strategy $\tilde{s}_i$ with $i-1\notin \tilde{s}_i$ and $h\in \tilde{s}_i$. Note that any other link that $i$ may have with other firm(s) than $i-1$ in \text{g} is free by proposition \ref{prop:onelink}. And if $\tilde{k}_i=k_h+1=h+1$ in the alternate network $\tilde{\text{g}}$, then $r^{h}_i(\tilde{\text{g}})\geq 0$ and the rest of $i$'s link in $\tilde{\text{g}}$ are free, by the same proposition; also $r^+_i(\tilde{\text{g}})=0$ by proposition \ref{prop:zerorevenue} since $i$ shares the same technology as its predecessor, firm $h+1$. \\
 
-\indent \textsc{Claim.} \textit{If \text{g} is subgame perfect Nash and the royalty payments are in equilibrium, then the IC constraints of all firms $1,2,\ldots, m$ that belong to $\text{g}'$ are binding.}\\
+\indent \textsc{Claim.} \textit{If \text{g} is subgame perfect Nash and the royalty payments are in equilibrium, then the IC constraints of all firms $1,2,\ldots, m$ that belong to $\mathcal{C}_1^m$ are binding.}\\
 \indent \textit{Proof.} Otherwise, $i$'s predecessor, firm $i-1$, could increase the royalty it claims against $i$'s attachment by $\epsilon$ sufficiently small so that $i-1$ still prefers to maintain its link to $i-1$ over deleting it and forming a link to $h$ instead, for any $2\leq i\leq m$. $\qed$ \\
 
 Let us rewrite the $IC$ constraint of any firm $1\leq i\leq m-1$ in equilibrium as follows:
@@ -297,23 +297,66 @@ r^{i-1}_i(\text{g})= \sum_{l=i}^{m} ~\max\{\Delta p_l - r_l(\tilde{g}) ~,~ p_l(l
 where every term of the sum is positive (otherwise $l$'s linking strategy $s_l$ would be strictly dominated, for any $i\leq l\leq m$). It follows that $r^{i-1}_i(\text{g})$ is an increasing function of the index $i$ of a firm. Therefore the result. 
 \end{proof}
 
+The result introduced in the last proposition has strong implications onto the relative royalty revenues of the firms in a chain network. \\
 
-\indent We present a last result that features to extreme topologies for the subgame perfect Nash networks. \\
-
-\begin{remark}
-A network that has no free links in equilibrium is the chain network on all $n$ firms, i.e. $1\rightarrow 2\rightarrow \ldots n-1 \rightarrow n$. A network that has all of its links free in equilibrium is the network that has two chains $1\rightarrow 3\rightarrow \ldots 2m-1$ and $2\rightarrow 4 \rightarrow \ldots 2m$ such that: (i) $m=\frac{n}{2}$ if $n$ is even, $m=\lfloor \frac{n}{2} \rfloor$ if $n$ is odd, (ii) $k_{2l-1}=k_{2l}=l$ for any $l\in \{1,\ldots, m\}$; and if $n$ is odd, then $k_n=m+1$ with either $2m+1\rightarrow n$ or $2m\rightarrow n$.  
-\end{remark} 
+\begin{corollary}
+Assume that the chain network on all $n$ firms is subgame perfect Nash. In equilibrium, all firms but firm 1 are net payers and they are producers.  
+\end{corollary}
 \begin{proof}
-In a chain network, every entrant builds upon its direct predecessor's technology. Since a firm's market payoff is strictly increasing in its technology level, then any predecessor can charge to its direct successor the extra market profit the successor is making compared to as the market profit the later would earn by producing with some less efficient technology. A network that has two chains that abide by the description in remark 2 has the following network formation process: any firm which enters at an odd date improves upon the current best technology (and it gets a technology level that matches its entry date in the industry); and if the firm enters at some even date, then the firm gets the same technology as that of its direct predecessor. Therefore, for all pairs $(i,i+1)$ of firms with $i=2l-1$ and $l\in \{1,\ldots, m\}$, $i$ and $i+1$ are in direct competition for the attachment of $i+2$ and $i+3$; therefore neither $i$ nor $i+1$ can earn any royalty revenue. By the same principle, neither $i$ nor $i+1$ have paid anything for acquiring their technology level $k_i=k_{i+1}=l$. It follows that all links are established for free, all firms produce, and total payoffs are strictly increasing in the value of the integer $l$. 
+Assume that $\text{g}=(s_1,\ldots , s_n)$ is a chain on all $n$ firms and \text{g} is subgame perfect Nash. Note that $s_i=i-1$, for any $2\leq i\leq n$; also, $\text{g}=\mathcal{C}_1^n$. Applying our result from proposition \ref{monotonicity in royalty in the chain}, we have $r_i(\text{g})=r^{i}_{i+1}(\text{g})-r^{i-1}_i(\text{g})\leq 0$ for any $i\neq 1$. It follows from definition \ref{netrandp} that all $i\geq 2$ are net payers - thus producers. And firm $1$ is a net receiver. 
 \end{proof}
+
+The last proposition essentially says that in a network that has a chain of $m$ incumbents, every firm along it gets \textit{expropriated}, through the royalty it pays, from the surplus it realizes by linking to its direct predecessor instead of by forming a link to any other firm. This expropriation process goes as follows: at the time firm 2 enters and forms a link to firm 1, the later makes the former pay for the total surplus of all subsequent firms $2,3,\ldots,m$ in the chain. Firm $2$, which ends up paying its connection to firm 1 for more than what it individually gains from it, gets its compensation by charging a royalty to firm 3 that is the sum of all of the surpluses other than its own (that it yet had to pay to firm 1); that is, the surpluses that $3,4,\ldots ,m$ will make. This process continues recursively, so that the cheapest connection in the chain is that maintained by the last firm $m$. 
+
+%\indent We present a last result that features 2 extreme topologies for the subgame perfect Nash networks. \\
+
+%\begin{remark}
+%A network that has no free links in equilibrium is the chain network on all $n$ firms, i.e. $1\rightarrow 2\rightarrow \ldots n-1 \rightarrow n$. A network that has all of its links free in equilibrium is the network that has two chains $1\rightarrow 3\rightarrow \ldots 2m-1$ and $2\rightarrow 4 \rightarrow \ldots 2m$ such that: (i) $m=\frac{n}{2}$ if $n$ is even, $m=\lfloor \frac{n}{2} \rfloor$ if $n$ is odd, (ii) $k_{2l-1}=k_{2l}=l$ for any $l\in \{1,\ldots, m\}$; and if $n$ is odd, then $k_n=m+1$ with either $2m+1\rightarrow n$ or $2m\rightarrow n$.  
+%\end{remark} 
+%\begin{proof}
+%In a chain network, every entrant builds upon its direct predecessor's technology. Since a firm's market payoff is strictly increasing in its technology level, then any predecessor can charge to its direct successor the extra market profit the successor is making compared to as the market profit the later would earn by producing with some less efficient technology. A network that has two chains that abide by the description in remark 2 has the following network formation process: any firm which enters at an odd date improves upon the current best technology (and it gets a technology level that matches its entry date in the industry); and if the firm enters at some even date, then the firm gets the same technology as that of its direct predecessor. Therefore, for all pairs $(i,i+1)$ of firms with $i=2l-1$ and $l\in \{1,\ldots, m\}$, $i$ and $i+1$ are in direct competition for the attachment of $i+2$ and $i+3$; therefore neither $i$ nor $i+1$ can earn any royalty revenue. By the same principle, neither $i$ nor $i+1$ have paid anything for acquiring their technology level $k_i=k_{i+1}=l$. It follows that all links are established for free, all firms produce, and total payoffs are strictly increasing in the value of the integer $l$. 
+%\end{proof}
 
 
 \section{Case study}
-This section will hopefully help the reader to better understand the network formation process and the determination of the cost of the links in a network. The first subsection shows how the type of competition considered may determine the architecture of the subgame Nash network: if the firms compete a la Bertrand, the network is a chain on all $n$ firms where only the last firm produces. Next, we solve for the subgame perfect Nash equilibria of the game in the general case, but with only 3 firms in the set $\Omega$.
+This section will hopefully help the reader to develop an overall understanding of the intricacies of our game. The first subsection shows how the type of competition considered may strongly imply the architecture of the subgame Nash network of the game. For the case of the competition a la Bertrand, at most two firms enter the market and only the last one produces. Next, we solve for the subgame perfect Nash equilibria of the game in the general case, but with only 3 firms in the set $\Omega$.
     
 \subsection{The case of Bertrand competition}
+Consider our game and assume that the firms in $N$, once the network formation and royalty payment stage finished, compete a la Bertrand. It is immediate that there are either 1 or 2 producers, and these firms are these with the best technology in the industry (recall from corollary \ref{firmswithsametech} that at most 2 firms can have the same technology). We directly move on to the first stage of the game. We find that there are only two architectures possible for the subgame perfect Nash networks. This result is presented in the remark and proposition below. The result about the royalty payments is featured in the second proposition. \\
 
+\begin{remark}\label{bertrand is a chain}
+If $\text{g}=(s_1,\ldots, s_n)$ is a subgame perfect Nash network, then $k_i=i$ (i.e. $i-1\in s_i$) for all firms $i\in N$.
+\end{remark} 
+\begin{proof}
+Assume that all firms $j\in \{1,\ldots i-1\}$ have $j=k_j$ however $k_i<i$. Let $\bar{k}$ the highest technology level in the industry. Since $k_i<i$, $i$ shares the same technology as that of one of its predecessors; hence by corollary \ref{firmswithsametech} $i$ is a net payer and $i$ must produce in equilibrium. Thus it must be that $i=n$; and $k_n=k_{n-1}=\bar{k}$ since (i) firms compete a la Bertrand thus only the most cost efficient firms produce, (ii) that the last firm to enter, firm $n$, always produces hence $k_n=\bar{k}$ and (ii) both firms $n$ and $n-1$ are farsighted. Consider firm $\omega_{n+1}\in \Omega$. If the later enters and forms a link to either $n$ or $n-1$, it gets the technology $\bar{k}+1$ and $p_{\omega_{n+1}}-F>\pi_n(\bar{k},\text{g})$. Therefore a contradiction that $n$ is the last firm to enter the industry.    
+\end{proof}
 
+We show in the proposition below that a subgame perfect Nash network can have only 2 architectures. \\
+
+\begin{proposition}
+Given that the firms in $N$ compete a la Bertrand, a nonempty subgame perfact Nash network is: 
+\begin{enumerate}
+\item either there is only 1 firm in the industry (i.e. $N=1$) and we denote this network $\text{g}_1$,
+\item or $\text{g}=\mathcal{C}_1^2$; meaning, there are 2 firms in the industry, only firm 2 produces and firm 1 is a rent seeker.  
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+By remark \ref{bertrand is a chain}, there is a subgraph of \text{g} that is a chain $\mathcal{C}_1^n$ of $n$ incumbents; hence if the conclusion of the proposition is false, then $n>2$. Along $\mathcal{C}_1^n$, $r_i(\text{g})\leq 0$ for any firm $2\leq i\leq n$ by proposition \ref{monotonicity in royalty in the chain}. Since only $n$ produces due to the type of competition considered, it must be that $r_i(\text{g})=0$ for any $2\leq i\leq n-1$. It follows that $\pi_i(i,\text{g})=-F<0$ for these firms. A contradiction that $i$ is farsighted. Thus $n=2$. If $\text{g}=\mathcal{C}_1^2$ (since firm 2 cannot have any other link than the one to firm 1), then 1 is a rent seeker since firm 2's technological is superior, and 2 is a producer and net payer since it is the last one to enter the market. 
+\end{proof}
+
+At last we determine conditions on the value of the entry cost $F$ for which either one of these two architectures is a subgame perfect Nash network. \\
+
+\begin{proposition}
+Consider the 2 networks $\text{g}_1$ and $\text{g}_2$ featured in the last proposition. Then:
+\begin{itemize}
+\item[] (i) $\text{g}_1$ is the subgame perfect Nash network of the game if and only if $p_1(1,\text{g}_1)-F> \max\{p_2(2,\text{g}_2-2F~,~0)\}$,
+\item[] (ii) $\text{g}_2$ is the subgame perfect Nash network of the game if and only if $p_2(2,\text{g}_2)-2F\geq \max\{p_1(1,\text{g}_1)-F~,~0\}$, 
+\item[] (iii) the empty network is the subgame perfect Nash network of the game if and only if $\max\{p_1(1,\text{g}_1)-F~,~ p_2(2,\text{g}_2)-2F\}<0$. 
+\end{itemize}
+\end{proposition} 
+\begin{proof}
+Consider first the network $\text{g}_2$. If firm 1 decides to let firm $2$ enter the market and form a link, then the incentive compatibility constraint of firm 2 is saturated by proposition \ref{monotonicity in royalty in the chain}. If firm $2$ does not enter, its payoff would be zero; and if it enters without forming a link to firm 1, then 2 would get a negative payoff. Therefore: $r^1_2(\text{g}_2)=p_2(2,\text{g}_2)-F$. Since firm 1 is a rent seeker in the network $\text{g}_2$, it follows that $\pi_1(1,\text{g}_2)=p_2(2,\text{g}_2)-2F$. If firm 1 does not let firm 2 enter, then the network that is realized is $\text{g}_1$ in which firm 1's payoff is $\pi_1(1,\text{g}_1)-F=p_1(1,\text{g}_1)-F$. The inequalities in (i), (ii) and (iii) follow immediately.  
+\end{proof}
 
 \bibliography{../thesisbib/bibliography}
 
