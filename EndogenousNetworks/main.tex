@@ -266,36 +266,29 @@ Assume not. Firm $h$ predecessor of $i$ strategically prevents $i$ from forming 
 A firm that chooses not to improve upon the current best technology lowers by its action the cost paid by its successors for their own technology compared to what they would have paid for the same technology otherwise. This is because a firm that chooses the aforementioned link strategy leaves the possibility for its successors to access some technology for free, which therefore increases the competition between the predecessors for winning an entrant's attachment. It follows that for any given link $i\rightarrow j$, the link is the most expensive if the network prior to $j$'s entry is a chain $1\rightarrow 2\rightarrow \ldots \rightarrow i-1\rightarrow i$ and $j=i+1$; and it is the cheapest (the link is free) if the technology $i$ uses is also used by another predecessor of $j$. Other things being equal, the royalty paid by an entrant depends positively on the technology acquired by its direct predecessor. \\
 \indent The next proposition compares the payoffs of the first firms that enter the industry and that form a chain. We first clarify the set of firms on which the result applies then feature our statement. \\
 
-\begin{definition}
-Consider some technological network $\text{g}=(s_1,\ldots, s_n)$ and assume that there is a subgraph $\text{g}'$ on $m\leq n$ firms that is a chain such that: $s_i=i-1$ for all $1\leq i \leq m$, with $2\leq m\leq n$. The subgraph $\mathcal{C}_1^m$ will be referred to as the chain of the $m$ incumbents of \text{g}.
-\end{definition}
-
-If \text{g} has a chain $\mathcal{C}_1^m$ of $m$ incumbent firms, then the first $m$ firms that have entered the market have played a linking strategy that consists in forming a link to their direct predecessor in the industry. The next proposition features a result on the relative royalty expenditures paid by the firms along the chain $\mathcal{C}_1^m$ in any network \text{g} with $\mathcal{C}_1^m\subset \text{g}$.\\
-
 \begin{proposition}\label{monotonicity in royalty in the chain}
-Consider some technological subgame perfect Nash network \text{g} that has a chain $\mathcal{C}_1^m$ of $m$ incumbents, with $2\leq m\leq n$. Along $\mathcal{C}_1^m$, the royalty paid by a firm in equilibrium is decreasing in its index: $r^-_i(\text{g})$ is decreasing in $i$, for all $i\in \{1,2,\ldots, m\}$.  
+Consider some technological subgame perfect Nash network $\text{g}=(s_1,\ldots, s_n)$ where $i\in s_{i+1}$ for all $1\leq i\leq n-1$. In equilibrium, the royalty paid by a firm in equilibrium is decreasing in its index: $r^-_i(\text{g})$ is decreasing in $i$, for all $i\in N$.  
 \end{proposition}  
 \begin{proof}
-Consider $\mathcal{C}_1^m$ the chain of $m$ incumbents in \text{g}. All firms in $\{1,2,\ldots, m\}$ could afford to pay for the \textit{negative externality} they are imposing on their direct predecessor (we mean by \textit{negative externality} what we have been defining as so in point (i) in the discussion paragraph). Because the network \text{g} is subgame perfect Nash and royalties paid are in equilibrium, both individual rationality and incentive compatibility constraints are satisfied for every firm along $\text{g}'$. Given firm $i$'s linking strategy $s_i$ such that $i-1\in s_i$, the royalty paid by $i$ to $i-1$, $r^-_i(\text{g})=r^{i-1}_{i}(\text{g}) $, to reach the technology level $k_i=i$ is in equilibrium if: 
+In \text{g}, all firms in $\{1,2,\ldots, m\}$ could afford to pay for the \textit{negative externality} they are imposing on their direct predecessor (we mean by \textit{negative externality} what we have been defining as so in point (i) in the discussion paragraph). Because the network \text{g} is subgame perfect Nash and royalties paid are in equilibrium, both individual rationality and incentive compatibility constraints are satisfied for every firm along $\text{g}'$. Given firm $i$'s linking strategy $s_i$ such that $i-1\in s_i$, the royalty paid by $i$ to $i-1$, $r^-_i(\text{g})=r^{i-1}_{i}(\text{g}) $, to reach the technology level $k_i=i$ is in equilibrium if: 
 \begin{align*}
-& (\text{IR}_i) ~~ \pi_i(i, \text{g})\geq 0~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{+}_i(\text{g})-F \geq 0\\
-&  (\text{IC}_i) ~~ \pi_i(i, \text{g})\geq \max\{\pi_i(\tilde{k}_i,\tilde{\text{g}}),0\} ~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{+}_i(\text{g})-F \geq \max\{p_i(\tilde{k}_i,\tilde{\text{g}})-r^{h}_i(\tilde{\text{g}})-F,0\}
+& (\text{IR}_i) ~~ \pi_i(i, \text{g})\geq 0~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq 0\\
+&  (\text{IC}_i) ~~ \pi_i(i, \text{g})\geq \max\{\pi_i(\tilde{k}_i,\tilde{\text{g}}),0\} ~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq \max\{p_i(\tilde{k}_i,\tilde{\text{g}})-r^{h}_i(\tilde{\text{g}})-F,0\}
 \end{align*}
 where: $\pi_i(\tilde{k}_i,\tilde{\text{g}})$ is the maximum payoff $i$ would get by attaching to any firm $h<i-1$ instead of $i-1$, and $\tilde{\text{g}}$ the network that would result if $i$ was playing the linking strategy $\tilde{s}_i$ with $i-1\notin \tilde{s}_i$ and $h\in \tilde{s}_i$. Note that any other link that $i$ may have with other firm(s) than $i-1$ in \text{g} is free by proposition \ref{prop:onelink}. And if $\tilde{k}_i=k_h+1=h+1$ in the alternate network $\tilde{\text{g}}$, then $r^{h}_i(\tilde{\text{g}})\geq 0$ and the rest of $i$'s link in $\tilde{\text{g}}$ are free, by the same proposition; also $r^+_i(\tilde{\text{g}})=0$ by proposition \ref{prop:zerorevenue} since $i$ shares the same technology as its predecessor, firm $h+1$. \\
 
-\indent \textsc{Claim.} \textit{If \text{g} is subgame perfect Nash and the royalty payments are in equilibrium, then the IC constraints of all firms $1,2,\ldots, m$ that belong to $\mathcal{C}_1^m$ are binding.}\\
+\indent \textsc{Claim.} \textit{If \text{g} is subgame perfect Nash and the royalty payments are in equilibrium, then the IC constraints of all firms in $N$ are binding.}\\
 \indent \textit{Proof.} Otherwise, $i$'s predecessor, firm $i-1$, could increase the royalty it claims against $i$'s attachment by $\epsilon$ sufficiently small so that $i-1$ still prefers to maintain its link to $i-1$ over deleting it and forming a link to $h$ instead, for any $2\leq i\leq m$. $\qed$ \\
 
-Let us rewrite the $IC$ constraint of any firm $1\leq i\leq m-1$ in equilibrium as follows:
-\begin{align*}
-(\text{IC}_i)~~& r^{i-1}_i(\text{g})= \max\{\Delta p_i+ r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})-F\}+ r^+_i(\text{g})\\
-\Leftrightarrow ~~& r^{i-1}_i(\text{g})= \max\{\Delta p_i+ r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})-F\}+ [r^+_i(\text{g})-r^{i+1}_i(\text{g})] + r^{i+1}_i(\text{g})
-\end{align*}
+Let us rewrite the $IC$ constraint of any firm $i$ in equilibrium as:
+\begin{equation*}
+(\text{IC}_i)~~ r^{i-1}_i(\text{g})= \max\{\Delta p_i+ r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})-F\}+  r^{i+1}_i(\text{g})
+\end{equation*}
 with $\Delta p_i=p_i(i,\text{g})-p_i(\tilde{k}_i,\tilde{\text{g}})>0$. Replacing the last term $r^{i}_{i+1}(\text{g})$ by $i+1$'s IC constraint, and applying this recursively gives: 
 \begin{equation*}
-r^{i-1}_i(\text{g})= \sum_{l=i}^{m} ~\max\{\Delta p_l + r^-_l(\tilde{g}) ~,~ p_l(l,\text{g})-F\}+[r^+_i(\text{g})-r^{i+1}_i(\text{g})],
+r^{i-1}_i(\text{g})= \sum_{l=i}^{n} ~\max\{\Delta p_l + r^-_l(\tilde{g}) ~,~ p_l(l,\text{g})-F\},
 \end{equation*}
-where every term of the sum is positive (otherwise $l$ would be better off not entering the industry, for any $i\leq l\leq m$). It follows that $r^{i-1}_i(\text{g})$ is an increasing function of the index $i$ of a firm. Therefore the result. 
+where every term of the sum is positive (otherwise $l$ would be better off not entering the industry). It follows that $r^{i-1}_i(\text{g})$ is an decreasing function of the index $i$ of a firm. Therefore the result. 
 \end{proof}
 
 The result introduced in the last proposition has strong implications onto the relative royalty revenues of the firms in a chain network. \\
@@ -304,10 +297,10 @@ The result introduced in the last proposition has strong implications onto the r
 Assume that the chain network on all $n$ firms is subgame perfect Nash. In equilibrium, all firms but firm 1 are net payers and they are producers.  
 \end{corollary}
 \begin{proof}
-Assume that $\text{g}=(s_1,\ldots , s_n)$ is a chain on all $n$ firms and \text{g} is subgame perfect Nash. Note that $s_i=i-1$, for any $2\leq i\leq n$; also, $\text{g}=\mathcal{C}_1^n$. Applying our result from proposition \ref{monotonicity in royalty in the chain}, we have $r_i(\text{g})=r^{i}_{i+1}(\text{g})-r^{i-1}_i(\text{g})\leq 0$ for any $i\neq 1$. It follows from definition \ref{netrandp} that all $i\geq 2$ are net payers - thus producers. And firm $1$ is a net receiver. 
+Note that $s_i=i-1$, for any $2\leq i\leq n$; also, $\text{g}=\mathcal{C}_1^n$. Applying our result from proposition \ref{monotonicity in royalty in the chain}, we have $r_i(\text{g})=r^{i}_{i+1}(\text{g})-r^{i-1}_i(\text{g})\leq 0$ for any $i\neq 1$. It follows from definition \ref{netrandp} that all $i\geq 2$ are net payers - thus producers. And firm $1$ is a net receiver. 
 \end{proof}
 
-The last proposition essentially says that in a network that has a chain of $m$ incumbents, every firm along it gets \textit{expropriated}, through the royalty it pays, from the surplus it realizes by linking to its direct predecessor instead of by forming a link to any other firm. This expropriation process goes as follows: at the time firm 2 enters and forms a link to firm 1, the later makes the former pay for the total surplus of all subsequent firms $2,3,\ldots,m$ in the chain. Firm $2$, which ends up paying its connection to firm 1 for more than what it individually gains from it, gets its compensation by charging a royalty to firm 3 that is the sum of all of the surpluses other than its own (that it yet had to pay to firm 1); that is, the surpluses that $3,4,\ldots ,m$ will make. This process continues recursively, so that the cheapest connection in the chain is that maintained by the last firm $m$. 
+The last proposition essentially says that in a network that has a chain of firms, every firm gets \textit{expropriated}, through the royalty it pays, from the surplus it realizes by linking to its direct predecessor instead of by forming a link to any other firm. This expropriation process goes as follows: at the time firm 2 enters and forms a link to firm 1, the later makes the former pay for the total surplus of all subsequent firms $2,3,\ldots,n$ in the chain. Firm $2$, which ends up paying its connection to firm 1 for more than what it individually gains from it, gets its compensation by charging a royalty to firm 3 that is the sum of all of the surpluses other than its own (that it yet had to pay to firm 1); that is, the surpluses that $3,4,\ldots ,n$ will make. This process continues recursively, so that the cheapest connection in the chain is that maintained by the last firm $n$. 
 
 %\indent We present a last result that features 2 extreme topologies for the subgame perfect Nash networks. \\
 
