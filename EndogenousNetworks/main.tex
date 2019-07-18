@@ -278,8 +278,8 @@ Consider some technological subgame perfect Nash network \text{g} that has a cha
 \begin{proof}
 Consider $\mathcal{C}_1^m$ the chain of $m$ incumbents in \text{g}. All firms in $\{1,2,\ldots, m\}$ could afford to pay for the \textit{negative externality} they are imposing on their direct predecessor (we mean by \textit{negative externality} what we have been defining as so in point (i) in the discussion paragraph). Because the network \text{g} is subgame perfect Nash and royalties paid are in equilibrium, both individual rationality and incentive compatibility constraints are satisfied for every firm along $\text{g}'$. Given firm $i$'s linking strategy $s_i$ such that $i-1\in s_i$, the royalty paid by $i$ to $i-1$, $r^-_i(\text{g})=r^{i-1}_{i}(\text{g}) $, to reach the technology level $k_i=i$ is in equilibrium if: 
 \begin{align*}
-& (\text{IR}_i) ~~ \pi_i(i, \text{g})\geq 0~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq 0\\
-&  (\text{IC}_i) ~~ \pi_i(i, \text{g})\geq \max\{\pi_i(\tilde{k}_i,\tilde{\text{g}}),0\} ~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{i+1}_i(\text{g})-F \geq \max\{p_i(\tilde{k}_i,\tilde{\text{g}})-r^{h}_i(\tilde{\text{g}})-F,0\}
+& (\text{IR}_i) ~~ \pi_i(i, \text{g})\geq 0~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{+}_i(\text{g})-F \geq 0\\
+&  (\text{IC}_i) ~~ \pi_i(i, \text{g})\geq \max\{\pi_i(\tilde{k}_i,\tilde{\text{g}}),0\} ~~\Leftrightarrow~~ p_i(i,\text{g})-r^{i-1}_i(\text{g})+r^{+}_i(\text{g})-F \geq \max\{p_i(\tilde{k}_i,\tilde{\text{g}})-r^{h}_i(\tilde{\text{g}})-F,0\}
 \end{align*}
 where: $\pi_i(\tilde{k}_i,\tilde{\text{g}})$ is the maximum payoff $i$ would get by attaching to any firm $h<i-1$ instead of $i-1$, and $\tilde{\text{g}}$ the network that would result if $i$ was playing the linking strategy $\tilde{s}_i$ with $i-1\notin \tilde{s}_i$ and $h\in \tilde{s}_i$. Note that any other link that $i$ may have with other firm(s) than $i-1$ in \text{g} is free by proposition \ref{prop:onelink}. And if $\tilde{k}_i=k_h+1=h+1$ in the alternate network $\tilde{\text{g}}$, then $r^{h}_i(\tilde{\text{g}})\geq 0$ and the rest of $i$'s link in $\tilde{\text{g}}$ are free, by the same proposition; also $r^+_i(\tilde{\text{g}})=0$ by proposition \ref{prop:zerorevenue} since $i$ shares the same technology as its predecessor, firm $h+1$. \\
 
@@ -287,14 +287,15 @@ where: $\pi_i(\tilde{k}_i,\tilde{\text{g}})$ is the maximum payoff $i$ would get
 \indent \textit{Proof.} Otherwise, $i$'s predecessor, firm $i-1$, could increase the royalty it claims against $i$'s attachment by $\epsilon$ sufficiently small so that $i-1$ still prefers to maintain its link to $i-1$ over deleting it and forming a link to $h$ instead, for any $2\leq i\leq m$. $\qed$ \\
 
 Let us rewrite the $IC$ constraint of any firm $1\leq i\leq m-1$ in equilibrium as follows:
+\begin{align*}
+(\text{IC}_i)~~& r^{i-1}_i(\text{g})= \max\{\Delta p_i+ r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})-F\}+ r^+_i(\text{g})\\
+\Leftrightarrow ~~& r^{i-1}_i(\text{g})= \max\{\Delta p_i+ r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})-F\}+ [r^+_i(\text{g})-r^{i+1}_i(\text{g})] + r^{i+1}_i(\text{g})
+\end{align*}
+with $\Delta p_i=p_i(i,\text{g})-p_i(\tilde{k}_i,\tilde{\text{g}})>0$. Replacing the last term $r^{i}_{i+1}(\text{g})$ by $i+1$'s IC constraint, and applying this recursively gives: 
 \begin{equation*}
-(\text{IC}_i)~~ r^{i-1}_i(\text{g})= \max\{\Delta p_i+r^{i}_{i+1}(\text{g}) - r^-_i(\tilde{\text{g}})~,~ p_i(i,\text{g})+r^{i+1}_i(\text{g})-F\},
+r^{i-1}_i(\text{g})= \sum_{l=i}^{m} ~\max\{\Delta p_l + r^-_l(\tilde{g}) ~,~ p_l(l,\text{g})-F\}+[r^+_i(\text{g})-r^{i+1}_i(\text{g})],
 \end{equation*}
-with $\Delta p_i=p_i(i,\text{g})-p_i(\tilde{k}_i,\tilde{\text{g}})>0$. Replacing what firm $i+1$ pays to $i$ in \text{g} by $i+1$'s IC constraint, and applying this recursively gives: 
-\begin{equation*}
-r^{i-1}_i(\text{g})= \sum_{l=i}^{m} ~\max\{\Delta p_l - r_l(\tilde{g}) ~,~ p_l(l,\text{g})-F\},
-\end{equation*}
-where every term of the sum is positive (otherwise $l$'s linking strategy $s_l$ would be strictly dominated, for any $i\leq l\leq m$). It follows that $r^{i-1}_i(\text{g})$ is an increasing function of the index $i$ of a firm. Therefore the result. 
+where every term of the sum is positive (otherwise $l$ would be better off not entering the industry, for any $i\leq l\leq m$). It follows that $r^{i-1}_i(\text{g})$ is an increasing function of the index $i$ of a firm. Therefore the result. 
 \end{proof}
 
 The result introduced in the last proposition has strong implications onto the relative royalty revenues of the firms in a chain network. \\
