@@ -78,7 +78,7 @@ The structure of the paper will be as follows. In the second section we will pre
 
 \section{The model}
 \indent We model a sequential game where firms enter sequentially and decide if they wish to attach themselves to any of the existing firms. Consider a set of firms $\Omega=(\omega_1,\omega_2,\ldots)$ that each decides sequentially to enter the market of a given good. Consider that $N=(1,2,\ldots,n)$ is the set of firms which enter the market, ordered by the time at which they made their decision. The game immediately ends for these in $\Omega\setminus N$; they all get a null payoff. Those in $N$ pay a fixed cost $F\in \mathbb{R}_+$ upon entry, irrespective of their production decisions. Once in the industry and before producing, every firm has the possibility to access and improve upon the pre-existing production technologies owned by the firms that entered at an earlier date. We denote $i$'s technology level by $k_i$ ; $k_i$ measures the efficiency of $i$ at producing the good, and it is an integer between 1 and $i$, for any $i\in N$. This process of accessing the technologies in the pre-existing industry and innovating upon them is made possible via the formation of directed links, from a predecessor firm to the entrant, and captures the technology transfer from the former to the later. \\
-\indent To capture the concept of sequentially improving innovation we will represent firms with the most advanced technology to have the most predecessors. However, to build upon a technology, a firm must first bargain with the owner of the said technology to be allowed to have access to it. An entrant may infringe on any existing firm's technology; also, if it wishes to infringe on two firms' different technologies, it can do so yet it will use the most advanced technology one for producing. We model the technology decisions of the firms in $N$ as a game of endogenous network formation. The transmission of technology from a firm $h$ to a successor, $i$, occurs if and only if $i$ has a directed link $h\rightarrow i$ to its said predecessor, $h$. The link means that $k_i>k_h$, i.e. a firm always successfully improves upon a technology it has access to. A strategy of link formation is denoted $s_i$ for any $i\in N$, and $s_i$ is the set of all of $i$'s predecessors with which $i$ forms links. All $n$ firms' decisions in link formation map to a technological network \text{g}. When $i\in N$ has infringed upon many technologies, thus $|s_i|>1$, we assume that $i$ produces using its most efficient one: i.e. we set $k_i=\max_{\forall j\in s_i} k_j+1$. The level of technology $k_i$ of firm $i$ is equal to the length of the \textbf{longest directed path} that starts at $i$ in \text{g} plus 1\footnote{Note that the longest path from $i$ always has a length between zero and $i-1$; if it is equal to zero, then $k_i=1$.}. If no path from $i$ exist in \text{g}, then $k_i=1$. Note that firm $1$'s technology level is $k_1=1$ always. \\
+\indent To capture the concept of sequentially improving innovation we will represent firms with the most advanced technology to have the most predecessors. However, to build upon a technology, a firm must first bargain with the owner of the said technology to be allowed to have access to it. An entrant may infringe on any existing firm's technology; also, if it wishes to infringe on two firms' different technologies, it can do so yet it will use the most advanced technology one for producing. We model the technology decisions of the firms in $N$ as a game of endogenous network formation. The transmission of technology from a firm $h$ to a successor, say firm $i$, occurs if and only if $i$ has a directed link $h\rightarrow i$ to its said predecessor, $h$. The link means that $k_i>k_h$, i.e. a firm always successfully improves upon a technology it has access to. A strategy of link formation is denoted $s_i$ for any $i\in N$, and $s_i$ is the set of all of $i$'s predecessors with which $i$ forms links. All $n$ firms' decisions in link formation map to a technological network \text{g}. When $i\in N$ has infringed upon many technologies, thus $|s_i|>1$, we assume that $i$ produces using its most efficient one: i.e. we set $k_i=\max_{\forall j\in s_i} k_j+1$. The level of technology $k_i$ of firm $i$ is equal to the length of the \textbf{longest directed path} that starts at $i$ in \text{g} plus 1\footnote{Note that the longest path from $i$ always has a length between zero and $i-1$; if it is equal to zero, then $k_i=1$.}. If no path from $i$ exist in \text{g}, then $k_i=1$. Note that firm $1$'s technology level is $k_1=1$ always. \\
 \indent Improving upon someone's technology comes at a cost. We assume that a firm $i$ which wants to achieve some technological level $\Tilde{k}$ will bargain simultaneously with all firms $h$ which currently own the level of technology $k_h=\Tilde{k}-1$. The outcome of the bargaining between $i$ and $h$ is the royalty $r^{i}_h$ that $i$ pays to $h$. One can see $r^{i}_h$ as the cost on $i$ for the link $h\rightarrow i$. Note that every firm can access the technology level of 1 for free. In this paper, we will consider pure strategies only. Therefore, if $\mathcal{S}_i$ is the set of all pure strategies of $i$ then $|\mathcal{S}_i|=2^{i-1}$; also, we call $\mathcal{S}=\mathcal{S}_1\times\ldots \mathcal{S}_n$ the space of all firms' pure strategies.  \\
 
 
@@ -109,36 +109,36 @@ The result that \text{g} is a DAG follows from the fact that no firm can form a 
 \begin{assumption}{Technology and payoffs} \label{ass1}\\
 Firms with higher technology have a higher market payoff:
 \begin{equation*}
-     k_i\geq k_j~~ \Leftrightarrow ~~ p_j(k_j,.)\geq  p_i(k_i,.),
+     k_i\geq k_j~~ \Leftrightarrow ~~ p_j(k_i,.)\geq  p_i(k_j,.),
 \end{equation*}
 where the equality holds if and only if $k_i=k_j$.
 \end{assumption}
 
 Note that this assumption does not mean that two firms that have the same technology have the same total payoff since their royalty revenues may differ. The rest of the assumptions are commonly used in any market environment. \\
 
-\begin{assumption}{Foresightedness} \label{ass2}
+\begin{assumption}{Farsightedness} \label{ass2}
 
-Firms are foresighted: they anticipate the arrival of successor firms on the market, and take decisions accordingly. \\ 
+Firms are farsighted: they anticipate the arrival of successor firms on the market, and take decisions accordingly. 
 \end{assumption}
 
 Since there is risk or uncertainty in the model, this assumption implies that all firms must have positive payoffs. 
 
 \begin{assumption}{Market power}\label{ass3}\\
-Consider any technological network \text{g}; and take any subgraph $\text{g}'\subseteq \text{g}$ of the former network. Then: $p_i(k_i,\text{g}')\geq p_i(k_i,\text{g})$ for all $i\in \text{g}'$. For a same technology level, a firm has a higher market payoff the less competition it faces on the market.  \\
+Consider any technological network \text{g}; and take any subgraph $\text{g}'\subseteq \text{g}$ of the former network. Then: $p_i(k_i,\text{g}')\geq p_i(k_i,\text{g})$ for all $i\in \text{g}'$. For a same technology level, a firm has a higher market payoff the less competition it faces on the market. 
 \end{assumption}
 
-In other words, firms may face both upstream and downstream competition. 
+In other words, firms may face both upstream and downstream competition. \\
 
 \indent Finally, we make explicit the timing of the game:       
 
 \begin{enumerate}
-    \item[] \textsc{1) Entry and network formation.} \textit{Each firm in $\Omega$ sequentially decides whether it enters the industry or not; if it enters, a firm immediately chooses simultaneously its strategy of link formation which determines its technology level. Royalty payments are cleared and settled. By the end of this stage, the technological network $\text{g}=(s_1,\ldots,s_n)$ is formed. }
+    \item[] \textsc{1) Entry, network formation, royalty payment.} \textit{Each firm in $\Omega$ sequentially decides whether it enters the industry or not; if it enters, a firm chooses simultaneously its strategy of link formation which determines its technology level and pays for the links it forms. By the end of this stage, the technological network $\text{g}=(s_1,\ldots,s_n)$ is formed. Royalty payments for all firms are cleared and settled. }
     \item[] \textsc{2) Production.} \textit{The firms in $N$ decide on how much they supply on the market.}
     \item[] \textit{3) Payoffs are realized.}
 \end{enumerate}
 
 \section{Subgame Perfect Nash networks and equilibrium royalty payments}
-Since we did not specify the market payoffs of the firms in $N$, we solve for the Nash equilibria of the network formation stage as well as for the equilibrium royalty payments. A firm's decisions regarding entry and its choice of technology happen simultaneously. The choice of technology determines the set of links a firm forms, as well as the royalty the later pays for each of its connections. Later on in the game, if a successor wants to form a link to a predecessor, the predecessor will then make a take it or leave it royalty offer for its successor. In other words, upon entering a firm will pay the royalties immediately to the firm it will connect to, and will only receive royalty payments when its successors enter.  \\ 
+Since we did not specify the market payoffs of the firms in $N$, we solve for the Nash equilibria of the network formation stage as well as for the equilibrium royalty payments. A firm's decisions regarding entry and its choice of technology and the payment it makes to acquire it all happen simultaneously. Later on in the game, if a successor wants to form a link to a predecessor, the predecessor will then make a take it or leave it royalty offer for its successor. In other words, upon entering a firm will pay the royalties immediately to the firm it will connect to, and will only receive royalty payments when its successors enter.  \\ 
 \indent We first present the results about the royalty payments between the different firms in the industry. These results will help to derive some of the properties of the subgame perfect Nash networks featured in section 5. 
 
 \section{General results on equilibrium royalty payments}
@@ -156,8 +156,8 @@ In this section we present partial results on the equilibrium royalty payments m
         \pi_i(k_i,\text{g})=r_i(\text{g})-F.
     \end{equation*}
     In equilibrium, all rent seekers are net receivers. 
-    \item A firm that is not a rent seeker is called a producer. In equilibrium, all net payers are producers.
-    \item In equilibrium, there is at least one producer, which is firm $n$. 
+    \item A firm that is not a rent seeker is called a producer: the firm makes a strictly positive market profit. In equilibrium, all net payers are producers.
+    \item In equilibrium, there is at least 1 producer, which is firm $n$. 
 \end{itemize}
 \end{definition}
 \begin{proof}
@@ -167,10 +167,10 @@ The second and third bullet points are implied by our assumption that firms are 
 The first proposition shows that when two firms acquire the same technology, then any of their common successor can improve upon their technology for free. \\ 
 
 \begin{proposition}\label{prop:zerorevenue}
-In equilibrium, two firms $j$ and $h$ that have the same technology level $\Tilde{k}=k_j=k_h$ transmit $\Tilde{k}$ to their common successors for free. Meaning, if $i>j,h$ is a common successor of both $j$ and $h$ then $r^{i}_h=r^{i}_j=0$. 
+In equilibrium, two firms $h$ and $i$ that have the same technology level $\Tilde{k}=k_h=k_i$ transmit $\Tilde{k}$ to their common successors for free. Meaning, if $j>h,i$ is a common successor of both $h$ and $i$ then $r^{j}_h=r^{j}_i=0$. 
 \end{proposition}
 \begin{proof}
-Consider firm $i>h,j$ a common successor of both firms $h$ and $j$. If $i$ wants to acquire technology $k_i=\Tilde{k}+1$, then $i$ rationally pays for only one link to either $h$ or $j$ if the royalty is strictly positive. Firms $h$ and $j$ are in competition for $i$'s attachment to them; here, $h$ and $j$ play a prisonner's dilemma game which Nash equilibrium is $r^{i}_h=r^{i}_j=0$.
+Consider firm $j>h,i$ a common successor of both firms $h$ and $i$. If $j$ wants to acquire technology $k_j=\Tilde{k}+1$, then $j$ rationally pays for only one link to either $h$ or $i$ if the royalty is strictly positive. Firms $h$ and $i$ are in competition for $j$'s attachment to them; here, $h$ and $i$ play a prisonner's dilemma game which Nash equilibrium is $r^{j}_h=r^{j}_i=0$.
 \end{proof}
 
 Two firms that decide to compete on the market with the same technology sacrifice any prospect of royalty revenue. In the next proposition, we show that a firm cannot subsidize the technology of these successors which build upon theirs. \\
@@ -297,7 +297,7 @@ The result introduced in the last proposition has strong implications onto the r
 Assume that the chain network on all $n$ firms is subgame perfect Nash. In equilibrium, all firms but firm 1 are net payers and they are producers.  
 \end{corollary}
 \begin{proof}
-Note that $s_i=i-1$, for any $2\leq i\leq n$; also, $\text{g}=\mathcal{C}_1^n$. Applying our result from proposition \ref{monotonicity in royalty in the chain}, we have $r_i(\text{g})=r^{i}_{i+1}(\text{g})-r^{i-1}_i(\text{g})\leq 0$ for any $i\neq 1$. It follows from definition \ref{netrandp} that all $i\geq 2$ are net payers - thus producers. And firm $1$ is a net receiver. 
+Note that $s_i=i-1$, for any $2\leq i\leq n$. Applying our result from proposition \ref{monotonicity in royalty in the chain}, we have $r_i(\text{g})=r^{i}_{i+1}(\text{g})-r^{i-1}_i(\text{g})\leq 0$ for any $i\neq 1$. It follows from definition \ref{netrandp} that all $i\geq 2$ are net payers - thus producers. And firm $1$ is a net receiver. 
 \end{proof}
 
 The last proposition essentially says that in a network that has a chain of firms, every firm gets \textit{expropriated}, through the royalty it pays, from the surplus it realizes by linking to its direct predecessor instead of by forming a link to any other firm. This expropriation process goes as follows: at the time firm 2 enters and forms a link to firm 1, the later makes the former pay for the total surplus of all subsequent firms $2,3,\ldots,n$ in the chain. Firm $2$, which ends up paying its connection to firm 1 for more than what it individually gains from it, gets its compensation by charging a royalty to firm 3 that is the sum of all of the surpluses other than its own (that it yet had to pay to firm 1); that is, the surpluses that $3,4,\ldots ,n$ will make. This process continues recursively, so that the cheapest connection in the chain is that maintained by the last firm $n$. 
@@ -331,11 +331,11 @@ We show in the proposition below that a subgame perfect Nash network can have on
 Given that the firms in $N$ compete a la Bertrand, a nonempty subgame perfact Nash network is: 
 \begin{enumerate}
 \item either there is only 1 firm in the industry (i.e. $N=1$) and we denote this network $\text{g}_1$,
-\item or $\text{g}=\mathcal{C}_1^2$; meaning, there are 2 firms in the industry, only firm 2 produces and firm 1 is a rent seeker.  
+\item or $\text{g}=1\rightarrow2$ with $n=2$; meaning, there are 2 firms in the industry, firms 1 and 2 with $k_1=1$ and $k_2=2$. Only firm 2 produces and firm 1 is a rent seeker.  
 \end{enumerate}
 \end{proposition}
 \begin{proof}
-By remark \ref{bertrand is a chain}, there is a subgraph of \text{g} that is a chain $\mathcal{C}_1^n$ of $n$ incumbents; hence if the conclusion of the proposition is false, then $n>2$. Along $\mathcal{C}_1^n$, $r_i(\text{g})\leq 0$ for any firm $2\leq i\leq n$ by proposition \ref{monotonicity in royalty in the chain}. Since only $n$ produces due to the type of competition considered, it must be that $r_i(\text{g})=0$ for any $2\leq i\leq n-1$. It follows that $\pi_i(i,\text{g})=-F<0$ for these firms. A contradiction that $i$ is farsighted. Thus $n=2$. If $\text{g}=\mathcal{C}_1^2$ (since firm 2 cannot have any other link than the one to firm 1), then 1 is a rent seeker since firm 2's technological is superior, and 2 is a producer and net payer since it is the last one to enter the market. 
+By remark \ref{bertrand is a chain}, there is a subgraph of \text{g} that is a chain $\mathcal{C}$ on all $n$ firms; hence if the conclusion of the proposition is false, then $n>2$. Along $\mathcal{C}$, $r_i(\text{g})\leq 0$ for any firm $2\leq i\leq n$ by proposition \ref{monotonicity in royalty in the chain}. Since only $n$ produces due to the type of competition considered, it must be that $r_i(\text{g})=0$ for any $2\leq i\leq n-1$. It follows that $\pi_i(i,\text{g})=-F<0$ for these firms. A contradiction that $i$ is farsighted. Thus $n=2$. If $\text{g}=\mathcal{C}_1^2$ (since firm 2 cannot have any other link than the one to firm 1), then 1 is a rent seeker since firm 2's technological is superior, and 2 is a producer and net payer since it is the last one to enter the market. 
 \end{proof}
 
 At last we determine conditions on the value of the entry cost $F$ for which either one of these two architectures is a subgame perfect Nash network. \\
