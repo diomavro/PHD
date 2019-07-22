@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 JUL 2019 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 JUL 2019 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**"Model 22:07:2019.tex"
+(./Model 22:07:2019.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -354,12 +354,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/asymptote/asymptote.sty
 Package: asymptote 2015/05/10 v1.29 Asymptote style file for LaTeX
 
-(./main.pre)
+(./Model 22:07:2019.pre)
 \ASYbox=\box28
 \c@asy=\count100
 \AsyStream=\write3
 \AsyPreStream=\write4
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
@@ -392,7 +393,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
-\openout4 = `main.pre'.
+\openout4 = `"Model 22:07:2019.pre"'.
 
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
@@ -1406,8 +1407,9 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip74
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count271
-) (./main.aux)
-\openout1 = `main.aux'.
+)
+(./Model 22:07:2019.aux)
+\openout1 = `"Model 22:07:2019.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -1509,15 +1511,25 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 61.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[1
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1532,157 +1544,59 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/upd
-map/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 82--86
+map/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
- [6]
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 146.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
-
- []
-
-[14]
-Overfull \hbox (32.60712pt too wide) in paragraph at lines 273--273
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
-
- []
-
-[18] [19] [20] (./main.bbl)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+ [3]
 
 Package caption Warning: Unused \captionsetup[figure] on input line 13.
 See the caption package documentation for explanation.
 
-[21] (./main.aux) ) 
+[4] (./Model 22:07:2019.aux) ) 
 Here is how much of TeX's memory you used:
- 35219 strings out of 493089
- 794681 string characters out of 6134842
- 989949 words of memory out of 5000000
- 38098 multiletter control sequences out of 15000+600000
- 10604 words of font info for 41 fonts, out of 8000000 for 9000
+ 35191 strings out of 493089
+ 794318 string characters out of 6134842
+ 986001 words of memory out of 5000000
+ 38072 multiletter control sequences out of 15000+600000
+ 10308 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,11n,83p,10375b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (21 pages, 250896 bytes).
+ 61i,8n,83p,10389b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Model 22:07:2019.pdf" (4 pages, 187790 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 92 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
