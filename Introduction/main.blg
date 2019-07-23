@@ -1,8 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-The style file: unsrtnat.bst
-Database file #1: intro.bib
-Warning--empty journal in Munzer1990
-Warning--empty author in Strahilevitz2009
-Warning--empty journal in Strahilevitz2009
+The style file: apalike.bst
+Database file #1: ../thesisbib/bibliography.bib
 Warning--empty journal in Alchian1965
-(There were 4 warnings)
+Warning--empty journal in Munzer1990
+Warning--empty journal in Strahilevitz2009
+(There were 3 warnings)
