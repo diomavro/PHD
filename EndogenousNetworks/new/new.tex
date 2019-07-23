@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{asymptote}
+\usepackage[font=small,skip=0pt]{caption}
+\captionsetup[figure]{font=small,skip=0pt}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{pst-plot,pst-math,pstricks-add}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{arydshln}
+\usepackage{breqn}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{nth}
+\usepackage{enumerate}
+%\usepackage{enuitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[affil-it]{authblk}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepgflibrary{arrows}
+\usepackage{float}
+\pgfplotsset{compat=1.12}
+\usepackage{setspace}
+\doublespacing 
+\newtheorem{theorem}{Theorem}	
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+\usepackage{natbib}
+\usepackage{color}
+\bibliographystyle{agsm}
+
+\begin{document}
+\section{The model}
+Consider a set of firms $\Omega=(\omega_1,\omega_2,\ldots)$ that each decides sequentially to enter the market of a given good. Every firm that decides to enter pays a fixed cost $F>0$, irrespective of any subsequent decision. Consider that $N=(1,2,\ldots,n)$ is the set of firms which enter the market, ordered by the time at which they made their choice. The game immediately ends for these in $\Omega\setminus N$; they all get a null payoff. \\
+\indent Entrants each get to invest, if they wish to, in their production technology: other things being equal, better technologies imply larger profits, always. We call by $k_i$ the production technology of firm $i\in N$. We assume that a firm's investment is an infringement upon some of the technologies the firms which entered the industry at earlier dates have been acquiring. Here is how the investment process is modeled. Prior to entry, every potential entrant is given take it or leave offers from all firms already in the industry. The offers consist of access to their technology against a monetary transfer, which is a royalty. We denote by $r^{h}_i$ the transfer made by entrant $i$ to firm $h$ that entitles firm $i$ to access and build upon firm $h$'s technology, $k_h$. The total royalty expenditures of entrant $i$ is denoted by $r^-_i$, and it is the sum of all royalties the later has to pay.\\
+
+\indent We model the technology decisions of the firms in $N$ as a game of endogenous network formation. The strategy $s_i$ of firm $i$ is the set of all the firms to which firm $i$ pays royalties; in other words, it gives which of the offers of its predecessors firm $i$ accepts at the time it enters the industry. We represent the fact that firm $i$'s technology infringes on that of firm $h$ (hence $h\in s_i$, for some $h<i$) as a directed link $h\rightarrow i$ (the link captures the transfer of technology from $h$ to $i$). The link implies that $k_i>k_h$, i.e. a firm always successfully improves upon a technology it has access to. When a firm $i$ pays royalties to different firms, thus $|s_i|>1$, we assume that it produces with the most efficient technology it paid for building upon: i.e. we set\footnote{The level of technology $k_i$ of firm $i$ is equal to the length of the \textbf{longest directed path} that starts at $i$ in \text{g} plus 1. Note that the longest path from $i$ always has a length between zero and $i-1$; if it is equal to zero, then $k_i=1$.} $k_i=\max_{\forall j\in s_i} k_j+1$, and $1\leq k_i\leq i$ always. If a firm's technology does not infringe on any other one in the industry, (meaning that $s_i=\emptyset$), then $k_i=1$. Note that firm 1's technology level is $k_1=1$ always, that this level of technology does not necessitate any investment at all thereby it is free. For the sake of simplicity, we will consider only pure strategies. Therefore, if $\mathcal{S}_i$ is the set of all pure strategies of $i$ then $|\mathcal{S}_i|=2^{i-1}$; also, we call $\mathcal{S}=\mathcal{S}_1\times\ldots \mathcal{S}_n$ the space of all firms' pure strategies. We call \text{g} the network that is formed by all $n$ firms' strategy in link formation.  \\
+
+\begin{definition}
+A technological network \text{g} is a directed acyclic graph (DAG). Abusing notation, we denote $g=(s_1,\dots, s_n)$ the network that is formed by some vector of strategies $(s_1,\ldots, s_n)\in \mathcal{S}$ played by the firms in $N$. 
+\end{definition}
+\begin{proof}
+The result that \text{g} is a DAG follows from the fact that no firm can form a link to any of its successors in $N$. 
+\end{proof}
+
+We shall now introduce the firms' payoffs. The firms all have two kinds of payoffs: a royalty payoff stemming from the directed edges and a competitive market payoff. The market payoff of firm $i$ is $p_i(k_i,\text{g})$, to be interpreted as how much profit the firm can achieve by freely competing. We assume that the larger $k_i$, the more efficient firm $i$ at producing the good; thus the larger its market profit $p_i(k_i,.)$ (see assumption 1 for the full statement). The royalty payoff of firm $i$ is $r_i(\text{g})=r_i^+(\text{g})-r_i^-(\text{g})$, where $r^+_i(\text{g})=\sum_{j: i\in s_j}r^{i}_j$ is the royalty revenue firm $i$ makes when some of its successors accept its take it or leave it contract; and $r^-_i(\text{g})=\sum_{h\in s_i}r^{i}_h$ is what firm $i$ pays in royalties to its predecessors in $s_i$. The total payoff of firm $i$, given the technological network \text{g} and $i$'s technology $k_i$ is: 
+\begin{equation}
+    \pi_i(k_i,\text{g})=p_i(k_i,\text{g})+r_i(\text{g}) -F. 
+\end{equation}
+
+\indent The next assumption imposes a direct relation between a firm's relative location in the network and its market payoff.\\  
+
+\begin{assumption}{Technology and payoffs} \label{ass1}\\
+Firms with higher technology have a higher market payoff:
+\begin{equation*}
+     k_i\geq k_j~~ \Leftrightarrow ~~ p_j(k_i,.)\geq  p_i(k_j,.),
+\end{equation*}
+where the equality holds if and only if $k_i=k_j$.
+\end{assumption}
+
+Note that this assumption does not mean that two firms that have the same technology have the same total payoff since their royalty revenues may differ. The rest of the assumptions are commonly used in any market environment. \\
+
+\begin{assumption}{Farsightedness} \label{ass2}
+
+Firms are farsighted: they anticipate the arrival of successor firms on the market, and take decisions accordingly. 
+\end{assumption}
+
+Since there is no risk or uncertainty in the model, this assumption implies that all firms must have positive payoffs. 
+
+\begin{assumption}{Market power}\label{ass3}\\
+Given some technology level $k_i$ for firm $i\in N$, $i$'s market payoff $p_i(k_i,.)$ is larger the lower the number $n$ of firms in the industry. (Other things being equal, the less competition a firm faces the larger its market payoff). 
+\end{assumption}
+
+\indent Finally, we make explicit the timing of the game:       
+
+\begin{enumerate}
+    \item[] \textsc{1) Entry, network formation, royalty payment.}
+\begin{itemize}
+\item  \textit{At $t=t_i$, firm $\omega_i$ decides whether it enters the industry or not; if it enters, $\omega_i$ chooses simultaneously its strategy of link formation $s_i$ and pays the associated royalty cost $r^-_i$. }
+\item \textit{At every date $t$, for $t_n \geq t>t_i$ with $t_n$ the date at which the last firm $n$ enters the industry, firm $\omega_i$ offers a take it or leave it contract to the firm which enters the industry at date $t$ if ever a firm enters at this date, and does not do anything otherwise. }
+  \end{itemize}
+\textit{By the end of this stage, the technological network $\text{g}=(s_1,\ldots,s_n)$ is formed. Royalty payments for all firms are cleared and settled.}
+    \item[] \textsc{2)} \textit{Competition/Payoffs are realized.}
+
+\end{enumerate}  
+
+
+  
+
+\end{document}
