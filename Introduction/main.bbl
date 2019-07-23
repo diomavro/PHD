@@ -1,0 +1,39 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Munzer(1990)]{Munzer1990}
+S~Munzer.
+\newblock A theory of property.
+\newblock 90\penalty0 (3), 1990.
+
+\bibitem[Hohfeld(1917)]{Hohfeld}
+Wesley~Newcomb Hohfeld.
+\newblock Fundamental legal conceptions as applied in judicial reasoning.
+\newblock \emph{The Yale Law Journal}, 26\penalty0 (8):\penalty0 710--770,
+  1917.
+
+\bibitem[Strahilevitz(2005)]{Strahilevitz2005}
+Lior~Jacob Strahilevitz.
+\newblock The right to destroy.
+\newblock \emph{Yale Law Journal}, 114\penalty0 (4):\penalty0 781--854, 2005.
+
+\bibitem[Str(2009)]{Strahilevitz2009}
+The right to abandon.
+\newblock 455\penalty0 (February), 2009.
+
+\bibitem[Alchian(1965)]{Alchian1965}
+Armen~A Alchian.
+\newblock Some economics of property rights.
+\newblock 30\penalty0 (4):\penalty0 816--829, 1965.
+
+\bibitem[Alchian and Demsetz(1973)]{Alchian1973}
+Armen~A. Alchian and Harold Demsetz.
+\newblock The property rigthts paradigm.
+\newblock \emph{The Journal of Economic History}, 33\penalty0 (1):\penalty0
+  16--27, 1973.
+
+\end{thebibliography}
