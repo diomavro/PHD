@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Aghion, 1994]{Aghion1994}
+Aghion, Philippe;~Tirole, J. (1994).
+\newblock {The Management of Innovation}.
+\newblock {\em Source: The Quarterly Journal of Economics}, 109(4):1185--1209.
+
 \bibitem[Alchian, 1965]{Alchian1965}
 Alchian, A.~A. (1965).
 \newblock Some economics of property rights.
@@ -9,6 +14,27 @@ Alchian, A.~A. (1965).
 Alchian, Armen A. ;~Demsetz, H. (1973).
 \newblock The property rigthts paradigm.
 \newblock {\em The Journal of Economic History}, 33(1):16--27.
+
+\bibitem[Anton, 1994]{anton1994expropriation}
+Anton, James J ;~Yao, D.~A. (1994).
+\newblock Expropriation and inventions: Appropriable rents in the absence of
+  property rights.
+\newblock {\em The American Economic Review}, 84(1):190--209.
+
+\bibitem[Anton, 2004]{Anton2004}
+Anton, James J. ;~Yao, D.~A. (2004).
+\newblock {Little Patents and Big Secrets: Managing Intellectual Property}.
+\newblock {\em The RAND Journal of Economics}, 35(1):1.
+
+\bibitem[Bessen, 2009]{bessen_maskin}
+Bessen, James E. ;~Maskin, E.~S. (2009).
+\newblock Sequential innovation, patents, and imitation.
+\newblock {\em SSRN Electronic Journal}, 40(4):611--635.
+
+\bibitem[Bryan, 2017]{Bryan2017}
+Bryan, Kevin A.;~Lemus, J. (2017).
+\newblock {The direction of innovation}.
+\newblock {\em Journal of Economic Theory}, 172:247--272.
 
 \bibitem[Calabresi, 1972]{calabresi1972property}
 Calabresi, Guido;~Melamed, A.~D. (1972).
@@ -22,29 +48,218 @@ Cheung, S. N.~S. (1970).
   Resource}.
 \newblock {\em The Journal of Law and Economics}, 13:49.
 
+\bibitem[Cornelli, 1999]{Cornelli1999}
+Cornelli, Francesca ;~Schankerman, M. (1999).
+\newblock {Patent Renewals and R{\&}D Incentives}.
+\newblock {\em RAND journal of economics}, 30(2):197--213.
+
+\bibitem[Demsetz, 2011]{demsetz2011rh}
+Demsetz, H. (2011).
+\newblock Rh coase and the neoclassical model of the economic system.
+\newblock {\em The Journal of Law and Economics}, 54(S4):S7--S13.
+
+\bibitem[Dixit and Pindyck, 1994]{dixit1994investment}
+Dixit, A.~K. and Pindyck, R.~S. (1994).
+\newblock {\em Investment under uncertainty}.
+\newblock Princeton university press.
+
+\bibitem[Gattai, 2016]{gattai2016investment}
+Gattai, Valeria;~Natale, P. (2016).
+\newblock Investment spillovers and the allocation of property rights.
+\newblock {\em Economics Letters}, 145:109--113.
+
+\bibitem[George, 1973]{progress}
+George, Henry, .-. (1973).
+\newblock {\em Progress And Poverty; an Inquiry into the Cause of Industrial
+  Depressions and of Increase of Want with Increase of Wealth: the Remedy}.
+\newblock AMS Press.
+
+\bibitem[Grossman, 1986]{Grossman1986}
+Grossman, Sanford J. ;~Hart, O.~D. (1986).
+\newblock {The Costs and Benefits of Ownership: A Theory of Vertical and
+  Lateral Integration}.
+\newblock {\em Journal of Political Economy}, 94(4):691--719.
+
+\bibitem[Hall et~al., 2014]{Hall2014}
+Hall, B., Helmers, C., Rogers, M., and Sena, V. (2014).
+\newblock The choice between formal and informal intellectual property: a
+  review.
+\newblock {\em Journal of Economic Literature}, 52(2):375--423.
+
+\bibitem[Hamada, 2011]{hamada2011incentive}
+Hamada, K. (2011).
+\newblock Incentive for innovation and the optimal allocation of patents.
+\newblock {\em Australian Journal of Management}, page 312896216686152.
+
+\bibitem[Hart, 1990]{Hart1990}
+Hart, Oliver D. ;~Moore, J. (1990).
+\newblock {Property Rights and the Nature of the Firm}.
+\newblock {\em Journal of Political Economy}, 98(6):1119--1158.
+
+\bibitem[Hart, 1999]{Hart1999}
+Hart, Oliver D. ;~Moore, J. (1999).
+\newblock {Foundations of Incomplete Contracts Foundations of Incomplete
+  Contracts}.
+\newblock 66(1):115--138.
+
+\bibitem[{Heidrun C. Hoppe} and Baye, 2003]{Games2003}
+{Heidrun C. Hoppe} and Baye, M.~R. (2003).
+\newblock {The Strategic Equivalence of Rent-Seeking, Innovation, and
+  Patent-Race Games}.
+\newblock pages 1--19.
+
 \bibitem[Hohfeld, 1917]{Hohfeld}
 Hohfeld, W.~N. (1917).
 \newblock Fundamental legal conceptions as applied in judicial reasoning.
 \newblock {\em The Yale Law Journal}, 26(8):710--770.
+
+\bibitem[Holmstrom, 1989]{Holmstrom1989}
+Holmstrom, B. (1989).
+\newblock {Agency cost and innovation}.
+\newblock {\em Journal of Economic Behavior {\&} Organization}, 12(3):305--327.
 
 \bibitem[Kaplow, 1995]{kaplow1995property}
 Kaplow, Louis;~Shavell, S. (1995).
 \newblock Property rules versus liability rules, an economic analysis.
 \newblock {\em Harvard Law Review}, 109:713.
 
-\bibitem[Munzer, 1990]{Munzer1990}
-Munzer, S. (1990).
-\newblock A theory of property.
-\newblock 90(3).
+\bibitem[Kremer, 1998]{kremer_1998}
+Kremer, M. (1998).
+\newblock Patent buyouts: A mechanism for encouraging innovation.
+\newblock {\em The Quarterly Journal of Economics}, 113(4):1137–1167.
 
-\bibitem[Strahilevitz, 2009]{Strahilevitz2009}
-Strahilevitz, J. (2009).
-\newblock The right to abandon.
-\newblock 455.
+\bibitem[Kultti et~al., 2006]{Kultti2006}
+Kultti, K., Takalo, T., and Toikka, J. (2006).
+\newblock Simultaneous model of innovation, secrecy, and patent policy.
+\newblock {\em American Economic Review}, 96(2):82--86.
+
+\bibitem[Kultti et~al., 2007]{Kultti2007}
+Kultti, K., Takalo, T., and Toikka, J. (2007).
+\newblock {Secrecy versus patenting}.
+\newblock {\em RAND Journal of Economics}, 38(1):22--42.
+
+\bibitem[Lee and Wilde, 1980]{lee1980market}
+Lee, T. and Wilde, L.~L. (1980).
+\newblock Market structure and innovation: A reformulation.
+\newblock {\em The Quarterly Journal of Economics}, 94(2):429--436.
+
+\bibitem[Lemley, 2005]{Lemley2005}
+Lemley, Mark A;~Shapiro, C. (2005).
+\newblock {Probabilistic Patents}.
+\newblock {\em Journal of Economic Perspectives}, 19(2):75--98.
+
+\bibitem[Lerner and Malmendier, 2010]{lerner2010contractibility}
+Lerner, J. and Malmendier, U. (2010).
+\newblock Contractibility and the design of research agreements.
+\newblock {\em American Economic Review}, 100(1):214--46.
+
+\bibitem[Locke, 2014]{locke2014second}
+Locke, J. (2014).
+\newblock {\em Second treatise of government: An essay concerning the true
+  original, extent and end of civil government}.
+\newblock John Wiley \& Sons.
+
+\bibitem[Loury, 1979]{Loury1979}
+Loury, G.~C. (1979).
+\newblock {Market Structure and Innovation}.
+\newblock {\em The Quarterly Journal of Economics}, 93(3):395--410.
+
+\bibitem[Maskin, 2002]{Maskin2002}
+Maskin, E. (2002).
+\newblock {On indescribable contingencies and incomplete contracts}.
+\newblock {\em European Economic Review}, 46(4-5):725--733.
+
+\bibitem[Maskin, 1999a]{maskin1999unforeseen}
+Maskin, Eric ;~Tirole, J. (1999a).
+\newblock Unforeseen contingencies and incomplete contracts.
+\newblock {\em The Review of Economic Studies}, 66(1):83--114.
+
+\bibitem[Maskin, 1999b]{Maskin1999}
+Maskin, Eric;~Tirole, J. (1999b).
+\newblock {Two Remarks on the Property-Rights Literature}.
+\newblock {\em Review of Economic Studies}, 66(1):139--149.
+
+\bibitem[Mose, 2011]{Mose2011}
+Mose, M. (2011).
+\newblock {Big patents , small secrets : how firms protect inventions when R
+  {\&} D outcome is heterogeneous}.
+\newblock {\em BGPE Discussion Paper}.
+
+\bibitem[Munzer, 1990]{Munzer1990}
+Munzer, S.~R. (1990).
+\newblock {\em A theory of property}.
+\newblock Cambridge University Press.
+
+\bibitem[N{\"{o}}ldeke, 1998]{Noldeke1998}
+N{\"{o}}ldeke, Georg ;~Schmidt, K.~M. (1998).
+\newblock {Sequential Investments and Options to Own}.
+\newblock {\em The RAND Journal of Economics}, 29(4):633--653.
+
+\bibitem[Rosenkranz and Schmitz, 1999]{Rosenkranz1999}
+Rosenkranz, S. and Schmitz, P.~W. (1999).
+\newblock {Know-how Disclosure and Incomplete Contracts}.
+\newblock {\em Economics Letters}, 63(2):1--10.
+
+\bibitem[Schmitz, 2001]{schmitz2001coase}
+Schmitz, P.~W. (2001).
+\newblock The coase theorem, private information, and the benefits of not
+  assigning property rights.
+\newblock {\em European journal of law and economics}, 11(1):23--28.
+
+\bibitem[Schmitz, 2013]{schmitz2013investments}
+Schmitz, P.~W. (2013).
+\newblock Investments in physical capital, relationship-specificity, and the
+  property rights approach.
+\newblock {\em Economics Letters}, 119(3):336--339.
+
+\bibitem[Schmitz, 2017]{schmitz2017incomplete}
+Schmitz, P.~W. (2017).
+\newblock Incomplete contracts, shared ownership, and investment incentives.
+\newblock {\em Journal of Economic Behavior \& Organization}.
+
+\bibitem[Scotchmer, 1990]{Scotchmer1990}
+Scotchmer, Suzanne ;~Green, J. (1990).
+\newblock {Novelty and Disclosure in Patent Law}.
+\newblock {\em Source: The RAND Journal of Economics Journal of Economics},
+  21(1):131--146.
+
+\bibitem[Scotchmer, 1999]{Scotchmer1999}
+Scotchmer, S. (1999).
+\newblock {On the Optimality of the Patent Renewal System}.
+\newblock {\em RAND journal of economics}, 30(2):181--196.
 
 \bibitem[Strahilevitz, 2005]{Strahilevitz2005}
 Strahilevitz, L.~J. (2005).
 \newblock The right to destroy.
 \newblock {\em Yale Law Journal}, 114(4):781--854.
+
+\bibitem[Strahilevitz, 2009]{Strahilevitz2009}
+Strahilevitz, L.~J. (2009).
+\newblock The right to abandon.
+\newblock {\em U. Pa. L. Rev.}, 158:355.
+
+\bibitem[Takalo et~al., 2001]{takalo2001optimal}
+Takalo, T. et~al. (2001).
+\newblock On the optimal patent policy.
+\newblock {\em Finnish Economic Papers}, 14(1):33--40.
+
+\bibitem[von Hayek, 1991]{Fatal}
+von Hayek, F. (1991).
+\newblock {\em The Fatal Conceit}.
+\newblock University of Chicago Press.
+
+\bibitem[Weeds, 2002]{Weeds2002}
+Weeds, H. (2002).
+\newblock {Strategic Delay in a Real Options Model of R{\&}D Competition}.
+\newblock {\em Review of Economic Studies}, 69(3):729--747.
+
+\bibitem[Weyl, 2012]{weyl2012market}
+Weyl, E Glen ;~Tirole, J. (2012).
+\newblock Market power screens willingness-to-pay.
+\newblock {\em The Quarterly Journal of Economics}, 127(4):1971--2003.
+
+\bibitem[Zhang, 2014]{Zhang2014}
+Zhang, Juyan ;~Zhang, Y. (2014).
+\newblock {Sequential Investment, Hold-up, and Ownership Structure}.
 
 \end{thebibliography}
