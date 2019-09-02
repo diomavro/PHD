@@ -31,10 +31,21 @@ Bessen, James E. ;~Maskin, E.~S. (2009).
 \newblock Sequential innovation, patents, and imitation.
 \newblock {\em SSRN Electronic Journal}, 40(4):611--635.
 
+\bibitem[Boldrin and Levine, 2009]{boldrin2009market}
+Boldrin, M. and Levine, D.~K. (2009).
+\newblock Market size and intellectual property protection.
+\newblock {\em International Economic Review}, 50(3):855--881.
+
 \bibitem[Bryan, 2017]{Bryan2017}
 Bryan, Kevin A.;~Lemus, J. (2017).
 \newblock {The direction of innovation}.
 \newblock {\em Journal of Economic Theory}, 172:247--272.
+
+\bibitem[Caillaud and Duch{\^{e}}ne, 2012]{Caillaud2012}
+Caillaud, B. and Duch{\^{e}}ne, A. (2012).
+\newblock {Patent office in innovation policy : Nobody ' s perfect}.
+\newblock {\em International Journal of Industrial Organization},
+  29(2):242--252.
 
 \bibitem[Calabresi, 1972]{calabresi1972property}
 Calabresi, Guido;~Melamed, A.~D. (1972).
@@ -62,6 +73,11 @@ Demsetz, H. (2011).
 Dixit, A.~K. and Pindyck, R.~S. (1994).
 \newblock {\em Investment under uncertainty}.
 \newblock Princeton university press.
+
+\bibitem[Dolin, 2011]{Dolin2011}
+Dolin, G. (2011).
+\newblock {Reverse settlements as patent invalidity signals}.
+\newblock {\em Harvard Journal of Law {\&} Technology}, 24:281.
 
 \bibitem[Gattai, 2016]{gattai2016investment}
 Gattai, Valeria;~Natale, P. (2016).
@@ -148,6 +164,11 @@ Lemley, Mark A;~Shapiro, C. (2005).
 \newblock {Probabilistic Patents}.
 \newblock {\em Journal of Economic Perspectives}, 19(2):75--98.
 
+\bibitem[Lemleyt, 2004]{Lemleyt2004}
+Lemleyt, M.~A. (2004).
+\newblock {Ex Ante versus Ex Post Justifications for Intellectual Property}.
+\newblock {\em The University of Chicago Law Review}, 71(1):129--149.
+
 \bibitem[Lerner and Malmendier, 2010]{lerner2010contractibility}
 Lerner, J. and Malmendier, U. (2010).
 \newblock Contractibility and the design of research agreements.
@@ -179,6 +200,17 @@ Maskin, Eric;~Tirole, J. (1999b).
 \newblock {Two Remarks on the Property-Rights Literature}.
 \newblock {\em Review of Economic Studies}, 66(1):139--149.
 
+\bibitem[Meyers, 2007]{meyers2007happy}
+Meyers, M.~A. (2007).
+\newblock {\em Happy accidents: Serendipity in modern medical breakthroughs}.
+\newblock Arcade Publishing.
+
+\bibitem[Mindell, 2002]{mindell2002between}
+Mindell, D.~A. (2002).
+\newblock {\em Between human and machine: feedback, control, and computing
+  before cybernetics}.
+\newblock JHU Press.
+
 \bibitem[Mose, 2011]{Mose2011}
 Mose, M. (2011).
 \newblock {Big patents , small secrets : how firms protect inventions when R
@@ -194,6 +226,11 @@ Munzer, S.~R. (1990).
 N{\"{o}}ldeke, Georg ;~Schmidt, K.~M. (1998).
 \newblock {Sequential Investments and Options to Own}.
 \newblock {\em The RAND Journal of Economics}, 29(4):633--653.
+
+\bibitem[Plant, 1934]{Plant1934}
+Plant, A. (1934).
+\newblock {The Economic Aspects of Copyright in Books}.
+\newblock {\em Economica}, 1(2):167--195.
 
 \bibitem[Rosenkranz and Schmitz, 1999]{Rosenkranz1999}
 Rosenkranz, S. and Schmitz, P.~W. (1999).
@@ -228,6 +265,12 @@ Scotchmer, S. (1999).
 \newblock {On the Optimality of the Patent Renewal System}.
 \newblock {\em RAND journal of economics}, 30(2):181--196.
 
+\bibitem[Scranton, 2006]{scranton2006urgency}
+Scranton, P. (2006).
+\newblock Urgency, uncertainty, and innovation: Building jet engines in postwar
+  america.
+\newblock {\em Management \& Organizational History}, 1(2):127--157.
+
 \bibitem[Strahilevitz, 2005]{Strahilevitz2005}
 Strahilevitz, L.~J. (2005).
 \newblock The right to destroy.
@@ -243,6 +286,13 @@ Takalo, T. et~al. (2001).
 \newblock On the optimal patent policy.
 \newblock {\em Finnish Economic Papers}, 14(1):33--40.
 
+\bibitem[Unguru, 1992]{unguru1992guy}
+Unguru, S. (1992).
+\newblock Guy beaujouan. par raison de nombres; l'art du calcul et les savoirs
+  scientifiques m{\'e}di{\'e}vaux. aldershot: Variorum, 1991. pp. xii+ 300.
+  isbn 0-86078-281-6.{\pounds} 47.50.
+\newblock {\em The British Journal for the History of Science}, 25(4):460--462.
+
 \bibitem[von Hayek, 1991]{Fatal}
 von Hayek, F. (1991).
 \newblock {\em The Fatal Conceit}.
@@ -257,6 +307,11 @@ Weeds, H. (2002).
 Weyl, E Glen ;~Tirole, J. (2012).
 \newblock Market power screens willingness-to-pay.
 \newblock {\em The Quarterly Journal of Economics}, 127(4):1971--2003.
+
+\bibitem[Winter, 1993]{Winter1993}
+Winter, S.~G. (1993).
+\newblock {Patents and welfare in an evolutionary model}.
+\newblock {\em Industrial and Corporate Change}, 2, n.2(1962):211--231.
 
 \bibitem[Zhang, 2014]{Zhang2014}
 Zhang, Juyan ;~Zhang, Y. (2014).
