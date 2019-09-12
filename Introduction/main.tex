@@ -7,6 +7,7 @@
 %\usepackage[cmbold]{mathtime}
 %\usepackage{mt11p}
 \usepackage{placeins}
+\usepackage{caption}
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{amssymb}
@@ -45,9 +46,16 @@
 \bibliographystyle{apalike}
 %\bibliographystyle{unsrtnat}
 
+
+
 %\bibliographystyle{aea}
 \usepackage{enumitem}
 \usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
 %\usepackage{tikz}
 %\usetikzlibrary{snakes}
@@ -167,6 +175,10 @@ urlcolor={blue!50!black}}
 \newcommand{\del}{D}
 \newcommand{\hor}{H}
 
+\def\firstcircle{(0,0) circle (4cm)}
+\def\secondcircle{(60:2cm) circle (2cm)}
+\def\thirdcircle{(30:2cm) circle (.9cm)}
+
 \setlength{\parindent}{0.0cm}
 \setlength{\parskip}{0.4em}
 
@@ -207,38 +219,93 @@ Perhaps the first fully prescriptive system of property was articulated by Henry
 \subsection{What is a property right?}
 
 What is a property right? \footnote{The presentation borrows from \cite{Munzer1990}}
-Some possible answers to this question are: Property is simply the default contract, that is, if people do not agree on a contract, property is what is taken as the baseline. 'Property as the default' view is simple enough: Person A can contract with person B that person B will not touch or use item z without A's permission. This in fact requires no property right at all. What does require a property right is that all other people will also not be able to do with z as they please. If agents could all simultaneously consent or if there were but two agents who could contract, there would be no need for property rights. Indeed property rights rely on the inability to contract. 
+Some possible answers to this question are: Property is simply the default contract, that is, if people do not agree on a contract, property is what is taken as the baseline. 'Property as the default' view is simple enough: Person A can contract with person B that person B will not touch or use item z without A's permission. This in fact requires no property right at all. What does require a property right is that all other people will also not be able to do with z as they please. If agents could all simultaneously consent or if there were but two agents who could contract, there would be no need for property rights. Indeed property rights rely on the inability to contract or simply the costliness to contracting with all agents simultanously.  
 
 
 
 \subsection{The language of property rights}
 
-Discussion of property rights often suffer from precision. To clarify our definition we use some legal language \footnote{see \cite{Hohfeld}}. 
+\begin{figure}
+\begin{center}
+%\begin{tikzpicture}[every text node part/.style={align=center}] used for multiple parts,
+%along with shapes.multipart tikz library.
+\begin{tikzpicture}[sharp corners=2pt,inner sep=7pt,node distance=.8cm,every text node part/.style={align=center}]
+ 
+% Draw rectangular nodes (switch sharp to smooth for different corners)
+\node[draw, minimum height = 3cm, minimum width = 3cm](Privilege){\textbf{Privilege:} A can use \\ \textcolor{blue}{ \textbf{Power:} A can change B's  rights}};
+\node[draw,below=2cm of Privilege, minimum height = 3cm, minimum width = 3cm](Duty){\textbf{Duty:} A has no right to use \\ \textcolor{blue}{\textbf{Disability:} A can't change B's rights}};
+\node[draw,right=2cm of Privilege, minimum height = 3cm, minimum width = 3cm](No-claim){\textbf{No-claim:} B cannot exclude A\\ \textcolor{blue}{\textbf{Liability:} B's rights can be changed by A}};
+\node[draw,below=2cm of No-claim, minimum height = 3cm, minimum width = 3cm](Claim){\textbf{Claim:} B can exclude A \\ \textcolor{blue}{\textbf{Immunity:} B's rights can't be changed by A}};
+ 
+%Draw arrows
+\draw[-triangle 90, ultra thick,<->] (Privilege) -- (Duty) node [midway, above, left = 0.1cm]{opposite:};
+\draw[-triangle 90, ultra thick,<->] (Privilege) -- (No-claim) node [midway, above]{correlative:};
+\draw[-triangle 90, ultra thick,<->] (No-claim) -- (Claim) node [midway, above, right = 0.1cm]{opposite: };
+\draw[-triangle 90, ultra thick,<->] (Duty) -- (Claim) node [midway, above]{correlative:};
+%\draw[-triangle 90, ultra thick,<->] (Privilege) -- (Claim) node [midway, above, rotate = -45]{$\mu^{03}_{x+t:y+t}$};
+\end{tikzpicture}
+\caption{First order rights, \textcolor{blue}{Second order rights}}
+\end{center}
+\end{figure}
 
-It is convenient to speak of two categories of rights. First order rights and second order rights. First order rights are what is often called, the right to use or the right to exclude. The right to use is often called a "privilege" and the right to exclude is called a "claim". 
+The most basic method of discussing property rights is using jurist legal language \footnote{see \cite{Hohfeld}}. Discussion of rights is separarated into different hierarchies but in most applications only two levels are needed. First order rights, which describe the direct rights an agent posseses, usually the positive rights to act on an asset or to exclude an other agent. The right to use is called a "privilege" and the right to exclude is called a "claim". These rights are zero sum in the sense that if all agents have have a "privilege" then no agent has a claim. On the other hand if at least one agent, agent B does not have a "privilege", then  agent B has a "duty" and there is some set of agents, A who either individually or collectively(perhaps democratically) have a claim right against B.
 
-Second order rights are rights are rights about first order rights. For instance when one talks of "power" this is in reference to the right to transfer, waive or annul "claim" and "privilege" rights. For instance, the right to transfer property to someone else is a second order right. One can also speak of "immunity", which means that one has the right for his "claim" or "privilege" to something to not be affected by others. 
+Second order rights are rights about first order rights. For instance when one talks of "power" this is in reference to the right to transfer, waive or annul "claim" and "privilege" rights. For instance, the right to transfer property to someone else is a second order right. One can also speak of "immunity", which means that one has the right for his "claim" or "privilege" to not be affected by others. Second order rights are about how first order rights can be changed and the possibility space of first order rights is increasing in power and decreasing in immunity. Second order rights may also have the feauture of circularity, Agent A can have power over B, B may have power over C's  and C may have power over A.
 
-Notice that if an agent has full second order rights over an object, this entails the ability to have first order rights. Both first order and second order rights may be under negotiation in contracts, the possibility space is automatically much narrower without second order rights. The idea of second order rights entirely entails the right to destroy and to abandon, if someone does not have second order rights this entails the agent has no right to destroy or abandon. \footnote{for an interesting analysis of the right to destroy/abandon see, \cite{Strahilevitz2005}, \cite{Strahilevitz2009}} 
+Notice that if an agent has power over an object, this entails the ability to have first order rights. Both first order and second order rights may be under negotiation in contracts, the arrangements that can legally emerge are much narrower without power. Having power over an asset entails the right to destroy and to abandon, if someone does not have second order rights this entails the agent has no right to destroy or abandon. \footnote{for an interesting analysis of the right to destroy/abandon see, \cite{Strahilevitz2005}, \cite{Strahilevitz2009}} 
 
-To clarify ideas it useful to know how this taxonomy matches with traditional economic ideas. For instance clearly if there is a law that requires property owners to allow access, this is a limitation of the first order right of "privilege". A regulation stating that one may not consume or use one's land in a specific way is similarly a reduction in "claim" rights. A price control is a limitation on what price one can sell their good for, as such it is a "power" limitation. A constitutional constraint is an example of a second order right of "immunity" being increased. 
+The contractual possibility of first order rights depends on the distribution of claims or privileges. If all agents have privilege rights on an asset then this naturally entails that the only contracts agents can draw are either commiting to using or not using the asset. If on the other hand an agent has claim rights on an asset then that agent can also contract the exclusion of other agents from using an asset. If cost is independent of the number of agents one is contracting with, then there is no advantage to uniting claim rights upon a single individual. However if approaching each agent is costly then it may be advantageous to allocate claims to a single agent. So while the contractual possibility space is entirely avaialble in all cases, the property right regimes can achieve the same contractual space with less parties required for a transaction. Similarly, the types of arrangements possible(corporations, partnerships, non-profits, licenses, bailments, non-voting common stock, trusts, agencies, employee-employer relationships marriages etc) entirely depend on second order rights. With this in mind we clarify how some property right paradigms fit into this conceptual framework. 
 
-Similarly, the types of arrangements possible(corporations, partnerships, non-profits, licenses, bailments, non-voting common stock, trusts, agencies, employee-employer relationships marriages etc) entirely depend on the above taxonomy. With this in mind we clarify how some property right paradigms fit into this conceptual framework. 
+To clarify ideas it useful to know how this taxonomy matches with traditional economic ideas. For instance clearly if there is a law that requires property owner A to allow access to B, this implies that agent B has a privilege of use, and implies and that A has a no-claim, similarly this implies that B has immunity and A has a disability. A price control is a limitation on what price one can sell their good for, as such it is a "power" limitation in the sense that without a price control A could transfer the asset on wider terms. 
 
-\textit{Private property} grants all of the above rights. Private property gives the right to use, the right to exclude, the right to transfer/waive the exclusion and immunity from someone others altering one's claim. \textit{Private property} has been defined as the ability to use ones property in any way one wishes as long as the \textit{physical} characteristics of others private property is not affected \footnote{\cite{Alchian1965}}. This definition of private property has the advantage of setting an objective standard and requires no reference to subjective clauses. To see an example of the issues with defining private property rights as "the right to do with your property as you wish as long as nobody else is harmed by it,'' one need only notice how ambiguous this standard is if the question is about the right of someone to build a skyscraper given that it blocks the view of a neighbor. 
+The above puts a heavy emphasis on 'use' and 'exclusion', however the notion of 'use' in the case of land is broad term that encompasses numerous rights that are separable. The additional rights that can be constructed from 'use' are: Access, the right to freely move within that territory; Management, the right to control the internal organization of the land; Withdrawal, the right to extract things from the land; Alienation, the right to sell or lease. \footnote{\cite{ostrom2010private}}
+Land ownership specifcially has been summarized by the simple hierarchical relationship corresponding to the five rights, $\text{authorized entrant} \in \text{authorized user}  \in \text{claimant}  \in \text{proprietor} \in \text{claimant}$ each level of the hierarchy adds a right. \cite{schlager1992property}
 
-\textit{Communal/Public/ property} on the other hand gives all agents in society the right to use but not the right to exclude. \footnote{what is deemed the right of the absentee owner see \cite{Alchian1973}}. Communal property gives second order rights to the state. In practice, the distinction between communal and public ownership is whether the state exercises its second order rights. If it exercises it for setting up things such as a military reservation, then we call it "public". Communal property is technically a first come first served type of property. It has been said that agents with communal rights tend to ignore the cost of use \footnote{\cite{Alchian1973} mentions how the Canadian government in 1970 set an upper limit to the number of seals to be clubbed which caused speed of hunting to be the competitive trait}. 
 
-\textit{Georgian system of property}. The Georgian system of property is a system which temporarily grants first order rights to individuals. The system does not have discretion like public property has, however, second order rights like power and immunity are still in the hands of the state, as such it is merely about how the state decides to use, which is simply to create an auction for temporary rental.  
+The two natural limits to the jural taxonomy are when only the state has second order rights and sovereignty. One possibility for the absence of a second order right is that all agents have privileges, this is termed \textit{Open access}(open sea and atmosphere or explicit prevention of exclusion zones). Alternatively the absence of second order rights could be when the state allocates claim or privilege rights to a specific group, this could look like a king choosing vassals or democracy selecting managers. \textit{Sovereignty} on the other hand implies that someone has infinite order rights, if someone has the capacity to make someone else an owner, this can only be represented by an infinite recursion, however the specific scope of ownership will depend on the regulations in place. The scope of ownership has often been articulated as "the right to do with your property as you wish as long as nobody else is harmed by it", however such definitions are problematic as the notion of harm is too loose, a simple solution to this looseness is to revise the defintion to "the ability to use ones property in any way one wishes as long as the \textit{physical} characteristics of others property is not affected" \footnote{\cite{Alchian1965}}.
 
-The language presented is especially useful for the analysis of intellectual property. Whilst each physical property can be seen as a list of rights and the matching of those rights to individuals or groups of individuals the concept of intellectual property is qualitatively different. The notion of intellectual property is a limitation of the first order right of "privilege" on physical property. That is, if one has intellectual property on the concept of a wooden chair, this is in fact the limitation on the use rights of all owners of wood. Alternatively, there are instances where the law permits copying but not commercialization, in these instances the first order rights are not affected but the second order rights of "power" are limited conditional on the use of the asset.  
+\textit{Private property} is often a term used to describe some kind of constrained sovereignty. While both sovereignty and private property imply infinite order rights on the set of rights granted, the set of rights granted by private property is much smaller. Perhaps the most obvious difference is that private property does not entail unlimited use rights on an asset. If we imagine the three sets below, private property implies that simply that $C\in B$, Sovereignty is the additional condition that $B \in C$
 
-Is the change in allocation of rights substantive? In other words is this whole exercise just a redefinition but does not imply any changes in resulting actions? Well the nice thing about this taxonomy is that the proposition that both systems work identically is the proposition that second order rights do not matter. In theory, public and private property can both pursue the same kind of goals, profits/charity, in practice, once the incentives of the agents are taken into account the theory of property rights becomes descriptive. For example, a price control or a "power" limitation, as it restricts the conditions of transfer an owner can make, this can lead to the agents choosing differently. For instance, an agent renting out an apartment may prefer childless/petless adults to avoid noise or damage to his property, in other words, leading to both investment and allocation differences. 
 
-\newpage
+\begin{align*}
+A:=\{ \text{Possible uses of an asset} \} \\
+B:=\{\text{Uses that do not affect physical characteristics of other assets} \} \\
+C:=\{\text{ Uses on which privilege privilege is granted}\}
+\end{align*}
+
+
+\begin{figure}
+\begin{center}
+%\begin{tikzpicture}[every text node part/.style={align=center}] used for multiple parts,
+%along with shapes.multipart tikz library.
+\begin{tikzpicture}[sharp corners=2pt,inner sep=7pt,node distance=.8cm,every text node part/.style={align=center}]
+    \begin{scope}[shift={(3cm,-5cm)}, fill opacity=0.5]
+        \fill[red] \firstcircle;
+        \fill[green] \secondcircle;
+        \fill[blue] \thirdcircle;
+        \draw \firstcircle node[below] {$A$};
+        \draw \secondcircle node [above] {$B$};
+        \draw \thirdcircle node [below] {$C$};
+    \end{scope}
+\end{tikzpicture}
+\caption{ \textcolor{red}{A=Possible uses of an asset};\textcolor{green}{B=uses that do not affect physical characteristics of other assets};\textcolor{blue}{C=uses on which privilege is granted} }
+\end{center}
+\end{figure}
+
+\textit{Communal/Public property} on the other hand gives a subset of agents in society the right to use but not the right to exclude. Power is also given to a subset of agents, this may be some community that aims to allocate fishing or hunting rights. 
+However, since alienation or transfer is limited, this generally implies higher order rights are in in the hands of the state. The distinction between communal and public ownership is how the second order rights are exercised. If they exercised to for the sake of public servant such as a military reservation, then it is called "public" and if not we call it "communal". \footnote{For a discussion of using common property as a policy tool see: \cite{ciriacy1975common}} In the limit, as the set of agents who can exclude is empty, communal property becomes \textit{Open access property}. In general any regime with weak claim rights is a first come first serve type of property and agents operating in such a regime ignore the cost of use.\footnote{\cite{Alchian1973} mentions how the Canadian government in 1970 set an upper limit to the number of seals to be clubbed which caused speed of hunting to be the competitive trait leading to over-hunting}. 
+
+There are other types of regimes which are less commonly discussed such as the\textit{Georgian system of property}. The Georgian system of property is a system which temporarily grants first and second order rights to individuals for a given period of time conditional on the individuals having the highest bid. Since ownership is temporary, and no permanent right is possibe, this implies implies no higher rights than third order rights. Additionally, agents no longer have the right to transfer ownership since the decision to keep ownership temporary and conditional on winning the auction is ultimately given to the state. 
+
+The language presented is especially interesting for the analysis of intellectual property. Whilst each physical property can be seen as a list of rights and the matching of those rights to individuals or groups of individuals as described above, the concept of intellectual property is qualitatively different. The notion of intellectual property is a limitation of the first order right of "privilege" on physical property. That is, if one has intellectual property on the concept of a wooden chair, this is in fact the limitation on the use rights of all owners of wood. Alternatively, there are instances where the law permits copying but not commercialization, in these instances the first order rights are not affected but the second order rights of "power" are limited conditional on the use of the asset. 
+
 \section{The static economics of property rights}
 
-Much of economics treats law as merely instruments to utility maximization. Where each branch of law, tort, contract, is aiming to create rules that increase utility and each branch captures new elements. Discussion of property rights can be broken down into four distinct questions. 1) What are the assets that property rights protects? 2) From who is the property protected? 3) What is the content of property protection. 4) What is the enforcement mechanism by which property is to be protected. The economics way of answering these questions generally leans on two kinds of efficiency: allocative efficiency and investment efficiency. Allocative efficiency means either to give it to the agent who values it the most or the agent who has the lowest cost to operate it. Both of these dynamic notions require the static concepts of value. Value in economics is usually broken down into two components, market value and subjective value. These notions are important in that the whole framework of analyzing property rights leans on their interaction. We quickly analyze some cases of how these notions interact. One of the achievements of economics is the deduction of the market value of an asset by the description of the subjective value. Note that a positive market value does not imply that exchange occurs, indeed subjective value is key to whole framework of the optimal allocation of property rights. When discussing numerous independent assets the above logic holds, however when the utility of assets is not independent then additional notions enter into the framework. Independence of assets simply means that each asset is to be valued separately and does not depend on whether other assets are acquired with them. 
+Is the change in allocation of rights substantive? In other words is this whole exercise just a redefinition but does not imply any changes in resulting actions? In theory, public and private property can both pursue the same kind of goals, such as profits/charity, in practice, once the incentives of the agents are taken into account the theory of property rights becomes descriptive. For example, a price control or a "power" limitation, as it restricts the conditions of transfer an owner can make, can lead to the agents choosing differently. For instance, an agent renting out an apartment may prefer childless/petless adults to avoid noise or damage to his property, in other words, the specific regime can lead to both investment and allocation differences. Indeed a prominent explanation for the rise in productvity since ancient times is the shift from common property to private property. \footnote{see \cite{anderson1983privatizing} and \cite{north1973rise}}
+
+Economists reasons of the effects of transition from common to private ownership can be broken down into three subcategories. The most common argument for the creation of private property is rent dissipation, since no agent owns the resource before action is taken, the agents engage in an unproductive race to capture the  resource before other agents, it is interesting to note that this sub-optimality that occurs is due to the fact that the resource is limited and renewable. The second reason is that there are high transaction costs to enforcement in a commune. Finally the third is the incentive to work that is diminished.  \footnote{ Works on rent dissipation:\cite{dasgupta1979economic} \cite{gordon1954economic} \cite{Cheung1970} \cite{schaefer1957some} \cite{scott1955fishery} \cite{clark1990optimal} Works on transaction costs: \cite{coase1960problem} \cite{demsetz1983structure}. For the incentive to work see: \cite{north1990} }
+
+Much of economics treats law as merely instruments to utility maximization. Where each branch of law, (tort, contract, family, property ,etc), is aiming to create rules that increase utility and each branch captures new distinctions that can lead to greater efficiency. Discussion of property rights can be broken down into four distinct questions. 1) What are the assets that property rights protects? 2) From who is the property protected? 3) What is the content of property protection. 4) What is the enforcement mechanism by which property is to be protected. The economics way of answering these questions generally leans on two kinds of efficiency: allocative efficiency and investment efficiency. Allocative efficiency means either to give it to the agent who values it the most or the agent who has the lowest cost to operate it. Both of these dynamic notions require the static concepts of value. Value in economics is usually broken down into two components, market value and subjective value. These notions are important in that the whole framework of analyzing property rights leans on their interaction. We quickly analyze some cases of how these notions interact. One of the achievements of economics is the deduction of the market value of an asset by the description of the subjective value. Note that a positive market value does not imply that exchange occurs, indeed subjective value is key to whole framework of the optimal allocation of property rights. When discussing numerous independent assets the above logic holds, however when the utility of assets is not independent then additional notions enter into the framework. Independence of assets simply means that each asset is to be valued separately and does not depend on whether other assets are acquired with them. 
 
 
 \subsubsection{Identical and strictly positive subjective value for all agents}
@@ -307,7 +374,7 @@ In the case of private property a similar dilution may occur in the case of stoc
 
 A specific case of this conditionality are conditions on labor. Firms decide to reward employees based on their production, based on the assumption that agents put in effort as a function of the compensation conditional on that effort. For instance if there is a set of agents and a set of assets, and each agent can only work on a single asset, then it is simple to show that more production will be achieved in the case where agents own a higher fraction of the assets they work on than if their ownership was more distributed. This basic logic has led to the development of the modern theory of the firm due to Hart and Moore. 
 
-Conditionality can shed new lights on the normative theories of property rights. For instance, Locke's theory that something is owned conditionally on mixing one's labor with it, whilst a moral theory, from the point of view of economics has descriptive content in the sense that such a property rights paradigm incentivizes people to put their labor into things. \footnote{Nozick, Anarchy State and Utopia}. From the economic point of view this is not necessarily efficient relative to ex-ante ownership because this creates an over-incentive for labor instead of output. However if we consider that there is uncertainty about the creation of investments and a general unforeseeability, yet we also think that labor has positive upside, then the regime of labor mixing may be superior for output. 
+Conditionality can shed new lights on the normative theories of property rights. For instance, Locke's theory that something is owned conditionally on mixing one's labor with it, whilst a moral theory, from the point of view of economics has descriptive content in the sense that such a property rights paradigm incentivizes people to put their labor into things. \footnote{\cite{nozick1974anarchy}}. From the economic point of view this is not necessarily efficient relative to ex-ante ownership because this creates an over-incentive for labor instead of output. However if we consider that there is uncertainty about the creation of investments and a general unforeseeability, yet we also think that labor has positive upside, then the regime of labor mixing may be superior for output. 
 
 The idea that property is granted conditional on some actions is a simple way to frame numerous concepts in economics. The questions of allocation and investment efficiency are both dependent on the conditions under which new property is distributed. For instance, take an example of the tragedy of the commons, overfishing. The issue with fishing is generally that all agents have the privilege of fishing the fish without actually owning them. The specific conditionality is that the fish is only owned once fished out of the water, which creates an incentive to overfish. The tragedy of the commons arises when first order rights and second right order rights are granted conditionally. Of course if there are no conditional property rights at all, even conditionally, then the only action the economic agent will undertake is direct pleasure and survival. 
 
@@ -388,6 +455,8 @@ Intellectual property is subject to a unique asymmetry in legal enforcement. In 
 %The assymetry of intellectual property
 
 
+
+
 \subsection{Assumptions of intellectual property}
 
 
@@ -444,7 +513,6 @@ The choice between patenting and secrecy can depend on the degree to which the i
 
 
 
-
 \subsection{Mechanism Design}
 
 Mechanism design is a natural way to study intellectual property because the system is entirely designed by a legal system instead of emergent. Indeed the concept of a patent race, where firms invest to achieve a certain technological breakthrough and then only the will gain the patent, is equivalent to an all pay auction second price auction, a war of attrition. \footnote{ \cite{Games2003} }
@@ -459,49 +527,50 @@ Mechanism design can also shed some light on when it may be optimal not to assig
 
 
 
-\subsection{The scale of the IP problem}
+\subsection{Intellectual property and scope}
 
-There is also some interesting work on how IP rights should change. Suppose we buy the premise that it is difficult to make sufficient profits from an innovation in some given market, it is perceived that some level of reward, say x, balances the losses from the patent system and the incentives for innovation. Now suppose that through time, the market has expanded so that it is easier to gain large portions of profits in a quicker period of time, if the cost of creating new innovations has remained the same after the market expansion, then the optimal patent system would be to decrease the reward. \footnote{this kind of model is presented in \cite{boldrin2009market} }. The intuitive implication is that as the world becomes more globalized, the requirement for patent protection is decreased because the potential payoffs of projects increase. 
+Take the premise that it is difficult to make sufficient profits from an innovation in some given market as given, it is perceived that some level of reward, say x, balances the losses from the patent system and the incentives for innovation. Now suppose that through time, the market has expanded so that it is easier to gain large portions of profits in a quicker period of time, if the cost of creating new innovations has remained the same after the market expansion, then the optimal patent system would decrease the reward, presumably by decreasing patent length. \footnote{this kind of model is presented in \cite{boldrin2009market} }. The intuitive implication is that as the world becomes more globalized, the requirement for patent protection is decreased because the potential payoffs of projects increase. An empirical measurement that could be relevant is the time from discovery to adoption, as this time decreases, the length of patent would decrease \footnote{For evidence about the drop in adoption time see, \cite{comin2006five}}
 
-While it is easy to imagine that policy maker optimizes a social welfare function, in practice, the system itself relies on a bureaucracy. From an institutional point of view, balancing out incentives is crucial, if there is not sufficient incentive to reject bad projects, an issue of over-patenting emerges. \footnote{see \cite{Caillaud2012} for a model with pooling equilibria with good/bad projects and separating equilibria where only good projects are accepted}
+While it is easy to imagine that policy maker optimizes a social welfare function, in practice, the system itself relies on a bureaucracy. From an institutional point of view, balancing out incentives is crucial, if there is not sufficient incentive to reject bad projects, an issue of over-patenting emerges. This would naturally emerge as the costs of a welfare reducing patent would be diffuse while the benefits would be narrow. \footnote{see \cite{Caillaud2012} for a model with pooling equilibria with good/bad projects and separating equilibria where only good projects are accepted}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To take an example, suppose that some person can produce k units if he were to work on a specific asset. Suppose there are 10 assets and 20 citizens. The citizens own assets equally, so each citizen owns $5 \%$ . If a citizen can work on a specific asset to produce 20 units of a good, then he will only receive 1 of those goods in the end. Which means his willingness to expend effort is 1. If on the other hand, the assets are redistributed in such a way that every citizen still owns $5 \%$ but the citizens own higher shares of the assets they work on, if for example that same citizen had $10\%$ share of the asset he worked on then, his willingness to expend effort had doubled. In other words, we can say that the distribution of ownership does NOT matter if every citizen works on every asset and their productivity of every citizen is the same. 
+%To take an example, suppose that some person can produce k units if he were to work on a specific asset. Suppose there are 10 assets and 20 citizens. The citizens own assets equally, so each citizen owns $5 \%$ . If a citizen can work on a specific asset to produce 20 units of a good, then he will only receive 1 of those goods in the end. Which means his willingness to expend effort is 1. If on the other hand, the assets are redistributed in such a way that every citizen still owns $5 \%$ but the citizens own higher shares of the assets they work on, if for example that same citizen had $10\%$ share of the asset he worked on then, his willingness to expend effort had doubled. In other words, we can say that the distribution of ownership does NOT matter if every citizen works on every asset and their productivity of every citizen is the same. 
 
 
 
-To make ownership of an asset illegal is to make its market value zero or negative. 
+%To make ownership of an asset illegal is to make its market value zero or negative. 
 
-The Coasian view of property rights claims that allocative efficiency is in fact irrelevant as long as there are no transaction costs and bargaining is possible. 
+%The Coasian view of property rights claims that allocative efficiency is in fact irrelevant as long as there are no transaction costs and bargaining is possible. 
 
-The question of what assets property rights protects can be quite complex. Some possible categories to consider, are tangible vs intangible; the ratio of subjective value to market value. One could also have alienable versus inalienable. Or one could define assets as having market value, in this formulation an asset only acquires property rights when it has accumulated sufficient components to acquire either subjective or market value. The market value component could also be used to justify the scope of protection. 
+%The question of what assets property rights protects can be quite complex. Some possible categories to consider, are tangible vs intangible; the ratio of subjective value to market value. One could also have alienable versus inalienable. Or one could define assets as having market value, in this formulation an asset only acquires property rights when it has accumulated sufficient components to acquire either subjective or market value. The market value component could also be used to justify the scope of protection. 
 
-Note that positive market value exists only if at least one non-possessor of the good has a subjective value for it. If the only person with positive subjective value of the good acquires it, then by definition the good no longer has market value. It is also possible for a good to have negative market value or subjective value. If the possessor of the good has a negative subjective value of the good AND no property rights to it, then the person is likely to either destroy it or abandon it. 
+%Note that positive market value exists only if at least one non-possessor of the good has a subjective value for it. If the only person with positive subjective value of the good acquires it, then by definition the good no longer has market value. It is also possible for a good to have negative market value or subjective value. If the possessor of the good has a negative subjective value of the good AND no property rights to it, then the person is likely to either destroy it or abandon it. 
 
-If a good only has value for a single person, then it has no market value. If it has value for more than a single person then it does have market value. ue 
+%I%f a good only has value for a single person, then it has no market value. If it has value for more than a single person then it does have market value. ue 
 
-\subsection{Externalities}
+%\subsection{Externalities}
 
-To define the Coase theorem we need the concept of externalities. Externalities are usually defined on a set of actions, it is when an action of A, has an effect on anybody else but A. Contracts can be framed as trying to create incentives for positive externalities, in other words to increase the payoff of an agent by A by taking a specific action.  
+%To define the Coase theorem we need the concept of externalities. Externalities are usually defined on a set of actions, it is when an action of A, has an effect on anybody else but A. Contracts can be framed as trying to create incentives for positive externalities, in other words to increase the payoff of an agent by A by taking a specific action.  
 
-If an agent tries to 
+%If an agent tries to 
 
-\subsubsection{Coasian}
-
-
+%\subsubsection{Coasian}
 
 
-The coasian view of property rights aims to explain or justify property through two categories. Transaction costs and negative externalities. The Coasian approach has a simple statement of the form: externalities will only matter if transaction costs are large. 
 
-If ownership and possession are not identical, this creates the possibility of temporary transfer of assets to higher value users or to lower cost producers. Similarly there is the investment efficiency from stable ownership, this is asset related skills.
 
-The value of assets is not only direct, it can be expected to increase the value of other assets that are complementary to the asset itself.  
+%The coasian view of property rights aims to explain or justify property through two categories. Transaction costs and negative externalities. The Coasian approach has a simple statement of the form: externalities will only matter if transaction costs are large. 
 
-There is also of course a subjective value from ownership. For instance, suppose an owner who does not intend to use the asset but intends to rent it forever. If this owner discounts, the asset merely represents a series of cash flows, for which he should able to exchange a lump sum for. If we suppose that someone prefers to own rather than rent, liquidity is only constraint for transfer to occur. 
+%If ownership and possession are not identical, this creates the possibility of temporary transfer of assets to higher value users or to lower cost producers. Similarly there is the investment efficiency from stable ownership, this is asset related skills.
 
-Economies of scope between monitoring and apprehension. 
+%The value of assets is not only direct, it can be expected to increase the value of other assets that are complementary to the asset itself.  
+
+%There is also of course a subjective value from ownership. For instance, suppose an owner who does not intend to use the asset but intends to rent it forever. If this owner discounts, the asset merely represents a series of cash flows, for which he should able to exchange a lump sum for. If we suppose that someone prefers to own rather than rent, liquidity is only constraint for transfer to occur. 
+
+%Economies of scope between monitoring and apprehension. 
 
 \bibliography{../thesisbib/bibliography}
 
