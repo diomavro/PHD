@@ -18,8 +18,10 @@
 \usepackage{comment}
 
 
-\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 %\geometry{left=1in,right=1in,top=1in,bottom=1in}
+\usepackage{setspace}
+\onehalfspacing
 
 \usetikzlibrary{decorations.pathreplacing,chains}
 
@@ -43,52 +45,69 @@
 
 \Crefname{assump}{Assumption}{Assumptions}
 
-
 \begin{document}
 
-\title{The direction of innovation and buyout preference reversal}
-\author{Diomides Mavroyiannis}
 
+
+\begin{titlepage}
+%\title{Temporal Discounting Without Uncertainty: Growth Rates, Preference Reversal and Hyperbolic Discounting}
+\title{The direction of innovation and buyout preference reversal}
+\author{Diomides Mavroyiannis\footnote{Universit\'{e} Paris-Dauphine,~\url{dmavroyiannis8@gmail.com}} }
+%\date{First version: August 26, 2018\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,Last revised: \today}
+%\date{\today\\\href{https://www.dropbox.com/s/epq42goae2px35i/mobility_recov.pdf?dl=0}{Click here for most recent version.}}
+%\date{}
+\date{\today}
 \maketitle
 
-\section*{Abstract}
+
+
+\begin{abstract}
+\noindent Do buyouts distort innovation?
 The paper studies the choice of innovation in the presence of buyouts. We present a two firm setting model with an entrant and incumbent where the entrant selects a technology. The choice of technologies is a sequential innovation and a radical one. We find that the ability to buyout affects the direction of innovation towards sequential innovations, that is, there exist cases where if no buyouts can occur, the radical innovation would have been pursued but the option to buyout creates a preference reversal. This effect only exists if the entrant has bargaining power. We show that this holds for both Bertrand and Cournot Competition. Finally we discuss the welfare implications of buyouts in this two technology paradigm and the link to the Coase theorem. 
+\\
+\\
+\noindent\textbf{Keywords: Industrial Organization, Incomplete Contracts, Innovation}
+\\
+\noindent\textbf{JEL Codes:} L41 L25 L26 L51 \\
 
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+%\nopagebreak
+\end{titlepage}
+\pagebreak \newpage
+%\nopagebreak
 
-JEL: L41 L25 L26 L51 	
+	
 
+\newpage
 \section{Introduction}
 
-
-The relationships between buyouts and innovation is tenuous. How do buyouts influence the direction of innovation? What is the role of buyouts in incentivizing potential entrepreneurs? 
-
+Most models suggest that when a larger firm buys out a smaller firm this incites smaller firms innovate. Since this buyout is voluntary, it can only mean that the entrepreneur in question gains and it is difficult to argue against the proposition that increasing the reward of an activity encourages that activity however the need for the possibility for the reward to be owned by another agent may not only change the degree to which an activity pursued but also the type of activity. This paper explores exactly this idea, incentivizes entrepreneurs to pursue projects which are corrolated to existing firms activities
 %\textcolor{orange}{Posing the question, what is the relationship buyouts and innovation}
 
-The evidence for this question is unclear. There is an empirical relationship that industries with higher measures of innovation tend to have a more buyouts than those who don't \citep{HAU}. However there is no clear causal mechanism to describe this empirical relationship, as it may be posited that as innovation slows down, industry consolidation occurs. \citep{COM}
+Empirical evidence for the link between innovation is tenuous because of the difficulty in controlling for causality. There is an empirical corrolation which is that industries with higher measures of innovation tend to have a more buyouts than those who don't \citep{HAU}. However there is no clear causal mechanism to describe this empirical relationship, as it may also be infered that as innovation slows down, industry consolidation occurs \citep{COM}. 
 
 %\textcolor{orange}{Empirical evidence}
 
-The naive theory view of buyouts is simply that buyouts increase the potential payoff from innovation. We need only consider than an entrepreneur is considering the possible payoffs from his investment, ceteris paribus a probability of being bought-out, can only increase the incentive to innovate. 
-
+The naive view of buyouts is simply that buyouts increase the potential payoff from innovation. We need only consider that an entrepreneur is considering the possible payoffs from his investment, ceteris paribus a probability of being bought-out, can only increase the incentive to innovate. The naive view is correct in that an extra source of payoff can only increase the upside to the entrepreneur. Even if the entrepreneur is considering numerous projects, if at least one of the projects being considered has a higher potential payoff, this can only increase the entrepreneurs incentive to innovate. This basic static logic does not neccesarily generalize to long run dynamic situations. \footnote{The dynamic effect is usually interpreted as a change in industry structure in such a way that less projects become profitable in the long run}
 %\textcolor{orange}{Introduces the naive view that more buyouts increase inventive to innovate}
 
-The naive view is correct in that an extra source of payoff can only increase the upside to the entrepreneur. That is as long as at least one of the projects the entrepreneur is considering has an increase in potential payoff, this can only increase the entrepreneurs incentive to innovate. \footnote{A dynamic exception to this general rule is if buyouts change industry structure in such a way that less projects become profitable}
-
-This however ignores the possible distortive effect of a buyout, that is buyouts may change not only the \textit{absolute} payoffs of projects but also their \textit{relative}. To see why this may occur, we need only consider \textit{who} is paying for the entrepreneur to be bought out. Why would a firm pay the entrepreneur more than the entrepreneurs project \textit{isolated market value}  ? There are two potential reasons why this may be the case.
+Nevertheless the distortive effects of buyouts are not limited to being in the long run. The very option to buyout may incur immediate changes in the behavior of firms, they may change not only the \textit{absolute} payoffs of projects but also their \textit{relative} payoffs. To see why this may occur, we need only consider \textit{who} is buyout the entrepreneur. An entrepreneur has some project, this project has some value in the marketplace that is known by both the entrepreneur and the firm. If both the entrepreneur and the firm have the same discount factor without a dynamic framework or more restrictive assumptions it is unclear why a transaction would occur. Why would a firm pay the entrepreneur more than the entrepreneurs project \textit{isolated market value}?  There are two potential reasons why this may be the case.
 
 %\textcolor{orange}{naive view would deny that the effect is not uniform}
 
-Consider first the case where the project is complementary with the buyers activity if owned by the buyer. The buyers willingness to pay for the project will then be what the project is worth individually and the complementary revenue that it brings in. \footnote{This assumes that the project will not exist if it is not undertaken}. This would shift the incentives of the entrepreneur towards projects that are complementary with existing technology. 
+Consider first the case where the project is complementary with the buyers activity if owned by the buyer. The buyers willingness to pay for the project will then be what the project is worth individually and the complementary revenue that it brings in. This would shift the incentives of the entrepreneur towards projects that are complementary with existing technology. 
 
 Now consider the case where the entrepreneur's technology is substitutable with the buyers technology if not owned. Here the buyers willingness to pay is more complex. If the buyer has the option of shutting the project down if owned then the buyers willingness to pay does not depend on the projects value at all but depends on the buyers revenue loss if the project is not owned. \footnote{Assuming the projects market value is lower than the current activity of the buyer, if the project is worth more than the current activity then the buyer will not pay more than other buyers}
 
-The existence of buyers with such a specific willingness to pay causes buyouts to favor industry convergence, regardless of whether entrepreneur projects are complementary or substitutable with current activities.  Indeed if some projects, for some reason or another, cannot be bought out, this will imply that they will be relatively less worthwhile to the entrant if buyouts are allowed. 
+Either of these two reasons have the same result, industry convergence. Regardless of whether entrepreneur projects are complementary or substitutable with current activities. This issue is especially interesting for intellectual property, as the projects that will result due to the presence of patented ideas will be geared less towards new technological paths and more towards what existing firms will buy. In effect intellectual property can cause a sort of crowding-effect where, projects that might be very innovative and bring in millions will not be pursued because a project that can hurt a billion dollar firm by $1\%$ is has more potential upside for the entrepreur. The inability to be complementary or be bought out can cause perfectly good projects to be thrown out. 
 
-This same logic can be extended to a dynamic framework. If the different projects of the entrepreneur will both end up with the same technology but with different patterns of arrival to the state this also represents a difference from the point of view of the buyer. If there are intermittent stages to an innovation, where it gradually chips away at the profits of the buyer, this represents an incentive to the buyer. 
-
+Since the reasoning works in the static model, it can also emerge in the dynamic one. If the different projects of the entrepreneur will both end up with the same technology but with different patterns of arrival this can equally cause firms to pursue projects of different horizons due to the possibility of being bought out. Specifically we show that projects which pass through intermediate stages of efficiency are more threatening to incumbents that projects which can more directly reach their goal. Even a technology with a lower expected value can be prefered due to the gradual chipping away of incumbent profits. 
 %\textcolor{orange}{says that the naive view is correct but its effect may not be uniform}
 
-The paper will be presenting the case of substitutability if not owned and complementary if owned in a dynamic Bertrand and Cournot model of competition. We will also give a brief independent version of the argument above in reduced form. 
+The paper will be presenting the case of a project which is substitutable if not owned and complementary if owned. We first give the dynamic formulation for multiple periods and arbitrary intermediate stages and then apply the model to Bertrand and Cournot competition. We will also give a brief independent version of the argument above in reduced form. 
 
 The models presented can be interpreted in one of a few different ways. The most straightforward way is simply to say that a firm wishes to buyout another firm and the regulatory authorities either allow this or forbid this transaction. A different way is simply to say that the entrepreneur cannot be bought out because the projects are not purchaseable, perhaps they are not patented or the project is simply not visible to the buyer. 
 
@@ -104,38 +123,55 @@ The models presented can be interpreted in one of a few different ways. The most
 
 The paper is structured as follows. In a second section we will be focusing on the literature review where we briefly survey tangential empirical and theoretical work that has been done. In the third section we begin by presenting the setup for each technology(Sequential and Radical) in Bertrand competition. We then will be comparing to see the incentive differences in the case of buyouts and no buyouts. This same order is then followed for Cournot competition. A brief discussion of welfare implications in the Bertrand competition case are discussed followed by a brief taxonomic exposition of how the willingness to pay of the firm does not depend on whether the good substitutable or complementary but on the relative effect of owning vs not owning. Finally we finish by discussing the link with the Coasian literature.  
 
-\section {Literature review}
+\section {Link to the literature}
 
-
-Empirically it has been observed that firms which are less innovative are more likely to engage in buyouts. The work of \cite{Gerpott1995} finds that for innovation to be well absorbed by the acquire, the firms size must not differ excessively, or said otherwise, the closer the firms are in size, the more likely they are to merge successfully. \cite{Higgins2006} find that in the pharmaceutical industry, unproductive firms are more likely to engage in acquisition strategies. This is also supported by cross industry studies such as \cite{Zhao2009}. There is also empirical work showing that companies with larger patent portfolios and low research expenditure are more likely to acquire \cite{Bena2014}. 
+Empirically it has been observed that firms which are less innovative are more likely to engage in buyouts. The work of \cite{Gerpott1995} finds that for innovation to be well absorbed by the acquirer, the firms size must not differ excessively, or said otherwise, the closer the firms are in size, the more likely they are to merge successfully. \cite{Higgins2006} find that in the pharmaceutical industry, unproductive firms are more likely to engage in acquisition strategies. This is also supported by cross industry studies such as \cite{Zhao2009}. There is also empirical work showing that companies with larger patent portfolios and low research expenditure are more likely to acquire. \cite{Bena2014}. 
 
 %\textcolor{red}{Note that this is good for another model, buyouts are worthwhile because you get rid of patent royalty cost}.
 
 
 %\textcolor{red}{An interesting note here is that actually firms that perform less well are more likely to buyout because they have lower negotiating power so they accept worse offers, but the offers payoff in the end, therefore buyouts can be interpreted as a variance strategy}
 
-The basic framework used in this paper borrows from \cite{Cabral2003}, whose model involves two firms competing in $R\&D$ and they have an option of either choosng a high variance strategy or a low variance strategy. The general result of the model is that when a firm is lagging behind, it prefers to a high variance strategy, and when it is ahead it chooses a low variance strategy. Our results borrow from this markov chain setup but pursue different questions, mainly how does the choice between radical and incremental innovations change when the two innovations imply different payoff structures.
+The basic theoretic framework used in this paper borrows from \cite{Cabral2003}, whose model involves two firms competing in $R\&D$ and they have an option of either choosng a high variance strategy or a low variance strategy. The general result of the model is that when a firm is lagging behind, it prefers to a high variance strategy, and when it is ahead it chooses a low variance strategy. Our results borrow from this markov chain setup but pursue different questions, mainly how does the choice between radical and incremental innovations change when the two innovations imply different payoff structures.
 
-Our results are similar to the literature on firms innovating so that they can escape competition effects,\cite{Aghion2005},\cite{Aghion2001},\cite{Aghion1997}. \cite{Gilbert2016} shows these results only hold in duopolies and not oligopolies. Other work includes \cite{Phillips2012}, where it is argued that large firms avoid engaging in $R\&D$ races. 
+Our subject matter is similar to the literature on firms innovating so that they can escape competition effects(\cite{Aghion2005},\cite{Aghion2001},\cite{Aghion1997}). \cite{Gilbert2016} shows these results only hold in duopolies and not oligopolies. Other work includes \cite{Phillips2012}, where it is argued that large firms avoid engaging in $R\&D$ races. However these studies do not include different kinds of innovations, only the relative pressure to innovate depending on market positioning. 
 
-The paper is also related to the Coase theorem. To see why need only ask, why would one firm wish to buyout another firm for more than what that firm is worth? Substitutability as discussed in the introduction is one of the two possible reasons a firm is willing to pay more than it is worth. The problem can be framed in terms of externalities that are being internalized by the entrant to see an interesting application of the Coase theorem with multiple possible activities see \cite{Kuechle2012}. 
+The paper can be linked to various strands of literature, we give a brief idea of how it relates. The idea can be framed as being an application of the Coase theorem to industry structure. The question of an incumbent being harmed by an entrant can be framed within the externality framework. It is known that the Coase theorem, when transaction costs are sufficiently lows, implies an important role for extortion. A neighbor may do some activity that he would have no interest in doing because the other neighbor will be willing to pay for it. To see an interesting application of the Coase theorem with multiple possible activities see \cite{Kuechle2012}. It is also possible to interpret the results in a mechanism design framework, more specifically, auctions with allocative externalities. This literature is about preferences of ownership where agents have different utilities depending on who among the other agents owns the good, though no utility function is employed here, the results apply to other contexts for a survey of such models see, \cite{Jehiel2005}. Finally the model can be framed as being within an incomplete contract framework since there is a question of an inability for the firms to contract ex-ante. Though this is only one possible interpretation of the model, the usual reasons for uncontractibility apply, see \cite{hart1999}.
 
-The model presented here can also be interpreted in a mechanism design framework, more specifically, auctions with allocative externalities. This literature is about preferences of ownership where agents have different utilities depending on who among the other agents owns the good. Indeed the model presented here can be presented as a special case of such models, for a survey see, \cite{Jehiel2005}
+\subsection*{Static case: Reduced form version of the Coasian argument}
+
+We present the reduced form static version of the model because it illustrates that the specific complementarity or substitutability does not matter but instead it is only the \text{relative} value of owning that plays a role.  We briefly present the taxonomy under the framework and discuss why each situations may occur. 
+
+The market profit potential of the innovation which the entrepreneur holds is given by $\pi^e$, this profit may be earned by whoever owns the entrepreneurial project. The profit of the incumbent \textit{if the innovation does not exist} is simply $\pi^i$. We denote the degree(or factor) of substitutability/complementarity \textbf{if not owned} by $\beta \in [ 0, \infty [$ and the degree of substitutability/complementarity  \textbf{if owned} by $\alpha \in [0, \infty [ $. 
+
+The payoff if not owned is $ \beta \pi^i$. The payoff if owned is $\max\{ \pi^i, \pi^e + \alpha \pi^i   \}$. Therefore the willingness to pay for the product if  $\max\{ \pi^i, \pi^e + \alpha \pi^i   \} = \pi^i $ is: $(1-\beta) \pi^i$ and if $\max\{ \pi^i, \pi^e + \alpha \pi^i   \} = \pi^e + \alpha \pi^i $ the willingness to pay is: $\pi^e+ (\alpha-\beta) \pi^i$. The extra willingness to pay of the active firm is then simply: $(\alpha-\beta)\pi^i$. This form shows us that substitutability or complementarity do not matter for buyouts, instead it is only the \textit{relative} effects of buyouts which affect the premium the incumbent is willing to pay. Note that $\pi^i$ can then be seen as the \textit{scale} parameter. Or to express it another way, let $\zeta=1 + \frac{(\alpha-\beta)\pi^i}{\pi^e}$. If $\zeta$ is larger than 1, then the existing firm is willing to pay a premium and if the existing activity is of larger scale relative to the project, the incumbent is willing to pay a higher premium. We now briefly discuss the taxonomy of this framework. 
+
+\textbf{Substitute}  if not owned and \textbf{Complementary} if owned implies: $\beta<1$ and $\alpha>1$. This case implies that the product will eat up the profits of the incumbent if allowed to compete with the current product but will expand profits if held together with the current activity. 
+
+\textbf{Complementary} if not owned and \textbf{Complementary} if owned implies: $\beta>1$ and $\alpha>1$. This is just the case where whether the innovation is owned or not, the firm will benefit from it.
+
+\textbf{Complementary} if not owned and \textbf{Neutral} if owned implies: $\beta>1$ and $\alpha=1$. Why would the project not be complementary if owned? If consumers have a specific aversion to buying things from one firm. 
+
+\textbf{Neutral} if not owned and \textbf{Neutral} if owned implies: $\beta=1$ and $\alpha=1$. This case is simply that the entrepreneur's project is uncorrelated to the incumbents current activity.  
+
+\textbf{Neutral} if not owned and \textbf{Complementary} if owned implies: $\beta=1$ and $\alpha>1$. If the technology is complementary this may result simply because it will make the production process more efficient or because there is a bundling effect if both goods are sold together. 
+
+\textbf{Neutral} if not owned and \textbf{Substitute} if owned implies: $\beta=1$ and $\alpha<1$. This case would result simply in shutting down the project. It may be that if the firm markets some new product, the customers of this specific firm will flee to it. 
+
+\textbf{Substitute} if not owned and \textbf{Neutral} if owned implies: $\beta<1$ and $\alpha=1$. Why would a project not be substitable if owned? Perhaps there is a certain way of selling the product that would interact with the incumbents product market but if the incumbent owns it, they can find a niche way to market it that allows it to be realized without eating away at their other products.
 
 
-\section*{Setup}
+\section*{The dynamic model}
 
-The model is made up of an incumbent and an entrant with asymmetric initial positions. The incumbent has three possible payoffs and the entrant has two. 
+The model is made up of an incumbent and an entrant with asymmetric initial positions. The incumbent has three possible payoffs and the entrant has two. The incumbent and entrant start out with initial technologies described by the costs, $c_i$ and $c_e$, respectively. We assume that the incumbent will initially earn the profit $\pi_i{c_i,c_e}$. The entrants earns no profit with the initial technology,$\pi_e{c_i,c_e}=0$. We say that $c_e>c_i$ to denote the efficiency of production. 
 
-The incumbent and entrant start out with initial technologies described by the costs, $c_i$ and $c_e$ respectively. We assume that the incumbent will initially earn the profit $\pi_i{c_i,c_e}$. The entrants profit with the initial technology is 0,$\pi_e{c_i,c_e}=0$. We say that $c_e>c_i$ to denote the efficiency of production. 
+The second kind of payoffs in the model are the payoffs once the entrant catches up to the incumbent. The cost associated with this level of development is $c_{1}$. This cost is between the other two, $c_i<c_{1}<c_e$. The payoff of the incumbent when competing against this cost is lower than the payoff when competing with the less efficient entrant,$ \pi_i( c_i,c_{e}) > \pi_i( c_i, c_{e1} )$. If the incumbent were to acquire this intermediate technology, it would not use it since it is less efficient than $c_i$ so the payoff would remain unchanged. If the entrant owns the intermediate technology, the associated payoff would be weakly higher than zero, $\pi_e(c_i,c_{e1}) \geq 0$.
 
-The second kind of payoff in the model are the payoffs once the entrant catches up to the incumbent. The cost associated with this level of development is $c_{1}$. This cost is between the other two, $c_i<c_{1}<c_e$. The payoff of the incumbent when competing against this cost is lower than the payoff when competing with the less efficient entrant,$ \pi_i( c_i,c_{e}) > \pi_i( c_i, c_{e1} )$. If the incumbent were to acquire this intermediate technology, it would not use it since it is less efficient than $c_i$ so the payoff would remain unchanged. If the entrant owns the intermediate technology, the associated payoff would be weakly higher than zero, $\pi_e(c_i,c_{e1})>0$.
+Finally the third kind of payoff is the payoff with the advanced technology, $c_2$. This technology is the most advanced technology available, $c_2<c_i<c_1<c_e$. Both firms would benefit from owning this technology and it represents their highest respective payoffs. 
 
-Finally the third kind of payoff is the payoff with the advanced technology, $c_2$. This technology is the most advanced technology available, $c_2<c_i<c_1<c_e$. As before both firms would benefit from owning this technology. 
+The entrant in the model must choose what kind of innovation to engage in. The innovation is the path to the technologies above which can be achieved. There are two options, the first option passes through both stages of efficiency, we call it the \textit{sequential innovation}. The second jumps directly to the second stage of efficiency, we it the \textit{radical innovation}.  
 
-The entrant in the model must choose what kind of innovation is wants to engage in. The innovation is the path to the technologies which can be achieved. There are two options, sequential and radical innovation. 
-
-The sequential innovation has no risk associated with it and does not necessarily yield profits from the first time period.  The sequential option will achieve the intermediate technology, $c_1$ after $t_1$ periods and will achieve the advanced technology, $c_2$ after $t_2$ periods. The game ends completely after $T$ periods. So if $T=t_2$ then there will only be one period where the advanced technology payoffs will be achieved. In the application to Bertrand and Cournot we will be assuming that $T=t_2=2$ and $t_1=1$. 
+Without loss of generality we say that the sequential innovation has no risk associated with it and does not necessarily yield profits from the first stage of efficiency. The sequential option will achieve the intermediate technology, $c_1$ after $t_1$ periods and will achieve the advanced technology, $c_2$ after $t_2$ periods. The game ends completely after $T$ periods. So if $T=t_2$ then there will only be one period where the advanced technology payoffs will be achieved. In the application to Bertrand and Cournot we will be assuming that $T=t_2=2$ and $t_1=1$ for simplicity. 
 
 %\textcolor{orange}{Sequential innovation}
 
@@ -143,12 +179,11 @@ The radical innovation on the other hand will with some probability, q, give the
 
 %\textcolor{orange}{Radical technology}
 
-The difference to notice between these two methods is that the sequential innovation cannot reach the advanced payoff instantly, while the radical one can. These technologies can also be interpreted as high variance and low variance. Adoption of the innovations is assumed to be identical. 
-The choice of the radical innovation and sequential technology will be represented by r and s, respectively.  
+The difference to notice between these two methods is that the sequential innovation cannot reach the advanced payoff instantly, while the radical one can. These technologies can also be interpreted as high variance and low variance. Adoption cost of the innovations is assumed to be identical. The choice of the radical innovation and sequential technology will be represented by r and s, respectively.  
 
 %\textcolor{orange}{The choice}
 
-It is known that in most standard competitive frameworks, firms will always want to merge because monopoly profits are higher than the sum of profits. So if bargaining is possible and credible through contracting there always exists a positive Nash Surplus that can be shared. In our framework this takes the following form: 
+It is known that in most standard competitive frameworks, firms will want to merge because monopoly profits are higher than the sum of profits. So if bargaining is possible and credible through contracting there always exists a positive Nash Surplus that can be shared. In our framework this takes the following form: 
 
 \begin{assumption}{Sub-additive competitive profits}
 \begin{equation*}
@@ -163,9 +198,9 @@ It is known that in most standard competitive frameworks, firms will always want
 
 We assume that firms do not have a preference for future or negative profits. Though there is no \text{preference} for present profits, the interpretation of the model can be interpreted as discounting because firms naturally will prefer one innovation over the other because of their time structure. 
 
-We now specify the timing of the model. The first decision that occurs is the innovation decision of the entrant, whether they choose sequential or radical innovation. If no buyouts are allowed, then the streams of payoffs are realized. If there are buyouts, then after the choice of innovation occurs, the entrant negotiates with the incumbent and the buyout occurs and then the streams of payoffs occur. 
+We now specify the timing of the model. The first decision that occurs is the innovation decision of the entrant, the choice between sequential or radical innovation. If no buyouts are allowed, then the payoff streams occur. If there are buyouts, then after the choice of innovation occurs, negotiation occurs between the entrant and the incumbent for a buyout, after which the buyout payoff streams are realized.
 
-Notice that if it were possible for the buyout to occur before the choice of innovation(a-priori) this would result in simply the innovation with the highest expected payoff to occur. This could occur if the entrant was able to credibly signal to the incumbent of the choices of innovation that are available. This would also result in the incumbent paying a weakly higher amount for the innovation. This would be the case if the entrant chooses an innovation which is not profit maximizing. Why would the entrant choose anything other than the profit maximizing innovation? Because it can use the threat of profits to make the incumbent pay for the externalities imposed by the entrant. Note that if the radical innovation is bought, this does not guarantee the realization of the technology. 
+Notice that if it were possible for the buyout to materialize before the choice of innovation(ex-ante) this would result in simply the innovation with the highest expected payoff to happen. This could come about if the entrant was able to credibly signal to the incumbent that the incumbent is capable of undertaking the investment. An implicitation of an ex-ante buyout is that the incumbent pays a weakly higher amount for the innovation. It is easiest to see in the case where the entrant chooses an innovation which does not maximize market payoffs. This would be the blackmail case where the firm entrant can use the threat of substitutability to make the incumbent pay for the externalities imposed by the entrant. Note that if the radical innovation is bought, this does not guarantee the realization of the technology. 
 
 %\textcolor{red}{Assume both technological steps improve cost by the same amount}
 \subsection{Sequential}
@@ -182,7 +217,7 @@ The payoff of the incumbent is similar except that there is an additional stream
 \Pi_{is} = \pi_i(c_i,c_{e})t_1+\pi_i(c_i,c_{i1}) (t_2-t_1)+\pi_i(c_i,c_{e2})(T+1-t_2)
 \end{equation*}
 
-The merger profit of the incumbent will ignore the first $t_1$ periods because the intermediate technology is not an improvement on the initial technology. So the direct value added to the incumbent from variations in $t_1$ is 0. As we will see $t_1$ does matter for the effect it has on the bargaining disagreement payoff of the entrant. The merger profit is simply given by: 
+The merger profit of the incumbent will ignore the first $t_1$ periods because the intermediate technology is not an improvement on the initial technology. There is no direct value added to the incumbent payoff from variations in $t_1$. As we will see $t_1$ does matter for the effect it has on the bargaining disagreement payoff of the entrant. The merger profit is simply given by: 
 
 \begin{equation*}
 \Pi_{s}^m= \pi_i(c_i,c_{e}) t_2+\pi_i(c_{i2},c_e)(T+1-t_2)
@@ -242,7 +277,7 @@ The incumbent payoff will take a similar form to the entrant but will receive no
 +\pi_i(c_i,c_e) \frac{(1-q)}{q} \left( 1-(1-q)^T \right) \\
 \end{align*}
 
-So with buyout, the merger payoff of the incumbent is given by a very similar expression, where the only difference is that the technology $c_2$ is owned by the incumbent instead of the entrant. 
+So with the buyout, the merger payoff of the incumbent is given by a similar expression, where the only difference is that the technology $c_2$ is owned by the incumbent instead of the entrant. 
 
 \begin{align*}
 \Pi^m_r = \pi_{i}(c_{i2},c_{e}) \left( T - \frac{(1-q)}{q} \left( 1-(1-q)^T \right) \right)
@@ -270,7 +305,7 @@ B_{ir}(\omega) &=\pi_{i}(c_i,c_{e2}) \left( T - \frac{(1-q)}{q} \left( 1-(1-q)^T
 
 \subsection{The distortion of buyouts}
 
-We now quickly show the general result for the distortion of incentives. First note that the entrant will choose the radical innovation over the sequential innovation purely on the expected values of the entrants payoffs. We denote this condition as $\Delta \Pi$ and the general form is the following: 
+We now show the general result for the distortion of incentives. First note that the entrant will choose the radical innovation over the sequential innovation purely on the expected values of the entrants payoffs. We denote the condition for prefering the radical innovation as as $\Delta \Pi$, it's general form is the following: 
 
 \begin{align*}
 \Pi_{er}  &> \Pi_{es}   \\
@@ -280,9 +315,23 @@ We now quickly show the general result for the distortion of incentives. First n
 \Delta \Pi &> 0
 \end{align*}
 
-Note that as T increases, the the incentive to use the radical innovation decreases. We also have the trivial implication that if the advanced technology appears later in the sequential innovation, $t_2$ the incentive to pursue the radical innovation increases. 
+$\Delta \Pi$ is clearly increasing in q and $t_2$, note especially that the effect of $t_2$ is two fold. The first appearance is the loss of relative profitability relative to the radical project, whilst the second term is the absolute loss in expected value of the sequential innovation. 
 
-If buyouts are allowed, our entrant will then compare the bargaining payoffs instead of the market payoffs: 
+\begin{proposition}
+As the time horizon increase, the preference for the radical innovation decreases. The decrease is slower for higher increments. 
+\end{proposition}
+
+\begin{proof}
+\text{The first order condition with respect to T is}
+\begin{align*}
+\frac{\partial \Delta \Pi}{\partial T}=\frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T+1} \log[1-q] \\
+\text{The second condition with respect to T is} \\
+\frac{\partial \Delta^2 \Pi}{\partial T^2} = \frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T+1} \log[1-q]^2
+\end{align*}
+\text{Both of which are negative}
+\end{proof}
+
+If buyouts are allowed, the entrant will then compare the bargaining payoffs instead of the market payoffs: 
 
 \begin{align*}
 B_{er}(\omega) > B_{es}(\omega) \\
@@ -302,9 +351,9 @@ B_{er}(\omega) > B_{es}(\omega) \\
 \Delta B > 0
 \end{align*}
 
-Note that if the entrant has no bargaining power, the incentives with and without buyout are identical, $(\omega=0 \rightarrow \Delta B = \Delta \Pi)$. This leads us to the main proposition of the paper which is that the excess incentive of pursuing sequential innovation. 
+If the entrant has no bargaining power, the incentives with and without buyout are identical, $(\omega=0 \rightarrow \Delta B = \Delta \Pi)$. This leads us to the main proposition of the paper which is that the excess incentive of pursuing sequential innovation. 
 
-\begin{proposition}
+\begin{proposition} \label{excessincentive}
 The excess incentive required for the entrant to pursue the radical innovation when there are buyouts is given by: 
 \begin{align*}
 \omega \left(  \pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e2})  \left( t_2-1  - \frac{(1-q)}{q} \left( 1-(1-q)^T \right) \right) \right. \\
@@ -314,23 +363,12 @@ The excess incentive required for the entrant to pursue the radical innovation w
 \end{proposition}
 
 
-Note that if $\Delta B$ is larger than $\Delta \Pi$, this means that the requirements for the radical innovation to be preferred are more stringent in the buyout case than the non-buyout case. The buyout option will always benefit the entrant because by definition the entrant can always just ignore that option. However the buyout option does not always benefit the incumbent. 
+If $\Delta B$ is larger than $\Delta \Pi$, this means that the requirements for the radical innovation to be preferred are more stringent in the buyout case than the non-buyout case. The buyout option will always benefit the entrant because by definition the entrant can always just ignore that option. However the buyout option does not always benefit the incumbent. 
 
-There are four cases to consider for the incumbent to prefer buyouts to be allowed. The cases for the buyout are: \newline
-\textbf{Case 1}: Does not affect affect preferences or decision to enter. 
-\newline
-\textbf{Case 2}: Does not affect preferences, but affects decision to enter. 
-\newline
-\textbf{Case 3}: Affects preferences but not decision to enter
-\newline
-\textbf{Case 4}: Affects preferences and decision to enter. 
+There are four cases to consider for the incumbent to prefer buyouts. Since the incumbent in the real world would have a willingness to pay for the different regimes it is worth exploring under what cases the buyouts would be prefered. If the buyout affects preferences it is always in favor of the sequential innovation, which means that if it affects preferences it means that the entrant will pursue the sequential innovation. We can dismiss the case where the buyout has no effect on preferences or on the decision to enter, in such a case the classic analysis holds, the only effects of buyouts is to increase the payoff of both the incumbent and the entrant. \newline
 
-We consider each case in turn. Note that if the buyout affects preferences it is always in favor of the sequential innovation, which means that if it affects preferences it means that the entrant will pursue the sequential innovation. 
 
-\subsubsection{Case 1:}
-In case 1, the answer is trivial, if the buyout does not affect preferences or the decision to enter, then the buyout can only increase the payoff of the incumbent. 
-
-\subsubsection{Case 2:}
+\subsubsection{Case 1: Does not affect preferences, but affects decision to enter} \label{case:decision}
 In case two, the entrant would not have entered at all but due to the incentive effect of the buyout the entrant has instead decided to enter. To evaluate this case we need only note that without the buyout, the incumbent would receive T flows of $\pi_i(c_i,c_e)$. The incumbent will therefore prefer the buyout if the flow is inferior to the bargaining payoff: 
 
 \begin{align*}
@@ -347,7 +385,7 @@ B_{ir}(\omega)&>T \pi_i(c_i,c_e) \\
 \end{align*}
 
 
-\subsubsection{Case 3:}
+\subsubsection{Case 2: Affects preferences but not decision to enter} \label{case:preference}
 
 Since the entrant would have entered anyway but the only thing that has changed is the choice of innovation this is simply the difference in payoff between the barganing payoff in the sequential innovation and the market payoff with the radical innovation. 
 
@@ -374,13 +412,13 @@ Since the entrant would have entered anyway but the only thing that has changed 
 > 0
 \end{align*}
 
-\subsubsection{Case 4:}
+\subsubsection{Case 3: Affects preferences and decision to enter}\label{case:both}
 
-If it affects both the preference and the decision to enter this means that the incumbent will receive the non-competitive flows for T periods or necessarily be bargaining with a sequential innovation entrant. The condition is the same as in case 2, $ B_{is}(\omega)>T \pi_i(c_i,c_e)$.
+If it affects both the preference and the decision to enter this means that the incumbent will receive the non-competitive flows for T periods or necessarily be bargaining with a sequential innovation entrant. The condition is the same as in case \ref{case:decision}, $ B_{is}(\omega)>T \pi_i(c_i,c_e)$.
 
 \section{Applications:}
 
-To clarify ideas and develop our intuition we now apply the general concept to a few standard competitive frameworks. Without loss of generality we assume that both $\pi_i(c_i,c_e)$ and
+To clarify ideas and develop our intuition we now apply the general concept to Bertrand and Cournot competition. Without loss of generality we assume that both $\pi_i(c_i,c_e)$ and
 $\pi_i(c_{i2},c_e)$ are monopoly profits. That is, the gap between the technologies is sufficiently large that the entrant simply sets the monopoly price. We also assume a simple linear demand function of the form $D(x)=1-x$ and linear cost structure.  As such the monopoly payoffs are simply: 
 
 \begin{align*}
@@ -388,11 +426,11 @@ $\pi_i(c_{i2},c_e)$ are monopoly profits. That is, the gap between the technolog
 \left(\frac{1-c_i}{2}\right)^2; \quad \pi_i(c_{i2},c_e) = \left(\frac{1-c_{i2}}{2}\right)^2;  
 \end{align*}
 
-Note that the implicit assumption here is that $\frac{1+c_i}{2}<c_e$. Because the monopoly price must be lower than the cost of production of the competitor. Finally we assume that the game lasts two periods and that the sequential innovation gives the intermediate technology in period 1 and the advanced technology in period 2. That is, the entrant will earn one stream of low technology and one stream of high technology, $T=t_2=2$ and $t_1=1$.
+Note that the implicit assumption here is that $\frac{1+c_i}{2}<c_e$, due to the fact that the monopoly price must be lower than the cost of production of the competitor. Finally we assume that the game lasts two periods and that the sequential innovation gives the intermediate technology in period 1 and the advanced technology in period 2. That is, the entrant will earn one stream of low technology and one stream of high technology, $T=t_2=2$ and $t_1=1$.
 
-\subsection*{A priori buyout}
+\subsection*{Ex-ante buyout}
 
-As a baseline scenario we first briefly take a look at what occurs if the buyout is a priori. That is, the buyouts occurs before the entrant chooses his technology. 
+As a baseline scenario we first briefly take a look at what occurs if the buyout is ex-ante. That is, the buyouts occurs before the entrant chooses his technology. 
 
 \begin{tikzpicture}[scale=1]
 \node[align=center] at (0,1.5) {$t = 0$};
@@ -401,22 +439,22 @@ As a baseline scenario we first briefly take a look at what occurs if the buyout
 %%%%%%%%%%%%%%%%
 \node[align=center] at (2.3,1.5) {$t = 1$};
 \draw [thick,->] (2.3,1) -- (2.3,0.15);
-\node[align=center] at (2.3,-.7) 
-{Technology\\is\\realized };
+\node[align=center] at (2.3,-1.2) 
+{Technology\\ is realized };
 %%%%%%%%%%%%%%%%
 \draw [thick,->] (1.1,-2) -- (1.1,-0.15);
 \node[align=center] at (1.1,-2.85) {Entrant \\chooses\\ technology };
 %%%%%%%%%%%%%%%%
 \node[align=center] at (4.6,1.5) {$t = 2$};
-\node[align=center] at (4.6,-.7) {Profit\\ /Welfare\\ Realized };
+\node[align=center] at (4.6,-1.2) {Profit\\ /Welfare\\ Realized };
 \draw [thick,->] (4.6,1) -- (4.6,0.15);
 %%%%%%%%%%%%%%%%
 \node[align=center] at (6.5,1.5) {$t = 2.5$};
-\node[align=center] at (6.5,-.9) {Technology \\ is \\realized \\ again};
+\node[align=center] at (6.5,-1.2) {Technology \\ is realized \\ again};
 \draw [thick,->] (6.5,1) -- (6.5,0.15);
 %%%%%%%%%%%%%%%%
 \node[align=center] at (8.5,1.5) {$t = 3$};
-\node[align=center] at (8.5,-1.1) {Profit\\ Welfare\\ Realized\\ again};
+\node[align=center] at (8.5,-1.2) {Profit\\ /Welfare\\ Realized\\ again};
 \draw [thick,->] (8.5,1) -- (8.5,0.15);
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
@@ -426,7 +464,7 @@ As a baseline scenario we first briefly take a look at what occurs if the buyout
 The analysis in this case is straightforward, we need only calculate the difference in profits in the case with the radical innovation and the sequential innovation. 
 
 \begin{proposition}
-If the buyouts are priori, the decision criteria for the radical innovation to be chosen by the incumbent is: 
+If the buyouts are ex-ante, the decision criteria for the radical innovation to be chosen by the incumbent is: 
 \begin{equation*}
 \frac{3-\sqrt{5}}{2}<q^*
 \end{equation*}
@@ -440,15 +478,14 @@ We need only set
 \end{align*}
 \end{proof}
 
-This is intuitive because, if the radical innovation has a high enough probability of being achieved, the incumbent will opt for it. Note that the a priori case is identical for both cournot and Bertrand competition. If there is a reputational mechanism at work or perhaps a working relationship that already exists between the entrant and the incumbent then the a priori case becomes more plausible. Signalling mechanisms may also exist that enable the a priori buyout to occur. For instance if there is some way for the entrant to communicate why they can undertake a specific invention then this will also suffice.
+This is intuitive because, if the radical innovation has a high enough probability of being achieved, the incumbent will opt for it. Note that the ex-ante case is identical for both cournot and Bertrand competition. If there is a reputational mechanism at work or perhaps a working relationship that already exists between the entrant and the incumbent then the ex-ante case becomes more plausible. Signalling mechanisms may also exist that enable the ex-ante buyout to occur. For instance if there is some way for the entrant to communicate why they can undertake a specific invention then this will also suffice.
 
-\subsection{A posteriori}
-Another possibility that arises, perhaps because there are simply too many firms innovating and the incumbent cannot tell who will credibly have innovative capabilities and who does not is that the buyout occurs after the innovation is chosen and is visible to the incumbent. In this case the specific form of competition changes the incentive structure. 
+\subsection{Ex-post}
+The ex-post case is simply the setup we used in the more general case. Apart from the incomplete contract justifications, it could occur because there are simply too many firms innovating and the incumbent cannot tell who has innovative capabilities before they invest. 
 
 \subsubsection*{Bertrand competition}
 
-
-The simplest application of the proposition is Bertrand competition, this is because in Bertrand competition only the highest technology firm makes profits. Additionally we know that the payoffs, when not the monopoly payoff, will be that the most advanced firm will price at the production cost of the second most advanced firm. Therefore $\pi_i(c_i,c_{e1})= (1-c_{e1})(c_{e1}-c_i)$ and $\pi_e(c_i,c_{e2})= (1-c_{i})(c_{i}-c_{e2})$
+Bertrand competition reduces the distortion effect to a much simpler form, this is because in Bertrand competition only the highest technology firm makes profits. Additionally we know that the payoffs, when not the monopoly payoff, will be that the most advanced firm will price at the production cost of the second most advanced firm. Therefore $\pi_i(c_i,c_{e1})= (1-c_{e1})(c_{e1}-c_i)$ and $\pi_e(c_i,c_{e2})= (1-c_{i})(c_{i}-c_{e2})$
 
  
 
@@ -459,32 +496,32 @@ The simplest application of the proposition is Bertrand competition, this is bec
 %%%%%%%%%%%%%%%%
 \node[align=center] at (2.3,1.5) {$t = 1$};
 \draw [thick,->] (2.3,1) -- (2.3,0.15);
-\node[align=center] at (2.3,-.7) 
-{Technology\\is\\realized };
+\node[align=center] at (2.3,-1.2) {Technology\\is realized };
+
 %%%%%%%%%%%%%%%%
 \draw [thick,->] (1.1,-2) -- (1.1,-0.15);
 \node[align=center] at (1.1,-2.85) { \\ Buyout \\ occurs\\ here};
 %%%%%%%%%%%%%%%%
 \node[align=center] at (4.6,1.5) {$t = 2$};
-\node[align=center] at (4.6,-.7) {Profit\\ /Welfare\\ Realized };
+\node[align=center] at (4.6,-1.2) {Profit\\ /Welfare\\ Realized };
 \draw [thick,->] (4.6,1) -- (4.6,0.15);
 %%%%%%%%%%%%%%%%
 \node[align=center] at (6.5,1.5) {$t = 2.5$};
-\node[align=center] at (6.5,-.9) {Technology \\ is \\realized \\ again};
+\node[align=center] at (6.5,-1.2) {Technology \\ is realized \\ again};
 \draw [thick,->] (6.5,1) -- (6.5,0.15);
 %%%%%%%%%%%%%%%%
 \node[align=center] at (8.5,1.5) {$t = 3$};
-\node[align=center] at (8.5,-1.1) {Profit\\ Welfare\\ Realized\\ again, \\ world ends};
+\node[align=center] at (8.5,-1.2) {Profit\\ /Welfare\\ Realized\\ again, \\ world ends};
 \draw [thick,->] (8.5,1) -- (8.5,0.15);
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \draw [thick,->] (0,0) -- (10,0);
 \end{tikzpicture}
 
-If the buyout is not possible the bargaining payoffs are not available for either firm. Under such conditions the entrant will simply compare the payoffs of the innovation of the sequential with the radical. 
+If the buyout is not possible the bargaining payoffs are not available for either firm. Under such conditions the entrant will simply compare the direct market payoffs of the innovation. 
 
 \begin{proposition}
-If no buyouts can occur, the entrants preferences for the radical innovation are identical to the incumbent when the buyout is a priori.
+If no buyouts can occur, the entrants preferences for the radical innovation are identical to the incumbent when the buyout is ex-ante.
 \end{proposition}
 
 \begin{proof}
@@ -501,8 +538,7 @@ q> \frac{3-\sqrt{5}}{2}=q^b
 Notice that, $q^b=q^*$, therefore the preferences are identical. 
 \end{proof}
 
-In other words, no distortion effect occurs if there are no buyouts. The result is not necessarily intuitive because the profits being compared are not of the same type. That is, the incumbents profits are monopoly profits whilst the entrants profits are competitive. Nevertheless since the absolute value of the gain does not play a role but only the relative gain does, this drives the result. 
-
+In other words, no distortion effect occurs if there are no buyouts. The result is not necessarily intuitive because the profits being compared are not of the same type. That is, the incumbents profits are monopoly profits whilst the entrants profits are competitive. Nevertheless since the absolute value of the gain does not play a role but only the relative gain does, this drives the result.
 We now proceed to compare the choice between the radical and sequential innovation when buyouts are allowed.
 
 \begin{proposition}
@@ -523,10 +559,10 @@ If buyouts are allowed, the radical innovation will be pursued if:
 > 0 \\
 \end{align*}
 
-Note that the third term is negative because $\pi_{i}(c_{i},c_{e})$ is a monopoly profit whilst  $\pi_{i}(c_{i2},c_{e})$ is a competitive profit. This implies that unlike before for the inequality to be satisfied q must not only be large enough to make the expressions it interacts with positive but it must also be large enough to overcome the third term.
+Note that the third term is negative because $\pi_{i}(c_{i},c_{e})$ is a monopoly profit whilst  $\pi_{i}(c_{i2},c_{e})$ is a competitive profit. This implies that unlike before for the inequality to be satisfied, q must not only be large enough to make the expressions it interacts with positive but it must also be large enough to overcome the third term.
 \end{proof}
 
-Note that this is just a special case of proposition 1. But it serves to illustrate how the expression simplifies due to the Bertrand assumptions. Bertrand competition the preference shift is entirely due to the difference in profit of the incumbent between the default profit and the profit against an entrant with intermediate cost, in other words the externality,   $\omega(\pi_i(c_i,c_e)- \pi_i(c_i,c_{e1})) $. The fact that the entrant can bargain on the externality is is the driving factor behind this result. 
+Note that this is just a special case of proposition \ref{excessincentive}. But it serves to illustrate how the expression simplifies due to the Bertrand assumptions. Bertrand competition the preference shift is entirely due to the difference in profit of the incumbent between the default profit and the profit against an entrant with intermediate cost, in other words the externality,   $\omega(\pi_i(c_i,c_e)- \pi_i(c_i,c_{e1})) $. The fact that the entrant can bargain on the externality is is the driving factor behind this result. 
 
 
 \subsection*{A numerical example of preference reversal}
@@ -536,9 +572,6 @@ Suppose that the profit of the entrant with the best technology is given by, $40
 We first do the case where there are no buyouts. If no buyouts do occur and the entrant chooses the sequential innovation then the entrant will simply earn, $40$, which will only be realized in the second period. If the entrant chooses the radical innovation the payoff will simply be $.5(40+40)+(.5)^2(40)=50$. Since $50>40$, if no buyout occurs the radical innovation will be chosen. 
 
 If buyouts do occur then the incentives change. The Nash surplus for the sequential innovation is, $NS_s = 100+80-20-40=120$. Therefore the payoff of the entrant after bargaining is $40+\frac{1}{2}(120)=100$. The radical innovation surplus is similarly $NS_r = .5(200)+(.5)^2 180+(.5)^2 160-(.5)^2 80-(.5)^2-50=75$. Therefore the payoff after bargaining $50+\frac{1}{2}(75)=87.5$ so the entrant pursues the sequential innovation. 
-
-Therefore the choice of buyout can affect the choice of innovation, always in favor of the sequential innovation. 
-
 %\begin{proposition}
 %If both firms cost the same, the ability to buyout can only shift the %incentive towards the sequential innovation. 
 %\end{proposition}
@@ -710,9 +743,7 @@ Therefore the choice of buyout can affect the choice of innovation, always in fa
 
 \subsection{When does the buyout option help the incumbent?}
 
-We now return to the case where we consider the point of view of the incumbent. By looking at the preferences of the incumbent we can also derive a willingness to lobby. That is, if the incumbent loses from the ability to buyout because the competitive effect is larger than the potential technology boost. It is trivial to note that the incumbent does not have a willingness to lobby if the option to buyout does not change the preferences of the entrant. 
-
-It is clear that the incumbent will prefer to the buyouts to exist as a function of his own bargaining power, $1-\omega$. We again look at the special case of the Bertrand competition with parameters $T=t_2=2,t_1=1$. In what corresponds to case 2 in the general section, the conditions collapses to the following. 
+We now return to the case where we consider the point of view of the incumbent. By looking at the preferences of the incumbent we can also derive a willingness to lobby. That is, if the incumbent loses from the ability to buyout because the competitive effect is larger than the potential technology boost. It is trivial to note that the incumbent does not have a willingness to lobby if the option to buyout does not change the preferences of the entrant. The incumbent will prefer to the buyouts to exist as a function of his own bargaining power, $1-\omega$. We again look at the special case of the Bertrand competition with parameters $T=t_2=2,t_1=1$. In what corresponds to case \ref{case:decision} in the general section, the conditions collapses to the following. 
 
 \begin{align*}
 B_{is}(\omega)&>2 \pi_i(c_i,c_e) \\
@@ -766,11 +797,7 @@ We will not detail the calculations the Cournot, our main purpose for this secti
 \end{align*}
 
 
-Note that if the gap between, $c_i-c_{e1}$ is identical to the gap between $c_{e2}-c_i$. $\pi_{e}(c_i,c_{e1})=\pi_{i}(c_{i},c_{i2})$ and $\pi_{e}(c_i,c_{e2})=\pi_{i}(c_{i},c_{i1})$. This would also be true for Bertrand competition. 
-
-$\pi_{e2}^{c}=\pi_{i2}^{c}$ and $\pi_{e1}^{c}=\pi_{i1}^{c}$. As in Bertrand we assume the initial profit, is a monopoly. 
-
-The first result of the Cournot case shows that the incremental innovation is pursued more often in Cournot than in Bertrand. 
+If $c_i-c_{e1}=c_{e2}-c_i$ this would would imply the simplification that $\pi_{e}(c_i,c_{e1})=\pi_{i}(c_{i},c_{i2})$ and $\pi_{e}(c_i,c_{e2})=\pi_{i}(c_{i},c_{i1})$, this entailment would also hold in the case of Bertrand competition, $\pi_{e2}^{c}=\pi_{i2}^{c}$ and $\pi_{e1}^{c}=\pi_{i1}^{c}$. As before we assume the initial profit is a monopoly profit. The first result is that the sequential innovation is pursued more often in than in Bertrand.
 
 \begin{proposition}
 Without buyouts, if the radical innovation is preferred in Cournot competition, it is also preferred in Bertrand. 
@@ -789,7 +816,7 @@ q&>
 We need only see that $q^{c}>q^{b}$. To do so we can notice that $\frac{\partial q^c}{\partial \pi_{e}(c_i,c_{e1}) }$ is positive and that if $\pi_{e}(c_i,c_{e1})=0$, we are left with $q^{b}$
 \end{proof}
 
-The intuition behind this result is that in Cournot the entrant earns a profit when being behind and the loss of profit to the incumbent is less important if being overtaken, this means the entrant requires a higher $q$ to be convinced to pursue the radical innovation.  
+The intuition behind this result is due to the lower advantage of being the market leader. In Cournot the entrant earns a profit even with the intermediate technology which makes the lag time between the intermediate stage and the advanced stage less important. This means the entrant requires a higher $q$ to be convinced to pursue the radical innovation.  
 
 \begin{proposition}
 If the payoff of the incumbent when the entrant has the advanced technology is the same in both bertrand and Cournot competition, the cutoff point for the radical innovation to be pursued with buyout is lower than in Bertrand. 
@@ -809,80 +836,41 @@ Note here that this expression is identical to the expression in proposition \re
 -\pi_{i}(c_{i},c_{e2}))$ is higher than the same gap in Bertrand competition. Note that the monopoly profit,$\pi_{i}(c_i,c_{e})$ is identical in both cases. Therefore if the profit of the incumbent when the entrant has the advanced tecnology is identical in both cournot and Bertrand, Cournot has a lower q for it to be pursued due to the extra positive term, $(1-\omega) \pi_e(c_i,c_{e1})$ 
 \end{proof}
 
-Note that since $q^b<q^c$ without buyout, and $q^b>q^c$ when there is a buyout, this means the difference between the buyout and the non-buyout case is smaller in Cournot than in Bertrand. Which means that the distortion effect is lower overall for the case of Cournot. 
+The buyout case has two relevant effects which are in friction. On one hand the same effect as the non-buyout case, namely that being behind is not as important to the entrant. However there is now a second effect which is that the incumbent is less harmed by being overtaken, so there is a lower willingness to buyout. Note that since $q^b<q^c$ without buyout, and $q^b>q^c$ when there is a buyout, this means the difference between the buyout and the non-buyout case is smaller in Cournot than in Bertrand. Which means that the distortion effect is lower overall for the case of Cournot. 
 
-\section*{ Social surplus and welfare}
+\section*{Discussion}
 
-We restrict attention to the Bertrand case for the welfare analysis since it is the one with the widest scope for preference reversal. The consumer surplus and welfare in this economy are unambiguous. The monopoly profits always yields the lowest surplus. However the monopoly outcome with the advanced innovation is preferred to the monopoly outcome with the default innovation. So if we are in the case where there is a monopoly because the entrant does not enter, then a buyout can only increase the social surplus and welfare more generally because it will result in a different monopoly which has lower prices. The specific details of computing welfare in this economy are left to the appendix. 
+The intuition behind result \ref{higherq} is a consequence of the Coase theorem. The activity of the entrant can be interpreted to have an externality on the incumbent. Both the radical and sequential innovation have such an externality. However the sequential innovation has an externality with no associated direct benefit to the entrant beyond the ability to threaten the incumbent. In other words, if there was no bargaining, the entrant would be indifferent to increasing the damage done to the incumbent, it is a variable which does not enter into the decision criteria. However as soon as there is a buyout, the entrant now can negotiate on the negative externality that is being pushed on the incumbent. This incites the entrant to pursue the technology that has has this externality relatively more than before. 
 
-The welfare implications are paradoxical in that welfare and profit maximization do not align. The monopoly effect
+The ability to blackmail has been studied in the context of the Coase theorem, \cite{Dem}. In the rancher and farmer case study, the rancher has his cows graze whilst the farmer grows crops. If we suppose that the rancher does not have to compensate the farmer for the damage done, then the farmer will be willing to pay to stop the rancher. However in such a case, if the rancher has options which are not individually attractive but are very costly to the farmer, she can use these options to extort the farmer into giving a higher payment. It is important that the rancher be able to commit to applying this costly action, otherwise if the farmer can just say no to the offer, it is not credible that the rancher will act in a costly manner. If commitment is possible, the rancher will over-commit(relative to the efficient outcome) to the option which causes harm to the farmer.
 
-That is, if the welfare maximizing choice when there are buyouts is the same as profit maximizing decision when there are no buyouts. In this sense, there is no uniform rule on whether buyouts are welfare improving or not. 
+In fact this is very similar to our story here. When the entrant pursues the radical innovation there is an externality to the choice where it threatens to take away the profits of the incumbent, this is a productive action that can occur in either of the two periods. On the other hand the sequential innovation can be seen as an unproductive action followed by a productive action. This case is to be juxtaposed to a sequential innovation that would have no externality to the incumbent, this would reduce the payoff potential of the entrant if there is a buyout and be less distortionary. 
 
-\begin{proposition}\label{propwelfare}
-The welfare maximizing choice in the case of buyouts is identical to the entrant's optimal choice in the case of no buyout and the incumbents a priori choice. 
-\end{proposition}
+It is interesting that there are different informational requirements in the two cases. In the case of no buyouts the informational pre-requisites on the entrant are simply to know the profit potential of the project, the cost of the project, and the probability of innovating. On the other hand the ability to buyout actually has a higher burden in terms of rationality on the entrant, that is to compute the optimal decision one must know not only the potential payoffs of the project but also the revenue loss of the incumbent and the negotiating power. So while the model made abstractions from information asymmetries, it is quite clear that buyouts have a higher information burden, this could be captured merely by interpreting it as part of the cost. 
 
-\begin{proof}
-See appendix \ref{buyoutnobuyout}
-\end{proof}
+We include the details of the welfare analysis in the appendix but give some cursory details here. In general since the buyout causes a monopoly this monopoly needs to be an improvement from what would occur otherwise, there are only two cases to consider. One alternative a less efficient monopoly, that is a monopoly with the high cost of production, this case occurs if without the buyout the entrant would not enter. Relative to this less efficient monopoly, the buyout can only improve the situation with a more efficient monopoly. The second alternative could be that the entrant would have pursued the innovation anyway, but the effect of the entrant on the market is less important and the more efficient monopoly gives a higher welfare. However this second case is not achieveable in the modes of competition used here.
 
-In proposition \ref{propwelfare} we look for the criterion under which welfare is maximized when \textbf{ buyouts occur} and show that they are identical to the profit maximizing criterion of the entrant when \textbf{buyouts do not occur} and the a priori case. To state this another way, if absent a buyout, the entrant chooses the radical innovation, then, if there are buyouts, the welfare maximizing choice is also the radical innovation. 
+It is perhaps also interesting to ask which of the projects maximize welfare. The answer is a bit complex, the welfare maximizing choice with buyouts is the same as the profit maximizing choice without buyouts(see apendix). Since we have established that the choice of the firm in the ex-ante case pursue the radical innovation more often, this implies that whenever there is a preference reversal without affecting the decision entry, this reduces welfare. The reason this occurs is because the negative externality in the intermediate period is internalized when there is a buyout. This is consistent with coase as it implies that the efficient option is pursued either when the externality is ignored by entrant or when it is fully internalized due to the buyout.
 
-The welfare maximizing choice in the case of buyouts is exactly the same because the negative externality of the intermediate period is also ignored due to the ownership of the technology by the incumbent. This is intuitive because it implies that the efficient option is pursued either when the externality is ignored by entrant or when it is fully internalized due to the buyout.
-
-This is a paradoxical result in that if the buyout is allowed, the welfare maximizing choice is aligned with the profit maximizing case when there there are no buyouts. In other words if the effect of buyouts was uniform, profit and welfare would be perfectly correlated. However due to the externality welfare and profit maximization do not align. 
-
-If we are not looking at the paradigm with buyouts, the results are more complex. This is because there is more variance in the possible outcomes. That is both the monopoly profits and competitive profits may prove to be preferred. 
-
-\subsection*{Reduced form version of the Coasian argument}
-
-We present the reduced form version of the model because it illustrates that the specific complementarity or substitutability does not matter but instead it is only the \text{relative} value of owning that plays a role.  We briefly present the taxonomy under the framework and discuss why each situations may occur. 
-
-The market profit potential of the innovation which the entrepreneur holds is given by $\pi^e$, this profit may be earned by whoever owns the entrepreneurial project. The profit of the incumbent \textit{if the innovation does not exist} is simply $\pi^i$. We denote the degree(or factor) of substitutability/complementarity \textbf{if not owned} by $\beta \in [ 0, \infty [$ and the degree of substitutability/complementarity  \textbf{if owned} by $\alpha \in [0, \infty [ $. 
-
-The payoff if not owned is $ \beta \pi^i$. The payoff if owned is $\max\{ \pi^i, \pi^e + \alpha \pi^i   \}$. Therefore the willingness to pay for the product if  $\max\{ \pi^i, \pi^e + \alpha \pi^i   \} = \pi^i $ is: $(1-\beta) \pi^i$ and if $\max\{ \pi^i, \pi^e + \alpha \pi^i   \} = \pi^e + \alpha \pi^i $ the willingness to pay is: $\pi^e+ (\alpha-\beta) \pi^i$. The extra willingness to pay of the active firm is then simply: $(\alpha-\beta)\pi^i$. This form shows us that substitutability or complementarity do not matter for buyouts, instead it is only the \textit{relative} effects of buyouts which affect the premium the incumbent is willing to pay. Note that $\pi^i$ can then be seen as the \textit{scale} parameter. Or to express it another way, let $\zeta=1 + \frac{(\alpha-\beta)\pi^i}{\pi^e}$. If $\zeta$ is larger than 1, then the existing firm is willing to pay a premium and if the existing activity is of larger scale relative to the project, the incumbent is willing to pay a higher premium. We now briefly discuss the taxonomy of this framework. 
-
-\textbf{Substitute}  if not owned and \textbf{Complementary} if owned implies: $\beta<1$ and $\alpha>1$. This case implies that the product will eat up the profits of the incumbent if allowed to compete with the current product but will expand profits if held together with the current activity. 
-
-\textbf{Complementary} if not owned and \textbf{Complementary} if owned implies: $\beta>1$ and $\alpha>1$. This is just the case where whether the innovation is owned or not, the firm will benefit from it.
-
-\textbf{Complementary} if not owned and \textbf{Neutral} if owned implies: $\beta>1$ and $\alpha=1$. Why would the project not be complementary if owned? If consumers have a specific aversion to buying things from one firm. 
-
-\textbf{Neutral} if not owned and \textbf{Neutral} if owned implies: $\beta=1$ and $\alpha=1$. This case is simply that the entrepreneur's project is uncorrelated to the incumbents current activity.  
-
-\textbf{Neutral} if not owned and \textbf{Complementary} if owned implies: $\beta=1$ and $\alpha>1$. If the technology is complementary this may result simply because it will make the production process more efficient or because there is a bundling effect if both goods are sold together. 
-
-\textbf{Neutral} if not owned and \textbf{Substitute} if owned implies: $\beta=1$ and $\alpha<1$. This case would result simply in shutting down the project. It may be that if the firm markets some new product, the customers of this specific firm will flee to it. 
-
-\textbf{Substitute} if not owned and \textbf{Neutral} if owned implies: $\beta<1$ and $\alpha=1$. Why would a project not be substitable if owned? Perhaps there is a certain way of selling the product that would interact with the incumbents product market but if the incumbent owns it, they can find a niche way to market it that allows it to be realized without eating away at their other products.
-
-\section*{Discussion and Conclusion}
-
-The model predicts a number of things for industry structure. If the entrant is unknown to the incumbent until the the entrant starts to innovate, this immediately gives rise to distorting effects.  This may occur if we have an industry where innovation occurs from many small entrants, the prediction is that the small entrant will over-pursue incremental innovations because it is the best way to make their project profitable. An example of such an industry is the relationship of biotechnological firms to the pharmaceutical industry. That is, numerous small entrants who threaten the incumbent who is already firmly established. 
-
-On the other hand if an industry has endogenous mechanisms so that buyouts can occur before irreversible directional investments are undertaken, such as reputational mechanisms, then that industry will have have a higher tendency to pursue radical innovations. 
+The model predicts a number of things for industry structure. If the entrant is unknown to the incumbent until the the entrant starts to innovate, this immediately gives rise to distorting effects.  This may occur if we have an industry where innovation occurs from many small entrants, the prediction is that the small entrant will over-pursue incremental innovations because it is the best way to make their project profitable. An example of such an industry is the relationship of biotechnological firms to the pharmaceutical industry. That is, numerous small entrants who threaten the incumbent who is already firmly established. On the other hand if an industry has endogenous mechanisms so that buyouts can occur before irreversible directional investments are undertaken, such as reputational mechanisms, then that industry will have have a higher tendency to pursue radical innovations. 
 
 The model presented is specifically about cost side innovations, the strength of the conclusions depends on the ratio of production to development cost. A high production cost is about producing the marginal unit, if this is expensive then a proportional decrease in this cost will have greater effect on competitive pressure. A high development cost implies that the creation of the product has a sunk cost in the beginning which blocks entry, if this is low then industries may more easily enter and hence there will be more interactions of the sort described in this model. A high development cost is important for the buyouts described because such a cost, like all sunk costs, cannot be used for negotiating with the incumbent. Examples of industries with a high production to development cost are established industries where the good is generally larger, for instance cars, trains, airplanes, boats or metalworks are likely to have a high cost of production without there there being a high cost to development. A simple of example of an industry where the model implies the effects will be weaker is an industry such as the information technology sector, this is because software exhibits very high development cost(programming) and a low cost to produce a unit of software.  
 
-The intuition behind result \ref{higherq} is a consequence of the Coase theorem. The activity of the entrant can be interpreted to have an externality on the incumbent. Both the radical and sequential innovation have such an externality. However the sequential innovation has an externality with no associated direct benefit to the entrant beyond the ability to threaten the incumbent. In other words, if there was no bargaining, the entrant would be indifferent to increasing the damage done to the incumbent, it is a variable which does not enter into the decision criteria. .
+A rather different method of envisioning a cost side innovation is management changes. Some entrant may have some cutting edge method of managing employees that can either reduce the cost of the firm gradually or it may have some scheme were a large structural change occurs and the costs are reduced quickly. The application of the model in this case is that incumbents will buyouts will lead to the entrant overpursuing the slow employee cost reduction technique rather than the fast and risky one.  
 
-However as soon as there is a buyout, the entrant now can negotiate on the negative externality that is being pushed on the incumbent. This incites the entrant to pursue the technology that has has this externality relatively more than before. 
-
-The ability to blackmail has been studied in the context of the Coase theorem, \cite{Dem}. Take the classic example where the there is a rancher and farmer, the rancher has his cows graze whilst the farmer grows crops. If we suppose than the farmer has rule liability, that is if there is an externality from the rancher to the farmer, say the cows graze on the farmers land, then the rancher does not have to compensate the rancher. If this kind of setting occurs when the farmers farm is more productive than the ranchers cows and the rancher can take an action that gives the rancher no benefits but imposes a cost on the farmer, then there is a sort of blackmail occurring for which the farmer has a willingness to pay. Actions that impose externalities may be over-pursued because they allow for greater bargaining power. 
-
-In fact this is very similar to our story here. When the entrant pursues the radical innovation there is an externality to the choice where it threatens to take away the profits of the incumbent, this is a productive action that can occur in either of the two periods. On the other hand the sequential innovation can be seen as an unproductive action followed by a productive action. This case is to be juxtaposed to a sequential innovation that would have no externality to the incumbent, this would reduce the payoff potential of the entrant if there is a buyout and be less distortionary. Our welfare result is similar to the result on Coase which states that without additional information, the liability rule by itself cannot be said to increase or decrease efficiency \cite{Dem}. 
-
-An additional feature to note in the setting presented here is that whilst in the case of no buyout the informational pre-requisites on the entrant are simply to know the profit potential of the project should it be successful, the cost of the project, and the probability of innovating. On the other hand the ability to buyout actually has a higher burden in terms of rationality on the entrant, that is to compute the optimal decision one must know not only the potential payoffs of the project but also the revenue loss of the incumbent and own negotiating power. So while the model made abstractions from information asymmetries, it is quite clear that buyouts have a higher information burden, this could be captured merely by interpreting it as part of the cost. 
-
-The approach in this paper diverges from the usual Coasian paradigm. While in the traditional Coasian literature the main policy lever is said to be related to the liability rules as pertaining to property rights, in our model the main policy lever is the allowance of buyouts.  The policy implications of this analysis are ambiguous, enabling buyouts may increase the payoffs of innovations which increase negative externalities more than it increases the payoff of innovations which have lower externalities. As such from an anti-trust perspective, mergers should not only be seen as being about the reduction in competition but also that they affect industry structure, more specifically, diversification.  
-
-Additionally, the model implies that there is a demand for lobbying. If we are in a paradigm where enabling buyouts create a preference reversal for the entrant and where this is not prefer-ed by the incumbent, then this creates a willingness to pay from the incumbent which will disable buyouts. 
+Another natural example of a cost side innovation is energy innovations. Perhaps rather intuitively, firms are more likely to buyout entrepreneurs who can cause damage even with an innefective technology than firms with much better prospects for advancement but no intermediate stage. In energy this may look like firms buying out solar or wind technologies more than buying out nuclear plans.   
 
 
-The paper presented here offers a simple model of preference reversal in a two time period model. We find that policy levers have ambiguous effects, enabling buyouts can have both a negative and positive effects on welfare and this is not necessarily a function of the willingness to pay. Instead it is purely a function of substitutability and complementarity. Industry convergence should play a major role in competition policy, where efficiency vs stability considerations would be relevant. 
 
-Empirically, the willingness to pay of incumbents for the entrants cannot be used as a proxy for reducing rent seeking since, the willingness to pay can stem equally from substitutability and complementarity. 
+
+\section*{Discussion and Conclusion}
+
+
+The paper presents a preference reversal within two paradigms. We find that policy levers have ambiguous effects, enabling buyouts can have both a negative and positive effects on welfare and this is not necessarily a function of the willingness to pay. Instead it is purely a function of substitutability and complementarity. Empirically, the willingness to pay of incumbents for the entrants cannot be used as a proxy for reducing rent seeking since, the willingness to pay can stem equally from substitutability and complementarity. 
+
+We present a simple model which implies that mergers should not only be seen from a point of view of competition vs efficiency but also from the point of view of innovative convergence. When firms can buy other firms this is in essence license for firms to play correlated strategies and there is a strong incentive for firms to choose industries which are already existing without reasons having to do with industry level characteristics. As such anti-trust policy should take into account the effects buyouts on industry convergence. Specifically, for patents, if the role of the patent is to exclude other firms, then the kind of patenting will not be affected, if on the other hand the role of patenting is to be bought over by larger firms, this will favor industry convergence. The basic reasoning implies that either patents requirement should more stringent when an innovation improves on a product with an existing industry or if possible, if entrants represent a larger threat to incumbents, buyouts rules should be more demanding. . 
+
+Finally, the model implies that there is a demand for lobbying. If we are in a paradigm where enabling buyouts create a preference reversal for the entrant and where this is not prefered by the incumbent, then this creates a willingness to pay from the incumbent which will disable buyouts. 
 
 
 \newpage
@@ -900,9 +888,7 @@ S(c_{i}, c_{e1}) = \frac{(1-c_{i1})^2}{2};~~
 S(c_{i}, c_{e2}) =  \frac{(1-c_i)^2}{2}
 \end{align*}
 
-Note that the consumer only prefers the buyouts if it incentives the entrant to pursue the projects at all. If the projects are already being pursued without the buyout then the consumer can only lose because whilst before there was some possibility of a competitive outcome, now there are only monopoly outcomes possible. 
-
-From the welfare perspective the bargaining power only matters if it will change the choices of the firms. Otherwise bargaining power will be zero sum, therefore we need only look at the market profits and the social surplus of consumers to compute the welfare function. In the two cases where there is a monopoly this is simply, either the monopoly with the default cost or the monopoly with the upgraded cost. We recall here that monopoly with the lower price is preferred over the monopoly with the default price for both consumers and the monopolist. These outcomes are given by:
+Note that the consumer only prefers the buyouts if it incentives the entrant to pursue the projects. If the projects are already being pursued without the buyout then the consumer can only lose because whilst before there was some possibility of a competitive outcome, now there are only monopoly outcomes possible. From the welfare perspective the bargaining power only matters if it will change the choices of the firms. Otherwise bargaining power will be zero sum, therefore we need only look at the market profits and the social surplus of consumers to compute the welfare function. In the two cases where there is a monopoly this is either the monopoly with the default cost or the monopoly with the lower cost. We recall here that monopoly with the lower price is preferred over the monopoly with the default price for both consumers and the monopolist. These outcomes are given by:
 
 \begin{align*}
 w(c_{i}, c_{e}) &= \frac{(1-c_i)^2}{8} + \frac{(1-c_i)^2}{4}= \frac{3(1-c_i)^2}{8} \\
@@ -992,6 +978,10 @@ W_R &= q w(c_{i2}, c_{e})(3-q )
 
 \section*{Appendix 2: Welfare results}
 
+\begin{proposition}\label{propwelfare}
+The welfare maximizing choice in the case of buyouts is identical to the entrant's optimal choice in the case of no buyout and the incumbents ex-ante choice. 
+\end{proposition}
+
 \subsection{Proof of proposition \ref{propwelfare}}
 
 \begin{proof} \label{buyoutnobuyout}
@@ -1015,7 +1005,7 @@ Which is identical to the cutoff point for the entrant to prefer the radical inn
 
 \end{proof}
 
-\subsection{Proposition 8}
+In proposition \ref{propwelfare} we look for the criterion under which welfare is maximized when \textbf{ buyouts occur} and show that they are identical to the profit maximizing criterion of the entrant when \textbf{buyouts do not occur} and the ex-ante case. To state this another way, if absent a buyout, the entrant chooses the radical innovation, then, if there are buyouts, the welfare maximizing choice is also the radical innovation. 
 
 \begin{proposition}
 \label{welfare1}
@@ -1024,11 +1014,6 @@ Similarly for it to be possible that sequential innovation is welfare maximizing
 $w(c_{i}, c_{e1})-w(c_{i}, c_{e2}) > 0$
 \end{proposition}
 
-\begin{proof}
-see \ref{proofofwelfare1}
-\end{proof}
-
-\subsection{Proof of proposition \ref{welfare1}}
 
 \begin{proof}\label{proofofwelfare1}
 

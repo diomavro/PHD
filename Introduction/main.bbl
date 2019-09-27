@@ -5,6 +5,11 @@ Aghion, Philippe;~Tirole, J. (1994).
 \newblock {The Management of Innovation}.
 \newblock {\em Source: The Quarterly Journal of Economics}, 109(4):1185--1209.
 
+\bibitem[Alchian, 1950]{alchian1950uncertainty}
+Alchian, A.~A. (1950).
+\newblock Uncertainty, evolution, and economic theory.
+\newblock {\em Journal of political economy}, 58(3):211--221.
+
 \bibitem[Alchian, 1965]{Alchian1965}
 Alchian, A.~A. (1965).
 \newblock Some economics of property rights.
@@ -31,15 +36,37 @@ Anton, James J. ;~Yao, D.~A. (2004).
 \newblock {Little Patents and Big Secrets: Managing Intellectual Property}.
 \newblock {\em The RAND Journal of Economics}, 35(1):1.
 
+\bibitem[Arundel and Kabla, 1998]{arundel1998percentage}
+Arundel, A. and Kabla, I. (1998).
+\newblock What percentage of innovations are patented? empirical estimates for
+  european firms.
+\newblock {\em Research policy}, 27(2):127--141.
+
+\bibitem[Becker, 1962]{becker1962irrational}
+Becker, G.~S. (1962).
+\newblock Irrational behavior and economic theory.
+\newblock {\em Journal of political economy}, 70(1):1--13.
+
 \bibitem[Bessen, 2009]{bessen_maskin}
 Bessen, James E. ;~Maskin, E.~S. (2009).
 \newblock Sequential innovation, patents, and imitation.
 \newblock {\em SSRN Electronic Journal}, 40(4):611--635.
 
+\bibitem[Bessen et~al., 2008]{bessen2008patent}
+Bessen, J.~E., Bessen, J., and Meurer, M.~J. (2008).
+\newblock {\em Patent failure: How judges, bureaucrats, and lawyers put
+  innovators at risk}.
+\newblock Princeton University Press.
+
 \bibitem[Boldrin and Levine, 2009]{boldrin2009market}
 Boldrin, M. and Levine, D.~K. (2009).
 \newblock Market size and intellectual property protection.
 \newblock {\em International Economic Review}, 50(3):855--881.
+
+\bibitem[Boldrin and Levine, 2013]{boldrin2013s}
+Boldrin, M. and Levine, D.~K. (2013).
+\newblock What's intellectual property good for?
+\newblock {\em Revue {\'e}conomique}, 64(1):29--53.
 
 \bibitem[Bryan, 2017]{Bryan2017}
 Bryan, Kevin A.;~Lemus, J. (2017).
@@ -57,6 +84,16 @@ Calabresi, Guido;~Melamed, A.~D. (1972).
 \newblock Property rules, liability rules, and inalienability: one view of the
   cathedral.
 \newblock {\em Harvard Law Review}.
+
+\bibitem[Carletti, 2013]{carletti2013top}
+Carletti, C. (2013).
+\newblock Top-down legislation versus local traditions.
+\newblock {\em Revue {\'e}conomique}, 64(1):55--68.
+
+\bibitem[Charnley, 2013]{charnley2013seeds}
+Charnley, B. (2013).
+\newblock Seeds without patents.
+\newblock {\em Revue {\'e}conomique}, 64(1):69--87.
 
 \bibitem[Cheung, 1970]{Cheung1970}
 Cheung, S. N.~S. (1970).
@@ -80,6 +117,12 @@ Coase, R.~H. (1960).
 \newblock In {\em Classic papers in natural resource economics}, pages 87--137.
   Springer.
 
+\bibitem[Cohen et~al., 2000]{cohen2000protecting}
+Cohen, W.~M., Nelson, R.~R., and Walsh, J.~P. (2000).
+\newblock Protecting their intellectual assets: Appropriability conditions and
+  why us manufacturing firms patent (or not).
+\newblock Technical report, National Bureau of Economic Research.
+
 \bibitem[Comin et~al., 2006]{comin2006five}
 Comin, D., Hobijn, B., and Rovito, E. (2006).
 \newblock Five facts you need to know about technology diffusion.
@@ -89,6 +132,11 @@ Comin, D., Hobijn, B., and Rovito, E. (2006).
 Cornelli, Francesca ;~Schankerman, M. (1999).
 \newblock {Patent Renewals and R{\&}D Incentives}.
 \newblock {\em RAND journal of economics}, 30(2):197--213.
+
+\bibitem[Corrocher, 2013]{corrocher2013development}
+Corrocher, N. (2013).
+\newblock The development of short message services.
+\newblock {\em Revue {\'e}conomique}, 64(1):149--163.
 
 \bibitem[Dasgupta and Heal, 1979]{dasgupta1979economic}
 Dasgupta, P.~S. and Heal, G.~M. (1979).
@@ -114,6 +162,17 @@ Dixit, A.~K. and Pindyck, R.~S. (1994).
 Dolin, G. (2011).
 \newblock {Reverse settlements as patent invalidity signals}.
 \newblock {\em Harvard Journal of Law {\&} Technology}, 24:281.
+
+\bibitem[Dosi et~al., 2006]{dosi2006much}
+Dosi, G., Marengo, L., and Pasquali, C. (2006).
+\newblock How much should society fuel the greed of innovators?: On the
+  relations between appropriability, opportunities and rates of innovation.
+\newblock {\em Research Policy}, 35(8):1110--1121.
+
+\bibitem[Foray, 2013]{foray2013patent}
+Foray, D. (2013).
+\newblock Patent-free innovation.
+\newblock {\em Revue {\'e}conomique}, 64(1):9--27.
 
 \bibitem[Gattai, 2016]{gattai2016investment}
 Gattai, Valeria;~Natale, P. (2016).
@@ -181,6 +240,11 @@ Kaplow, Louis;~Shavell, S. (1995).
 \newblock Property rules versus liability rules, an economic analysis.
 \newblock {\em Harvard Law Review}, 109:713.
 
+\bibitem[Khan, 2013]{khan2013going}
+Khan, B.~Z. (2013).
+\newblock Going for gold.
+\newblock {\em Revue {\'e}conomique}, 64(1):89--113.
+
 \bibitem[Kremer, 1998]{kremer_1998}
 Kremer, M. (1998).
 \newblock Patent buyouts: A mechanism for encouraging innovation.
@@ -216,6 +280,17 @@ Lerner, J. and Malmendier, U. (2010).
 \newblock Contractibility and the design of research agreements.
 \newblock {\em American Economic Review}, 100(1):214--46.
 
+\bibitem[Levin et~al., 1987]{levin1987appropriating}
+Levin, R.~C., Klevorick, A.~K., Nelson, R.~R., Winter, S.~G., Gilbert, R., and
+  Griliches, Z. (1987).
+\newblock Appropriating the returns from industrial research and development.
+\newblock {\em Brookings papers on economic activity}, 1987(3):783--831.
+
+\bibitem[Levine, 2008]{boldrinlevine}
+Levine, D. K. B.~M. (2008).
+\newblock {\em Against Intellectual Monopoly}.
+\newblock Cambridge University Press.
+
 \bibitem[Locke, 2014]{locke2014second}
 Locke, J. (2014).
 \newblock {\em Second treatise of government: An essay concerning the true
@@ -226,6 +301,11 @@ Locke, J. (2014).
 Loury, G.~C. (1979).
 \newblock {Market Structure and Innovation}.
 \newblock {\em The Quarterly Journal of Economics}, 93(3):395--410.
+
+\bibitem[Mansfield, 1986]{mansfield1986patents}
+Mansfield, E. (1986).
+\newblock Patents and innovation: an empirical study.
+\newblock {\em Management science}, 32(2):173--181.
 
 \bibitem[Maskin, 2002]{Maskin2002}
 Maskin, E. (2002).
@@ -241,6 +321,17 @@ Maskin, Eric ;~Tirole, J. (1999a).
 Maskin, Eric;~Tirole, J. (1999b).
 \newblock {Two Remarks on the Property-Rights Literature}.
 \newblock {\em Review of Economic Studies}, 66(1):139--149.
+
+\bibitem[Merges and Nelson, 1994]{merges1994limiting}
+Merges, R.~P. and Nelson, R.~R. (1994).
+\newblock On limiting or encouraging rivalry in technical progress: The effect
+  of patent scope decisions.
+\newblock {\em Journal of Economic Behavior \& Organization}, 25(1):1--24.
+
+\bibitem[Meyer, 2013]{meyer2013airplane}
+Meyer, P.~B. (2013).
+\newblock The airplane as an open-source invention.
+\newblock {\em Revue {\'e}conomique}, 64(1):115--132.
 
 \bibitem[Meyers, 2007]{meyers2007happy}
 Meyers, M.~A. (2007).
@@ -258,6 +349,12 @@ Mose, M. (2011).
 \newblock {Big patents , small secrets : how firms protect inventions when R
   {\&} D outcome is heterogeneous}.
 \newblock {\em BGPE Discussion Paper}.
+
+\bibitem[Moser, 2005]{moser2005patent}
+Moser, P. (2005).
+\newblock How do patent laws influence innovation? evidence from
+  nineteenth-century world's fairs.
+\newblock {\em American economic review}, 95(4):1214--1236.
 
 \bibitem[Munzer, 1990]{Munzer1990}
 Munzer, S.~R. (1990).
@@ -279,13 +376,24 @@ North, D.~C. and Thomas, R.~P. (1973).
 \newblock {\em The rise of the western world: A new economic history}.
 \newblock Cambridge University Press.
 
+\bibitem[Nuvolari, 2004]{nuvolari2004collective}
+Nuvolari, A. (2004).
+\newblock Collective invention during the british industrial revolution: the
+  case of the cornish pumping engine.
+\newblock {\em Cambridge Journal of Economics}, 28(3):347--363.
+
 \bibitem[Ostrom and Hess, 2010]{ostrom2010private}
 Ostrom, E. and Hess, C. (2010).
 \newblock Private and common property rights.
 \newblock {\em Property law and economics}, 5:53.
 
-\bibitem[Plant, 1934]{Plant1934}
-Plant, A. (1934).
+\bibitem[Plant, 1934a]{plant1934economic}
+Plant, A. (1934a).
+\newblock The economic theory concerning patents for inventions.
+\newblock {\em Economica}, 1(1):30--51.
+
+\bibitem[Plant, 1934b]{Plant1934}
+Plant, A. (1934b).
 \newblock {The Economic Aspects of Copyright in Books}.
 \newblock {\em Economica}, 1(2):167--195.
 
@@ -299,6 +407,10 @@ Schaefer, M.~B. (1957).
 \newblock Some considerations of population dynamics and economics in relation
   to the management of the commercial marine fisheries.
 \newblock {\em Journal of the Fisheries Board of Canada}, 14(5):669--681.
+
+\bibitem[Scherer, 2009]{scherer2009michele}
+Scherer, F.~M. (2009).
+\newblock Michele boldrin and david k. levine: Against intellectual property.
 
 \bibitem[Schlager and Ostrom, 1992]{schlager1992property}
 Schlager, E. and Ostrom, E. (1992).
@@ -380,6 +492,12 @@ Weeds, H. (2002).
 Weyl, E Glen ;~Tirole, J. (2012).
 \newblock Market power screens willingness-to-pay.
 \newblock {\em The Quarterly Journal of Economics}, 127(4):1971--2003.
+
+\bibitem[Williams, 2013]{williams2013intellectual}
+Williams, H.~L. (2013).
+\newblock Intellectual property rights and innovation: Evidence from the human
+  genome.
+\newblock {\em Journal of Political Economy}, 121(1):1--27.
 
 \bibitem[Winter, 1993]{Winter1993}
 Winter, S.~G. (1993).
