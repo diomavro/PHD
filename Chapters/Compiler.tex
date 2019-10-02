@@ -1,0 +1,315 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt,twoside]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathtools,amsmath,amssymb,amsthm,amsfonts,mathrsfs}
+\usepackage{booktabs,xtab,tabularx} %tabs
+%\usepackage[lofdepth,lotdepth]
+%\usepackage{subfig} 
+\usepackage{authblk}
+\usepackage{lscape}
+\usepackage[outline]{contour}
+\usepackage{qtree}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{psl-cover} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[pdftex]{hyperref}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage[nottoc]{tocbibind}
+\usepackage{titletoc,minitoc}
+\usepackage{indentfirst}
+\usepackage{afterpage}
+\usepackage{tikz}
+\tikzstyle arrowstyle=[scale=1]
+\usetikzlibrary{spy,arrows,positioning,shapes.multipart}
+\usetikzlibrary{shapes}
+\usepackage{float}
+%\usepackage[cmbold]{mathtime} %\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow,array}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{graphicx,graphics} %\usepackage[graphicx]{realboxes}
+\usepackage{epstopdf,pdflscape}
+\usepackage{longtable}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[authoryear]{natbib}
+\usepackage{dcolumn}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+%\bibliographystyle{aea}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm}
+
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+\def\firstcircle{(0,0) circle (4cm)}
+\def\secondcircle{(60:2cm) circle (2cm)}
+\def\thirdcircle{(30:2cm) circle (.9cm)}
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+% First, we define three circles:
+\def\firstcircle{(-0,0) circle (4)}
+\def\secondcircle{(-1.6,1) circle (2)}
+\pgfmathparse{-(2.4^2-2^2)^0.5} % by pythagoras
+\let\h\pgfmathresult % shortcut for further use
+\def\thirdcircle{(1,1) circle (1.5)}
+
+\title{Innovation and choice}
+\author{Diomides Mavroyiannis}
+\date{\today}
+\institute{Université Paris-Dauphine}
+\doctoralschool{École doctorale de Dauphine}{543}
+\specialty{Sciences économiques}
+
+\jurymember{1}{M Jacques CHARMES}{CEPED-IRD}{Rapporteur}
+\jurymember{2}{M Jean-François JACQUES}{Université Paris-Est Marne-la-Vallée}{Rapporteur}
+\jurymember{3}{Mme Rym AYADI}{CASS Business School}{Examinateur}
+\jurymember{4}{M Jérôme MATHIS}{Université Paris-Dauphine}{Examinateur}
+\jurymember{5}{M Mouhoud EL-MOUHOUB}{Université Paris-Dauphine}{Examinateur}
+\jurymember{6}{Mme Najat EL-MEKKAOUI}{Université Paris-Dauphine}{Directice de thèse}
+
+\fancyhead[LE]{\textbf{\thepage}}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\leftmark}
+\fancyhead[RO]{\textbf{\thepage}}
+\fancyfoot[C]{} 
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+\makeatletter
+
+\newcommand{\thechaptername}{}
+\newcounter{chapter@last}
+
+\renewcommand{\chaptermark}[1]
+            {
+              \markboth{#1}{}
+              \renewcommand{\thechaptername}{#1}
+            }
+
+\pretocmd{\caption}
+ {\ifnumequal
+  {\value{chapter}}
+  {\value{chapter@last}}
+  {}
+  {
+   \addtocontents{lot}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \addtocontents{lof}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \setcounter{chapter@last}{\value{chapter}}
+  }
+  }
+  {}
+  {}
+
+\makeatother
+
+\begin{document}
+
+\maketitle{}
+%\includepdf[pages=-,pagecommand={},width=\textwidth]{Cover.pdf}
+%\input{../Chapters/Cover}
+
+%\tableofcontents
+
+%\appendix
+
+\title{
+{Thesis Title}\\
+{\large PSL-Paris Dauphine}\\
+{\includegraphics{university.jpg}}
+}
+
+\frabstract{
+La région Moyen-Orient Afrique du Nord est caractérisée par l'une des populations les plus jeunes au monde (50\% des individus ont moins de 30 ans), le taux de chômage des jeunes le plus élevé et le deuxième taux d'emploi informel le plus élevé au monde malgré un nombre élevé de diplômés de l'enseignement supérieur. Empêchant les économies de la région de profiter du dividende économique, cette situation a conduit aux révoltes sociales et aux changements de régimes dans de nombreux pays (Tunisie, Egypte, Algérie, Maroc) depuis 2011.\\
+
+Des réformes des systèmes de protection sociale ont ainsi été mises en place : création de la Caisse Nationale d'Assurance Maladie, réforme de la sécurité sociale, extension de la protection sociale aux travailleurs informels, évolution des politiques actives de l'emploi. \\
+
+Dans cette thèse, on étudiera précisément les cas de la Tunisie et de la Jordanie en analysant les dispositifs créés, les populations qui y ont accès en théorie et dans la réalité, dans quelle mesure ces réformes parviennent ou non à atteindre leurs objectifs et une évaluation d'impact.
+}
+
+\enabstract{
+  MENA population is one of the youngest in the world (50\% of the population is under 30). In addition, it has the highest youth unemployment rate and the second higher informal employment rate despite a large number of graduates. This situation has kept the economies to enjoy the demographic dividend and led to social uprisings and change of political regime  since 2011 in many countries (Tunisia, Egypt, Algeria, Morocco).\\
+  
+Thus reforms of social protection systems have been set up : creation of National Health Insurance Fund, reform of social security, extending social security to informal workers, new active labor market policies. \\
+  
+In this dissertation, we study Tunisia and Jordan case by analyzing the reforms, which population are targeted, in what extent it reaches or not its goal and evaluate its effectiveness.
+}
+
+\frkeywords{ Région MENA, économie du travail, évaluation des politiques publiques, politiques actives de l'emploi, travail informel }
+\enkeywords{ MENA, labor economics, public policies evaluation, active labor market policies, informal work }
+
+
+ 
+%\chapter*{Dedication}
+%To mum and dad
+ 
+ 
+\chapter*{Acknowledgements}
+
+
+
+%\chapter{Introduction}
+%\input{../Chapters/Introduction}
+%
+%\chapter{Chapter 1}
+%\input{../Chapters/Chapter1}
+
+
+\end{document}

@@ -13,7 +13,7 @@ Alchian, A.~A. (1950).
 \bibitem[Alchian, 1965]{Alchian1965}
 Alchian, A.~A. (1965).
 \newblock Some economics of property rights.
-\newblock 30(4):816--829.
+\newblock {\em Il Politico}, 30(4):816--829.
 
 \bibitem[Alchian, 1973]{Alchian1973}
 Alchian, Armen A. ;~Demsetz, H. (1973).
@@ -100,6 +100,12 @@ Cheung, S. N.~S. (1970).
 \newblock {The Structure of a Contract and the Theory of a Non-Exclusive
   Resource}.
 \newblock {\em The Journal of Law and Economics}, 13(1):49.
+
+\bibitem[Chou, 2007]{Chou2007}
+Chou, Teyu ;~Haller, H. (2007).
+\newblock {The Division of profit in sequential innovation for probabilistic
+  patents}.
+\newblock {\em Review of Law and Economics}, 3(2):581--609.
 
 \bibitem[Ciriacy-Wantrup and Bishop, 1975]{ciriacy1975common}
 Ciriacy-Wantrup, S.~V. and Bishop, R.~C. (1975).
@@ -191,6 +197,10 @@ Gordon, H.~S. (1954).
 \newblock In {\em Classic Papers in Natural Resource Economics}, pages
   178--203. Springer.
 
+\bibitem[Green, 1995]{Green1995}
+Green, Jerry R. ;~Scotchmer, S. (1995).
+\newblock {On the Division of Profit in Sequentail Innovation}.
+
 \bibitem[Grossman, 1986]{Grossman1986}
 Grossman, Sanford J. ;~Hart, O.~D. (1986).
 \newblock {The Costs and Benefits of Ownership: A Theory of Vertical and
@@ -216,13 +226,13 @@ Hart, Oliver D. ;~Moore, J. (1990).
 \bibitem[Hart, 1999]{Hart1999}
 Hart, Oliver D. ;~Moore, J. (1999).
 \newblock {Foundations of Incomplete Contracts}.
-\newblock 66(1):115--138.
+\newblock {\em The Review of Economic Studies}, 66(1):115--138.
 
 \bibitem[{Heidrun C. Hoppe} and Baye, 2003]{Games2003}
 {Heidrun C. Hoppe} and Baye, M.~R. (2003).
 \newblock {The Strategic Equivalence of Rent-Seeking, Innovation, and
   Patent-Race Games}.
-\newblock pages 1--19.
+\newblock {\em Games and Economic Behavior}, 44(2):217--226.
 
 \bibitem[Hohfeld, 1917]{Hohfeld}
 Hohfeld, W.~N. (1917).
@@ -279,6 +289,11 @@ Lerner, J. and Malmendier, U. (2010).
 \newblock Contractibility and the design of research agreements.
 \newblock {\em American Economic Review}, 100(1):214--46.
 
+\bibitem[Lerner and Tirole, 2004]{Lerner2004}
+Lerner, J. and Tirole, J. (2004).
+\newblock {Efficient patent pools}.
+\newblock {\em American Economic Review}, 94(3):691--711.
+
 \bibitem[Levin et~al., 1987]{levin1987appropriating}
 Levin, R.~C., Klevorick, A.~K., Nelson, R.~R., Winter, S.~G., Gilbert, R., and
   Griliches, Z. (1987).
@@ -295,6 +310,11 @@ Locke, J. (2014).
 \newblock {\em Second treatise of government: An essay concerning the true
   original, extent and end of civil government}.
 \newblock John Wiley \& Sons.
+
+\bibitem[Loury, 1979]{loury_1979}
+Loury, G.~C. (1979).
+\newblock Market structure and innovation.
+\newblock {\em The Quarterly Journal of Economics}, 93(3):395.
 
 \bibitem[Mansfield, 1986]{mansfield1986patents}
 Mansfield, E. (1986).
@@ -315,6 +335,11 @@ Maskin, Eric ;~Tirole, J. (1999a).
 Maskin, Eric;~Tirole, J. (1999b).
 \newblock {Two Remarks on the Property-Rights Literature}.
 \newblock {\em Review of Economic Studies}, 66(1):139--149.
+
+\bibitem[Masur, 2011]{Masur2011}
+Masur, J. (2011).
+\newblock {Patent inflation}.
+\newblock {\em Yale Law Journal}, 121(3):470--532.
 
 \bibitem[Merges and Nelson, 1994]{merges1994limiting}
 Merges, R.~P. and Nelson, R.~R. (1994).
@@ -375,6 +400,11 @@ Nuvolari, A. (2004).
 \newblock Collective invention during the british industrial revolution: the
   case of the cornish pumping engine.
 \newblock {\em Cambridge Journal of Economics}, 28(3):347--363.
+
+\bibitem[O'Donoghue, 1998]{ODonoghue1998}
+O'Donoghue, T. (1998).
+\newblock {A Patentability Requirement for Sequential Innovation}.
+\newblock {\em RAND journal of economics}, 31(4):658--673.
 
 \bibitem[Ostrom and Hess, 2010]{ostrom2010private}
 Ostrom, E. and Hess, C. (2010).
@@ -501,5 +531,6 @@ Winter, S.~G. (1993).
 \bibitem[Zhang, 2014]{Zhang2014}
 Zhang, Juyan ;~Zhang, Y. (2014).
 \newblock {Sequential Investment, Hold-up, and Ownership Structure}.
+\newblock {\em Research Collection School Of Economics.}
 
 \end{thebibliography}

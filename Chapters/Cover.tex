@@ -1,0 +1,75 @@
+\fancyhead[LE]{\textbf{\thepage}}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\leftmark}
+\fancyhead[RO]{\textbf{\thepage}}
+\fancyfoot[C]{} 
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+\makeatletter
+
+\newcommand{\thechaptername}{}
+\newcounter{chapter@last}
+
+\renewcommand{\chaptermark}[1]
+            {
+              \markboth{#1}{}
+              \renewcommand{\thechaptername}{#1}
+            }
+
+\pretocmd{\caption}
+ {\ifnumequal
+  {\value{chapter}}
+  {\value{chapter@last}}
+  {}
+  {
+   \addtocontents{lot}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \addtocontents{lof}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \setcounter{chapter@last}{\value{chapter}}
+  }
+  }
+  {}
+  {}
+
+\makeatother
+
+
+\title{Evaluation des politiques actives de l'emploi et des réformes du système de protection sociale dans la région MENA}
+
+\author{Zied CHAKER}
+
+\institute{Université Paris-Dauphine}
+\doctoralschool{École doctorale de Dauphine}{543}
+\specialty{Sciences économiques}
+\date{26 Septembre 2019}
+
+\jurymember{1}{M Jacques CHARMES}{CEPED-IRD}{Rapporteur}
+\jurymember{2}{M Jean-François JACQUES}{Université Paris-Est Marne-la-Vallée}{Rapporteur}
+\jurymember{3}{Mme Rym AYADI}{CASS Business School}{Examinateur}
+\jurymember{4}{M Jérôme MATHIS}{Université Paris-Dauphine}{Examinateur}
+\jurymember{5}{M Mouhoud EL-MOUHOUB}{Université Paris-Dauphine}{Examinateur}
+\jurymember{6}{Mme Najat EL-MEKKAOUI}{Université Paris-Dauphine}{Directice de thèse}
+% \jurymember{7}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{8}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{9}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{10}{Prénom NOM}{Titre, établissement}{Invité}
+
+\frabstract{
+La région Moyen-Orient Afrique du Nord est caractérisée par l'une des populations les plus jeunes au monde (50\% des individus ont moins de 30 ans), le taux de chômage des jeunes le plus élevé et le deuxième taux d'emploi informel le plus élevé au monde malgré un nombre élevé de diplômés de l'enseignement supérieur. Empêchant les économies de la région de profiter du dividende économique, cette situation a conduit aux révoltes sociales et aux changements de régimes dans de nombreux pays (Tunisie, Egypte, Algérie, Maroc) depuis 2011.\\
+
+Des réformes des systèmes de protection sociale ont ainsi été mises en place : création de la Caisse Nationale d'Assurance Maladie, réforme de la sécurité sociale, extension de la protection sociale aux travailleurs informels, évolution des politiques actives de l'emploi. \\
+
+Dans cette thèse, on étudiera précisément les cas de la Tunisie et de la Jordanie en analysant les dispositifs créés, les populations qui y ont accès en théorie et dans la réalité, dans quelle mesure ces réformes parviennent ou non à atteindre leurs objectifs et une évaluation d'impact.
+}
+
+\enabstract{
+  MENA population is one of the youngest in the world (50\% of the population is under 30). In addition, it has the highest youth unemployment rate and the second higher informal employment rate despite a large number of graduates. This situation has kept the economies to enjoy the demographic dividend and led to social uprisings and change of political regime  since 2011 in many countries (Tunisia, Egypt, Algeria, Morocco).\\
+  
+Thus reforms of social protection systems have been set up : creation of National Health Insurance Fund, reform of social security, extending social security to informal workers, new active labor market policies. \\
+  
+In this dissertation, we study Tunisia and Jordan case by analyzing the reforms, which population are targeted, in what extent it reaches or not its goal and evaluate its effectiveness.
+}
+
+\frkeywords{ Région MENA, économie du travail, évaluation des politiques publiques, politiques actives de l'emploi, travail informel }
+\enkeywords{ MENA, labor economics, public policies evaluation, active labor market policies, informal work }
