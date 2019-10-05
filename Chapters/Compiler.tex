@@ -3,66 +3,87 @@
 %\documentclass[12pt]{article}
 %\documentclass[12pt,a4paper]{article}
 \usepackage[english]{babel}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
-\usepackage{mathtools,amsmath,amssymb,amsthm,amsfonts,mathrsfs}
-\usepackage{booktabs,xtab,tabularx} %tabs
-%\usepackage[lofdepth,lotdepth]
-%\usepackage{subfig} 
-\usepackage{authblk}
-\usepackage{lscape}
-\usepackage[outline]{contour}
-\usepackage{qtree}
-\usepackage{lmodern}
-\usepackage{lipsum}
-\usepackage{psl-cover} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage[pdftex]{hyperref}
-\usepackage{textcomp}
-\usepackage{titlesec}
-\usepackage[nottoc]{tocbibind}
-\usepackage{titletoc,minitoc}
-\usepackage{indentfirst}
-\usepackage{afterpage}
-\usepackage{tikz}
-\tikzstyle arrowstyle=[scale=1]
-\usetikzlibrary{spy,arrows,positioning,shapes.multipart}
-\usetikzlibrary{shapes}
-\usepackage{float}
+%\bibliographystyle{aea}
+%\bibliographystyle{unsrtnat}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+%\usepackage[cmbold]{mathtime}
 %\usepackage[cmbold]{mathtime} %\usepackage{mt11p}
-\usepackage{placeins}
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+%\usepackage[graphicx]{realboxes}
+%\usepackage[justification=centering]{caption}
+%\usepackage[lofdepth,lotdepth]
+%\usepackage{breakurl}
+%\usepackage{breakurl}
+%\usepackage{mt11p}
+%\usepackage{subfig} 
+
+\usepackage[authoryear]{natbib}
+\usepackage[nottoc]{tocbibind}
+\usepackage[outline]{contour}
+\usepackage[pdftex]{hyperref}
+\usepackage[percent]{overpic}
+
+\usepackage{afterpage}
+\usepackage{amsfonts}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{array}
+\usepackage{authblk}
+\usepackage{booktabs,} %tabs
 \usepackage{caption}
 \usepackage{color}
-\usepackage{subfigure}
-\usepackage{multirow,array}
-\usepackage{epsfig}
-\usepackage{listings}
+\usepackage{comment}
+\usepackage{dcolumn}
 \usepackage{enumitem}
-\usepackage{rotating}
-\usepackage{graphicx,graphics} %\usepackage[graphicx]{realboxes}
-\usepackage{epstopdf,pdflscape}
-\usepackage{longtable}
-%\usepackage{breakurl}
 \usepackage{epigraph}
-\usepackage{xspace}
+\usepackage{epsfig}
+\usepackage{epstopdf}
 \usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{footmisc}
+\usepackage{geometry}
+\usepackage{graphics}
+\usepackage{graphicx} %\usepackage[graphicx]{realboxes}
+\usepackage{indentfirst}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{placeins}
+\usepackage{psl-cover} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{qtree}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titletoc}%,minitoc
 \usepackage{ulem}
 \usepackage{verbatim}
-\usepackage{footmisc}
-\usepackage{comment}
-\usepackage{setspace}
-\usepackage{geometry}
-\usepackage[authoryear]{natbib}
-\usepackage{dcolumn}
-%\usepackage[justification=centering]{caption}
-%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\usepackage{xspace}
+\usepackage{xtab}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes}
+\usetikzlibrary{spy,arrows,positioning,shapes.multipart}
+
 \bibliographystyle{apalike}
-%\bibliographystyle{unsrtnat}
-%\bibliographystyle{aea}
-\usepackage{fancyhdr}
 \pagestyle{fancy}
+\tikzstyle arrowstyle=[scale=1]
 
 
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
@@ -92,7 +113,10 @@ urlcolor={blue!50!black}}
 %\singlespacing
 %\linespread{1.5}
 
+
 \newtheorem{theorem}{Theorem}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}{Proposition}
 \newtheorem{definition}{Definition}
@@ -102,8 +126,6 @@ urlcolor={blue!50!black}}
 \newtheorem{remark}{Remark}
 \newtheorem{lemma}{Lemma}
 \newtheorem{result}{result}
-
-
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 \newcommand{\E}{\mathrm{E}}
@@ -128,8 +150,7 @@ urlcolor={blue!50!black}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
 
 %\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
-\geometry{a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm}
-
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
 
 \epstopdfsetup{outdir=./}
 
@@ -154,10 +175,10 @@ urlcolor={blue!50!black}}
 \newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
 
 \newcommand{\etal}{{\it et~al.}\xspace}
-\newcommand{\ie}{{\it i.e.}\ }
-\newcommand{\eg}{{\it e.g.}\ }
-\newcommand{\etc}{{\it etc.}\ }
-\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ie}{{\it i.e.}\xspace}
+\newcommand{\eg}{{\it e.g.}\xspace}
+\newcommand{\etc}{{\it etc.}\xspace}
+\newcommand{\cf}{{\it c.f.}\xspace}
 \newcommand{\ave}[1]{\left\langle#1 \right\rangle}
 \newcommand{\person}[1]{{\it \sc #1}}
 
@@ -191,13 +212,10 @@ urlcolor={blue!50!black}}
 
 \newcommand{\del}{D}
 \newcommand{\hor}{H}
-
-\def\firstcircle{(0,0) circle (4cm)}
-\def\secondcircle{(60:2cm) circle (2cm)}
-\def\thirdcircle{(30:2cm) circle (.9cm)}
+\newcommand{\subhead}[1]{\mbox{}\newline\textbf{#1}\newline}
 
 \setlength{\parindent}{0.0cm}
-\setlength{\parskip}{0.4em}
+\setlength{\parskip}{0.5em}
 
 \numberwithin{equation}{section}
 \DeclareMathOperator\erf{erf}
@@ -210,6 +228,8 @@ urlcolor={blue!50!black}}
 \let\h\pgfmathresult % shortcut for further use
 \def\thirdcircle{(1,1) circle (1.5)}
 
+
+
 \title{Innovation and choice}
 \author{Diomides Mavroyiannis}
 \date{\today}
@@ -217,12 +237,12 @@ urlcolor={blue!50!black}}
 \doctoralschool{École doctorale de Dauphine}{543}
 \specialty{Sciences économiques}
 
-\jurymember{1}{M Jacques CHARMES}{CEPED-IRD}{Rapporteur}
-\jurymember{2}{M Jean-François JACQUES}{Université Paris-Est Marne-la-Vallée}{Rapporteur}
-\jurymember{3}{Mme Rym AYADI}{CASS Business School}{Examinateur}
-\jurymember{4}{M Jérôme MATHIS}{Université Paris-Dauphine}{Examinateur}
-\jurymember{5}{M Mouhoud EL-MOUHOUB}{Université Paris-Dauphine}{Examinateur}
-\jurymember{6}{Mme Najat EL-MEKKAOUI}{Université Paris-Dauphine}{Directice de thèse}
+\jurymember{1}{Olivier Bos}{Panthéon-Assas University}{Rapporteur}
+\jurymember{2}{Sarah Biancini}{Université de Cergy-Pontoise}{Rapporteur}
+\jurymember{3}{??}{??}{Examinateur}
+\jurymember{4}{Frederic Loss}{Université Paris-Dauphine}{Examinateur}
+\jurymember{5}{Anna Creti}{Université Paris-Dauphine}{Examinateur}
+\jurymember{6}{David Ettinger}{Université Paris-Dauphine}{Directice de thèse}
 
 \fancyhead[LE]{\textbf{\thepage}}
 \fancyhead[LO]{\leftmark}
@@ -231,6 +251,17 @@ urlcolor={blue!50!black}}
 \fancyfoot[C]{} 
 \fancyfoot[L]{}
 \fancyfoot[R]{}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
+
+
 \makeatletter
 
 \newcommand{\thechaptername}{}
@@ -259,14 +290,12 @@ urlcolor={blue!50!black}}
   {}
 
 \makeatother
-
 \begin{document}
-
 \maketitle{}
 %\includepdf[pages=-,pagecommand={},width=\textwidth]{Cover.pdf}
 %\input{../Chapters/Cover}
 
-%\tableofcontents
+\tableofcontents
 
 %\appendix
 
@@ -285,31 +314,48 @@ Dans cette thèse, on étudiera précisément les cas de la Tunisie et de la Jor
 }
 
 \enabstract{
-  MENA population is one of the youngest in the world (50\% of the population is under 30). In addition, it has the highest youth unemployment rate and the second higher informal employment rate despite a large number of graduates. This situation has kept the economies to enjoy the demographic dividend and led to social uprisings and change of political regime  since 2011 in many countries (Tunisia, Egypt, Algeria, Morocco).\\
+MENA population is one of the youngest in the world (50\% of the population is under 30). In addition, it has the highest youth unemployment rate and the second higher informal employment rate despite a large number of graduates. This situation has kept the economies to enjoy the demographic dividend and led to social uprisings and change of political regime  since 2011 in many countries (Tunisia, Egypt, Algeria, Morocco).\\
   
 Thus reforms of social protection systems have been set up : creation of National Health Insurance Fund, reform of social security, extending social security to informal workers, new active labor market policies. \\
   
 In this dissertation, we study Tunisia and Jordan case by analyzing the reforms, which population are targeted, in what extent it reaches or not its goal and evaluate its effectiveness.
 }
 
-\frkeywords{ Région MENA, économie du travail, évaluation des politiques publiques, politiques actives de l'emploi, travail informel }
-\enkeywords{ MENA, labor economics, public policies evaluation, active labor market policies, informal work }
+\frkeywords{ théorie de la décision, escompte, ergodicité, organisation industrielle, contrats incomplets , innovation, monopole, biens de réseau}
+\enkeywords{ decision theory, temporal discounting, ergodicity economics, industrial organization, incomplete contracts, innovation, monopoly, network goods }
 
 
- 
 %\chapter*{Dedication}
 %To mum and dad
  
  
 \chapter*{Acknowledgements}
+They say it takes a village, but the village has a chief, the most important person I would like to thank is my supervisor, David Ettinger. David took me under his wing without knowing me after only a few emails and a quick coffee. He has been constantly encouraging and always willing to discuss. David helped me revise my first chapter a few dozen times and had endless patience against my argumentantiveness. David was also instrumental in putting together the idea for the second chapter. What we have here is a character who never gets angry, who likes to joke, is exceedingly clever and has the bravery to take on large bureacratic responsibility. 
 
+I would like to thank all the people who criticized my work so that I could improve. Sidartha Gordon, gave me feedback at my presentation in Dauphine on my second chapter. Andras Nidermeyer also gave me helpful comments. Noemie Cabau, Morgan Patty were similarly obliging for my introduction. 
 
+In addition I would like to help thank my co-authors for my third chapter, Alexander Adamou, Yonatan Berman, and Ole Peters who apart from being endlessly supportive, flew me over to London so we could discuss the concept for an uninterupted period. I would especially like to thank Yonatan Berman for his night dedication to polish the paper.
 
-%\chapter{Introduction}
-%\input{../Chapters/Introduction}
+I would like to thank everyone who has been around and made these years enjoyable. I would especially like to thank, Arnold Njike, Christian Tekam, Emy Lecurier, Morgan Patty, Charlotte Scoufflaire, Doriane Mignon, Noemie Cabau, Alexis Dottin, Lexane Webber,  Maroua Riabi, Sandra Pellet Sarah Morcillo. 
+
+Finally I would like to thank my immediate family: Athena, Andreas and Nino for their wisdom and helping me keep myself in one piece. 
+\chapter{Introduction}
+%\chapterauthor{Diomides Mavroyiannis}
+\input{../Chapters/Chapter0}
 %
-%\chapter{Chapter 1}
-%\input{../Chapters/Chapter1}
+\chapter{Chapter 1}
+\input{../Chapters/Chapter1}
+
+\chapter{The direction of cost-side innovation and buyout preference reversal}
+\input{../Chapters/Chapter2}
+
+\chapter{Microfoundations of Discounting}
+\chapterauthor{With Alexander Adamou\footnote{London Mathematical Laboratory,~\url{a.adamou@lml.org.uk}}, Yonatan Berman\footnote{London Mathematical Laboratory,~\url{y.berman@lml.org.uk}} and Ole Peters\footnote{London Mathematical Laboratory and Santa Fe Institute,~\url{o.peters@lml.org.uk}}}
+With Special thanks to Ryan Singer for the insightful discussions that led to an early outline for this manuscript.
+% \chapterauthor{Alexander Adamou\footnote{London Mathematical Laboratory,~\url{a.adamou@lml.org.uk}} \and Yonatan Berman\footnote{London Mathematical Laboratory,~\url{y.berman@lml.org.uk}} \and Diomides Mavroyiannis\footnote{Universit\'{e} Paris-Dauphine,~\url{diomides.mavroyiannis@dauphine.eu}} \and Ole Peters\footnote{London Mathematical Laboratory and Santa Fe Institute,~\url{o.peters@lml.org.uk}}\,\, \thanks{We wish to thank Ryan Singer for insightful discussions that led to an early outline for this manuscript.}}
+\input{../Chapters/Discounting/Chapter3}
+\bibliography{../thesisbib/bibliography}
+
 
 
 \end{document}
