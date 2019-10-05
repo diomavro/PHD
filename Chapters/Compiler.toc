@@ -1,8 +1,8 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}The origins of the debate about private property}{6}{section.1.1}% 
-\contentsline {subsection}{\numberline {1.1.1}What is a property right?}{9}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.1.2}The language of property rights}{9}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.1}What is a property right?}{8}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}The language of property rights}{8}{subsection.1.1.2}% 
 \contentsline {section}{\numberline {1.2}The static economics of property rights}{14}{section.1.2}% 
 \contentsline {subsubsection}{Identical and strictly positive subjective value for all agents}{15}{section.1.2}% 
 \contentsline {subsubsection}{Identical and null value for all agents}{15}{section.1.2}% 

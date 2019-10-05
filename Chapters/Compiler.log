@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  5 OCT 2019 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  5 OCT 2019 19:44
 entering extended mode
 **./Compiler.tex
 (Compiler.tex
@@ -2023,7 +2023,7 @@ Package pdftex.def Info: ./logo.png  used on input line 294.
 e{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...e {2.5}Solving the model}{46}{section.2.5}
+l.29 ...e {2.5}Solving the model}{49}{section.2.5}
                                                   % [1
 
 
@@ -2038,7 +2038,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 ...}{\numberline {3.3}Setup}{79}{section.3.3}
+l.58 ...}{\numberline {3.3}Setup}{82}{section.3.3}
                                                   % [2] [3])
 \tf@toc=\write6
 \openout6 = `Compiler.toc'.
@@ -2054,30 +2054,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 11.
  [6
 
-] [7] [8]
-Overfull \hbox (25.32265pt too wide) in paragraph at lines 51--52
+] [7]
+Overfull \hbox (25.32265pt too wide) in paragraph at lines 47--48
  [] 
  []
 
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
-) has been already used, duplicate ignored
+[8]
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.57 
-     ] [10] [11] [12pdfTeX warning (ext4): destination with the same identifier
- (name{figure.1.2}) has been already used, duplicate ignored
+l.62 
+     ]
+Underfull \vbox (badness 2343) has occurred while \output is active []
+
+ [10]
+[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.137 
+l.133 
       ] [13] [14] [15] [16] [17] [18] [19pdfTeX warning (ext4): destination wit
 h the same identifier (name{table.1.1}) has been already used, duplicate ignore
 d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.219 
+l.215 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2241,8 +2248,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [106]) [107]
 Chapter 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 354.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 354.
+(Font)              <14.4> on input line 353.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 353.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2376,45 +2383,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <./back-bg.png, id=1894, 556.0775pt x 715.67375pt>
 File: ./back-bg.png Graphic file (type png)
 <use ./back-bg.png>
-Package pdftex.def Info: ./back-bg.png  used on input line 362.
+Package pdftex.def Info: ./back-bg.png  used on input line 361.
 (pdftex.def)             Requested size: 417.0571pt x 536.754pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 362.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 361.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 362.
+(Font)              <11> on input line 361.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 362.
+(Font)              <7.69997> on input line 361.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 362.
+(Font)              <5.5> on input line 361.
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 362.
+(Font)              size <5> substituted on input line 361.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
 [144 <./back-bg.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
  (Compiler.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `Compiler.out' has not changed.
 (rerunfilecheck)             Checksum: 1AE44DFA4950A34A0D3E365726B026DF;5911.
 
@@ -2425,12 +2432,12 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 362.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
  ) 
 Here is how much of TeX's memory you used:
  48638 strings out of 492969
  1072508 string characters out of 3134358
- 1343534 words of memory out of 3000000
+ 1343566 words of memory out of 3000000
  51114 multiletter control sequences out of 15000+200000
  675729 words of font info for 134 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2676,7 +2683,7 @@ KTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Compiler.pdf (146 pages, 5180755 bytes).
+Output written on Compiler.pdf (146 pages, 5181011 bytes).
 PDF statistics:
  2096 PDF objects out of 2487 (max. 8388607)
  542 named destinations out of 1000 (max. 500000)
