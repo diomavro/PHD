@@ -1,0 +1,25 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}The origins on the debate about private property}{3}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}What is a property right?}{5}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}The language of property rights}{5}{subsection.1.1.2}% 
+\contentsline {section}{\numberline {1.2}The static economics of property rights}{11}{section.1.2}% 
+\contentsline {subsubsection}{Identical and strictly positive subjective value for all agents}{12}{section.1.2}% 
+\contentsline {subsubsection}{Identical and null value for all agents}{12}{section.1.2}% 
+\contentsline {subsubsection}{Identical and negative value for all agents}{13}{section.1.2}% 
+\contentsline {subsubsection}{Variable and weakly positive value for all agents}{13}{section.1.2}% 
+\contentsline {subsubsection}{Variable and weakly negative value for all agents}{13}{section.1.2}% 
+\contentsline {subsubsection}{Variable, positive and negative value}{13}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Coasian paradigm}{13}{subsection.1.2.1}% 
+\contentsline {section}{\numberline {1.3}The Dynamic creation of property rights}{16}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Incomplete contracting}{20}{subsection.1.3.1}% 
+\contentsline {section}{\numberline {1.4}Intellectual Property}{23}{section.1.4}% 
+\contentsline {subsection}{\numberline {1.4.1}Assumptions of intellectual property}{27}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {1.4.2}Mechanism Design}{32}{subsection.1.4.2}% 
+\contentsline {subsection}{\numberline {1.4.3}Scope and evidence}{34}{subsection.1.4.3}% 
+\contentsline {section}{\numberline {1.5}Contrbutions in this thesis}{36}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}First chapter}{36}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2}Second chapter}{37}{subsection.1.5.2}% 
+\contentsline {subsection}{\numberline {1.5.3}Third chapter}{37}{subsection.1.5.3}% 
+\contentsline {chapter}{Bibliography}{39}{chapter*.3}% 
+\contentsfinish 

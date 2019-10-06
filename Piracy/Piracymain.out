@@ -3,23 +3,28 @@
 \BOOKMARK [1][-]{section.3}{The model}{}% 3
 \BOOKMARK [1][-]{section.4}{Preliminary Analysis}{}% 4
 \BOOKMARK [1][-]{section.5}{Solving the model}{}% 5
-\BOOKMARK [1][-]{section.6}{Extension: Simulating an endogenous k}{}% 6
-\BOOKMARK [1][-]{section.7}{Discussion and Conclusion}{}% 7
-\BOOKMARK [1][-]{section.8}{Appendix 1}{}% 8
-\BOOKMARK [2][-]{subsection.8.1}{Details on buyers and pirates}{section.8}% 9
-\BOOKMARK [1][-]{section.9}{Appendix 2}{}% 10
-\BOOKMARK [2][-]{subsection.9.1}{Proof of proposition 2}{section.9}% 11
-\BOOKMARK [3][-]{subsubsection.9.1.1}{corollary of proposition 9.1}{subsection.9.1}% 12
-\BOOKMARK [3][-]{subsubsection.9.1.2}{Why the envelope theorem applies}{subsection.9.1}% 13
-\BOOKMARK [2][-]{subsection.9.2}{Proof of proposition 3}{section.9}% 14
-\BOOKMARK [2][-]{subsection.9.3}{Proof of proposition 7 }{section.9}% 15
-\BOOKMARK [1][-]{section.10}{Appendix 3}{}% 16
-\BOOKMARK [2][-]{subsection.10.1}{Proof of proposition 4}{section.10}% 17
-\BOOKMARK [2][-]{subsection.10.2}{Upper and lower bound conditions}{section.10}% 18
-\BOOKMARK [2][-]{subsection.10.3}{First and second order conditions of the profit function}{section.10}% 19
-\BOOKMARK [1][-]{section.11}{Appendix 4:Endogenous k}{}% 20
-\BOOKMARK [2][-]{subsection.11.1}{Details on buyers and pirates}{section.11}% 21
-\BOOKMARK [2][-]{subsection.11.2}{Details on three segments}{section.11}% 22
-\BOOKMARK [2][-]{subsection.11.3}{Some values for k and a first order approximation}{section.11}% 23
-\BOOKMARK [2][-]{subsection.11.4}{Second order approximation of k}{section.11}% 24
-\BOOKMARK [2][-]{subsection.11.5}{Welfare}{section.11}% 25
+\BOOKMARK [2][-]{subsection.5.1}{Equilibrium when r=0, no piracy cost}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{ Equilibrium when r is high}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Does the firm prefer the high product degradation case or the no product degradation case? }{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.4}{ Equilibrium for intermediate values of the cost of piracy}{section.5}% 9
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Case where all segments exist}{subsection.5.4}% 10
+\BOOKMARK [1][-]{section.6}{Extension: Endogenous k}{}% 11
+\BOOKMARK [1][-]{section.7}{Discussion and Conclusion}{}% 12
+\BOOKMARK [1][-]{section.8}{Appendix 1}{}% 13
+\BOOKMARK [2][-]{subsection.8.1}{Details on buyers and pirates}{section.8}% 14
+\BOOKMARK [1][-]{section.9}{Appendix 2}{}% 15
+\BOOKMARK [2][-]{subsection.9.1}{Proof of proposition 2}{section.9}% 16
+\BOOKMARK [3][-]{subsubsection.9.1.1}{corollary of proposition 9.1}{subsection.9.1}% 17
+\BOOKMARK [3][-]{subsubsection.9.1.2}{Why the envelope theorem applies}{subsection.9.1}% 18
+\BOOKMARK [2][-]{subsection.9.2}{Proof of proposition 3}{section.9}% 19
+\BOOKMARK [2][-]{subsection.9.3}{Proof of proposition 7 }{section.9}% 20
+\BOOKMARK [1][-]{section.10}{Appendix 3}{}% 21
+\BOOKMARK [2][-]{subsection.10.1}{Proof of proposition 4}{section.10}% 22
+\BOOKMARK [2][-]{subsection.10.2}{Upper and lower bound conditions}{section.10}% 23
+\BOOKMARK [2][-]{subsection.10.3}{First and second order conditions of the profit function}{section.10}% 24
+\BOOKMARK [1][-]{section.11}{Appendix 4:Endogenous k}{}% 25
+\BOOKMARK [2][-]{subsection.11.1}{Details on buyers and pirates}{section.11}% 26
+\BOOKMARK [2][-]{subsection.11.2}{Details on three segments}{section.11}% 27
+\BOOKMARK [2][-]{subsection.11.3}{Some values for k and a first order approximation}{section.11}% 28
+\BOOKMARK [2][-]{subsection.11.4}{Second order approximation of k}{section.11}% 29
+\BOOKMARK [2][-]{subsection.11.5}{Welfare}{section.11}% 30

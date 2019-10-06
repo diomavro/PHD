@@ -1,0 +1,216 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+\usetheme{Marburg}
+\usecolortheme{orchid}
+}
+
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{footmisc}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+
+\usepackage{enumitem}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{axiom}{Axiom}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+
+%Intuitive read: https://medium.com/@aerinykim/moment-generating-function-explained-27821a739035
+%History of the word moment: https://stats.stackexchange.com/questions/17595/whats-so-moment-about-moments-of-a-probability-distribution
+
+\title[Aspects of probability]{Introduction} 
+
+\author{ Diomides Mavroyiannis} % Your name
+\institute[London Mathematical Laboratory, Dauphine] 
+{
+London Mathematical Laboratory, PSL/Paris Dauphine \\ 
+\medskip
+}
+\date{\today} 
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\setcounter{tocdepth}{1}
+\section{Introduction}
+%------------------------------------------------
+
+\subsection{The cookbook for each distribution}
+\begin{frame}{Discrete and continous case}
+\begin{itemize}
+    \item $MGF_x(t):=E[e^{tx}]= \sum_x e^{tx} P(x)$ x:discrete
+    \item $MGF_x(t):=E[e^{tx}]= \int_x e^{tx} f(x)$ x:discrete
+    \item $E(x^n) = \frac{d^n}{dt^{n}} MGF_x(t) |_{t=0}$
+    \item First moment: $E(X) = \frac{d}{dt} MGF_x(t) |_{t=0} = MGF'_x(0)$
+    \item Second moment: $E(X^2) = \frac{d^2}{dt^{2}} MGF_x(t) |_{t=0} = MGF''_x(0)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Proof}
+\begin{itemize}
+    \item $e^x= 1+x+ \frac{x^2}{2!}+\frac{x^3}{3!}+...+\frac{x^n}{n!} $ 
+    \item $e^{tx}= 1+tx+ \frac{(tx)^2}{2!}+\frac{(tx)^3}{3!}+...+\frac{(tx)^n}{n!} $ 
+    \item $E(e^{tx}) = E(1+tx+ \frac{(tx)^2}{2!}+\frac{(tx)^3}{3!}+...+\frac{(tx)^n}{n!})$
+    \item $= E(1)+tE(x)+ \frac{t^2}{2!}E(x^2)+\frac{t^3}{3!}E(x^3)+...+\frac{t^n}{n!}E(x^n)$
+    \item $\frac{d E(e^{tx})}{dt} = \frac{d}{dt}(E(1)+tE(x)+ \frac{t^2}{2!}E(x^2)+\frac{t^3}{3!}E(x^3)+...+\frac{t^n}{n!}E(x^n))$
+    \item plug in $t=0$
+    \item $0 + E(x)+0...0 =E(x) $  
+\end{itemize}
+\end{frame}
+
+\subsection{MGF properties}
+\begin{frame}{A few facts about MGF}
+\begin{itemize}
+    \item For any MGF, $M(0)=1$
+    \item If you want the k'th moments, derive k times and set the function equal to 0. 
+    \item The MGF is unique for each distribution
+%see https://math.stackexchange.com/questions/458680/how-to-prove-moment-generating-function-uniqueness-theorem
+\end{itemize}
+\end{frame}
+
+\subsection{Exponential}
+\begin{frame}{application}
+\begin{itemize}
+    \item $f_x(x) = \lambda e^{-\lambda x}$ if $x>0$
+    \item $MGF_x(t) = E[e^{tx}]= \int^{\infty}_0 e^{tx} \lambda e^{-\lambda x} dx$
+    \item $= \lambda \int_0^{\infty} e^{(t-\lambda)x}dx$, require: $t-\lambda < 0$ %divergence
+    \item $\lambda |\frac{1}{t-\lambda}e^{t-\lambda}x|_0^{\infty}$
+    \item $\lambda (0-\frac{1}{t-\lambda})=\frac{\lambda}{\lambda - t}$
+%see https://math.stackexchange.com/questions/458680/how-to-prove-moment-generating-function-uniqueness-theorem
+\end{itemize}
+\end{frame}
+
+%amazing link on deriving the normal dist https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+%https://medium.com/@aerinykim/how-to-derive-chi-squared-pdf-from-normal-gaussian-c48d6d19b3d4
+
+%https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a
+%https://towardsdatascience.com/poisson-distribution-intuition-and-derivation-1059aeab90d
+%https://towardsdatascience.com/what-is-column-space-with-a-machine-learning-example-8f8a8d4ec6c
+%https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3
+%https://towardsdatascience.com/the-intuition-behind-shannons-entropy-e74820fe9800
+%https://medium.com/@aerinykim/why-is-the-second-principal-component-orthogonal-to-the-first-one-d453c9fd97ca
+%
+
+\end{document}
