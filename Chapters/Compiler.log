@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  6 OCT 2019 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  7 OCT 2019 02:08
 entering extended mode
 **./Compiler.tex
 (Compiler.tex
@@ -2204,7 +2204,7 @@ Underfull \vbox (badness 1953) has occurred while \output is active []
 
  [26]
 [27] [28]
-Underfull \vbox (badness 1953) has occurred while \output is active []
+Underfull \vbox (badness 2343) has occurred while \output is active []
 
  [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2213,10 +2213,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-[32] [33] [34] [35] [36] [37]) (Compiler.bbl [38] [39
+Underfull \vbox (badness 1412) has occurred while \output is active []
 
-] [40] [41] [42] [43]
-[44] [45] [46] [47] [48]) [49] [50
+ [32]
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+ [33]
+[34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+[36] [37]) (Compiler.bbl [38] [39
+
+] [40] [41] [42] [43] [44] [45] [46] [47]
+[48]) [49] [50
 
 
 ] [51]
@@ -2274,7 +2284,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
 Here is how much of TeX's memory you used:
  48243 strings out of 492895
  1077113 string characters out of 3117197
- 1339442 words of memory out of 3000000
+ 1339441 words of memory out of 3000000
  51067 multiletter control sequences out of 15000+200000
  650027 words of font info for 122 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2507,7 +2517,7 @@ type1/public/lm/lmsy10.pfb><C:/Users/Dio.DESKTOP-QB6MRSV/AppData/Local/Programs
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Dio.
 DESKTOP-QB6MRSV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
 8a.pfb>
-Output written on Compiler.pdf (54 pages, 1066420 bytes).
+Output written on Compiler.pdf (54 pages, 1066301 bytes).
 PDF statistics:
  968 PDF objects out of 1000 (max. 8388607)
  293 named destinations out of 1000 (max. 500000)

@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {1.4.3}Scope and evidence}{34}{subsection.1.4.3}% 
 \contentsline {section}{\numberline {1.5}Contrbutions in this thesis}{36}{section.1.5}% 
 \contentsline {subsection}{\numberline {1.5.1}First chapter}{36}{subsection.1.5.1}% 
-\contentsline {subsection}{\numberline {1.5.2}Second chapter}{37}{subsection.1.5.2}% 
+\contentsline {subsection}{\numberline {1.5.2}Second chapter}{36}{subsection.1.5.2}% 
 \contentsline {subsection}{\numberline {1.5.3}Third chapter}{37}{subsection.1.5.3}% 
 \contentsline {chapter}{Bibliography}{39}{chapter*.3}% 
 \contentsfinish 
