@@ -78,9 +78,9 @@ The difference to notice between these two methods is that the sequential innova
 
 %\textcolor{orange}{The choice}
 
-It is known that in most standard competitive frameworks, firms will want to merge because monopoly profits are higher than the sum of profits. So if bargaining is possible and credible through contracting there always exists a positive Nash surplus that can be shared. In our framework this takes the following form: 
+It is known that in most standard competitive frameworks, firms will want to merge because merger profits are higher than the sum of profits. So if bargaining is possible and credible through contracting there always exists a positive Nash surplus that can be shared. In our framework this takes the following form: 
 
-\begin{assumption}{Sub-additive competitive profits}
+\begin{assumption}{Sub-additive competitive profits}\label{as1}
 \begin{equation*}
 \pi_{i}(c_{i2},c_{e}) \geq  \pi_{i}(c_{i},c_{e2}) + \pi_{e}(c_{i},c_{e2})
 \end{equation*}
@@ -88,6 +88,14 @@ It is known that in most standard competitive frameworks, firms will want to mer
 \pi_{i}(c_{i},c_{e}) \geq  \pi_{i}(c_{i},c_{e1}) + \pi_{e}(c_{i},c_{e1})
 \end{equation*}
 \end{assumption}
+
+We also make an additional assumption that is sufficient but not neccesary for the results\footnote{The neccesary assumption is: $\pi_{i}(c_{i2},c_{e}) \leq \pi_{i}(c_{i},c_{e})+(\pi_{i}(c_{i},c_{e2}) + \pi_{e}(c_{i},c_{e2})+(\pi_{i}(c_{i},c_{e1}) + \pi_{e}(c_{i},c_{e1}))$}. The assumption is that the effect of the technology on a merged firm is lower than the effect of the technology on the sum of industry profits. 
+
+\begin{assumption}{Decreasing merger profits}\label{as2}
+\begin{equation*}
+\pi_{i}(c_{i2},c_{e}) -\pi_{i}(c_{i},c_{e}) \leq (\pi_{i}(c_{i},c_{e2}) + \pi_{e}(c_{i},c_{e2}))-(\pi_{i}(c_{i},c_{e1}) + \pi_{e}(c_{i},c_{e1}))
+\end{equation*}
+\end{assumption} 
 
 %\textcolor{orange}{Buyout is always done in Bertrand competition}
 
@@ -176,7 +184,7 @@ B_{is}(\omega) &= \Pi_{is}+(1-\omega)S_s \\
 \\&+(\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_i(c_{i2},c_e)-\pi_e(c_{i},c_{e2})))(T-t_2)
 \end{align*}
 
-Notice here is that the absolute value of $t_1$ plays a role because it represents how many periods the incumbent will be uninterupted in monopoly profits. So the time when the intermediate innovation kicks in has no positive effect on the entrant but does increase the bargaining profit of the incumbent. 
+Notice here is that the absolute value of $t_1$ plays a role because it represents how many periods the incumbent will be uninterupted in pursuing the baseline profits. So the time when the intermediate innovation kicks in has no positive effect on the entrant but does increase the bargaining profit of the incumbent. 
 
 \subsection{Radical}
 
@@ -305,35 +313,63 @@ B_{er}(\omega)-F > B_{es}(\omega)-F \\
 -\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1}) \equiv \Delta B >0 \\
 \end{align*}
 
-\subsection{Comparison}
-
-If the entrant has no bargaining power, the incentives with and without buyout are identical, $(\omega=0 \rightarrow \Delta B = \Delta \Pi)$. This leads us to the main proposition of the paper which is about the excess incentive of pursuing the sequential innovation:  
+\subsection{Comparison}  
 
 \begin{proposition} \label{excessincentive}
 The entrant will weakly prefer the sequential innovation in the case of buyouts.
 \end{proposition}
 \begin{proof}
-We need only set $\Delta B > \Delta \Pi $
+If $\Delta B$ is larger than $\Delta \Pi$, this means that the requirements for the radical innovation to be preferred are more stringent in the buyout case than the non-buyout case.  We need only set $\Delta B \leq \Delta \Pi $. We define: $ \chi =\Delta B - \Delta \Pi \equiv 0$ 
 \begin{align*}
 \omega \left(  \pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e2})  \left( t_2- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) \right. \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--\left.\pi_i(c_i,c_{e})-\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1}) \right)  >0 \\
+-\left.\pi_i(c_i,c_{e})-\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1}) \right) \equiv \chi \leq 0 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{align*}
-This represents the difference in conditions for the radical innovation to be prefered. If the difference is positive, this implies that the condition of the buyout case is larger. NEED TO REVIEW THIS! 
+
+Note that $\chi$ is the neccesary condition for the sequential innovation to be over pursued relative to the radical innovation. Using assumption \ref{as2} in the following way we can have a sufficient condition: 
+\begin{align*}
+\pi_{i}(c_{i2},c_{e})-\pi_i(c_i,c_{e})-\pi_{i}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e2}) \leq -(\pi_i(c_i,c_{e1})+\pi_e(c_i,c_{e1})) \\
+\text{We define: } \pi_{i}(c_{i2},c_{e})-\pi_i(c_i,c_{e})-\pi_{i}(c_{i},c_{e2})  \equiv \zeta
+\\
+\zeta -\pi_{e}(c_{i},c_{e2}) \left( t_2- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) \\
+\leq 
+\left.-(\pi_i(c_i,c_{e1})+\pi_e(c_i,c_{e1})) -\pi_{e}(c_{i},c_{e2}) \left( t_2-1- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)\right) \leftrightarrow \\ 
+\zeta -\pi_{e}(c_{i},c_{e2}) \left( t_2- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) -(\pi_i(c_i,c_{e1})+\pi_e(c_i,c_{e1})) -\pi_{e}(c_{i},c_{e2})\\
+\leq 
+\left. -2(\pi_i(c_i,c_{e1})+\pi_e(c_i,c_{e1})) -\pi_{e}(c_{i},c_{e2}) \left( t_2-1- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)\right) \leftrightarrow \\ 
+\chi \leq 
+\left. -2(\pi_i(c_i,c_{e1})+\pi_e(c_i,c_{e1})) -\pi_{e}(c_{i},c_{e2}) \left( t_2-1- \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)\right) \leftrightarrow 
+\end{align*}
+
+Since $t_2 \geq 1$ the RHS of the inequality is smaller than 0, the result is given. 
+% \begin{align*}
+% \pi_{i}(c_{i2},c_{e})-(\pi_{i}(c_{i},c_{e2})+\pi_{e}(c_{i},c_{e2})) \leq \pi_i(c_i,c_{e})-\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1}) \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pi_{i}(c_{i2},c_{e})-\pi_{i}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e2})\left( t_2- \frac{1}{q} \left( 1-(1-q)^{T} \right)+\pi_{e}(c_{i},c_{e2})\left( t_2-1- \frac{1}{q} \left( 1-(1-q)^{T} \right) \leq \pi_i(c_i,c_{e})-\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1}) \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pi_{i}(c_{i2},c_{e})-\pi_{i}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e2})\left( t_2- \frac{1}{q} \left( 1-(1-q)^{T} \right)
+% -\pi_i(c_i,c_{e})-\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1})\leq -2(\pi_i(c_i,c_{e1})-\pi_e(c_i,c_{e1}))+\pi_{e}(c_{i},c_{e2})\left( t_2-1- \frac{1}{q} \left( 1-(1-q)^{T} \right) 
+% \end{align*}
 \end{proof}
 
+Notice that if the entrant has no bargaining power, the incentives with and without buyout are identical, $(\omega=0 \rightarrow \Delta B = \Delta \Pi)$. This leads us to the main proposition of the paper which is about the excess incentive of pursuing the sequential innovation:
 
-If $\Delta B$ is larger than $\Delta \Pi$, this means that the requirements for the radical innovation to be preferred are more stringent in the buyout case than the non-buyout case.  
 
 \subsection{The willingness to lobby for buyouts}
 
 The buyout option will always benefit the entrant because by definition the entrant can always just ignore that option. However the buyout option does not always benefit the incumbent. It is worth considering how the willingness to pay of the incumbent for a policy change varies with parameters.
+Let $\Pi = max\{ \Pi_{es},\Pi_{er} \}$ and $B = max\{ B_{es},B_{er} \}$. If a change in the legality of buyouts does not affect the incentives of the entrant, $F>B>\Pi$ then there is no willingness to pay. The incumbent will have to balance out the risks of competition and blackmail with the possible synergies that could be present with the buyout.
 
-Due to the prop \ref{excessincentive} we know that if the buyout affects preferences, it implies that the entrant will pursue sequential innovation. The incumbent will have to balance out the risks of competition and blackmail with the possible synergies that could be present with the buyout. Let $\Pi = max\{ \Pi_{es},\Pi_{er} \}$ and $B = max\{ B_{es},B_{er} \}$ and recall that $B> \pi \forall \omega > 0$. If a change in the legality of buyouts does not affect the incentives of the entrant, $F>B>\Pi$ then there is no willingness to pay. This leaves us with three remaining cases: It does not affect preferences but does affect the decision to enter, $B>F> \Pi$. It affects preferences but not decision to enter, this is represented by: $B> \Pi >F$ and $B=B_{es},\Pi=\Pi_{er}$. It affects both preferences and decision to enter, $B> F>\Pi$ and $B=B_{es},\Pi=\Pi_{er}$  \newline
+\subsubsection{Case 1: Buyouts affect decision to enter: } \label{case:decision}
 
+Suppose first that the possibility for a buyout affects the decision to enter. This corresponds to the fixed cost is larger than the non-merger choice but is smaller than the merger choice, $B>F> \Pi$.
 
-\subsubsection{Case 1: Does not affect preferences, but affects decision to enter} \label{case:decision}
-The first case is where the effect of the buyout has an incentive effect such that it causes the entrant to come into the market. This case is likely the one where welfare can be increased by legalizing buyouts. From the point of view of the incumbent, the willingness to lobby is only positive if the complementarity is between innovations in large. To evaluate this case we need only note that without the buyout, the incumbent would receive $T-1$ flows of $\pi_i(c_i,c_e)$. The incumbent will therefore prefer the buyout if the flow is inferior to the bargaining payoff: 
+\begin{proposition}
+If the buyout can effect the entry decision, there always exists a negotiating power,$\overline{\omega}$ where if $\omega > \overline{\omega}$, the incumbent will have a willingness to pay to prevent mergers, and if $\omega < \overline{\omega}$, the entrant will have a willingness to pay to legalize mergers. 
+\end{proposition}
+
+\begin{proof}
+In this case the corresponding willingness to pay for policy change is given by:
 
 \begin{align*}
 B_{is}(\omega)&>(T-1) \pi_i(c_i,c_e) \\
@@ -342,18 +378,39 @@ B_{is}(\omega)&>(T-1) \pi_i(c_i,c_e) \\
 &+(\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_i(c_{i2},c_e)-\pi_e(c_{i},c_{e2})))(T-t_2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\&- \pi(c_i,c_e)(T-1-t_1)>0 \\
-B_{ir}(\omega)&>(T-1)\pi_i(c_i,c_e) \\
-& \leftrightarrow (\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_{i}(c_{i2},c_{e})-\pi_{e}(c_{i},c_{e2}))-\pi_i(c_i,c_e)) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)>0 \\
-& \text{Since we know that the second term is positive, the condition for a positive WTP is:} \\
-&\rightarrow
-(\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_{i}(c_{i2},c_{e})-\pi_{e}(c_{i},c_{e2}))-\pi_i(c_i,c_e))>0 \\
+\text{If }\omega &=0: \pi_i(c_i,c_{e})-\pi_e(c_i,c_{i1}) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++(\pi_i(c_{i2},c_e)-\pi_e(c_{i},c_{e2}))(T-t_2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- \pi(c_i,c_e)(T-1-t_1)>0 \\
+\text{If }\omega &=1: \pi_i(c_i,c_{i1})
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++\pi_i(c_i,c_{e2})(T-t_2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- \pi(c_i,c_e)(T-1-t_1)>0 
 \end{align*}
 
+Notice that this expression can be negative. Depending on how large $\pi(c_i,c_e)$ is relative to the rest of the expression. This expression can be used to determine how much barganing power the incumbent would need in order to have a zero willingness to pay. 
 
-\subsubsection{Case 2: Affects preferences but not decision to enter} \label{case:preference}
+It is also possible that the option to buyout affects is affects the option to enter but not the project undertaken. If the project that would have been undertaken was the sequential one then the willingness to pay would be the same as above. If on the other hand the entrant enters and pursues the radical innovation then the willingness to pay of the incumbent is: 
 
-Since the entrant would have entered anyway but the only thing that has changed is the choice of innovation this is the difference in payoff between the bargaining payoff in the sequential innovation and the market payoff with the radical innovation. 
+\begin{align*}
+B_{ir}(\omega)&>(T-1)\pi_i(c_i,c_e) \\
+& \leftrightarrow (\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_{i}(c_{i2},c_{e})-\pi_{e}(c_{i},c_{e2}))-\pi_i(c_i,c_e)) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)>0 \\
+\text{If }\omega &=0: (\pi_{i}(c_{i2},c_{e})-\pi_{e}(c_{i},c_{e2})-\pi_i(c_i,c_e)) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) \\
+\text{If }\omega &=1: ( \pi_i(c_i,c_{e2})-\pi_i(c_i,c_e)) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)
+\end{align*}
 
+The case where $\omega = 0$, where the incumbent has all the negotiating power, is strictly positive due to assumption \ref{as1}. The case where all the negotiating power is given to the entrant, $\omega = 1$, results on the other hand is negative due to the competitive effect.  
+\end{proof}
+
+\subsubsection{Case 2: Buyouts only affect the preference} \label{case:decision}
+
+This leaves us with one case, the case where the firm would have entered anyway but the buyouts cause it to pursue the the sequential innovation. An intuitive scenario in which this case would occur is if the radical innovation is very effective, this would entail a large risk to the incumbent, which would create a high willingness to pay to avoid the potential losses. Due to proposition \ref{excessincentive}, we know that we only need to consider the case where the buyout shfits incentives to the sequential technology. In this case the willingness to pay would be given by the following expression: 
+\begin{proposition}
+If buyouts do not affect entry decision, the willingness to pay for buyouts by the incumbent is always positive. 
+\end{proposition}
+\begin{proof}
 \begin{align*}
 &B_{is}(\omega)>\Pi_{ir}
 \\
@@ -367,27 +424,31 @@ Since the entrant would have entered anyway but the only thing that has changed 
 &> \pi_{i}(c_i,c_{e2}) \left( T-1 - \frac{1}{q} \left( 1-(1-q)^{T-1} \right) \right)
 +\pi_i(c_i,c_e) \frac{(1-q)}{q} \left( 1-(1-q)^{T-1} \right) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\leftrightarrow &\pi_i(c_i,c_e)(t_2 -\omega-\frac{(1-q)}{q} \left( 1-(1-q)^{T-1} \right)) 
+\leftrightarrow &\pi_i(c_i,c_e)(t_2 -\omega-\frac{1}{q} \left( 1-q-(1-q)^{T} \right)) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 +(\omega \pi_i(c_i,c_{i1})-(1-\omega)\pi_e(c_i,c_{i1})) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 & +(1-\omega)(\pi_i(c_{i2},c_e)-\pi_e(c_{i},c_{e2}))(T-t_2) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 &+ \pi_i(c_{i},c_{e2})\left(\omega(T-t_2)-T+\frac{1}{q} \left( 1-(1-q)^{T} \right)\right)
+> 0 \\
+\text{If }\omega &=0: \pi_i(c_i,c_e)(t_2 -\frac{1}{q} \left( 1-q-(1-q)^{T} \right)) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-\pi_e(c_i,c_{i1})  \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&+(\pi_i(c_{i2},c_e)-\pi_e(c_{i},c_{e2}))(T-t_2)+ \pi_i(c_{i},c_{e2})\left(-T+\frac{1}{q} \left( 1-(1-q)^{T} \right)\right)
+> 0
+ \\
+\text{If }\omega &=1: \pi_i(c_i,c_e)(t_2 -\frac{1}{q} \left( 1-(1-q)^{T} \right)) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++\pi_i(c_i,c_{i1})\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&- \pi_i(c_{i},c_{e2})\left(t_2 - \frac{1}{q} \left( 1-(1-q)^{T} \right)\right)
 > 0
 \end{align*}
 
-\subsubsection{Case 3: Affects preferences and decision to enter}\label{case:both}
-
-If it affects both the preference and the decision to enter this means that the incumbent will receive the non-competitive flows for T periods or necessarily be bargaining with a sequential innovation entrant. The condition is the same as in case \ref{case:decision}, $ B_{is}(\omega)>(T-1) \pi_i(c_i,c_e)$.
-
-\subsection{Numerical example with two time periods}
-
-Suppose that the profit of the entrant with the best technology is given by, $40$. The profit of the incumbent with best technology is given by $100$. Additionally, let the profit of the incumbent when competing with an intermediate technology be $20$, whilst the profit of the incumbent with the initial technology is: $=80$. Finally, we assume a Nash bargaining solution where firms have equal bargaining power, $\omega = .5$ and that the radical innovation has a $50$\% chance of succeeding. 
-
-We first do the case where there are no buyouts. If no buyouts do occur and the entrant chooses the sequential innovation then the entrant will earn, $40$, which will only be realized in the second period. If the entrant chooses the radical innovation the payoff will be $.5(40+40)+(.5)^2(40)=50$. Since $50>40$, if no buyout occurs the radical innovation will be chosen. 
-
-If buyouts do occur then the incentives change. The Nash surplus for the sequential innovation is, $NS_s = 100+80-20-40=120$. Therefore the payoff of the entrant after bargaining is $40+\frac{1}{2}(120)=100$. The radical innovation surplus is similarly $NS_r = .5(200)+(.5)^2 180+(.5)^2 160-(.5)^2 80-(.5)^2-50=75$. Therefore the payoff after bargaining $50+\frac{1}{2}(75)=87.5$ so the entrant pursues the sequential innovation. 
+Some deducation is possible from last term, with $\omega = 1$, when the the incumbent has none of the negotiating power. Since we know that the profits of the incumbent are higher when the entrant is less competitive, $\pi_i(c_i,c_e)>\pi_i(c_{i},c_{e2})$, the willingness to pay is always positive. 
+\end{proof}
 
 \section{Applications:}\label{application}
 
@@ -399,7 +460,7 @@ $\pi_i(c_{i2},c_e)$ are monopoly profits. That is, the gap between the technolog
 \left(\frac{1-c_i}{2}\right)^2; \quad \pi_i(c_{i2},c_e) = \left(\frac{1-c_{i2}}{2}\right)^2;  
 \end{align*}
 
-Note that the implicit assumption here is that $\frac{1+c_i}{2}<c_e$, due to the fact that the monopoly price must be lower than the cost of production of the competitor. Finally we assume that the game lasts two periods and that the sequential innovation gives the intermediate technology in period 1 and the advanced technology in period 2. That is, the entrant will earn one stream of low technology and one stream of high technology, $T=t_2=2$ and $t_1=1$.
+Note that the implicit assumption here is that $\frac{1+c_i}{2}<c_e$, due to the fact that the monopoly price must be lower than the cost of production of the competitor. Finally we assume that the game lasts two periods and that the sequential innovation gives the intermediate technology in period 1 and the advanced technology in period 2. That is, the entrant will earn one stream of low technology and one stream of high technology, $T-1=t_2=2$ and $t_1=1$.
 
 \subsection{Ex-ante buyout}
 
@@ -461,7 +522,7 @@ The ex-post case is the setup we used in the more general case. Apart from the i
 \begin{tikzpicture}[scale=1]
 \node[align=center] at (0,1.5) {$t = 0$};
 \draw [thick,->] (0,1) -- (0,0.15);
-\node[align=center] at (0,-.7) {Entrant \\chooses\\ technology};
+\node[align=center] at (0,-.8) {Entrant \\chooses\\ technology};
 %%%%%%%%%%%%%%%%
 \node[align=center] at (2.3,1.5) {$t = 1$};
 \draw [thick,->] (2.3,1) -- (2.3,0.15);
@@ -471,20 +532,24 @@ The ex-post case is the setup we used in the more general case. Apart from the i
 \draw [thick,->] (1.1,-2) -- (1.1,-0.15);
 \node[align=center] at (1.1,-2.85) { \\ Buyout \\ occurs\\ here};
 %%%%%%%%%%%%%%%%
-\node[align=center] at (4.6,1.5) {$t = 2$};
+\node[align=center] at (4.6,1.5) {$t = 1.5$};
 \node[align=center] at (4.6,-1.2) {Profit\\ /Welfare\\ Realized };
 \draw [thick,->] (4.6,1) -- (4.6,0.15);
 %%%%%%%%%%%%%%%%
-\node[align=center] at (6.5,1.5) {$t = 2.5$};
+\node[align=center] at (6.5,1.5) {$t = 2$};
 \node[align=center] at (6.5,-1.2) {Technology \\ is realized \\ again};
 \draw [thick,->] (6.5,1) -- (6.5,0.15);
 %%%%%%%%%%%%%%%%
-\node[align=center] at (8.5,1.5) {$t = 3$};
-\node[align=center] at (8.5,-1.2) {Profit\\ /Welfare\\ Realized\\ again, \\ world ends};
+\node[align=center] at (8.5,1.5) {$t = 2.5$};
+\node[align=center] at (8.5,-1.2) {Profit\\ /Welfare\\ Realized\\ again};
 \draw [thick,->] (8.5,1) -- (8.5,0.15);
 %%%%%%%%%%%%%%%%
+\node[align=center] at (11,1.5) {$T = 3$};
+\node[align=center] at (11,-1.2) {World ends};
+\draw [thick,->] (11,1) -- (11,0.15);
 %%%%%%%%%%%%%%%%
-\draw [thick,->] (0,0) -- (10,0);
+%%%%%%%%%%%%%%%%
+\draw [thick,->] (0,0) -- (14,0);
 \end{tikzpicture}
 
 If the buyout is not possible the bargaining payoffs are not available for either firm. Under such conditions the entrant will compare the direct market payoffs of the innovation. 
@@ -706,7 +771,7 @@ Note that this is just a special case of proposition \ref{excessincentive}. But 
 
 \subsubsection{When does the buyout option help the incumbent?}
 
-We now return to the case where we consider the point of view of the incumbent. By looking at the preferences of the incumbent we can also derive a willingness to lobby. That is, if the incumbent loses from the ability to buyout because the competitive effect is larger than the potential technology boost. It is trivial to note that the incumbent does not have a willingness to lobby if the option to buyout does not change the preferences of the entrant. The incumbent will prefer to the buyouts to exist as a function of his own bargaining power, $1-\omega$. We again look at the special case of the Bertrand competition with parameters $T=t_2=2,t_1=1$. In what corresponds to case \ref{case:decision} in the general section, the conditions collapses to the following. 
+We now return to the case where we consider the point of view of the incumbent. By looking at the preferences of the incumbent we can also derive a willingness to lobby. That is, if the incumbent loses from the ability to buyout because the competitive effect is larger than the potential technology boost. It is trivial to note that the incumbent does not have a willingness to lobby if the option to buyout does not change the preferences of the entrant. The incumbent will prefer to the buyouts to exist as a function of his own bargaining power, $1-\omega$. We again look at the special case of the Bertrand competition with parameters $T-1=t_2=t_1+1=2$. In what corresponds to case \ref{case:decision} in the general section, the conditions collapses to the following. 
 
 \begin{align*}
 B_{is}(\omega)&>2 \pi_i(c_i,c_e) \\
@@ -800,9 +865,10 @@ Note here that this expression is identical to the expression in proposition \re
 \end{proof}
 
 The buyout case has two relevant effects which are in friction. On one hand the same effect as the non-buyout case, namely that being behind is not as important to the entrant. However there is now a second effect which is that the incumbent is less harmed by being overtaken, so there is a lower willingness to buyout. Note that since $q^b<q^c$ without buyout, and $q^b>q^c$ when there is a buyout, this means the difference between the buyout and the non-buyout case is smaller in Cournot than in Bertrand. Which means that the distortion effect is lower overall for the case of Cournot. 
+
 \subsection{Static case: Reduced form version of the Coasian argument}\label{static}
 
-We present the reduced form static version of the model because it illustrates that the specific complementarity or substitutability does not matter but instead it is only the \text{relative} value of owning that plays a role.  We briefly present the taxonomy under the framework and discuss why each situation may occur. 
+We present the reduced form static version of the model because it illustrates that the specific complementarity or substitutability does not matter but instead it is only the \text{relative} value of purchasing that plays a role.  We briefly present the taxonomy under the framework and discuss why each situation may occur. 
 
 The market profit potential of the innovation which the entrepreneur holds is given by $\pi^e$, this profit may be earned by whoever owns the entrepreneurial project. The profit of the incumbent \textit{if the innovation does not exist} is simply $\pi^i$. We denote the degree(or factor) of substitutability/complementarity \textbf{if not bought} by $\beta \in [ 0, \infty [$ and the degree of substitutability/complementarity  \textbf{if bought} by $\alpha \in [0, \infty [ $. 
 
