@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+%\documentclass[12pt]{article}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[percent]{overpic}
+\usepackage{float}
+\usepackage{pgfplots}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+%\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\xspace}
+\newcommand{\eg}{{\it e.g.}\xspace}
+\newcommand{\etc}{{\it etc.}\xspace}
+\newcommand{\cf}{{\it c.f.}\xspace}
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+\newcommand{\subhead}[1]{\mbox{}\newline\textbf{#1}\newline}
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.5em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+\begin{document}
+
+%\onehalfspacing
+
+Let $(x ,\Delta x,t)$ represent a payment of $\Delta x $ at time $t$ with initial wealth $x$, where $x, \Delta x, t \in \mathbb{R}$ and $t \geq 0$. Let $ \{ \succsim \}^{\infty}_{t=0}$ represent the decision makers preferences over the payments at time $t$. Similarly for $\precsim_t, \sim_t, \prec_t $ and $\succ_t$ \footnote{Horizon indipendent: stationarity, no preference reversal: time consistent}
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{t=0}$ is \textit{horizon independent} if for every all $t_a,t_b, t \in \mathbb{R}$, and $t - \tau > 0$ 
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a,\Delta x_a, t_a + \tau ) \succsim_t (x_b,\Delta x_b, t_b + \tau )
+\end{equation}
+\end{definition}
+
+Horizon independence implies that only the distance between the wealths $(x_a-x_b)$, the payments $(\Delta x_a-\Delta x_b)$, and the delay matter $(t_b-t_a)$. This kind of property implies that if an indifference relation is true for a time $\tau$,$ \succsim_{\tau} $, it is true for all preference relations, $\{ \succsim \}^{\infty}_{\tau=0}$. 
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{\tau =0}$ is \textit{wealth independent} if for all $\tau$, and and for all $x_a,x_b,x_a',x_b'  \in \mathbb{R}$:
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a',\Delta x_a, t_a) \succsim_{t} (x_b',\Delta x_b, t_b)
+\end{equation}
+\end{definition}
+
+This assumption is implicitely made in most of the literature. 
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{t=0}$ are time invariant if for all pairs of $\tau,\tau'$: 
+\begin{equation}
+(x_a,\Delta x_a, t_a+\tau) \succsim_{\tau} (x_b,\Delta x_b, t_b+ \tau) \leftrightarrow (x_a,\Delta x_a, t_a+\tau') \succsim_{\tau'} (x_b,\Delta x_b, t_b+\tau')
+\end{equation}
+\end{definition}
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{t=0}$ does not exhibit preference reversal if for all $t,t'$
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_t (x_b,\Delta x_b, t_b) \leftrightarrow (x_a,\Delta x_a, t_a) \succsim_{t'} (x_b,\Delta x_b, t_b)
+\end{equation}
+\end{definition}
+
+This property entails that agents will have consistent preferences independently of when the payment is evaluated. 
+
+\begin{definition}
+We say that $\{ \succsim \}^{\infty}_{t=0}$ are growth optimal if they can be represented by a function, $g_t: [0,x] * [\underline{t}, T]*[\underline{t}, T]*[0, \Delta x] \rightarrow R$
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_t (x_b,\Delta x_b, t_b) \leftrightarrow g_t(x_a,\Delta x_a, .) \geq g_t(x_b,\Delta x_b, .)
+\end{equation}
+\end{definition}
+
+Defining the growth rate:
+% \begin{definition}{Riskless Intertemporal Payment Problem.}
+
+
+% A Riskless Intertemporal Payment Problem (RIPP) is a vector $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$. A decision maker at time $t_0$ with wealth $x\left(t_0\right)$ must choose between two future cash payments, whose amounts and payment times are known with certainty. The two options are:
+% %
+% \begin{enumerate}
+% \item[$a$.] an earlier payment of $\Dx_a$ at time $t_a>t_0$; and
+% \item[$b$.] a later payment of $\Dx_b$ at time $t_b>t_a$.
+% \end{enumerate}
+% %
+% \end{definition}
+
+A criterion for choosing $a$ or $b$ is required. Here we explore what happens if that criterion is maximization of the growth rate of wealth, \ie if $a$ is chosen when it corresponds to a higher growth rate of the decision maker's wealth than $b$, and \textit{vice versa}.
+
+A growth rate is defined as the scale parameter of time in the growth function of wealth subject to dynamics. Dynamics can take different forms, each corresponding to a different form of growth rate. We treat explicitly multiplicative and additive dynamics \citep{PetersGell-Mann2016}, noting that more general dynamics can be treated similarly \citep{PetersAdamou2018a}.
+
+\subhead{Multiplicative dynamics}
+Ignoring, for the moment, payments $\Dx_a$ and $\Dx_b$, a common assumption is that wealth grows exponentially in time at rate $r$. We label this dynamic as multiplicative. It corresponds to investing wealth in income-generating assets, where the income is proportional to the amount invested. Wealth grows as
+%
+\be
+x\left(t\right) = x\left(t_0\right) e^{r \left(t - t_0\right)}\,,
+\ee
+%
+and the scale parameter of time in the exponential function is $r$. $r$ resembles an interest rate or a rate of return on investment.
+
+\subhead{Additive dynamics}
+Another possibility is additive dynamics, where wealth grows linearly in time at a rate $k$. This resembles saved labor income or, more generally, situations where investment income is negligible and wealth changes by net flows that do not depend on wealth itself. In this case wealth grows as
+%
+\be
+x\left(t\right) = x\left(t_0\right) + k \left(t - t_0\right)\,,
+\ee
+%
+and the scale parameter of time in the linear function is $k$.
+
+The functional form of the growth rate differs between the dynamics. The growth rate between time $t$ and $t+\Dt$ can be extracted from the expression for the evolution of wealth over that period. Under multiplicative dynamics it is
+%
+\be
+r = \frac{\log x\left(t+\Dt\right)-\log x\left(t\right)}{\Dt}\,,
+\ee
+%
+and under additive dynamics it is
+%
+\be
+k = \frac{x\left(t+\Dt\right) - x\left(t\right)}{\Dt}\,.
+\ee
+%
+
+The matching of growth rate with dynamics is crucial. An additive growth rate applied to wealth following a multiplicative process would vary with time, as would a multiplicative growth rate applied to additively-growing wealth. The correct growth rate extracts a stable parameter from the dynamics, allowing processes with the same type of dynamics to be compared.
+
+Given the wealth dynamics, a RIPP implies two growth rates: $g_a$, associated with option $a$; and $g_b$, associated with option $b$. This permits a single choice axiom:
+
+\begin{axiom}{The Maximization of Growth.}
+
+Given the wealth dynamics, a decision time $t_0$, an initial wealth $x\left(t_0\right)$, and payments $a\equiv\left(t_a,\Dx_a\right)$ and $b\equiv\left(t_b,\Dx_b\right)$, such that the vector $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ is a RIPP:
+%
+\begin{enumerate}
+\item $a \succ b$ [`$a$ is preferred to $b$'] if and only if $g_a > g_b$ 
+\item $a\sim b$ [`indifference between $a$ and $b$'] if and only if $g_a = g_b$
+\item $a \prec b$ [`$b$ is preferred to $a$'] if and only if $g_a < g_b$
+\end{enumerate}
+%
+\label{ax:ax1}
+\end{axiom}
+
+In words, \Aref{ax1} states that a decision maker prefers option $a$ if her wealth grows faster under this choice than under option $b$, and \textit{vice versa}. She is indifferent if the growth rates are equal. \Aref{ax1} satisfies the von Neumann-Morgenstern axioms: completeness is satisfied by design, while continuity and independence are irrelevant, since in this setup all the payments and times are certain. It also satisfies transitivity (see proof in Appendix~\ref{app:appA}).
+
+%\begin{proposition}{The Maximization of Growth is Transitive.}
+%
+%Under the notation of \Aref{ax1}, the Transitivity Axiom is satisfied.
+%\label{prop:trans}
+%\end{proposition}
+%\begin{proof}
+%We assume three payments, $a\equiv\left(t_a,\Dx_a\right)$, $b\equiv\left(t_b,\Dx_b\right)$ and $c\equiv\left(t_c,\Dx_c\right)$, where $t_a < t_b < t_c$. Given time $t_0< t_a$ and initial wealth $x\left(t_0\right)$, the vectors $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ are RIPPs. If $a \prec b$ and $b \prec c$, then $g_a < g_b$ and $g_b < g_c$. Since $t_a < t_c$, then $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$ is also a RIPP and $g_a < g_c$. Therefore, $a \prec c$.
+%\end{proof}
+
+
+
+\clearpage
+\appendix
+
+\section{The Transitivity of Growth Rate Maximization}\label{app:appA}
+
+In this appendix we show that the maximization of growth, the single choice axiom in our model, satisfies transitivity for all four cases described in the paper. To prove transitivity we assume three payments, $a\equiv\left(t_a,\Dx_a\right)$, $b\equiv\left(t_b,\Dx_b\right)$ and $c\equiv\left(t_c,\Dx_c\right)$, where $t_a < t_b < t_c$. We also assume a decision time $t_0 < t_a$ and an initial wealth $x\left(t_0\right)$. The vectors $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$, $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$ are thus RIPPs.
+
+In each of the four cases we will show that if $a \prec b$ under the RIPP $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $b \prec c$ under $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$, then $a \prec c$ under $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$. We will also show that if $a \sim b$ and $b \sim c$, then $a \sim c$.
+
+\subhead{Case A}
+In case A (see \sref{case_A}), we show that growth rate maximization is achieved by choosing the larger payment. Therefore, $a \prec b$ iff $\Dx_a < \Dx_b$ and $b \prec c$ iff $\Dx_b < \Dx_c$. It follows that $a \prec c$ because $\Dx_a < \Dx_c$. If $a \sim b$ and $b \sim c$ then $\Dx_a = \Dx_b$ and $\Dx_b = \Dx_c$, so $\Dx_a = \Dx_c$ and $a \sim c$.
+
+\subhead{Case B}
+In case B (see \sref{case_B}), we show that growth rate maximization is achieved by comparing the earlier payment to the later payment discounted by an exponential function, so
+%
+\bea
+a \prec b &\iff& \Dx_a < \Dx_b e^{-r\left(t_b - t_a\right)}\,;\\
+b \prec c &\iff& \Dx_b < \Dx_c e^{-r\left(t_c - t_b\right)}\,.
+\eea
+%
+It follows that $\Dx_b e^{-r\left(t_b - t_a\right)} < \Dx_c e^{-r\left(t_c - t_b\right)} e^{-r\left(t_b - t_a\right)} = \Dx_c e^{-r\left(t_c - t_a\right)}$, so
+%
+\be
+\Dx_a < \Dx_c e^{-r\left(t_c - t_a\right)} \Longrightarrow a \prec c\,.
+\ee
+%
+Similarly,
+%
+\bea
+a \sim b &\iff& \Dx_a = \Dx_b e^{-r\left(t_b - t_a\right)}\,;\\
+b \sim c &\iff& \Dx_b = \Dx_c e^{-r\left(t_c - t_b\right)}\,.
+\eea
+%
+It follows that $\Dx_b e^{-r\left(t_b - t_a\right)} = \Dx_c e^{-r\left(t_c - t_a\right)}$, so
+%
+\be
+\Dx_a = \Dx_c e^{-r\left(t_c - t_a\right)} \Longrightarrow a \sim c\,.
+\ee
+
+\subhead{Case C}
+In case C (see \sref{case_C}) only the linear payment rate of each option matters to the decision maker, so
+%
+\bea
+a \prec b &\iff& \frac{\Dx_a}{t_a - t_0} < \frac{\Dx_b}{t_b - t_0}\,;\\
+b \prec c &\iff& \frac{\Dx_b}{t_b - t_0} < \frac{\Dx_c}{t_c - t_0}\,.
+\eea
+%
+It follows that $\frac{\Dx_a}{t_a - t_0} < \frac{\Dx_c}{t_c - t_0}$, and $a \prec c$. Similarly,
+%
+\bea
+a = b &\iff& \frac{\Dx_a}{t_a - t_0} = \frac{\Dx_b}{t_b - t_0}\,;\\
+b = c &\iff& \frac{\Dx_b}{t_b - t_0} = \frac{\Dx_c}{t_c - t_0}\,,
+\eea
+%
+so $\frac{\Dx_a}{t_a - t_0} = \frac{\Dx_c}{t_c - t_0}$, and $a \sim c$.
+
+\subhead{Case D}
+Like in case C, the time frame in case D (see \sref{case_D}) is adaptive. For this reason the growth rate associated with each payment depends only on the payment time and the decision time. In other words, under both RIPPs $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$, the growth rate associated with payment $a$, $g_a$, is the same. Similarly, $g_b$ is the same in both $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$, and $g_c$ is the same in both RIPPs $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$.
+
+It follows that
+%
+\bea
+a \prec b &\iff& g_a < g_b\,;\\
+b \prec c &\iff& g_b < g_c\,,
+\eea
+%
+so $g_a < g_c$, and $a \prec c$. Similarly,
+%
+\bea
+a \sim b &\iff& g_a = g_b\,;\\
+b \sim c &\iff& g_b = g_c\,,
+\eea
+%
+so $g_a = g_c$, and $a \sim c$.
+
+\qed
+
+\end{document}
