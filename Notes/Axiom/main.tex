@@ -186,23 +186,17 @@ urlcolor={blue!50!black}}
 
 Let $(x ,\Delta x,t)$ represent a payment of $\Delta x $ at time $t$ with initial wealth $x$, where $x, \Delta x, t \in \mathbb{R}$ and $t \geq 0$. Let $ \{ \succsim \}^{\infty}_{t=0}$ represent the decision makers preferences over the payments at time $t$. Similarly for $\precsim_t, \sim_t, \prec_t $ and $\succ_t$ \footnote{Horizon indipendent: stationarity, no preference reversal: time consistent}
 
+
+
 \begin{definition}
-$\{ \succsim \}^{\infty}_{t=0}$ is \textit{horizon independent} if for every all $t_a,t_b, t \in \mathbb{R}$, and $t - \tau > 0$ 
+$\{ \succsim \}^{\infty}_{t=0}$ is \textit{stationary} if for all $t_a,t_b, t,\tau \in \mathbb{R}$, and $t - \tau > 0$ 
 \begin{equation}
 (x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a,\Delta x_a, t_a + \tau ) \succsim_t (x_b,\Delta x_b, t_b + \tau )
 \end{equation}
 \end{definition}
 
-Horizon independence implies that only the distance between the wealths $(x_a-x_b)$, the payments $(\Delta x_a-\Delta x_b)$, and the delay matter $(t_b-t_a)$. This kind of property implies that if an indifference relation is true for a time $\tau$,$ \succsim_{\tau} $, it is true for all preference relations, $\{ \succsim \}^{\infty}_{\tau=0}$. 
+Stationarity implies that only the distance between the wealths $(x_a-x_b)$, the payments $(\Delta x_a-\Delta x_b)$, and the delay matter $(t_b-t_a)$. This kind of property implies that if an indifference relation is true for a time $\tau$,$ \succsim_{\tau} $, it is true for all preference relations, $\{ \succsim \}^{\infty}_{\tau=0}$. 
 
-\begin{definition}
-$\{ \succsim \}^{\infty}_{\tau =0}$ is \textit{wealth independent} if for all $\tau$, and and for all $x_a,x_b,x_a',x_b'  \in \mathbb{R}$:
-\begin{equation}
-(x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a',\Delta x_a, t_a) \succsim_{t} (x_b',\Delta x_b, t_b)
-\end{equation}
-\end{definition}
-
-This assumption is implicitely made in most of the literature. 
 
 \begin{definition}
 $\{ \succsim \}^{\infty}_{t=0}$ are time invariant if for all pairs of $\tau,\tau'$: 
@@ -212,7 +206,7 @@ $\{ \succsim \}^{\infty}_{t=0}$ are time invariant if for all pairs of $\tau,\ta
 \end{definition}
 
 \begin{definition}
-$\{ \succsim \}^{\infty}_{t=0}$ does not exhibit preference reversal if for all $t,t'$
+$\{ \succsim \}^{\infty}_{t=0}$ are time consistent if for all $t,t'$
 \begin{equation}
 (x_a,\Delta x_a, t_a) \succsim_t (x_b,\Delta x_b, t_b) \leftrightarrow (x_a,\Delta x_a, t_a) \succsim_{t'} (x_b,\Delta x_b, t_b)
 \end{equation}
@@ -220,6 +214,35 @@ $\{ \succsim \}^{\infty}_{t=0}$ does not exhibit preference reversal if for all 
 
 This property entails that agents will have consistent preferences independently of when the payment is evaluated. 
 
+@article{Halevy2015,
+author = {Halevy, Yoram},
+journal = {Econometrica},
+number = {1},
+pages = {335--352},
+title = {{Time Consistency: Stationarity and Time Invariance}},
+volume = {83},
+year = {2015}
+}
+
+Any two of the three properties implies the other (Halevy2015), so we can drop anyone of these without loss of generality. We now make three additional definitions which are unique to our model. 
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{t=0}$ is time independent if for all $t_a,t_a',t_b,t_b', t \in \mathbb{R}$: 
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a,\Delta x_a, t_a' ) \succsim_t (x_b,\Delta x_b, t_b')
+\end{equation}
+\end{definition}
+
+Here I would fit a proposition that if time independent then ALSO none of the other definitions but it might be a bit trivial. 
+
+\begin{definition}
+$\{ \succsim \}^{\infty}_{\tau =0}$ are \textit{wealth independent} if for all $\tau$, and and for all $x_a,x_b,x_a',x_b'  \in \mathbb{R}$:
+\begin{equation}
+(x_a,\Delta x_a, t_a) \succsim_{t} (x_b,\Delta x_b, t_b) \leftrightarrow (x_a',\Delta x_a, t_a) \succsim_{t} (x_b',\Delta x_b, t_b)
+\end{equation}
+\end{definition}
+
+This assumption is implicitely made in most of the literature.
 \begin{definition}
 We say that $\{ \succsim \}^{\infty}_{t=0}$ are growth optimal if they can be represented by a function, $g_t: [0,x] * [\underline{t}, T]*[\underline{t}, T]*[0, \Delta x] \rightarrow R$
 \begin{equation}
@@ -227,9 +250,19 @@ We say that $\{ \succsim \}^{\infty}_{t=0}$ are growth optimal if they can be re
 \end{equation}
 \end{definition}
 
-Defining the growth rate:
-% \begin{definition}{Riskless Intertemporal Payment Problem.}
+\section{The growth rate function}
 
+We now specify what is meant by growth rate.
+\begin{definition}
+We say that an agents time frame is fixed if on some time interval, $t_f$, if the growth is given by $g_t(x,t_f,.)$
+\end{definition}
+So for any given future payment, $\Delta x_i$ paid at some time $t_i<t_f$, the growth rate on a fixed time frame is $g(x_t,t_f,\Delta x_i, t_i)$.
+% \begin{definition}{Riskless Intertemporal Payment Problem.}
+\begin{definition}
+We say that an agents time frame is adaptive if gambles are evaluated on their own horizon $g_t(x,\Delta x_i, t_i)$
+\end{definition}
+
+This corresponds to setting $t_f=t_i$ so that the two growth rates are equal if $g(x_t,t_f,\Delta x_i, t_i)=g(x_t,\Delta x_i, t_i)$.
 
 % A Riskless Intertemporal Payment Problem (RIPP) is a vector $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$. A decision maker at time $t_0$ with wealth $x\left(t_0\right)$ must choose between two future cash payments, whose amounts and payment times are known with certainty. The two options are:
 % %
@@ -244,55 +277,38 @@ A criterion for choosing $a$ or $b$ is required. Here we explore what happens if
 
 A growth rate is defined as the scale parameter of time in the growth function of wealth subject to dynamics. Dynamics can take different forms, each corresponding to a different form of growth rate. We treat explicitly multiplicative and additive dynamics \citep{PetersGell-Mann2016}, noting that more general dynamics can be treated similarly \citep{PetersAdamou2018a}.
 
-\subhead{Multiplicative dynamics}
-Ignoring, for the moment, payments $\Dx_a$ and $\Dx_b$, a common assumption is that wealth grows exponentially in time at rate $r$. We label this dynamic as multiplicative. It corresponds to investing wealth in income-generating assets, where the income is proportional to the amount invested. Wealth grows as
-%
+\begin{definition}
+We say a dynamic is \textit{multiplicative} if $x\left(t\right)$ has the process: 
 \be
 x\left(t\right) = x\left(t_0\right) e^{r \left(t - t_0\right)}\,,
 \ee
-%
-and the scale parameter of time in the exponential function is $r$. $r$ resembles an interest rate or a rate of return on investment.
+\end{definition}
+Note here that $r$ is two things. $r$ is the interest rate (or a rate of return on investment) and corresponds to investing wealth in income-generating assets, where the income is proportional to the amount invested. Howevr $r$ is also the growth rate of wealth. We can solve for r to get the growth rate: 
+\be
+g_m=r = \frac{\log x\left(t+\Dt\right)-\log x\left(t\right)}{\Dt}\,,
+\ee
 
-\subhead{Additive dynamics}
-Another possibility is additive dynamics, where wealth grows linearly in time at a rate $k$. This resembles saved labor income or, more generally, situations where investment income is negligible and wealth changes by net flows that do not depend on wealth itself. In this case wealth grows as
-%
+\begin{definition}
+We say a dynamic is \textit{additive} if $x\left(t\right)$ has the process: 
 \be
 x\left(t\right) = x\left(t_0\right) + k \left(t - t_0\right)\,,
 \ee
-%
-and the scale parameter of time in the linear function is $k$.
+\end{definition}
 
-The functional form of the growth rate differs between the dynamics. The growth rate between time $t$ and $t+\Dt$ can be extracted from the expression for the evolution of wealth over that period. Under multiplicative dynamics it is
+In this case the exogenous parameter is $k$, which also has two functions. $k$ resembles saved labor income or, more generally, situations where investment income is negligible and wealth changes by net flows that do not depend on wealth itself. It is also clear that in the additive case $k$ is the growth rate and the scale parameter of time, so we can solve for it once again: 
 %
 \be
-r = \frac{\log x\left(t+\Dt\right)-\log x\left(t\right)}{\Dt}\,,
+g_a=k = \frac{x\left(t+\Dt\right) - x\left(t\right)}{\Dt}\,.
 \ee
 %
-and under additive dynamics it is
-%
-\be
-k = \frac{x\left(t+\Dt\right) - x\left(t\right)}{\Dt}\,.
-\ee
-%
+The functional form of the growth rate then differs between the dynamics. The growth rate between time $t$ and $t+\Dt$ can be extracted from the expression for the evolution of wealth over that period. The matching of growth rate with dynamics is crucial. An additive growth rate applied to wealth following a multiplicative process would vary with time, as would a multiplicative growth rate applied to additively-growing wealth. The correct growth rate extracts a stable parameter from the dynamics, allowing processes with the same type of dynamics to be compared.
 
-The matching of growth rate with dynamics is crucial. An additive growth rate applied to wealth following a multiplicative process would vary with time, as would a multiplicative growth rate applied to additively-growing wealth. The correct growth rate extracts a stable parameter from the dynamics, allowing processes with the same type of dynamics to be compared.
+The plan for fitting into the literature would be as follows: 
+For case A we are, time indepedent and wealth independent. 
+For case B we are, stationary, wealth independent but not time independent.
+For case C we are, wealth independent but not stationary and not time independent or not time invariant
+For case D: We are none of the above
 
-Given the wealth dynamics, a RIPP implies two growth rates: $g_a$, associated with option $a$; and $g_b$, associated with option $b$. This permits a single choice axiom:
-
-\begin{axiom}{The Maximization of Growth.}
-
-Given the wealth dynamics, a decision time $t_0$, an initial wealth $x\left(t_0\right)$, and payments $a\equiv\left(t_a,\Dx_a\right)$ and $b\equiv\left(t_b,\Dx_b\right)$, such that the vector $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ is a RIPP:
-%
-\begin{enumerate}
-\item $a \succ b$ [`$a$ is preferred to $b$'] if and only if $g_a > g_b$ 
-\item $a\sim b$ [`indifference between $a$ and $b$'] if and only if $g_a = g_b$
-\item $a \prec b$ [`$b$ is preferred to $a$'] if and only if $g_a < g_b$
-\end{enumerate}
-%
-\label{ax:ax1}
-\end{axiom}
-
-In words, \Aref{ax1} states that a decision maker prefers option $a$ if her wealth grows faster under this choice than under option $b$, and \textit{vice versa}. She is indifferent if the growth rates are equal. \Aref{ax1} satisfies the von Neumann-Morgenstern axioms: completeness is satisfied by design, while continuity and independence are irrelevant, since in this setup all the payments and times are certain. It also satisfies transitivity (see proof in Appendix~\ref{app:appA}).
 
 %\begin{proposition}{The Maximization of Growth is Transitive.}
 %
@@ -303,83 +319,5 @@ In words, \Aref{ax1} states that a decision maker prefers option $a$ if her weal
 %We assume three payments, $a\equiv\left(t_a,\Dx_a\right)$, $b\equiv\left(t_b,\Dx_b\right)$ and $c\equiv\left(t_c,\Dx_c\right)$, where $t_a < t_b < t_c$. Given time $t_0< t_a$ and initial wealth $x\left(t_0\right)$, the vectors $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ are RIPPs. If $a \prec b$ and $b \prec c$, then $g_a < g_b$ and $g_b < g_c$. Since $t_a < t_c$, then $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$ is also a RIPP and $g_a < g_c$. Therefore, $a \prec c$.
 %\end{proof}
 
-
-
-\clearpage
-\appendix
-
-\section{The Transitivity of Growth Rate Maximization}\label{app:appA}
-
-In this appendix we show that the maximization of growth, the single choice axiom in our model, satisfies transitivity for all four cases described in the paper. To prove transitivity we assume three payments, $a\equiv\left(t_a,\Dx_a\right)$, $b\equiv\left(t_b,\Dx_b\right)$ and $c\equiv\left(t_c,\Dx_c\right)$, where $t_a < t_b < t_c$. We also assume a decision time $t_0 < t_a$ and an initial wealth $x\left(t_0\right)$. The vectors $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$, $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$ are thus RIPPs.
-
-In each of the four cases we will show that if $a \prec b$ under the RIPP $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $b \prec c$ under $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$, then $a \prec c$ under $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$. We will also show that if $a \sim b$ and $b \sim c$, then $a \sim c$.
-
-\subhead{Case A}
-In case A (see \sref{case_A}), we show that growth rate maximization is achieved by choosing the larger payment. Therefore, $a \prec b$ iff $\Dx_a < \Dx_b$ and $b \prec c$ iff $\Dx_b < \Dx_c$. It follows that $a \prec c$ because $\Dx_a < \Dx_c$. If $a \sim b$ and $b \sim c$ then $\Dx_a = \Dx_b$ and $\Dx_b = \Dx_c$, so $\Dx_a = \Dx_c$ and $a \sim c$.
-
-\subhead{Case B}
-In case B (see \sref{case_B}), we show that growth rate maximization is achieved by comparing the earlier payment to the later payment discounted by an exponential function, so
-%
-\bea
-a \prec b &\iff& \Dx_a < \Dx_b e^{-r\left(t_b - t_a\right)}\,;\\
-b \prec c &\iff& \Dx_b < \Dx_c e^{-r\left(t_c - t_b\right)}\,.
-\eea
-%
-It follows that $\Dx_b e^{-r\left(t_b - t_a\right)} < \Dx_c e^{-r\left(t_c - t_b\right)} e^{-r\left(t_b - t_a\right)} = \Dx_c e^{-r\left(t_c - t_a\right)}$, so
-%
-\be
-\Dx_a < \Dx_c e^{-r\left(t_c - t_a\right)} \Longrightarrow a \prec c\,.
-\ee
-%
-Similarly,
-%
-\bea
-a \sim b &\iff& \Dx_a = \Dx_b e^{-r\left(t_b - t_a\right)}\,;\\
-b \sim c &\iff& \Dx_b = \Dx_c e^{-r\left(t_c - t_b\right)}\,.
-\eea
-%
-It follows that $\Dx_b e^{-r\left(t_b - t_a\right)} = \Dx_c e^{-r\left(t_c - t_a\right)}$, so
-%
-\be
-\Dx_a = \Dx_c e^{-r\left(t_c - t_a\right)} \Longrightarrow a \sim c\,.
-\ee
-
-\subhead{Case C}
-In case C (see \sref{case_C}) only the linear payment rate of each option matters to the decision maker, so
-%
-\bea
-a \prec b &\iff& \frac{\Dx_a}{t_a - t_0} < \frac{\Dx_b}{t_b - t_0}\,;\\
-b \prec c &\iff& \frac{\Dx_b}{t_b - t_0} < \frac{\Dx_c}{t_c - t_0}\,.
-\eea
-%
-It follows that $\frac{\Dx_a}{t_a - t_0} < \frac{\Dx_c}{t_c - t_0}$, and $a \prec c$. Similarly,
-%
-\bea
-a = b &\iff& \frac{\Dx_a}{t_a - t_0} = \frac{\Dx_b}{t_b - t_0}\,;\\
-b = c &\iff& \frac{\Dx_b}{t_b - t_0} = \frac{\Dx_c}{t_c - t_0}\,,
-\eea
-%
-so $\frac{\Dx_a}{t_a - t_0} = \frac{\Dx_c}{t_c - t_0}$, and $a \sim c$.
-
-\subhead{Case D}
-Like in case C, the time frame in case D (see \sref{case_D}) is adaptive. For this reason the growth rate associated with each payment depends only on the payment time and the decision time. In other words, under both RIPPs $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$, the growth rate associated with payment $a$, $g_a$, is the same. Similarly, $g_b$ is the same in both $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_b,\Dx_b\}$ and $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$, and $g_c$ is the same in both RIPPs $\{t_0,x\left(t_0\right),t_b,\Dx_b,t_c,\Dx_c\}$ and $\{t_0,x\left(t_0\right),t_a,\Dx_a,t_c,\Dx_c\}$.
-
-It follows that
-%
-\bea
-a \prec b &\iff& g_a < g_b\,;\\
-b \prec c &\iff& g_b < g_c\,,
-\eea
-%
-so $g_a < g_c$, and $a \prec c$. Similarly,
-%
-\bea
-a \sim b &\iff& g_a = g_b\,;\\
-b \sim c &\iff& g_b = g_c\,,
-\eea
-%
-so $g_a = g_c$, and $a \sim c$.
-
-\qed
 
 \end{document}
