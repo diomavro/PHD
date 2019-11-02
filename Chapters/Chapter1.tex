@@ -453,10 +453,34 @@ How are the results affected when the firm can invest to improve its product? Th
 
 We will be assuming that $c=1$ after the cost-less piracy case. Extending the results to have endogenous product improvement does not always yield a closed form solution. The only case where there is a simple closed form solution is when piracy is cost-less. The most notable effect of endogenizing k in the cost-less case is that the optimal product improvement does not depend on $\alpha$ or $\beta$. It is simply given by $k=\frac{1}{8c}$. See appendix \ref{notes} for details.
 
-In the classic case, where there are no pirates because the cost of piracy is high, the model becomes more complex and has no simple closed form solution for product improvement. If we fix the network value to be equal to base value of the product $\alpha=1+k$, we have that $\tilde{k} = \frac{1}{3 \sqrt{3}} \approx \frac{1}{5}$, numerically this is the highest product improvement that can be pursued, therefore product improvement is maximized when the network value is equal to the base value \footnote{Note that because the cost of product improvement is quadratic, the network value will increase faster than the product improvement, therefore at some point, the equality $\alpha = 1+k$ will hold. If we take the limit of the demand function, $1-\tilde{x}$ with $\alpha$ approaching this parameterization we have that the demand is $\frac{\sqrt{(1+k)(1+k-p)}}{1+k}$. Using this in the profit function, we attain that $p=\frac{2}{27} (9 + \sqrt{3})$ and $k=\frac{1}{3 \sqrt{3}} $ and consequently, profit is, $\pi = \frac{1}{27} \left(1+6 \sqrt{3}\right)$.}.
+There is no closed form solution for the corresponding case where $\tilde{r}<r$. We instead simulate the profit function as seen in figure \ref{endk1}. Notice that profit ($\pi$) is maximized around $k=0.25$ even as $\alpha$ reaches infinity. Notice also that the product improvement is a strictly increasing function of $\alpha$.
 
-In fact even if there is no network value the product improvement pursued is equal the value pursued in the cost-less case,  $\alpha=0 \Rightarrow \tilde{k} = \frac{1}{8}$. Numerically we can also see that as $\alpha$ approaches a large number, $k$ approaches $\frac{1}{9}$
-\footnote{even at $\alpha=100 000 000, k=.1111111$  }. Implying that product improvement peaks when network value is equal to base value. 
+This implies that the product improvement pursued without pirates is strictly higher than the full piracy case. Indeed, they are only equal without network value, $\alpha=0$. 
+
+\begin{figure}[h!] 
+\centering
+\includegraphics[width=1.0\textwidth]{./figures/Endogenousksimulation0.jpg}
+\caption{Simulation of profits with a high cost of piracy }
+\flabel{Classic case: Buyers and non-users, }
+\label{endk1}
+\end{figure}
+
+Similarly we simulate the case where $0<r<\tilde{r}$. To represent this we use a 3D contour graph, see figure \ref{endk2}. Notice that once again the equilibrium $k$ is around $\frac{1}{8}$ for low values of product degradation $r$. However, in this scenario, the previous result is reversed, that is, higher piracy pursuit decreases the optimal product improvement. The intuition behind this counterintuitive result is that $r$ and $k$ are substitutes, the firm can use the higher $r$ as an alternative to spending on $k$. In other words, the local effect of an increase in $r$ within $0<r<\tilde{r}$ is to decrease product improvement but once $r=\tilde{r}$, then there is a discontinous jump which depends on the network value which causes an increase in product improvement. 
+
+
+\begin{figure}[t!] 
+\centering
+\includegraphics[width=0.5\textwidth]{./figures/Endogenousksimulation.jpg}
+\caption{Intermediate cost of piracy case: Contour of the profit function maximized with repspect to the product improvement}
+\flabel{Buyers, pirates and non-users}
+\label{endk2}
+\end{figure}
+
+
+% In the classic case, where there are no pirates because the cost of piracy is high, the model becomes more complex and has no simple closed form solution for product improvement. If we fix the network value to be equal to base value of the product $\alpha=1+k$, we have that $\tilde{k} = \frac{1}{3 \sqrt{3}} \approx \frac{1}{5}$, numerically this is the highest product improvement that can be pursued, therefore product improvement is maximized when the network value is equal to the base value \footnote{Note that because the cost of product improvement is quadratic, the network value will increase faster than the product improvement, therefore at some point, the equality $\alpha = 1+k$ will hold. If we take the limit of the demand function, $1-\tilde{x}$ with $\alpha$ approaching this parameterization we have that the demand is $\frac{\sqrt{(1+k)(1+k-p)}}{1+k}$. Using this in the profit function, we attain that $p=\frac{2}{27} (9 + \sqrt{3})$ and $k=\frac{1}{3 \sqrt{3}} $ and consequently, profit is, $\pi = \frac{1}{27} \left(1+6 \sqrt{3}\right)$.}.
+
+% In fact even if there is no network value the product improvement pursued is equal the value pursued in the cost-less case,  $\alpha=0 \Rightarrow \tilde{k} = \frac{1}{8}$. Numerically we can also see that as $\alpha$ approaches a large number, $k$ approaches $\frac{1}{9}$
+% \footnote{even at $\alpha=100 000 000, k=.1111111$  }. Implying that product improvement peaks when network value is equal to base value. 
 
 
 % \begin{proposition}
@@ -483,78 +507,76 @@ In fact even if there is no network value the product improvement pursued is equ
 % +k)^3} -2
 % \end{equation*}
 
-It is then verified that profit is increasing and concave with respect to k. 
 
-\begin{proposition}
-\label{alphak}
-If $\alpha>1$ then an increase in $\alpha$ can only decrease the pursued product improvement. 
-\end{proposition}
+% \begin{proposition}
+% \label{alphak}
+% If $\alpha>1$ then an increase in $\alpha$ can only decrease the pursued product improvement. 
+% \end{proposition}
 
-\begin{proof}
-First we derive with respect to the exogenous variables. Due to the envelope theorem we need only look at the direct effects of the derivative and can ignore indirect effects due to the price. 
-\begin{equation*}
-\frac{\partial \pi }{\partial \alpha} =\frac{\sqrt{1-r}p^* (p^*-r)}{\left((a-1) \sqrt{1-r}+k\right)^2}
-\end{equation*}
+% \begin{proof}
+% First we derive with respect to the exogenous variables. Due to the envelope theorem we need only look at the direct effects of the derivative and can ignore indirect effects due to the price. 
+% \begin{equation*}
+% \frac{\partial \pi }{\partial \alpha} =\frac{\sqrt{1-r}p^* (p^*-r)}{\left((a-1) \sqrt{1-r}+k\right)^2}
+% \end{equation*}
 
-We then proceed to derive with respect to $k$:
-\begin{equation*}
-\frac{\partial^2 \pi }{\partial \alpha k} =
--\frac{2 \sqrt{1-r} (p^*-r)}{\left((\alpha-1) \sqrt{1-r}+k\right)^3}
-\end{equation*}
-Since this derivative is negative if $\alpha>1$ and $p^*>r$ it implies substitutability between $\alpha$ and k.  
-\end{proof}
+% We then proceed to derive with respect to $k$:
+% \begin{equation*}
+% \frac{\partial^2 \pi }{\partial \alpha k} =
+% -\frac{2 \sqrt{1-r} (p^*-r)}{\left((\alpha-1) \sqrt{1-r}+k\right)^3}
+% \end{equation*}
+% Since this derivative is negative if $\alpha>1$ and $p^*>r$ it implies substitutability between $\alpha$ and k.  
+% \end{proof}
 
-The more intuitive interpretation of proposition \ref{alphak} is simply that the firm will invest to improve the product when the good has a low network value, but as the network value of the good increases, it no longer has need to undertake this investment and since investment is costly, it will just decrease the degree at which it is pursued.
+% The more intuitive interpretation of proposition \ref{alphak} is simply that the firm will invest to improve the product when the good has a low network value, but as the network value of the good increases, it no longer has need to undertake this investment and since investment is costly, it will just decrease the degree at which it is pursued.
 
-In the intermediate cost of piracy case, there is once again no closed form solution. Some point estimates, a first and second order approximations are done in the appendix notes(\ref{notes}). However we can deduce how the firm would optimize product improvement with respect to $\alpha$. 
+% In the intermediate cost of piracy case, there is once again no closed form solution. Some point estimates, a first and second order approximations are done in the appendix notes(\ref{notes}). However we can deduce how the firm would optimize product improvement with respect to $\alpha$. 
 
-\begin{corollary}
-Proposition \ref{notes} implies that the upper bound value of product improvement is $k= \frac{1}{8}$
-\end{corollary}
+% \begin{corollary}
+% Proposition \ref{alphak} implies that the upper bound value of product improvement is $k= \frac{1}{8}$
+% \end{corollary}
 
 
-To see this corollary we need only note if $\alpha$ was smaller than 1, then the derivative would be positive and therefore the two would be complementary. So the product improvement peaks a $\alpha=1$ and then starts to decrease. In other words, the product improvement pursued when there are no pirates is an upper bound on the intermediate piracy. The firm has a higher incentive to increase the value of its product if pirating is free. 
+% To see this corollary we need only note if $\alpha$ was smaller than 1, then the derivative would be positive and therefore the two would be complementary. So the product improvement peaks a $\alpha=1$ and then starts to decrease. In other words, the product improvement pursued when there are no pirates is an upper bound on the intermediate piracy. The firm has a higher incentive to increase the value of its product if pirating is free. 
 
-\begin{proposition}
-If the network value is large, then further increases in the network value increases the number of buyers. 
-\end{proposition}
+% \begin{proposition}
+% If the network value is large, then further increases in the network value increases the number of buyers. 
+% \end{proposition}
 
-\begin{proof}
-\begin{align*}
-1 - \hat{x}= 1 - \frac{p-r}{(\alpha - 1) \sqrt{1-r} +k} \\
-= 1 - \frac{k+ (\alpha-1)\sqrt{ 1 -r }-r}{2(\alpha - 1) \sqrt{1-r} +2k} \\
-\frac{\partial (1 - \hat{x})}{\partial \alpha}=  -\frac{ \frac{\partial k}{\partial \alpha}+ \sqrt{ 1 -r }}{2(\alpha - 1) \sqrt{1-r} +2k}+\frac{(k+ (\alpha-1)\sqrt{ 1 -r }-r) (2 \sqrt{1-r}+\frac{\partial k}{\partial \alpha})}{(2(\alpha - 1) \sqrt{1-r} +2k)^2} \\
-=-\frac{\frac{\partial k}{\partial \alpha} \left(\alpha \sqrt{1-r}+k+r-\sqrt{1-r}\right)+2 r\sqrt{1-r} }{4 \left((\alpha-1) \sqrt{1-r}+k\right)^2}
-\end{align*}
+% \begin{proof}
+% \begin{align*}
+% 1 - \hat{x}= 1 - \frac{p-r}{(\alpha - 1) \sqrt{1-r} +k} \\
+% = 1 - \frac{k+ (\alpha-1)\sqrt{ 1 -r }-r}{2(\alpha - 1) \sqrt{1-r} +2k} \\
+% \frac{\partial (1 - \hat{x})}{\partial \alpha}=  -\frac{ \frac{\partial k}{\partial \alpha}+ \sqrt{ 1 -r }}{2(\alpha - 1) \sqrt{1-r} +2k}+\frac{(k+ (\alpha-1)\sqrt{ 1 -r }-r) (2 \sqrt{1-r}+\frac{\partial k}{\partial \alpha})}{(2(\alpha - 1) \sqrt{1-r} +2k)^2} \\
+% =-\frac{\frac{\partial k}{\partial \alpha} \left(\alpha \sqrt{1-r}+k+r-\sqrt{1-r}\right)+2 r\sqrt{1-r} }{4 \left((\alpha-1) \sqrt{1-r}+k\right)^2}
+% \end{align*}
 
-First note that from \ref{notes} we know that the derivative of k is negative, therefore the whole term is negative if:
+% First note that from proposition \ref{alphak} we know that the derivative of k is negative, therefore the whole term is negative if:
 
-\begin{align*}
-\alpha \sqrt{1-r}+k+r-\sqrt{1-r}<0 \\
-\alpha <1-\frac{k+r}{\sqrt{1-r}}<1 
-\end{align*}
+% \begin{align*}
+% \alpha \sqrt{1-r}+k+r-\sqrt{1-r}<0 \\
+% \alpha <1-\frac{k+r}{\sqrt{1-r}}<1 
+% \end{align*}
 
-The above condition never occurs. Because $\alpha>1$ by assumption. 
+% The above condition never occurs. Because $\alpha>1$ by assumption. 
 
-We need only check the condition for which the left hand term of the numerator is larger than the right hand term. 
-\begin{align*}
-\alpha>\frac{2 r}{\frac{\partial k}{\partial \alpha}}-\frac{k}{\sqrt{1-r}}-\frac{r}{\sqrt{1-r}}+1 \\
-\end{align*}
+% We need only check the condition for which the left hand term of the numerator is larger than the right hand term. 
+% \begin{align*}
+% \alpha>\frac{2 r}{\frac{\partial k}{\partial \alpha}}-\frac{k}{\sqrt{1-r}}-\frac{r}{\sqrt{1-r}}+1 \\
+% \end{align*}
 
-Note that since we know that when $\alpha$ is large, the effect on k approaches 0, this implies that the RHS approaches negative infinity, therefore $\alpha$ increases gradually the proportion of buyers
-\end{proof}
+% Note that since we know that when $\alpha$ is large, the effect on k approaches 0, this implies that the RHS approaches negative infinity, therefore $\alpha$ increases gradually the proportion of buyers
+% \end{proof}
 
 \section{Discussion and Conclusion}
 The interpretation so far has been about network goods however a reputation interpretation could work equally well. If we interpret both $\alpha$ and $\beta$ as reputational effects. Both $\alpha$ and $\beta$ can be seen as signalling devices that can only be recognized by the portion of agents who are using. This interpretation may be less intuitive, however it more naturally explains why there may be a differential between the two network values.
 
-The model has been assuming a kind of worse case scenario as to the effect of pirates. Though pirates can be used by the firm to increase its prices, there is no direct revenue mechanism for them. However there are situations, especially in the digital world where having a larger user base also allows for additional indirect profit opportunities. For instance in a social network, a larger user base allows the network owner to sell advertising slots at a higher price, and the wider the reach the more profitable the enterprise. This kind of mechanism would only strengthen our conclusion that firms may wish to allow piracy for their products. 
+The model has been assuming a kind of worse case scenario as to the effect of pirates. Though pirates can be used by the firm to increase its prices, there is no direct revenue mechanism for them. This could easily be imagined in a few cases, for instance, in the digital world a higher use base would allow for indirect profit opportunities. Take a social network as an example, a larger user base allows the network owner to sell advertising slots at a higher price, and the wider the reach the more profitable the enterprise. This kind of mechanism would only strengthen the profits of the firm in the pure piracy case whilist leaving the classic case unaffected. 
 
-Welfare in the model is always decreasing with respect to the cost of piracy. It is trivial to note that welfare is highest in the case when there is no cost to piracy. This is because in the baseline model the product already exists, it only by endogenizing the product improvement that the firm can add value. This does not entail that product degradation should always be zero because profits must be higher than the fixed cost of creating the product. Instead it should only be noted that it is profit increasing for the cost of piracy to be decreased. Therefore if the network value is high, having no cost to piracy may be pareto improving, that is, the firm has higher profits, more users benefit and if the product improvement is endogenous, then the product is improved. 
-
+Welfare in the model is always decreasing with respect to the cost of piracy. This is simply because the firm mostly does not produce the product since the welfare from an increase in user base is always positive. In the baseline model the product already exists, it only by endogenizing the product improvement that the firm can add value. This does not entail that product degradation should always be zero because profits must be higher than the fixed cost of creating the product. Instead, it should only be noted that the framework presented here actually implies the existence of pareto improving policies. That is, when the network value is high the firm prefers there to be a higher amount of piracy over no piracy at all. 
 
 % In the standard literature, the only source of revenue for a firm is to sell the product. However there are situations, especially in the digital world where having a larger user base also allows for additional indirect profit opportunities. For instance in a social network, a larger user base allows the network owner to sell advertising slots at a higher price, and the wider the reach the more profitable the enterprise. This extra source of revenue is parametrized with the letter $\lambda$. It should be noted that increasing pirates or buyers increase revenue from this source. 
 
-Our model shows that even if the firm has total control of the level of piracy pursuit, they would not necessarily fully utilize this capability. Under the conditions discussed above, the firm often has incentive to not use deterrence to push consumers out of its pool of customers because reducing the number of consumers also decreases the value of the good for those who would buy. The intuition behind this carrot and stick approach is that the price has a single effect whilst product degradation has a double effect. The price effect is less variable because it gives the firm the ability to be more precise in its targeting mechanism. That is, while changing the price only works on the consumers who are marginally on the edge of the choice of buying or pirating, changing the degradation level affects all segments at once, resulting in more global network effects. 
+Our model shows that even if the firm has total control of the level of piracy pursuit, it would not necessarily fully utilize this capability. Under the conditions discussed above, the firm often has incentive to not use deterrence to push consumers out of its pool of customers because reducing the number of consumers also decreases the value of the good for those who would buy. The intuition behind this carrot and stick approach is that the price has a single effect whilst piracy pursuit has a double effect. The price effect is less variable because it gives the firm the ability to be more precise in its targeting mechanism. Wile changing the price only works on the consumers who are marginally on the edge of the choice of buying or pirating, changing the degradation level affects all segments at once, resulting in more global network effects. 
 
 Increasing the product degradation affects both the proportion of users buying while also decreasing the user base. The strength of these two effects depends on their valuation of the network value. The decrease in the user base corresponds to the product becoming less popular and the change in buying behavior represents either a consumer who no longer wishes to undertake the risk of pirating or a consumer who no longer wishes to buy the product because it has less value to her.
 
@@ -564,20 +586,18 @@ One simple policy implication of the model is that pursuing pirates uniformly fo
 
 Still, this approach is limited in that, whilst it is possible for a firm to identify other infringers and selectively sue them, it is likely that the number of pirates is too high to accurately identify. However, if we are to include the cost of identification, this same cost has to be applied on any mechanism that enforces piracy laws. A policy that focuses on enforcement against consumers is likely to have a much higher social cost than one which is enforced on firms in accordance with the actual number of consumers. 
 
-Put in another way, the problem with copyright enforcement is that it is unconditional. That is, unlike patents, where the patent right holder chooses to initiate an action against a patent infringer, presumably following a calculation which leads the patent right holder to the conclusion that such an action is worthwhile. The act of copyright piracy in itself is unconditional, a criminal offense. In other words, regardless of whether the effects of the act aid or harm a copyright owner there is a consistent social cost imposed. 
+Put in another way, the problem with copyright enforcement is that it is unconditional. That is, unlike patents, where the patent right holder chooses to initiate an action against a patent infringer, presumably following a calculation which leads the patent right holder to the conclusion that such an action is worthwhile. The illegal act of piracy is unconditionally a criminal offense. In other words, regardless of whether the effects of the act aid or harm a copyright owner there is a consistent social cost imposed. 
 
-In practice, firms cannot control the probability of success when initiating an action. In industries where the pirates are many and are highly decentralized, it is quite plausible that neither the government nor the firms can greatly increase their level of piracy pursuit without greatly invading personal data and privacy laws.  Realistically, cases involving music or movies are more adapted and fit better into the above developed model. 
+In practice, firms cannot control the probability of success when initiating an action. In industries where the pirates are many and are highly decentralized, it is quite plausible that neither the government nor the firms can greatly increase their level of piracy pursuit without greatly invading personal data and privacy laws. Realistically, cases involving music or movies are more adapted and fit better into the above developed model. 
 
-It is also important to note that there are firm adaptation strategies. These strategies may be less costly because they can focus on prevention rather than pursuit. In the digital space, these strategies are usually labeled, Digital Rights Management strategies(DRM). Examples of DRM are idea's such as requiring users to use specific platforms to access the content, monitoring consumption, selling restricted usage copies or simply very specific detail formation strategies. Such strategies may be complementary or substitute with piracy enforcement. These kinds of platforms can be used by firms to select their own level of piracy. Indeed, if there are platforms, which focus on easy and user friendly access, this can be seen as complementary to piracy, as being a value added to the basic product. In essence this kind of change would simply be a privatization cost, for more details on this kind of aspects see,  \citep{S04}.
+It is also important to note that there are firm adaptation which can be used as alternatives to the law. These strategies may be less costly because they can focus on prevention rather than pursuit. In the digital space, these strategies are usually labeled, Digital Rights Management (DRM) strategies. Examples of DRM are idea's such as requiring users to use specific platforms to access the content, monitoring consumption, selling restricted usage copies etc. Such strategies may be complementary or substitutable with piracy enforcement. DRM strategies allow firms to select their own level of piracy pursuit. Piracy often has its own platforms which continously improve their own services. Indeed much of the historic incentive to pirate was due to the superior platform services of piracy software. The new wave of streaming services such as Netflix or Amazon prime represent competition to these piracy services.
 
 
-A hidden assumption in this kind of analysis is that all users have an equal utility from socializing with all others users. In the real world, if there are segregation effects, this assumption may not be fully applicable. On the other hand, if we assume that segregation brings together more diverse valuations, such as perhaps a family unit, then this solidifies the conclusions of this model.
+A hidden assumption in the model presented above is that all users value socializing with all other users. In the real world, if there are segregation effects, this assumption may not be fully applicable. On the other hand, if we assume that segregation brings together more diverse valuations, such as perhaps a family unit, then this solidifies the conclusions of this model.
 
-Generally, the assumption that utilities are independent is often too readily used. What is termed a "network good" in the industrial organization literature can be interpreted too narrowly. It is not simply digital social networks that have this property. In fact, it is possible to envision most goods as having both an intrinsic value and an extrinsic value. The relative ratio of intrinsic to extrinsic value will likely vary substantially between cultures, space and time. Additionally, the domain in which this is true is likely to extend much farther than what common intuition would entail. For instance, even perishable goods, demand for which is commonly thought of as inelastic, such as food, are not necessarily exempt from this feedback process. Accordingly, much of what can be deemed "group identity" can be represented within a network good framework. Within the framework of network goods, stealing and not consuming are not worth the same to a company. Specifically, a culture of baguette or chocolate eaters does not represent the same profit opportunities as groups without such culture.
+Generally, the assumption that utilities are independent is often too readily used. What is termed a "network good" in the industrial organization literature can be interpreted too narrowly. It is not simply digital social networks that have this property. In fact, it is possible to envision most goods as having both an intrinsic value and an extrinsic component. The relative ratio of intrinsic to extrinsic value will likely vary substantially between cultures, space and time. Additionally, the domain in which this is true is likely to extend much farther than what common intuition would entail. For instance, even perishable goods, such as food, are not necessarily exempt from this feedback process, for instance the consumption of cheese or wine is not something that is independent of the surrounding culture. Accordingly, much of what can be deemed "group identity" can be represented within a network good framework. A culture of baguette or chocolate eaters does not represent the same profit opportunities as groups without such culture.
 
-One of the most common arguments against piracy is that it decreases the number of individuals who actually pay the real cost of the product.  However, the implicit assumption in such a line of reasoning is that the number of purchasers and the value of the purchasing, are independent. Based on the model presented here, such a conclusion is drawn too hastily, the effect of increasing the piracy cost may or may not have a monotonic effect, however the direction of the effect depends on the network value. The disentanglement between piracy, profits, and the price level is suggested to have both positive and negative feedback effects.
-
-As pointed out in \cite{CRP91} this setup raises strange ethical questions. When we have possible parameter values that imply that higher pursuit of pirates may be worse for consumers and producers at public cost, it is unclear whether enforcing intellectual property rights passes even the most basic cost benefit analysis test.
+One of the most common arguments against piracy is that it decreases the number of individuals who actually pay the real cost of the product.  However, the implicit assumption in such a line of reasoning is that the number of purchasers and the value of the purchasing, are independent. Based on the model presented here, such a conclusion is drawn too hastily, the effect of increasing the piracy cost may not have the desired effect. As pointed out in \cite{CRP91} this setup raises strange ethical questions. When we have possible parameter values that imply that higher pursuit of pirates may be worse for consumers and producers at public cost. With these factors in mind, it is unclear whether enforcing intellectual property rights passes even the most basic cost benefit analysis.
 
 \newpage
 
@@ -927,10 +947,10 @@ D(\hat{x})=1-\hat{x}=1-\frac{ (p-r)}{k + (\alpha-1) \sqrt{ 1 -r }} \\
 If $r=0$, the firm will choose $(p,k)=(\frac{1}{16c}+\frac{\alpha-\beta}{2},\frac{1}{8c})$ $\check{x}=0$ and $\hat{x}=1/2$ and $\pi= \frac{1}{4}(\alpha-\beta)+\frac{1}{64c}$.
 \end{proposition}
 
-\textbf{Proof:}
+\begin{proof}
 
 
-Since all consumers uses the good, we only care about $\hat{x}$ and it is defined by the following indifference condition, (since a consumer with type $\hat{x}$ must be indifferent between buying and pirating the good):
+As in the exogenous case we solve for the indifference condition:
 
 \begin{align*}
 \hat{x}(1+\alpha+k)=\hat{x}(1+\beta) \\
@@ -963,13 +983,12 @@ and
 
 This gives $k^*=\frac{1}{8c}$,  and $p^*=\frac{\alpha-\beta}{2}+\frac{1}{16c}$ and $\pi=\frac{1}{4}(\alpha-\beta)+\frac{1}{64c} $ if we put these values in the profit equation. 
 
-Q.E.D.
+\end{proof}
 
 \begin{observation}
 The product improvement chosen by the firm does not depend on network values, $\beta$ and $\alpha$
 \end{observation}
 
-The rest of the analysis is identical to the exogenous k case. 
 
 \subsection{Intermediate r}
 $0<r<\tilde{r}$
@@ -993,11 +1012,6 @@ k+ (\alpha-1)\sqrt{ 1 -r }} \\
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%
-\end{align*}
-
-The additional FOC and SOC in this case are: 
-
-\begin{align*}
 \frac{\partial \pi}{\partial k} = \frac{ p(p-r)}{((\alpha-1)
 \sqrt{ 1-r }
 +k)^2} -2k
@@ -1005,8 +1019,7 @@ The additional FOC and SOC in this case are:
 %%%%%%%%%%%%%%%%%%%%%
 \frac{\partial^2 \pi}{\partial k^2} = -\frac{2 p(p-r)}{((\alpha-1)
 \sqrt{ 1-r }
-+k)^3} -2
-\\    
++k)^3} -2 
 \end{align*}
 
 \subsection{Some values for k}
@@ -1106,6 +1119,7 @@ f\left(\frac{1-a}{1-b} \right) = \frac{1-f(a)}{1-f(b)} \\
 \left(\frac{1-a}{1-b} \right)^i = \frac{1-a^i}{1-b^i} 
 \end{align}
 
+Which is satisfied because $g(t)=t$ implies $i=1$
 
 \subsubsection{Welfare}
 

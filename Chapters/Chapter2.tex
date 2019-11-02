@@ -97,6 +97,12 @@ We also make an additional assumption that is sufficient but not neccesary for t
 \end{equation*}
 \end{assumption} 
 
+We can re-arrange assumption \ref{as2}, and notice that $\pi_{e}(c_{i},c_{e2})-\pi_{e}(c_{i},c_{e1})>0$ to get the following corrolary:
+
+\begin{corollary}\label{cor}
+Assumption \ref{as2} implies that $\Rightarrow \pi_{i}(c_{i},c_{e1}) - \pi_{i}(c_{i},c_{e}) \leq \pi_{i}(c_{i},c_{e2}) - \pi_{i}(c_{i2},c_{e})$ 
+\end{corollary}
+
 %\textcolor{orange}{Buyout is always done in Bertrand competition}
 
 We assume that firms do not have a time preference. Though there is no \text{preference} for present profits, the firms will still prefer the earlier payment because there is no risk associated with them, firms naturally will prefer one innovation over the other because of their time structure. 
@@ -243,42 +249,102 @@ B_{ir}(\omega) &=\pi_{i}(c_i,c_{e2}) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \
 \\ &+(\omega \pi_i(c_i,c_{e2})+(1-\omega)(\pi_{i}(c_{i2},c_{e})-\pi_{e}(c_{i},c_{e2}))) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)
 \end{align*}
 
-\subsection{The case with no buyouts}
+The entrant will choose the radical innovation over the sequential innovation based purely on the expected values of the entrants payoffs.
 
-We now show the general result for the distortion of incentives. First note that the entrant will choose the radical innovation over the sequential innovation on the expected values of the entrants payoffs. We denote the condition for preferring the radical innovation as $\Delta \Pi >0$, it's general form is the following: 
+\begin{definition}
+Let $\Delta \Pi$ denote the incentive to choose the radical innovation when there no buyouts. Specifically, if $\Delta \Pi >0$ the radical innovation is pursued, and if $\Delta \Pi <0$ the sequential innovation. 
+\end{definition}
 
+\begin{proposition}
+$\Delta \Pi$ is continous and can take positive and negative values. 
+\end{proposition}
+
+\begin{proof}
+The general form of the incentive is given by taking the difference between the expected values. 
 \begin{align*}
 \Pi_{er}  &> \Pi_{es}   \\
 \pi_{e}(c_i,c_{e2}) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) - \pi_e(c_i,c_{i1})  -\pi_e(c_i,c_{e2})(T-t_2) &> 0 \\
 \Delta \Pi \equiv \pi_{e}(c_i,c_{e2}) \left( t_2 - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right) - \pi_e(c_i,c_{i1})  &> 0 \\
 \end{align*}
-
-Intuitively, the higher the transition probability of the radical innovation, the more attractive it is to pursue. This can be seen by the fist order condition of $\Delta \Pi$, which is strictly positive: 
 \begin{align*}
-\frac{\partial \Delta \Pi}{\partial q} = \frac{(1-q)^T}{q^2}+\frac{T (1-q)^{T-1}}{q}
-\end{align*} 
+&\text{We can see that } \Delta \Pi \text{ can take positive and negative values by taking the limit with respect to q:} \\
+&\lim_{q \to 1}\Delta \Pi = \pi_{e}(c_i,c_{e2}) t_2  - \pi_e(c_i,c_{i1}) \\
+& \text{This is positive due to the fact that: } t_2>1, \text{and}, \pi_{e}(c_i,c_{e2})>\pi_e(c_i,c_{i1}) \\
+&\lim_{q \to 0}\Delta \Pi = \pi_{e}(c_i,c_{e2}) (t_2 - T)- \pi_e(c_i,c_{i1}) \\
+& \text{To see that this is negative we need only recall that: } t_2<T \\
+& \text{We can also see that the derivative of this function with respect to q is well defined and positive:} \\
+&\frac{\partial \Delta \Pi}{\partial q} = \pi_{e}(c_i,c_{e2})  \left(\frac{1-(1-q)^T-T q (1-q)^{T-1}}{q^2} \right) \\
+& = \pi_{e}(c_i,c_{e2})  \left(\frac{1-(1-q)^{T-1}((1-q)+T q) }{q^2} \right) \\
+& \text{The term } (1-q)^{T-1}((1-q)-T q) \text{ is decreasing in q and at } q=0 \text{ becomes } 1. 
+\end{align*}  
+\end{proof}
 
-It can also similarly be seen that $\Delta \Pi$ is increasing linearly in $t_2$. We now present our first result:  
+Intuitively, the higher the transition probability of the radical innovation, the more attractive it is to pursue. It can also similarly be seen that $\Delta \Pi$ is increasing linearly in $t_2$. We now present our first result:  
 
 \begin{proposition}
 $\Delta \Pi$ is decreasing and convex in T.
 \end{proposition}
 
 \begin{proof}
-\text{The first order condition with respect to T is}
 \begin{align*}
-\frac{\partial \Delta \Pi}{\partial T}=\frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T} \log[1-q] \\
-\text{The second condition with respect to T is} \\
-\frac{\partial \Delta^2 \Pi}{\partial T^2} = \frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T} \log[1-q]^2
+&\text{The first order condition with respect to T is:} \\
+&\frac{\partial \Delta \Pi}{\partial T}=\frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T} \log[1-q] \\
+&\text{The second condition with respect to T is:} \\
+&\frac{\partial \Delta^2 \Pi}{\partial T^2} = \frac{\pi_{e}(c_i,c_{e2})}{q} (1-q)^{T} \log[1-q]^2 \\
+&\text{Due to the fact that} (1-q) <0, \text{the first is negative and second is positive}
 \end{align*}
-\text{Due to the fact that $(1-q) <0$, the first is negative and second is positive}
 \end{proof}
 
 This first order effect is that as the time horizon under consideration increases, the incentive to pursue the radical technology is decreased. The second order effect is that the first order effect becomes marginally less important as the time horizon increases. This is because as the time horizon increases, the sequential project has a higher probability of having the extra payment. 
 
-\subsection{The case with possible buyouts}
-If buyouts are allowed, the entrant will then compare the bargaining payoffs instead of the market payoffs. As before we define the condition for the radical innovation to be pursued with buyouts as $\Delta B$: 
+\begin{definition}
+Let $\Delta B$ denote the incentive to choose the radical innovation when there are buyouts. Specifically, if $\Delta B >0$ the radical innovation is pursued, and if $\Delta B <0$ the sequential innovation. 
+\end{definition}
 
+\begin{proposition}
+$\Delta B$ can take on positive and negative values and is continuous. 
+\end{proposition}
+\begin{proof}
+\begin{align*}
+B_{er}(\omega)-F > B_{es}(\omega)-F \\
+\leftrightarrow \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\left(\omega\pi_{i}(c_{i2},c_{e})-\omega \pi_{i}(c_{i},c_{e2})+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)> \\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1}) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++(\omega(\pi_i(c_{i2},c_e)- \pi_i(c_{i},c_{e2}))+(1-\omega)\pi_e(c_{i},c_{e2}))(T-t_2) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\leftrightarrow \\
+\left(\omega (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2}))+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) \left( t_2- \frac{1}{q} \left( 1-(1-q)^T \right) \right)  \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1}) \equiv \Delta B >0 \\
+\end{align*}
+\begin{align*}
+&\text{We can see that } \Delta B \text{ can take positive and negative values by taking the limit with respect to q:} \\
+&\lim_{q \to 1}\Delta B = \left(\omega (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2}))+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) t_2
+-\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1})
+\\
+& = \omega (t_2 (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2})) + \pi_i(c_i,c_{i1}) -\pi_i(c_i,c_{e}) ) 
++ (1-\omega)(t_2 \pi_{e}(c_{i},c_{e2}) + \pi_e(c_i,c_{i1}))
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+& \text{The first term is positive due to corollary \ref{cor} and } t_2>1, \text{and the second term is also positive. } \\
+&\lim_{q \to 0}\Delta B = \left(\omega (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2}))+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) (t_2-T)
+\\
+& ~~~~~~~~~~~~~  -\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1})
+\\
+& = \omega ((t_2-T) (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2})) + \pi_i(c_i,c_{i1}) -\pi_i(c_i,c_{e}) ) 
++ (1-\omega)((t_2-T) \pi_{e}(c_{i},c_{e2}) + \pi_e(c_i,c_{i1}))
+\\
+& \text{The first term is positive due to the fact that } T-t_2 \geq 1 \text{ and  corollary \ref{cor}} 
+\\
+& \text{For the second term we can see that it is negative due to } T-t_2 \geq 1 \text{ and } \pi_{e}(c_{i},c_{e2})>\pi_e(c_i,c_{i1})) \\
+& \text{We can also see that the derivative of this function with respect to q is well defined and positive:} \\
+&\frac{\partial \Delta B}{\partial q} = \left(\omega (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2}))+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) \left(\frac{1-(1-q)^{T-1}((1-q)+T q) }{q^2} \right)
+\end{align*}
+Where $\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2})$ is positive by definition and the larger parenthesis is weakly positive by the same reasoning as in proposition 1. 
+\end{proof}
 % \begin{align*}
 % B_{er}(\omega) > B_{es}(\omega) \\
 % \leftrightarrow \\
@@ -297,21 +363,7 @@ If buyouts are allowed, the entrant will then compare the bargaining payoffs ins
 % \Delta B > 0
 % \end{align*}
 
-\begin{align*}
-B_{er}(\omega)-F > B_{es}(\omega)-F \\
-\leftrightarrow \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\left(\omega\pi_{i}(c_{i2},c_{e})-\omega \pi_{i}(c_{i},c_{e2})+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) \left( T - \frac{1}{q} \left( 1-(1-q)^{T} \right) \right)> \\ 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1}) \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-+(\omega(\pi_i(c_{i2},c_e)- \pi_i(c_{i},c_{e2}))+(1-\omega)\pi_e(c_{i},c_{e2}))(T-t_2) \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\leftrightarrow \\
-\left(\omega (\pi_{i}(c_{i2},c_{e})- \pi_{i}(c_{i},c_{e2}))+(1-\omega)\pi_{e}(c_{i},c_{e2}) \right) \left( t_2- \frac{1}{q} \left( 1-(1-q)^T \right) \right)  \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--\omega(\pi_i(c_i,c_{e})-\pi_i(c_i,c_{i1}))+(1-\omega)\pi_e(c_i,c_{i1}) \equiv \Delta B >0 \\
-\end{align*}
+
 
 \subsection{Comparison}  
 

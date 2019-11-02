@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  30 OCT 2019 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  2 NOV 2019 19:52
 entering extended mode
 **./Compiler.tex
 (Compiler.tex
@@ -1800,7 +1800,11 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 101.
 \c@hyp=\count373
 \c@subhyp=\count374
 \c@chapter@last=\count375
- (Compiler.aux)
+ (Compiler.aux
+
+LaTeX Warning: Label `case:decision' multiply defined.
+
+)
 \openout1 = `Compiler.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 292.
@@ -1820,8 +1824,7 @@ LaTeX Font Info:    ... okay on input line 292.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 292.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 292.
 
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 292.
@@ -1940,7 +1943,7 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 293.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-<./front-bg.jpg, id=98, 597.432pt x 845.0772pt>
+<./front-bg.jpg, id=82, 597.432pt x 845.0772pt>
 File: ./front-bg.jpg Graphic file (type jpg)
 <use ./front-bg.jpg>
 Package pdftex.def Info: ./front-bg.jpg  used on input line 293.
@@ -2003,7 +2006,7 @@ Overfull \hbox (5.38928pt too wide) in paragraph at lines 293--293
 []  []
  []
 
-<./logo.png, id=99, 577.55775pt x 260.77425pt>
+<./logo.png, id=83, 577.55775pt x 260.77425pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 293.
@@ -2013,135 +2016,202 @@ Package pdftex.def Info: ./logo.png  used on input line 293.
 {C:/Users/DavidEttinger02/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
 /front-bg.jpg> <./logo.png>] [2
 
-] (Compiler.toc
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] (Compiler.toc)
+\tf@toc=\write6
+\openout6 = `Compiler.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...3}Some values for k}{33}{subsection.1.9.3}
-                                                  % [1
+l.324 \chapter
+              *{Acknowledgements} [1
 
 
-])
-\tf@toc=\write6
-\openout6 = `Compiler.toc'.
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.341 \chapter
+              {Cost-side innovation with project variance} [2
+
+]
+Chapter 1.
+(../Chapters/Chapter2.tex
+
+Package natbib Warning: Citation `HAU' on page 3 undefined on input line 7.
 
 
+Package natbib Warning: Citation `COM' on page 3 undefined on input line 7.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 10.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 10.
+
+Package natbib Warning: Citation `bessen_maskin' on page 3 undefined on input l
+ine 10.
+
+[3
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.324 \chapter
-              *{Acknowledgements} [2] [3
+[4]
 
-]
-Chapter 1.
-(../Chapters/Chapter1.tex
+Package natbib Warning: Citation `white2002trends' on page 5 undefined on input
+ line 43.
+
+
+Package natbib Warning: Citation `Gerpott1995' on page 5 undefined on input lin
+e 43.
+
+
+Package natbib Warning: Citation `Higgins2006' on page 5 undefined on input lin
+e 43.
+
+
+Package natbib Warning: Citation `Zhao2009' on page 5 undefined on input line 4
+3.
+
+
+Package natbib Warning: Citation `Bena2014' on page 5 undefined on input line 4
+3.
+
+
+Package natbib Warning: Citation `Cabral2003' on page 5 undefined on input line
+ 50.
+
+
+Package natbib Warning: Citation `Aghion2005' on page 5 undefined on input line
+ 52.
+
+
+Package natbib Warning: Citation `Aghion2001' on page 5 undefined on input line
+ 52.
+
+
+Package natbib Warning: Citation `Aghion1997' on page 5 undefined on input line
+ 52.
+
+
+Package natbib Warning: Citation `Gilbert2016' on page 5 undefined on input lin
+e 52.
+
+
+Package natbib Warning: Citation `Phillips2012' on page 5 undefined on input li
+ne 52.
+
+[5]
+
+Package natbib Warning: Citation `Kuechle2012' on page 6 undefined on input lin
+e 54.
+
+
+Package natbib Warning: Citation `Jehiel2005' on page 6 undefined on input line
+ 54.
+
+
+Package natbib Warning: Citation `Hart1999' on page 6 undefined on input line 5
+4.
+
+[6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4
+ [7]
+Underfull \vbox (badness 3907) has occurred while \output is active []
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 29.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-[6] [7] [8]
+ [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-[10] [11] [12] [13] [14] [15]
-Overfull \hbox (11.258pt too wide) detected at line 367
-\OML/lmm/m/it/12 [] \OT1/lmr/m/n/12 = []
- []
-
-[16] [17] [18]
-Overfull \hbox (3.50993pt too wide) in paragraph at lines 509--510
-\T1/lmr/m/n/12 point es-ti-mates, a first and sec-ond or-der ap-prox-i-ma-tions
- are done in the ap-pendix notes([][]1.9.4[][]).
- []
-
-[19] [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (29.67938pt too wide) detected at line 279
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (63.63374pt too wide) detected at line 345
+[]
+ []
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16]
+Overfull \hbox (10.35751pt too wide) detected at line 443
+[]
+ []
+
+
+Overfull \hbox (20.30557pt too wide) detected at line 454
+[]
+ []
+
+
+Underfull \vbox (badness 3068) has occurred while \output is active []
+
+ [17]
+[18] [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+[21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-[24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
+[24] [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
+
+Package natbib Warning: Citation `Dem' on page 27 undefined on input line 946.
+
 [27]
-Overfull \hbox (65.51114pt too wide) detected at line 763
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+[29] [30] [31]
+Overfull \hbox (33.61668pt too wide) detected at line 1047
 []
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-[29]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 924.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 924.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 924.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 5091) has occurred while \output is active []
-
- [31]
-Underfull \vbox (badness 6461) has occurred while \output is active []
+Underfull \vbox (badness 4846) has occurred while \output is active []
 
  [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-Overfull \hbox (39.86679pt too wide) detected at line 1075
-[]
- []
+[34])
+No file Compiler.bbl.
 
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package natbib Warning: There were undefined citations.
 
- [35]
-Underfull \vbox (badness 5022) has occurred while \output is active []
-
- [36])
-(Compiler.bbl [37] [38
-
-]) [39] [40
+[35] [36
 
 
-] [41]
-<./back-bg.png, id=456, 556.0775pt x 715.67375pt>
+] [37]
+<./back-bg.png, id=352, 556.0775pt x 715.67375pt>
 File: ./back-bg.png Graphic file (type png)
 <use ./back-bg.png>
 Package pdftex.def Info: ./back-bg.png  used on input line 353.
@@ -2159,33 +2229,33 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
 (Font)              size <5> substituted on input line 353.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-[42 <./back-bg.png>]
+[38 <./back-bg.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
  (Compiler.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 Package rerunfilecheck Info: File `Compiler.out' has not changed.
-(rerunfilecheck)             Checksum: 6401815FC2EFED952BA9524367F82233;1701.
+(rerunfilecheck)             Checksum: F7007C5A5D1153C6C2D7EFF0256F7F00;1312.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 47396 strings out of 492969
- 1049440 string characters out of 3134358
- 1316077 words of memory out of 3000000
- 50301 multiletter control sequences out of 15000+200000
- 672615 words of font info for 132 fonts, out of 3000000 for 9000
+ 47302 strings out of 492969
+ 1048350 string characters out of 3134358
+ 1314692 words of memory out of 3000000
+ 50263 multiletter control sequences out of 15000+200000
+ 652647 words of font info for 122 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,96p,1478b,1001s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+ 62i,15n,96p,1322b,999s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
-, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
@@ -2196,29 +2266,29 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
-ex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fi
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
+/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
+sy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-ex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/
+ype1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb>
-Output written on Compiler.pdf (44 pages, 1004536 bytes).
+Output written on Compiler.pdf (40 pages, 987202 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 134 named destinations out of 1000 (max. 500000)
- 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 
