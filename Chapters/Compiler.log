@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  2 NOV 2019 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  7 NOV 2019 15:22
 entering extended mode
 **./Compiler.tex
 (Compiler.tex
@@ -1802,7 +1802,13 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 101.
 \c@chapter@last=\count375
  (Compiler.aux
 
+LaTeX Warning: Label `dynamic' multiply defined.
+
+
 LaTeX Warning: Label `case:decision' multiply defined.
+
+
+LaTeX Warning: Label `static' multiply defined.
 
 )
 \openout1 = `Compiler.aux'.
@@ -1943,7 +1949,7 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 293.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-<./front-bg.jpg, id=82, 597.432pt x 845.0772pt>
+<./front-bg.jpg, id=294, 597.432pt x 845.0772pt>
 File: ./front-bg.jpg Graphic file (type jpg)
 <use ./front-bg.jpg>
 Package pdftex.def Info: ./front-bg.jpg  used on input line 293.
@@ -2006,7 +2012,7 @@ Overfull \hbox (5.38928pt too wide) in paragraph at lines 293--293
 []  []
  []
 
-<./logo.png, id=83, 577.55775pt x 260.77425pt>
+<./logo.png, id=295, 577.55775pt x 260.77425pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 293.
@@ -2016,43 +2022,16 @@ Package pdftex.def Info: ./logo.png  used on input line 293.
 {C:/Users/DavidEttinger02/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
 /front-bg.jpg> <./logo.png>] [2
 
-] (Compiler.toc)
-\tf@toc=\write6
-\openout6 = `Compiler.toc'.
+] (Compiler.toc
+Underfull \vbox (badness 3849) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.324 \chapter
-              *{Acknowledgements} [1
+l.30 ...r=0, no piracy cost}{53}{subsection.1.5.1}
+                                                  % [1
 
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.341 \chapter
-              {Cost-side innovation with project variance} [2
-
-]
-Chapter 1.
-(../Chapters/Chapter2.tex
-
-Package natbib Warning: Citation `HAU' on page 3 undefined on input line 7.
-
-
-Package natbib Warning: Citation `COM' on page 3 undefined on input line 7.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 10.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 10.
-
-Package natbib Warning: Citation `bessen_maskin' on page 3 undefined on input l
-ine 10.
-
-[3
 
 ]
 
@@ -2061,181 +2040,442 @@ Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[4]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 ....2}Ex-post Bertrand}{94}{subsection.2.4.2}
+                                                  % [2])
+\tf@toc=\write6
+\openout6 = `Compiler.toc'.
 
-Package natbib Warning: Citation `white2002trends' on page 5 undefined on input
- line 43.
+ [3] [4
 
+] [5
 
-Package natbib Warning: Citation `Gerpott1995' on page 5 undefined on input lin
-e 43.
+]
+(../Chapters/Chapter0.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 8.
 
+Underfull \vbox (badness 1910) has occurred while \output is active []
 
-Package natbib Warning: Citation `Higgins2006' on page 5 undefined on input lin
-e 43.
+ [6
 
+]
+[7]
+Overfull \hbox (25.32265pt too wide) in paragraph at lines 42--43
+ [] 
+ []
 
-Package natbib Warning: Citation `Zhao2009' on page 5 undefined on input line 4
-3.
+[8]
+Underfull \vbox (badness 1824) has occurred while \output is active []
 
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1
+}) has been already used, duplicate ignored
 
-Package natbib Warning: Citation `Bena2014' on page 5 undefined on input line 4
-3.
-
-
-Package natbib Warning: Citation `Cabral2003' on page 5 undefined on input line
- 50.
-
-
-Package natbib Warning: Citation `Aghion2005' on page 5 undefined on input line
- 52.
-
-
-Package natbib Warning: Citation `Aghion2001' on page 5 undefined on input line
- 52.
-
-
-Package natbib Warning: Citation `Aghion1997' on page 5 undefined on input line
- 52.
-
-
-Package natbib Warning: Citation `Gilbert2016' on page 5 undefined on input lin
-e 52.
-
-
-Package natbib Warning: Citation `Phillips2012' on page 5 undefined on input li
-ne 52.
-
-[5]
-
-Package natbib Warning: Citation `Kuechle2012' on page 6 undefined on input lin
-e 54.
-
-
-Package natbib Warning: Citation `Jehiel2005' on page 6 undefined on input line
- 54.
-
-
-Package natbib Warning: Citation `Hart1999' on page 6 undefined on input line 5
-4.
-
-[6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-Underfull \vbox (badness 3907) has occurred while \output is active []
-
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.59 
+     ]
+Underfull \vbox (badness 2343) has occurred while \output is active []
 
  [10]
+[11] [12pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.0.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.132 
+      ] [13] [14]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 154.
+
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[15] [16] [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
+ [18]
+[19] [20pdfTeX warning (ext4): destination with the same identifier (name{table
+.0.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.227 
+      ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-Overfull \hbox (29.67938pt too wide) detected at line 279
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Overfull \hbox (63.63374pt too wide) detected at line 345
-[]
- []
-
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-[16]
-Overfull \hbox (10.35751pt too wide) detected at line 443
-[]
- []
-
-
-Overfull \hbox (20.30557pt too wide) detected at line 454
-[]
- []
-
-
-Underfull \vbox (badness 3068) has occurred while \output is active []
-
- [17]
-[18] [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-[21]
+ [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-[24] [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-
-Package natbib Warning: Citation `Dem' on page 27 undefined on input line 946.
-
-[27]
+ [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
-[29] [30] [31]
-Overfull \hbox (33.61668pt too wide) detected at line 1047
+ [25]
+[26] [27] [28]
+Underfull \vbox (badness 2343) has occurred while \output is active []
+
+ [29]
+[30] [31] [32]
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+ [33]
+[34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+[36] [37] [38] [39] [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+[42] [43]) [44]
+Chapter 1.
+(../Chapters/Chapter1.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+[47] [48] [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51] [52] [53] [54] [55] [56]
+Overfull \hbox (11.258pt too wide) detected at line 367
+\OML/lmm/m/it/12 [] \OT1/lmr/m/n/12 = []
+ []
+
+[57] [58]
+<./figures/Endogenousksimulation0.jpg, id=1198, 790.955pt x 431.6125pt>
+File: ./figures/Endogenousksimulation0.jpg Graphic file (type jpg)
+<use ./figures/Endogenousksimulation0.jpg>
+Package pdftex.def Info: ./figures/Endogenousksimulation0.jpg  used on input li
+ne 462.
+(pdftex.def)             Requested size: 469.75502pt x 256.34172pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/Endogenousksimulation.jpg, id=1200, 423.5825pt x 425.59pt>
+File: ./figures/Endogenousksimulation.jpg Graphic file (type jpg)
+<use ./figures/Endogenousksimulation.jpg>
+Package pdftex.def Info: ./figures/Endogenousksimulation.jpg  used on input lin
+e 473.
+(pdftex.def)             Requested size: 234.8775pt x 235.99094pt.
+[59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.572 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.572 
+       <./figures/Endogenousksimulation0.jpg> <./figures/Endogenousksimulation.
+jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+[64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+[67]
+Overfull \hbox (65.51114pt too wide) detected at line 781
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+[69]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 942.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 942.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 942.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+[71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+Overfull \hbox (39.86679pt too wide) detected at line 1086
+[]
+ []
+
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+ [76])
+[77]
+Chapter 2.
+(../Chapters/Chapter2.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78
+
+]
+Underfull \vbox (badness 2111) has occurred while \output is active []
+
+ [79]
+[80] [81] [82] [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Underfull \hbox (badness 10000) in paragraph at lines 197--200
+
+ []
+
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+Overfull \hbox (25.30177pt too wide) detected at line 289
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87]
+[88]
+Overfull \hbox (63.63374pt too wide) detected at line 367
+[]
+ []
+
+[89]
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
+ [90]
+Overfull \hbox (10.35751pt too wide) detected at line 496
+[]
+ []
+
+
+Overfull \hbox (20.30557pt too wide) detected at line 507
+[]
+ []
+
+[91] [92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [93]
+[94] [95] [96]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97]
+[98] [99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100]
+[101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+[103] [104] [105]
+Overfull \hbox (33.61668pt too wide) detected at line 1100
 []
  []
 
 
 Underfull \vbox (badness 4846) has occurred while \output is active []
 
- [32]
+ [106]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
-[34])
-No file Compiler.bbl.
+ [107]
+[108]) [109]
+Chapter 3.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 346.
 
-Package natbib Warning: There were undefined citations.
+("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(../Chapters/Chapter3.tex [110
 
-[35] [36
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [111]
+[112] [113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [114]
+[115]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116]
+[117] [118pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.209 \be
+         ] [119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [120pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.265 
+      ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+Underfull \vbox (badness 3769) has occurred while \output is active []
+
+ [122]
+<./figures/caseC_reversal2.jpg, id=1770, 8341.1625pt x 3707.8525pt>
+File: ./figures/caseC_reversal2.jpg Graphic file (type jpg)
+<use ./figures/caseC_reversal2.jpg>
+Package pdftex.def Info: ./figures/caseC_reversal2.jpg  used on input line 367.
+
+(pdftex.def)             Requested size: 469.75502pt x 208.76987pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [123]
+[124pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.408 \eea
+           <./figures/caseC_reversal2.jpg>]
+<./figures/caseD_reversal2.jpg, id=1794, 8147.43875pt x 2847.63875pt>
+File: ./figures/caseD_reversal2.jpg Graphic file (type jpg)
+<use ./figures/caseD_reversal2.jpg>
+Package pdftex.def Info: ./figures/caseD_reversal2.jpg  used on input line 427.
+
+(pdftex.def)             Requested size: 469.75502pt x 164.15944pt.
+<./figures/caseD_ga_gb.jpg, id=1801, 4569.07pt x 3717.89pt>
+File: ./figures/caseD_ga_gb.jpg Graphic file (type jpg)
+<use ./figures/caseD_ga_gb.jpg>
+Package pdftex.def Info: ./figures/caseD_ga_gb.jpg  used on input line 443.
+(pdftex.def)             Requested size: 328.82707pt x 267.54037pt.
+ [125]
+
+LaTeX Warning: Text page 126 contains only floats.
+
+[126pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.449 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.449 
+       <./figures/caseD_reversal2.jpg> <./figures/caseD_ga_gb.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+<./figures/caseD_delta_asymptotic2.jpg, id=1833, 4374.3425pt x 3717.89pt>
+File: ./figures/caseD_delta_asymptotic2.jpg Graphic file (type jpg)
+<use ./figures/caseD_delta_asymptotic2.jpg>
+Package pdftex.def Info: ./figures/caseD_delta_asymptotic2.jpg  used on input l
+ine 489.
+(pdftex.def)             Requested size: 328.82707pt x 279.45375pt.
+
+[128pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.501 
+       <./figures/caseD_delta_asymptotic2.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [129]
+[130]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [131
+
+])
+(Compiler.bbl [132] [133
+
+] [134] [135] [136] [137] [138] [139] [140] [141]
+[142]) [143] [144
 
 
-] [37]
-<./back-bg.png, id=352, 556.0775pt x 715.67375pt>
+] [145]
+<./back-bg.png, id=1939, 556.0775pt x 715.67375pt>
 File: ./back-bg.png Graphic file (type png)
 <use ./back-bg.png>
-Package pdftex.def Info: ./back-bg.png  used on input line 353.
+Package pdftex.def Info: ./back-bg.png  used on input line 354.
 (pdftex.def)             Requested size: 417.0571pt x 536.754pt.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 353.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 354.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 353.
+(Font)              <11> on input line 354.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 353.
+(Font)              <7.69997> on input line 354.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 353.
+(Font)              <5.5> on input line 354.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 353.
+(Font)              size <5> substituted on input line 354.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-[38 <./back-bg.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 354.
+[146 <./back-bg.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
  (Compiler.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
 Package rerunfilecheck Info: File `Compiler.out' has not changed.
-(rerunfilecheck)             Checksum: F7007C5A5D1153C6C2D7EFF0256F7F00;1312.
+(rerunfilecheck)             Checksum: C0A1FE271C6704C0E5135F040EDDA43A;5368.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2244,18 +2484,249 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 354.
  ) 
 Here is how much of TeX's memory you used:
- 47302 strings out of 492969
- 1048350 string characters out of 3134358
- 1314692 words of memory out of 3000000
- 50263 multiletter control sequences out of 15000+200000
- 652647 words of font info for 122 fonts, out of 3000000 for 9000
+ 48716 strings out of 492969
+ 1074163 string characters out of 3134358
+ 1342151 words of memory out of 3000000
+ 51154 multiletter control sequences out of 15000+200000
+ 676104 words of font info for 135 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,96p,1322b,999s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
-st, replaced by a fixed one
+ 62i,15n,96p,1751b,1503s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.81} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.80} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.79} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.78} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.77} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.76} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.75} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.74} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.73} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.72} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.71} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.70} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.69} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.68} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.67} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.66} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.65} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.64} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.63} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.62} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.61} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.60} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.59} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.58} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.57} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.56} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.55} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.54} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.52} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.51} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.50} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.49} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.48} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.47} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.46} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.45} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.44} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.43} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.41} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.40} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.39} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.38} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.37} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.36} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.34} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.33} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.32} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.31} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.30} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.27} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
@@ -2266,29 +2737,32 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiK
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
-sy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fi
-les/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/helvetic/uhvr8a.pfb>
-Output written on Compiler.pdf (40 pages, 987202 bytes).
+/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.e
+nc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fi
+les/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts
+/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
+12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Compiler.pdf (148 pages, 5257973 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 180 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2148 PDF objects out of 2487 (max. 8388607)
+ 576 named destinations out of 1000 (max. 500000)
+ 634 words of extra memory for PDF output out of 10000 (max. 10000000)
 

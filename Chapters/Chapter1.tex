@@ -453,7 +453,7 @@ How are the results affected when the firm can invest to improve its product? Th
 
 We will be assuming that $c=1$ after the cost-less piracy case. Extending the results to have endogenous product improvement does not always yield a closed form solution. The only case where there is a simple closed form solution is when piracy is cost-less. The most notable effect of endogenizing k in the cost-less case is that the optimal product improvement does not depend on $\alpha$ or $\beta$. It is simply given by $k=\frac{1}{8c}$. See appendix \ref{notes} for details.
 
-There is no closed form solution for the corresponding case where $\tilde{r}<r$. We instead simulate the profit function as seen in figure \ref{endk1}. Notice that profit ($\pi$) is maximized around $k=0.25$ even as $\alpha$ reaches infinity. Notice also that the product improvement is a strictly increasing function of $\alpha$.
+There is no closed form solution for the corresponding case where $\tilde{r}<r$. We instead simulate the profit function as seen in figure \ref{endk1}. In this diagram both $k$ and $a$ are treated as endogenous variables. Notice that profit ($\pi$) is maximized around $k=0.25$ even as $\alpha$ reaches infinity. Notice also that the product improvement is a strictly increasing function of $\alpha$. 
 
 This implies that the product improvement pursued without pirates is strictly higher than the full piracy case. Indeed, they are only equal without network value, $\alpha=0$. 
 
@@ -465,7 +465,7 @@ This implies that the product improvement pursued without pirates is strictly hi
 \label{endk1}
 \end{figure}
 
-Similarly we simulate the case where $0<r<\tilde{r}$. To represent this we use a 3D contour graph, see figure \ref{endk2}. Notice that once again the equilibrium $k$ is around $\frac{1}{8}$ for low values of product degradation $r$. However, in this scenario, the previous result is reversed, that is, higher piracy pursuit decreases the optimal product improvement. The intuition behind this counterintuitive result is that $r$ and $k$ are substitutes, the firm can use the higher $r$ as an alternative to spending on $k$. In other words, the local effect of an increase in $r$ within $0<r<\tilde{r}$ is to decrease product improvement but once $r=\tilde{r}$, then there is a discontinous jump which depends on the network value which causes an increase in product improvement. 
+Similarly we simulate the case where $0<r<\tilde{r}$. Since we now have an additional dimension to represent, we use a 3D contour graph, see figure \ref{endk2}. In this case the $k$ is the optimal k pursued. Notice that once again the equilibrium $k$ is around $\frac{1}{8}$ for low values of product degradation $r$. However, in this scenario, the previous result is reversed, that is, higher piracy pursuit decreases the optimal product improvement. The intuition behind this counterintuitive result is that $r$ and $k$ are substitutes, the firm can use the higher $r$ as an alternative to spending on $k$. In other words, the local effect of an increase in $r$ within $0<r<\tilde{r}$ is to decrease product improvement but once $r=\tilde{r}$, then there is a discontinous jump which depends on the network value which causes an increase in product improvement. 
 
 
 \begin{figure}[t!] 
@@ -600,9 +600,7 @@ Generally, the assumption that utilities are independent is often too readily us
 One of the most common arguments against piracy is that it decreases the number of individuals who actually pay the real cost of the product.  However, the implicit assumption in such a line of reasoning is that the number of purchasers and the value of the purchasing, are independent. Based on the model presented here, such a conclusion is drawn too hastily, the effect of increasing the piracy cost may not have the desired effect. As pointed out in \cite{CRP91} this setup raises strange ethical questions. When we have possible parameter values that imply that higher pursuit of pirates may be worse for consumers and producers at public cost. With these factors in mind, it is unclear whether enforcing intellectual property rights passes even the most basic cost benefit analysis.
 
 \newpage
-
 \section{Appendix}
-
 \subsection{Buyers and pirates}
 \begin{equation*}
 \hat{x} = \frac{p}{\alpha-\beta + k}
