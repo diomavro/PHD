@@ -1,0 +1,243 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+
+It is often the case in economics that when we analyze choice sets throughout time we assume that an individual choice does not affect the set of future choices. Incorporating this feauture into a time frame is very simple. We will illustrate this through a detailed example: 
+
+There is a bureau of architects which has n architects. This bureau receives projects at regular time intervals, say a month and can assign a single architect to it. The bureau can accept either a 10 month project yielding 100\$ or a 2 month project yielding 50\$. Each project takes up a single architect. How should the bureau decide which to accept? The answer is that it depends on the number of architects. For simplicity, assume the firm does not have access to an interest rate and that the project offer occurs $\epsilon$ time after existing projects offers end. The firm can accept two projects at the same time. 
+
+Suppose that every future choice is also between a 10 month project and a two month project. How many architects does the firm need to accept the 10 month project every time? Since projects arrive every month and an architect working on a 10 month project will only be freed after 10 months, then the bureau needs 10 architects to be able to always choose the 10 month project. In fact in this case, the firm that wishes to maximize long term growth will simply take the highest payoff on every choice, 100\$. This leads us to the first lesson:
+
+\begin{remark}
+If future projects are identical to present projects, a profit maximizing firm does not take time into account. 
+\end{remark}
+
+Suppose now that the firm does not have 10 architects but 5. How should the firm evaluate projects? The problem here is slightly more complicated. If it puts all 5 on long term projects, consider what occurs. Every 10 months, there will be 5 months where the firm will receive 100 per month. So it's growth rate will be 500 every 15 months, $500/15months=33.3$. Consider now what happens if the firm only takes the short term projects of two months. In this case, every $15*50/15 months=50$. However, since it has 5 architects and projects only take $2 months$ and arrive every month, this implies that there will always be 3 architects which will be idle. 
+
+The firm can mix between long term and short term projects. Specifically, the optimal mix of long term to short term projects will be $3$ long and $2$ short. This will mean that every 15 months, the firm will earn, $15*50+300/15=88.88$, however there will also be some years where the firm will wish to be able to earn more than this, due to the time structure of the projects, for instance if we complete 3 long term projects in the first 3 months, then the growth rate that year will be $15*50+600/15$. 
+
+The firm then must then reason depending on how its current choice affects its current choices. If the firm has more capacity than neccesary for future choices, then it can always just take the highest project but as soon as the current choice affect the capacity to undertake future projects, then it must reason in an elastic way. 
+
+\begin{remark}
+The firm will simply use the highest payout and ignore the time structure so long as it does not affect the ability to choose future projects. 
+\end{remark}
+
+To see this we need only note that since three people are always idle, then the choice only takes a different structure when the three people are already working and will be working for at least another four months. If we are in this scenario where the firm is at the capacity constraint, then the firm will be comparing the growth rate per unit of time, that is, it will look at the \textit{within} project growth rate. For instance in this case the firm will simply compare $50/2=25$ to $100/10=10$. 
+
+So a firm has to use both kinds of criteria for decision making. So when would a firm be indifferent between these two payments. When they give the same growth rate. This implies that the firm is indifferent between the time structure of projects if they give the same payout. In fact this is exactly the same thing as the definition of a discount factor, that is, a discount factor is what you need to multiply the future payment so that you are indifferent between the future and present payment. $50= \delta 250$, which means the firm will effectively be discounting by: $\delta = .2$, however we can also recover the discount factor by analyzing the time structure in this case it would be $\frac{1}{1+\frac{8}{2}}=\frac{1}{1+\frac{8}{2}}=.2$
+
+In other words, once we know whether the firm is capacity constrained or not, we should be able to deduce a hyperbolic discount rate from its behavior. This reasoning is not unique to firms, indeed this reasoning could apply with consumers choosing or even animals. The optimality of hyperbolic discounting depends only on whether agents will conisder options that result in the same after choices, if the options do not give the same after choices, then the agents will end up hyperbolically discounting. 
+
+
+
+\bibliography{../thesisbib/bibliography}
+
+\end{document}
