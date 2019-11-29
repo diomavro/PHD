@@ -203,7 +203,7 @@ urlcolor={blue!50!black}}
 \numberwithin{equation}{section}
 \DeclareMathOperator\erf{erf}
 %\let\endtitlepage\relax
-
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 
 % https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
@@ -242,13 +242,38 @@ In other words, once we know whether the firm is capacity constrained or not, we
 
 It is often the case in economics that when we analyze choice sets throughout time we assume that an individual choice does not affect the set of future choices. Incorporating this feauture into a time frame is very simple. 
 
-To simplify we assume there are two kinds of projects, a long term project denoted by $l$ and a short term project $s$. Suppose the agents capacity is denoted by $n$ (this can be money or employees etc). The firm receives take it or leave it offers for projects it can undertake at regular time intervals, $\tau$. The number of offers it receives are $m_l$ and $m_s$ and can assign capacity to each project. The bureau can accept either a $t_l$ month project yielding $l$\$ or a $t_s$ project yielding $s$\$. The projects occupy agents, $n_l$ and $n_s$. 
+\newpage
 
-Take the extreme case where the firm accepts ONLY long term projects. Then it will only use its  
+To simplify we assume there are two kinds of projects, a long term project denoted by $l$ and a short term project $s$. Suppose the agents capacity is denoted by $n$ (this can be money or employees etc). The firm receives take it or leave it offers for projects it can undertake at regular time intervals, $\tau$. The number of offers it receives are $m_l$ and $m_s$ and can assign capacity to each project. The bureau can accept either a $t_l$ month project yielding $x_l$\$ or a $t_s$ project yielding $x_s$\$. The projects occupy agents, $n_l$ and $n_s$. 
+
+% Consider from $t_0$ to $T$:
+% \begin{align*}
+% & 0 && \text{ if: } \tau > t_i \text{  and: } n_i>n \\
+% &x_i\floor*{\frac{T}{\tau}} \floor*{\frac{n}{n_i}} \text{ or } x_i\left(\floor*{\frac{T}{\tau}}-1\right) \floor*{\frac{n}{n_i}} && \text{ if: } \tau > t_i \text{  and: } n_i<n<n_i m_i \\
+% &x_i\floor*{\frac{T}{\tau}} m_i \text{ or } x_i\left(\floor*{\frac{T}{\tau}}-1\right) m_i  && \text{ if: } \tau > t_i \text{  and: } n_i<n_im_i<n \\
+% &\frac{x_i t_i}{\tau} \frac{n}{n_i} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+% % &\frac{x_i t_i}{\tau}m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+% &\frac{x_i }{\tau} \frac{n}{n_i} m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i>n
+% \end{align*}
+
+
+The maximum growth rate of the firm specializing is given by:
 \begin{align*}
-gg
+& 0 && \text{ if: } \tau > t_i \text{  and: } n_i>n \\
+& \frac{x_i}{\tau} \floor*{\frac{n}{n_i}} && \text{ if: } \tau > t_i \text{  and: } n_i<n<n_i m_i \\
+&\frac{x_i}{\tau} m_i && \text{ if: } \tau > t_i \text{  and: } n_i<n_im_i<n \\
+&\frac{x_i }{\tau} m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+% &\frac{x_i t_i}{\tau}m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+&\frac{x_i }{t_i} \floor*{\frac{n}{n_i}} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i>n
 \end{align*}
 
+Two projects:
+\begin{align*}
+& \text{maxarg}_k \{ x_l\frac{n-k}{n_l \tau}+x_s\frac{k}{n_s \tau} \}  && \text{ if: } \tau > t_l>t_s \\
+&x_i \frac{1}{\tau} && \text{ if: } t_l> \tau > t_s \\
+&x_i \frac{t_i}{\tau} && \text{ if: } \tau < t_i \text{  and: } \frac{t_s}{\tau}<\frac{t_l}{\tau}<\frac{t_s}{\tau}+\frac{t_l}{\tau}<n \\
+&x_i \frac{n}{\tau} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau}>n
+\end{align*}
 
 
 \bibliography{../thesisbib/bibliography}
