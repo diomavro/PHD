@@ -210,6 +210,24 @@ urlcolor={blue!50!black}}
 
 \begin{document}
 
+\section{Introduction}
+
+Suppose we have an agent who is going to make some choice at some specific point in time. How should the agent think of this choice? One way would be to assume that after this choice is made, the choice will result in some outcome, and the agent will simply live with that outcome for the rest of his life. This seems like it would give the same result as if the agent would die after the choice is given.
+
+Another possible option is to assume that the agents choice will lead to some outcome but this is not the end. If it is not the end but other choices are to happen after this choice then we need to make an assumption about what happens next, wanting to make the fewest possible assumptions we say, let's just assume the same choice will be presented to you next time you choose. 
+
+What does "same" mean? How can the choice be the same? Same choice can mean either that the objective choice set is the same, OR it can mean that the effect of the choice set is the same. An example of the former, would be if the initial choice was between an orange and an apple, and the future choice was also between an orange and an apple. In the second notion of "same" we can interpret that the effect of the choices on the agent are identical. 
+
+It is not obviously clear if one of these notions is more realistic than the other. Their respective realism depends on detailing the problem. It may indeed be that if one asks someone if they prefer an apple or an orange, they will prefer an apple but if we ask the same question 5 times in quick succession, they may at some point choose an orange. However if we ask them once a year for five years, we might expect the choice to change. 
+
+If we assume that the agent has some state the interpretation is clearer. We can say that either the choice will affect the agents state or it will not. If it does not affect the state, then the notion of "same" of the future choice is clear, it is simply the same set of goods that will be presented to the agent. If on the other hand the first choice affects the state of the agent, then the notion of having the same objective choice set does not represent the thing. The same choice set can either be more or less important to the agent than before. The parsimonious assumption to make about the an agent with a state variable is that all choices affect the state variable in the same way. 
+
+If we take the state of the agent to be the agents wealth, then there the two kinds of assumptions start becoming clearer. Suppose we ask the agent if he would rather receive 10 dollars or have a 10\% chance of receiving 100 dollars, call it set A. What would the agents "next" choice be? In one interpretation it would be that the future choice is also set A. Or it could be that the future choice set is some function of the state variable. 
+
+
+
+
+
 \section{Numerical Example:}
 
 It is often the case in economics that when we analyze choice sets throughout time we assume that an individual choice does not affect the set of future choices. Incorporating this feauture into a time frame is very simple. We will illustrate this through a detailed example: 
@@ -265,6 +283,17 @@ The maximum growth rate of the firm specializing is given by:
 &\frac{x_i }{\tau} m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
 % &\frac{x_i t_i}{\tau}m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
 &\frac{x_i }{t_i} \floor*{\frac{n}{n_i}} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i>n
+\end{align*}
+
+The average number of idle capacity is then:  
+
+\begin{align*}
+& n && \text{ if: } \tau > t_i \text{  and: } n_i>n \\
+& \frac{ \floor{ \frac{n_i m_i}{n}} n_i(\tau - t_i)+(n-\floor{ \frac{n_i m_i}{n}}n_i) \tau }{\tau} = n - \frac{n_i \floor{ \frac{n_i m_i}{n}} t_i}{\tau} && \text{ if: } \tau > t_i \text{  and: } n_i<n<n_i m_i \\
+& \frac{(n_i m_i)(\tau - t_i)+n-n_i m_i}{\tau}= n - \frac{n_i m_i t_i}{\tau} && \text{ if: } \tau > t_i \text{  and: } n_i<n_im_i<n \\
+& n-\frac{n_i m_i t_i}{\tau} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+% &\frac{x_i t_i}{\tau}m_i && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i<n \\
+&n-\floor{\frac{n}{n_im_i}}n_im_i + \frac{\tau n_i m_i}{t_i}  && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau} n_i m_i>n
 \end{align*}
 
 Two projects:
