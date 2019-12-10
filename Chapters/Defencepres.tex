@@ -12,8 +12,8 @@
 \mode<presentation> {
 % \usetheme{Marburg}
 % \usetheme{Singapore}
-% \usetheme{Montpellier}
-\usetheme{Ilmenau}
+\usetheme{Montpellier}
+% \usetheme{Ilmenau}
 % \usetheme{Warsaw}
 % \usecolortheme{orchid}
 }
@@ -260,22 +260,29 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Questions}
+\begin{frame}{The problem situation}
 \begin{itemize}
-    \item Does uniform enforcement of copyright increase innovation?
-    \item What kind of mechanism does social value enable? 
-    \item Who benefits from piracy? 
-    \item Is the incentive to improve the product independent of network value? 
-    \item Does profit maximization under monopoly neccesarily have averse effects on welfare?
+    \item The intellectual property claim: limiting entry $\rightarrow$ increases incentive to innovate.
+    \item The piracy claim: making piracy illegal $\rightarrow$ increases incentive to innovate.
+    \item The monopoly claim: If only one firm sells the asset $\rightarrow$ the price set will be above what is welfare maximizing. 
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation}
+\begin{frame}{Questions}
 \begin{itemize}
-    \item Situational facts: Intellectual property allows firms to block access by both producers and consumers.
-    \item Digital goods have only fixed costs, marginal costs are zero. 
-    \item Claims: The intellectual property claim is that the ability to limit entry increases the incentive to innovate.    
-    \item Claims 2: If only one firm sells the asset, this decreases welfare. 
+    \item 1) Does uniform enforcement of copyright increase innovation?
+    \item 2) What kind of mechanism does social value enable? 
+    \item 3) Who benefits from piracy? 
+    \item 4) Is the incentive to improve the product independent of network value? 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Useful facts}
+\begin{itemize} 
+    \item When a firm violates a copyright it is an infringment (tort) 
+    \item When a consumer violates a copyright it theft (criminal)
+    \item Digital goods have only fixed costs, marginal costs are zero
+    \item The subjective value of good partly arises from group consumption
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -310,23 +317,21 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \section{Cost side innovation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivation}
+\begin{itemize}
+    \item Buyouts claim: Having the option of being bought out can only increase innovation. 
+    \item Industry consolidation as efficiency.
+\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Questions}
 \begin{itemize}
-    \item Does the alienability of assets have a uniform effect (increases incentives)?
-    \item Do existing firms always have an incentive to allow buyouts?
-    \item Why does successful innovation usually mean buyouts?  
+    \item 1) Does the alienability of assets have a uniform effect (increases incentives)?
+    \item 2) Do existing firms always have an incentive to allow buyouts?
+    \item 3) Why does successful innovation usually mean buyouts?  
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation}
-\begin{itemize}
-    \item A firm is considering whether to invest in a project that will give profits with higher probability but take more time or a project that has a lower probability of giving profits but can achieve profits earlier. 
-    \item An existing firm can decide whether to purchase the entrant or not
-    \item Claims: The intellectual property claim is that the ability to limit entry increases the incentive to innovate.    
-    \item Claims 2: If only one firm sells the asset, this decreases welfare. 
-\end{itemize}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Tentative answer 1}
 \begin{itemize}
@@ -356,6 +361,85 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \section{Discounting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{The problem situation: What do agents do?}
+% \begin{figure}[!htb]
+% \centering
+% \includegraphics[width=1.0\textwidth]{./figures/maximize.PNG}
+% \caption{What to do?}
+% \flabel{caseA}
+% \end{figure}
+% \end{frame}
+
+\begin{frame}
+\begin{figure}[!htb]
+\resizebox{11cm}{7cm}{
+\centering
+\begin{tikzpicture}
+%\draw[help lines, color=gray!30, dashed] (-5,0) grid (4.9,5.9);
+\draw[->,ultra thick] (-5,0)--(5,0) node[below,yshift=-4pt]{$Time$};
+\draw[->,ultra thick] (-5,0)--(-5,6) node[left,xshift=-4pt]{$Wealth$};
+\draw[-,ultra thick] (-4,-0.15)--(-4,0) node[below]{$t_0$};
+\draw[-,ultra thick] (1,-0.15)--(1,0) node[below]{$t_a$};
+\draw[-,ultra thick] (3,-0.15)--(3,0) node[below]{$t_b$};
+\draw[-,ultra thick] (-5.15,0.75)--(-5,0.75) node[left]{$x\left(t_0\right)$};
+\draw[-,ultra thick] (-5.15,2.75)--(-5,2.75) node[left]{$x\left(t_0\right) + \Dx_a$};
+\draw[-,ultra thick] (-5.15,4.75)--(-5,4.75) node[left]{$x\left(t_0\right) + \Dx_b$};
+\draw[-, dashed] (-5,0.75)--(5,0.75) ;
+\draw[-, dashed] (-5,2.75)--(5,2.75) ;
+\draw[-, dashed] (-5,4.75)--(5,4.75) ;
+\draw[-, ultra thick] (1,0.75)--(1,2.75) ;
+\draw[-, ultra thick] (3,0.75)--(3,4.75) ;
+\draw [decorate,decoration={brace,amplitude=10pt,mirror},xshift=0pt,yshift=-5pt,thick](-3.8,0) -- (0.8,0) node [black,midway,yshift=-20pt]{$\text{Horizon, }\hor$};
+\draw [decorate,decoration={brace,amplitude=10pt,mirror},xshift=0pt,yshift=-5pt,thick](1.2,0) -- (2.8,0) node [black,midway,yshift=-20pt]{$\text{Delay, }\del$};
+\end{tikzpicture} }
+% \caption{The basic setup of the model. A decision maker faces a choice at time $t_0$ between option $a$, which guarantees a payment of $\Dx_a$ at time $t_a$, and option $b$, which guarantees a payment of $\Dx_b>\Dx_a$ at time $t_b>t_a$. We define the time between the decision and the earlier payment as the {\it horizon}, $\hor\equiv t_a-t_0$; and the time between the two payments as the {\it delay}, $\del\equiv t_b-t_a$.}
+\flabel{basicsetup}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{The problem situation: What do agents do?}
+% \begin{figure}[!htb]
+% \centering
+% \includegraphics[width=1.0\textwidth]{./figures/maximize.PNG}
+% \caption{What to do?}
+% \flabel{caseA}
+% \end{figure}
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Discountng: motivation}
+\begin{itemize}
+    \item Experimentally, people discount payment hyperbolically
+    \item Experimentally, agents discount differently   
+    \item Good reason to believe that exponential discounting gets somebody more money
+    \item "Preferences" is used as an explanatory tool to reconcile exponential and hyperbolic
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The pros and cons of preferences}
+\begin{itemize}
+    \item \textcolor{green}{Pro:} If we can characterize an agents preferences, we can predict an agents conditional behavior. 
+    \item \textcolor{red}{Con:} We cannot explain why agent A and B have different preferences
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{An alternative to preferences: Adaptation}
+\begin{itemize}
+    \item Agents in economics have preferences that are independent of their environment, strict strategy/preference dichotomy
+    \item Biological agents preferences are adaptations, if it were concious it would be a strategy. 
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Some additional facts that can be used:}
+\begin{itemize}
+    \item Some choices can affect future choices
+    \item Agents wealths can grow in different ways
+    \item They have different wealth levels
+    \item 1,2,3 $\rightarrow$ can imply that exponential discounting is not always the best way to maximize wealth
+\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Questions}
 \begin{itemize}
@@ -365,31 +449,9 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation: What do agents do?}
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=1.0\textwidth]{./figures/maximize.PNG}
-\caption{What to do?}
-\flabel{caseA}
-\end{figure}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation 2}
-\begin{itemize}
-    \item Fact 1) Agents wealths can grow in different ways
-    \item Fact 2) They have different wealth levels
-    \item Fact 3) Choices can affect future choices
-\end{itemize}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation 3}
-\begin{itemize}
-    \item Fact 4) Agents in economics have preferences that are independent of their environment, strict strategy/preference dichotomy
-    \item Fact 5) Biological agents preferences are adaptations, if it were concious it would be a strategy. 
-\end{itemize}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
