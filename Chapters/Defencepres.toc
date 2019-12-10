@@ -1,3 +1,4 @@
-\beamer@sectionintoc {1}{Piracy}{4}{0}{1}
-\beamer@sectionintoc {2}{Cost side innovation}{11}{0}{2}
-\beamer@sectionintoc {3}{Discounting}{16}{0}{3}
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Piracy and network value}{6}{0}{1}
+\beamer@sectionintoc {2}{Cost side innovation with project variance}{15}{0}{2}
+\beamer@sectionintoc {3}{Microfoundations of Discounting}{21}{0}{3}

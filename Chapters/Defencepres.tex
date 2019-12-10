@@ -21,58 +21,65 @@
 
 %\usepackage{bbm}
 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
-\usepackage{float}
-%\usepackage[cmbold]{mathtime}
-%\usepackage{mt11p}
-\usepackage{placeins}
-\usepackage{amsmath}
-\usepackage{color}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{subfigure}
-\usepackage{multirow}
-\usepackage{epsfig}
-\usepackage{listings}
-\usepackage{enumitem}
-\usepackage{rotating,tabularx}
-%\usepackage[graphicx]{realboxes}
-\usepackage{graphicx}
-\usepackage{graphics}
-\usepackage{epstopdf}
-\usepackage{longtable}
-%\usepackage[pdftex]{hyperref}
-%\usepackage{breakurl}
-%\usepackage{epigraph}
-%\usepackage{xspace}
-\usepackage{amsfonts}
-\usepackage{eurosym}
-%\usepackage{ulem}
-\usepackage{footmisc}
-%\usepackage{comment}
-\usepackage{setspace}
-\usepackage{geometry}
-\usepackage{caption}
-%\usepackage{pdflscape}
-\usepackage{array}
 \usepackage[round]{natbib}
+\usepackage{afterpage}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{authblk}
 \usepackage{booktabs}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{comment}
 \usepackage{dcolumn}
-\usepackage{mathrsfs}
-%\usepackage[justification=centering]{caption}
-%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
-
-%\bibliographystyle{unsrtnat}
-%\bibliographystyle{aea}
 \usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%
+\usepackage{footmisc}
+\usepackage{geometry}
+\usepackage{graphics}
+\usepackage{graphicx} %\usepackage[graphicx]{realboxes}
+\usepackage{indentfirst}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{placeins}
+\usepackage{qtree}
+\usepackage{rotating,tabularx}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{textcomp}
+% \usepackage{titlesec}
+% \usepackage{titletoc}%,minitoc
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{xspace}
+\usepackage{xtab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes}
+\usetikzlibrary{spy,arrows,positioning,shapes.multipart}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
-%\usepackage{tikz}
-%\usetikzlibrary{snakes}
-%\usetikzlibrary{patterns}
 
-%\draftSpacing{1.5}
 
 \usepackage{xcolor}
 \hypersetup{
@@ -81,23 +88,8 @@ linkcolor={blue!50!black},
 citecolor={blue!50!black},
 urlcolor={blue!50!black}}
 
-%\renewcommand{\familydefault}{\sfdefault}
-%\usepackage{helvet}
-%\setlength{\parindent}{0.4cm}
-%\setlength{\parindent}{2em}
-%\setlength{\parskip}{1em}
 
-%\normalem
-
-%\doublespacing
-%\onehalfspacing
-%\singlespacing
-%\linespread{1.5}
-
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}{Proposition}
-%\newtheorem{definition}{Definition}
 \newtheorem{axiom}{Axiom}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
@@ -193,6 +185,18 @@ urlcolor={blue!50!black}}
 \DeclareMathOperator\erf{erf}
 %\let\endtitlepage\relax
 
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+
 %\mode<presentation> {
 
 % The Beamer class comes with a number of default slide themes
@@ -226,7 +230,7 @@ urlcolor={blue!50!black}}
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Thesis Presentation]{Thesis Presentation} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Innovation and choice]{Innovation and choice} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{ Diomides Mavroyiannis, } % Your name
 \institute[Dauphine] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -242,29 +246,86 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \titlepage % Print the title page as the first slide
 \end{frame}
 
-\begin{frame}{Overview}
-\tableofcontents
+% \begin{frame}{Overview}
+% \tableofcontents
+% \end{frame}
+
+\begin{frame}{Jury members}
+\begin{itemize}
+    \item Olivier Bos, Rapporteur
+    \item Sara Biancini, Rapporteur
+    \item Frederic Loss, Examinateur
+    \item Claire Chambolle, Examinateur
+    \item David Ettinger, Directeur de thèse 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{General motivation}
+\begin{itemize}
+    \item What is an innovation? new market or increase surplus in existing market
+%    \item There is some project that will be undertaken if its costs exceed its benefits. There are many reasons why this would not occur, the language of economics likes to frame these frictions as transaction costs. 
+% \item Innovation would present no problem if contracting was possible everywhere. 
+    \item The problem of ex-ante contractability. (Incomplete Contracts, Grossman and Hart(1986))
+%If firms cannot contract before an innovation exists, there exists a problem of 
+    \item Solution: Intellectual property, endogenize research, etc
+    \item Every right creates an obligation
+% \item if the innovation isn't ex-ante profitable, why would we want to pursue it? 
+% \item The problem is the disconnect between profits and welfare, maybe an innovation will be worthwhile from the point of view of welfare but not from the point of view of profits. 
+% \item the problem of fixed research/development costs. 
+% \item  
+\end{itemize}
 \end{frame}
 
 \begin{frame}
+\begin{figure}
+\resizebox{11cm}{7cm}{
+\centering
+%\begin{tikzpicture}[every text node part/.style={align=center}] used for multiple parts,
+%along with shapes.multipart tikz library.
+\begin{tikzpicture}[sharp corners=2pt,inner sep=7pt,node distance=.8cm,every text node part/.style={align=center}]
+\node[draw, minimum height = 3cm, minimum width = 3cm](Privilege){\textbf{Privilege:} A can use \\ \textcolor{blue}{ \textbf{Power:} A can change B's  rights}};
+\node[draw, below=2cm of Privilege, minimum height = 3cm, minimum width = 3cm](Duty){\textbf{Duty:} A has no right to use \\ \textcolor{blue}{\textbf{Disability:} A can't change B's rights}};
+\node[draw,right=2cm of Privilege, minimum height = 3cm, minimum width = 3cm](No-claim){\textbf{No-claim:} B cannot exclude A\\ \textcolor{blue}{\textbf{Liability:} B's rights can be changed by A}};
+\node[draw,below=2cm of No-claim, minimum height = 3cm, minimum width = 3cm](Claim){\textbf{Claim:} B can exclude A \\ \textcolor{blue}{\textbf{Immunity:} B's rights can't be changed by A}};
+
+%Draw arrows
+\draw[-triangle 90, ultra thick,<->] (Privilege) -- (Duty) node [midway, above, left = 0.1cm]{opposite:};
+\draw[-triangle 90, ultra thick,<->] (Privilege) -- (No-claim) node [midway, above]{correlative:};
+\draw[-triangle 90, ultra thick,<->] (No-claim) -- (Claim) node [midway, above, right = 0.1cm]{opposite: };
+\draw[-triangle 90, ultra thick,<->] (Duty) -- (Claim) node [midway, above]{correlative:};
+%\draw[-triangle 90, ultra thick,<->] (Privilege) -- (Claim) node [midway, above, rotate = -45]{$\mu^{03}_{x+t:y+t}$};
+\end{tikzpicture}}
+\caption{First order rights, \textcolor{blue}{Second order rights}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Structure}
 \begin{itemize}
-    \item I will be using a Popperian/Hayekian approach
-    \item Start with an observation
-    \item Describe the problem situation
-    \item Link the different elements in a causal way such that a maxmimum of new observations are predicted
+    \item Economics: Which distribution of rights maximizes production?
+    \item First chapter, first order rights, the distribution of the right to use
+    \item Second chapter, second order rights, does the ability to alienate an asset neccesarily increase welfare?
+    \item Third chapter, why do agents discount projects as they do? 
+% \item if the innovation isn't ex-ante profitable, why would we want to pursue it? 
+% \item The problem is the disconnect between profits and welfare, maybe an innovation will be worthwhile from the point of view of welfare but not from the point of view of profits. 
+% \item the problem of fixed research/development costs. 
+% \item  
 \end{itemize}
 \end{frame}
 
 % \setcounter{tocdepth}{1}
-\section{Piracy}
+\section{Piracy and network value}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The problem situation}
+\begin{frame}{Motivation: Piracy}
 \begin{itemize}
     \item The intellectual property claim: limiting entry $\rightarrow$ increases incentive to innovate.
     \item The piracy claim: making piracy illegal $\rightarrow$ increases incentive to innovate.
-    \item The monopoly claim: If only one firm sells the asset $\rightarrow$ the price set will be above what is welfare maximizing. 
+    \item The monopoly claim: If a one firm sells the asset and has control of the price $\rightarrow$ the price set will be above what is welfare maximizing. 
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,19 +338,22 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Useful facts}
-\begin{itemize} 
+\begin{frame}{Modeling components used}
+\begin{itemize}
+%Legal Assymetry 
     \item When a firm violates a copyright it is an infringment (tort) 
-    \item When a consumer violates a copyright it theft (criminal)
+    \item When a consumer violates a copyright it is theft (criminal)
+% The cost of pirating is set exogenously whilst the cost of infringement is set endogenously
+% Is there a time where a firm does not wish to enforce it's right? 
     \item Digital goods have only fixed costs, marginal costs are zero
-    \item The subjective value of good partly arises from group consumption
+    \item The subjective value of a good partly arises from group consumption
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Tentative answer 1}
 \begin{itemize}
     \item Does uniform enforcement of copyright increase innovation? \textcolor{red}{No}
-    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{Piracy can sometimes increase the payoff of projects}
+    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{Piracy may sometimes increase the payoff of innovators}
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -302,19 +366,19 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Tentative answer 3}
 \begin{itemize}
-    \item Who benefits from piracy?  \textcolor{red}{The firm can benefit and always consumers with a lower willingness to pay}
-    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{The firm can benefit by including lower willingness to pay agents by charging higher willingness to pay agents more}
+    \item Who benefits from piracy?  \textcolor{red}{The firm may benefit and always consumers with a lower willingness to pay}
+    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{The firm may benefit by including lower willingness to pay agents by charging higher willingness to pay agents more}
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Tentative answer 4}
 \begin{itemize}
     \item Is the incentive to improve the product independent of network value? \textcolor{red}{No}
-    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{A high network value can be a substitute to innovation}
+    \item \textcolor{orange}{Causal Mechanism:} \textcolor{blue}{A high network value may be a substitute to innovation}
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cost side innovation}
+\section{Cost side innovation with project variance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Motivation}
@@ -327,8 +391,10 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \begin{frame}{Questions}
 \begin{itemize}
     \item 1) Does the alienability of assets have a uniform effect (increases incentives)?
+% So suppose two projects have a value of 100 without buyouts, do both projects have a value of 150 with buyouts?  
     \item 2) Do existing firms always have an incentive to allow buyouts?
-    \item 3) Why does successful innovation usually mean buyouts?  
+    \item 3) Why does successful innovation often mean buyouts?
+% Why do so many entrepreneurs end up being bought over? 
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,7 +424,7 @@ PSL/Paris Dauphine \\ % Your institution for the title page
     % \item The longer the time horizon, the lower the distortion effect
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discounting}
+\section{Microfoundations of Discounting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}{The problem situation: What do agents do?}
@@ -410,9 +476,9 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Discountng: motivation}
 \begin{itemize}
-    \item Experimentally, people discount payment hyperbolically
-    \item Experimentally, agents discount differently   
-    \item Good reason to believe that exponential discounting gets somebody more money
+    \item Experimentally, people discount payment hyperbolically, yet there is variance
+    \item Firm criteria for investing is mostly based on exponential discounting (NPV)
+    \item Theory points to exponential discounting as profit maximizing
     \item "Preferences" is used as an explanatory tool to reconcile exponential and hyperbolic
 \end{itemize}
 \end{frame}
@@ -432,8 +498,10 @@ PSL/Paris Dauphine \\ % Your institution for the title page
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Some additional facts that can be used:}
+\begin{frame}{Some modelling choices that can be used:}
 \begin{itemize}
+    \item Base assumption: Maximize growth of wealth
+% People prefer more wealth to less wealth
     \item Some choices can affect future choices
     \item Agents wealths can grow in different ways
     \item They have different wealth levels
@@ -482,6 +550,13 @@ PSL/Paris Dauphine \\ % Your institution for the title page
     \item $\rightarrow$ Wealth of agents can affect their discounting } 
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}
+Thank you for listening.
+\includegraphics[width=0.7\textwidth]{./figures/yoda.jpg} 
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
