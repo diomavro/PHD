@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  11 DEC 2019 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.10)  11 DEC 2019 22:59
 entering extended mode
 **./Defencepres.tex
 (Defencepres.tex
@@ -2379,10 +2379,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 592.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 592.
 Package rerunfilecheck Info: File `Defencepres.out' has not changed.
 (rerunfilecheck)             Checksum: 3D5B37D8325B3161C4D3D3002DF09B06;238.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  50076 strings out of 492895
@@ -2407,7 +2403,7 @@ C:/Users/Dio.DESKTOP-QB6MRSV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/lm/lmsso10.pfb><C:/Users/Dio.DESKTOP-QB6MRSV/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Dio.DESKTOP-QB6MRSV/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Defencepres.pdf (29 pages, 1345449 bytes).
+Output written on Defencepres.pdf (29 pages, 1345447 bytes).
 PDF statistics:
  899 PDF objects out of 1000 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)
