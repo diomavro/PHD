@@ -1,0 +1,40 @@
+Question1:Torture, as a matter of principle, is always morally wrong.;end
+
+Question2:The morality of an action is determined by whether, compared to the other available options, it maximises the sum total of happiness of all the people affected by it.;end
+
+Question3:It is always, and everywhere, wrong to cause another person's death - assuming they wish to stay alive - if this outcome is avoidable.;end
+
+Question4:If you can save the lives of innocent people without reducing the sum total of human happiness, and without putting your own life at risk, you are morally obliged to do so.;end
+
+Question5:The brakes of the train that Casey Jones is driving have just failed. 
+There are five people on the track ahead of the train. 
+There is no way that they can get off the track before the train hits them. 
+The track has a siding leading off to the right, and Casey can hit a button to direct the train onto it. 
+Unfortunately, there is one person stuck on the siding. 
+Casey can turn the train, killing one person; or he can allow the train to continue onwards, killing five people.
+Should he turn the train (1 dead); or should he allow it to keep going (5 dead)?;end
+
+Question6:Marty Bakerman is on a footbridge above the train tracks. 
+He can see that the train approaching the bridge is out of control, and that it is going to hit five people who are stuck on the track just past the bridge. 
+The only way to stop the train is to drop a heavy weight into its path. 
+The only available heavy enough weight is a (very) fat man, who is also watching the train from the footbridge. 
+Marty can push the fat man onto the track into the path of the train, which will kill him but save the five people already on the track; 
+or he can allow the train to continue on its way, which will mean that the five will die.
+Should he push the fat man onto the track (1 dead); or allow the train to continue (5 dead)?;end
+
+Question7:Okay so this scenario is identical to the preceding scenario but with one crucial difference. 
+This time Marty Bakerman knows with absolute certainty that the fat man on the bridge is responsible for the failure the train's brakes: 
+upset by train fare increases, he sabotaged the brakes with the intention of causing an accident. 
+As before, the only way to stop the train and save the lives of the five people already on the track is to push the fat saboteur off the bridge into the path of the train.
+Should Marty push the fat saboteur onto the track (1 dead); or allow the train to continue (5 dead)?;end
+
+Question8:The fat man, having avoided being thrown in front of the runaway train, has been arrested, and is now in police custody. 
+He states that he has hidden a nuclear device in a major urban centre, which has been primed to explode in 24 hours time. The following things are true:
+The bomb will explode in 24 hours time.
+It will kill a million people if it explodes.
+If bomb disposal experts get to the bomb before it explodes, there’s a chance it could be defused.
+The fat man cannot be tricked into revealing the location of the bomb, nor is it possible to appeal to his better nature, 
+nor is it possible to persuade him that he was wrong to plant the bomb in the first place.
+If the fat man is tortured, then it is estimated there is a 75% chance that he will give up the bomb’s location.
+If the fat man does not reveal the location, the bomb will explode, and a million people will die: there is no other way of finding out where the bomb is located.
+Should the fat man be tortured in the hope that he will reveal the location of the nuclear device?;end
