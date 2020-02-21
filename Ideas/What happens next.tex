@@ -226,13 +226,62 @@ If we take the state of the agent to be the agents wealth, then there the two ki
 
 
 
+\section{New numerical example}
 
+\begin{table}[]
+\begin{tabular}{|c|l|l|l|}
+\hline
+X                        & t         & Req                    & Arrivals per month \\ \hline
+100                      & 10 months & \multicolumn{1}{c|}{2} & 3                  \\ \hline
+\multicolumn{1}{|l|}{50} & 2 months  & 3                      & 6                  \\ \hline
+\end{tabular}
+\end{table}
 
-\section{Numerical Example:}
+\subsection{Useful calculations}
+On average, every year, the number of projects each worker can complete is: $\frac{12}{10}(\frac{12}{2})=1.2(6)$
+
+The required number of employees to accept all projects of type long(short) is: $10*3*2(2*3*6)=60(36)$
+
+\subsection{If $n=60$ }
+
+The annual gain if we accept only long projects is: $100*3*12=3600$. This will use all employees. Since this is the constraint we should get the same answer if calculate it using the average productivity of workers $1.2*60*\frac{1}{2}*100=3600$. 
+
+The annual gain if we accept only short run projects is: $50*6*12=3600$. This will use only 36 employees. So the firm could put the remaining $24$ in the long run projects $6*24*\frac{1}{3}100=4800$. Total gain is $8400$
+
+\subsection{If $n=36$ }
+
+The annual gain if we accept only long projects is: $1.2*36*\frac{1}{2}*100=2160$. This will use 36 employees. So the other calculation does not work. 
+
+The annual gain if we accept only short run projects is: $50*6*12=3600$. This will use all employees. So we can use second method of calculating $6*\frac{36}{3}*50=3600$. 
+
+\section{Old Numerical Example:}
 
 It is often the case in economics that when we analyze choice sets throughout time we assume that an individual choice does not affect the set of future choices. Incorporating this feauture into a time frame is very simple. We will illustrate this through a detailed example: 
 
-There is a bureau of architects which has n architects. This bureau receives projects at regular time intervals, say a month and can assign a single architect to it. The bureau can accept either a 10 month project yielding 100\$ or a 2 month project yielding 50\$. Each project takes up a single architect. How should the bureau decide which to accept? The answer is that it depends on the number of architects. For simplicity, assume the firm does not have access to an interest rate and that the project offer occurs $\epsilon$ time after existing projects offers end. The firm can accept two projects at the same time. 
+There is a bureau of architects which has n architects. This bureau receives projects at regular time intervals, say a month and can assign a single architect to it. The bureau can accept either a 10 month project yielding 100\$ or a 2 month project yielding 50\$.   project takes up a single architect. How should the bureau decide which to accept? The answer is that it depends on the number of architects. For simplicity, assume the firm does not have access to an interest rate and that the project offer occurs $\epsilon$ time after existing projects offers end. The firm can accept two projects at the same time. 
+
+Change, long project, 2 person, short project 3 people. So if the firm has 24 architects. Growth rates. Suppose there are 4 projects of each type that arrive at each month.  
+
+Each employee can on average join 12/10(12/2), 1.2(6) projects a year. Each project accepted gives cash injection of 100(50). The number of projects that can be undertaken is 24/2(24/3) or 12(8). The maxmimum number of projects that can be undertaken due to the project constraint is 12*4=48.  
+
+Growths per year
+\begin{align*}
+\text{Long project:}  12*400*1.2=5760 \\
+\text{Short project:} 8*50*6 = 2400
+\end{align*}
+Now suppose the firm has 120 people.  120/2(120/3) or 60(40)
+\begin{align*}
+\text{Long project:}  60*400*1.2=28 800 \\
+\text{Short project:} 40*50*6 = 12 000
+\end{align*}
+However the long run one is not attainable because it is above capacity. So the actual growth rate for long run projects is. 
+\begin{equation*}
+48*400*1.2= 23 040
+\end{equation*}
+Now suppose that we shift 6 people to short run projects. 
+\begin{equation*}
+45*400*1.2 + 2*50*6= 22 200
+\end{equation*}
 
 Suppose that every future choice is also between a 10 month project and a two month project. How many architects does the firm need to accept the 10 month project every time? Since projects arrive every month and an architect working on a 10 month project will only be freed after 10 months, then the bureau needs 10 architects to be able to always choose the 10 month project. In fact in this case, the firm that wishes to maximize long term growth will simply take the highest payoff on every choice, 100\$. This leads us to the first lesson:
 
@@ -255,6 +304,12 @@ To see this we need only note that since three people are always idle, then the 
 So a firm has to use both kinds of criteria for decision making. So when would a firm be indifferent between these two payments. When they give the same growth rate. This implies that the firm is indifferent between the time structure of projects if they give the same payout. In fact this is exactly the same thing as the definition of a discount factor, that is, a discount factor is what you need to multiply the future payment so that you are indifferent between the future and present payment. $50= \delta 250$, which means the firm will effectively be discounting by: $\delta = .2$, however we can also recover the discount factor by analyzing the time structure in this case it would be $\frac{1}{1+\frac{8}{2}}=\frac{1}{1+\frac{8}{2}}=.2$
 
 In other words, once we know whether the firm is capacity constrained or not, we should be able to deduce a hyperbolic discount rate from its behavior. This reasoning is not unique to firms, indeed this reasoning could apply with consumers choosing or even animals. The optimality of hyperbolic discounting depends only on whether agents will conisder options that result in the same after choices, if the options do not give the same after choices, then the agents will end up hyperbolically discounting. 
+
+\section{Discounting as growth maximization under constraints}
+
+Let us imagine that every period 10 projects of type 1 arrive and 10 projects of type 2. Say project 1 requires 1 employee, and project 2 requires 2 employees. Suppose that project 1 bring in 100 every period. Suppose that project 2 brings in 300 every 4 months. 
+
+If we imagine that we have $L$ workers, the quantity of employees currently used up is: $q_t=f(l)$. So the constraint of the firm is simply $l_t > L-f^{-1}(q_t)$. 
 
 \section{Theory}
 
@@ -303,6 +358,8 @@ Two projects:
 &x_i \frac{t_i}{\tau} && \text{ if: } \tau < t_i \text{  and: } \frac{t_s}{\tau}<\frac{t_l}{\tau}<\frac{t_s}{\tau}+\frac{t_l}{\tau}<n \\
 &x_i \frac{n}{\tau} && \text{ if: } \tau < t_i \text{  and: } \frac{t_i}{\tau}>n
 \end{align*}
+
+
 
 
 \bibliography{../thesisbib/bibliography}
