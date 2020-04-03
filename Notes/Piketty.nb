@@ -1,0 +1,147 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4689,        138]
+NotebookOptionsPosition[      4195,        117]
+NotebookOutlinePosition[      4535,        132]
+CellTagsIndexPosition[      4492,        129]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.792905241286322*^9, 3.792905242200795*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"r", ">", "g"}], "\[IndentingNewLine]", 
+ RowBox[{"a", "=", " ", 
+  RowBox[{"r", "*", "b"}]}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", 
+  RowBox[{"s", "*", "g"}]}]}], "Input",
+ CellChangeTimes->{{3.7929055260638847`*^9, 3.7929055649568067`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Rule]", 
+   FractionBox["a", "b"]}], "=", " ", "r"}]], "Input",
+ CellChangeTimes->{{3.792905593975775*^9, 3.792905611480095*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Rule]", 
+   FractionBox["b", "s"]}], "=", "g"}]], "Input",
+ CellChangeTimes->{{3.792905600202077*^9, 3.792905623524128*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      FractionBox["a", "b"], "-", 
+      FractionBox["b", "s"]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", "0.1", ",", "2"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.01", ",", ".999"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "0.01", ",", ".999"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7929056551461477`*^9, 3.792905706818127*^9}, {
+  3.7929057735092635`*^9, 3.792905807066559*^9}, {3.7929059472230215`*^9, 
+  3.7929060289544253`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.999, $CellContext`s$$ = 0.01, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.01, 0.999}, {
+      Hold[$CellContext`s$$], 0.01, 0.999}}, Typeset`size$$ = {
+    360., {109., 114.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`a$3672$$ = 
+    0, $CellContext`s$3673$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 0.01, $CellContext`s$$ = 0.01}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$3672$$, 0], 
+        Hold[$CellContext`s$$, $CellContext`s$3673$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[$CellContext`a$$/$CellContext`b - $CellContext`b/$CellContext`s$$, \
+{$CellContext`b, 0.1, 2}], 
+      "Specifications" :> {{$CellContext`a$$, 0.01, 0.999}, {$CellContext`s$$,
+          0.01, 0.999}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {170., 176.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.79290601385822*^9, 3.792906029569004*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"b", ":", " ", 
+  RowBox[{
+   RowBox[{"capital", "/", "income"}], " ", 
+   "ratio"}]}], "\[IndentingNewLine]", 
+ RowBox[{"a", ":", " ", 
+  RowBox[{
+  "share", " ", "of", " ", "income", " ", "from", " ", 
+   "capital"}]}], "\[IndentingNewLine]", 
+ RowBox[{"s", ":", 
+  RowBox[{"savings", " ", "rate"}]}]}], "Input",
+ CellChangeTimes->{{3.7929057186040487`*^9, 3.7929057520395184`*^9}, {
+  3.792905817523653*^9, 3.792905857670345*^9}}]
+},
+WindowSize->{681, 676},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 92, 1, 31, "Input"],
+Cell[653, 23, 272, 6, 72, "Input"],
+Cell[928, 31, 166, 4, 51, "Input"],
+Cell[1097, 37, 161, 4, 53, "Input"],
+Cell[CellGroupData[{
+Cell[1283, 45, 596, 16, 53, "Input"],
+Cell[1882, 63, 1837, 37, 363, "Output"]
+}, Open  ]],
+Cell[3734, 103, 457, 12, 72, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
