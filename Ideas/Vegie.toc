@@ -1,23 +1,24 @@
-\contentsline {section}{\numberline {0.1}Introduction}{3}{section.0.1}% 
-\contentsline {chapter}{\numberline {1}The arguments for not eating animals}{5}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}Dynamics of belief}{5}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Minimizing Harm}{6}{section.1.2}% 
-\contentsline {subsection}{\numberline {1.2.1}Why these words?}{6}{subsection.1.2.1}% 
-\contentsline {subsection}{\numberline {1.2.2}Necesity}{7}{subsection.1.2.2}% 
-\contentsline {subsection}{\numberline {1.2.3}Utilitarianism}{9}{subsection.1.2.3}% 
-\contentsline {section}{\numberline {1.3}Psychoanalysis of veggies}{11}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}An alternative picture of humans}{11}{section.1.4}% 
-\contentsline {section}{\numberline {1.5}Speciesm}{12}{section.1.5}% 
-\contentsline {section}{\numberline {1.6}Cost-benefit}{12}{section.1.6}% 
-\contentsline {subsection}{\numberline {1.6.1}calculus}{12}{subsection.1.6.1}% 
-\contentsline {section}{\numberline {1.7}Equal consideration}{12}{section.1.7}% 
-\contentsline {section}{\numberline {1.8}Ecological:Plants}{12}{section.1.8}% 
-\contentsline {chapter}{\numberline {2}The good arguments for eating animals}{13}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}The extreme case: What if you have to?}{13}{section.2.1}% 
-\contentsline {chapter}{\numberline {3}The bad arguments for eating animals}{14}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}It is natural}{14}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}We are superior}{14}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Harm and necceccity}{14}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Lifestyle preferences}{14}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}Formulation vs induction}{16}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Against false principles}{16}{subsection.3.3.3}% 
+\contentsline {chapter}{\numberline {1}Prelude}{3}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Introduction}{5}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}The arguments for not eating animals}{6}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Dynamics of belief}{6}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Minimizing Harm}{7}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Why these words?}{8}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Necesity}{8}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Utilitarianism}{10}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}Psychoanalysis of veggies}{12}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}An alternative picture of humans}{13}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Speciesm}{13}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Cost-benefit}{13}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}calculus}{13}{subsection.3.6.1}% 
+\contentsline {section}{\numberline {3.7}Equal consideration}{14}{section.3.7}% 
+\contentsline {section}{\numberline {3.8}Ecological:Plants}{14}{section.3.8}% 
+\contentsline {chapter}{\numberline {4}The good arguments for eating animals}{15}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}The extreme case: What if you have to?}{15}{section.4.1}% 
+\contentsline {chapter}{\numberline {5}The bad arguments for eating animals}{16}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}It is natural}{16}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}We are superior}{16}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Harm and necceccity}{16}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Lifestyle preferences}{16}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Formulation vs induction}{18}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Against false principles}{18}{subsection.5.3.3}% 
