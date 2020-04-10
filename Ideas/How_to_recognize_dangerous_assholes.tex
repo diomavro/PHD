@@ -1,0 +1,224 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+
+Once in awhile we have an opportunity to recognize the morons among us. A moron is not defined by what proportion of the time they are right or who believes their narrative, instead they are defined by how destructive their advice is. Perhaps the most dangerous class of morons we have to face today are those of whom Hayek spoke off, the class of "scientism", the people believe exclusively in "evidence", no action without evidence. Or as Taleb says, absence of evidence is NOT evidence of absence. 
+
+When the virus started hitting, a large class of journalists/pundits started saying "let us calm down, we don't know what this is yet". It is hard to overstate the moronic nature of this class, if I had to classify dangers, this would be the highest, extinction level danger. They get the reasoning exactly backward: When you KNOW what something is, you can take calculated risks, when you DON't know what something is, you must simply take the maximum precaution possible. 
+
+Of course now, this same class of people will be trying to show their cleverness with nice graphs to show you how clever they are in tracing the progress of the virus. Ask yourself, what is the point of listening to these people if listening to them gets us in more trouble than listening to your grandma, who , upon hearing of the virus, just said "Why don't you just stay home?" If we need a quanrantine it is because of the scientism crowd, most people can use their common sense, they know masks work, they know stopping flights helps, they know staying home works, but the idiots won't use common sense until the evidence is in, the reason we need a government quaratine isn't because most of us don't have common sense, it's because some us don't have it.
+
+Imagine you on a coridor filled with deadly trap, blades bouncing horizontally back and forth. There is NO choice to cross or not to cross, you MUST cross and of course if you delay crossing, it will cost something, does this mean that you should run into it? Of course not, try and learn the pattern of the trap and cross it as carefully as you can. 
+
+
+\bibliography{../thesisbib/bibliography}
+
+\end{document}
