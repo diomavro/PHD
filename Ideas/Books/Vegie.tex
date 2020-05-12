@@ -1,0 +1,1004 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{lipsum}
+\mdfdefinestyle{MyFrame}{%
+linecolor = blue, 
+outerlinewidth=2pt,
+roundcorner=20pt,
+innertopmargin=\baselineskip,
+innerbottommargin=\baselineskip,
+innerrightmargin=20pt,
+innerleftmargin=20pt,
+backgroundcolor=gray!50!white}
+
+\usepackage[most]{tcolorbox}
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+
+\tableofcontents 
+
+\newpage
+
+\chapter{Prelude}
+In south central park, on 60th street, I went to go meet my ex Coach, Prince Gomez, who I had not seen in a decade, we had a lot to catch up on so we met at the square, I was in New York for wedding of a friend who payed 50k for flowers for a marriage that lasted less than 6 months. Anyway it turned out my ex coach was obsessed with Pokemon Go and every 10 minutes or so a large mass of people would randomy run somewhere in central park to catch a rare pokemon. I never played this game, didn't seem very interesting to me but I tagged along with my coach anyway. As I ran around I noticed a small second hand bookstore on the side of central park, I had lived here for years but never noticed it before, always passed by, always had seen it, but too distracted, my mind on other things. It was here that I first ran into Peter Singer's book \cite{singer1995animal}. I went back home and finished the book in a day, it was a fun read, and moved on with my life. 
+
+Somehow I started following philosophers on twitter and noticed that Singer was a big name to them. I was a bit perplexed at this popularity. What is happening? So I went back to re-read the book to see if I had missed some potentially life changing experience. Admitedly I had a hard to understanding what people enjoyed in the book. 
+
+I have written this book because I have not found a consise statement defending the morality of eating animals. I find this especially puzzling since philosophers are known to leave no stone left unturned, almost every position you can imagine has been defended \footnote{List some Nazi phislophers, Schmitt, (that guy on youtube), Frege etc}. 
+
+The answer to this odd phenomenon is philosophers are attached to a sort of deductive method of reasoning. It so happens that grand principles often rely on measurable quality. That is, most philosophers refuse to cede ground to intuition or if they do speak of intuition in a sort of formal way\footnote{Huemer, ethical intuitinism}. 
+
+With no intent to being polemical, it seems fairly clear that most philosphers are in fact heavily left-wing. The left-wing are known to work in "movements", that is a popular trend catches on and the left think they have found a new truth that must be striven for. It is perhaps no exageration to say that 99\% of those movements fail to achieve what they aim for, indeed most such movements are forgotten after few hundred years but it is in the credo of this group to cherry pick their succeses and adverise them as if they were always ahead of the curve. 
+
+My intend for this book to be eminenly readable by everyone. I am articulating what I think is simply common sense because the common man has no interest in articulating his common sense, and to the uncharitable academics this is often interpreted as not having an argument. 
+
+Academics forget that we invent our intellectual ideas to aid us in our everyday endeavours. Philosophers are often tempted to change this reasoning, they think that our everyday endeavours are there to aid our intellectual ideas. Ideas such as equality/liberty/freedom/independence etc, represent such a backward reasoning. Philosophers should aim to show how these ideas capure what we are trying to do, for instance it may be that in our everyday endeavours, the heuristics of equality/liberty/freedom/independence make our task easier to analyze and our endeavour less costly, but the way philosophers usually use these concepts is that these are the ultimate ends in themselves. 
+
+
+It must be remembered that Philosophy is the generator of all knowledge, all modern disciplines were once under the wing of philosophers and as they grew beyond their infancy they became their own disciplines, evolving independely of philosophical trends\footnote{Mathematics, Physics, Anthropology, Psychology, Economics(Adam Smith), etc}. 
+
+
+\chapter{Introduction}
+
+
+Each chapter in this book will be independent of the others, so there is not much need to read it linearly. The specific kind of use I expect of this book is as a sort of reference book of arguments. 
+
+Much of the problem in philosophy is being parsimious, it how many ways should one use to divide up the world? I considered when writing the book to demarcate between consequentialist methods of ethics and non-consequentialit methods. Of course the problem with attacking or defending from the categories of consequences is that it is not clear what counts as a consequence. 
+
+The first part of the book will be analyzing existing arguments made my various vegetarians and vegans to explain why these are false. My first chapter will be the most important and most popular argument that is mainted today, that is a minimizing-harm argument. 
+
+After defending the idea that formulating arguments is superfluous for the practicioners, I will try to formulate what I think is a charitable interpreation of their arguments. That is I will present a series of argument FOR meat eating. 
+
+Finally in the last section I will present what I think are some weak ways of formulating pro-eating arguments. 
+
+\chapter{The arguments for not eating animals}
+
+\section{Dynamics of belief}
+
+Though some vegetarians do believe their own arguments, I posit that to most of them, the arguments are secondary. Instead, on a purely descriptive leve, they have some intuition which is closely related to aesthetic reactions. These intuitions then lead the agents to look for articulations of the arguments which cohere with their intuitions. 
+
+In this respect they are no different to other people, a psychologist might call this "motivated reasoning". Indeed even non-vegetarians can have similar aesthetic reactions to vegetarians, for instance, factory like killing gives us a feeling of disgust, one I share. 
+
+The difference is then about the inference that is done after one has this intuition. Vegetarians often make positive assertions, that animals should be treated a certain way. On the other hand, others with more humility, draw less general implications, they simply say that this situation is wrong. 
+
+The problem with simply saying something is wrong is that it does not offer an alternative, but this is by design, they are inviting people to experiment with other worlds. Perhaps we are having this reaction because the animal isn't killed by somebody it doesn't know, and who in turn has no familiarity with the animal. This de-personalization causes revulsion in humans, in a similar way that many would be for un-plugging a man in a coma if the person deciding knows him but not if they do not. Alternatively, one could try to claim that the killing would be justified if the environment of slaughter was different, if there was some ritual showing respect, or if the animal wasn't away from its natural habitat. 
+
+People who enjoy eating meat often have a fundamental intuition about a case where killing an animal is acceptable. The fundamental vision of a farmer raising an animal on his farm and killing it with his own hands and sharing that meat with his community, is still fundamentally sound. Of course, living by this vision probably implies a lower intake of meat than we currently consume. Such a vision is positive, almost platonic, does imply that activism should be directed to return the production process to the farm, get rid of the regulations that force farmers to take them to the slaughterhouse.\footnote{find sources on the EU here}. 
+
+Of course one might object that there are reasons for regulating the slaughter of animals, disease, quality etc. These are indeed legitimate reasons but the the logic can be reversed, instead of regulating so that those things are better controlled, we should be structuring thing such that those things can't do much damage, a farmer's product being eaten by him and his own community is only the begining of such an accountability process. 
+
+Aesthetic reasons dominate, this is not to say that people don't change their minds, but fundamentally they will only change them when presented with alternative aesthetic visions. However there exists a class of philosophers who formalize and think in objects and this class of philosophers is immune to evidence, this class of philosophers are immune to other kinds of arguments.
+See this: https://twitter.com/JoshHochschild/status/1242527953101246467
+
+Indeed this is often obvious nobody is informed of an animal being killed on a farm and suddenly becomes a vegetarian.
+
+Much of the attempt in this chapter should read like a philosohical journey vegetarians go through. That is, many of them will stay on the first argument presented, others, will have started here and evolved in the same way I describe here. Many would have skipped this argument altogether and gone further down the chain. 
+
+\section{Minimizing Harm formulation}
+
+
+\begin{tcolorbox}[enhanced,%fit to height=5cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Fit box (5cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+\begin{align*}
+1)& \text{Causing unnecesary harm is bad} \\
+2)& \text{Eating animals causes unnecesary harm} \\
+\rightarrow& \text{Therefore eating animals is bad}
+\end{align*}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[enhanced,%fit to height=10cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Principle of utility (10cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+ %\lipsum[1-4]
+“the only purpose for which power can be rightfully exercised over any member of a civi- lised community, against his will, is to prevent harm to others”
+― John Stuart Mill, On Liberty
+\end{tcolorbox}
+
+
+Though Mill is perhaps the most known proponent of the harm principle, to Mill this was not a sufficient principle for morality but merely a heuristic for legal principles. 
+
+Though the argument should be obvious, for the pedantic in the room some quick clarifications are in order. \textbf{Bad} is used in a strong sense of "we should not do what is bad". If the person making the argument has a system of ethics that is additive, then presumably they can add or subtract this good to other bads. In such a case, their formulation of the argument would be that it is "bad" in TOTAL. This interpretation may be too large, since even though the practice may have a net negative, this view could be open to marginal exceptions: even though it is generally bad, there may be cases where it isn't on net bad. 
+
+\textbf{Harm} was chosen over other words because of it's generality. The argument would also work if we used the words "pain" or "suffering". However the use of alternative words might exclude the concept of "killing". Using those words would then make the argument more open to objections via empirical methods, for instance they could just point to some painless way of killing and the argument would instantly fail. On the other hand, the harm version can survive such an attack, while all attacks on the harm formulation would also work if less general notions were used. This generalization also corresponds to what most vegetarians actually believe. If a very ethical farmer showed up that filmed the painless killing of the animal, it is doubtful that many vegetarians would change their mind and eat this specific animal. 
+
+The problem of "harm" is that it may be general enough to encompass non-consious agents, such as killing a plant or tree. The argument as presented makes reference only to animals but somebody might object: "why only animals and not plants?". In this case, the vegetarian may return to the previous standards of "suffering" or "harm". Alternatively they could commit "organicism", that is, arbitrarility discriminate between organic beings based on their categorization. However I suspect the most likely position they will take is that it is not a matter of category but a matter of degree. That is, they will agree that harming plants is bad, but not sufficiently bad given the benefits. That is, one may think that the value of plants is high but the value of humans living is higher. I believe this kind of position automatically locks you into a sort of  "additivity" or comparability of values. 
+
+
+% http://www.veganfuturenow.com/answering-the-objections-to-veganism#do-you-want-animals-to-have-the-right-to-get-married-and-vote
+\subsection{Problems}
+
+\subsection{Necesity}
+
+The most obvious problem with the argument is the word, "unnecesary". What does this word mean? It is perhaps best to work with it's negation, necessity. Neccesity is a fairly rare word in that the common use and the philosophical use are identical: Something that must be present for a certain other thing to occur. It makes little linguistic sense to talk of neccesity without linking it to something, there must be a second part to the use of the word, neccesity is a constraint and there must be some objective for the contraint to work on. For instance if I want to make a cake it is necessary that I use the ingredients necessary to make the cake. The sentence "flour is neccesary to make the flour cake" makes sense. The sentence "flour is neccesary" does not make sense. So then it is clear that vegetarians are assuming that there is some goal(cake), which can be achieved through a variety of means. 
+
+What is the "cake" of the suffering of animals? Suppose an agent is trying to get the best "taste" possible, the omega taste. If the omega taste does not require eating animals\footnote{Note here that this is more plausible than it appears, since there are specific labs that aim to create vegetables that emulate the taste of meat} then the argument works, this would be equivalent to saying "don't eat animals because there are better tastes out there". If on the other hand the "omega taste" must include animal flesh, then the argument instantly fails. That is, if I am trying to have the best taste I can, then it IS neccesary that I eat animals. 
+
+Do people eat meat because of the taste? Though I suspect many people do consiously believe they eat meat because they enjoy the taste, evolutionary reasoning actually works backwards: They like the taste because they meat. In other words, the argument should not be taken at face value, people are comfortable eating meat but the reason they eat is not because of the taste. Nevertheless taste plays an important role for habit formation of new generations. In other words agent's are not optimizing creature, they just have a set of habits, there is no sense in speaking of constraints. 
+
+Is this obvious truth, that people have habits and don't analyze their actions and simply do things, a deathblow to philosophers trying to analyze them? A philosopher may be interested in two distinct things, trying to explain the behavior of the the agents, and trying to convince the agents to change their mind. 
+
+If the goal of the philosopher is simply to explain the behavior, he is in fact indifferent to how the agent's decide, instead he is interested in studying their behavior and will simply try to re-formulate his theory to say that agents are acting AS IF they maximize their pleasure. This approach is most interesting for those who with a scientific inclination, it can be used to try and predict the behavior. 
+
+If on the other hand the philosopher is interested in changing the agents mind, then he will try to stop the agent from doing thing unconsiously. This may provoke anger or dismissable from the agent, understandably, a bit like socrates who was known for being really annoying by trying to have people articulate everything. Of course this may be a more dangerous exercise than it seems because making an agent less reliant on one habit may make them doubt their other habits. Of course philosophers may think this is a desirable state of affairs to the desirable, but they are open to Chesterton's fence criticism. 
+
+But let's play the philosophers game and assume for a moment that people are eating meat because they are maximizing some underlying variable. What is their goal if it is not taste? What else can be the optimand of people? Perhaps people are trying simply to optimize their pleasure, but that would simply result in a similar argument to the "taste" argument. Perhaps they are trying to lead a good life, in which case the vegetarian would have to appeal defining the "good life", something many vegetarians don't wish to do because it makes retaining a subjectivist position difficult. If they are willing to empbrace non-subjectivist positions then they would have to fall to objective standards. Nevertheless the most likely turn of vegetarians after reflecting is to use happiness as the standard. 
+
+In other words, the vegetarians will simply try to use the utilitarian standard and attempt to convert meat-eaters to adopt this standard. 
+
+First: https://twitter.com/JoshHochschild/status/1246061518665506816?s=20
+
+Second: https://twitter.com/diomavro/status/1246497670757302272?s=20
+
+
+
+Third: https://twitter.com/diomavro/status/1246858198688116739?s=20
+
+https://twitter.com/diomavro/status/1246859165013889024?s=20
+
+\section{Utilitarianism} 
+
+\begin{tcolorbox}[enhanced,%fit to height=10cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Principle of utility (10cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+ %\lipsum[1-4]
+“Nature has placed mankind under the governance of two sovereign masters, pain and pleasure. It is for them alone to point out what we ought to do, as well as to determine what we shall do. On the one hand the standard of right and wrong, on the other the chain of causes and effects, are fastened to their throne. They govern us in all we do, in all we say, in all we think: every effort we can make to throw off our subjection, will serve but to demonstrate and confirm it. In words a man may pretend to abjure their empire: but in reality he will remain subject to it all the while. The principle of utility recognizes this subjection, and assumes it for the foundation of that system, the object of which is to rear the fabric of felicity by the hands of reason and of law. Systems which attempt to question it, deal in sounds instead of sense, in caprice instead of reason, in darkness instead of light.”
+― Jeremy Bentham, The Principles of Morals and Legislation
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced,%fit to height=10cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Principle of utility (10cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+ %\lipsum[1-4]
+"The day may come when the rest of the animal creation may acquire those
+rights which never could have been witholden from them but by the hand of
+tyranny. The French have already discovered that the blackness of the skin
+is no reason why a human being should be abandoned without redress to the
+caprice of a tormentor. It may one day come to be recognized that the
+number of the legs, the villosity of the skin, or the termination of the os
+sacrum, are reasons equally insufficient for abandoning a sensitive being to
+the same fate. What else is it that should trace the insuperable line? Is it the
+faculty of reason, or perhaps the faculty of discourse? But a full-grown
+horse or dog is beyond comparison a more rational, as well as a more
+conversable animal, than an infant of a day, or a week, or even a month,
+old. But suppose they were otherwise, what would it avail? The question is
+not, Can they reason? nor Can they talk? but, Can they suffer?"
+― Jeremy Bentham, The Principles of Morals and Legislation
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced,%fit to height=5cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Fit box (5cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+\begin{align*}
+1)& \text{We ought to maximize total utility} \\
+2)& \text{Eating animals does not maximize total utility} \\
+\rightarrow& \text{Therefore we ought not to eat animals}
+\end{align*}
+\end{tcolorbox}
+
+Bentham was the founder of modern utilitarianism. As seen in the above quote, he even predicted that a consistent application of his ethical framework would be to extend rights to animals. Peter Singer is the most influential philosopher who has clearly and succincly brought Bentham's views into modern philosophy, the Singer formulation goes something like this: 
+%Bentham predictd it
+
+\begin{tcolorbox}[enhanced,%fit to height=5cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Fit box (5cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+\begin{align*}
+1)& \text{The utility humans get from tasting animals is $\epsilon$} \\
+2)& \text{The disutility animals get from being eaten is >$\epsilon$ utility from eating animals is trivially small} \\
+\rightarrow& \text{Therefore eating animals does not maximize utility}
+\end{align*}
+\end{tcolorbox}
+
+How does the theory work in practice? A being has numerous disutility and utility dimensions. Some disuutility dimensions could be \{ability to feel physical pain, ability to have dreams ruined, suffering from seeing others suffer, etc \}. Similarly there are a number of dimensions that can cause utility \{ direct pleasure, comfort, dreaming, love, family, etc \}. Let the different elements of utility be X and the different element in disutility be Y. 
+
+Now the question is, how do these dimensions interact? If for instance we have an individible unit of physical pain, $x_1$ to distribute who should we give it to? Without loss of generality, let us imagine that Amy is a tough girl, and feels less pain of type $x_1$ than Bob. Does this mean we should give the unit of pain to Amy? Not quite. Utilitarianism requires us to look at the interaction between the variables. Let us take an example to demonstrate. 
+
+1) Private Ryan is a war veteran who is very sensitive to pain, he dreams of becoming a professional surfer in California. 
+
+2) Athena is a lawyer working in Nicosia, she is very resistant to pain and generally very in touch with her feelings, she dreams of writing a book one day.
+
+Suppose we have one indivisible unit of pain to distribute to one of these two. If we give it to Ryan he will feel more direct physical pain than Athena. However if we give it to Athena she will feel the pain less but be traumatized by it for 5 years while Ryan won't feel the trauma. So if we used only the first dimension we would give it to Athena, if we used only the second, we would give it to Ryan. If we take both of these dimensions it could go either way. 
+
+What occurs if the unit of pain also affects the capacity to attain their dreams? Perhaps the unit of pain is in fact the cutting off of a leg, in this case, it seems clear that Ryan will be affected more favorably because without a leg he won't be able to be a sufer, while Athena's positive item of writing a book will be less negatively affected(perhaps even positively affected). 
+
+Of course if Ryan has numerous dreams, and some of the dreams are attainable even with the pain, then a utilitarian would ignore the fact that Ryan's choice set is reduced. We start here to see where utilitarianism may start to have difficulties, specifically, it values consequences, not the fact that the agent has a choice. Indeed this assumption is regularly made in the economic of general equilibrium, where the social planners utility maximizing plan always has at least as much total utility as the individuals utilities. 
+
+Now let us conjure a third being: 
+
+3) Hachiko is a loyal dog who can feel pain and can also be traumatized. 
+
+Once again we can distribute the unit of pain to Hachiko or to Ryan and Athena. To claim that we should give Hachiko equal consideration merely means that we will weigh his pain and trauma to the same extent as we weigh the other beings. Of course we can immediatly notice that since Hachiko has no aspirations these cannot be adversely affected, so if the unit of pain has the property destroying aspirations, it may be optimally given to Hachiko since he will be less adversely affected. 
+
+In other words, utilitarianism does entail that we accept a higher degree of pain on non-humans than on humans, simply because humans are more complex creatures and the same pain may have different effects. Indeed one could argue that chopping the leg of a human is not only inhibiting their aspirations but their social status and hence their ability to have a family etc. 
+
+All this implies that there is a set of objections which fail. Some are found below:
+
+1) You think an animal life is worth as much as a human? 
+
+This is clearly false, as they can simply point to the fact that utility optimization entails that human lives are generaly worth more. 
+
+\section{Problems}
+
+Utilitarianism is a philosophy which has numerous issues. 
+1) There is a direct measurement issue, that is, the categories the utilitarians want to use, may themselves not be well measured. 
+
+2) There is a scale issue which is that by attempting to create addititivity the utilitarian ignores the nexus of decision. That is a decision taken by the individual has no difference from a decision taken by a leader. 
+
+3) Preference, there is no way to aggregate preferences that doesn't cause issues. 
+
+The arguments against the utilitarian view can heuristically be classified into two types. Arguments of the measurability type, and arguments of the scale type. 
+
+\section{Teleology}
+Suppose you are given the option to either free a slave or kill him. Perhaps there is harmless way of castrating them. A pill perhaps? 
+
+Indeed since Chickens are in fact evolutionarily bread, to be eaten, there is in fact nothing 
+
+Suppose a plant developed mobility or that it simply was more quick to react to its environment. 
+
+The incredible thing is that they have even re-written words to create an inability to express things in the non-utilitarian manner. For instance, suppose I want to cleanse the planet of some type of specie. 
+
+
+\section{Utilitarianism and preferences}
+
+Utilitarianism and preferences are an odd mix. There are questions first about preferences, what exactly do people have preferences over? One common answer is over goods. A second common answer is how far are consumers aware of these preferences? Another question is are these preferences fixed? That is, can we meaningfully talk of comparing worlds when things aren't kept constant? We can imagine that if agents have preferences, that the social planner will simply find the world that best fits these preferences? 
+
+If however we preferences are adaptive to the environment and not the xogenous thin that is pretended then the very notion of maximizing utility is meaningless without imagining possible worlds, indeed in this situation one must first have the vision of the world one wants to go to, and the preferences will simply follow. But this is perhaps exactly the kind of world that is sustainable, a specific vision. 
+
+In economic jargon this might be termed endogenous preferences. Or adaptive behavior, the best work on this has been developed by Ole Peters. Indeed, this then asks us to imagine WHICH preferences can be satisifed best. For instance a world where aspirations are low might best satisfy preferences and reach higher utility, a world where one preferences are shaped by their family can give higher total utility than another one. 
+
+The enlightment project should be revised as taking into account the importance of consent. Indeed the teleological vision of Aristotle is fundamentally correct but WHO creates habits that foster the virtues is of vital importance. Indeed, the idea is to make the environment the least dependent possible on external help, to make sure that the virtues can be cultivated without the fragility of a state, the only way to allow for this adaptivity is to make sure that the components foster those virtues on their own. 
+
+Though many philosophers try to reconcile the ancients with scale, this in fact fails. The Ancients absolutely did fail to notice the link between consent and scale. A culture of consent is what allows for stability in this kind of thing. 
+
+Here we have the famous Jordan peterson Lobster, whose very brain structure adjusts based on ones place in the dominance hierarchy. 
+
+The problem we have here is the usual almost ridiculous objection, what if someone enjoys being a slave? What if a slave is happy being a slave? He has gotten used to the idea. Ester 1982. The question is, does the concept of slave actually have any meaningful content if we control for consent? No of course not. Tge bituib if slave entails the notion of lack of consent. If somebody lives on a farm and wants to listen to their masters orders, there is no meaningful way this is a slave. 
+
+
+Notice that since nothing is good in itself but only things that satisfy preferences, there is no way around it. This problem, indeed 
+
+
+
+Or what if some preferences are harmful? Kymlicha 2002
+
+Of course they reply that we should ONLY apply utilitarianism to things which are universally desired(Goodin 1995)
+
+Sidwick(1907) Utilitarian elite Rawls 1980. 
+
+Dworkin 1931 and 1977, Personal preferences and external preferences, Harsayani (1976)
+
+
+\subsection{On measurability and epistemic arrogance}
+
+
+Epistemic arrogance is baked into utilitarianism. There is the assumption that reasoning by adding and subtracting can work precisely because humans have all the knowledge that is needed to do this calculation. Indeed if one is deciding what action to partake in because of the information that is avaialble to him implicitely this implies the information one has is sufficient to change behavior. 
+
+Utilitarians pretend like this is a completely harmless assumption but in fact these point of view is denial of the founders of our civilization. Socrates and Jesus. Imagine that the default strategy is X, but some information cuases us to believe that the best strategy is Y. If this was a mistake, cultural evolution would attempt to correct against this arrogance, I argue that it in fact DOES fight back against this arrogrance. The adam and Eve story seems to emerge naturall from exactly this kind of ridiculous history. 
+
+Before assigning probabilities to events there should first be a clear appraisal of the kinds of events that can occur. Indeed, it is virtually impossible to take a calculated risk if one does not go all the way in evaluating the higher order effects of every change possible. 
+
+Indeed there exists a certain kind of arrogance to believe that the good can be infered empirically. There are a multitude of ways to frame ethics alternatively. Indeed one can argue that they KNOW what the good is before any empirical foray. 
+
+Change is inevitable, it occurs without any top down imposition, merely by people exploring what is around them, getting to know others, travelling etc. No old structure can survive without significant resliency built into it. Change often becomes neccesary for adaptation, the vegetarian option is obviously not one of those neccesary options. What I find stupefying is how much of the absolutely preposterous literature of the sort "if we don't go green we won't be sustainable"  literature actually comes out. Even the diet literature seems corrupted beyond repair due to the vegetarians absolutely insisting on comparing correlations. Funnily enough the same vegeterians who accept these correlations, deny them for other measures such as IQ. 
+
+Though arguments about measurability may not neccesarily be fatal to utilitarian calculuation, they do in fact break its practical application. Indeed if we posit that the dimensions which increase utility the most cannot be measured, then somebody who is trying to maximize utility would in fact refrain from doing utilitarian calculation. 
+
+Many utilitarian may reply to this that they can simply be utilitarian by adopting "rules". While rules can be useful for choices which are sometimes measurable or reversible, in practice these things cannot be done in this way. That is, perhaps what gives utility simply cannot be measured in any meaningful way. Or we cannot predict which actions or rules will cause utility. 
+
+%articulate
+
+There are two kinds of things we are interested in measuring. The things that give us utility themselves, and the things that allow us to make decisions that that cause utility. For instance if we imagine that going to the Trodos mountains gives us utility, though maybe we can't recognize the trodos mountains themselves, perhaps we can recognize the signs that point to the mountaints. 
+
+Three things could cause an issue here. First we could not know that going to the mountains causes us utility. Second we could not recognize that we are in the mountains. Third, we could not recognize the signs that lead us to the mountains. 
+
+Notice that if any one of these things is true utilitarianism cannot be useful as a guide to ethical decision making. Of course the type of ignorance we have can take on a number of forms. 
+
+Rule utilitarians in fact think that we can measure the criteria we need to make the right choices even if the choices don't lead to a utilitarian maximizing outcome every time. But even these rules are meaningless, this is a more general problem with consequentialism, the problem of cluelessness.
+
+Suppose you are in a small german town in 100ad. You run into a woman and you decide not to kill her. In fact, killing this woman would have prevented Hitler from being born. So what kind of rule can we truly draw out of this? Can we learn the rule "always kill women from german villages in situation X?" In fact the information we would need to create the rule is even more demanding the information we need to make the individual decision, this is for the simple reason that to take action we need to know the effect of the action in this instance, while to create the rule we need to know all the possible effects that action could have in all possible situations. 
+
+This is the problem of cluelessness\cite{Lenman2000} and it is a more general problem for all consequentialist philosophies. If the action isn't defined as good in itself, or perhaps the motivation that leads to action as being good, then there is no way one can get past this problem of uncertainty. 
+
+
+\subsection{Network vision of utilitarianism}
+
+There is this implied argument in the short story "The ones who walk away from Omelas", which describes a society which is thriving by torturing a little girl. Though the argument can work, a utilitarian can just tweak with the cardinality of the values to make utility at lower levels much higher. That is, aggravate the diminishing marginal utility rule. 
+
+However a similar story can get us a conclusion with very similar characteristics. For instance suppose that one of the utility dimensions is the health of those you love. That is, if person A is in good health then that increases the utility of his whole family. But now suppose that we have to distribute a unit of pain in an economy where 100 people are a family and their utilities are interelated, as opposed to giving a unit of pain to an orphan who has no family. Here utility theory is unequivocal, the unit of pain must be distributed to the orphan. 
+
+Though utilitarians almost never articulate their philosophy in this way they are perhaps aware of this shortcoming. Indeed many utilitarians take positions against family ties and inheritance for exactly this reason. Indeed theere are numerous other things which occur. 
+ 
+
+% In reality if we imagine that society is a network of individuals who have different links to each other, utlitarianism defines the agents as the nodes and assigns value only to the individual agents. But perhaps this misses another kind of value, value outside 
+
+\subsection{Scleable vs non scaleable}
+
+Utilitarians in trying to make a theory with the additive property have tried to make a theory that is universalizeable at all scales. Whether the decision maker is a policy maker whose choices affect millions, or whether the decision maker is an old lady, utilitarianism has a prescription for both of them. Of course since utilitarianism looks at the total utility, whenever one tries to optimize locally, they will neccesarily not get a result that is as good as optimizing at the global level. 
+
+In other words, utilitarianism has baked into it a centralizing tendency, the central planner with perfect information can achieve everything in the best way possible. This scale invariance or at the very least efficiency increasing as a function of scale has some properties which most people would find repelling. 
+
+Arguments of the scale type are about how utilitarianism ignores the nexus of decision making. Indeed, being a consequentialist theory, as long as the results are the same it doesn't matter how the results are arrived at. 
+
+Utilitarianism because of its universal nature, can never work, any flaw found in utilitarianism would hold at all scales. 
+On the other hand other moral codes, though not scaleable, can work just fine in smaller societies. 
+
+\section{Incest}
+
+"Julie and Mark are brother and sister. They are traveling together in France on summer vacation from college. One night, they are staying alone in a cabin near the beach. They decide that it would be interesting and fun if they tried making love. At the very least, it would be a new experience for each of them. Julie was already taking birth control pills, but Mark uses a condom, too, just to be safe. They both enjoy making love, but they decide never to do it again. They keep that night as a special secret, which makes them feel even closer to each other. What do you think about that? Was it okay for them to make love?"
+
+\section{After birth abortion}
+
+The killing of baby feautus. It seems clear to me that if there is no moral rule but simply a legal rule and that people have no problem obeying such a rule this is a recipee for the kind of people 
+
+https://jme.bmj.com/content/39/5/261
+
+\section{Consent}
+
+Utilitarianism, being a consequentialist theory has no particular interest in consent. However a utilitarian would deny that creating a policy that forces everybody to give their kidney should the need arise optimizes welfare, they might invoke psychological pain. Nevetheless they have no objection to a scenario of the following kind:
+
+The CIA randomly sneaks into people's homes at night and steals their kidneys and then uses them to save one of the thousands of people on the waiting list. In other words, the people whose kidney is being stolen are not aware that their kidney was stolen. 
+
+Perhaps a more extreme example, suppose one wants to have sex with a certain woman but she is not interested, everyday she sleeps from midnight to 8am. If someone were for example to use chlorofoam to knock her out while she slept and then silently rape her. It is not clear what the disutility that would occur is here. 
+
+Indeed Singer himself uses the following example to try to convince people that their attachment to non-utilitarianism is purely irrational: 
+
+Only a rights based approach can object to such a scenario, the rights based approach will simply separate the world into physical objects where people have rights and obligations with respect to those objects. Ones kidney is someones property and they have the right to choose how to allocate it. 
+
+
+\section{Information}
+
+How does this all work when there is differential information? Suppose that there are two agents, A and B. A believes the best way to increase utility is by doing action X, whilst B believes it is by doing action Y. How does utility theory overcome this diffential information? Perhaps it refines the set of actions we take to the set of actions we all agree increase utility. This is a particularly odd position, clearly if we include the whole world this set will be very small. 
+
+How can they get around this objection? Perhaps they will want to apply their utilitarianism by making sure to group people who agree. 
+
+With this we could potentially have a theory of property rights
+
+\section{Capacity}
+
+
+The problem with any system that relies on optimization is that it assumes that what is known is more important than what isn't. For instance a utilitarian calculus might get you that building lots of infrastructure will be good for increasing consumption utility. But as we now know, at the time when these things were being invested we did not know that an increase in infrastructure would cause the environmental damage that it does, through, the destruction of habitat and by encouraging people to travel more. 
+
+A utilitarian would optimize 
+
+UNcertainty arguments against utilitarianism, what if measures? 
+
+
+% If we give this unit to 
+
+% One effect of giving the unit of pain to Amy is that this pain will also cause another kind of pain. Perhaps Amy is more resistant to physical pain than Bob but if she is inflicted with physical pain, she has nightmares about($x_1$) it for 5 years, while Bob only has nightmares for 1 year. 
+
+% Another possible effect of inflicting the unit of pain to Amy is that it affects her positive utility dimensions more adversely than Bobs. Suppose the unit of pain implies a lower physical capacity. Suppose that Amy's positive consumption good it being an athlete, but Bobs consumption good is being a writer. In this case if we give the unit of pain to Bob, we will have a greater total utility because even though he feels the pain more, his positive aspiration is unaffected, while if we had given it to Amy, her positive aspiration WOULD be affected. 
+
+% \begin{align*}
+% Amy = U(\{ x_1, x_2, y_1 \}) \\
+% Bob = U(\{ x_1, x_2, y_2 \})
+% \end{align*}
+
+% Note that this kind of reasoning works with any asset, we simply take the positive and negative it would bring to each person in total and then give it to them with an eye on the maximum. The equal weight consideration we are meant to be giving to animals is exactly this same argument. The non-human can be argued to simply have less dimensions than the human, for instance, perhaps inflicting physical pain will not affect the animals aspirations and beliefs. But for the aspects that ARE comparable, for instance the ability to feel physical pain, should be given equal weight, if the animal feels more or less pain than a human is a matter of exact calculation. 
+
+%An example:
+
+So suppose that person A has some disease which can't make him feel direct physical Pain, and animal B has that capacity. Those kinds of pains should be given equal weight in the calculus. Of course, Singer ackowledges that the pains that a human can have are deeper and of different kinds. Perhaps there a pain of type C that humans have and animals don't have, this kind of pain will obviously give moral TOTAL weight to the human, but per unit of pain felt, both being would be equal. 
+
+Suppose for instance that we have 10 units of pain to distribute. How should we distribute these units? Since utilitarianism aims at minimizing the impact of these units of pain there are a couple of solutions. Suppose the human and animal will both feel these units of pain equally and at a constant rate, then utilitarianism is in fact indifferent to how we distribute these units of pain. 
+
+Now suppose that units of pain are complementary, that is, two units of pain cause more damage than two times the units of pain absorbed, in this scenario, the prescription is that the units of pain should be spread (5,5) between the human and the animal. 
+
+Now suppose that the 10 units of pain are substitutable, that is, if absorbing an extra unit of pain after already having absorbed some pain is smaller, then the philosophy says that we should give it all to one of them, the philosophy being indifferent to which one of the two. 
+
+Of course the philosophy implicitely treats all resources in this way, units of pain being like labor, which gives disutility, and the question is what is the optimal usage of labor. We can imagine that pain is the cost of all activities, and pleasure is the gain. 
+
+Utilitarian has the advantage of getting over the basic flaw in the formulation of neccesity. Whether we will have 10 units of pain or 20 units of pain depends on the total utility of the pain. 
+
+\section{Measurability and additivty}
+
+Perhaps the main postulate of utilitarianism is that there is this concept, utility which can MEASURE everything that matters. This is a claim in and of itself. Indeed, it seems very odd to someone intuitively that he would be able to measure such a thing as suffering and pain. Indeed, a person may give an ad hoc answer to "is it worth it" but this is hardly proof of the measurability of things. I missed my childs first word but I was there for her first walk... which is better? It seems ridiculous as postule, hard to imagine that a whole class of philosophers have based. 
+
+Perhaps more importantly, the assumption that whatever it is these measures are, THEY ARE ALL comparable by one grand MEASURE. As absurd as the above sounds, this is a whole OTHER level of absurd. It is a GOD of sorts, the ultimate measure. 
+
+\section{Mother child and human life}
+
+Suppose that in the mountaints some mother has a child that dies very young. When asked, the mother still says she prefers that the child be born than not. 
+
+\section{The role of agency}
+
+Suppose that in the mountaints some mother has a child that dies very young. When asked, the mother still says she prefers that the child be born than not. 
+
+
+
+
+%Is killing a chicken worse than killing a person who does not feel pain
+%Is preventing a cat from killing rats bad?
+%Nozick experience machine
+
+
+
+
+Though the concept of utility sounds rather abstract, essentially the founders of the doctrine meant simply, to mazimize happiness defined as the sum of pleasure and pain. Though the doctrine as initially thought up does not neccesarily imply vegeterianism, when combined with other intuitive ideas it quickly becomes evident why vegetarians take this route. 
+
+Utilitarianism is a philosophy which isn't really too bugged about the details of what the good is. It merely states whatever that ultimate good is, actions should maximize it. It is designed in such a way that was occured in the past cannot be a reason to do something in the future.  To a utilitarian the family interaction is about pleasure, if family A switched children with family B and total utility was increased this would be a good change. 
+
+The question, is what if one persons happiness comes at the expensve of anothers? Utilitarianism has an answer, whatever action maximizes the \textit{total} happiness should be taken. A funny thing about utilitarianism is that stated brutally, it is an ethical system which is indifferent to the distribution. Which is why, to make it adhere to their intuitions, most philosophers complement it with a second rule. 
+
+Most adherents of this also make a second assumption, "the law of diminishing marginal utility", that is, the enjoyment one person gets for every marginal unit is diminishing. Or the second banana gives me less happiness than the second banana. \footnote{This assumption is questioned in Frankfurts book, equality}. This framework is especially appealing to some left leaning authors, it allows them to justify animal right and income/wealth re-distribution with a single framework. 
+
+How do these two premises, maximize utility, diminishing marginal utility help the vegetarian make his case? The argument is simple enough, animals have a higher utility from livng than humans have from eating animals. This is of course, simply an assertion, it is difficult to counter-argue such a position because it burries all the complexities behind the concept of "total utility". 
+
+The most natural question to ask is, "whose utility?"?, this is an odd. Who do we include? Naturally the vegetarian will ask that we include humans, mammals, and perhaps non-mammalian species, plants, or even the planet? A common idea for who to include is to simply only include those who can feel pain. It is unclear what kind of analysis a utilitarianism will accept for concluding his theory is false or absurd or counter-intuitive. If Andreas cannot feel pain perhaps through some biological disorder, it seems the utilitarian would exclude him, or at least were we to choose if we should whip Andreas or a dog, the utilitarian would say we should whip the Andreas.  They may re-work their criteria for inclusion by making up some other criterion and it is always possible to do this. 
+
+Another question to ask is, how much weight should we put on these utilities? Is the happiness of a fish the same as the happiness of a human? For instance, suppose we have one drug to distribute, if there are two agents who are sick, but one has built up a stoic character such that they feel less pain, does this entail that we ought to give the drug to the agent who feels pain less? Utilitarianism is clear about this, we give it to the person who feels pain more. There is this reverse natural selection at work implicit in utilitarianism. There is also a special of this kind of weighting in utilitarianism that is particularly popular, the Rawlsian case, where we take into account only the utility of the worse off person. 
+
+Mill on the other hand revises Bentham with a distinction about lower and higher pleasures. Specifically he says one would rather be socrates unsatisfied over a fool who is satisfied. Now this kind of caveat, either just means that higher pleasures have more weight OR that there is a lexicographic priority, where higher pleasures win. The question is of course, is the appreciation of good meat, a higher or a lower pleasure? He is very clear, find a being who has experience of both pleasures 
+
+Quote "If I am asked, what I mean by difference of quality in pleasures, or what
+makes one pleasure more valuable than another, merely as a pleasure, except its
+being greater in amount, there is but one possible answer. Of two pleasures, if
+there be one to which all or almost all who have experience of both give a
+decided preference, irrespective of any feeling of moral obligation to prefer it,
+that is the more desirable pleasure. If one of the two is, by those who are
+competently acquainted with both, placed so far above the other that they prefer
+it, even though knowing it to be attended with a greater amount of discontent,
+and would not resign it for any quantity of the other pleasure which their nature
+is capable of, we are justified in ascribing to the preferred enjoyment a
+superiority in quality, so far out-weighing quantity as to render it, in comparison,
+of small account...
+From this verdict of the only competent judges, I apprehend there can be no
+appeal. On a question which is the best worth having of two pleasures, or which
+of two modes of existence is the most grateful to the feelings, apart from its
+moral attributes and from its consequences, the judgment of those who are
+qualified by knowledge of both, or, if they differ, that of the majority among
+them, must be admitted as final. And there needs be the less hesitation to accept
+this judgment respecting the quality of pleasures, since there is no other tribunal
+to be referred to even on the question of quantity. What means are there of
+determining which is the acutest of two pains, or the intensest of two pleasurable
+sensations, except the general suffrage of those who are familiar with both?
+Neither pains nor pleasures are homogeneous, and pain is always heterogeneous
+with pleasure. What is there to decide whether a particular pleasure is worth
+purchasing at the cost of a particular pain, except the feelings and judgment of
+the experienced? When, therefore, those feelings and judgment declare the
+pleasures derived from the higher faculties to be preferable in kind, apart from
+the question of intensity, to those of which the animal nature, disjoined from the
+higher faculties, is susceptible, they are entitled on this subject to the same
+regard"
+
+What IS perhaps an odd thing is that it is clear that when it comes to taste, this can be considered a higher pleasure of humans. Indeed we need only note that like every taste, eating can be developed as a taste. For instance would these people be open to saying that music is a higher taste to be cultivated. 
+
+
+
+\section{Utility monster}
+
+%Is killing a chicken worse than killing a person who does not feel pain
+
+The utility monster is an individual who has a lot of pleasure. In fact the individual has so much pleasure that maximizing utility entails giving this person all the goods. THis seems like a weak objection but how can they deny the existance of such an individual? 
+
+
+\section{Experience machine}
+
+There is in principle nothing in Utilitarianism which can prevent itself to the experience machine objection. 
+
+\section{Robot replacement?}
+
+
+A peculiar feature of utilitarianism is that it anonymizes the decision maker. It says that as long as the consequences of an action are identical the identity of the agent don't matter. This is not to say that it prescribes that all agents should do the same thing, but as long as we condition on the agents preferences and information, their actions should be identical. 
+
+Suppose that every time a moral choice is to be made, the all knowing BOT is given the lever and it decides what the right thing to do is based on utilitarian reasoning. Would this work? 
+
+Indeed the problem is that the correct action is person specific. Suppose that a mother is in the hospital and it is burning down, suppose that in the baby ward, there are 10 other babies, the mother can only save one, should she save hers or some other baby(their mothers are all outside). Indeed the robot would simply randomize, or perhaps get the healthiest baby out of there. 
+
+This isn't really that far fetched, in fact there is evidence that brain damage causes utilitarinism. 
+
+\section{Utilitarianism and existance}
+
+Even Rawls suffers from the same problem as the labor theory of value, that is, why should the labor animals not contribute? Or indeed why should the veil of ignorance not apply to animals? Behind the the veil we could be born as a tiger or a human. 
+
+Parfit repugnant conclusion
+
+These two questions, "whose" and "how much", combine to give another problem, the problem of existence. How should we value a being who we can make exist? This is more important than it seems, we could for instance argue that our future selves do not yet exist, let's overlook this detail and pretend that it poses no problem. Let's ask a related question, how should we weigh future generations utility? Economists often discount future utility using a discount rate, but it is unclear how to weigh beings that do not yet exist. A known result of Nordhaus's economic climate model is that it is impossible to justify even moderate measures for mitigation if we do not give close to equal weight to the future generation. Note that even in these models the assumption is that the existence of a being does not depend on our actions. In other words, utilitarianism cannot answer questions about whether to bring a person into existence or not.
+
+The future existence of being is one blind spot for utilitarianism, but so is the past existence of a being. The framework given, gives zero weight to past generations. For instance if a shrine wishes for his son to inherit a shrine and take care of it in solitude, the utilitarian would simply weigh the utility of a single person using it against the utility of turning into a touristic spot. The will of a the dead is only to be given weight as far it increases the weight of the current generation. 
+
+This could be interpreted as "time discrimination". It seems odd that at time t, we give full weight to the utility of an agent, and and time t+1, the agents choices simply don't matter. Indeed it is unclear what the discount rate should be. 
+
+If we imagine that choices are reversible, and each person existing at a time can simply switch the button on or off, and there is no then there is no need for present agents 
+
+
+\section{Utilitarianism and and trolley}
+
+% https://jemh.ca/issues/v2n1/documents/JEMH_V2N1_Article1_UtilitarianismAsAnEthicalTheory.pdf
+
+% FOOT and 1967, ALSO in short story about Omelas
+
+Double effect, Aquinas (Cavanagh, 1997)
+
+In medical ethics, this issue has been discussed primarily in
+terms of the intentions of the moral agent, and the proportionality of the harm in relation to the good (Boyle, 1991).
+
+to this principle, rather than
+tolerating completely impersonal considerations of the positive
+and negative effects of actions (Nagel, 1986).
+
+\subsection{Utilitarianism more closely}
+
+Is it true that it results in a conclusion that we OUGHT not to eat animals?  
+
+
+\subsection{Utilitarianism and integrity}
+% https://ocw.mit.edu/courses/linguistics-and-philosophy/24-231-ethics-fall-2009/lecture-notes/MIT24_231F09_lec14.pdf
+
+(1) George, who has just taken his Ph.D. in chemistry, finds it extremely difficult
+to get a job. He is not very robust in health, which cuts down the number of jobs
+he might be able to do satisfactorily. His wife has to go out to work to keep
+them, which itself causes a great deal of strain, since they have small children
+and there are severe problems about looking after them. The results of this,
+especially on the children, are damaging. An older chemist, who knows about
+this situation, says that he can get George a decently paid job in a certain
+laboratory, which pursues research into chemical and biological warfare. George
+says that he cannot accept this, since he is opposed to chemical and biological
+warfare. The older man replies that he is not too keen on it himself, come to that,
+but after all George’s refusal is not going to make the job or the laboratory go away;
+what is more, he happens to know that if George refuses the job, it will certainly
+go to a contemporary of George’s who is not inhibited by any such scruples and
+is likely if appointed to push along the research with greater zeal than George
+would. Indeed, it is not merely concern for George and his family, but (to speak
+frankly and in confidence) some alarm about this other man’s excess of zeal,
+which has led the older man to offer to use his influence to get George the job…
+George’s wife, to whom he is deeply attached, has views (the details of which
+need not concern us) from which it follows that at least there is nothing
+particularly wrong with research into CBW. What should he do?
+
+(2) Jim finds himself in the central square of a small South American town.
+Tied up against the wall are a row of twenty Indians, most terrified, a few
+defiant, in front of them several armed men in uniform. A heavy man in a sweatstained khaki shirt turns out to be the captain in charge and, after a good deal of
+questioning of Jim which establishes that he got there by accident while on a
+botanical expedition, explains that the Indians are a random group of the
+inhabitants who, after recent acts of protest against the government, are just about
+to be killed to remind other possible protestors of the advantages of not
+protesting. However, since Jim is an honoured visitor from another land, the
+captain is happy to offer him a guest’s privilege of killing one of the Indians
+himself. If Jim accepts, then as a special mark of the occasion, the other Indians
+will be let off. Of course, if Jim refuses, then there is no special occasion, and
+Pedro here will do what he was about to do when Jim arrived, and kill them all. Jim,
+with some desperate recollection of schoolboy fiction, wonders whether if he got
+hold of a gun, he could hold the captain, Pedro and the rest of the soldiers to
+threat, but it is quite clear from the set-up that nothing of that kind is going to work:
+any attempt at that sort of thing will mean that all the Indians will be killed, and
+A CRITIQUE OF UTILITARIANISM 93
+himself. The men against the wall, and the other villagers, understand the
+situation, and are obviously begging him to accept. What should he do?
+
+Utilitarianism as a doctrine is known to be false because it cannot take into account good character. Bernard Williams in a "critique of consequentialism" gives us the general formulation of the counter-argument. If doing action X gives us consequence A, and action Y gives us consequence B, and we prefer A>B, then we ought to do X. But consider now being a guard in a North Korean labor camp, you are asked to kill somebody, since you want to be compassionate, you will aim to kill with the least amount of suffering possible. If you don't do it you know Greg loves killing, he even likes to torture them a little bit. There is nothing in consequentialism that tells you that you should not kill them. 
+
+Standard FAT man and the trolley problem. 
+
+Now suppose that if you don't push the fat guy, some other guy will push him and the delay from pushing the fat guy will result in only saving 4 people instead of five. 
+
+
+% \begin{table}[]
+% \begin{tabular}{ll|l|l|l|}
+% \cline{3-5}
+%                                                     &                          & \multicolumn{3}{c|}{\textbf{Andy}}                                     \\ \cline{3-5} 
+% \multicolumn{1}{c}{}                                &                          & \textit{Shoot(headshot)}   & \multicolumn{2}{l|}{\textit{Don't shoot}} \\ \hline
+% \multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Bob}}} & \textit{Shoot(gut shot)} & X                          & \multicolumn{2}{l|}{Y}                    \\ \cline{2-5} 
+% \multicolumn{1}{|l|}{}                              & \textit{Don't Shoot}     & Z                          & \multicolumn{2}{l|}{W}                    \\ \hline
+% \end{tabular}
+% \end{table}
+\subsection{Finishing comments}
+
+It is interesting to note how stale utilitarianism truly has been, indeed most philosophers, in the last 200 years have been utilitarians. One must wonder how it is that in an atmosphere where the dominant norm is utitarian, factory farming can rise to such an extent, and then the utitarians can turn around and say that animals are incompatible with utitarianism. Indeed it is an inconvenient truth to utilitarians that slavery was not banned by the brandishing of their own ideology but by steadfast application of the christian doctrine. Neverthless they insist that they should take credit for it, indeed utilitarianism is so weak and unituitive that we cannot blame a large portion of the early 20th century intellectuals of having embraced eugenics. There is nothing in principle in Eugenics which would make the utilitarian opposed, indeed, it is simply the use of Eugenics by the third Reich that has reduced its popularity, I would expect that as the memory of the second world war fades, the popularity will rise once again. 
+
+
+\section{Right approach to animals} 
+This view has been critisized by \cite{Regan2020}
+
+The language of rights is very odd to apply to non-rational agents. This is because rights exist in relation to objects and persons\cite{Midgley1983}. To give rights is to ackowledge sovereignty. It is clear on the other hand that animals cannot have duties, indeed whether they will respect the right or not is purely a matter of luck. 
+
+Nevertheless perhaps we could interpret rights to mean something else, perhaps that we could claim that a ROCK has a duty to me, in the sense that I have the right to physically remove it. 
+
+What is very interesting about the rights approach is that the most philosophically developed non utilitarian theory of rights is the natural law approach. Unfortuntaly, most natural law theorists deny that animals should have rights. 
+
+As such this is a purely political contest. 
+
+\section{Psychoanalysis of veggies}
+
+Many philosophers try to pretend like arguments are important, of course, this would be like phycists saying the material is most important, or a biologist saying organic, economist saying trade is important. 
+
+Of course, while the latter categories may change their minds if presented with a good argument, the philosopher is unlikely to change his because his position is about arguments themselves. When should somebody change their mind? When they hear a good argument! That's their criterion, of course, the problem is that these philosophers are usually attracted by elegant views. However there is no argument about why reality would fits simple arguments better than complicated arguments(Huemer). Of course science can claim parsimony is important because predictive capacity plays a vital role. But philosophy aims at ethics, and there is no reason ethics needs this kind of parsimony. 
+
+There is no reason some philosophical system which treats every situtuation differently is better or worse than one which has specific criterion which is evaluated universally. Indeed, if in situation A use criteria X, if in situation B use criterion Y, can simply work. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The choice is self evident if the production method is less costly, but less so if it is more costly. 
+
+
+\section{An alternative picture of humans}
+
+It almost seems caricatural, to try and talk of people in this way, that is people don't have objectives they are trying to optimize. Instead they have goals they wish to achieve, this may seem like just a linguistic difference but from the analytical point of view it flips it all around. There is a list of things a person hopes and desires to have, is meat neccesary for the achievement of any of those goals? If it isn't neccesary maybe they only consume meat because it makes it "easier", to be more precise, perhaps eating meat allows them to meet more of their goals. Once again we are pulled into the empirical world, a massive can of worms is opened, perhaps there is a vegan rich person who will give you money and help you achieve more of your goals if you don't eat meat. 
+
+% So with this new understanding of the word neccesary. We can go back to the animal example and ask, what is the "cake" of the suffering of animals? Typically, vegetarians will go after the "taste" argument.
+
+% The taste argument is related to the empirical world in a peculiar way. If it is true that eating animals is the only way to produce that taste, then the argument is clearly false, because CLEARLY it is neccesary to cause harm to create the taste.
+
+% If we CAN emulate the taste then that means we can create that taste without suffering. 
+\section{Speciesm}
+
+
+\begin{tcolorbox}[enhanced,%fit to height=5cm,
+  colback=green!25!black!10!white,colframe=green!75!black,title=Fit box (5cm),
+  drop fuzzy shadow,watermark color=white,watermark text=Fit]
+\begin{align*}
+1)& \text{If X be the set of characteristics which ALL humans have} \\
+2)& \text{At least one animal has a characteristic in X} \\
+\rightarrow& \text{Therefore X cannot be used to demarcate between animals and humans}
+\end{align*}
+\end{tcolorbox}
+
+
+This is an argument whose weight comes from trying to draw paralels between species and races. In other words, this argument is a bit of a trap. Those who are arguing are hoping that you will fall into the trap so that you will re-consider your views. The trap is made up of two elements: backward compatibility, and present bias. 
+
+Backward compatitibility means that the counter-argument the meat-eater must conjure up in this case must not be useable in the case of slavery. For instance many arguments that were used, had to do with notions of "nature" or notions of "intelligence".
+
+The present bias is simply that any criterion that is used to construct the demarcation between okay to eat and not okay to eat must not be found to be ridiculous later on. That is, they will accuse us of being ideological and just making arguments to justify our ideology. 
+
+In trying to defend against this charge we must also take into account the disney factor. It seems almost obvious but the caricatural perspective of most people in developed countries, has an intuitive reaction that if the animals in the disney movie were real, it would not be acceptable to kill them. This seems to me to be a vision shared by meat eaters and non meat eaters alike. That is, if it were true that an ape of the kind found in Tarzan, that can exhibit moral agency then we would obviously extend our moral code to them. Similarly, if a Superman(an alien from another planet) came on the planet, and he exhibited all the same behavioral pattern that humans have, then we would also extend our morality to him. 
+
+So it seems clear that the argument, fails, or at least if it did not fail, the argument would apply to specific animals and expand our moral circle. 
+
+\section{Is it moral to kill your dog?}
+
+I'm not really sure how to frame their argument here. 
+
+\begin{mdframed}[style=MyFrame]
+\begin{align*}
+1)& \text{} \\
+2)& \text{} \\
+\rightarrow& \text{}
+\end{align*}
+\end{mdframed}
+
+Here we have a vision of killing an animal in front of its owner. This seems to be the peak vision which frames our understanding. It is intuitive that killing an animal and causing suffering to its owner is prima facie worse than 
+
+
+That is, extra caution has to be taken
+
+The arbitrary nature of speciesm, but false since superman would have our moral compas, as well as a moral ape or animal. 
+
+\section{Cost-benefit}
+
+\subsection{calculus}
+
+Another argument vegetarian may make has more intuitive appeal:
+If the costs exceed the benefits, it is bad
+The suffering from animals exceeds the benefits.
+Therefore you ought not to eat animals. 
+
+This may seem like a striking argument, the obvious question to ask is "how do you know?" More specifically:
+
+How come 1) we can measure the benefit and the harm? What exactly makes these categories measurable? It is perhaps intuitive that every human can measure their own suffering, it is less clear that they can measure their own happiness or joy. But even if they could, this is different than actually measuring the happiness of another. 
+
+2) the measures we come up with are comparable? Did we assert that these are of the same kind? How do we know it isn't like comparing temperature to distance? Even if we suppose that the two are measurable, how come they also also comparable?  
+
+3) The benefit is lower than the harm? How come the benefit is lower than the harm? It is obvious here that the vegetarian must attempt to define what the benefit is. 
+
+\section{Equal consideration}
+
+\section{Ecological:Plants}
+
+Vegetarians will often use empirical arguments to attack this kind of reasoning, that is, the sheet magnitude of plants needed to make an animal live. 
+
+
+\chapter{The good arguments for eating animals}
+
+\section{The extreme case: What if you have to?}
+
+\section{Function and teleology}
+
+The ethics of teleology are understudied and for this reason many people are not open to such dimensions. Begin with an ordinary claim:
+
+I want to have kids so they can take care of me when I am older.
+I want want to have kids because it reduces my tax burden
+I want to have kids becaue it makes me happy. 
+
+Indeed if there is some reason you want to have kids OTHER than the kids themselves, and this reason is the deciding reason, then it is unethical to have kids. The function of the child must not be pre-defined. 
+
+This makes sense of course. 
+
+\chapter{The bad arguments for eating animals}
+
+\section{It is natural}
+
+\begin{align}
+\text{Eating Meat is natural} \\
+\text{Doing what is natural is good} \\
+\text{eating meat is good.}
+\end{align}
+
+Failed arguments;
+
+
+They sometimes dispute the naturalness but most evolutionary biologists agree that we have evolved because we have used less energy on digestion and more on brains.  
+
+\section{We are superior}
+
+\section{Empirical differences leaning}
+Empirical facts, suppose you lean on an empirical difference between. 
+
+Information based arguments are rather weak. For instance slavery, one could simply say that in the past, society was filled with racial prejudices and did not realize that those who are slaves are ALSO capable of higher pleasures. 
+
+
+https://twitter.com/SteveCooke/status/1182015830349041665
+
+https://twitter.com/diomavro/status/1182013623906062343
+
+https://twitter.com/diomavro/status/1182013623906062343
+
+https://twitter.com/SteveCooke/status/1182015130034429959?s=20
+
+\subsection{WHy drop additivity}
+
+It is true that non-utilitarian/consequentialist methods have the disadvantage of not being able to weight the different lives of agents. So upon being given a counter-example like the one above how does the non-utilitarian revise his theory? Well a wholist would simply deduce things from those impossibilities. If for instance you are given the choice between saving 10 or 5 people using different means, then the focus will either be on the means or to make sure the scenario would never emerge. If for instance I reply to the trolley problem that I would not make a decision, and hence kill the 5 instead of the 1, the inference should be that society should be structured in such a way so that this kind of choice becomes impossible. Why should one drop the rule "never murder an innocent" instead of dropping the rule "drop additivity?" 
+
+
+\subsection{Lifestyle preferences}
+
+It is often assumed that good is attributable to specific actions. However there is a complete failure to articulate the discontinuities of life. Archtypes or cutlural goods are non reducible. It is NOT true that you can remove the olive oil from the greek diet and still have the greek diet. Some things are just fundamental. 
+
+How people measure the good and bad is with lifestyles, not with individual deeds. In other words, one may in theory be content with their daughter sleeping around with a different guy every night. However the repugnance to this may in fact be with the lifestyle that is associated, the alienation from feelings, the frequenting of night clubs. When someone tells you they want 
+ x, this is not necessarily because they want x in itself. Indeed it may be that they simply want things that are associated with x. 
+
+For animals specifically the reason is easy enough to see. I want a reason to live with animals. Or I want a reason for animals to exist or to exist in greater number. And by wanting x, I am creating that reason. 
+
+One may try to envision different ways that we can live with animals, but it is ultimately an empirical question. One such way we could imagine is to worship the animals, perhaps between the gaps we have at work, we could go to the chicken altars and worship them. One may imagine simply that these animals are publicly financed to live in the streets, were they are fed or their poop is cleaned at public expense. This all sounds reasonable, and it is likely a few meat eaters would be convinced if this was shown to work in practice.
+
+Of course if the animal rights activists position becomes less extreme the answer is quite natural for a few animals. Perhaps cows sheep goats and chickens could all give us ample reason to live with them. But still there remain animals which don't have this property, such as pigs. 
+
+It is wrong to want to have kids for your own pleasure. You should want to have kids because your gut tells you to. You can't articulate WHY you should have kids, but there is this tendency in you to have kids. It is not that you think kids will make you happier, but that having kids itself is what life is about, it is is simply the expression of who you are, just like a flute gains no pleasure from being played, but it is its purpose. Indeed it is it's very reason for existing, it is the cause of it existing. 
+
+Dogs have found their place with us and most of us are thankful. Perhaps a significant difference between dogs and other animals. 
+
+It is perhaps a typically modern tendency to try and calculate the costs and benefits of all structures.  The search for deductive beauty is often a homogenizing force. However inductive beauty gives very different results. Deductively we may have a positive impression of an idillic community where everyone has the same life. But inductively there is something disgusting in knowing that everything is the same everywhere. Diversity is a value in itself, we want everyone to plant different plants in their gardens. We can imagine that the diversity is such that everyone plants the same different plants. 
+
+
+\subsection{Formulation vs induction}
+It seems like philosophers have taken up a task that the ancients never dared. That is to assume that if an argument cannot be formulated, that the position is incoherent. It is hard to imagine a more arrogant position than the position that if something cannot be defended, it should be abandoned. 
+
+In reality even though you cannot defend an action as such, you can imagine reasons why it emerged. And without whosing that those reasons are no longer neccesry, it is incoherent to throw it away. 
+
+\subsection{Against false principles}
+
+How do we know if a principle is good? If it accords with our intuitions. Indeed almost all tragedies in the human race follow this same pattern. "My principle is good, therefore x is justified". in reality people should just see if a principle holds true to their intuition and then go with it. The animal rights activists are a failure because they go by the principles of minimize unnecesary suffering, or some other weird principle. In reality the reasoning we should be following is the opposite, "eating animals is okay" therefore the principle of minimizin suffering is false. 
+
+There is this class of arguments which intuitively many people have which sound immoral. For instance many people will fall back into the notion of "what if you have to?", clearly morality takes into account neccesity. If something is immoral, your obligation does not somehow change because of your need. The the clear formulation of this argument would be:
+
+\begin{align}
+1) \text{It was immoral to kill animals then.} \\
+2) \text{If our ancestors didn't kill animals they would not have evolved as they did} \\
+1&2 \rightarrow \text{We are buit on immorality}
+\end{align}
+
+This line of argument implies the world would be more moral if humans had never existed. 
+
+
+
+
+ 
+
+\bibliography{../thesisbib/bibliography}
+
+\end{document}

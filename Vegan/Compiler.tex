@@ -1,0 +1,298 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt,twoside]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\bibliographystyle{aea}
+%\bibliographystyle{unsrtnat}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+%\usepackage[cmbold]{mathtime}
+%\usepackage[cmbold]{mathtime} %\usepackage{mt11p}
+%\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+%\usepackage[graphicx]{realboxes}
+%\usepackage[justification=centering]{caption}
+%\usepackage[lofdepth,lotdepth]
+%\usepackage{breakurl}
+%\usepackage{breakurl}
+%\usepackage{mt11p}
+%\usepackage{subfig} 
+
+\usepackage[authoryear]{natbib}
+\usepackage[nottoc]{tocbibind}
+\usepackage[outline]{contour}
+\usepackage[pdftex]{hyperref}
+\usepackage[percent]{overpic}
+
+\usepackage[most]{tcolorbox}
+
+
+\usepackage{afterpage}
+\usepackage{amsfonts}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{array}
+\usepackage{authblk}
+\usepackage{booktabs,} %tabs
+\usepackage{caption}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{dcolumn}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{footmisc}
+\usepackage{geometry}
+\usepackage{graphics}
+\usepackage{graphicx} %\usepackage[graphicx]{realboxes}
+\usepackage{indentfirst}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{placeins}
+\usepackage{qtree}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titletoc}%,minitoc
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{xspace}
+\usepackage{xtab}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes}
+\usetikzlibrary{spy,arrows,positioning,shapes.multipart}
+
+\bibliographystyle{apalike}
+\pagestyle{fancy}
+\tikzstyle arrowstyle=[scale=1]
+
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+
+\newtheorem{theorem}{Theorem}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{Result}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\xspace}
+\newcommand{\eg}{{\it e.g.}\xspace}
+\newcommand{\etc}{{\it etc.}\xspace}
+\newcommand{\cf}{{\it c.f.}\xspace}
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+\newcommand{\subhead}[1]{\mbox{}\newline\textbf{#1}\newline}
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.5em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+% First, we define three circles:
+\def\firstcircle{(-0,0) circle (6)}
+\def\secondcircle{(-1.6,1) circle (4)}
+\pgfmathparse{-(2.4^2-2^2)^0.5} % by pythagoras
+\let\h\pgfmathresult % shortcut for further use
+\def\thirdcircle{(1,1) circle (4)}
+
+
+
+
+\fancyhead[LE]{\textbf{\thepage}}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\leftmark}
+\fancyhead[RO]{\textbf{\thepage}}
+\fancyfoot[C]{} 
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\thechaptername}{}
+\newcounter{chapter@last}
+
+\renewcommand{\chaptermark}[1]
+            {
+              \markboth{#1}{}
+              \renewcommand{\thechaptername}{#1}
+            }
+
+% \pretocmd{\caption}
+%  {\ifnumequal
+%   {\value{chapter}}
+%   {\value{chapter@last}}
+%   {}
+%   {
+%    \addtocontents{lot}
+%     {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+%    \addtocontents{lof}
+%     {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+%    \setcounter{chapter@last}{\value{chapter}}
+%   }
+%   }
+%   {}
+%   {}
+
+\author{Dio}
+
+% \title{Harm}
+% \maketitle{}
+
+\makeatother
+\begin{document}
+
+% \tableofcontents
+
+\chapter*{Harm}
+%\chapterauthor{Diomides Mavroyiannis}
+\input{../Vegan/Argumentsfor/Harm}
+
+% \bibliography{../thesisbib/bibliography}
+
+\end{document}

@@ -1,0 +1,50 @@
+\contentsline {chapter}{\numberline {1}Prelude}{4}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Introduction}{6}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}The arguments for not eating animals}{7}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Dynamics of belief}{7}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Minimizing Harm formulation}{8}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Problems}{10}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Necesity}{10}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Utilitarianism}{12}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Problems}{15}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Teleology}{15}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Utilitarianism and preferences}{15}{section.3.6}% 
+\contentsline {subsection}{\numberline {3.6.1}On measurability and epistemic arrogance}{17}{subsection.3.6.1}% 
+\contentsline {subsection}{\numberline {3.6.2}Network vision of utilitarianism}{18}{subsection.3.6.2}% 
+\contentsline {subsection}{\numberline {3.6.3}Scleable vs non scaleable}{19}{subsection.3.6.3}% 
+\contentsline {section}{\numberline {3.7}Incest}{19}{section.3.7}% 
+\contentsline {section}{\numberline {3.8}After birth abortion}{20}{section.3.8}% 
+\contentsline {section}{\numberline {3.9}Consent}{20}{section.3.9}% 
+\contentsline {section}{\numberline {3.10}Information}{21}{section.3.10}% 
+\contentsline {section}{\numberline {3.11}Capacity}{21}{section.3.11}% 
+\contentsline {section}{\numberline {3.12}Measurability and additivty}{22}{section.3.12}% 
+\contentsline {section}{\numberline {3.13}Mother child and human life}{22}{section.3.13}% 
+\contentsline {section}{\numberline {3.14}The role of agency}{23}{section.3.14}% 
+\contentsline {section}{\numberline {3.15}Utility monster}{25}{section.3.15}% 
+\contentsline {section}{\numberline {3.16}Experience machine}{25}{section.3.16}% 
+\contentsline {section}{\numberline {3.17}Robot replacement?}{25}{section.3.17}% 
+\contentsline {section}{\numberline {3.18}Utilitarianism and existance}{26}{section.3.18}% 
+\contentsline {section}{\numberline {3.19}Utilitarianism and and trolley}{27}{section.3.19}% 
+\contentsline {subsection}{\numberline {3.19.1}Utilitarianism more closely}{27}{subsection.3.19.1}% 
+\contentsline {subsection}{\numberline {3.19.2}Utilitarianism and integrity}{27}{subsection.3.19.2}% 
+\contentsline {subsection}{\numberline {3.19.3}Finishing comments}{28}{subsection.3.19.3}% 
+\contentsline {section}{\numberline {3.20}Right approach to animals}{29}{section.3.20}% 
+\contentsline {section}{\numberline {3.21}Psychoanalysis of veggies}{29}{section.3.21}% 
+\contentsline {section}{\numberline {3.22}An alternative picture of humans}{30}{section.3.22}% 
+\contentsline {section}{\numberline {3.23}Speciesm}{30}{section.3.23}% 
+\contentsline {section}{\numberline {3.24}Is it moral to kill your dog?}{31}{section.3.24}% 
+\contentsline {section}{\numberline {3.25}Cost-benefit}{32}{section.3.25}% 
+\contentsline {subsection}{\numberline {3.25.1}calculus}{32}{subsection.3.25.1}% 
+\contentsline {section}{\numberline {3.26}Equal consideration}{32}{section.3.26}% 
+\contentsline {section}{\numberline {3.27}Ecological:Plants}{32}{section.3.27}% 
+\contentsline {chapter}{\numberline {4}The good arguments for eating animals}{33}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}The extreme case: What if you have to?}{33}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Function and teleology}{33}{section.4.2}% 
+\contentsline {chapter}{\numberline {5}The bad arguments for eating animals}{34}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}It is natural}{34}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}We are superior}{34}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Empirical differences leaning}{34}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}WHy drop additivity}{35}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Lifestyle preferences}{35}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Formulation vs induction}{36}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}Against false principles}{37}{subsection.5.3.4}% 

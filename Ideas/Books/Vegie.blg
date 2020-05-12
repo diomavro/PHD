@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Vegie.aux
+The style file: apalike.bst
+I couldn't open database file ../thesisbib/bibliography.bib
+---line 85 of file Vegie.aux
+ : \bibdata{../thesisbib/bibliography
+ :                                   }
+I'm skipping whatever remains of this command
+I found no database files---while reading file Vegie.aux
+Warning--I didn't find a database entry for "singer1995animal"
+Warning--I didn't find a database entry for "Lenman2000"
+Warning--I didn't find a database entry for "Regan2020"
+Warning--I didn't find a database entry for "Midgley1983"
+(There were 2 error messages)

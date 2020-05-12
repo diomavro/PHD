@@ -1,0 +1,339 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+
+\section{Introduction}
+
+I have written this book because I have not found a consise statement defending the morality of eating animals. I find this especially puzzling since philosophers are known to leave no stone left unturned, almost every position you can imagine has been defended \footnote{List some Nazi phislophers, Schmitt, (that guy on youtube), Frege etc}. 
+
+The answer to this odd phenomenon is philosophers are attached to a sort of deductive method of reasoning. It so happens that grand principles often rely on measurable quality. That is, most philosophers refuse to cede ground to intuition or if they do speak of intuition in a sort of formal way\footnote{Huemer, ethical intuitinism}. 
+
+With no intent to being polemical, it seems fairly clear that most philosphers are in fact heavily left-wing. The left-wing are known to work in "movements", that is a popular trend catches on and the left think they have found a new truth that must be striven for. It is perhaps no exageration to say that 99\% of those movements fail to achieve what they aim for, indeed most such movements are forgotten after few hundred years but it is in the credo of this group to cherry pick their succeses and adverise them as if they were always ahead of the curve. 
+
+My intend for this book to be eminenly readable by everyone. I am articulating what I think is simply common sense because the common man has no interest in articulating his common sense, and to the uncharitable academics this is often interpreted as not having an argument. 
+
+Academics forget that we invent our intellectual ideas to aid us in our everyday endeavours. Philosophers are often tempted to change this reasoning, they think that our everyday endeavours are there to aid our intellectual ideas. Ideas such as equality/liberty/freedom/independence etc, represent such a backward reasoning. Philosophers should aim to show how these ideas capure what we are trying to do, for instance it may be that in our everyday endeavours, the heuristics of equality/liberty/freedom/independence make our task easier to analyze and our endeavour less costly, but the way philosophers usually use these concepts is that these are the ultimate ends in themselves. 
+
+It must be remembered that Philosophy is the generator of all knowledge, all modern disciplines were once under the wing of philosophers and as they grew beyond their infancy they became their own disciplines, evolving independely of philosophical trends\footnote{Mathematics, Physics, Anthropology, Psychology, Economics(Adam Smith), etc}. 
+
+Each chapter in this book will be independent of the others, so there is not much need to read it linearly. The specific kind of use I expect of this book is as a sort of reference book of arguments. 
+
+Much of the problem in philosophy is being parsimious, it how many ways should one use to divide up the world? I considered when writing the book to demarcate between consequentialist methods of ethics and non-consequentialit methods. Of course the problem with attacking or defending from the categories of consequences is that it is not clear what counts as a consequence. Indeed 
+
+\section{Harm and necceccity}
+
+Consequentialism:
+
+The general argument I will be tackling in this book is of the following form.
+
+1) Causing unnecesary harm is bad
+2) Eating animals causes unnecesary harm
+Therefore eating animals is bad. 
+
+I use the word harm but the word suffering or pain would also do. Harm is more general than suffering or pain but I think it implicates a wider concept. If a word like suffering or pain was used 2 would be open to refutation by empirical facts through a painless way of killing. 
+
+The reason "harm" is more useful is that there is a general aesthetic revulsion which causes vegetarians to not eat animals which isn't about pleasure or pain. For instance if we imagine that cows are reared completely freely, and during the end of their life they undergo a completely painless death, I imagine most vegetarians would not be swayed into eating meat. At the core, the revulsion we have is not some cost benefit calculus but is more aesthetic, factory like killing.  
+
+In other words I think harm includes the concept of "killing", whilst suffering is neutral to it. So I take their revulsion to be revulsion to the actual killing of the cow. They would consider this killing as unjust.  
+
+% http://www.veganfuturenow.com/answering-the-objections-to-veganism#do-you-want-animals-to-have-the-right-to-get-married-and-vote
+
+Perhaps the more interesting part of the vegetarian argument is the first premise. 
+
+The word "unnecesary" does a lot of work, but what exactly does this word mean? In it's everyday use necessity is a constraint, but for a constraint to be meaningful there must be some objective. For instance if I want to make a cake it is necessary that I use the ingredients necessary to make the cake. The sentence "flour is neccesary to make the flour cake" makes sense.
+
+So with this new understanding of the word neccesary. We can go back to the animal example and ask, what is the "cake" of the suffering of animals? Typically, vegetarians will go after the "taste" argument.
+
+The taste argument is related to the empirical world in a peculiar way. If it is true that eating animals is the only way to produce that taste, then the argument is clearly false, because CLEARLY it is neccesary to cause harm to create the taste.
+
+If we CAN emulate the taste then that means we can create that taste without suffering. 
+
+The choice is self evident if the production method is less costly, but less so if it is more costly. 
+
+
+\section{calculus}
+
+Another argument vegetarian may make has more intuitive appeal:
+If the costs exceed the benefits, it is bad
+The suffering from animals exceeds the benefits.
+Therefore you ought not to eat animals. 
+
+This may seem like a striking argument, the obvious question to ask is "how do you know?" More specifically:
+
+How come 1) we can measure the benefit and the harm? What exactly makes these categories measurable? It is perhaps intuitive that every human can measure their own suffering, it is less clear that they can measure their own happiness or joy. But even if they could, this is different than actually measuring the happiness of another. 
+
+2) the measures we come up with are comparable? Did we assert that these are of the same kind? How do we know it isn't like comparing temperature to distance? Even if we suppose that the two are measurable, how come they also also comparable?  
+
+3) The benefit is lower than the harm? How come the benefit is lower than the harm? It is obvious here that the vegetarian must attempt to define what the benefit is. 
+
+\subsection{Lifestyle preferences}
+
+It is often assumed that good is attributable to specific actions. However there is a complete failure to articulate the discontinuities of life. Archtypes or cutlural goods are non reducible. It is NOT true that you can remove the olive oil from the greek diet and still have the greek diet. Some things are just fundamental. 
+
+How people measure the good and bad is with lifestyles, not with individual deeds. In other words, one may in theory be content with their daughter sleeping around with a different guy every night. However the repugnance to this may in fact be with the lifestyle that is associated, the alienation from feelings, the frequenting of night clubs. When someone tells you they want 
+ x, this is not necessarily because they want x in itself. Indeed it may be that they simply want things that are associated with x. 
+
+For animals specifically the reason is easy enough to see. I want a reason to live with animals. Or I want a reason for animals to exist or to exist in greater number. And by wanting x, I am creating that reason. 
+
+One may try to envision different ways that we can live with animals, but it is ultimately an empirical question. One such way we could imagine is to worship the animals, perhaps between the gaps we have at work, we could go to the chicken altars and worship them. One may imagine simply that these animals are publicly financed to live in the streets, were they are fed or their poop is cleaned at public expense. This all sounds reasonable, and it is likely a few meat eaters would be convinced if this was shown to work in practice.
+
+Of course if the animal rights activists position becomes less extreme the answer is quite natural for a few animals. Perhaps cows sheep goats and chickens could all give us ample reason to live with them. But still there remain animals which don't have this property, such as pigs. 
+
+It is wrong to want to have kids for your own pleasure. You should want to have kids because your gut tells you to. You can't articulate WHY you should have kids, but there is this tendency in you to have kids. It is not that you think kids will make you happier, but that having kids itself is what life is about, it is is simply the expression of who you are, just like a flute gains no pleasure from being played, but it is its purpose. Indeed it is it's very reason for existing, it is the cause of it existing. 
+
+Dogs have found their place with us and most of us are thankful. Perhaps a significant difference between dogs and other animals. 
+
+It is perhaps a typically modern tendency to try and calculate the costs and benefits of all structures.  The search for deductive beauty is often a homogenizing force. However inductive beauty gives very different results. Deductively we may have a positive impression of an idillic community where everyone has the same life. But inductively there is something disgusting in knowing that everything is the same everywhere. Diversity is a value in itself, we want everyone to plant different plants in their gardens. We can imagine that the diversity is such that everyone plants the same different plants. 
+
+
+\subsection{Formulation vs induction}
+It seems like philosophers have taken up a task that the ancients never dared. That is to assume that if an argument cannot be formulated, that the position is incoherent. It is hard to imagine a more arrogant position than the position that if something cannot be defended, it should be abandoned. 
+
+In reality even though you cannot defend an action as such, you can imagine reasons why it emerged. And without whosing that those reasons are no longer neccesry, it is incoherent to throw it away. 
+
+\subsection{Against false principles}
+
+How do we know if a principle is good? If it accords with our intuitions. Indeed almost all tragedies in the human race follow this same pattern. "My principle is good, therefore x is justified". in reality people should just see if a principle holds true to their intuition and then go with it. The animal rights activists are a failure because they go by the principles of minimize unnecesary suffering, or some other weird principle. In reality the reasoning we should be following is the opposite, "eating animals is okay" therefore the principle of minimizin suffering is false. 
+
+There is this class of arguments which intuitively many people have which sound immoral. For instance many people will fall back into the notion of "what if you have to?", clearly morality takes into account neccesity. If something is immoral, your obligation does not somehow change because of your need. The the clear formulation of this argument would be:
+
+\begin{align}
+1) \text{It was immoral to kill animals then.} \\
+2) \text{If our ancestors didn't kill animals they would not have evolved as they did} \\
+1&2 \rightarrow \text{We are buit on immorality}
+\end{align}
+
+This line of argument implies the world would be more moral if humans had never existed. 
+
+
+\subsection{Failed arguments}
+
+\begin{align}
+\text{Eating Meat is natural} \\
+\text{Doing what is natural is good} \\
+\text{eating meat is good.}
+\end{align}
+
+
+
+
+
+Failed arguments;
+
+
+They sometimes dispute the naturalness but most evolutionary biologists agree that we have evolved because we have used less energy on digestion and more on brains.  
+
+
+ 
+
+\bibliography{../thesisbib/bibliography}
+
+\end{document}
