@@ -210,8 +210,115 @@ urlcolor={blue!50!black}}
 
 \begin{document}
 
+A virus has a tradeoff between infection and lethality. Though the virus is not a rational agent which chooses these two quantities, it is useful to think of what an agent who was designing the virus would choose if their goal was to affect the maximum number of agents. It is not strictly possible to say that a virus which selects for this optimal infection/lethality ratio would be favored from an evolutionary point of view since the death of host would entail the eventual death of the virus. 
+
+Indeed it seems that from a strictly evolutionary view a virus would want to simply maximize it's infectivity and minimize it's lethality with one exception. Maximizing infectivity would cause the virus to exist in the maximum possible number of hosts. For lethality to be part of the optimal strategy of the virus, it must be that it serves the role of maximizing survival. It could be that within hosts, a virus has competition, and to properly survive the competitive struggle with other mechanisms the virus needs to be lethal. Alternatively, the virus may play an important role outside of the body, for instance if the virus does not play the role of population control, there be over-population and extinction, resulting in a higher probability of the virus not surviving. 
+
+The main ideas explored in this paper is that a virus which wants to maximize the number of deaths will adapt it's strategy to the environment. We will aim to illustrate the example with a simple 2 person illustration and give proofs for the general cases in the appendix. 
+
+The main results is that the expected number of deaths is a monotonic function of transmission rate, that is, a virus will always maximize it's transmission rate. This is an intuitive idea, the virus has very little reason not to maximize the speed of it's infection, both from an evolutionary reasons and as agent maximizing the number of deaths. However, as we will see, if the virus only has a limited amount of reasources to spend on either infection or lethality, there is some tradeoff to be made. 
+
+On the other hand a virus will adjust it's lethality based on the vaccination rate. 
 
 
+\section{Dynamics}
+
+On the other hand, if a virus can adapt, that is have a strategy for each markovian state we can also produce a similar analysis. Specifically we can show that the virus will increase death rate 
+
+\section{Model}
+
+We assume there is a complete graph, each node represents an individual potential host whilst the edges represent the fact that these hosts have connections to other hosts. Each host can take on three states, healthy, infected, and dead. A healthy host cannot spread the virus but is vulnerable to being infected. We represent the total number of agents in the graph by $N$, the number of infected by $\alpha$ and the number of dead by $\beta$. As sucht the number of healthy people is given by $N-\alpha-\beta$. 
+
+An infected host has an independent has an independent probability, $p$ of sprading the virus to it's neighbors, which is every healthy patient. The interpretation of independent probability is that each host can spread to any given agent in such a way that the more infected agents there exists, the higher is the probability that a healthy agent will be infected. 
+
+A dead host is simply removed from the pool agents and will no longer be able to either receive the virus or spread it. Each infected host has an indepdent probability of dying every period, $d$. The number of dead hosts is the optimand of the virus, that is, the it will attempt to maximize the number of agents who have this state. 
+
+Finally at every period, there is an independent probability, $q$ of a vaccine being invented. The vaccine will instantly cure all infected agents and functionall works like a markovian absorbing barrier. Unlike the other probabilities, $q$ does not depend on the number of infected or the number of healthy hosts. 
+
+To summarize the variables: we have, two control variables,the infection probability, $p$ and the death rate, $d$; two state variables, the number of people infected, $\alpha$ and the number of dead people, $\beta$, and two exogenous parameters, the vaccination probability $q$, and the total number of of people, $N$.  
+
+The function that the virus will maximize is the expected number of dead, we will represent this as an expectation: 
+
+\begin{equation*}
+E_N[deaths | infected= \alpha, dead = \beta ] = E_N(\alpha ,\beta) = E_N(\alpha ,\beta, p, d) 
+\end{equation*}
+
+We begin by describing some properties of this function. 
+
+\begin{assumption}{Death as absorbing barrier}\label{ass1}
+\begin{equation}
+\alpha = \beta \rightarrow E_N(\alpha,\beta)= \beta
+\end{equation}
+\end{assumption}
+
+This properly simply say that if all the infected people are dead, the expectation of the number of dead is simply the number of dead. This is simply saying that dead hosts cannot spread the virus. 
+
+
+\begin{assumption}{Death invariance}\label{ass2}
+$E_{N+t}(\alpha +t,\beta +t, p, d)=E_{N}(\alpha , \beta ,p, d) + t$.
+\end{assumption}
+
+This property is intuitive, it says that only the absolute number of infected hosts who are alive and the number of healthy hosts matter. So if initially there was a population of $100$ but now $95$ of them have died and there remains a single infected hosts and $4$ healthy hosts, this is fundamentally the same situation as if the graph initially had $10$ hosts and $5$ had died, whilst $1$ infected host remains. The only difference between these two situations is the stock of the dead hosts and a virus which is optimizing at this point in time would have the same strategy in both situation. 
+ 
+
+With $\alpha$ people: 
+
+\begin{align*}
+E_N(1,\beta,p,d) = d + \sum_{i=1}^{N-1}p^i(1-p)^{N-i-1}\binom{N-1}{i}E(i+1,0,p,d ) + q \beta
+\end{align*}
+
+Expected number of deaths if there are n infected and $\beta$ dead
+\begin{align*}
+E_N(\alpha,\beta,p,d ) = \sum_{i = 1+ \beta}^{\alpha} \binom{x}{i}(1-d)^{x-i}d^i E( \alpha , i,p,d ) + \sum_{i=\alpha+1}^{N-\alpha} P(X=i)E(i,y,p,d ) + q \beta
+\end{align*}
+
+\begin{align*}
+r: &=1-(1-p)^{\alpha} \\
+P(X=x)&=P\left(\sum_{i=1}^{N-\alpha}B_i=x-\alpha \right) \\
+&=\binom{N- \alpha}{x-\alpha}r^{x-\alpha}(1-r)^{N-x}
+\end{align*}
+
+\begin{proposition}{Monotonicity in the transmission rate}\label{prop1}
+In all cases, $E_N$ is a strictly increasing 
+\end{proposition}
+
+An interesting mathematical property is that if we imagine two viruses, which have the same expected death rate, one of them with a higher death rate and lower transmission rate, and another one with a higher transmission and higher death rate. It seems like if we increase the lethality of the higher transmission virus, this will result in less danger than an increase in the transmission rate of a high lethality virus. 
+
+
+\section{An example}
+
+We focus on an example with $N=2$ with simply one 
+
+
+We begin by illustrating the central results with $N=2$ and then generalize. 
+
+We let E be the expected number of deaths. We model this process as a markov chain, where $E_N(1,0)$, indicates that one host is infected, $0$ are dead and there are n total hosts. We illustrate using an $N=2$ case.
+
+\begin{align*}
+E(1,0) = &\underbrace{d*1}_\text{probability of 1 death} + 
+    \underbrace{pE(2,0) }_\text{transition prob to two infected} +
+    \underbrace{(1-d-p-q)E(1,0)}_\text{stay probability} +
+    \underbrace{q*0}_\text{probability of all cured} \\
+	= &\underbrace{d}_\text{probability of 1 death}+ 
+    \underbrace{pE(2,0) }_\text{transition prob to two infected}+ 
+    \underbrace{(1-d-p-q)E(1,0)}_\text{stay probability}  \\
+E(2,0) = &\underbrace{d^2* 2}_\text{probability of 2 deaths} + 
+    \underbrace{2d(1-d)E(2,1) }_\text{probability of 1 death } +
+    \underbrace{(1-(1-(1-d)^2)-q)E(2,0) }_\text{stay probability} +
+    \underbrace{q*0}_\text{probability of all cured} \\
+	   = &\underbrace{d^2* 2}_\text{probability of 2 deaths} + 
+    \underbrace{2d(1-d)E(2,1) }_\text{probability of 1 death } +
+    \underbrace{(1-d)^2-q)E(2,0) }_\text{stay probability} \\
+E(2,1) = &\underbrace{d*2}_\text{probability of 2 deaths} + 
+    \underbrace{(1-d-q)E(2,1) }_\text{stay probability} +
+    \underbrace{q}_\text{probability of alive cured}
+\end{align*}
+
+\begin{align*}
+E(1,0) = & \frac{d(d+2p+q)}{(d+q)(d+p+q)} \\
+E(2,0) = & \frac{2d}{d+q} \\
+E(2,1) = & \frac{2d+q}{d+q} 
+\end{align*}
 
 \section{Agents on a line}
 
@@ -335,6 +442,142 @@ $k_i:$ expectd number of kills if i people infected
 k_1 = q*0+d*1+pk_2 \\
 k_2 = q*0+d^2 2 + 2d(1-d)(1+k_1) \\
 \end{align*}
+
+\subsection{Optimal virus with stay prob, 2 agents}
+
+$E[deaths | infected=x, dead = y ] = E(x,y) $
+
+
+\begin{align*}
+E(1,0) = &\underbrace{d*1}_\text{probability of 1 death} + 
+    \underbrace{pE(2,0) }_\text{transition prob to two infected} +
+    \underbrace{(1-d-p-q)E(1,0)}_\text{stay probability} +
+    \underbrace{q*0}_\text{probability of all cured} \\
+	= &\underbrace{d}_\text{probability of 1 death}+ 
+    \underbrace{pE(2,0) }_\text{transition prob to two infected}+ 
+    \underbrace{(1-d-p-q)E(1,0)}_\text{stay probability}  \\
+E(2,0) = &\underbrace{d^2* 2}_\text{probability of 2 deaths} + 
+    \underbrace{2d(1-d)E(2,1) }_\text{probability of 1 death } +
+    \underbrace{(1-(1-(1-d)^2)-q)E(2,0) }_\text{stay probability} +
+    \underbrace{q*0}_\text{probability of all cured} \\
+	   = &\underbrace{d^2* 2}_\text{probability of 2 deaths} + 
+    \underbrace{2d(1-d)E(2,1) }_\text{probability of 1 death } +
+    \underbrace{(1-d)^2-q)E(2,0) }_\text{stay probability} \\
+E(2,1) = &\underbrace{d*2}_\text{probability of 2 deaths} + 
+    \underbrace{(1-d-q)E(2,1) }_\text{stay probability} +
+    \underbrace{q}_\text{probability of alive cured}
+\end{align*}
+
+\begin{align*}
+E(1,0) = & \frac{d(d+2p+q)}{(d+q)(d+p+q)} \\
+E(2,0) = & \frac{2d}{d+q} \\
+E(2,1) = & \frac{2d+q}{d+q} 
+\end{align*}
+
+With n people: 
+
+\begin{align*}
+E_N(1,y) = d + \sum_{i=1}^{N-1}p^i(1-p)^{N-i-1}\binom{N-1}{i}E(i+1,0) + (q y)
+\end{align*}
+
+Expected number of deaths if there are n infected and y dead
+\begin{align*}
+E_N(n,y) = \sum_{i = 1+y}^n \binom{x}{i}(1-d)^{x-i}d^i E(n,i) + \sum_{i=n+1}^{N-n} P(X=i)E(i,y) + q y
+\end{align*}
+
+\begin{align*}
+D_4(2,0) =  2(1-d)d D_4(2,1) + d^2 2  \\
+D_N(n,y) = (N-)(1-d)^{N-} d D_N(n,y+1)
+\sum_{i=y+1}^n (1-n) D_N(n,i)
+\end{align*}
+
+
+\begin{align*}
+r: &=1-(1-p)^n \\
+P(X=x)&=P\left(\sum_{i=1}^{N-n}B_i=x-n\right) \\
+&=\binom{N-n}{x-n}r^{x-n}(1-r)^{N-x}
+\end{align*}
+
+
+
+
+% \subsection{Optimal virus with stay prob, 3 agents}
+
+% \begin{align*}
+% E(1,0) = & d + 
+%     2p(1-p) E(2,0)  +
+%     p^2 E(3,0)  +
+%     ((1-p)^2-q-d)E(1,0)  \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(2,0) = & 
+% d^2*2 + 
+% (1-(1-p)^2) E(3,0)  +
+% 2d(1-d) E(2,1) +
+% ((1-d)^2-q)E(2,0)  \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(2,1) = &
+% d 2 +
+% pE(3,1) +   
+% q * 1 + 
+% (1-d-p-q)E(2,1)  \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(3,0) = & 
+% 3d^2(1-d)E(3,2)  + 
+% 3d(1-d)^2E(3,1) +
+% d^3 3 +
+% ((1-d)^3-q)E(3,0) \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(3,1) = & 
+% d^2 3 +
+% 2d(1-d) E(3,2) +
+% q*1 +
+% ((1-q)^2)-q) E(3,1) \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(3,2) = & 
+% d 3 +
+% q*2 +
+% (1-d-q) E(3,2) \\
+% \end{align*}
+
+% \begin{align*}
+% E(3,2) = & 
+% \frac{d 3 + q*2}{d+q} \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(3,1) = & 
+% d^2 3 +
+% 2d(1-d) \frac{d 3 + q*2}{{d+q}}  +
+% q*1 +
+% ((1-q)^2-q) E(3,1) \\
+% =& \frac{d^2 3 +2d(1-d) \frac{d 3 + q*2}{{d+q}} +q }{2q-q^2} = \frac{3 d^2 (d-q) +2d(1-d) (3d  + q*2) +(d-q)q }{(d-q)(2q-q^2)} \\
+% =& \frac{5 d q-3 d^3-d^2 (7 q-6)-q^2}{(2-q) q(d-q)} \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E(2,1) = &
+% \frac{2d+q+\frac{p(5 d q-3 d^3-d^2 (7 q-6)-q^2}{(2-q) q(d-q)} )}{p+q+d} = \frac{2d+q}{p+q+d} + \frac{p(5 d q-3 d^3-d^2 (7 q-6)-q^2 )}{(2-q) q(d-q)(p+q+d)}\\
+% =& \frac{2d(2-q) q(d-q)+q(2-q) q^2(d-q)+p(5 d q-3 d^3-d^2 (7 q-6)-q^2 )}{(p+q+d)(2-q) q(d-q)} 
+% \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Optimal virus without stay }
+
+
+% \begin{align*}
+% E[deaths | infected=1, dead = 0 ]=& 
+%     \underbrace{d}_\text{probability of 1 death} + 
+%     \underbrace{pb}_\text{transition prob to two infected} \\
+% E[deaths | infected=2, dead = 0 ]=& 
+%     \underbrace{d^2* 2}_\text{probability of 2 deaths} + 
+%     \underbrace{2d(1-d)c}_\text{probability of 1 death }\\
+% E[deaths | infected=2, dead = 1 ]=& 
+%     \underbrace{d2* 2}_\text{probability of 2 deaths} + 
+%     \underbrace{q}_\text{probability of alive cured}
+% \end{align*}
+
+% \begin{align*}
+% E[deaths | infected=1, dead = 0 ]=& d(1-4d^2 p +2dp(3-q)+2p*q) \\
+% E[deaths | infected=2, dead = 0 ]=& 2d(q+d(3-q)-2d^2) \\
+% E[deaths | infected=2, dead = 1 ]=& 2d+q
+% \end{align*}
+
 
 % https://twitter.com/nntaleb/status/1239171413342289921?s=20
 % https://slideplayer.com/slide/6293982/

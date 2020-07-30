@@ -1,0 +1,252 @@
+\documentclass[twocolumn,journal]{IEEEtran}
+
+%\documentclass[10pt,twoside,openright,titlepage,numbers=noenddot,headinclude,  footinclude=true, cleardoublepage=empty,  paper=letter]{scrbook}
+%\usepackage[eulerchapternumbers,beramono,pdfspacing, parts]{classicthesis}
+           
+%\usepackage{arsclassica}
+
+
+%\usepackage{geometry}
+%\usepackage[paperwidth=8.5in, paperheight=11in,  outer=4 cm, inner=4 cm, top=1.4cm, bottom=1.4cm, footskip=.5cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+%\usepackage[english]{babel}
+\usepackage{supertabular}
+\usepackage{longtable}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{bbm}
+%\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{breqn}
+\usepackage{fixltx2e}
+\usepackage{capt-of}
+%\usepackage{mdframed}
+\setcounter{MaxMatrixCols}{10}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{endnotes}
+\usepackage{soul}
+\usepackage{marginnote}
+%\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{error}{\color{Red} Error}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{property1}{Property}
+
+\newcommand{\mathsym}[1]{}
+\newcommand{\unicode}[1]{}
+\newcommand{\dsum} {\displaystyle\sum}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{graphicx}
+\graphicspath{{figures/}{/Users/nntaleb/Dropbox/Latex/SilentRisk/}}
+ 
+\usepackage[framemethod=TikZ]{mdframed}
+%%%%%%%FRAME%%%%%%%%%%%
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{framed}
+    % \BeforeBeginEnvironment{mdframed}{\begin{minipage}{\linewidth}}
+     %\AfterEndEnvironment{mdframed}{\end{minipage}\par}
+
+%%%%%%%%%%ENUMERATE
+\usepackage{enumitem}
+
+%%%%
+\graphicspath{{figures/}{/Users/nntaleb/Dropbox/Latex/Collectednew/}}
+%%%%
+\mdfsetup{%
+%skipabove=20pt,
+nobreak=true,
+   middlelinecolor=black,
+   middlelinewidth=1pt,
+   backgroundcolor=yellow!20,
+   roundcorner=3pt}
+
+
+%\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+%backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{rule}{Rule}
+
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{theorem}{Theorem}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=gray!10, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{remark}{Rule}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=pink!30, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{quaestio}{Quaestio}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=5pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{background}{Background}
+
+%TRYING TO INCLUDE Ppls IN TOC
+\usepackage{hyperref}
+%
+%%\newtheorem{problemx}{Problem}[section]
+%\newenvironment{principle}[1][]
+% {\expandafter\principle\if\relax\detokenize{#1}\relax\else[#1]\fi
+%  \addcontentsline{toc}{subsection}
+%    {\protect\tocsubsection{}{\theprinciple}{Principle\if\relax\detokenize{#1}\relax\else\ (#1)\fi}}%
+% }
+% {\endprinciple}
+
+%%%%%%%%%%%%DRAFT
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1}
+%%%%%%%%%%DRAFT ENDS HERE
+%----------------------------------------------------------------------------------------
+\title{\color{Brown} What is the probability of a public good? 
+}
+
+
+
+
+
+%\flushbottom
+\begin{document}
+
+
+
+\maketitle 
+
+\begin{mdframed}
+\begin{abstract} 
+What is the probability of a public good problem?
+\end{abstract} 
+\end{mdframed}
+
+A great deal of attention has recently been put foward to the problem of public goods. Coincidentally in parallel, inequality research has skyrocketed. Seldom has somebody tried to put the two together. 
+
+A public good is a good which is not excludable and not rival. A public good PROBLEM is when the good adds more value than it costs but there is no incentive to contribute. Why? Because one can always believe that the OTHERS will finance it. We will always be assuming that the public good is socially worthwhile. They can only bid their entire willingness to pay
+
+Suppose that the willingness to pay is uniform. Say all consumers value the public good at 1. If the public good costs 10, and there are 10 consumers, then the probability of it being financed is 1. If there are 11 consumers, then consumers may wish to opt for a mixed equilibrium, 
+
+% \begin{align}
+% Pr(x=10)=B(11,10) p^{10}(1-p)^{11-10}=B(11,10) p^{10}(1-p) \\
+% Pr(x=11)=B (11,11 ) p^{11}= p^{11}\\
+% \end{align}
+
+
+
+\begin{table}[b]
+\begin{tabular}{|c|l|l|}
+\hline
+R                         & Finance      & Not                         \\ \hline
+Finance                   & V-c/2, V-c/2 & \multicolumn{1}{c|}{V-c, V} \\ \hline
+\multicolumn{1}{|l|}{Not} & V, V-c       & 0,0                         \\ \hline
+\end{tabular}
+\end{table}
+
+Mixed equilibrium is
+
+\begin{equation}
+\alpha = \frac{V-c}{V-\frac{c}{2}}
+\end{equation}
+
+\section{With n players}
+
+The condition is:
+
+\begin{equation}
+nV-c>0
+\end{equation}
+
+\begin{equation}
+a(n) = \frac{V-\frac{c}{n-1}}{V-\frac{c}{n}}
+\end{equation}
+
+So the probability of a public good is:
+
+\begin{align}
+V<\frac{c}{n-1} \\
+\rightarrow P(n,c)=a^{11} \\
+V<\frac{c}{n-2} \\
+\rightarrow P(n,c)=a^{n} + B(n,n-1) a^{n-1}(1-a) \\
+\sum_{i=0}^{\lceil \frac{c}{V} \rceil} B(n,n-i)a^{n}(1-a)^{i}
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Probability of a public good?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+If the probability of an event is P, we should expect NP realizations in N. So what is the probability that after N realizations only 1 event has occured? $P = \frac{1}{N}$
+
+\begin{align}
+P_{\geq}(\lambda) = \frac{1}{N} \\
+\Pi_{<}(\lambda) \text{says the probability that: } X_{max}<\lambda \\
+\end{align}
+
+Let f(x) be the pdf of X
+
+\begin{align}
+Z=X_1+X_2+...X_n \\
+X_{max} = max\{ X_i; i = 1,...,N \} \\
+G_<(\lambda) \\
+\end{align}
+
+where G is the CDF of $X_{max}$
+
+\begin{align}
+G_{<}(\lambda) &= [ F_<(\lambda) ]^N  \\
+                 &= [1- F_{\geq}(\lambda) ]^N \\
+                 &= exp\{N ln\{ 1-F_{\geq}(\lambda) \} \} \\
+                 &\approx exp\{ -NF_{\geq}(\lambda) \}  \\
+				 &P(X>c \cap  max(X)>c ) 
+\end{align}
+
+What is probability 
+
+
+
+
+First compute the probability that there is a public good worth undertaking. That is the sum of the willingness to pay is higher than the cost of the project. Then find the probability that NO individual willingness to pay is higher than the project. Show that variance of the distribution reduces.
+
+Note that the assumption that willingness to are independent might be the worst case scenario. 
+
+
+
+% \begin{thebibliography}{99} 
+
+% \bibitem{AlbertBarabasi} R. Albert and A.-L. Barabasi (2002). Statistical mechanics of complex networks. Reviews of Modern Physics 74: 47.  
+% \bibitem{Arshad} M. Arshad , M.T. Rasool, M.I. Ahmad  (2003). Anderson Darling and Modified Anderson Darling Tests for Generalized Pareto Distribution. Journal of Applied Sciences 3, 85-88.
+% \bibitem{Cirillo} P. Cirillo (2013). Are your data really Pareto distributed? \textit{Physica A: Statistical Mechanics and its Applications} 392, 5947-5962.
+% \bibitem{CiTa} P. Cirillo, N.N. Taleb (2016). On the statistical properties and tail risk of violent conflicts. Physica A: Statistical Mechanics and its Applications 452, 29-45.
+% \bibitem{CiTaQF} P. Cirillo, N.N. Taleb (2016). Expected shortfall estimation for apparently infinite-mean models of operational risk. Quantitative Finance 16, 1485-1494.
+% \bibitem{Clauset} A. Clauset, C.R. Shalizi, M.E.J. Newman (2009). Power-law distributions in empirical data. SIAM Review 51, 661-703.
+% \bibitem{deHaan} L. de Haan, A. Ferreira (2006). \textit{Extreme Value Theory: An Introduction}. Springer.
+% \bibitem{Donnat} C. Donnat, S. Holmes (2020). Modeling the heterogeneity in COVID-19 a??s reproductive number and its impact on predictive scenarios. arXiv:2004.05272.
+% \bibitem{Embrechts} P. Embrechts, C. Kl\"uppelberg, T. Mikosch (2003). \textit{Modelling Extremal Events}. Springer.
+% \bibitem{Falk} M. Falk, J. H\"usler J, R. D. Reiss R-D (2004). \textit{Laws of small numbers: extremes and rare events}, Birkh\"auser.
+% \bibitem{Ferguson} N. Ferguson, D. Laydon, G. Nedjati-Gilani et alii (2020). Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand. Available online at \url{https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2020-03-16-COVID19-Report-9.pdf}
+% \bibitem{Goldewijk} K. Goldewijk, K. Beusen, P. Janssen (2010). Long term dynamic modeling of global population and built-up area in a spatially explicit way, hyde 3.1. \textit{The Holocene} 20, 565-573.
+% \bibitem{He} H.W. Hethcote (2000). The mathematics of infectious diseases. \textit{SIAM review} 42, 599-653.
+% \bibitem{Klein} K. Klein Goldewijk, G. van Drecht (2006). HYDE 3.1: Current and historical population and land cover. In A. F. Bouwman, T. Kram, K. Klein Goldewijk. \textit{Integrated modelling of global environmental change. An overview of IMAGE 2.4}. Netherlands Environmental Assessment Agency.
+% \bibitem{Neslehova} J. Ne\u{s}lehov\'a, P. Embrechts, V. Chavez-Demoulin (2006). Infinite-mean models and the LDA for operational risk. Journal of Operational Risk 1, 3-25.
+% \bibitem{Prec} J.Norman, Y. Bar-Yam, N.N. Taleb (2020). Systemic Risk of Pandemic via Novel Pathogens - Coronavirus: A Note. New England Complex Systems Institute.
+% \bibitem{Scasciamacchia} S. Scasciamacchia, L. Serrecchia, L. Giangrossi, G. Garofolo, A. Balestrucci, G. Sammartino (2012). Plague Epidemic in the Kingdom of Naples, 1656–1658. Emerging Infectious Diseases 18, 186-188.
+% \bibitem{Seybolt} T. B. Seybolt, J. D. Aronson, B. Fischhoff, eds. (2013). \textit{Counting Civilian Casualties, An Introduction to Recording and Estimating Nonmilitary Deaths in Conflict}. Oxford University Press.
+% \bibitem{TaStat} N.N. Taleb (2020). \textit{Statistical Consequences of Fat Tails}. STEM Academic Press.  
+% \bibitem{TaCi} N.N. Taleb, P. Cirillo (2019). The Decline of Violent Conflict: What do the data really say? In A. Toje, N.V.S. B\r{a}rd, eds. The Causes of Peace: What We Know Now. Nobel Symposium Proceedings. Norwegian Nobel Institute, 57-85.
+% \bibitem{UN} United Nations - Department of Economic and Social Affairs (2015). \textit{2015 Revision of World Population Prospects}. UN Press.
+% \bibitem{Ancient} Ancient History Encyclopedia, retrieved on March 30, 2020: \url{https://www.ancient.eu/article/1528/plague-in-the-ancient--medieval-world/}.       
+% \bibitem{capitalist} Visual Capitalist, Visualizing the History of Pandemics, retrieved on March 30, 2020: \url{https://www.visualcapitalist.com/history-of-pandemics-deadliest/}.
+% \bibitem{who} World Health Organization, Covid-19 page, retrieved on April 13, 2020: \url{https://www.who.int/emergencies/diseases/novel-coronavirus-2019}
+% \bibitem{wiki} Wikipedia List of epidemics, retrieved on March 30, 2020: \url{https://en.wikipedia.org/wiki/List_of_epidemics}.	 
+% \bibitem{wiki} Wikipedia Great Northern War plague outbreak, retrieved on March 30, 2020: \url{https://en.wikipedia.org/wiki/Great_Northern_War_plague_outbreak}.
+% \bibitem{listfist} Weblist of Epidemics Compared to Coronavirus, retrieved on March 30, 2020: \url{https://listfist.com/list-of-epidemics-compared-to-coronavirus-covid-19}.	
+% \bibitem{Wolfram} S. Wolfram (2002). \textit{A New Kind of Science}. Wolfram Media. 
+% \end{thebibliography}
+
+
+
+
+\end{document}

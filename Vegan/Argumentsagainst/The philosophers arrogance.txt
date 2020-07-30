@@ -1,0 +1,117 @@
+
+The arrogance of the philosopher
+
+In statistics there is a saying, absence of evidence is not evidence of absnce. What does this mean? It means that just because we don't have evidence for something, that doesn't mean that that something does not exist. One articulation of this general phenomenon is scientism, the desire to draw straight lines through data points. Many of the greatest minds of the 20th centry have aimed at exposing this view, perhaps the greatest economist, Hayek, Popper and Witgenstein all gave repeated warnings about over-extrapolation. 
+
+There is an equivalent of scientism in philosophy. I think the term sophist is a good name for them. The general problem of sophists is that they seek assume their ability to articulate maps the world. They will confuse their articulation for an idea, for the merits of that idea. That is, we should only do something, if we articulate a good reason to do it. 
+
+
+
+FIRST
+
+There are two problems with this, view. The first is that what they consider to be a good reason is in fact, an invitation to apply scientism. For instance suppose there is a path on the left and one on the right, I know my ancestors took the path on the right. Is this a good reason to choose it? Evolutionarily, the answer is yes but the philosopher will instead say "But look the trees on this other path look prettier". It is similar to looking at a bird and asking should the bird walk to the bushes or fly to the bushes? I mean there both ground and air predators so it is a tossup. 
+
+Let us begin by two examples \footnote{Whch I shamelessly copy from Josh Hochschild} : 
+"Don't think of fasting during Lent as a matter of following some arbitrary rules. All human beings need to discipline, order, and control their appretites and desires. Most societies have rules of etiquette and even rituats to help people practice temperance. Christians communities use lent as a time to draw special attention to this very human need." 
+
+"You are probably addicted to your smartphone. The most popular apps are social media, and those platforms have been carefully designed to make their users feel 'hooked'. Social media companies have even take advantage of the latest psychological and neurological research about addictive behavior"
+
+These arguments are both not deductive but there is an initial sentence which is supported by the follow up sentences. So there is a premise and a conclusion, even though there is no deduction from the premise to the conclusion. 
+
+The first can be classified as a probabilistic argument, and the second as a moral argument(though this is not canonical classification). Modern philosophers spend almost all their time on deductive forms and on fallacies and very little time in recognizing and evaluating inductive and rherhorical arguments. 
+
+It is understandable why philosophers avoid inductive arguments. We need only note that like scientism, an indefinite number of curves can be fit into some data points. Or like QUine points out, even if we had ALL the facts, we this would not uniquely determine an explanatory theory.
+
+A similar problem could occur in Ethics, where the totality of correct judgements about cases(real or hypothetical) may not lead to any one set of principles. 
+
+Of course one can change the function of principles to be negative, that is, to show which factors are NOT relevant. So we can try to look at a principle which says, always compare to the Amish, and then then see if the reasons we thought were relevant retain their relevance. If we find that the principle does not apply to the Amish we can then combine our reason with something else to see if that would make for applicability.
+
+There are a number of cases, these cases are where we will have choices to make. If there is no choice, then it is not an ethical dillema. It may of course be that the set of actions are all morally equivalent and hence morality does not refine. 
+
+A principle is said to be something that gives an answer to a set of cases. There exists a problem of principle selection, how does the choice of principles occur? A group is cohesive IFF its members have principles which are match. 
+
+
+
+Principles are there to eliminate the individual characteristics of the person applying them. 
+
+The law often holds that like cases should be decided alike
+
+However this idea of just principles, is usually a social function. That is to signal to others that they will not let their feelings get in the way. It doesn't have to be that the two agents will use the same principles, it is merely that the principles are KNOWn to the agents so that they can plan around.
+
+
+Of course this is clearly unnecesary if the agents know each other
+
+Do we care if agents believe the principle? Perhaps it matters for credibility, perhaps stating that it is TRUE or Correct or 
+
+
+It has been claimed—the matter is one of some controversy—that
+women’s moral judgments are more finely attuned to situational details
+and nuances of relationship and motivation than are men’s.
+
+A problem with inherited principles is that we do not know the reason why they exist. 
+
+
+TALK OF COMPETITOON BETWEEN PRINCIPLES
+
+
+SECOND
+
+The second problem is that they assume that a failure to conjure up a reason is an indication that there is no reason. But this is absurd on its face, many people have various routines which they adopt and act upon and cannot articulate WHY it is that they have those routines. Perhaps they used to know but forgotten, perhaps they learned it from someone else. Perhaps nobody ever knew the reason but it just gradually emerged, as a habit in an evolutionary way. 
+
+
+
+
+
+
+
+
+
+
+I think most people have an intuitive aversion to this kind of discrimination. In other words, selection should not be done by truncating a distribution. It should be done simply on objective criteria. Of course, there
+Choosing a husband
+Of course this impression we have that having a standard for the purpose of discriminating could be wrong. Let us try and get another example and see if our intuition holds. 
+I think most people have an intuitive aversion to this kind of discrimination. This seems to be the portion where Christian Ethics that comes into play, “the meek will inherit the earth”. The Christian ethics, in other words, selection should not be done by truncating a distribution. It should be done simply on objective criteria. 
+How does this work? Simply, we look at the function for which we are selecting and see what characteristics it requires. For instance a good husband may require loyalty, hard work, pedagogical, etc.  In practice this is sufficient to make the choice, but it the academic case where two people meet all those criteria equally; one can use their OWN feelings, including trust to make the choice. 
+To clarify, the inputs that will be used to make the choice must be found exclusively in the objects of choice and the person making the decision. 
+One may object, “What about standardized tests? They are designed so as to truncate”. I think that here the answer is that clearly standardized tests fail the “meek will inherit the earth” test. Indeed I would say that standardized tests are unethical. If a specific task can be equally achieved by two people and the one making the choice is indifferent between them, it does seem rather arbitrary that we select based on a test which arbitrarily demarcates. 
+So it seems our intuition applies in this case too, but perhaps it is a distinctly Christian ethic. I am not specialized enough to know of the roots of a specific ethical code. We could try to come up with arguments for this, but it seems unnecessary, this simply IS the ethic we have inherited. 
+Do we need to consciously?
+Of course the idea that we NEED to have a set X is misguided. Perhaps even having the set X causes discrimination to be intuitively unjust. Most people would not have trouble telling a human apart from an animal intuitively. This clearly means that there ARE standards by which we could perfectly discriminate. So it seems odd that the criterion for discrimination has to be articulated before we discriminate. Why is there a need to articulate the standard when everybody already knows how to discriminate? 
+The Disney factor
+Going beyond the accusations that the argument makes, the argument itself is flimsy for the reason that it begs the question that it is a specific characteristic which demarcates between species. Just because dolphins have characteristic A and apes have characteristic B, humans can still be the only beings humans who have characteristic A and B. Of course if that isn’t enough, it probably is quite easy to come up with a characteristic that only humans have, for example contemplating God or contemplating morality or even just the ability to imagine or tell a story. In other words we can appeal to “personhood”, it just so happens that the only beings who are persons are humans.
+We can see the intuitive appeal of personhood; we can call it the Disney factor. Many westerners grew up watching animations of different species that are designed to create empathy from the viewer. It is natural that fans of such animation would intuitively create a correspondence between those animals and animals in the real world. Where they are right is that IF the animals in Disney movie were real, it would not be acceptable to kill them. This seems to me to be a vision shared by meat eaters and non-meat eaters alike. That is, if it were true that an ape of the kind found in Tarzan, that can exhibit moral agency then we would obviously extend our moral code to them. Similarly, if a Superman (an alien from another planet) came on the planet, and he exhibited all the same contemplative capacities as humans have, then we would also extend our morality to him.
+So it seems clear that the argument, fails, or at least if it did not fail, the argument would apply to specific non-human species (such as the apes in Tarzan or Superman) and expand our moral circle.
+
+Why does this argument seem so strong?
+
+The apparent strength of this argument is that it tries to draw parallel between modern animal right causes and slavery. By asking for criteria X, it hopes to homogenize treatment as far as possible. Of course the implicit argument being made is:
+Things should be treated differently if it is justified to treat them differently. 
+In that it wants the treatment of different creatures to be as homogenous as possible. This argument is a bit of a trap, those who use it are hoping that you will trigger it and that you will be compelled to re-consider your views.
+To form the trap they want to claim that those who would give-arguments believe in discrimination and as such would also be the same people justifying slavery. If we stopped trying to find X, we could not justify slavery and it would have ended earlier. 
+It cannot be doubted that there is an element of truth to this line of thinking. People who want to discriminate on a group basis infamously had (and have) an odd attachment to analyzing differences between the groups they want to discriminate. Measuring skulls was historically a popular way of doing this.
+
+Overzealousness
+However, activists are too ambitious in their inference from this argument. In fact, the argument is too general to be applied systematically. I think the most charitable interpretation is to say that “we should not look for differences for the purpose of discriminating”
+But this is an odd statement. Does that mean it is okay to look for differences if it is NOT for the purpose of discriminating and we subsequently decide that what we discovered is worth discriminating over? 
+Indeed what is the purpose of looking for differences if it isn’t so that it can affect our action? Perhaps somebody has allergies, and you want to know who they are so that you can serve them the right food. 
+But what exactly is the purpose of discriminating? 
+
+ It seems to be saying that that pointing to differences between groups for the purpose of discriminating is always bad. The problem is of course that they confuse causality. They assume that we look for differences in order to discriminate, when in reality, we discriminate and then look for differences. 
+Even if this wasn’t the case, it is not true that looking for differences for the purpose of discriminating is bad. Indeed, it could be that I want to look at the difference pigs and hens because if I don’t and group them together, the pig may end up eating the hens. 
+Activists may try to counter this point by saying “Only look for differences among groups if you have already decided to treat differently” but again, this begs the question, what if we don’t know if we should treat them differently UNTIL we find that characteristic. 
+However, activists may claim that we should be trying to only draw differences among groups who we already aim to treat differently. This answer does not suffice as it begs the question of how to establish which members we are to treat differently without knowing what their differences are.
+It must be highlighted that noticing differences does not necessarily imply superiority. In the same way that noticing that an animal that is higher up on the food chain does not make of it a superior animal. Indeed nobody tries to say that lions are superior to gazelles merely because they eat them. When one discusses the hierarchy in the food chain, the goal is not to point to a superiority of a specific species but to an interaction between species. Much like the fact that termites eat humans who are buried does not imply that termites are superior.
+The trap is made up of two elements: backward compatibility, and present bias. We will start with these two implications and then tackle the argument head on.
+Backward compatibility means that the counter-argument the meat-eater must conjure up in this case must not be useable in the case of slavery. For instance many arguments that were used had to do with notions of "nature" or notions of "intelligence".
+The present bias is simply that any criterion that is used to construct the demarcation between “okay to eat” and “not okay to eat” must not be found to be ridiculous later on. That is, they will accuse us of being ideological and just making arguments to justify our ideology.
+
+Backward compatibility
+Aristotle is famous for saying that it is in the nature of some people to be slaves. Though many modern philosophers who cite Aristotle often feel compelled to object to this line of thinking, it can be said that in some manner he was right. It is in indeed in the nature of some people to be slaves. But as Aristotle himself pointed out, this nature isn’t exclusive to any one group of people every group has members with characteristics making them more prone to becoming slaves.
+In Aristotle’s view, slavery was not a legal condition but a mindset, “he who cannot decide on his own, he who seeks orders”. It is obvious to me that this represents a large portion of the modern workforce today as people seldom aim for independence and creation. Many prefer to be slaves and have their free time to themselves. Even the cursory interest that does exist in participation in planning is usually for the ends of a higher consumption. 
+Accordingly, it must be underlined that it is not possible to physically notice who is a slave or not. Being a slave is a behavior, it may even be a temporary behavior, but it is a behavior and such we can notice it when it takes place but cannot predict who will have this behavior.
+To summarize backward compatibility is easy to meet. One can even be tolerant of slavery without endorsing the slave legal orders of the past.
+Present bias
+The rather intellectual error proponents of this argument make is to put forth arguments themselves on a pedestal. Just because it is that this argument was used by people at the time, does not mean that the argument itself is the cause of their behavior. Indeed people can find all sorts of reasons to justify their behavior. The behavior occurs first, then the theory.
+Once we realize this, we can understand that the charge of present bias cannot possibly stick because arguments in of themselves are not the cause.
+It is not true that acknowledging differences is the cause of injustice. Instead, injustice often causes an attachment to some differences, and usually when the causality is this way around, injustice seeks measurable (physical differences).
+

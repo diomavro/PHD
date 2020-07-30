@@ -1,0 +1,11 @@
+Correlation neglect from cops. If the stakes are low, they can neglect correlation, if the stakes are high they can dig for more information. 
+
+Non optimizing behavior as trust. Optimizing behavior cannot be evaluated without a significant amount of information OR a complete control of the environment. So if an agent is NOT optimizing, it is much simpler for an external observer to evaluate this agent. Why would the agent accept to increase the measurability of to the leader? 
+
+https://worthwhile.typepad.com/worthwhile_canadian_initi/2012/07/why-are-almost-all-economists-unaware-of-milton-friedmans-thermostat.html
+
+Optimizing agents make economics unverifiable. We can only hope to make empirical progress if agents do NOT optimize. 
+
+Causal diagrams and optimized behavior 
+
+Positive discrimination causes people to optimize the racism. 
