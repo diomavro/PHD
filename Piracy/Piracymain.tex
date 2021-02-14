@@ -263,7 +263,7 @@ There is also work that specifically studies the effect of the quality different
 
 Similarly, \cite{PW06b} use a sampling model to show that giving free samples to consumers may be profitable for firms. \cite{C05} show that much of the potential benefits from piracy can be extracted by the firm if it employs a sampling strategy to draw in consumers and then sell it to them. However in most of the domains this paper discusses, this is likely not a pertinent strategy, mainly because the ability to create samples for your product is very likely to be correlated with the ability to differentiate it.
 
-There is also work showing that in the digital space, with perfect copying, stronger copyright may act as a coordinating device between firms so that they may collude\citep{J08}. Indeed the work of \cite{S04} shows that prices are reduced in the presence of piracy, a result that is duplicated in this paper.
+There is also work showing that in the digital space, with perfect copying, stronger copyright may act as a coordinating device between firms so that they may collude\citep{J08}. Indeed the work of \cite{S04} shows that prices are reduced in the presence of piracy, a result that is duplicated in this paper. An interesting addition to the literature is by \cite{curien2009music}, who show that in a game between artist and record company, the positive externality can be internalized by the artist. 
 
 Perhaps the closest model to our own is the model by \cite{CRP91} where they also have an intermediate option of piracy. However their model does not include a product improvement variable and does not give an explicit solution for a specific distribution. The approach is also quite different in that they assume a linear demand function, while the assumption here has to do with the distribution of agent valuations, which gives an endogenous demand function.  Additionally, the only difference between pirating and buying in their model is the cost of doing so, while our model includes a differential in valuation between the options. Another model of piracy which mimics our approach is by \cite{MRSS17}, whom mimic our demand approach but focus more on the effects of piracy when open source competition is also a factor.
 
@@ -514,8 +514,8 @@ see appendix \ref{buyersuserspriceproof}
 The price is always increasing in the network value. However, the network value has an increasing effect on the price, when the network value is already large, then marginal increases will have a stronger effect on the price. The reason for this increasing effect of network value on price is the double effect of the network good. An increase in the network value, for the same price, increases both the valuation of users and their proportion. Which means that the firm can always find a $p$ which is higher than before still have a higher proportion of users. This increasing effect eventually peaks at linearity\footnote{The price is regularly varying with an index of $i=1$, see appendix}, if $\alpha$ is large relative to $1+k$, the price can be approximated to:
 
 \begin{equation}
-p \approx \frac{2(1+\alpha+k)}{9}
-\end{equation}
+p \approx \frac{2(1+\alpha+k)}{9}\footnote{see appendix \ref{corollary1proof}} \label{corollary1}
+\end{equation} 
 
 
 Since a firm can always just ignore the network value and price according to the base value, the adaptive strategy implies that profit is increasing in network value. However if we use this approximated price, we can see that the share of agents buying will eventually be $\frac{2}{3}$
@@ -534,13 +534,13 @@ In other words, the firm will prefer full piracy to no piracy if the network val
 
 We can also think of this from the inverse demand curve point of view. If there is no product degradation there is a simple linear inverse demand curve. On the other hand, the equilibrium with no pirates has a concave inverse demand function. More over, the concavity of the demand curve is increasing in $\alpha$. So while the demand curve of the pirates is ever expanding towards the right, the concavity of the inverse demand curve ends up disabling the firm from being able to take advantage of the increasing network value. Which is why, at some point the $\alpha$ just stops adding value to the firm.
 
-Note that the interpretation of the above crucially depends on $\alpha$ increasing not independently but relative to $\beta$. If $\alpha$ is large then the slopes that need to be compared to have the equivalent result (eventually) are $\frac{\alpha - \beta}{4}$ and $\frac{2 \alpha}{9}$. That is, the differential between the $\alpha-\beta$ must increase. 
+% Note that the interpretation of the above crucially depends on $\alpha$ increasing not independently but relative to $\beta$. If $\alpha$ is large then the slopes that need to be compared to have the equivalent result (eventually) are $\frac{\alpha - \beta}{4}$ and $\frac{2 \alpha}{9}$. That is, the differential between the $\alpha-\beta$ must increase. 
 
 
 \subsection{ Equilibrium for intermediate values of the cost of piracy}
 
 
-We now begin to analyze the case where there are intermediate values of the cost of piracy. To simplify the analysis we now make an additional assumption, $\beta=1$. This assumption implies that even if all agents are users, less than half the utility of pirating will come from the non-network value of the good. 
+We now begin to analyze the case where there are intermediate values of the cost of piracy. This assumption implies that even if all agents are users, less than half the utility of pirating will come from the non-network value of the good. 
 
 There are now two indifference conditions to consider. There is the agent who is indifferent between pirating and buying, $\check{x}$, and the agent who is indifferent between buying and pirating, $\hat{x}$. Because of the monotonicity results in the preliminary analysis we also know that $\hat{x}>\check{x}$.  
 
@@ -621,7 +621,7 @@ There is always a network value, $\alpha$ where any increases in product degrada
 \end{proposition}
 
 \begin{proof}
-We can use the envelope theorem here (see \ref{envelopetheorem})and only need to look at the direct effect or $r$.
+We can use the envelope theorem here (see \ref{envelopetheorem})and only need to look at the direct effect of $r$.
 \begin{align*}
 \frac{\partial \pi^* }{\partial r}
 =
@@ -632,8 +632,8 @@ So the effect is negative if
 
 \begin{align*}
 1&<\frac{(\alpha-1) (p^*-r)}{2 \sqrt{1-r} \left((\alpha-1) \sqrt{1-r}+k\right)} \\
-2 \sqrt{1-r} \left((\alpha-1) \sqrt{1-r}+k\right) &<(\alpha-1) (p^*-r) \\
-2 \sqrt{1-r} \left((\alpha-1) \sqrt{1-r}+k\right) &<(\alpha-1) \left(\frac{k+ (\alpha-1)\sqrt{ 1 -r }-r}{2} \right) \\
+% 2 \sqrt{1-r} \left((\alpha-1) \sqrt{1-r}+k\right) &<(\alpha-1) (p^*-r) \\
+% 2 \sqrt{1-r} \left((\alpha-1) \sqrt{1-r}+k\right) &<(\alpha-1) \left(\frac{k+ (\alpha-1)\sqrt{ 1 -r }-r}{2} \right) \\
 \sqrt{1-r}+ \frac{k}{(\alpha-1) }  &< \frac{k+ (\alpha-1)\sqrt{ 1 -r }-r}{4 \sqrt{1-r} } \\
 \end{align*}
 
@@ -817,35 +817,35 @@ One of the most common arguments against piracy is that it decreases the number 
 
 \newpage
 \section{Appendix}
-\subsection{Buyers and pirates}
-\begin{equation*}
-\hat{x} = \frac{p}{\alpha-\beta + k}
-\end{equation*}
+% \subsection{Buyers and pirates}
+% \begin{equation*}
+% \hat{x} = \frac{p}{\alpha-\beta + k}
+% \end{equation*}
 
-The upper condition is $\alpha-\beta+k \geq p$. Therefore the price is:
+% The upper condition is $\alpha-\beta+k \geq p$. Therefore the price is:
 
-\begin{equation*}
-p = \frac{1}{2}\left(
-\alpha-\beta+k
-\right)
-\end{equation*}
+% \begin{equation*}
+% p = \frac{1}{2}\left(
+% \alpha-\beta+k
+% \right)
+% \end{equation*}
 
-Note that these values imply that $\hat{x} = \frac{1}{2}$ regardless of the values of $\beta$ or $\alpha$. Profit is then:
-\begin{align*}
-\pi &= p(1-\hat{x}) \\
-&=  \frac{1}{4}\left(
-\alpha-\beta+k
-\right)  \\
-\end{align*}
+% Note that these values imply that $\hat{x} = \frac{1}{2}$ regardless of the values of $\beta$ or $\alpha$. Profit is then:
+% \begin{align*}
+% \pi &= p(1-\hat{x}) \\
+% &=  \frac{1}{4}\left(
+% \alpha-\beta+k
+% \right)  \\
+% \end{align*}
 
-Social Surplus and welfare are:
-\begin{align*}
-\hat{S} &= \int_0^{\hat{x}}x(1+\beta)dx+
-\int_{\hat{x}}^{1}\left( x(1+\alpha+k)-p \right)dx \\
-&= \frac{1}{8} (\alpha+2 \beta+k+3) \\
-\hat{W} &= \frac{3}{8} \left( 1 + \alpha +k
-\right)
-\end{align*}
+% Social Surplus and welfare are:
+% \begin{align*}
+% \hat{S} &= \int_0^{\hat{x}}x(1+\beta)dx+
+% \int_{\hat{x}}^{1}\left( x(1+\alpha+k)-p \right)dx \\
+% &= \frac{1}{8} (\alpha+2 \beta+k+3) \\
+% \hat{W} &= \frac{3}{8} \left( 1 + \alpha +k
+% \right)
+% \end{align*}
 
 
 
@@ -862,15 +862,15 @@ p*\frac{\alpha-k-1+\sqrt{(-\alpha-k-1)^2-4 \alpha p}}{2 \alpha}
 \\
 \text{Derivative with respect to p}: \\
 \frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{2 \alpha}-\frac{p}{\sqrt{(\alpha+k+1)^2-4 \alpha p}} =0
-\\
-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{2 \alpha} =\frac{p}{\sqrt{(\alpha+k+1)^2-4 \alpha p}} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-( \alpha+k+1)^2-4 \alpha p+(\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 2 p \alpha \\
-( \alpha+k+1)^2+(\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 6 p \alpha \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 6 p \alpha - ( \alpha+k+1)^2 \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(\alpha-k-1)^2((\alpha+k+1)^2-4 \alpha p) = (6 p \alpha - ( \alpha+k+1)^2 )^2
+% \\
+% \frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{2 \alpha} =\frac{p}{\sqrt{(\alpha+k+1)^2-4 \alpha p}} \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ( \alpha+k+1)^2-4 \alpha p+(\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 2 p \alpha \\
+% ( \alpha+k+1)^2+(\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 6 p \alpha \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (\alpha-k-1)\sqrt{(\alpha+k+1)^2-4 \alpha p} = 6 p \alpha - ( \alpha+k+1)^2 \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (\alpha-k-1)^2((\alpha+k+1)^2-4 \alpha p) = (6 p \alpha - ( \alpha+k+1)^2 )^2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \\
 % (\alpha-k-1)^2(\alpha+k+1)^2-(\alpha-k-1)^2 4 \alpha p = 36 p^2 \alpha^2 + ( \alpha+k+1)^4 - 12 p \alpha ( \alpha+k+1)^2 
@@ -882,9 +882,13 @@ p*\frac{\alpha-k-1+\sqrt{(-\alpha-k-1)^2-4 \alpha p}}{2 \alpha}
 0 = 9 p^2 \alpha  -2 p (\alpha^2 + 4\alpha(1+k)+(1+k)^2) + ( \alpha+k+1)^2 (1+k)
 \\
 \textbf{This is gives two solutions for p:} \\
-\tilde{p} = \frac{(\alpha+k+1)^2+2\alpha(k+1) \pm \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \\
- = \frac{(\alpha+k+1)^2}{9 \alpha}+\frac{2(1+k)}{9}+\frac{ \pm \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \\
+% \tilde{p} = \frac{(\alpha+k+1)^2+2\alpha(k+1) \pm \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \\
+\tilde{p} = \frac{(\alpha+k+1)^2}{9 \alpha}+\frac{2(1+k)}{9}+\frac{ \pm \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \\
 \end{align*}
+
+
+
+\subsection{Corollaries of prop \ref{corollary1}, approximation and proportion} \label{corollary1proof}
 
 If $\alpha$ is large relative to $1+k$, the expression simplifies, we will represent the use of this assumption by $\approx$. 
 
@@ -894,10 +898,6 @@ p \approx \frac{\alpha}{9}+\frac{2(1+k)}{9}+\frac{ \pm \sqrt{(\alpha^2+\alpha (k
 =\frac{\alpha}{9}+\frac{2(1+k)}{9}+\frac{ \pm \alpha \sqrt{ \frac{k+1+\alpha}{\alpha}}}{9} \\
 =\frac{2\alpha}{9}+\frac{2(1+k)}{9}
 \end{align*}
-
-
-\subsubsection{corollary:}
-\label{squareroot}
 
 \begin{align*}
 &\sqrt{(\alpha+k+1)^2-4 \alpha p} \\
@@ -917,25 +917,25 @@ We can use this expression to represent the proportion of agents who will consum
 \end{align}
 
 
-\subsection{Proof of proposition \ref{piracyvsnotproposition}} \label{piracyvsnot}
+\subsection{Proof of proposition \ref{piracyvsnotproposition}}\label{piracyvsnot}
 
-We now look at the what the derivative of the profit function turns out to be. First note that in proposition \ref{envelopetheorem} we deduce that the envelope theorem applies. We also use corollary \ref{squareroot} to simplify the square root and proposition to have the simplified price which assume that $\alpha$ is large. 
+We now look at the what the derivative of the profit function turns out to be. First note that in proposition \ref{envelopetheorem} we deduce that the envelope theorem applies. We also use corollary \ref{corollary1} to simplify the square root to have the simplified price which assumes that $\alpha$ is large. 
 
 \begin{align*}
-\frac{\partial f}{\partial \alpha} = \frac{\frac{2 (\alpha+k+1)-4 p}{2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}+1}{2
+\frac{\partial f}{\partial \alpha} &= \frac{\frac{2 (\alpha+k+1)-4 p}{2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}+1}{2
    \alpha}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{2 \alpha^2} \\
-=\frac{1}{2 \alpha}
-\left( 
-\frac{2 (\alpha+k+1)-4 p}{2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}+1-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{ \alpha}
-\right) \\
-=\frac{1}{2 \alpha}
-\left( 
-\frac{ (\alpha+k+1)-2 p}{ \sqrt{(\alpha+k+1)^2-4 \alpha p}}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}-k-1}{ \alpha}
-\right) \\
-=\frac{1}{2 \alpha}
-\left( 
-\frac{ \alpha (\alpha+k+1)-2 \alpha p}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}(\sqrt{(\alpha+k+1)^2-4 \alpha p}-k-1)}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}
-\right) \\
+% =\frac{1}{2 \alpha}
+% \left( 
+% \frac{2 (\alpha+k+1)-4 p}{2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}+1-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}+\alpha-k-1}{ \alpha}
+% \right) \\
+% =\frac{1}{2 \alpha}
+% \left( 
+% \frac{ (\alpha+k+1)-2 p}{ \sqrt{(\alpha+k+1)^2-4 \alpha p}}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}-k-1}{ \alpha}
+% \right) \\
+% =\frac{1}{2 \alpha}
+% \left( 
+% \frac{ \alpha (\alpha+k+1)-2 \alpha p}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}(\sqrt{(\alpha+k+1)^2-4 \alpha p}-k-1)}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}
+% \right) \\
 % =\frac{1}{2 \alpha}
 % \left( 
 % \frac{ \alpha (\alpha+k+1)-2 \alpha p}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}-\frac{\sqrt{(\alpha+k+1)^2-4 \alpha p}(\sqrt{(\alpha+k+1)^2-4 \alpha p}-k-1)}{ \alpha\sqrt{(\alpha+k+1)^2-4 \alpha p}}
@@ -956,10 +956,16 @@ We now look at the what the derivative of the profit function turns out to be. F
 % \left( 
 % -(1+k)(\alpha+k+1)^2+2 \alpha p+(k+1)\sqrt{(\alpha+k+1)^2-4 \alpha p})
 % \right) \\
-=\frac{1}{2 \alpha^2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}
+&=\frac{1}{2 \alpha^2 \sqrt{(\alpha+k+1)^2-4 \alpha p}}
 \left( 
 2 \alpha p+(k+1)(\sqrt{(\alpha+k+1)^2-4 \alpha p})-(\alpha+k+1)^2)
 \right) \\
+\end{align*}
+
+
+% \ref{corollary1proof}
+
+\begin{align*}
 \textbf{We now assume that $\alpha$ is large relative to k+1 and substitute in the price and square root}
 \\
 =\frac{3}{2 \alpha^3 }
@@ -1303,7 +1309,7 @@ p(a) \frac{\partial l}{\partial a} \\
 
 Therefore we can deduce the effects of $\alpha$ by simply taking the direct derivative of the profit function. The argument is equivalent for $r$.
 
-\subsubsection{Regularly varying functions}
+\subsubsection{Regularly varying functions}\label{regul}
 
 \begin{definition}
 A regularly varyng function $L: (0,+ \infty) \rightarrow (0,+ \infty)$ has the following property:
@@ -1346,58 +1352,55 @@ W_{bpn} =
 \int^{\hat{x}}_{\check{x}} \left(x(1+\beta(1-\check{x}))-r \right)dx +\int^{1}_{\hat{x}} \left(x(1+\alpha(1-\check{x})+\check{k}) - \check{p} \right) dx + \check{\pi}
 \end{align*}
 
-\subsubsection{First and second order approximations of endogenous k}
+% \subsubsection{First and second order approximations of endogenous k}
 
-\begin{align*}
-\text{If we don't take the limit case then this is:} \\
-8k(w+k)^2= \left( w+k \right)^2 -r^2 \\
-(w+k)^2(8k-1)=-r^2 \\
-\text{If we take a first order approximation:} \\
-f(k)= (w+k)^2(8k-1)+r^2 
-\\
-\approx f(t)+f'(t)(k-t) \\
-=(8 t-1) (t+w)^2+r^2 
-+(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
-\Rightarrow k = \frac{2 t+w^2+2 w-15 t^2-14 t w-r^2}{8 (t+w)^2}
-\\
-\text{If we approximate around $t=\frac{1}{8}$} \\
-k = \frac{(8 w+1)^2-64 r^2}{8 (8 w+1)^2} 
-\\
-\text{If we approximate around $t=0$} \\
-k= \frac{w (w+2)-r^2}{8 w^2}
-\\
-\text{So k is decreasing with r} \\
-\end{align*}
+% \begin{align*}
+% \text{If we don't take the limit case then this is:} \\
+% 8k(w+k)^2= \left( w+k \right)^2 -r^2 \\
+% (w+k)^2(8k-1)=-r^2 \\
+% \text{If we take a first order approximation:} \\
+% f(k)= (w+k)^2(8k-1)+r^2 
+% \\
+% \approx f(t)+f'(t)(k-t) \\
+% =(8 t-1) (t+w)^2+r^2 
+% +(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
+% \Rightarrow k = \frac{2 t+w^2+2 w-15 t^2-14 t w-r^2}{8 (t+w)^2}
+% \\
+% \text{If we approximate around $t=\frac{1}{8}$} \\
+% k = \frac{(8 w+1)^2-64 r^2}{8 (8 w+1)^2} 
+% \\
+% \text{If we approximate around $t=0$} \\
+% k= \frac{w (w+2)-r^2}{8 w^2}
+% \\
+% \text{So k is decreasing with r} \\
+% \end{align*}
 
-\begin{align*}
-\text{A second order approximation of the function:} \\ 
-f(k)= (w+k)^2(8k-1)+r^2 \\
-\approx f(t)+f'(t)(k-t)+\frac{f''(\alpha)}{2}(k-t)^2 \\
-= (8 t-1) (t+w)^2+r^2 
-+(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
-+\frac{32 (t+w)+2 (8 t-1)}{2}(k-t)^2 \\
-= (8 t-1) (t+w)^2+r^2 
-+(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
-+(16 (t+w)+ (8 t-1))(k-t)^2 
-\end{align*}
-
-
-
-%\begin{equation*}
-%k = \frac{\pm \sqrt{\left(2 t-40 t^2-16 %t w+8 w^2\right)^2-4 (24 t+16 w-1) %\left(r^2+24 t^3+16 t^2 w+14 t^2+14 t %w-2 t-w^2-2 w\right)}+40 t^2+16 t w-2 %t-8 w^2}{2(24 t+16 w-1)} 
-%\end{equation*}
-We solve for k around 0: 
-
-\begin{align*}
-k = \frac{\pm \sqrt{\left(8 w^2\right)^2-4 (16 w-1) \left(r^2-w^2-2 w\right)}-8 w^2}{2(16 w-1)} \\
-=\frac{\pm 2 \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-8 w^2}{2(16 w-1)} \\
-=\frac{\pm \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-4 w^2}{16 w-1} \\
-\text{only the positive solution gives a positive answer:} \\
-= \frac{ \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-4 w^2}{16 w-1}
-\end{align*}
+% \begin{align*}
+% \text{A second order approximation of the function:} \\ 
+% f(k)= (w+k)^2(8k-1)+r^2 \\
+% \approx f(t)+f'(t)(k-t)+\frac{f''(\alpha)}{2}(k-t)^2 \\
+% = (8 t-1) (t+w)^2+r^2 
+% +(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
+% +\frac{32 (t+w)+2 (8 t-1)}{2}(k-t)^2 \\
+% = (8 t-1) (t+w)^2+r^2 
+% +(8 (t+w)^2+2 (8 t-1) (t+w))(k-t) \\
+% +(16 (t+w)+ (8 t-1))(k-t)^2 
+% \end{align*}
 
 
 
+% %\begin{equation*}
+% %k = \frac{\pm \sqrt{\left(2 t-40 t^2-16 %t w+8 w^2\right)^2-4 (24 t+16 w-1) %\left(r^2+24 t^3+16 t^2 w+14 t^2+14 t %w-2 t-w^2-2 w\right)}+40 t^2+16 t w-2 %t-8 w^2}{2(24 t+16 w-1)} 
+% %\end{equation*}
+% We solve for k around 0: 
+
+% \begin{align*}
+% k = \frac{\pm \sqrt{\left(8 w^2\right)^2-4 (16 w-1) \left(r^2-w^2-2 w\right)}-8 w^2}{2(16 w-1)} \\
+% =\frac{\pm 2 \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-8 w^2}{2(16 w-1)} \\
+% =\frac{\pm \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-4 w^2}{16 w-1} \\
+% \text{only the positive solution gives a positive answer:} \\
+% = \frac{ \sqrt{16 w^4- (16 w-1) \left(r^2-w^2-2 w\right)}-4 w^2}{16 w-1}
+% \end{align*}
 
 
 \newpage

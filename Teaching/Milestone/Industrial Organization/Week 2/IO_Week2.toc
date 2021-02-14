@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Owners versus managers}{2}{0}{1}
+\beamer@sectionintoc {2}{What is a firm?}{5}{0}{2}
+\beamer@sectionintoc {3}{Why do firms exist?}{7}{0}{3}
+\beamer@sectionintoc {4}{Monopoly}{13}{0}{4}

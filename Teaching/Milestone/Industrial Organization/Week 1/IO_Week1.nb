@@ -1,0 +1,1410 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     57083,       1401]
+NotebookOptionsPosition[     55428,       1342]
+NotebookOutlinePosition[     55770,       1357]
+CellTagsIndexPosition[     55727,       1354]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8", ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], "-", "0.7"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"q", "+", "100"}], "200"], "*", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "a"}], ")"}]}], "+", "0.7"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1100"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\"", ",", " ", "\"\<Monopoly\>\"", ",", " ", 
+        "\"\<Monopsony\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", "a"}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"12", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", "a"}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+     " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", " ", "Dashed", 
+        ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"500", ",", "Red"}], "}"}], "}"}], ",", "None"}], "}"}]}], 
+     ",", " ", 
+     RowBox[{"GridLinesStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Gray", ",", " ", "Dotted", ",", " ", "Thick"}], "]"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.5", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8210820190214086`*^9, 3.8210821076549387`*^9}, {
+   3.8210822276115227`*^9, 3.8210822338058844`*^9}, {3.8210822851074715`*^9, 
+   3.821082468660356*^9}, {3.8210825086762624`*^9, 3.8210825335027027`*^9}, 
+   3.821082568271682*^9, {3.8210826739626455`*^9, 3.821082679455005*^9}, {
+   3.821082726595266*^9, 3.8210827893553457`*^9}, {3.821082952971425*^9, 
+   3.821082953676364*^9}, {3.821083081568956*^9, 3.8210831321519337`*^9}, {
+   3.821083239514318*^9, 3.821083389363002*^9}, {3.821148888819865*^9, 
+   3.8211488927528667`*^9}, {3.821149076243149*^9, 3.821149135551657*^9}, {
+   3.821149684716528*^9, 3.8211498165559015`*^9}, {3.821149853786274*^9, 
+   3.821149896014924*^9}, {3.8211500497899895`*^9, 3.821150061316904*^9}, {
+   3.821150094342695*^9, 3.8211501023082314`*^9}, {3.8211502660066633`*^9, 
+   3.821150275369751*^9}, {3.821150359187911*^9, 3.821150496026387*^9}, {
+   3.8211505481919866`*^9, 3.8211505943468685`*^9}, {3.821150677818063*^9, 
+   3.8211506876120234`*^9}, {3.8211507554615135`*^9, 3.821150774439003*^9}, {
+   3.821150806274476*^9, 3.821150880269764*^9}, {3.8212534167479486`*^9, 
+   3.821253418822279*^9}, {3.82125414592032*^9, 3.821254149428457*^9}, {
+   3.8212608031962156`*^9, 3.8212608130086393`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.5, 1}}, Typeset`size$$ = {499., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$47542$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$47542$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 
+         1.8, ((1100 - $CellContext`q)/100) $CellContext`a$$ - 
+         0.7, (($CellContext`q + 100)/200) (1 - $CellContext`a$$) + 
+         0.7}, {$CellContext`q, 0, 1100}, 
+        PlotLegends -> {
+         "Demand", "Supply", "Price control", "Monopoly", "Monopsony"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 ((-1 + 23 $CellContext`a$$)/(
+              1 + $CellContext`a$$)), -((
+               12 (-1 + $CellContext`a$$)) ($CellContext`a$$/(
+               1 + $CellContext`a$$)))}, {0, 0}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed, Dashed}, 
+        GridLines -> {{{500, Red}}, None}, GridLinesStyle -> 
+        Directive[Gray, Dotted, Thick]], 
+      "Specifications" :> {{$CellContext`a$$, 0.5, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.821082094598154*^9, 3.821082108932313*^9}, 
+   3.821082234995982*^9, {3.82108233844986*^9, 3.8210823669190116`*^9}, 
+   3.8210824167940607`*^9, 3.821082469674605*^9, 3.821082534239977*^9, 
+   3.821082569992098*^9, 3.8210826801733894`*^9, {3.8210827343957644`*^9, 
+   3.821082790054964*^9}, 3.821082961396756*^9, {3.821083117379302*^9, 
+   3.821083133370536*^9}, {3.82108325120317*^9, 3.821083256450785*^9}, {
+   3.821083344504385*^9, 3.821083390311937*^9}, 3.8211488949109745`*^9, {
+   3.821149098151797*^9, 3.82114913654095*^9}, 3.821149707695956*^9, 
+   3.8211499013881025`*^9, 3.821150063786742*^9, {3.821150095258382*^9, 
+   3.8211501028777914`*^9}, 3.8211502760114527`*^9, {3.821150364052315*^9, 
+   3.8211504971856747`*^9}, {3.8211505563840103`*^9, 3.821150596587412*^9}, {
+   3.8211506820337844`*^9, 3.8211506883811045`*^9}, {3.8211507599634867`*^9, 
+   3.821150781389346*^9}, {3.8211508252809525`*^9, 3.8211508809812517`*^9}, 
+   3.82125341974026*^9, 3.8212541538062305`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8", ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", 
+          RowBox[{"q", "*", "2"}]}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"q", "*", "2"}], "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1100"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\"", ",", " ", "\"\<Monopsony\>\"", ",", " ", 
+        "\"\<Monopoly\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", "a"}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"12", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", "a"}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+     " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", " ", "Dashed", 
+        ",", "Dashed"}], "}"}]}], ",", 
+     RowBox[{"GridLines", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"500", ",", "Red"}], "}"}], "}"}], ",", "None"}], "}"}]}], 
+     ",", " ", 
+     RowBox[{"GridLinesStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Gray", ",", " ", "Dotted", ",", " ", "Thick"}], "]"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.5", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.821260832729275*^9, 3.8212608578890853`*^9}, {
+  3.821260901249102*^9, 3.82126091329298*^9}, {3.821342789358657*^9, 
+  3.82134284460569*^9}, {3.821342874745016*^9, 3.821342903994727*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.674, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.5, 1}}, Typeset`size$$ = {499., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$76653$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$76653$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 
+         1.8, ((1100 - $CellContext`q 2)/
+          100) $CellContext`a$$, (($CellContext`q 2 + 100)/200) (
+          1 - $CellContext`a$$)}, {$CellContext`q, 0, 1100}, 
+        PlotLegends -> {
+         "Demand", "Supply", "Price control", "Monopsony", "Monopoly"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 ((-1 + 23 $CellContext`a$$)/(
+              1 + $CellContext`a$$)), -((
+               12 (-1 + $CellContext`a$$)) ($CellContext`a$$/(
+               1 + $CellContext`a$$)))}, {0, 0}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed, Dashed}, 
+        GridLines -> {{{500, Red}}, None}, GridLinesStyle -> 
+        Directive[Gray, Dotted, Thick]], 
+      "Specifications" :> {{$CellContext`a$$, 0.5, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8212608590647173`*^9, 3.821260913826329*^9, 3.821342818547668*^9, {
+   3.8213428509603877`*^9, 3.821342905779132*^9}}]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Occupational licensing", "Subsection"]], "Text",
+ CellChangeTimes->{{3.821254045189488*^9, 3.8212540895839987`*^9}, {
+  3.8212541630547676`*^9, 3.8212541682795715`*^9}, {3.821254209049054*^9, 
+  3.821254240739745*^9}, {3.8212543980963287`*^9, 3.8212544047492437`*^9}, {
+  3.8212550046105175`*^9, 3.8212550217132206`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"1100", "-", "q"}], "100"], ",", 
+     FractionBox[
+      RowBox[{"q", "+", "100"}], "200"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"q", ",", "0", ",", " ", "1100"}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Demand\>\"", ",", " ", "\"\<Supply\>\""}], "}"}]}], ",", 
+   " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+   RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", " ", "Automatic"}], "}"}]}], ",", 
+   RowBox[{"GridLines", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"500", ",", "Red"}], "}"}], "}"}], ",", "None"}], "}"}]}], 
+   ",", " ", 
+   RowBox[{"GridLinesStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Gray", ",", " ", "Dotted", ",", " ", "Thick"}], "]"}]}], ",", 
+   " ", 
+   RowBox[{"Epilog", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Blue", ",", 
+      RowBox[{"PointSize", "@", "Large"}], ",", 
+      RowBox[{"Point", "[", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"500", ",", "3"}], "}"}], "}"}], "]"}]}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8212543254110155`*^9, 3.8212543568633704`*^9}, {
+  3.8212543964943266`*^9, 3.821254455597107*^9}, {3.8212547851138067`*^9, 
+  3.821254804898997*^9}, {3.8212548376425333`*^9, 3.821254868503523*^9}, {
+  3.8213510904195633`*^9, 3.8213511028923454`*^9}, {3.8213541528856087`*^9, 
+  3.8213541532919803`*^9}, {3.8213542192557044`*^9, 3.821354219748459*^9}, {
+  3.821354250810396*^9, 3.8213543206465626`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{GraphicsBox[{{{}, {}, {
+       Directive[
+        Opacity[1.], 
+        RGBColor[0.368417, 0.506779, 0.709798], 
+        AbsoluteThickness[1.6]], 
+       LineBox[CompressedData["
+1:eJwVznk41HkABvDBWkwiV0KOMcZGOZqkUub7dqFWp2O1KUeotlBZoYwwI+UY
+81N2NnQ8lizJYltHmSRFVhOSyeNoieoppqgHsYO1f7zP+7zP8/7xYQSG7w1W
+pNFoO+bzf7fmxzIMUyY51QVRX+fmWBg0/m3ib1EnSU+TNG6dZeFDd9jrHNEb
+ciiCmZUqZyG0xtOHLxonCze2rtSfYuGP310vRYuUEdBrecz2Mwu7zerLTon0
+QNeR9vkOsWDWy60LF7HgG+/QUPOEBVWnXpcw0WrQ9o+lR1AsKNM3cd+cc0G+
+VKso24AFoxaxW0Plbqi2j36qKLKAwYBhEFPbG1XqK5fPrLdArmtHdN3AfjzQ
+WDIy/YiJXo5fJL3QH6kZ4q73XkysSFRc7iE6hHKp2vdpfeYIl20tGowJAcOv
+qtz/sDm4D8ylbdZH4RHC3GI5xYBk/e25Hr3j+GeVo+/1BAbem7S/3NwaBpt4
+lRtq2gzIL2+vjRGfwKOFTl0F+WYoCFNK9bc/haoAnV/GbczgIFctj0yJQOcR
+77njcaYYOhDceUUhEl+yO/q8BCYQdGi9Gjh5GgW7dAry8oxhMkPn+DRHoUuh
+raG9cSlap3/M7XOOQQO6ZYe7jBBSMrmHunIG9tyA8P4pQ5iwh5U9tWPh4eIo
+r1M1RGuL7TUnPhf0TMlJpaUGCDGoS9/VF4ctPQMcK7IEGcYd4hqreKwu36xf
+uUsfB1VD+wO74lHIN3dlnVgM6xnb8au8BJR0N/h9vawHFd+lF/2dE3FEXMFj
+F+pCqlvmdvdDIgqvmsztbNZB5Zrw5JybPOTSu5Ked2njUpB3tYYfH6xpj/Ga
+ES0cGh7UNViQBLt37rW8RVrY3Js7Wvw4CZ/9LwnuMBZh8XfyyY6I8zhedvtE
+RpIG3p7ljQlMkmGYX5PFbVNHk5PjT+0vk+FY7t++boKOHI8MjVv8C/CqUai9
+u14N56Q6bHVcxFC3s1jNVwXef3ISvvl0EacnI0KNc5VhnU09FGSnwNbA7tPX
+ISVoDGvybnim4gfPpOQ8VUW8yXII36aYBl5K57NF7jRIivndMffTsPZOwr7s
+F3JS0SxfsyEqHdUHAqvzzKdIyiaj+iymAJwZx0iHsnFyihXcfPqVAPmtG/0C
+v4yRHYFeMx/TMmBqn7Bz1cgIyXxRScmNhMjuzLSo131Lvr3tE/Q4en7XM4o1
+9vSRnyskT/e1CkHz71FOkD0jwrHE4N42ISTu7motJ5+REvu1swefz//XidX1
+JiRkqDTPLqhTiFU613WKZp8Sz1tRmWE9QhxuDGS0a7aQ1fkMH947Ic6u+LCB
+wW4iE1mRgyVzQoyMjb1LlN0n2p3WsXYKFJJaOj4unhATW91+3QpFCqYFf40X
+z9aSkMztLlXKFPb6xCh1aN4jUoFpUf0CCtX3aaZMdhWpSm4Ok+pTaNAzLTkv
+KyUvGuNU9hlQKG16XVM6W0JGlR1u9BhSGDhzs0mqeYss419r7zem4DZgM2jJ
+LiS/xkc4DDMpWPnGOAhk18idumWSUBYF4UPa7leaOaRtti941JLCxLILx2zZ
+IqLKdRONW817h222XpUJiEXtjF308nlf9YZYZ3Yywb8VT6ZXUODQRSH3ZHHE
+1+lIANd23uN6tGhSFkaiY4yn5+wojOypNjnKEHD+A0m3QUs=
+        "]]}, {
+       Directive[
+        Opacity[1.], 
+        RGBColor[0.880722, 0.611041, 0.142051], 
+        AbsoluteThickness[1.6]], 
+       LineBox[CompressedData["
+1:eJwVzHk4lAkAx/GhBrkKw7vOHFlHQqVI8v5Wu8I+0iE7KLXC1q4jSkxMYUgk
+5jW1I4RnVQq1riWtlunaJk1CKEfP2KEsCpX7mG3/+D7f/z5GgRF7gmVpNJrn
+l/5/y9V4I530aedv2lycaDQxKdEvnnrK7yBz8njCVhUxOdwd/k8ef5AcCxrw
+KdYVk2H13sxk/iRZMJ0S6WovJn+/sYMXy6djVk94PSNcTO4yFFRE8TVR+ZOX
+mnafmDTsZTdG8E1htOj/dv3dflLBsdc1nL8JMubR3MMnJCRd0YU9eMYVEo/I
+OsuN70jd5ntuD2p3oSmGlXCkapjU7tcJMlH3gWduzHUtww9k/o722MZ+f0gf
+FnoxRsfJXueD0Yolh9AhWHGFeeMjaZUku3Yv/zC2XnvV/jztMxnx/rubElYI
+4jjGW9iBUyS7ybjzheVR1IZEjYXozpCirbekPZqh4NiaZSXNzpL/GrR2bW8J
+h6e0/8zrunly4aJHA+veMUw8IQqPhC2S18KXnT9kGwVTVlWJhZuUtFtQqIxO
+Pw4r/k0aL5GGgQPBHZdloqESbGVcGimDzHa1N/2RJ+FfMep34IAsDBYVnZnC
+GJgv2ThZb1mGljm//L5tLGxrNFXPMVuOkPLp3dTlU2hNKuCulqPDYMMI3Vs9
+HrfqhcswTUdLs3WBYzIbU2EbMhckcgjRbrzg1XcaDWsMBJ1N8sjSb79Xb5GA
+ZzsbhtwrFBCgECYOfJUAv7i+O91ZK2C5aD15hZOIfaZORfK/KEJ+v17aoW1J
+yHHxjBcxldDJqHC7O5wEv8B+WuVmZdTaR6TmXecgaNLs1DozFfCCfO6oHkxG
+D71c0VVDFYdHJAxtpRS0flW9PX5MFdt788dLH6VAtTA08vs3K6FltjDdfvws
+BnkvTfIDVuFtHGci0yAVc79SueLmVfjbcfPPrV2pqG4vOR/pooa8vVmqZcnn
+UEZJd6lVquFMp8YGZaRhR1oFd9FcHT7VzonLx9JgIlt8dSZHHZa51P3M3HT8
+scXuoUBOA6ojKzlF3ucxXGoQ0MXWwOAluwh32QwcvOLxbH5UA6LS5G7WXxlg
+CVtqQoMZqBIu2DvFXIB7zacbZT0MpLvoCi6ZZIJp6Bs5666JKNNg4ck3mVB+
+TNTwBJrwDNy3+CEjC0ujRLPTei1kv6ylFnS5KGmrfV9doAW5W8ygR7FcfJq4
+nR6jSeBEleiZbwsXCdlD8+7JBLgTScG9L7gQPe9udzhLoNzWYSmgjQsdJVGZ
+2TkCA7d/swnq4KKaU+lPzyDgXRaTHd7DxbsTp/5s4hHYdNWIyXnHxc4flOPs
+iwlMXYqWlEu50NOznVtzn4B6h2W8jQyFo0zjNo2HBKwZYkaVLIXai4xS2ccE
+QrI9XOvoFLxUZn3FQgKdmatvCpQocJYE9XmtBOpSheGdBIVh8V6Wej+Bl49P
+y/tqU3DQd90tIyEwTrcr6tGhkOLrYDE+QMA8uaBVrE9hdZvea9EQgZyE43Yj
+JhT2PBh0SBsnUNNoLgozpVAo7VoV+5HAi6W+4PGvKYxufToU8pmAAtuNP2nx
+xau5nfPtDIE1DYs2sWsptI0XHds4RwDzVU/mrL7463huxgsE9jse+ZFtTSH0
+aIqh2hKBWJb+nNSGwp1rMTNSKYH/AK1IP/M=
+        "]]}}}, {
+    DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+     AxesLabel -> {
+       FormBox["\"Quantity\"", TraditionalForm], 
+       FormBox["\"Price\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+     DisplayFunction :> Identity, Epilog -> {
+       RGBColor[0, 0, 1], 
+       PointSize[Large], 
+       PointBox[{{500, 3}}]}, Frame -> {{False, False}, {False, False}}, 
+     FrameLabel -> {{None, None}, {None, None}}, 
+     FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+     GridLines -> {{{500, 
+         RGBColor[1, 0, 0]}}, None}, GridLinesStyle -> Directive[
+       GrayLevel[0.5], 
+       Dashing[{0, Small}], 
+       Thickness[Large]], 
+     Method -> {
+      "DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None}, 
+     PlotRange -> {{0., 1099.9999775510205`}, {0, 10.999999775510204`}}, 
+     PlotRangeClipping -> True, PlotRangePadding -> {{
+        Scaled[0.02], 
+        Scaled[0.02]}, {0, 
+        Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}],FormBox[
+    FormBox[
+     TemplateBox[{"\"Demand\"", "\"Supply\""}, "LineLegend", 
+      DisplayFunction -> (FormBox[
+        StyleBox[
+         StyleBox[
+          PaneBox[
+           TagBox[
+            GridBox[{{
+               TagBox[
+                GridBox[{{
+                   GraphicsBox[{{
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.368417, 0.506779, 0.709798], 
+                    AbsoluteThickness[1.6]], {
+                    LineBox[{{0, 10}, {20, 10}}]}}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.368417, 0.506779, 0.709798], 
+                    AbsoluteThickness[1.6]], {}}}, AspectRatio -> Full, 
+                    ImageSize -> {20, 10}, PlotRangePadding -> None, 
+                    ImagePadding -> Automatic, 
+                    BaselinePosition -> (Scaled[0.1] -> Baseline)], #}, {
+                   GraphicsBox[{{
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.880722, 0.611041, 0.142051], 
+                    AbsoluteThickness[1.6]], {
+                    LineBox[{{0, 10}, {20, 10}}]}}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    Opacity[1.], 
+                    RGBColor[0.880722, 0.611041, 0.142051], 
+                    AbsoluteThickness[1.6]], {}}}, AspectRatio -> Full, 
+                    ImageSize -> {20, 10}, PlotRangePadding -> None, 
+                    ImagePadding -> Automatic, 
+                    BaselinePosition -> (Scaled[0.1] -> Baseline)], #2}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {Center, Left}, "Rows" -> {{Baseline}}}, 
+                 AutoDelete -> False, 
+                 GridBoxDividers -> {
+                  "Columns" -> {{False}}, "Rows" -> {{False}}}, 
+                 GridBoxItemSize -> {"Columns" -> {{All}}, "Rows" -> {{All}}},
+                  GridBoxSpacings -> {
+                  "Columns" -> {{0.5}}, "Rows" -> {{0.8}}}], "Grid"]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{1}}, "Rows" -> {{0}}}], 
+            "Grid"], Alignment -> Left, AppearanceElements -> None, 
+           ImageMargins -> {{5, 5}, {5, 5}}, ImageSizeAction -> 
+           "ResizeToFit"], LineIndent -> 0, StripOnInput -> False], {
+         FontFamily -> "Arial"}, Background -> Automatic, StripOnInput -> 
+         False], TraditionalForm]& ), 
+      InterpretationFunction :> (RowBox[{"LineLegend", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{
+               RowBox[{"Directive", "[", 
+                 RowBox[{
+                   RowBox[{"Opacity", "[", "1.`", "]"}], ",", 
+                   InterpretationBox[
+                    ButtonBox[
+                    TooltipBox[
+                    RowBox[{
+                    GraphicsBox[{{
+                    GrayLevel[0], 
+                    RectangleBox[{0, 0}]}, {
+                    GrayLevel[0], 
+                    RectangleBox[{1, -1}]}, {
+                    RGBColor[0.368417, 0.506779, 0.709798], 
+                    RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
+                    True, FrameStyle -> 
+                    RGBColor[
+                    0.24561133333333335`, 0.3378526666666667, 
+                    0.4731986666666667], FrameTicks -> None, PlotRangePadding -> 
+                    None, ImageSize -> 
+                    Dynamic[{
+                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                    "\[InvisibleSpace]"}], 
+                    "RGBColor[0.368417, 0.506779, 0.709798]"], Appearance -> 
+                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
+                    DefaultBaseStyle -> {}, ButtonFunction :> 
+                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    If[
+                    Not[
+                    AbsoluteCurrentValue["Deployed"]], 
+                    SelectionMove[Typeset`box$, All, Expression]; 
+                    FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+                    FrontEnd`Private`$ColorSelectorInitialColor = 
+                    RGBColor[0.368417, 0.506779, 0.709798]; 
+                    FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+                    MathLink`CallFrontEnd[
+                    FrontEnd`AttachCell[Typeset`box$, 
+                    FrontEndResource["RGBColorValueSelector"], {
+                    0, {Left, Bottom}}, {Left, Top}, 
+                    "ClosingActions" -> {
+                    "SelectionDeparture", "ParentChanged", 
+                    "EvaluatorQuit"}]]]], BaseStyle -> Inherited, Evaluator -> 
+                    Automatic, Method -> "Preemptive"], 
+                    RGBColor[0.368417, 0.506779, 0.709798], Editable -> False,
+                     Selectable -> False], ",", 
+                   RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}]}], "]"}], 
+               ",", 
+               RowBox[{"Directive", "[", 
+                 RowBox[{
+                   RowBox[{"Opacity", "[", "1.`", "]"}], ",", 
+                   InterpretationBox[
+                    ButtonBox[
+                    TooltipBox[
+                    RowBox[{
+                    GraphicsBox[{{
+                    GrayLevel[0], 
+                    RectangleBox[{0, 0}]}, {
+                    GrayLevel[0], 
+                    RectangleBox[{1, -1}]}, {
+                    RGBColor[0.880722, 0.611041, 0.142051], 
+                    RectangleBox[{0, -1}, {2, 1}]}}, AspectRatio -> 1, Frame -> 
+                    True, FrameStyle -> 
+                    RGBColor[
+                    0.587148, 0.40736066666666665`, 0.09470066666666668], 
+                    FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
+                    Dynamic[{
+                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                    "\[InvisibleSpace]"}], 
+                    "RGBColor[0.880722, 0.611041, 0.142051]"], Appearance -> 
+                    None, BaseStyle -> {}, BaselinePosition -> Baseline, 
+                    DefaultBaseStyle -> {}, ButtonFunction :> 
+                    With[{Typeset`box$ = EvaluationBox[]}, 
+                    If[
+                    Not[
+                    AbsoluteCurrentValue["Deployed"]], 
+                    SelectionMove[Typeset`box$, All, Expression]; 
+                    FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+                    FrontEnd`Private`$ColorSelectorInitialColor = 
+                    RGBColor[0.880722, 0.611041, 0.142051]; 
+                    FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+                    MathLink`CallFrontEnd[
+                    FrontEnd`AttachCell[Typeset`box$, 
+                    FrontEndResource["RGBColorValueSelector"], {
+                    0, {Left, Bottom}}, {Left, Top}, 
+                    "ClosingActions" -> {
+                    "SelectionDeparture", "ParentChanged", 
+                    "EvaluatorQuit"}]]]], BaseStyle -> Inherited, Evaluator -> 
+                    Automatic, Method -> "Preemptive"], 
+                    RGBColor[0.880722, 0.611041, 0.142051], Editable -> False,
+                     Selectable -> False], ",", 
+                   RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}]}], "]"}]}],
+              "}"}], ",", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2}], "}"}], ",", 
+           RowBox[{"LabelStyle", "\[Rule]", 
+             RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"LegendLayout", "\[Rule]", "\"Column\""}]}], "]"}]& ), 
+      Editable -> True], TraditionalForm], TraditionalForm]},
+  "Legended",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"], 
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, GridBoxItemSize -> Automatic, 
+    BaselinePosition -> {1, 1}]& ),
+  Editable->True,
+  InterpretationFunction->(RowBox[{"Legended", "[", 
+     RowBox[{#, ",", 
+       RowBox[{"Placed", "[", 
+         RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.821254456652155*^9, 3.821254636079133*^9, 
+  3.821254870639572*^9, 3.82135110703745*^9, 3.8213542692378125`*^9, 
+  3.821354322220654*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Price", " ", "control", 
+   RowBox[{"(", "minimum", ")"}]}], "Subsection"]], "Input",
+ CellChangeTimes->{{3.8212542420908513`*^9, 3.8212542445721445`*^9}, {
+  3.8212549742937202`*^9, 3.82125500066272*^9}, {3.8213510428918996`*^9, 
+  3.8213510511947083`*^9}, {3.8213545525623045`*^9, 3.8213545553383675`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1300"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", "a"}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"12", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", "a"}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"100.`", " ", 
+                RowBox[{"(", 
+                 RowBox[{"1.8`", "\[VeryThinSpace]", "-", 
+                  RowBox[{"11.`", " ", "a"}]}], ")"}]}], "a"]}], ",", "1.8"}],
+             "}"}]}], "}"}], "]"}]}], "}"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", " ", "Dashed", 
+        ",", "Dashed"}], "}"}]}], ",", " ", 
+     RowBox[{"GridLinesStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Gray", ",", " ", "Dotted", ",", " ", "Thick"}], "]"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.75", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.821351127020722*^9, 3.821351151000271*^9}, {
+   3.821353972400522*^9, 3.821354007844934*^9}, 3.821354101269664*^9, 
+   3.8213543974224815`*^9, {3.821354630542172*^9, 3.821354630961728*^9}, {
+   3.8213546795356846`*^9, 3.821354701946398*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.75, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.75, 1}}, Typeset`size$$ = {
+    499., {110., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`a$95662$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.75}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$95662$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 1.8}, {$CellContext`q, 0, 1300}, 
+        PlotLegends -> {"Demand", "Supply", "Price control"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 (-1 + 23 $CellContext`a$$)/(
+             1 + $CellContext`a$$), -(
+              12 (-1 + $CellContext`a$$) $CellContext`a$$/(
+              1 + $CellContext`a$$))}, {-(
+              100. (1.8 - 11. $CellContext`a$$)/$CellContext`a$$), 1.8}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed, Dashed}, 
+        GridLinesStyle -> Directive[Gray, Dotted, Thick]], 
+      "Specifications" :> {{$CellContext`a$$, 0.75, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.821351153816313*^9, 3.821354104745632*^9, 3.821354398164923*^9, {
+   3.8213546813620567`*^9, 3.821354703441308*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], "\[Equal]", " ", 
+    "1.8"}], ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.821354652350523*^9, 3.8213546961956706`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"q", "\[Rule]", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"100.`", " ", 
+       RowBox[{"(", 
+        RowBox[{"1.8`", "\[VeryThinSpace]", "-", 
+         RowBox[{"11.`", " ", "a"}]}], ")"}]}], "a"]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.821354671639372*^9, 3.8213546967139378`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Price", " ", "control", 
+   RowBox[{"(", "maximum", ")"}]}], "Subsection"]], "Input",
+ CellChangeTimes->{{3.8213540442767954`*^9, 3.8213540917299566`*^9}, {
+  3.821354566865505*^9, 3.8213545787641344`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1300"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", "a"}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"12", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", "a"}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"200.`", " ", 
+               RowBox[{"(", 
+                RowBox[{"1.8`", "\[VeryThinSpace]", "-", 
+                 RowBox[{"0.5`", " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+                    RowBox[{"1.`", " ", "a"}]}], ")"}]}]}], ")"}]}], 
+              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+               RowBox[{"1.`", " ", "a"}]}]], ",", "1.8"}], "}"}]}], "}"}], 
+         "]"}]}], "}"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", " ", "Dashed", 
+        ",", "Dashed"}], "}"}]}], ",", " ", 
+     RowBox[{"GridLinesStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Gray", ",", " ", "Dotted", ",", " ", "Thick"}], "]"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.5", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.821354582750393*^9, 3.8213545888886104`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.5, 1}}, Typeset`size$$ = {499., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$96847$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$96847$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 1.8}, {$CellContext`q, 0, 1300}, 
+        PlotLegends -> {"Demand", "Supply", "Price control"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 (-1 + 23 $CellContext`a$$)/(
+             1 + $CellContext`a$$), -(
+              12 (-1 + $CellContext`a$$) $CellContext`a$$/(
+              1 + $CellContext`a$$))}, {
+            200. (1.8 - 0.5 (1. - 1. $CellContext`a$$))/(1. - 
+             1. $CellContext`a$$), 1.8}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed, Dashed}, 
+        GridLinesStyle -> Directive[Gray, Dotted, Thick]], 
+      "Specifications" :> {{$CellContext`a$$, 0.5, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8213547842553434`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.82135455978625*^9, 3.8213545601328287`*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Monopsony", " ", "and", "  ", "control"}], "Subsection"]], "Input",
+ CellChangeTimes->{{3.821351173689077*^9, 3.821351195689975*^9}, {
+   3.821351235739335*^9, 3.8213512384976377`*^9}, 3.8213513010014696`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8", ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", 
+          RowBox[{"q", "*", "2"}]}], "100"], "*", "a"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1100"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\"", ",", " ", "\"\<Monopsony\>\""}], "}"}]}], 
+     ",", " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", 
+               RowBox[{"3", " ", "a"}]}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"13", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", 
+                RowBox[{"3", " ", "a"}]}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"200.`", " ", 
+               RowBox[{"(", 
+                RowBox[{"1.8`", "\[VeryThinSpace]", "-", 
+                 RowBox[{"0.5`", " ", 
+                  RowBox[{"(", 
+                   RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+                    RowBox[{"1.`", " ", "a"}]}], ")"}]}]}], ")"}]}], 
+              RowBox[{"1.`", "\[VeryThinSpace]", "-", 
+               RowBox[{"1.`", " ", "a"}]}]], ",", "1.8"}], "}"}]}], "}"}], 
+         "]"}]}], "}"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", " ", "Dashed", 
+        ",", "Dashed"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.5", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8213512503870573`*^9, 3.821351287197895*^9}, 
+   3.821361931360345*^9, 3.821362014241272*^9, 3.8213620677289515`*^9, {
+   3.8213621539109917`*^9, 3.8213621542878776`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.5, 1}}, Typeset`size$$ = {499., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$99714$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$99714$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 
+         1.8, ((1100 - $CellContext`q 2)/
+          100) $CellContext`a$$}, {$CellContext`q, 0, 1100}, 
+        PlotLegends -> {"Demand", "Supply", "Price control", "Monopsony"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 (-1 + 23 $CellContext`a$$)/(1 + 
+             3 $CellContext`a$$), -(
+              13 (-1 + $CellContext`a$$) $CellContext`a$$/(1 + 
+              3 $CellContext`a$$))}, {
+            200. (1.8 - 0.5 (1. - 1. $CellContext`a$$))/(1. - 
+             1. $CellContext`a$$), 1.8}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed, Dashed}],
+       "Specifications" :> {{$CellContext`a$$, 0.5, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.821351210052908*^9, 3.8213512935382023`*^9, 
+  3.8213619333642063`*^9, 3.821362068621275*^9, 3.821362155411419*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"1100", "-", 
+       RowBox[{"q", "*", "2"}]}], "100"], "*", "a"}], "\[Equal]", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"q", "+", "100"}], "200"], "*", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "a"}], ")"}]}]}], ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.821361983214052*^9, 3.8213620048493214`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"q", "\[Rule]", 
+    FractionBox[
+     RowBox[{"100", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"23", " ", "a"}]}], ")"}]}], 
+     RowBox[{"1", "+", 
+      RowBox[{"3", " ", "a"}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.821362006511154*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.821362032628441*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"100", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", 
+          RowBox[{"23", " ", "a"}]}], ")"}]}], 
+       RowBox[{"1", "+", 
+        RowBox[{"3", " ", "a"}]}]], ")"}], "+", "100"}], "200"], "*", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", "a"}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.821362035089783*^9, 3.8213620565167875`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"13", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+   RowBox[{"1", "+", 
+    RowBox[{"3", " ", "a"}]}]]}]], "Output",
+ CellChangeTimes->{3.821362057870736*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Monopoly", " ", "and", "  ", "control"}], "Subsection"]], "Input",
+ CellChangeTimes->{
+  3.821351206546378*^9, {3.8213513131320744`*^9, 3.8213513166693487`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"1100", "-", "q"}], "100"], "*", "a"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"q", "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}], ",", " ", "1.8", ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"q", "*", "2"}], "+", "100"}], "200"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "a"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"q", ",", "0", ",", " ", "1100"}], "}"}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Demand\>\"", ",", " ", "\"\<Supply\>\"", ",", " ", 
+        "\"\<Price control\>\"", ",", " ", "\"\<Monopoly\>\""}], "}"}]}], ",",
+      " ", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "Automatic"}], "}"}]}], ",", " ", 
+     RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", " ", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"PointSize", "@", "Large"}], ",", 
+        RowBox[{"Point", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"100", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"23", " ", "a"}]}], ")"}]}], 
+              RowBox[{"1", "+", "a"}]], ",", 
+             RowBox[{"-", 
+              FractionBox[
+               RowBox[{"12", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "a"}], 
+               RowBox[{"1", "+", "a"}]]}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+     " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Quantity\>\"", ",", "\"\<Price\>\""}], "}"}]}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", " ", "Automatic", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", " ", "Dotted"}], "}"}], ",", "Dashed"}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0.5", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8213513264311047`*^9, 3.8213513417084303`*^9}, {
+  3.82136240627302*^9, 3.821362407117076*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0.5, 1}}, Typeset`size$$ = {499., {110., 115.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$100103$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0.5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$100103$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{((1100 - $CellContext`q)/
+          100) $CellContext`a$$, (($CellContext`q + 100)/200) (
+          1 - $CellContext`a$$), 
+         1.8, (($CellContext`q 2 + 100)/200) (
+          1 - $CellContext`a$$)}, {$CellContext`q, 0, 1100}, 
+        PlotLegends -> {"Demand", "Supply", "Price control", "Monopoly"}, 
+        PlotRange -> {0, Automatic}, FillingStyle -> Automatic, 
+        Epilog -> {Blue, 
+          PointSize[Large], 
+          
+          Point[{{100 (-1 + 23 $CellContext`a$$)/(
+             1 + $CellContext`a$$), -(
+              12 (-1 + $CellContext`a$$) $CellContext`a$$/(
+              1 + $CellContext`a$$))}, {0, 0}}]}, 
+        AxesLabel -> {"Quantity", "Price"}, 
+        PlotStyle -> {Automatic, Automatic, {Thick, Dotted}, Dashed}], 
+      "Specifications" :> {{$CellContext`a$$, 0.5, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{550., {157., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.8213513443789043`*^9, 3.8213624090625415`*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4283, 101, 179, "Input"],
+Cell[4866, 125, 3408, 64, 337, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8311, 194, 3234, 87, 179, "Input"],
+Cell[11548, 283, 2541, 53, 337, "Output"]
+}, Open  ]],
+Cell[14104, 339, 345, 4, 43, "Text"],
+Cell[CellGroupData[{
+Cell[14474, 347, 1938, 50, 104, "Input"],
+Cell[16415, 399, 14302, 289, 240, "Output"]
+}, Open  ]],
+Cell[30732, 691, 344, 6, 44, "Input"],
+Cell[CellGroupData[{
+Cell[31101, 701, 2942, 76, 158, "Input"],
+Cell[34046, 779, 2385, 49, 370, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36468, 833, 273, 8, 53, "Input"],
+Cell[36744, 843, 362, 11, 55, "Output"]
+}, Open  ]],
+Cell[37121, 857, 242, 5, 44, "Input"],
+Cell[CellGroupData[{
+Cell[37388, 866, 2947, 77, 160, "Input"],
+Cell[40338, 945, 2313, 48, 337, "Output"]
+}, Open  ]],
+Cell[42666, 996, 93, 1, 31, InheritFromParent],
+Cell[42762, 999, 245, 4, 44, "Input"],
+Cell[CellGroupData[{
+Cell[43032, 1007, 3149, 82, 151, "Input"],
+Cell[46184, 1091, 2435, 50, 337, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48656, 1146, 427, 13, 53, "Input"],
+Cell[49086, 1161, 358, 12, 56, "Output"]
+}, Open  ]],
+Cell[49459, 1176, 68, 1, 31, "Input"],
+Cell[CellGroupData[{
+Cell[49552, 1181, 507, 16, 65, "Input"],
+Cell[50062, 1199, 265, 9, 56, "Output"]
+}, Open  ]],
+Cell[50342, 1211, 197, 4, 44, "Input"],
+Cell[CellGroupData[{
+Cell[50564, 1219, 2583, 71, 129, "Input"],
+Cell[53150, 1292, 2262, 47, 337, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

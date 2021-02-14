@@ -210,24 +210,28 @@ urlcolor={blue!50!black}}
 
 \begin{document}
 
-A virus has a tradeoff between infection and lethality. Though the virus is not a rational agent which chooses these two quantities, it is useful to think of what an agent who was designing the virus would choose if their goal was to affect the maximum number of agents. It is not strictly possible to say that a virus which selects for this optimal infection/lethality ratio would be favored from an evolutionary point of view since the death of host would entail the eventual death of the virus. 
+A virus has a tradeoff between infection and lethality. Though the virus is not a rational agent which chooses these two quantities, it is useful to think of what an agent who was designing the virus would choose if their goal was to maximize the number of deaths . It is not strictly possible to say that a virus which selects for this optimal infection/lethality ratio would be favored from an evolutionary point of view since the death of host would entail the eventual death of the virus. 
 
-Indeed it seems that from a strictly evolutionary view a virus would want to simply maximize it's infectivity and minimize it's lethality with one exception. Maximizing infectivity would cause the virus to exist in the maximum possible number of hosts. For lethality to be part of the optimal strategy of the virus, it must be that it serves the role of maximizing survival. It could be that within hosts, a virus has competition, and to properly survive the competitive struggle with other mechanisms the virus needs to be lethal. Alternatively, the virus may play an important role outside of the body, for instance if the virus does not play the role of population control, there be over-population and extinction, resulting in a higher probability of the virus not surviving. 
+Let us first stipulate a world. All agents are either healthy, infected, or dead, and there is no cure avaiallable and each period infected agents have some chance of dying, whilst healthy agents have some chance of becoming infected. There is no cure, and the dead cannot infect the healthy. 
+
+The virus optimal behavior depends on the amount of time it has left to kill it's agents. If a virus has unlimited time to continue infecting agents, then the most dangerous virus would, ironically, minimizes lethality, and any non-zero level of infectivity would eventually kill all agents. Maximizing infectivity would not affect the number of hosts to be infected but it would affect the expected time until all agents were dead. So for lethality to be a part of the optimal virus strategy it must be either that the virus agent has a time preference or that there is time pressure to kill quickly. In this paper we choose the latter approach and give the virus time pressure by having an exogenous probability of vaccination\footnote{alternatively one could also just change the optimand of the virus to growth rate}.
+
+From a biological point of view, it may be that a virus would want lethality because it would be correlated with other attributes that help it maximize survival. It could be that within hosts, a virus has competition, and to properly survive the competitive struggle with other mechanisms the virus needs to be lethal\footnote{Alternatively, if the virus was not aiming to maximize the number of deaths but was instead maximizing survival, then it may want to have lethality for a population control function}.
 
 The main ideas explored in this paper is that a virus which wants to maximize the number of deaths will adapt it's strategy to the environment. We will aim to illustrate the example with a simple 2 person illustration and give proofs for the general cases in the appendix. 
 
-The main results is that the expected number of deaths is a monotonic function of transmission rate, that is, a virus will always maximize it's transmission rate. This is an intuitive idea, the virus has very little reason not to maximize the speed of it's infection, both from an evolutionary reasons and as agent maximizing the number of deaths. However, as we will see, if the virus only has a limited amount of reasources to spend on either infection or lethality, there is some tradeoff to be made. 
+The main results is that the expected number of deaths is a monotonic function of transmission rate, that is, a virus will always maximize it's transmission rate. This is an intuitive idea, the virus has very little reason not to maximize the speed of it's infection, both from an evolutionary reasons and as agent maximizing the number of deaths. However, as we will see, if the virus only has a limited amount of resources to spend on either infection or lethality, there is some tradeoff to be made. 
 
 On the other hand a virus will adjust it's lethality based on the vaccination rate. 
 
 
 \section{Dynamics}
 
-On the other hand, if a virus can adapt, that is have a strategy for each markovian state we can also produce a similar analysis. Specifically we can show that the virus will increase death rate 
+On the other hand, if a virus can adapt, that is, have a strategy for each markovian state we can also produce a similar analysis. Specifically we can show that the virus will increase the death rate 
 
 \section{Model}
 
-We assume there is a complete graph, each node represents an individual potential host whilst the edges represent the fact that these hosts have connections to other hosts. Each host can take on three states, healthy, infected, and dead. A healthy host cannot spread the virus but is vulnerable to being infected. We represent the total number of agents in the graph by $N$, the number of infected by $\alpha$ and the number of dead by $\beta$. As sucht the number of healthy people is given by $N-\alpha-\beta$. 
+We assume there is a complete graph, each node represents an individual potential host whilst the edges represent the fact that these hosts have connections to other hosts. Each host can take on three states, healthy, infected, and dead. A healthy host cannot spread the virus but is vulnerable to being infected. We represent the total number of agents in the graph by $N$, the number of infected by $\alpha$ and the number of dead by $\beta$. As such the number of healthy people is given by $N-\alpha-\beta$. 
 
 An infected host has an independent has an independent probability, $p$ of sprading the virus to it's neighbors, which is every healthy patient. The interpretation of independent probability is that each host can spread to any given agent in such a way that the more infected agents there exists, the higher is the probability that a healthy agent will be infected. 
 
@@ -259,9 +263,8 @@ $E_{N+t}(\alpha +t,\beta +t, p, d)=E_{N}(\alpha , \beta ,p, d) + t$.
 \end{assumption}
 
 This property is intuitive, it says that only the absolute number of infected hosts who are alive and the number of healthy hosts matter. So if initially there was a population of $100$ but now $95$ of them have died and there remains a single infected hosts and $4$ healthy hosts, this is fundamentally the same situation as if the graph initially had $10$ hosts and $5$ had died, whilst $1$ infected host remains. The only difference between these two situations is the stock of the dead hosts and a virus which is optimizing at this point in time would have the same strategy in both situation. 
- 
 
-With $\alpha$ people: 
+With 1 person infected out of N, this looks like the following: 
 
 \begin{align*}
 E_N(1,\beta,p,d) = d + \sum_{i=1}^{N-1}p^i(1-p)^{N-i-1}\binom{N-1}{i}E(i+1,0,p,d ) + q \beta

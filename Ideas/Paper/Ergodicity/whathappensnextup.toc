@@ -1,0 +1,5 @@
+\beamer@subsectionintoc {0}{1}{The ergodic approach}{2}{0}{0}
+\beamer@subsectionintoc {0}{2}{The discounting and ergodicty}{3}{0}{0}
+\beamer@subsectionintoc {0}{3}{The model}{5}{0}{0}
+\beamer@subsubsectionintoc {0}{3}{1}{Example}{12}{0}{0}
+\beamer@subsectionintoc {0}{4}{Motivating example}{12}{0}{0}

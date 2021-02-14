@@ -1,0 +1,409 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15859,        399]
+NotebookOptionsPosition[     14948,        366]
+NotebookOutlinePosition[     15290,        381]
+CellTagsIndexPosition[     15247,        378]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Bob", " ", "\[Equal]", "  ", 
+  RowBox[{"PDF", "[", 
+   RowBox[{
+    RowBox[{"UniformDistribution", "[", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}], "]"}], ",", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.811681695403881*^9, 3.8116817000068297`*^9}, {
+   3.8116818132126646`*^9, 3.8116818702251863`*^9}, {3.8116819102487993`*^9, 
+   3.8116819193810177`*^9}, 3.8116819571442957`*^9, {3.8116820429924803`*^9, 
+   3.8116820490796847`*^9}, {3.8116820825171814`*^9, 3.8116821021776433`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Bob", "\[Equal]", 
+  RowBox[{"(", 
+   TagBox[GridBox[{
+      {"\[Piecewise]", GridBox[{
+         {"1", 
+          RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "1"}]},
+         {"0", 
+          TagBox["True",
+           "PiecewiseDefault",
+           AutoDelete->True]}
+        },
+        AllowedDimensions->{2, Automatic},
+        Editable->True,
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}},
+           "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.84]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}},
+        Selectable->True]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.35]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    "Piecewise",
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], ")"}]}]], "Output",
+ CellChangeTimes->{{3.8116820947592936`*^9, 3.8116821029801817`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"PDF", "[", 
+       RowBox[{
+        RowBox[{"UniformDistribution", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], "]"}], ",", "x"}], "]"}], ",", 
+      RowBox[{"2", "*", "x"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"Filling", "\[Rule]", "Axis"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8116819482269354`*^9, 3.8116819521456623`*^9}, {
+   3.8116821352307925`*^9, 3.8116822054680076`*^9}, 3.8116822409011803`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJxl1n9M1HUcx/EDtkpRRi6xc06DyE0d6RDaqORDRRoZGQeENSPHD5eT0ha2
+qLZGeC4DDYJZEjrsgMoYHEFFhd4pN8GSDo47udHFcXj8vvjIxYER8OnH+8Pr
+O+u7fffYa58/v3t+9wnNOKjJ9lepVNq/3398MnukyziaGqv697nBsnK5+pi6
+jC3uO8oSzt6YrML+tjNyx4619di7Cxy9rYVN2AcbXov4eOo7bG/xtXY/PwN2
++8XLBvPDl7D35yUsf85jwr64JFLUvtyGXaMzLay+70fsuJDznybXXcWOaHM0
+X95oxrbGJU98MdGJnbP0gMW2xYL9kz3tfNCJbuzk7btdbrcV+4HKwrTK8GvY
+/Qul1pfe6cEeTDDrQlrt2PpTzryu0F7s6vcCjm148xdsX+bzY/t+cGAHxh/V
+NKzqw347eHCZa48Te9mFTaqexH7sba/vmm+dVXZFVZHu3goXdnpqVMeSnQPY
+X9uySy9MKzvmqt5/6OR17Hse3+crjXdjR0dFlzQNKdvpPX5Fpx3E9mxN0qoj
+h7DXj0eM+XUr2xR+2HIofxj7A6stUxM+gs2TjSX+JmV/lbrysZhXR7F1HQWn
+B1aMYc+07XlrxSVl95cYfMGvjGNPdz2kfjfIg32oLMyY16LsVR1hwe7035Tv
+a6udW7OgbO+LZ3Mc5yawDXvrtUFPceyP1gX6hFB2QX7hG++rj2Bvinth2+01
+yvliP2R27GI/ZBX6IZvQD2lAP6QJ/ZBX0A9pRj+kBf2QVvRD9qAfshf9kA70
+QzrRD9mPfsgB9ENeRz+kG/2QQ+iHHEY/5Aj6IcfQDzmOfkgP+iEn0A/J0Q+p
+9EMq/ZCT6If0oh/Si37I39EPOYV+yCn0Q/rQDzmNfshp9EPOoB/yJvohb6If
+8g/0Q86iH3IW/ZB/oh9yDv2Qc+iHnEc/5Dz6IRfQDynQDynQD1mGfkjBjJ+0
+Rh9X50qPsMPPHHUtzeNSwVybo04FdHOpYA92btV/qM6S5rJye3ljUQaXCnZb
+8xMHtC1cKljLZ+va8ke5VLD7Y+6qPq1OkWax2jXVFYlpXCrY3XOalO0NXCrY
+z+Mb9I/2calg5zJX9hmnuFSwkEDbiUZ1vDSFfRO78c66JC4VLGytvb3mSy4V
+zL68Plxn51LBGrXlmlDOpYJVPlK8f+8slwo2XPdshlMdJY1n35tzdvY9zaWC
+ra9fHdDzOZcK5jgzmd5t41LBmkN+LUrycKlg1RaLrniGSwWr0Cdu3jLPpYLd
+eh9QqW79H/73vvD/878Atx+1nA==
+   "], {{{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], Opacity[0.2], EdgeForm[None], 
+      GraphicsGroupBox[
+       PolygonBox[{{1, 132, 133, 50, 52, 49, 48, 47, 46, 45, 44, 43, 42, 41, 
+        40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 
+        23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5,
+         4, 3, 2, 51}}]]}, {}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], Opacity[0.2], EdgeForm[None], 
+      GraphicsGroupBox[
+       PolygonBox[{{53, 130, 131, 102, 129, 122, 128, 116, 121, 127, 111, 115,
+         120, 126, 107, 110, 114, 119, 125, 104, 106, 109, 113, 118, 124, 101,
+         100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 
+        83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 
+        66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 103, 105, 108, 
+        112, 117, 123}}]]}, {}, {}, {}, {}, {}, {}}, {{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+      1.], LineBox[{1, 51, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 
+       34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 52, 
+       50}]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], AbsoluteThickness[1.6], Opacity[
+      1.], LineBox[{53, 123, 117, 112, 108, 105, 103, 54, 55, 56, 57, 58, 59, 
+       60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77,
+        78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 
+       95, 96, 97, 98, 99, 100, 101, 124, 118, 113, 109, 106, 104, 125, 119, 
+       114, 110, 107, 126, 120, 115, 111, 127, 121, 116, 128, 122, 129, 
+       102}]}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None, 
+    "AxesInFront" -> True},
+  PlotRange->{{0, 1}, {0., 1.9999999591836735`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8116819665089455`*^9, 3.811682144151428*^9, 
+  3.8116822077286716`*^9, 3.811682243531522*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", ":=", " ", 
+   RowBox[{"PDF", "[", 
+    RowBox[{
+     RowBox[{"UniformDistribution", "[", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}], "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", " ", ":=", "   ", 
+   FractionBox[
+    RowBox[{"x", "*", "g"}], 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{"x", "*", "g"}], " ", ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}]]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8116820636781683`*^9, 3.811682078491762*^9}, {
+  3.811682109133793*^9, 3.8116821095570745`*^9}, {3.811683256583173*^9, 
+  3.8116834878429246`*^9}, {3.811683528124522*^9, 3.8116837028768396`*^9}, {
+  3.8116837390844564`*^9, 3.8116837447264967`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"g", ",", "f"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"Filling", "\[Rule]", "Axis"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.811683624738099*^9, {3.811683681722922*^9, 3.811683683564413*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Integrate", "::", "ilim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid integration variable or limit(s) in \
+\[NoBreak]\\!\\({0.000020428571428571424`, 0, 1}\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Integrate/ilim\\\", \
+ButtonNote -> \\\"Integrate::ilim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836841211877`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NIntegrate", "::", "itraw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Raw object \[NoBreak]\\!\\(0.000020428571428571424`\\)\
+\[NoBreak] cannot be used as an iterator. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/itraw\\\", ButtonNote -> \
+\\\"NIntegrate::itraw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836841641607`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NIntegrate", "::", "itraw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Raw object \[NoBreak]\\!\\(0.000020428571428571424`\\)\
+\[NoBreak] cannot be used as an iterator. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/itraw\\\", ButtonNote -> \
+\\\"NIntegrate::itraw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836842051353`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Integrate", "::", "ilim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid integration variable or limit(s) in \
+\[NoBreak]\\!\\({0.02042859183673469`, 0, 1}\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Integrate/ilim\\\", \
+ButtonNote -> \\\"Integrate::ilim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836842361164`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NIntegrate", "::", "itraw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Raw object \[NoBreak]\\!\\(0.02042859183673469`\\)\
+\[NoBreak] cannot be used as an iterator. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/itraw\\\", ButtonNote -> \
+\\\"NIntegrate::itraw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836842750964`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(NIntegrate :: itraw\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.811683684297083*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Integrate", "::", "ilim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid integration variable or limit(s) in \
+\[NoBreak]\\!\\({0.04083675510204081`, 0, 1}\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Integrate/ilim\\\", \
+ButtonNote -> \\\"Integrate::ilim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.81168368431807*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Integrate \
+:: ilim\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8116836843380575`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAwA2IQ7ZX64uKBl6F2DGDwwT6l5L1kp+QUexifY4rnwg8f
+l8D52y8YubvLrYfzI5rv3DrcvQXOz99YrDvjy044/9OEaycYGffD+ScOHtt/
+3uYQnJ9Z6ckb+eYInH+Q0+j/mtzjcP6yxUf+SamegvMdxPYuCl53Bs7XPX5n
+xzGt83D+FYfgdyvfXYDzc7iyL101uATnn74Rvpev7zKcH+wW8fDJkytwvtmC
+7vAFKtfg/Af/Jl/JqL8O5z/1PL9Y7PANOH/DzPuVFxVvwflLO5g7Natuw/lf
+k6Nepe2+A+dzu7QFbRS/B+fXCDzleRhzH87n2afNcN33AZxvW+b/9/AvBH/O
+kp7FynMewvlxoSZnOb0fwflbr6ZO3vcNwbc8s4Hp2bTHcL6Ca9rXyS5P4HxT
+E9OJW54h+Pc/9Z5c3PoUzn9jHNgqafQMzld7rfuK8TKCf0Sl9FJB43M4v//K
+1eQglRdw/vvgAxOZjiD4m0JFnS0LX8L5i882z30k9ArO/348plroEIL/YOL+
+rwJ5r+H8bxetJZv43sD5BVOUDlTuQfDFzyoJPIl7i4jfq2v+yPxD8D/FL8y5
+s+odnL8/YX0rn897OH+6PPfX//8R/ObG7oouyRY4X9sh1pZ9GUIeNf8wMKDq
+Z2AAAPyMIxc=
+   "], {{{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], Opacity[0.2], EdgeForm[None], 
+      GraphicsGroupBox[
+       PolygonBox[{{1, 53, 54, 50, 52, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40,
+         39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 
+        22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 
+        3, 2, 51}}]]}, {}, {}, {}, {}, {}, {}, {}, {}}, {{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+      1.], LineBox[{1, 51, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 
+       34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 52, 
+       50}]}}}],
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None, 
+    "AxesInFront" -> True},
+  PlotRange->{{0, 1}, {0., 2.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.811683625117981*^9, 3.811683684372038*^9}]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 528, 10, 31, "Input"],
+Cell[1111, 34, 1736, 47, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2884, 86, 612, 16, 52, "Input"],
+Cell[3499, 104, 3964, 74, 236, "Output"]
+}, Open  ]],
+Cell[7478, 181, 798, 21, 108, "Input"],
+Cell[CellGroupData[{
+Cell[8301, 206, 328, 9, 31, "Input"],
+Cell[8632, 217, 496, 10, 23, "Message"],
+Cell[9131, 229, 488, 10, 21, "Message"],
+Cell[9622, 241, 488, 10, 21, "Message"],
+Cell[10113, 253, 492, 10, 23, "Message"],
+Cell[10608, 265, 484, 10, 21, "Message"],
+Cell[11095, 277, 534, 11, 21, "Message"],
+Cell[11632, 290, 489, 10, 23, "Message"],
+Cell[12124, 302, 534, 11, 21, "Message"],
+Cell[12661, 315, 2271, 48, 236, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
