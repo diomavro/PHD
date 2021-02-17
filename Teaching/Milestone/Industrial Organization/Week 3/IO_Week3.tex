@@ -307,8 +307,8 @@
 %\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
 
 
-\title[\begin{flushleft} \color{white} {\tiny ???} \end{flushleft}]{\bf {Industrial Organization, Week 1 \\ 
-Theory of the firm and Monopoly}}
+\title[\begin{flushleft} \color{white} {\tiny ???} \end{flushleft}]{\bf {Industrial Organization, Week 3 \\ 
+Oligopoly}}
 \author[shortname]{ Dio Mavroyiannis \inst{\dag}}
 \institute[\begin{flushleft} \color{white} {\large ???} \end{flushleft}]{Milestone Institute}
 %\institute[shortinst]{\inst{*} London Mathematical Laboratory \and \inst{\dag} Universit\'{e} Paris-Dauphine \and \inst{\ddag} London Mathematical Laboratory and Santa Fe Institute}
@@ -346,22 +346,146 @@ Theory of the firm and Monopoly}}
 \setbeamertemplate{itemize items}[triangle]
 
 \begin{document}
-
 \frame{\titlepage\insertlogo}
 
+\section{Big picture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Today's plan}
+\frame{\ft{Demand in price competition}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item A monopolist sets the monopoly price and quantity, regardless controlling prices or quantities
+\item Oligopoly means a few firms, implicitly there is some cost to enter the industry
+\item Nash equilibrium in industrial organization implies a reaction function
+\item Reaction function: Reacting to the other players reaction. 
+\item Example: Quantity competitionm, $q_i(q_{-i})$
+\item Ultimately the question is about demand elasticity.
+\ei
+
+}
 
 \section{Oligopoly: Quantity}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Antoine-Augustin Cournot}
+\setbeamertemplate{itemize items}[triangle]
 
+\bi
+\item French Mathematician, Born in 1801, Sorbonne
+\item Book:'Recherches sur les principes mathématiques de la théorie des richesses', 1838
+\ei
+
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(50,-90){\includegraphics[width=4cm]{./IO_Week3_Quantity_Cournot.jpg}}
+\end{picture}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{\ft{Demand in quantity competition}
+\setbeamertemplate{itemize items}[triangle]
+
+$
+P(Q) = P(q_1,q_2,q_3,...,q_n)  
+$
+
+Example: $P(Q) = 100-Q$
+
+\bi
+\item Note 1: An asymmetric equilibrium is often(not always) not an option because there exists a deviation
+\item Suppose firm 1 is producing 10 and firm 2 is producing 100. Firm 2 has a higher incentive than firm 1 to decrease it's quantity because it will increase revenue on 99 units.
+\item n is number of firms. We will be using $i$ and $j$ to talk about two different firms
+\ei
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Demand in quantity competition}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{align}
+max_q \pi(Q) = aq-b(q_i+q_j)q-cq_i \\
+=[a-b(q_i+q_j)-c]q_i \\
+\rightarrow q_i = \frac{a-bq_j-c}{2b} = \frac{a-c}{2b}-\frac{q_j}{2}
+\end{align}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{\ft{Quantity Reaction Graph}
+
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(30,-120){\includegraphics[width=8cm]{./IO_Week3_Quantity_Reaction.jpg}}
+\end{picture}
+
+}
+
+\frame{\ft{Herfindahl Index: A measure of market power}
+
+\setbeamertemplate{itemize items}[triangle]
+
+If we have linear costs, we can re-write industry profits as 
+
+\begin{align}
+\sum_{i=1}^n \pi = \sum_{i=1}^n (p -c)q_i 
+\end{align}
+
+This can be re-written in two equivalent ways.
+
+\begin{align}
+(p-\sum_{i=1}^n)q = \frac{p q}{\eta}\sum_{i=1}^n a_i^2 
+\end{align}
+
+We simply divide the the total industry profits by the revenue to measure market power
+
+\begin{align}
+\frac{1}{\eta}\sum_{i=1}^n a_i^2 
+\end{align}
+
+
+}
+
+\frame{\ft{Lessons from Cournot}
+\setbeamertemplate{itemize items}[triangle]
+
+
+\bi
+\item Lesson 1: Profits increase when a firm becomes \textit{relatively} more efficient
+\item Lesson 2: Converges to perfect competition as number of firms increases
+\item Lesson 3: Markup higher $\leftrightarrow$ higher market share
+\item Lesson 4: Less elastic demand means higher 
+\ei
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Oligopoly: Price}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Joseph Bertrand}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item French Mathematician, Born in 1822, Ecole Polytechnique
+\item Bertrand, J. (1883) "Book review of théorie mathématique de la richesse sociale and of recherches sur les principles mathematiques de la theorie des richesses", Journal de Savants
+\ei
+
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(50,-90){\includegraphics[width=4cm]{./IO_Week3_Quantity_Bertrand.jpg}}
+\end{picture}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \frame{\ft{Demand in price competition}
-
-
-
 \setbeamertemplate{itemize items}[triangle]
 
 $
@@ -375,25 +499,53 @@ Q(p) =
 \right.
 $
 
-}
+\bi
+\item Note 1: If you have a lower price, you get all of the demand
+\item Note 2: If consumers prefer the "new" , then, second firm to match competitor, $a_i>0.5$, if they have $\epsilon$ switching cost $a_i<0.5$
+\ei
 
-\frame{\ft{Monopoly Graph}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{\ft{Price Reaction Graph}
 
 \setbeamertemplate{itemize items}[triangle]
 
-$
-Q(p) =
-\left\{
-  \begin{array}{ll}
-     Q(p_i) & \mbox{if } p_i < p_j  \\
-    a_i Q(p_i) & \mbox{if }  p_i = p_j \\
-    0 & \mbox{if } p_i > p_j 0 \\
-  \end{array}
-\right.
-$
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(30,-120){\includegraphics[width=8cm]{./IO_Week3_Price_Reaction.jpg}}
+\end{picture}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{\ft{Notes on Bertrand Competition}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Lesson 1: Prices equal to marginal cost
+\item Lesson 2: Perfect competition is possible with only two firms
+\item Extensions 1: If they do not know each others costs, then weakly expected positive profits
+\item Extensions 2: If the products are not homogenous, some market power
+\item Extensions 3: If not symmetric, either monopoly price or competitors cost
+\ei
 
 }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Comparison}
+
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item If product is homogenous. Quantity has higher prices, lower quantities and higher profits
+\item If we have a price setting but firms chooses capacity first(at linear cost), results identical
+\item High capacity $\rightarrow$ price competition
+\item Low capacity $\rightarrow$ quantity competition
+\item Alternative framing: what is easier to adjust, prices or quantities?
+\item Extension: Even if products are heterogenous, price always gives lower prices and higher quantity
+\ei
+
+}
 
 \end{document}

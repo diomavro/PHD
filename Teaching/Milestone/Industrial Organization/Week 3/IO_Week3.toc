@@ -1,3 +1,3 @@
-\beamer@sectionintoc {1}{Today's plan}{2}{0}{1}
-\beamer@sectionintoc {2}{Oligopoly: Quantity}{3}{0}{2}
-\beamer@sectionintoc {3}{Oligopoly: Price}{4}{0}{3}
+\beamer@sectionintoc {1}{Big picture}{2}{0}{1}
+\beamer@sectionintoc {2}{Oligopoly: Quantity}{4}{0}{2}
+\beamer@sectionintoc {3}{Oligopoly: Price}{11}{0}{3}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  16 FEB 2021 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  17 FEB 2021 18:42
 entering extended mode
 **./IO_Week3.tex
 (IO_Week3.tex
@@ -1640,14 +1640,14 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (IO_Week3.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 350
+LaTeX Font Info:    Trying to load font information for U+msa on input line 349
 .
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 350
+LaTeX Font Info:    Trying to load font information for U+msb on input line 349
 .
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
@@ -1655,22 +1655,22 @@ d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 350.
+ut line 349.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\
 ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 35
-0.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34
+9.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
 fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-350.
+349.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
 "
@@ -1679,11 +1679,62 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 ] (IO_Week3.toc) [2
 
-] (IO_Week3.toc) [3
+] [3
 
 ] (IO_Week3.toc) [4
 
-] [5
+]
+<./IO_Week3_Quantity_Cournot.jpg, id=98, 220.825pt x 311.1625pt>
+File: ./IO_Week3_Quantity_Cournot.jpg Graphic file (type jpg)
+<use ./IO_Week3_Quantity_Cournot.jpg>
+Package pdftex.def Info: ./IO_Week3_Quantity_Cournot.jpg  used on input line 38
+2.
+(pdftex.def)             Requested size: 113.81102pt x 160.37155pt.
+ [5
+
+ <./IO_Week3_Quantity_Cournot.jpg>] [6
+
+] [7
+
+]
+<./IO_Week3_Quantity_Reaction.jpg, id=126, 277.035pt x 231.11343pt>
+File: ./IO_Week3_Quantity_Reaction.jpg Graphic file (type jpg)
+<use ./IO_Week3_Quantity_Reaction.jpg>
+Package pdftex.def Info: ./IO_Week3_Quantity_Reaction.jpg  used on input line 4
+23.
+(pdftex.def)             Requested size: 227.62204pt x 189.89157pt.
+ [8
+
+ <./IO_Week3_Quantity_Reaction.jpg>] [9
+
+] [10
+
+] (IO_Week3.toc)
+[11
+
+]
+<./IO_Week3_Quantity_Bertrand.jpg, id=163, 167.12437pt x 198.7425pt>
+File: ./IO_Week3_Quantity_Bertrand.jpg Graphic file (type jpg)
+<use ./IO_Week3_Quantity_Bertrand.jpg>
+Package pdftex.def Info: ./IO_Week3_Quantity_Bertrand.jpg  used on input line 4
+85.
+(pdftex.def)             Requested size: 113.81102pt x 135.34628pt.
+ [12
+
+ <./IO_Week3_Quantity_Bertrand.jpg>] [13
+
+]
+<./IO_Week3_Price_Reaction.jpg, id=181, 261.97874pt x 228.855pt>
+File: ./IO_Week3_Price_Reaction.jpg Graphic file (type jpg)
+<use ./IO_Week3_Price_Reaction.jpg>
+Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 518.
+
+(pdftex.def)             Requested size: 227.62204pt x 198.8473pt.
+ [14
+
+ <./IO_Week3_Price_Reaction.jpg>] [15
+
+] [16
 
 ]
 \tf@nav=\write9
@@ -1695,17 +1746,16 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \tf@snm=\write11
 \openout11 = `IO_Week3.snm'.
 
-
-(IO_Week3.aux)
+ (IO_Week3.aux)
 Package rerunfilecheck Info: File `IO_Week3.out' has not changed.
-(rerunfilecheck)             Checksum: 4B9ED557293ECCE1BD42B5D20A8A6F07;152.
+(rerunfilecheck)             Checksum: 818046775334C2CE130EF1BFE6C93B74;151.
  ) 
 Here is how much of TeX's memory you used:
- 29740 strings out of 479618
- 606401 string characters out of 2861663
- 877704 words of memory out of 3000000
- 46152 multiletter control sequences out of 15000+200000
- 414681 words of font info for 63 fonts, out of 3000000 for 9000
+ 29842 strings out of 479618
+ 608529 string characters out of 2861663
+ 880684 words of memory out of 3000000
+ 46226 multiletter control sequences out of 15000+200000
+ 415037 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,415b,672s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Dio and Nono\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
@@ -1718,10 +1768,14 @@ d Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 s/cm/cmss8.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmssbx10.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/Dio and Nono/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on IO_Week3.pdf (5 pages, 96452 bytes).
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Dio
+ and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/symbols/msam10.pfb>
+Output written on IO_Week3.pdf (16 pages, 222907 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
