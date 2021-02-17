@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  17 FEB 2021 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  17 FEB 2021 18:56
 entering extended mode
 **./IO_Week3.tex
 (IO_Week3.tex
@@ -1684,7 +1684,7 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ] (IO_Week3.toc) [4
 
 ]
-<./IO_Week3_Quantity_Cournot.jpg, id=98, 220.825pt x 311.1625pt>
+<./IO_Week3_Quantity_Cournot.jpg, id=110, 220.825pt x 311.1625pt>
 File: ./IO_Week3_Quantity_Cournot.jpg Graphic file (type jpg)
 <use ./IO_Week3_Quantity_Cournot.jpg>
 Package pdftex.def Info: ./IO_Week3_Quantity_Cournot.jpg  used on input line 38
@@ -1697,7 +1697,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Cournot.jpg  used on input line 38
 ] [7
 
 ]
-<./IO_Week3_Quantity_Reaction.jpg, id=126, 277.035pt x 231.11343pt>
+<./IO_Week3_Quantity_Reaction.jpg, id=141, 277.035pt x 231.11343pt>
 File: ./IO_Week3_Quantity_Reaction.jpg Graphic file (type jpg)
 <use ./IO_Week3_Quantity_Reaction.jpg>
 Package pdftex.def Info: ./IO_Week3_Quantity_Reaction.jpg  used on input line 4
@@ -1713,7 +1713,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Reaction.jpg  used on input line 4
 [11
 
 ]
-<./IO_Week3_Quantity_Bertrand.jpg, id=163, 167.12437pt x 198.7425pt>
+<./IO_Week3_Quantity_Bertrand.jpg, id=183, 167.12437pt x 198.7425pt>
 File: ./IO_Week3_Quantity_Bertrand.jpg Graphic file (type jpg)
 <use ./IO_Week3_Quantity_Bertrand.jpg>
 Package pdftex.def Info: ./IO_Week3_Quantity_Bertrand.jpg  used on input line 4
@@ -1724,7 +1724,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Bertrand.jpg  used on input line 4
  <./IO_Week3_Quantity_Bertrand.jpg>] [13
 
 ]
-<./IO_Week3_Price_Reaction.jpg, id=181, 261.97874pt x 228.855pt>
+<./IO_Week3_Price_Reaction.jpg, id=203, 261.97874pt x 228.855pt>
 File: ./IO_Week3_Price_Reaction.jpg Graphic file (type jpg)
 <use ./IO_Week3_Price_Reaction.jpg>
 Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 518.
@@ -1734,7 +1734,9 @@ Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 518.
 
  <./IO_Week3_Price_Reaction.jpg>] [15
 
-] [16
+] (IO_Week3.toc) [16
+
+] [17
 
 ]
 \tf@nav=\write9
@@ -1748,13 +1750,13 @@ Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 518.
 
  (IO_Week3.aux)
 Package rerunfilecheck Info: File `IO_Week3.out' has not changed.
-(rerunfilecheck)             Checksum: 818046775334C2CE130EF1BFE6C93B74;151.
+(rerunfilecheck)             Checksum: B0ABE9D051C319CE56CA5D3E14C505C8;196.
  ) 
 Here is how much of TeX's memory you used:
- 29842 strings out of 479618
- 608529 string characters out of 2861663
+ 29853 strings out of 479618
+ 608727 string characters out of 2861663
  880684 words of memory out of 3000000
- 46226 multiletter control sequences out of 15000+200000
+ 46232 multiletter control sequences out of 15000+200000
  415037 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,415b,672s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1773,9 +1775,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Dio
 fb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb>
-Output written on IO_Week3.pdf (16 pages, 222907 bytes).
+Output written on IO_Week3.pdf (17 pages, 230849 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
