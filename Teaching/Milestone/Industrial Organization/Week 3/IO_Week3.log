@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  17 FEB 2021 18:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  18 FEB 2021 17:55
 entering extended mode
 **./IO_Week3.tex
 (IO_Week3.tex
@@ -1701,7 +1701,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Cournot.jpg  used on input line 38
 File: ./IO_Week3_Quantity_Reaction.jpg Graphic file (type jpg)
 <use ./IO_Week3_Quantity_Reaction.jpg>
 Package pdftex.def Info: ./IO_Week3_Quantity_Reaction.jpg  used on input line 4
-23.
+25.
 (pdftex.def)             Requested size: 227.62204pt x 189.89157pt.
  [8
 
@@ -1717,7 +1717,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Reaction.jpg  used on input line 4
 File: ./IO_Week3_Quantity_Bertrand.jpg Graphic file (type jpg)
 <use ./IO_Week3_Quantity_Bertrand.jpg>
 Package pdftex.def Info: ./IO_Week3_Quantity_Bertrand.jpg  used on input line 4
-85.
+87.
 (pdftex.def)             Requested size: 113.81102pt x 135.34628pt.
  [12
 
@@ -1727,7 +1727,7 @@ Package pdftex.def Info: ./IO_Week3_Quantity_Bertrand.jpg  used on input line 4
 <./IO_Week3_Price_Reaction.jpg, id=203, 261.97874pt x 228.855pt>
 File: ./IO_Week3_Price_Reaction.jpg Graphic file (type jpg)
 <use ./IO_Week3_Price_Reaction.jpg>
-Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 518.
+Package pdftex.def Info: ./IO_Week3_Price_Reaction.jpg  used on input line 521.
 
 (pdftex.def)             Requested size: 227.62204pt x 198.8473pt.
  [14
@@ -1775,7 +1775,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Dio
 fb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb>
-Output written on IO_Week3.pdf (17 pages, 230849 bytes).
+Output written on IO_Week3.pdf (17 pages, 231369 bytes).
 PDF statistics:
  295 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)

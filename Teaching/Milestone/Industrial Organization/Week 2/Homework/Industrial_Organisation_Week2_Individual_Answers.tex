@@ -28,7 +28,9 @@
 \usepackage{graphics}
 \usepackage{epstopdf}
 \usepackage{longtable}
-\usepackage[pdftex]{hyperref}
+
+\usepackage{hyperref}
+
 %\usepackage{breakurl}
 \usepackage{epigraph}
 \usepackage{xspace}
@@ -209,71 +211,87 @@ urlcolor={blue!50!black}}
 % https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
 
 \begin{document}
-\section{Industrial Organization, Week 1 Answers}
+\section{Industrial Organization, Week 2 Answers}
+
+
+\subsection{Monopoly solution using price }
+So the tricky thing in this question is that I gave you the demand $q$ function of price but the cost as a function of quantity. As such there are two equivalent ways of writing the problem. First we write it as a function of price:
 
 \begin{align*}
-Q_s = 400p-100&; ~~Q_d = 1100-200(p+t) \\
-&\rightarrow 
-p_s = \frac{Q_o}{400} + \frac{1}{4} ; ~~p_d = \frac{1100-Q_d}{200}-t  \\
-Q_s = Q_d 
-&\leftrightarrow p^* = 2 - \frac{1}{3}t; ~~ Q^*=700 - \frac{400}{3}t \\ 
+\pi(p) &= p q(p) - c(q)  \\
+&=p(60-p) - \frac{1}{2}q^2 \\ 
+&=60p-p^2 - \frac{1}{2}(60-p)^2 \\
+&=p(60-p) - \frac{1}{2}(60^2+p^2-120p) \\
 \end{align*}
 
-Surplus consumer(geometry way):
+Once we have eliminated $q$ from the equation we can take the partial derivative. 
+
 \begin{align*}
-S_c = Base*Height/2 =& (5.5-p^*)*Q^*/2 =\frac{1}{2}(5.5-t-2 + \frac{1}{3}t)*(700 - \frac{400}{3}t) \\
-=& \frac{1}{2}(3.5 - \frac{2}{3}t)*(700 - \frac{400}{3}t) \\
-=& \frac{1}{2}(3.5 \frac{200}{200} - \frac{2*200}{3*200}t)*(700 - \frac{400}{3}t) \\
-=& \frac{1}{400}(700 - \frac{200}{3}t)*(700 - \frac{400}{3}t) \\
-=& \frac{1}{2}(700 - \frac{400}{3}t)^2 \\
+\frac{\delta \pi(p) }{\delta p }  & =60-2p-p+60 \\
+& = 120-3p = 0 \\
+& \rightarrow p = 40; q = 20
 \end{align*}
 
+\subsection{Monopoly solution using quantity }
+For completion we can do the same thing with but this time eliminate the price: First re-write the price, $p=60-q$ and then write the profit as function of quantity:
 
-
-
-Surplus producer(geometry):
 \begin{align*}
-S_c = Base*Height/2 =& (p^*-1/4)*Q^*/2 = \frac{1}{2}( 2 - \frac{1}{3}t -1/4)*(700 - \frac{400}{3}t) \\
-=& \frac{1}{2}( \frac{7}{4} - \frac{1}{3}t )*(700 - \frac{400}{3}t) \\
-=& \frac{1}{2}( \frac{700}{400} - \frac{400}{3*400}t )*(700 - \frac{400}{3}t)  \\
-=& \frac{1}{800}( 700 - \frac{400}{3}t )^2
+\pi(q) &= p(q) q - c(q)  \\
+&=(60-q)q - \frac{1}{2}q^2 \\ 
 \end{align*}
 
-In the special cases:
+Once we have eliminated p we can take the partial derivative and set it equal to zero. 
+
 \begin{align*}
-t = 0 &\rightarrow p^* = 2; ~~ Q^*= 700;  ~~S_c = 1225; ~~ S_p = 612.5\\
-t = 1 &\rightarrow p^* = \frac{5}{3}; ~~ Q^*= \frac{1700}{3}= 566.66...;  ~~ S_c = 802.8;  ~~  S_p = 401.4 \\
-DWL &= 1225+612.5-802.8-401.4-566.6=66.7
+\frac{\delta \pi(q) }{\delta q }  & =60-2q - q=0 \\
+& = 60-3q = 0 \\
+& \rightarrow q = 20; p = 40
 \end{align*}
 
-\href{https://www.desmos.com/calculator/v3zy7sz9ss}{Click here} for the graph. In case some of you want to dig deeper, when the functions are not linear you are sometimes forced to into calculus, so this is the more general approach: 
-Surplus consumer(calculus way):
+
+\subsection{Perfect competition}
+
+
+Perfect competition outcome: 
+
+In perfect competition, the price is equal to the marginal cost, the marginal cost is simply the derivative of the cost function $q$
 \begin{align*}
-S_c = &\int^{Q^*}_{0} (p_d - p^*)dq \\
-= &\int^{Q^*}_{0} \left(\left(\frac{1100-q}{200}-t \right)-\left(2 - \frac{1}{3}t \right) \right) dq \\
-= &\int^{Q^*}_{0} \left(\frac{1100-q}{200}-\frac{2}{3}t -2 \right)  dq \\
-= &\int^{Q^*}_{0} \left(\frac{700-q}{200}-\frac{2}{3}t \right)  dq \\
-= &\left| \left(\frac{700q}{200}-\frac{q^2}{400}-q\frac{2}{3}t \right) \right|^{Q^*}_0  \\
-= &\left| q \left(\frac{700}{200}-\frac{q}{400}-\frac{2}{3}t \right) \right|^{Q^*}_0  \\
-= & \left(700 - \frac{400}{3}t \right) \left(\frac{700}{200}-\frac{700 - \frac{400}{3}t }{400}-\frac{2}{3}t \right)  \\
-= & \left(700 - \frac{400}{3}t \right) \left(\frac{700}{400}-\frac{ t }{3} \right)  \\
-= &\frac{1}{400} \left(700 - \frac{400}{3}t \right)^2   \\
-% & \text{si } t = 0 \rightarrow S_c = 1225
+q &= 60-q\\
+&\rightarrow q = 30 ; p = 30
 \end{align*}
 
-Surplus producer(calculus way):
-\begin{align*}
-S_p = &\int^{Q^*}_{0} (p^* - p_o)dq \\
-= &\int^{Q^*}_{0} \left(\left(2 - \frac{1}{3}t\right) - \left(\frac{q}{400} + \frac{1}{4} \right) \right) dq \\
-= &\int^{Q^*}_{0} \left( \frac{7}{4} - \frac{1}{3}t - \frac{q}{400}  \right) dq \\
-= &\left|  \left( \frac{7q}{4} - \frac{q}{3}t - \frac{q^2}{800}  \right) \right|^{Q^*}_0\\
-= &\left| q\left( \frac{7}{4} - \frac{1}{3}t - \frac{q}{800}  \right) \right|^{Q^*}_0\\
-= & \left( 700 - \frac{400}{3}t \right) \left( \frac{7}{4} - \frac{1}{3}t - \frac{700 - \frac{400}{3}t}{800}  \right) \\
-= & \left( 700 - \frac{400}{3}t \right) \left( \frac{700}{800} - \frac{1}{6}t  \right) \\
-= & \frac{1}{800} \left( 700 - \frac{400}{3}t \right)^2 \\
-% & \text{si } t = 0 \rightarrow S_p = 612.5
-\end{align*}
+So the price is lower and the quantity is greater. 
 
-\bibliography{../thesisbib/bibliography}
+\subsection{Deadweight loss}
+
+This time, the cost function intersects the $(0,0)$ point, so we can simply use the price to get the base of the triangle. 
+Perfect competition outcome surplus is: $60*30/2=900$
+
+So monopoly outcome surplus is more complicated:
+There is the upper triangle which is the consumer surplus, $(60-40)*20 \frac{1}{2}=200$
+The producer surplus will be the rectangle and the lower triangle. 
+The lower triangle is: $20*20\frac{1}{2}=200$
+For the rectangle, we must first compute the lower right point. This is where the equilibrium quantity, intersects the marginal cost curve $20=q $.
+So the rectangle has $(40-20)*20=400$
+Total is: $800$
+
+Dead weight loss is $100$
+
+\subsection{Price regulation}
+
+Since the 21st unit costs 21, but can only be sold for 20, the monopolist has no incentive to produce more than 20.
+
+
+\newpage
+
+\subsection{Graph}
+
+
+\href{https://www.desmos.com/calculator/homn46baxh}{Click here} for the graph: 
+
+
+\begin{picture}(100,100)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(-45,-220){\includegraphics[width=20cm]{./Desmos2.jpg}}
+\end{picture}
 
 \end{document}

@@ -405,9 +405,11 @@ Example: $P(Q) = 100-Q$
 \setbeamertemplate{itemize items}[triangle]
 
 \begin{align}
-max_q \pi(Q) = aq-b(q_i+q_j)q-cq_i \\
-=[a-b(q_i+q_j)-c]q_i \\
-\rightarrow q_i = \frac{a-bq_j-c}{2b} = \frac{a-c}{2b}-\frac{q_j}{2}
+max_q \pi(Q) &= P(Q)q_i- C(q_i) \\
+&=(a-bQ)q_i- C(q_i) \\
+&=aq-b(q_i+q_j)q-cq_i \\
+&=[a-b(q_i+q_j)-c]q_i \\
+& \rightarrow q_i = \frac{a-bq_j-c}{2b} = \frac{a-c}{2b}-\frac{q_j}{2}
 \end{align}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -455,7 +457,7 @@ We simply divide the the total industry profits by the revenue to measure market
 \item Lesson 1: Profits increase when a firm becomes \textit{relatively} more efficient
 \item Lesson 2: Converges to perfect competition as number of firms increases
 \item Lesson 3: Markup higher $\leftrightarrow$ higher market share
-\item Lesson 4: Less elastic demand means higher 
+\item Lesson 4: Less elastic demand means higher markup/profits/market share
 \ei
 
 }
@@ -501,7 +503,8 @@ $
 
 \bi
 \item Note 1: If you have a lower price, you get all of the demand
-\item Note 2: If consumers prefer the "new" , then, second firm to match competitor, $a_i>0.5$, if they have $\epsilon$ switching cost $a_i<0.5$
+\item Note 2: $a_i$ has to be between 0 and 1 to indicate that the market is split. 
+\item Note 3: If consumers prefer the "new" , and firm i enters second then, $a_i>0.5$, if they have $\epsilon$ switching cost $a_i<0.5$
 \ei
 
 }

@@ -1,0 +1,256 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+\usepackage{hyperref}
+
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+\section{Industrial Organization, Week 2 Group Answer Guide}
+A)
+1)
+Whenever anybody says that X necessarily leads to Y, we can find a counter example by finding a Y that does not have X. So we want to find a situation where an owner who can measure, pays him less than if he cannot. Here we can simply look at the example from the lecture:
+
+Every year a fair coin gets flipped and does either + 0 or + 1 euro to the owner's profits. Only the manager sees the result of the coin, she then chooses whether to be employed or be unemployed, which earns 0 cents a year. If she is employed, she can either work, which costs 10 cents of effort or be lazy, which is free. Working adds 1 to the owner, and the owner can only see his profit at the end of the year, without knowing if it comes from the coin or from the manager's work. An example of a vector he could see in 5 years is the following, (0,2,1,1,2). At the beginning of this game, the owner will create a contract that rewards the manager depending on what the owner sees.  So there will be a wage if he sees 0, a wage if he sees 1, and a wage if he sees 2. 
+
+The solution here is that the owner will reward $[0,10+\epsilon,20+2 \epsilon]$. That is, if the manager can sees a 0, she has an incentive to work anyway because working when the coin is 0 gets her $10+\epsilon -10=\epsilon$ whilst not working gets her $0$. Similarly, if she sees a coin with a toss $+1$, if she works she gets $20+2 \epsilon -10 = 10+2 \epsilon$ whilst if she does not work she gets $10+\epsilon$. 
+
+On the other hand, if the owner can measure the managers actions, then the manager can simply pay her, 0 if she does not work, and $10+\epsilon$ if she does work, which if we factor in her effort, $10$, nets her a profit of $\epsilon$. 
+
+So we can conclude that if there is transparency, the manager is always paid $\epsilon$, whilst if there is no transparency, she sometimes nets a profit of $\epsilon$ and sometimes nets a profit of $10+ \epsilon$ 
+
+2)
+From the point of view of the consumer both vertical and horizontal competition are the same(unless you have quite a complex model). That is, whether the things the consumer like are cheaper OR whether the things available are closer to his own tastes, is purely a quantitative matter. From the point of view of the managers and owners, horizontal competition represents a safer market, more horizontal competition is not necessarily zero sum from their point of view but vertical competition is necessarily going to be zero sum from the point of view of the owners and managers. 
+
+3) Here you need only reproduce the equations and explain what is going on in them, perhaps with the help of google. An example where the IR is satisfied but not IC, is from the example in 1), the following wage structure, $[\epsilon, \epsilon, \epsilon]$. In this case, the owner will want to be employed because the payoffs from being employed is always higher than being unemployed, (recall that unemployment benefits are zero) but it will never be worth it for the manager to work, which means incentive compatibility is violated. 
+
+4) Price in perfect competition is equal to marginal cost, more specifically, it is the point where the demand curve intersects the marginal cost curve. In perfect appropriation, there is not one price, there are as many prices as there are valuations. So if somebody values it at 10, they pay 10. The monopoly price is the price that results if $MR=MC$ 
+
+5) True, simple enough to see. 
+
+
+B)
+
+Friedman says that the business should specialize in one thing and then with the profits, the owner can decide whether to do social responsibility. An example of why he thinks this would be better is that the owner can then spend the 100 dollars on a more specialized business which would do a better job. This makes sense, for instance if Google can cost itself 100 euros to save a child from malaria but a charity can save 10 children with 100 euros, then it is best that Google just does not try and save the child for 100, but instead makes that money into a profit and the owner then gives that money to the charity. 
+
+The problem is that it may be that the business is in a better position to do some changes than than the owner. Perhaps employees have good contacts inside the government and they are good at organizing to make something happen. There are also many areas where there is a social responsibility that cannot be done by another party, say privacy concerns, or building renewable infrastructure. One could of course make the case that privacy and returnables are simply part of maximizing profits. 
+
+C) 
+1) Price= Marginal cost. Effect 1, if there is a fixed cost to entering industry, no firm will enter unless it receives a lump sum. Effect 2, if there is an innovation that reduces costs, the company will not do it. Effect 3: Without scale effects, firms are indifferent to producing more or less quantity, with dis-economies of scale, the more you produce, the higher your loss. If economies of scale, then you allow profits anyway. 
+2) Price = average cost. No profits are possible. No incentive to enter, produce or reduce any of the costs. 
+3) Fixed rate of return: This may lead to higher producer surplus, especially if there is competition. If the rate of return is higher than the monopoly case, then quantity is even lower than monopoly. If it is lower than monopoly case, then higher output. 
+
+
+
+
+
+
+
+
+
+\end{document}

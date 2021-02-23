@@ -1,7 +1,7 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  19 FEB 2021 21:28
 entering extended mode
-**./Industrial_Organisation_Week1_Individual_Answers.tex
-(Industrial_Organisation_Week1_Individual_Answers.tex
+**./Industrial_Organisation_Week2_Individual_Answers.tex
+(Industrial_Organisation_Week2_Individual_Answers.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03>
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -484,7 +484,7 @@ with kernel methods
 \c@Item=\count299
 \c@Hfootnote=\count300
 )
-Package hyperref Info: Driver: hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdfte
 x.def"
@@ -1055,7 +1055,7 @@ File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ayer/tikz/libraries\tikzlibraryshapes.callouts.code.tex"
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
 /shapes\pgflibraryshapes.callouts.code.tex")))
-Package hyperref Info: Option `colorlinks' set `true' on input line 84.
+Package hyperref Info: Option `colorlinks' set `true' on input line 86.
 \c@theorem=\count334
 \c@proposition=\count335
 \c@definition=\count336
@@ -1073,25 +1073,25 @@ kend-pdftex.def"
 File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count345
 \l__pdf_internal_box=\box98
-) (Industrial_Organisation_Week1_Individual_Answers.aux)
-\openout1 = `Industrial_Organisation_Week1_Individual_Answers.aux'.
+) (Industrial_Organisation_Week2_Individual_Answers.aux)
+\openout1 = `Industrial_Organisation_Week2_Individual_Answers.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1121,7 +1121,7 @@ p-pdf.mkii"
 \everyMPtoPDFconversion=\toks55
 )
 \c@lstlisting=\count352
-Package hyperref Info: Link coloring ON on input line 211.
+Package hyperref Info: Link coloring ON on input line 213.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\namere
 f.sty"
@@ -1134,14 +1134,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 211.
-LaTeX Info: Redefining \pageref on input line 211.
-LaTeX Info: Redefining \nameref on input line 211.
+LaTeX Info: Redefining \ref on input line 213.
+LaTeX Info: Redefining \pageref on input line 213.
+LaTeX Info: Redefining \nameref on input line 213.
 
-(Industrial_Organisation_Week1_Individual_Answers.out)
-(Industrial_Organisation_Week1_Individual_Answers.out)
+(Industrial_Organisation_Week2_Individual_Answers.out)
+(Industrial_Organisation_Week2_Individual_Answers.out)
 \@outlinefile=\write5
-\openout5 = `Industrial_Organisation_Week1_Individual_Answers.out'.
+\openout5 = `Industrial_Organisation_Week2_Individual_Answers.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1178,14 +1178,14 @@ LaTeX Info: Redefining \nameref on input line 211.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 214
+LaTeX Font Info:    Trying to load font information for U+msa on input line 218
 .
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 214
+LaTeX Font Info:    Trying to load font information for U+msb on input line 218
 .
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
@@ -1193,7 +1193,7 @@ d"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21
-4.
+8.
 
 ("C:\Users\Dio and Nono\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
 fd"
@@ -1202,35 +1202,35 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {C:/Users/Dio and Nono/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 [2]
-No file Industrial_Organisation_Week1_Individual_Answers.bbl.
-[3] (Industrial_Organisation_Week1_Individual_Answers.aux)
-Package rerunfilecheck Info: File `Industrial_Organisation_Week1_Individual_Ans
+<./Desmos2.jpg, id=45, 1105.88156pt x 589.4522pt>
+File: ./Desmos2.jpg Graphic file (type jpg)
+<use ./Desmos2.jpg>
+Package pdftex.def Info: ./Desmos2.jpg  used on input line 289.
+(pdftex.def)             Requested size: 569.05511pt x 303.31493pt.
+ [3 <./Desmos2.jpg>] (Industrial_Organisation_Week2_Individual_Answers.aux)
+Package rerunfilecheck Info: File `Industrial_Organisation_Week2_Individual_Ans
 wers.out' has not changed.
-(rerunfilecheck)             Checksum: CA5CD3DC87D6A3C9BD6703E2AD4C3C54;76.
+(rerunfilecheck)             Checksum: 5BF61E3329CB2D8876E04076B011CB35;443.
  ) 
 Here is how much of TeX's memory you used:
- 24674 strings out of 479618
- 482816 string characters out of 2861663
- 793060 words of memory out of 3000000
- 41323 multiletter control sequences out of 15000+200000
- 409281 words of font info for 51 fonts, out of 3000000 for 9000
+ 24691 strings out of 479618
+ 482996 string characters out of 2861663
+ 785060 words of memory out of 3000000
+ 41334 multiletter control sequences out of 15000+200000
+ 409886 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,89p,452b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,8n,89p,452b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Dio and Nono/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Dio and Nono/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Dio 
-and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Dio and Nono/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Industrial_Organisation_Week1_Individual_Answers.pdf (3 pages
-, 96949 bytes).
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Dio and Nono/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dio and Nono/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Dio an
+d Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+
+Output written on Industrial_Organisation_Week2_Individual_Answers.pdf (3 pages
+, 211404 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
