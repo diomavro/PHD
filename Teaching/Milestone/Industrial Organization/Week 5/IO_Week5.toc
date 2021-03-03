@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Big picture}{2}{0}{1}
+\beamer@sectionintoc {2}{Hotelling}{4}{0}{2}
+\beamer@sectionintoc {3}{Location only}{6}{0}{3}
+\beamer@sectionintoc {4}{Price and location: linear costs}{10}{0}{4}
+\beamer@sectionintoc {5}{Price and location: quadratic costs}{17}{0}{5}

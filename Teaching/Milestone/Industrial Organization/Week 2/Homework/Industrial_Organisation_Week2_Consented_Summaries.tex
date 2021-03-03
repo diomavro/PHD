@@ -1,0 +1,365 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+\usepackage{hyperref}
+
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+\section{Industrial Organization, Week 2 Essay answers}
+
+\subsection{Property-Rights Regimes and Natural Resources: A Conceptual Analysis}
+
+Ostrom, Elinor, and Edella Schlager. 1992. “Property-Rights Regimes and Natural Resources: A Conceptual Analysis” 68 (3): 249–62. \par
+
+Author of summary: Nora Kovacs
+
+The people on Earth, as a community, face shared problems on Earth, a planet which has finite resources. How can we manage those resources the most effective way? How should ownership be organized, what rights should be granted to owners? To what extent should authorities interfere in creating the rules of usage of these resources? These are the questions that the paper seeks to answer, by demonstrating its claims on fishery lake. The paper examines the case of common property resources, which is a property that is owned by  the  government,  a  community  or  by  no  one,  and  is  managed  collectively.  Examples  include pastures, forests, fishing grounds. \par
+
+According to the paper there are certain rules that govern the area, and certain rights endowed upon the parties. The paper identified the following rights: ‘access: the right to enter; withdrawal: the right to acquire the products of a resource; management: the right to transform the resource by making improvements; exclusion: the right to determine who has access to the right; alienation:the right to sell the two rights mentioned previously’. If they are enforced by the government they are de jure rights, if they are enforced by cooperation and consensus of the resource users they are de facto rights. The paper claims that the right of exclusion and alienation can motivate people to make long term investments. \par
+
+The paper takes examples from Brazil to refute the claim that if a common pool resource is used and  managed  communally,  the  tragedy  of  the  commons  inevitably  follows,  the  site  will  be overexploited, since it is no one's interest to preserve it. Initially, the fishery faced many problems while  only  de  jure  rights  were  present.  Then,  the  fishers  succeeded  to  come  to  an  agreement regarding the use of the fishery, the types of technology that can be used and allocated fishing spots.  Creating  de  facto  rights  made  the  fishery  function  effectively.  The  paper  cites  numerous other  examples  when  communities  succeeded  in  making  agreements  with  de  facto  rights  and therefore stopping overexploitation. Possessing the local knowledge, these agreements were in accordance with the local economic and physical conditions. \par
+
+Another case study elaborated concerned two different property rights systems along the Maine coast. On one side of the lake de facto rights, the rights created by the community governed, while on  the  other side de jure rights.  According to  empirical evidence  the  one  governed  by  de  facto rights was more stable, less crowded, the distribution of the amount of fish taken was more even throughout the year, and the income of fishers was bigger. \par
+
+The paper proved by demonstrating case studies that local people can effectively manage their common pool resources, because it is their interest to preserve them, and they are well informed about the local realities. The paper concluded by stating that neither of the systems are perfect, however, we should keep investigating various types of ownership in order to find the ones which operate the most effectively in managing the finite resources of our planet. 
+
+\newpage
+
+\subsection{Monopoly, Quality, and Regulation}
+
+Monopoly, Quality, and Regulation - A. Michael Spence
+
+Author of summary: Adel Seres
+
+In essence,the paper deals with monopoly regulatory strategies on a theoretical level. The main topic of the paper concerns the potential issues in a case when a monopoly sets someproduct characteristics as well as price. When the price changes do not reflect or convey information about the changes in the value attached to the quality, a market problem could arise, and a difficult question appears for the regulatory authority.Here, the author suggests, that rate of return regulation may have second best properties. When a monopoly primarily needs capital(rather than manpower) to improve the quality of a product, it is easier and more economically efficient for the regulator to regulate the monopoly through rate of return rather than through fixing the price of the product. Rate of return regulation implicitly takes into account thecompany's costs and profit-generating capacity, thus encouraging the company to make improvements. In the case of price regulation, it is difficult for the regulatory authority to obtain information on the actual benefits to the consumer of improving the quality of the product, and thus to set the optimal market price. The author supports his ideas among others by using mathematical formulas. (Which were quite hard forme to understand)
+
+\newpage
+
+\subsection{Optimal Pricing Mechanisms with Unknown Demand}
+
+Author of summary: Aron Berethalmi
+
+This paper examined bidding mechanisms and the profitability of these mechanisms relative to posted prices. 
+
+Initially sellers use to sell goods at a posted price but nowadays due to technological improvements notably the internet, enabled us the use of economic allocation mechanisms.  Thus, goods and services can be sold using auction like mechanism where buyerscan express their optimal price that they are willing to pay. We differentiate between two type of auction sites, the first one is the traditional auction mechanism famously used by Ebay.com and the second one is so called demand aggregation sites such asLetsBuyIt.com. These types of auctions left us with a lot of questions regarding pricing mechanisms and profit maximization but mainly; “What is the profit-maximizing pricing mechanism,and does it improve upon posted pricing?”
+
+To dive more deeply into the topic, we have to make some standard assumption.For example,the seller knows the distribution from which the buyers’valuations are drawn. The main advantage of this mechanism is that is creates interdependence among buyers. Whereby, one buyer’s bidaffectsother buyers’ allocations. Although in two special cases the seller can not improve upon a posted price. Such as the seller’s marginal cost is either constant or little affected by a single buyer. On the contrary this problem has some limitations because in reality the seller has noidea the distribution from which the buyers’ valuation was drawn from and hence the sellers’ are unable to calculate the optimal supply curve they sought for. The perfect example for this was brought up by the paper; when we want to sell tickets to a one-of-a-kind concert where such units were never sold prior to this so we have no clue about how the demand curve will look like, or in general what will be the general interest for this event. In this case we do not have a supply curve for our graph.From these cases we can conclude that optimal auctions do not improve upon posted pricing in the standard setting.
+
+To “ease” this problem the paper suggests a new pricing mechanism that will maximize the sellers’ profit without any prior knowledge on the demand. This is where interdependence becomes usefulwhen the buyers’ valuationsare drawn independently from and unknown distribution. Thus,one buyer’s bid conveys information to the seller about other buyers’ valuations. Moreover, this also affects their optimal allocations. This important information is neglected by the standard auction,but this optimal mechanism uses it for pricing.In this case the mechanism improves upon posted pricing. In addition to this in this mechanism each buyers’ bidhas an “informational effect” which means that its directly affecting other buyers’ allocations.
+
+What are the limitations? One of the biggest limitation of this mechanism is that is not really transparent because it doesn’t allow buyers to freely raise and lower their bids over time in respect to the current fluctuation of the market.The model does not allow buyers to demand more that one good or service. The model doesn’t allow buyers to make complex bids.One possible extensionfor the model would be a way to measure interdependence. 
+
+\newpage
+
+\subsection{Production, Information Costs, and Economic Organization}
+
+Alchian, Armen, and Harold Demsetz. 1972. “Production, Information Costs, and Economic Organization.” The American Economic Review 62 (5): 777–95. 
+
+Author of summary: Andras Berkli
+
+This paper tries to answer questions like what is a firm? Why did it form? What benefits does it give?
+
+First  it  explains  that  in a  capitalist  society  if  someone  produces  more,his  expected  income  will  also increase and  this  can  be  monitored  quite  easily.  It  also  clarifies  that  the  relationship  between  an employee  and  an  employer  is  nothing  different  from  a  grocer  and  a  customer.Both  can  end  their “contract”if not satisfied with the other.It also discusses the exitance of a team which is that,it can achieve  better  output  than  the  same  people  could  if  they  worked  on  their  own,thus  teams  really beneficial. 
+
+Then  the  paper  talks  about something called “The Metering Problem”. While it is easy  to  monitor someone’s productivity if he does a work alone the problem becomes much more difficult when they work as a team,where the whole team’s output couldn’t be splinted into outputs by each member of the team. This creates a problem where someone can be less efficient in his work than his capabilities allow him to be, as no one can point at him as the single reason why the team production is decreasing. 
+
+The reason why owners don’t implement strict control isthat the cost of detecting such behavioris higher than the benefits it coul doffer.
+
+Then the paper separates firm into different types as how they try to solve this issue. The first class is “The Classical Firm” which uses a specialized monitor to check the performance of the team. But what could stop these monitors from not performing as expected? The solution can’t be the same as for the other members of the team is it would create an infinite cycleof monitors who monitor the monitors. So classical firms came up with anotheridea,give the monitor the title to the net earnings of the team thus motivating him the work as efficiently as he can.This and other rights make a residual claimant-monitor  of  the  team. An  organization  who  uses  this  method  and  has  other  important  features  is considered aclassical capitalist firm by the authors. 
+
+They know that there are many other interpretations of the firm and they acknowledgethat fact that the word firm is such broadly used that it is impossible to give a perfect definition for it but instead they try to explain particular contractual arrangements which can be called a firm.
+
+The reader is introduced to other types of firms such as “Profit-Sharing Firms” where as the  name suggesttheyshare  the  profit  in  the  team  thus motivating  them this way. It also discusses “Socialist Firms”, Corporations and other types.
+
+It  also  explains  that, spirit  and  loyalty  can  improve  efficiency  but  unlike  in  a  team  sport, it  is  really difficult to buildin this environment. Thenthey give their opinion about why they think that in most cases it is more beneficial to own the machines they usethan leasing them. The main reason is thatit is cheaper andthe degradation rate is also lower.
+
+This paper tries to explain many features of the firm trough the idea howateam works and if it is well controlled why more beneficial than other forms of production. 
+
+\newpage
+
+\subsection{Why don’t prices rise during periods of peak demand}
+
+Chevalier, Judith A., Anil K. Kashyap, and Peter E. Rossi. "Why don't prices rise during periods of peak demand? Evidence from scanner data." American Economic Review 93.1 (2003): 15-37.
+
+Author of summary: Marton Vido
+
+The paper follows through an econometric case-study to present evidence for counter-cyclical pricing. In the case of expected positive demand shocks which occur during holidays, the price of goods will not necessarily increase as one would expect and as text-books may suggest. The reason for such a phenomenon is the imperfect competition on the market which allows a wedge to be created between price and marginal cost.
+
+The authors collected data for 7 years from Chicago’s largest retailer, Dominick's Finer Foods. The database includes change of demand prior, during and post holidays. The majority of the paper deals with explaining the statistical result of the research and provides theories to which their dataset may be applicable.
+
+Throughout the study they mainly focus on the retailers’ side and their field on pricing as they conclude that manufacturers show little manipulation on price during seasonal peak demands. Trying to find the reason why prices do not rise during periods of peak demand, the authors used three different imperfect competition models. Warner and Barksy’s theory is that during high demand consumers become price-sensitive, making markups irrational. Rotemberg and Saloner suggest that the reason is the unsustainability of tacit collusion during booms. Lal and Matutes’s model states that if the retailer has to advertise to inform consumers about prices, it is more efficient to advertise items with high demand and not raise their price.
+
+As a conclusion they state that their case-study shows contradiction both to the Warner and Barksy’s and to the Rotemberg and Solonel model as they find that retail margins fall for foods at their seasonal peaks. Also, with regard to the Warner and Barksy’s model, the study presents no evidence for the rise of the elasticity of demand for the products during seasonal demand peaks. However, as in their study, advertisement rises for seasonally peaking products,  their study offers support for the Lal and Matutes model, making it being the most applicable for this case.
+
+\newpage
+
+\subsection{Dynamic Pricing of New Experience Goods}
+
+Bergemann, Dirk, and Juuso Välimäki. "Dynamic Pricing of New Experience Goods." (PDF) Journal of Political Economy 114, no. 4 (2006): 713–43.
+
+Author of summary: Peter Ivanov
+
+This paper focuses on developing a simple and tractable model of optimal pricing for a monopolist that sells a new wxperience good over time to a population of heterogenous players.
+
+There are mass and niche markets, this leads to different pricing strategies: skimming and penetration pricing. It is based on the intertemporal incentives of a new buyer who is uncertain about her opinion about the product. We assume the market price is at its static monopoly level. What the buyer does, is that he weighs the pros and cons of a potential purchase. In a niche market the uninformed buyer will opt not to buy at the static monopoly price so the monopolist must lower his prices. However, in a mass market the monopolist will try to skim at the beginning thus setting a high price. In the long run the prices will converge tot he static monopoly price in both cases.
+
+The presented model is an infinite-horizon, continuous-time model of monopoly pricing. There are uninformed identical consumers who demand a given quantity per period of a purely perishable product. The monopolist offers a spot price and buyers decide wether or not to buy at that price. As they consume the product they get a perfectly revealing signal according to a Poisson process.
+
+The experience goods market has two different submarkets: informed and uninformed buyers, and the monopolist must be aware of bot hat all times. On the one hand, informed buyers have a simple demand curve, on the other hand, the case of the uninformed buyers is much more complicated. Each purchase has an additional pice of information which is relevant for future decisions. I future prices are high consumers should buy the product at the given time. However, if future prices are low they should wait because future prices are attractive no matter the true value of the product.
+
+The pharmaceutical market is a prime example for this. Due to the extensive testing of the product consumers can get the vast majority of information regarding the product. An empirical study conducted by Crawford and Shum (2005) focused on this topic. Furthermore, there is a growing literature on Bayesian learning in consumer markets with experience goods. The one that is facinating in connection with this paper is Israel’s work (2005). He examines the automobile insurance market by using the randon arrival of information and so-called ”learning events”. Even though both empirical works are remarkable, they use optimal behavior of the buyers with an exogenous pricing policy. However, this paper focuses on presenting a parsimonious model with forward looking buyers and sellers while the equilibrium converges tot he static optimal price. This allows us to identify a learning rate of $\lambda$, given a discount rate of $\gamma$ or the ratio $\frac{\lambda}{\gamma}$.
+
+The number of empirical work on dynamic pricing is surprisingly low. A significant one is the work of Lu and Comanor (1998). It investigates and the intertemporal evolution of prices for a large panel of new pharmaceutical products. The study shows that pharmaceuticals that largely improve the given area of treatment tend to follow a skimming strategy. At the same time pharmaceuticals with a small improvement tend to follow a penetration strategy. This conclusion corresponds with the thoughts regarding the mass and niche markets. 
+
+There are numerous papers related to this topic: Shapiro (1983), Cremer (1984), Farrel (1986), Milgrom and Roberts (1986), Tirole (1988), Villas-Boas (2004) and Johnson and Myatt. However, all of them are either focused on a particular area or used different assumptions, therefore they do not follow the exact same path as this paper.
+
+Model
+
+The paper does the following assumptions:
+
+\begin{enumerate}
+	\item Consider a continuous-time model with $t \in [0, \infty )$ and a positive discount rate $\gamma>0$.
+	\item Monopolist has a zero marginal cost of production.
+	\item Monopolist offers a single product.
+	\item Market consists of a continuum of consumers
+	\item Buyers have unit demand for the product within periods.
+	\item Product is not storable.
+	\item No price differentiation within periods.
+\end{enumerate}
+
+Every time, the monopolist sets a spot price and each consumer decides whether or not to buy it.
+
+Each consumer is characterized by his willingness to pay for the product, denoted by $\Theta$. The product the monopolist is offering is an experience good, therefore neither him or the consumer know the true value of $\Theta$ initially. For ex ante distribution of valuations the paper uses a continuously differentiable distribution function $F(\Theta)$ with support $[\Theta_v\Theta_h] \subset R$. This is assumed to be common knowledge and shows that there is no aggregate uncertainty. This paper’s main focus is on private individual experiences, we do not take common sources of uncertainty into consideration. Also, we set $\Theta [1-F(\Theta)]$ to be quasi-concave in $\Theta$. The expected utility function of consumers will be the following:
+
+\begin{equation}
+v = \int_{\theta_h}^{\theta_i} \theta d F(\theta) 
+\end{equation}
+
+The paper’s further assumptions include a perfectly informative signal arriving at a constant Poisson rate $\lambda$ for all consumers who bought the product in a time interval of length dt. The analytical consequence of this is that the buyers remain identical before receiving information. After receiving it they remain heterogenous and the monopolist has to find the balance between the two market segments.The paper assumes that there are no publicly observable variables are price and aggregate quantities. If the buyers who do not possess any information buy in period t, the state variable $\alpha(t)$ will look like this.
+
+\begin{equation}
+\frac{d \alpha (t)}{dt} = \lambda [1-\alpha (t)]
+\end{equation}
+
+The seller, the informed buyers and uninformed buyers all adapt a Markovian pricing and purchasing respectively denoted by $p(\alpha)$. The purchasing strategy is $d(\alpha,p)$.The monopolist will maximize his expected discounted and the buyers will maximize the expected value of their utilities at the same time. Another feature is that there is no aggregate uncertainty but individuals will face uncertainty.
+
+Demand Management
+
+All buyers start with no information, but it is inevitable that they receive it over time. This gradually makes them informed buyers. Optimal demand management determines a stopping point when the marginal buyer will be an informed buyer. However, this does not mean that there will not be any uninformed buyers left. They will either priced out of or stay in the market based on market size in equilibrium. The optimal stopping problem will only toughen due to the fact that buyers are forward looking and consequently the current revenue of the seller depends on his future prices.
+
+Market size
+
+When the number of informed buyers grows price is determined by the previously mentioned $F(\theta)$. When we ignore the uninformed buyers the optimal monopoly price p will maximize the flow revenues from the only existed buyers: the informed ones:
+
+\begin{equation}
+\overline{p} = argmax_{p \in R_+} {p[1-F(p)] }
+\end{equation}
+
+
+\end{document}

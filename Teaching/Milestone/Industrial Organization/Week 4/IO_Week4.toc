@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Big picture}{2}{0}{1}
+\beamer@sectionintoc {2}{Stackelberg}{5}{0}{2}

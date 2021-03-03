@@ -1,0 +1,365 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+\usepackage{hyperref}
+
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+\section{Industrial Organization, Week 3 Answers}
+
+
+\subsection{Price competition}
+
+1) So this is a bit of a trick question. If we know there is symmetry in costs and perfect information, Bertrand equilibrium is always the marginal cost, $c$.
+
+2) If firm 1 can produce costlessly, the monopoly price is $\pi=p(100-\frac{1}{2}p) \rightarrow \frac{\delta \pi}{\delta p} = 100-p=0 \rightarrow p=100$. 
+
+It cannot set the monopoly price when it is competing with a firm that has a marginal cost of $10$ so it simply sets the price a penny under ten, $10-\epsilon$.
+
+However if it's competitor has a marginal cost price of $110$, anyway this is above the monopoly price, so the firm 1 can just set the monopoly price without worrying about the competition. 
+
+3) So in theory the equilibrium would be that both firms produce $20$, so the total quantity is $40$, which means the price is $120$. 
+
+optional:
+\textbf{Proof: But we need to make sure that no firm has an incentive to deviate. This is easy enough to check, we know a firm cannot produce more, so we only need to check that reducing quantity isn't an optimal strategy. Technically we need to do this for an infinitely small deviation but to make it simpler let us make it discrete. Suppose a firm, decides to reduce it's quantity from $20$ to $19$, the new quantity is now $39$ and the price is now $122$. So the profit of this firm is now $19*122-19*4=2318-76=2242$. So the firm makes more per unit and has lower costs, but it has fewer sales. How much profit did the firm when it was selling 20 units? It made $20*120-20*4=2320$, which was higher so we can see that the firm has no reason to deviate from the full capacity equilibrium.}
+
+Note that the low capacity equilibrium has a higher price than any of the previous ones. 
+
+\newpage
+
+\subsection{Quantity competition}
+\begin{align*}
+&\text{We have our profit function} ~~ 
+&& \pi_1=(300-Q)q_1 - cq_1 \\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Re-write in terms of firm 1's quantity} ~~ 
+&&  =  (300-q_1-q_2-q_3)q_1 - cq_1
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Take the derivative} ~~ 
+&&  \frac{\delta \pi_1}{\delta q_1} =  300-2q_1-q_2-q_3 - c
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Solve for the quantity of 1} ~~ 
+&&  q_1= \frac{300-q_2-q_3-c}{2}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{By symmetry we know that} ~~ 
+&&  q_2= \frac{300-q_1-q_3-c}{2}
+\end{align*}
+
+\begin{align*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Substitute second into first quantity} ~~ 
+&&  q_1= \frac{300-c}{2} -\frac{300-q_1-q_3-c}{4} - \frac{q_3}{2}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Simplify a bit} ~~ 
+&& q_1= \frac{300-c}{4} + \frac{q_1}{4} - \frac{q_3}{4}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{A bit more} ~~ 
+&& q_1= 100 - \frac{c}{3} - \frac{q_3}{3}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Again we know by symmetry that:} ~~ 
+&& q_3= 100 - \frac{c}{3} - \frac{q_1}{3} 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Plug in} ~~ 
+&& q_1= 100 - \frac{c}{3} - \frac{1}{3} \left( 100 - \frac{c}{3} - \frac{q_1}{3} \right)
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Simplify} ~~ 
+&& q_1= 100 - \frac{c}{3} - \frac{100}{3} + \frac{c}{9} + \frac{q_1}{9}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Simplify} ~~ 
+&& 8q_1= 900 - 2c - 300
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{We have arrived!} ~~ 
+&& q_1= \frac{600 - 2c}{8}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{The marginal cost is equal to 5} ~~ 
+&& q_1= \frac{590}{8} \approx 73.75  
+\end{align*}
+
+So the equilibrium price is: 
+
+\begin{align*}
+p=300- 3\frac{590}{8}=78.75
+\end{align*}
+
+So the equilibrium profit is: 
+
+\begin{align*}
+\pi_1 = 78.75*73.75-73.75*5 = 5807.8-365 = 5442
+\end{align*}
+
+Part 2
+
+We start from the reaction function but set the third quantity equal to zero. But we now also index the costs to allow for difference. 
+
+\begin{align*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{The marginal cost is equal to 5} ~~ 
+&& q_1= \frac{300-q_2-c_1}{2}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Separate the second quantity} ~~ 
+&& q_1= \frac{300-c_1}{2}-\frac{q_2}{2}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Plug in the second quantity} ~~ 
+&& q_1= \frac{600-2c_1}{4}-\frac{300-q_1-c_2}{4}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Simplify} ~~ 
+&& q_1= \frac{300-2c_1-c_2}{3}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{We know by symmetry that} ~~ 
+&& q_2= \frac{300-2c_2-c_1}{3}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Cost of 1 is 5, cost of 2 is 1} ~~ 
+&& q_1= 97 ; q_2= 101
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{So the price is} ~~ 
+&& 300-97-101 = 102
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{So the profit of firm 1 is} ~~ 
+&& 102*97- 97*5= 9409
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{And profit of firm 2 is} ~~ 
+&& 102*101- 101*1 = 10201
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+
+Part 3
+
+Welfare is producer surplus + consumer surplus. Start with producer surplus is simply profts, so in the three firm case it is, $5442*3=16326$, whilst in the two firm case it is: $9409+10201=19610$
+
+Consumer surplus is calculated in the usual way, the upper triangle in supply and demand, in the three firm case we have $(300-78.75)*(73.75*3)\frac{1}{2}=24475.8$. Whilst in the 2 firm case we have: $(300-102)*(97+101)\frac{1}{2}=19602$
+
+So the welfare in with three firms is $39212$, whilst the welfare with the two firms is $40,801.8$.
+
+% \subsection{Graph}
+
+
+% \href{https://www.desmos.com/calculator/5vkmlhiwui}{Click here} for the graph: 
+
+
+\end{document}

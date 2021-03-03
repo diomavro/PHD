@@ -1,0 +1,508 @@
+%\documentclass[10pt,aspectratio=43,t,l]{beamer}
+\documentclass[10pt,aspectratio=169,t,l,fleqn,mathsanserif,sanserif]{beamer}
+%\documentclass[10pt]{beamer}
+
+%\setbeamertemplate{footline}[page number]{}
+
+\usepackage{framed}
+\usepackage{tcolorbox}
+\colorlet{shadecolor}{blue!15}
+\usepackage{color,amsmath,xmpmulti,textpos,comment,eurosym,bm,amsthm,tabularx,cancel}
+\usepackage{epsfig}
+\usepackage{nicefrac}
+\usepackage{listings}
+%\usepackage{enumitem}
+\usepackage{graphicx}    
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+%\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+%\usepackage[pdftex]{hyperref}
+\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
+\usetikzlibrary{shapes.geometric, arrows,chains}
+\tikzset{
+  startstop/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=center, 
+    draw=black, 
+    fill=red!30
+    },
+  startsleft/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=left, 
+    draw=black, 
+    fill=red!30
+    },
+  startsright/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=right, 
+    draw=black, 
+    fill=red!30
+    },
+  process/.style={
+    rectangle, 
+    minimum width=3cm, 
+    minimum height=1cm, 
+    align=center, 
+    draw=black, 
+    fill=blue!30
+    },
+  decision/.style={
+    rectangle, 
+    minimum width=3cm, 
+    minimum height=1cm, align=center, 
+    draw=black, 
+    fill=green!30
+    },
+  arrow/.style={thick,->,>=stealth},
+  dec/.style={
+    ellipse, 
+    align=center, 
+    draw=black, 
+    fill=green!30
+    },
+  font={\fontsize{9pt}{12}\selectfont}
+}
+%\renewcommand{\labelitemi}{$\blacktriangleright$}
+
+\epstopdfsetup{outdir=./}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+
+\newcommand{\subhead}[1]{\mbox{}\newline\textbf{#1}\newline}
+\newcommand{\ave}[1]{\left\langle #1 \right \rangle}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\cf}{{\it c.f.}}
+\newcommand{\etc}{{\it etc.}}
+\newcommand{\etal}{{\it et al.}}
+%\newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+\newcommand{\threepartdef}[6]
+{
+  \left\{
+    \begin{array}{lll}
+      #1 & \mbox{if } #2 \\
+      #3 & \mbox{if } #4 \\
+      #5 & \mbox{if } #6
+    \end{array}
+  \right.
+}
+
+
+\newcommand{\Ito}{It\^{o}}
+\newcommand{\SP}{S{\&}P500}
+\newcommand{\lopt}{\ell_{\text{opt}}}
+\newcommand{\gest}{g_{\text{N,T}}}
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\person}[1]{{#1}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\vs}[1]{\vspace{.#1cm}}
+\newcommand{\vf}{\vspace{.25cm}}
+\newcommand{\vff}{\vspace{.6cm}}
+\newcommand{\np}{\\ \vf}
+\newcommand{\npp}{\\ \vff}
+\newcommand{\be}{\begin{equation*}}
+\newcommand{\ee}{\end{equation*}}
+\newcommand{\bea}{\begin{eqnarray*}}
+\newcommand{\eea}{\end{eqnarray*}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\bie}{\begin{enumerate}}
+\newcommand{\eie}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\toinf}{\rightarrow\infty}
+\newcommand{\D}{{\Delta}}
+\newcommand{\Dx}{{\Delta x}}
+\newcommand{\Dy}{{\Delta y}}
+\newcommand{\Du}{{\Delta u}}
+\newcommand{\DW}{{\Delta W}}
+\newcommand{\DU}{{\Delta U}}
+\newcommand{\du}{{\delta u}}
+\newcommand{\Dv}{{\Delta v}}
+\newcommand{\dt}{{\delta t}}
+\newcommand{\gens}{g_{\ave{\,}}}
+\newcommand{\ft}[1]{\frametitle{#1}}
+\newcommand{\bq}{\begin{quote}}
+\newcommand{\eq}{\end{quote}}
+\newcommand{\ww}[1]{\bq{\small\rm#1\\}\eq}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\prob}[1]{\mathcal{P}\left(#1\right)}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ga}{g_\text{ave}}
+\newcommand{\gt}{g_\text{typ}}
+\newcommand{\gbar}{\bar{g}}
+\newcommand{\mbar}{\bar{m}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\xf}{{x_F}}
+\newcommand{\xb}{{x_B}}
+\newcommand{\muf}{{\mu_F}}
+\newcommand{\mub}{{\mu_B}}
+\newcommand{\sigf}{{\sigma_F}}
+\newcommand{\sigb}{{\sigma_B}}
+\newcommand{\gf}{{\gbar_F}}
+\newcommand{\gb}{{\gbar_B}}
+\newcommand{\pa}{\textit{pa}}
+\newcommand{\taus}{{\tau_\text{s}}}
+\newcommand{\Dt}{\Delta t}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\taue}{\tau^\text{EGBM}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+\beamertemplatenavigationsymbolsempty
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{#1}}%
+  \item[]%
+}
+{\end{list}}
+
+%\usetheme[width=1.8cm,hideothersubsections]{Frankfurt}
+\usetheme{Frankfurt}
+
+\newcommand\BackgroundPicture[1]{
+\setbeamertemplate{background}{
+\parbox[c][\paperheight]{\paperwidth}{
+\vfill \hfill
+\includegraphics[width=1\paperwidth,height=1\paperheight]{#1}
+\hfill \vfill
+}}}
+
+
+\definecolor{lmlblue}{RGB}{0,77,123}
+\definecolor{deepblue}{RGB}{35,33,169}
+\definecolor{lmllb}{RGB}{237,244,255}
+\definecolor{lmlred}{RGB}{155,29,29}
+\definecolor{lmlgrey}{RGB}{142,142,142}
+\definecolor{lmlgrey2}{RGB}{82,82,82}
+\definecolor{grey}{RGB}{210,210,210}
+\xdefinecolor{lightblue}{rgb}{0,200,255}
+\setbeamercolor{important}{bg=lightblue,fg=red}
+\AtBeginEnvironment{definition}{%
+  \setbeamercolor{block body}{fg=black,bg=white}
+  \setbeamercolor{block title}{bg=lmllb,fg=black}
+}
+
+\AtBeginEnvironment{theorem}{%
+  \setbeamercolor{block body}{fg=black,bg=white}
+  \setbeamercolor{block title}{bg=lmllb,fg=black}
+}
+
+%\newcommand{\propnumber}{} % initialize
+%\newtheorem*{prop}{Proposition \propnumber}
+%\newenvironment{propc}[1]
+%  {\renewcommand{\propnumber}{#1}%
+%   \begin{shaded}\begin{prop}}
+%  {\end{prop}\end{shaded}}
+%\AtBeginEnvironment{propc}{%
+%  \setbeamercolor{block body}{fg=black,bg=white}
+%  \setbeamercolor{block title}{bg=lmllb,fg=black}
+%}
+
+\setbeamercolor{fine separation line}{fg=lmllb}
+
+\setbeamercolor{item projected}{fg=white, bg=black}
+
+\setbeamercolor{frametitle}{bg=lmllb, fg=black}
+\setbeamertemplate{frametitle}[default][left,colsep=-4bp,rounded=false,shadow=false]
+
+\setbeamercolor{structure}{bg=white, fg=black}
+%structure changes color of title in sidebar.
+
+%\setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
+\setbeamercolor{section in head/foot}{fg=lmlgrey2, bg=lmllb}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{title}{bg=white,fg=deepblue}
+
+\hypersetup{colorlinks,linkcolor=,urlcolor=deepblue}
+
+\setbeamerfont{title in sidebar}{size=\fontsize{9}{9}\selectfont}
+\setbeamerfont{section in sidebar}{size=\fontsize{7}{7}\selectfont}
+
+% add frame numbers to navigation bar
+% (for RSS 2015 conference)
+\addtobeamertemplate{navigation symbols}{}{
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{footline}
+    \hspace{1em}
+    \scriptsize
+%    \insertframenumber/\inserttotalframenumber
+}
+\setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
+\setbeamercovered{transparent=20}
+%\setbeamertemplate{footline}[frame number] % to show overlay page numbers type: page number
+%\setbeamersize{text margin left=0.65cm, text margin right=0.65cm}
+%\setbeamercolor{item}{fg=black!70!black} % red bullets
+%\setbeamertemplate{itemize subitem}[triangle] % triangle sub-bullets
+%\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+
+
+\title[\begin{flushleft} \color{white} {\tiny ???} \end{flushleft}]{\bf {Industrial Organization, Week 4 \\ 
+Dynamic Oligopoly}}
+\author[shortname]{ Dio Mavroyiannis \inst{\dag}}
+\institute[\begin{flushleft} \color{white} {\large ???} \end{flushleft}]{Milestone Institute}
+%\institute[shortinst]{\inst{*} London Mathematical Laboratory \and \inst{\dag} Universit\'{e} Paris-Dauphine \and \inst{\ddag} London Mathematical Laboratory and Santa Fe Institute}
+\date{17 February 2021}
+
+\AtBeginSection[]{
+\frame{
+\ft{Agenda}
+\tableofcontents[currentsection,hideallsubsections]
+}
+}
+
+\makeatletter
+\setbeamertemplate{headline}{%
+  \pgfuseshading{beamer@barshade}%
+  \ifbeamer@sb@subsection%
+    \vskip-9.75ex%
+  \else%
+    \vskip-7ex%
+  \fi%
+    \begin{beamercolorbox}[ht=3.5ex,dp=2.125ex]{section in head/foot}
+     \insertsectionnavigationhorizontal{\textwidth}{}{}%
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+
+\makeatother
+
+\setbeamertemplate{mini frames}{}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{document}
+\frame{\titlepage\insertlogo}
+
+\section{Big picture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Dynamic}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Plan: We look at our second dynamic model today
+\item Economic modelling works by gradually making things more complicated
+\ei
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Sequential equilibrium}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item In game theory there is a whole family of equilibrium concepts we can use when there is time
+\item Examples: Risk, Markovian, Perfect, subgame perfect, bayesian, sunspot, etc
+\item Refinements: The most famous is called cho kreps intuitive criterion
+\item Most are discrete concepts
+\item In infinite games there are more equilibria possible which enable cooperation
+\ei
+
+}
+
+\section{Stackelberg}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Stackelberg}
+
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(240,-20){\includegraphics[width=5cm]{./IO_Week4_Stackelberg.jpg}}
+\end{picture}
+
+\bi
+\item Born in 1905 Russia, died at 40 in Spain
+\item What happens if one firm produces first?
+\item Incumbent and Entrant take decisions at different times
+\ei
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Commitment}
+
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{picture}(80,80)(0,0) %syntax: \begin{picture}(width,height)(x-offset,y-offset)
+\put(80,-150){\includegraphics[width=10cm]{./IO_Week4_Commitment.jpg}}
+\end{picture}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Timing and Strategy}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item t=0 Firm 1 produces first
+\item t=1 Firm 2 produces second
+\item t=2 Profits are realized
+\item Backward induction implies, start with second mover
+\item Then plug in second movers move into first movers
+\item Once we have both we can plug them into profits/price
+\ei
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Sequential equilibrium 1}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{align*}
+&\text{The data} ~~
+&& P(q) = 600-Q; c(q)=qc
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{The profit function is} ~~ 
+&& \pi_2(q_1,q_2) = P(Q)q_2-cq_2 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{FOC} ~~ 
+&& \frac{\delta \pi_2 }{\delta q_2} =  600-q_1-2q_2-c = 0
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Re-arrange} ~~
+&& q_2 =  \frac{600 - c - q_1}{2}
+\end{align*}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Sequential equilibrium 2}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{align*}
+&\text{Now we setup the profit of firm 1} ~~ 
+&& \pi_1(q_1,q_2) = (600-q_1-q_2)q_1-q_1c
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Plug-in the reaction of firm 2} ~~ 
+&& \pi_1(q_1,q_2) = (600-q_1-\frac{600 - c - q_1}{2})q_1-q_1c
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Simplify} ~~ 
+&& = (300 +\frac{c}{2} - \frac{ q_1}{2})q_1-cq_1
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Take the derivative} ~~ 
+&& \frac{\delta \pi_1 }{\delta q_1} = 300 + \frac{c}{2} - q_1 -c = 0
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Solve for the quantity} ~~ 
+&& q_1 = 300 - \frac{c}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Sequential equilibrium 3}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{align*}
+&\text{We have our two q's} ~~ 
+&& q_1 = 300 - \frac{c}{2}; q_2 =  \frac{600 - c - q_1}{2}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Plug-in the reaction of firm 2} ~~ 
+&& q_2 =  150 - \frac{c}{4} 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\text{Price:} ~~ 
+&& P(q) = 150 + \frac{3c}{4} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{How to plot isoprofit}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item To plot the isoprofit on the reaction curve graph do the following: 
+\item pick a number, say h
+\item equalize $\pi_1(q_1,q_2)=h$
+\item solve for $q_2$
+\item Do this a few times with different h
+\item Plot each $q_2$
+\item note: if the curves intersect you have a mistake
+\ei
+
+}
+
+\end{document}
