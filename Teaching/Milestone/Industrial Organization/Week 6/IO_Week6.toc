@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Big picture}{2}{0}{1}
+\beamer@sectionintoc {2}{Monopoly}{5}{0}{2}
+\beamer@sectionintoc {3}{Oligopoly}{10}{0}{3}

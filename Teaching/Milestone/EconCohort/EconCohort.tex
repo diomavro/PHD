@@ -1,0 +1,373 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+\usepackage{hyperref}
+
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+\chapter*{Economic Cohort}
+
+You will choose readings from the following list of topics. The purpose of your readings will be present the arguments in as cogent a manner as possible. If you can also represent it in syllogisms that is a plus. These are all very important topics in the history of economics, they all have a tradition which has emerged as a result of the works. I would have liked to include older classics like the Wealth of Nations but it is too long and too difficult to create an argument from. You will be expected to present for around 8 minutes on your topic of choice and write an essay which either explains the whole work or focuses on certain aspects of the work you find important, if you decide to do it jointly with someone else, the presentation will be 16 minutes. You are free to decide if this is to be a critique, review or an analysis. Note that no matter what you choose, you should spend the first pages outlining the argument as clearly as possible. If it will help you, you can use citations to help you explain or critique material, all of these books should have lots of resources about them on the internet. In general the options that have math notations will be shorter and the options that are less technical will be longer. 
+
+As a general rule I try to assign Nobel Prize winners because those are recognized people within the profession that have advanced ideas. It is often difficult to understand who has created new ideas and who is simply repeating the same things in different language. Unfortunately, whenever there is a Nobel Prize, some publishers chase after the winners and have them write a book in 12 months, which is usually terrible and not well thought out, so I will only assign books that the winners have written BEFORE they win the nobel prize. Unfortunately some of the nobel prize winners have won for their data analysis or the creations of measures, though their contributions are important, these said economists rarely have anything original to say about the measures, so I will be focusing on assigning you books which advance theoretical contributions. 
+
+\newpage
+
+The classic economics book which everyone reads is Freakonomics. Unfortunately, the style of the book is one where each chapter has a completely different topic and as a result you cannot deepen your understanding on any subject. When selecting books, it is important that you choose books with focus, usually around a central idea that is more precise than 'hidden economics in everyday life'. If you were to read 100 pop history books on Ancient Rome, this would give you about half the content of simply reading \textit{History of the Decline and Fall of the Roman Empire} by Gibbon, which is approximately 5 per cent the length of those 100 history books. This is because Gibbons book will not touch on the same events numerous times, while in the 100 books you will read the same thing repackaged in 100 different ways. 
+
+
+\section*{Grand theories}
+
+These are books which focus on one economic model. All of these are very important, if you have more free time, I recommend you do read through all of them in detail.
+
+\subsection*{Malthus(150 pages)}
+Malthus had one of the first equilibrium concepts, in essence, his model is: in the long run, the birth rate equals the death rate. Quite a few environmentalists take the same position today so it is an important thesis to understand. Most economists think that Malthus was right for all of history but the empirical regularity of his thesis started to collapse right at about the time he was writing(the industrial revolution). 
+
+You will have four things to read:
+1) Malthus had a long debate with Ricardo. First read these 10 pages here to understand a little more about the context. 
+2) You are then to read Chapter 1 and 2 of 'Modelling the Middle ages'.  
+3) For an application, read this article: https://www.discovermagazine.com/planet-earth/the-worst-mistake-in-the-history-of-the-human-race
+4) 'logic of the malthusian economy', which contains the clearer equilibrium model. 
+
+\newpage
+
+\subsection*{Calculation problem(215 pages)}
+
+The status of the calculation problem is still debated, perhaps most recently, some economists are using it to argue that large firms cannot calculate and hence should be broken up. Almost all economists have heard of this problem as posed by Mises but very few can actually talk about it, the reason is that the original content, including the rebuttals are all very badly written and unclear. 
+
+Fortunately I have found a source which does a pretty decent job of explaining it. \textit{From Marx To Mises}, written by a Marxist. You are to read the first 6 chapter(200 pages), and the third Chapter of \text{Calculation and Coordination}(15 pages), it even has a syllogism. 
+
+\subsection*{Georgism problem(205 pages)}
+
+Before the Bolsheviks took power, it is very possible that Marx was less well known than Henry George, almost no famous economist is a Marxist but many of the most influential are Georgists. 
+
+Henry George's book is clear and a delight to read. It is so influential that it is said that Popes Leo the XXIII and Pius XXII, are said to have developed an ideology which aims to solve the problem posed by Henry George, Distributivism. The book is structured in mini books, the first two books are about existing theories and attacking Malthus, you can skip these, you should read Book 3,4 and 5(should be around 150 pages).
+
+You are also to read chapter 1 of Radical Markets, Property is Monopoly(50 pages), which is a modern version of Georgism, as well as the first 5 pages of Levine's review of the book. 
+
+\subsection*{Calculus of Consent}
+
+Buchanan is the Nobel prize winner nobody in Europe has heard about. Yet he has invented a reflective equilibrium which is as groundbreaking as Rawls. The book \textit{calculus of consent} is at the intersection of political philosophy and economics. You must read the first 8 chapters, which are the first two parts. I have also included a paper which discusses Buchanan's contributions. 
+
+For a more modern take see here: \newline
+https://oxford.universitypressscholarship.com/view/10.1093/0198277253.001.0001/acprof-9780198277255
+
+
+
+\subsection*{Cost and Choice}
+
+\textit{Cost and Choice} is also a book by Buchanan. It is much easier to read and shorter than \textit{calculus of consent}. It starts off with the history of the theory of costs in the first few chapters and then proceeds to make specific arguments regarding the way the concept is used. It is recommended you have taken the Milestone course Industrial Organization with me before tackling this book, as the later discussions make use of some concepts that come from that literature. 
+
+\subsection*{The arrow impossibility theorem (70 pages)}
+
+\textit{The arrow impossibility theorem} is a book is in two parts, you only need to present the first part, it is about 60 pages. This one is a little bit more technical. Arrow has a generalization of Condorcets voting theorem and this is an important book that aims to make a clear exposition.
+
+After getting through the first part and the commentary, I recommend you scan through the remaining book anyway without worrying about the details just to try and get a more complete understanding. 
+
+In the highly unlikely event that one of you has already read this, then you would be eligible to read Sen's longer book. 
+
+\subsection*{Logic of collective action}
+
+\textit{Logic of collective action} is a modern classic in economics, many people consider this book to be the graveyard of analyzing society by 'classes'. It aims to show that a careful application of the marginal analysis entails that group interests do not lead to individual action unless some very narrow conditions are met, as such, merely pointing out that there are group interests is not sufficient to explain any kind of action, instead institutional factors must be brought out for explanation to have any weight. 
+
+Mancur Olson is also heavily in the tradition of Buchanan, in his book, in the first chapter he briefly explains the model he is working with, and then relentlessly applies the model to numerous industries. 
+
+
+\subsection*{The Cost Disease: Why Computers Get Cheaper and Health Care Doesn't }
+
+Baumol is known for 3 primary things, his contribution in the entrepreneurship literature, his exposition of Say's law, and the cost disease. The cost disease asks the question of, why is it that when one area of the economy has an increase in costs, that cost spreads to other areas too? It is a profound book with a very important question that will surely change how you look at the economy. Note that this book is a contribution book, which means it is simply a few essays by different people. As such, you can skip some chapters as long as you present specifically on the cost disease. 
+
+
+\section*{More Niche Topics}
+
+\subsection*{Without Consent or Contract: The Rise and Fall of American Slavery(200 pages)}
+
+No holding back, this book is what happens when one uses the tools of economics on history, a myth busting adventure. The history profession often focuses on narratives, specific interpretations of events by testimonies. Economics likes to focus on what can be quantified. Examples of myths being debunked: That slavery would disapear without the civil war(they show that it was profitable), that slavery was good the economy(Forgel shows that it lagged behind long term), that the average slave worked harder than the average textile mill worker in England. Anyway too much to describe here. Fogel had initially written a book 'Time on the cross' which talked about the same subject and created a whole literature. This book is the follow up, where everything is much more rigorous and the result of decades of debates. 
+
+Once you have this under your belt I recommend reading 'THE ECONOMICS OF AFRICAN AMERICAN SLAVERY:THE CLIOMETRICS DEBATE', a paper which is more recent that surveys developments. 
+
+\subsection*{Information}
+This is a special feature, where you are required to read three Nobel Prize Winners. Hayek's 'The Use of Knowledge in Society', Maskin's 'Friedrich von Hayek and mechanism design', and the first 62 pages of Milgroms 'Discovering prices'. Hayek will get you the origin of the literature, Maskin will get you a summary of how Hayek was formalized in models, and Milgrom will get you the applications of the literature in the real world. Maskin's paper is the most technical of the three. 
+
+\subsection*{Becker}
+
+Becker was one of the most notable Nobel prizes ever in economics. He was one of the most prolific authors around, almost everything he has written is used today. His work is often used in development economics for his theory of the family and his theory of discrimination is still the main source of reference. For the more technically inclined, you can choose anything he wrote and present it. Be warned, this is one of the more technical authors around. As a special exception, you can also choose to present one his most influential papers. 
+
+\subsection*{The New Financial Order}
+
+Shiller received the nobel prize for creating the Case-Shiller index of housing prices, which was a good sign of the housing crash a few years before it occurred. This was probably one of the strangest Nobel prizes as it was jointly given to Shiller for creating a measure which predicts the crisis, and Fama for his theory of market efficiency. 
+
+Most of his books are trivial and kind of boring but this one is the exception and it is by far the simplest on the list. Ordinarily I would not leave it as an option for training young economists because it focuses very little explicitly on intuition. However, the book gives some very innovative ideas about how financial ideas can be used in countries, and though the ideas can be critiqued, it is very useful to be able to understand what such ideas are attempting to do. 
+
+\subsection*{Exit, Voice, and Loyalty(170 pages)}
+
+Another modern classic in economics Albert O. Hirschman, tries to create a very general model of decision making. Although it is an economic model, the idea applies to communities/nations/etc. The central idea is that economic focuses too much ont he ability to exit, but he claims that exit does not always make quality. The book itself is not very technical but a literature has sprung in it's wake to try and formalize everything in here. The models are still a work in progress, but in the meantime, this is a fun choice. 
+
+The whole book is assigned.
+
+\newpage
+\subsection*{Against intellectual monopoly(300 pages)}
+
+David K Levine has turned numerous economists against intellectual property with his work. This book is a summary of a lot of the literature and fantastic way to communicate the results of industrial organization. In the last 50 years or so, the main economists who were against intellectual property were the Austrian economists such as Hayek or Rothbard. But with this book, Levine has managed to take the anti-intellectual property position mainstream. Needless to say, it isn't popular with industry people. 
+
+\subsection*{The Climate Casino: Risk, Uncertainty, and Economics for a Warming World(390 pages)}
+
+This is one of the few books on the list I have not read, but Nordhaus is the only economic Nobel for the environment and this book is said to be quite good. It is about the economics of climate change, it is has caused quite a stir, so for those of you who like debating, this is the one for you. 
+
+\subsection*{Governing the Commons}
+
+Elnor Ostrom is known as the sort of down to earth 'let us go see' economist. Unfortunately I could not finish this book because I find it poorly worded and structured, but others have had positive experiences with it, so maybe you will be one of them. As a worst case scenario you can just google her papers and extract the main points if you fail with the book. 
+
+\subsection*{Poor economics}
+
+Abhijit Banerjee has a good understanding of causal mechanisms and thinks a lot about how to model economic phenomena. The book was written before his nobel prize, so it meets the criteria, it is also one of the easiest books on the list. 
+
+\subsection*{Easterly}
+
+Bill Easterly has been known in development for decades, I have read a few of his books, they are all interesting reads, if one of you wants to go explore and present one this would be a fine choice. 
+
+\subsection*{Austrians}
+
+Austrian economists can be quite wordy but they are quite interesting because they base all their economics on a single axiom, the action axiom. This is the most philosophical of the bunch, I think the book recommendation here needs to vary according to the individual, so if you are interested, you need only tell me your interests and I will try to find something suitable. The most known work is 'Economics in One lesson', which is a relentless approach to the concept of opportunity cost. The most fun is Walter Blocks series, Defending the Undefendable, where every chapter takes a villified profession and defends it using economic theory. 
+
+\subsection*{Post-Keynesians}
+
+There is whole series of post-keynesians. They are making a bit of a comeback now due to US politics. They are known for the concept of effective demand and modern monetary theory. The most rigorous in the tradition is Joan Robinson, who writes on various topics, let me know if this interests you and we can dig in more specifically into her. Otherwise for some fun but controversial books that are making the rounds, you could try 'The Deficit Myth' for modern monetary theory. 
+
+\section*{Some comments on Behavioral Econonomics}
+
+So in general, I do NOT recommend any of the books that follow for learning economics. They can be quite fun to read but they have a very poor capacity to develop your economic intuition. They are a list of anecdotes about how people make decisions. But I am including them because I know they are popular and some of you really want to read them. Most economists assume that people act to get what they want, but they are not always able to say what they want. Behavioral economists seem to assume the opposite, that humans can describe what they want but they won't always act to get it. In my view, the more rigorous approach is taken by Gigerenzer who specializes in debunking behavioral economics, but there is no point in reading Gigerenzer if you have not read the behavioral economists first.  
+
+I think that before reading any of these books you should read the first two chapters of Vernon Smiths book: Rationality in economics, which has a clearer concept of rationality. So these first two chapters should be read with all of the books below. 
+
+\subsection*{Thinking fast and slow(150 pages)}
+
+This easily the best book of the behavioral economics type. It has a clearer over arching narrative which is sprinkled throughout the book 'system 1' and 'system 2'. However it is also the longest, as such it is quite a challenge to get through it all. It is difficult to put this book as an argument because it is again, a series of small experiments and Kahneman like the others favors explaining these experiments as deviations from a rational person. The first part of the book must be read because it explains the approach, then you can select 3-4 chapters from the second part to get some examples of the approach. 
+
+\subsection*{Dan Ariely(200 pages)}
+
+Dan Ariely's books are shorter books on behavioral economics, you can choose whichever one you want but the big picture view is identical to Kahneman, \textit{Predictably Irrational} is a good pick.  
+
+\subsection*{Nudge(250 pages)}
+
+There are two nobel prizes in behavioral economics, one of them, is Kahneman, and the other is Thaler. \textit{Nudge} is also book which mostly compromises a series of small scale experiments. 
+
+\subsection*{Gigerenzer (150 pages)}
+
+If you have already read at least one of the behavioral economic type books. Then you can actually go read Gigerenzer replies' to the above literature. He has an article specifically on \textit{Nudge}, but it is best to read his book: \textit{Rationality for Mortals}. The book is quite long, thankfully the chapters are independent, pick any 4 chapters to read.
+
+
+\newpage
+\section*{Bonus}
+\subsection*{ Jane Jacobs(p 450)}
+
+So I am adding this in case somebody has a very peculiar interest, this will be one of the longest assignments. Jane Jacobs has a very specific idea about how to create value within cities. She is not an economist, but this book has been very influential within and outside economics, \textit{The Death and Life of Great American Cities}. Although it will not be part of the assignment, once you read this book, you can also try read her economic book, \textit{The economy of cities}, which is much dryer and I would only recommend once you read this first book. 
+
+
+\end{document}

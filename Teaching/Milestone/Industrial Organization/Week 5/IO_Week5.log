@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  3 MAR 2021 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2021.2.16)  3 MAR 2021 21:51
 entering extended mode
 **./IO_Week5.tex
 (IO_Week5.tex
@@ -1710,7 +1710,7 @@ Package pdftex.def Info: ./Hotel.jpg  used on input line 380.
 <./Hotel2.jpg, id=214, 371.88937pt x 194.97844pt>
 File: ./Hotel2.jpg Graphic file (type jpg)
 <use ./Hotel2.jpg>
-Package pdftex.def Info: ./Hotel2.jpg  used on input line 469.
+Package pdftex.def Info: ./Hotel2.jpg  used on input line 472.
 (pdftex.def)             Requested size: 341.43306pt x 179.01639pt.
  [13
 
@@ -1720,7 +1720,7 @@ Package pdftex.def Info: ./Hotel2.jpg  used on input line 469.
 <./Hotel3.jpg, id=237, 372.64218pt x 199.49532pt>
 File: ./Hotel3.jpg Graphic file (type jpg)
 <use ./Hotel3.jpg>
-Package pdftex.def Info: ./Hotel3.jpg  used on input line 494.
+Package pdftex.def Info: ./Hotel3.jpg  used on input line 497.
 (pdftex.def)             Requested size: 341.43306pt x 182.79515pt.
  [15
 
@@ -1729,7 +1729,7 @@ Package pdftex.def Info: ./Hotel3.jpg  used on input line 494.
 ] (IO_Week5.toc) [17
 
 ]
-Overfull \hbox (158.60103pt too wide) detected at line 538
+Overfull \hbox (15.82309pt too wide) detected at line 543
 []
  []
 
@@ -1754,7 +1754,7 @@ Package rerunfilecheck Info: File `IO_Week5.out' has not changed.
 Here is how much of TeX's memory you used:
  29863 strings out of 479618
  608533 string characters out of 2861663
- 887678 words of memory out of 3000000
+ 884678 words of memory out of 3000000
  46237 multiletter control sequences out of 15000+200000
  414681 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1774,7 +1774,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/Dio
 fb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/Users/Dio and Nono/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb>
-Output written on IO_Week5.pdf (19 pages, 316324 bytes).
+Output written on IO_Week5.pdf (19 pages, 316505 bytes).
 PDF statistics:
  345 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)
