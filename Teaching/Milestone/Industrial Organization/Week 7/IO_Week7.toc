@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Big picture}{2}{0}{1}
+\beamer@sectionintoc {2}{Definition}{4}{0}{2}
+\beamer@sectionintoc {3}{What is price discrimination?}{6}{0}{3}
+\beamer@sectionintoc {4}{First degree price discrmination}{11}{0}{4}
+\beamer@sectionintoc {5}{Third degree price discrmination}{16}{0}{5}
+\beamer@sectionintoc {6}{Second degree price discrmination}{19}{0}{6}

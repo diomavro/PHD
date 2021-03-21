@@ -1,0 +1,260 @@
+%\documentclass[AER]{AEA}
+\documentclass[12pt]{report}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+
+\usepackage{hyperref}
+
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+
+\usepackage{tikz}
+\usetikzlibrary{spy}
+
+\usepackage{verbatim}
+
+
+
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[authoryear]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+
+
+
+%\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.multipart}
+
+\usetikzlibrary{shapes}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{result}{result}
+
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+
+
+% https://medium.com/@aerinykim/why-the-normal-gaussian-pdf-looks-the-way-it-does-1cbcef8faf0a
+
+\begin{document}
+\section{Industrial Organization, Week 5 Individual Answers}
+
+A1) Like in the lecture, we find this by finding computing the indifferent consumer, $\overline{x}$. If he consumes at from the firm at 0 he gets, $v-p_A-t\overline{x}$, if from the firm at 1, $v-p_B-t(1-\overline{x})$. 
+
+\begin{align}
+v-p_A-t\overline{x}&=v-p_B-t(1-\overline{x}) \\
+& \rightarrow \overline{x} = \frac{p_B-p_A+t}{2t} \\
+\pi_A &= (p_A-c) \overline{x} = (p_A-c)\frac{p_B-p_A+t}{2t}   \\
+\frac{\partial \pi_A}{\partial p_A} &= \frac{p_B-p_A+t}{2t} - \frac{(p_A-c)}{2t} \\
+&\rightarrow p_A = \frac{p_B+t +c}{2} \\
+&\rightarrow p_B = \frac{p_A+t +c}{2} \\
+&\rightarrow p_A = c+t = p_B \end{align}
+
+We know by symmetry that the firms will set the same price so the indifferent consumer will be at $\frac{1}{2}$. So profit is simply: $\pi_1 = \pi_2 = \frac{t}{2}$
+
+A2) 
+% Now if we have that the price is fixed from the begining then the $p_1 = c(1-x)$, we also have that now the consumer is willing to pay a little more for delivery so his value is $v+\epsilon$ So for the indifferent consumer we have that:
+% \begin{align}
+% v+\epsilon-c(1-x)=v-p_2-t(1-\overline{x}) \rightarrow \overline{x}= \frac{-p_2+c-\epsilon-t}{c-t} \\
+% \end{align}
+
+% Since the price of firm 1 is fixed, we only have to worry about the price of firm 2. 
+
+% \begin{align}
+% \pi_1 &= (p_1-c) (1-\overline{x}) = (p_1-c) (1- \frac{c-p_2-\epsilon-t}{c-t}) =(p_2-c) \left(\frac{p_2+\epsilon}{c-t} \right) \\
+% \rightarrow p_2 = \frac{c-\epsilon}{2}
+% \end{align}
+
+% So what is going on? How can price be smaller than the marginal cost? Well, this is where intuition comes in, if we plug in blindly like the above we get strange answers. We should remember than it is not possible for the demand to be negative, $c \geq t$. We know that the lowest the price can be is $c$.  But notice that if we have the demand $\frac{p_2+\epsilon}{c-t}$, any increase in the numerator above c, is guaranteed to give us a number above 1. Which
+
+
+% So we see that the price is negative, which is impossible, so it must be $0$. Now take a quick look at the indifferent consumer: $\frac{c-\epsilon-t}{c-t}$
+
+This is a strange cost function because the firm at 0 charges you less the further away you are. This was an important thing to notice, and if you notice it, there is no derivation needed. Let us imagine that the extra value from having a delivery is $\epsilon$. 
+
+First note here that the consumer at 1, gets utility, $v+\epsilon$ if he consumes from the the firm at 0 and $v-p_2$, if he consumes from the firm at 1. So even if the price was the marginal cost, he would prefer to shop at the leftmost firm.  
+
+What about the consumer at 0.5? Well he gets $v+\epsilon-\frac{c}{2}$ if he consumes at 0 and $v-p_2-0.5t$. Once again, the price of firm 2 cannot be below marginal cost, so the utility from consuming at the firm at $0$ is higher. 
+
+So the consumer who will have the lowest utility from consuming at 0, is the consumer at 0. $v+\epsilon-c$, but due to the epsilon, even this consumer prefers to consume at firm at 0. 
+
+So everyone consumes at 0! 
+
+A3) If both firms hire a delivery boy, then it should be clear that we are once again going to have a symmetric outcome. However, as we have just seen above, the utility that consumers are getting with this cost function, decreases the closer they are to the pizza place. So the OPPOSITE of the baseline hotelling occurs, everyone above $\frac{1}{2}$ will go to pizza place A and everyone below it, will go to pizza place B. 
+
+
+\end{document}

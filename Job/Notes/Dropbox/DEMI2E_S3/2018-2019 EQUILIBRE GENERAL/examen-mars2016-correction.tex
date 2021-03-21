@@ -1,0 +1,192 @@
+
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[applemac]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{amssymb,amsfonts,amsmath}
+\newcommand\R{\mathbb R}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, March 25, 2009 15:50:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\def \L { {\mathcal L}}
+\setlength{\unitlength}{1cm} \setlength{\textwidth}{17cm}
+\setlength{\oddsidemargin}{0cm} \setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-55pt} \setlength{\textheight}{25.5cm}
+%\renewcommand{\baselinestretch}{1.3}
+
+%\input{tcilatex}
+
+\begin{document}
+
+
+\noindent Licence 2 MI2E, Université Paris-Dauphine\\
+Microéconomie: théorie de l'équilibre général \\Cours de Vincent Iehlé
+
+%\vskip .05in
+
+\begin{center}
+\textbf{Examen, 25 mars 2016\\ELEMENTS DE CORRECTION}
+\end{center}
+
+
+
+\vskip .1in
+
+\noindent{\bf Exercice 1 (3 points)} 
+ On considère une économie d'échange $\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$ où les fonctions d'utilité sont toutes croissantes. On suppose qu'il existe un prix $p$, avec $p_\ell>0$ pour tout $\ell=1,...,L$,  tel que les demandes des consommateurs  $d^1(p), d^2(p), ...,d^N(p)$ garantissent l'équilibre sur les marchés des biens,  pour les biens  $1$ à $L-1$. Montrer que le marché du bien $L$ est également à l'équilibre.
+ 
+\noindent{\bf REPONSE:}
+
+Comme les fonctions sont croissantes, on sait d'après un résultat du cours que les contraintes sont saturées à l'équilibre.  Cela signifie que pour tout consommateur $i$:$\sum_{\ell=1}^L  p_\ell d^i_\ell(p)=\sum_{\ell=1}^L p_\ell e^i_\ell$. En sommant sur tous les agents on obtient que: 
+
+$$\sum_{i=1}^N\sum_{\ell=1}^L p_\ell d^i_\ell(p)=\sum_{i=1}^N\sum_{\ell=1}^L p_\ell e^i_\ell$$
+
+On peut le réécrire:
+
+$$\sum_{\ell=1}^L \sum_{i=1}^N[  p_\ell d^i_\ell(p)- p_\ell e^i_\ell]=0$$
+
+Puis:
+
+$$\sum_{\ell=1}^L p_\ell\sum_{i=1}^N   [d^i_\ell(p)-e^i_\ell]=0$$
+
+
+Puis:
+
+$$\sum_{\ell=1}^{L-1} p_\ell \sum_{i=1}^N  [d^i_\ell(p)-e^i_\ell]+ p_L \sum_{i=1}^N [d^i_L(p)-e^i_L] =0$$
+
+Comme les $L-1$ premiers marchés sont à l'équilibre $\sum_{i=1}^N  [d^i_\ell(p)-e^i_\ell]=0$ pour $\ell=1,...,L-1$, il faut nécessairement que $\sum_{i=1}^N [d^i_L(p)-e^i_L] =0$, en utilisant le fait que $p_L>0$. 
+
+\bigskip
+
+{\bf Barème. Mettre  1 point pour le premier argument avec les fonctions croissantes, 1 point pour la rédaction mathématique (indices, sommes, produit scalaire etc), 1 point pour l'argument final, les L-1 sont à l'équilibre donc le dernier membre vaut $0$ et comme  $p_L>0$ alors on obtient résultat voulu. 
+
+
+Si les étudiants le font correctement mais seulement dans le cas $N=2$, $l=2$, on peut mettre 1,5 points.}
+
+
+
+\bigskip
+
+\noindent{\bf Exercice 2 (10 points)} 
+On consid\`{e}re une \'{e}conomie d'\'{e}change \`{a}
+2 agents (1 et 2) et 2 biens ($x$ et $y$). Les dotations initiales des
+agents, not\'{e}es $e^{i}=(e_{x}^{i},e_{y}^{i})\in \mathbb{R}_{+}^{2}$, sont%
+\begin{equation*}
+e^{1}=(1,\epsilon)\qquad e^{2}=(0,1-\epsilon)  \:\:\:\:\:\:\:\text{  avec } \:\:
+\epsilon\in [0,1]
+\end{equation*}%
+Les fonctions d'utilit\'{e} $u^{i}:\mathbb{R}_{+}^{2}\rightarrow \mathbb{R}$%
+, $i=1,2$, sont \ 
+\begin{equation*}
+u^{1}(x,y)=x^{\frac{1}{3}}y^{\frac{2}{3}},\quad u^{2}(x,y)=x^{\frac{1}{2}}y^{%
+\frac{1}{2}}
+\end{equation*}
+
+\begin{enumerate}
+\item (2 pts) V\'{e}rifier \textit{explicitement} si la fonction d'utilit%
+\'{e} du premier agent est: croissante, strictement croissante,
+quasi-concave, strictement quasi-concave.
+
+{\bf Barème: 0.5 point par propriété. Je vous laisse faire en fonction de ce que vous avez fait en cours. (les implications logiques sont acceptées, par exemple si on montre que $u$ est strictement croissante alors on peut écrire, ``comme $u$ est strictement croissante alors elle est croissante... '')}
+
+\item (2 pts) D\'{e}terminer la demande de chacun des agents en fonction du
+prix $p=(p_{x},p_{y})$ et de sa dotation initiale, en donnant toutes les \'{e}tapes
+du calcul pour le premier agent seulement.
+
+{\bf Barème: pour la méthode je vous laisse voir en fonction de ce que vous avez fait en cours. Ils peuvent utiliser soit TMS = rapport des prix en précisant les hypothèses, ou alors refaire les calculs à partir du lagrangien.  Pour le deuxième, ils peuvent donner la réponse directement.
+ 1 point pour les calculs et justification de l'agent 1; 0.5 pour la réponse de l'agent 1; 0.5 pour la réponse de l'agent 2.
+ 
+Concernant les réponses, j'ai trouvé: $d^1(p)=(\frac{p_x+\epsilon p_y}{3 p_x}, \frac{2(p_x+\epsilon p_y)}{3p_y})$; $d^2(p)=(\frac{(1-\epsilon)p_y}{2 p_x}, \frac{(1-\epsilon)p_y}{2p_y})$.
+
+}
+\item (1 pt) Peut-on dire, \textit{sans faire aucun calcul}, que cette 
+\'{e}conomie poss\`{e}de un \'{e}quilibre concurrentiel? Pourquoi?
+
+{\bf Barème: il faut rappeler les hypothèses et justifier qu'elles sont bien vérifiées.}
+
+\item (2 pts) Le cas \'{e}ch\'{e}ant, d\'{e}terminer l'\'{e}quilibre  concurrentiel de cette \'{e}conomie et vérifier que le prix d'\'equilibre éventuel du bien $x$ (relativement à celui du  bien $y$) est une fonction décroissante de $\epsilon$.
+
+{\bf Barème: en normalisant le prix du bien $y$ à $1$, on trouve $p_x=\frac{3-\epsilon}{4}$.  Il faut calculer aussi l'allocation en biens! 
+1 point pour le prix d'équilibre, 0.5 pour l'allocation, 0.5 pour la fonction décroissante (évident!).
+}
+
+\item (2 pts) On pose $\epsilon=0$, repr\'{e}senter dans une bo\^{\i}te d'Edgeworth: les dotations
+initiales, quelques courbes d'indiff\'{e}rence des agents, l'\'{e}quilibre
+ concurrentiel \'{e}ventuel (droite budg\'{e}%
+taire et allocations).
+
+M\^eme question avec $\epsilon=\frac{1}{2}$.
+
+{\bf Barème: Je vous laisse voir pour le barème. On peut faire 1 point pour chaque boîte. Il faut que les dessins soient assez précis quand même. }
+
+\item (1 pt) Peut-on dire, \textit{sans faire aucun calcul}, que toute allocation d'\'equilibre trouv\'ee  est Pareto optimale? Pourquoi?
+
+{\bf Barème: il faut que le premier théorème  soit bien  identifié et énoncé, et justifier rapidement que les hypothèses sont bien satisfaites.}
+\end{enumerate}
+
+\bigskip
+
+
+
+\noindent {\bf Exercice 3 (7  pts)} On considère un consommateur dont les préférences sur des paniers de 2 biens ($x$ et  $y$) sont
+représentées par la fonction d'utilité $u(x,y) = \min\{x; y\}$.
+\begin{enumerate}
+\item (0.5 pt) Représenter graphiquement les courbes d'indifférence de ce consommateur.
+
+{\bf Barème: faire au moins deux courbes d'indifférence.}
+
+
+\item (2 pts) Déterminer la demande du consommateur en fonction du prix $p = (p_x, p_y)$ et d'un
+revenu $R\in\mathbb{R}_+$, puis d'une dotation initiale $e = (e_x, e_y) \in\mathbb{R}^2_+$
+ du consommateur.
+ 
+ {\bf Barème: justification graphique autorisée, sinon de manière algébrique. Je vous laisse voir pour le barème. On trouve $(x,y)=(\frac{R}{p_x+p_y}, \frac{R}{p_x+p_y})$ dans le premier cas, et $(x,y)=(\frac{p_xe_x+p_ye_y}{p_x+p_y}, \frac{p_xe_x+p_ye_y}{p_x+p_y})$.
+ 
+ 
+ }
+\item  (2 pts) On suppose à présent qu'il y a un deuxième consommateur, avec la même fonction d'utilité
+$u(x; y) = \min\{x; y\}$ et que les dotations initiales respectives sont $e^1 = (e^1_x, e^1_y) = (2, 0)$ et $e^2 =
+(e^2_x, e^2_y) = (0,2)$. Déterminer un équilibre concurrentiel de cette économie. Est-ce le seul?
+
+{\bf Barème: justification graphique autorisée, sinon de manière algébrique. Je vous laisse voir pour le barème.  Graphiquement le plus simple est 
+$(p_x,p_y)=(1,1)$ $(x^1,y^1)=(1,1)$ et $x^2,y^2)=(1,1)$. Il faut que cela soit bien justifié (1,5 point)!  
+
+Il existe une infinité d'équilibres. $0.5$ point si un deuxième équilibre est donné.
+
+Si toutes les allocations d'équilibre sont identifiées, on peut mettre un petit bonus (0.5). Pour tout $p^\star_x\geq 0$ on a un équilibre, $(p^\star_x,1)$ avec $D^1(p^\star)= (\frac{2 p_x^\star}{p_x^\star +1}, \frac{2 p_x^\star}{p_x^\star+1})$ et $D^2= (\frac{2}{p_x^\star +1}, \frac{2}{p_x^\star+1})$
+}
+
+ 
+\item (1 pt) Soient $p^\star = (p_x^\star, 1)$ et $\bar p:=(\bar p_x,1)$ deux prix d'équilibre tels que $p^\star_x>\bar p_x$. Que peut-on dire des allocations d'équilibre associées à ces prix?  Est-ce surprenant?
+
+
+{\bf Barème: Si $p_x$ augmente, c'est le consommateur qui en tire avantage car c'est lui qui dispose de la ressource, donc sa richesse augmente, et il achète plus de bien $y$. 
+Il faut le représenter graphiquement ou alors on peut aussi calculer les deux allocations d'équilibres:
+
+en $p^\star = (p_x^\star, 1)$, l'allocation est $D^1(p^\star)= (\frac{2 p_x^\star}{p_x^\star +1}, \frac{2 p_x^\star}{p_x^\star+1})$ et $D^2= (\frac{2}{p_x^\star +1}, \frac{2}{p_x^\star+1})$
+
+en $\bar p:=(\bar p_x,1)$, l'allocation est $D^1(\bar p)= (\frac{2 \bar p_x}{\bar p_x +1}, \frac{2 \bar p_x}{\bar p_x+1})$ et $D^2= (\frac{2}{\bar p_x +1}, \frac{2}{\bar p_x+1})$
+
+On voit clairement que c'est l'agent qui gagne lorsque le $p_x$ augmente.
+
+
+Pour le barème, l'important c'est la justification économique.  }
+
+
+\item (1.5 pts) Quelle est la courbe des contrats de
+cette économie?
+
+{\bf Barème: C'est égal à l'ensemble des allocations d'équilibre, toute la diagonale. Il faut le justifier graphiquement précisément, en identifiant des allocations qui sont optimales et d'autres qui ne  le sont pas et en extrapolant pour avoir la courbe. }
+\end{enumerate}
+%\end{document}
+
+
+
+\bigskip
+
+\end{document}

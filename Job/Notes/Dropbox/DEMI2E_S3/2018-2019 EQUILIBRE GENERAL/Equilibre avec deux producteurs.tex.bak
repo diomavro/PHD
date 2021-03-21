@@ -1,0 +1,63 @@
+
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[applemac]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{amssymb,amsfonts,amsmath}
+\newcommand\R{\mathbb R}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, March 25, 2009 15:50:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\def \L { {\mathcal L}}
+\setlength{\unitlength}{1cm} \setlength{\textwidth}{17cm}
+\setlength{\oddsidemargin}{0cm} \setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-45pt} \setlength{\textheight}{23.5cm}
+\renewcommand{\baselinestretch}{1.3}
+
+%\input{tcilatex}
+
+\begin{document}
+
+
+
+\textbf{Equilibre avec deux producteurs}
+
+On consid\`{e}re une \'{e}conomie avec deux consommateurs, deux biens de consommation, un facteur de production (le travail) et deux entreprises. On note $x^i$ la consommation de bien 1 du consommateur $i$ et $y^i$, la consommation de bien 2 du consommateur $i$, $(i = 1; 2)$. La
+dotation initiale du consommateur 1 est d'une unit\'{e} de travail ; celle du consommateur 2, de 2 unit\'{e}s de travail.
+Leurs fonctions d'utilit\'{e} sont $u^i(x^i; y^i) =
+\sqrt{x^iy^i}$, $i = 1; 2$. L'entreprise 1 produit le premier bien de
+consommation avec du travail, suivant la technologie $q_1 = z_1$ ; l'entreprise 2 produit le second bien de
+consommation avec du travail, suivant la technologie $q_2 =\frac{1}{2}
+z_2$ ($q_k$ d\'{e}signe l'output de bien $k$ et $z_k$,
+l'input de travail, $k = 1; 2$). On suppose enfin que le consommateur 1 poss\`{e}de les entreprises.
+
+\begin{enumerate}
+\item Ecrire les conditions que doit satisfaire une allocation $(x^1; y^1; x^2; y^2; q_1; z_1; q_2; z_2)$ pour \^{e}tre r\'{e}alisable dans cette \'{e}conomie. En d\'{e}duire qu'une allocation $(x^1; y^1; x^2; y^2)$ en biens de consommation est r\'{e}alisable si et seulement si, $x^1 + x^2 + 2(y^1 + y^2) = 3$.
+
+\item Montrer que l'\'{e}conomie poss\`{e}de un \'{e}quilibre concurrentiel, en fixant le prix du travail \`{a} $1$ et
+en notant $p_k$ le prix du bien de consommation $k$, $k = 1; 2$. Calculer l'utilit\'{e} de chaque consommateur \`{a} l'\'{e}quilibre.
+
+\item  Sans faire de calcul, peut-on affirmer que l'\'{e}quilibre concurrentiel est Pareto-optimal ?
+\item  En utilisant le point 1., \'{e}crire le programme d'optimisation sociale qui permet de d\'{e}duire les optima de Pareto. D\'{e}terminer les allocations Pareto optimales int\'{e}rieures et montrer qu'une paire de niveaux d'utilit\'{e}s $(v^1; v^2)$ pour les consommateurs est Pareto-optimale si et seulement si $v^1 + v^2 = \frac{3}{2\sqrt{2}}$, $v^1,v^2\geq 0$. Repr\'{e}senter graphiquement
+l'ensemble des niveaux d'utilit\'{e}s r\'{e}alisables dans l'\'{e}conomie et les niveaux d'utilit\'{e}s de l'\'{e}quilibre
+concurrentiel. V\'{e}rifier que l'\'{e}quilibre est Pareto optimal.
+
+(Indication : Un programme d'optimisation sociale est un programme qui permet de d\'{e}terminer l'ensemble des optima de Pareto de l'\'{e}conomie. Par d\'{e}finition de l'optimum de Pareto, il s'agit ici de maximiser la somme pond\'{e}r\'{e}e des utilit\'{e}s des deux agents. Le programme peut donc s'\'{e}crire : $\underset{u^1, \ u^2}{\max} \
+ \rho u^1 + (1-\rho) u^2 $ sous une certaine contrainte qu'il vous est facile de retrouver.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\end{document}

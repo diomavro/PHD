@@ -1,0 +1,586 @@
+%\documentclass[10pt,aspectratio=43,t,l]{beamer}
+\documentclass[10pt,aspectratio=169,t,l,fleqn,mathsanserif,sanserif]{beamer}
+%\documentclass[10pt]{beamer}
+
+%\setbeamertemplate{footline}[page number]{}
+
+\usepackage{framed}
+\usepackage{tcolorbox}
+\colorlet{shadecolor}{blue!15}
+\usepackage{color,amsmath,xmpmulti,textpos,comment,eurosym,bm,amsthm,tabularx,cancel}
+\usepackage{epsfig}
+\usepackage{nicefrac}
+\usepackage{listings}
+%\usepackage{enumitem}
+\usepackage{graphicx}    
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+%\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+%\usepackage[pdftex]{hyperref}
+\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
+\usetikzlibrary{shapes.geometric, arrows,chains}
+\tikzset{
+  startstop/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=center, 
+    draw=black, 
+    fill=red!30
+    },
+  startsleft/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=left, 
+    draw=black, 
+    fill=red!30
+    },
+  startsright/.style={
+    rectangle, 
+    rounded corners,
+    minimum width=3cm, 
+    minimum height=1cm,
+    align=right, 
+    draw=black, 
+    fill=red!30
+    },
+  process/.style={
+    rectangle, 
+    minimum width=3cm, 
+    minimum height=1cm, 
+    align=center, 
+    draw=black, 
+    fill=blue!30
+    },
+  decision/.style={
+    rectangle, 
+    minimum width=3cm, 
+    minimum height=1cm, align=center, 
+    draw=black, 
+    fill=green!30
+    },
+  arrow/.style={thick,->,>=stealth},
+  dec/.style={
+    ellipse, 
+    align=center, 
+    draw=black, 
+    fill=green!30
+    },
+  font={\fontsize{9pt}{12}\selectfont}
+}
+%\renewcommand{\labelitemi}{$\blacktriangleright$}
+
+\epstopdfsetup{outdir=./}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+
+\newcommand{\subhead}[1]{\mbox{}\newline\textbf{#1}\newline}
+\newcommand{\ave}[1]{\left\langle #1 \right \rangle}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\cf}{{\it c.f.}}
+\newcommand{\etc}{{\it etc.}}
+\newcommand{\etal}{{\it et al.}}
+%\newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+\newcommand{\threepartdef}[6]
+{
+  \left\{
+    \begin{array}{lll}
+      #1 & \mbox{if } #2 \\
+      #3 & \mbox{if } #4 \\
+      #5 & \mbox{if } #6
+    \end{array}
+  \right.
+}
+
+
+\newcommand{\Ito}{It\^{o}}
+\newcommand{\SP}{S{\&}P500}
+\newcommand{\lopt}{\ell_{\text{opt}}}
+\newcommand{\gest}{g_{\text{N,T}}}
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\person}[1]{{#1}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newcommand{\vs}[1]{\vspace{.#1cm}}
+\newcommand{\vf}{\vspace{.25cm}}
+\newcommand{\vff}{\vspace{.6cm}}
+\newcommand{\np}{\\ \vf}
+\newcommand{\npp}{\\ \vff}
+\newcommand{\be}{\begin{equation*}}
+\newcommand{\ee}{\end{equation*}}
+\newcommand{\bea}{\begin{eqnarray*}}
+\newcommand{\eea}{\end{eqnarray*}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\bie}{\begin{enumerate}}
+\newcommand{\eie}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\toinf}{\rightarrow\infty}
+\newcommand{\D}{{\Delta}}
+\newcommand{\Dx}{{\Delta x}}
+\newcommand{\Dy}{{\Delta y}}
+\newcommand{\Du}{{\Delta u}}
+\newcommand{\DW}{{\Delta W}}
+\newcommand{\DU}{{\Delta U}}
+\newcommand{\du}{{\delta u}}
+\newcommand{\Dv}{{\Delta v}}
+\newcommand{\dt}{{\delta t}}
+\newcommand{\gens}{g_{\ave{\,}}}
+\newcommand{\ft}[1]{\frametitle{#1}}
+\newcommand{\bq}{\begin{quote}}
+\newcommand{\eq}{\end{quote}}
+\newcommand{\ww}[1]{\bq{\small\rm#1\\}\eq}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\prob}[1]{\mathcal{P}\left(#1\right)}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ga}{g_\text{ave}}
+\newcommand{\gt}{g_\text{typ}}
+\newcommand{\gbar}{\bar{g}}
+\newcommand{\mbar}{\bar{m}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\xf}{{x_F}}
+\newcommand{\xb}{{x_B}}
+\newcommand{\muf}{{\mu_F}}
+\newcommand{\mub}{{\mu_B}}
+\newcommand{\sigf}{{\sigma_F}}
+\newcommand{\sigb}{{\sigma_B}}
+\newcommand{\gf}{{\gbar_F}}
+\newcommand{\gb}{{\gbar_B}}
+\newcommand{\pa}{\textit{pa}}
+\newcommand{\taus}{{\tau_\text{s}}}
+\newcommand{\Dt}{\Delta t}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\taue}{\tau^\text{EGBM}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+\beamertemplatenavigationsymbolsempty
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+    {\setlength{\leftmargin}{#1}}%
+  \item[]%
+}
+{\end{list}}
+
+%\usetheme[width=1.8cm,hideothersubsections]{Frankfurt}
+\usetheme{Frankfurt}
+
+\newcommand\BackgroundPicture[1]{
+\setbeamertemplate{background}{
+\parbox[c][\paperheight]{\paperwidth}{
+\vfill \hfill
+\includegraphics[width=1\paperwidth,height=1\paperheight]{#1}
+\hfill \vfill
+}}}
+
+
+\definecolor{lmlblue}{RGB}{0,77,123}
+\definecolor{deepblue}{RGB}{35,33,169}
+\definecolor{lmllb}{RGB}{237,244,255}
+\definecolor{lmlred}{RGB}{155,29,29}
+\definecolor{lmlgrey}{RGB}{142,142,142}
+\definecolor{lmlgrey2}{RGB}{82,82,82}
+\definecolor{grey}{RGB}{210,210,210}
+\xdefinecolor{lightblue}{rgb}{0,200,255}
+\setbeamercolor{important}{bg=lightblue,fg=red}
+\AtBeginEnvironment{definition}{%
+  \setbeamercolor{block body}{fg=black,bg=white}
+  \setbeamercolor{block title}{bg=lmllb,fg=black}
+}
+
+\AtBeginEnvironment{theorem}{%
+  \setbeamercolor{block body}{fg=black,bg=white}
+  \setbeamercolor{block title}{bg=lmllb,fg=black}
+}
+
+%\newcommand{\propnumber}{} % initialize
+%\newtheorem*{prop}{Proposition \propnumber}
+%\newenvironment{propc}[1]
+%  {\renewcommand{\propnumber}{#1}%
+%   \begin{shaded}\begin{prop}}
+%  {\end{prop}\end{shaded}}
+%\AtBeginEnvironment{propc}{%
+%  \setbeamercolor{block body}{fg=black,bg=white}
+%  \setbeamercolor{block title}{bg=lmllb,fg=black}
+%}
+
+\setbeamercolor{fine separation line}{fg=lmllb}
+
+\setbeamercolor{item projected}{fg=white, bg=black}
+
+\setbeamercolor{frametitle}{bg=lmllb, fg=black}
+\setbeamertemplate{frametitle}[default][left,colsep=-4bp,rounded=false,shadow=false]
+
+\setbeamercolor{structure}{bg=white, fg=black}
+%structure changes color of title in sidebar.
+
+%\setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
+\setbeamercolor{section in head/foot}{fg=lmlgrey2, bg=lmllb}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{title}{bg=white,fg=deepblue}
+
+\hypersetup{colorlinks,linkcolor=,urlcolor=deepblue}
+
+\setbeamerfont{title in sidebar}{size=\fontsize{9}{9}\selectfont}
+\setbeamerfont{section in sidebar}{size=\fontsize{7}{7}\selectfont}
+
+% add frame numbers to navigation bar
+% (for RSS 2015 conference)
+\addtobeamertemplate{navigation symbols}{}{
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{footline}
+    \hspace{1em}
+    \scriptsize
+%    \insertframenumber/\inserttotalframenumber
+}
+\setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
+\setbeamercovered{transparent=20}
+%\setbeamertemplate{footline}[frame number] % to show overlay page numbers type: page number
+%\setbeamersize{text margin left=0.65cm, text margin right=0.65cm}
+%\setbeamercolor{item}{fg=black!70!black} % red bullets
+%\setbeamertemplate{itemize subitem}[triangle] % triangle sub-bullets
+%\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+
+
+\title[\begin{flushleft} \color{white} {\tiny ???} \end{flushleft}]{\bf {Industrial Organization, Week 7 \\ 
+Price Discrimnation}}
+\author[shortname]{ Dio Mavroyiannis \inst{\dag}}
+\institute[\begin{flushleft} \color{white} {\large ???} \end{flushleft}]{Milestone Institute}
+%\institute[shortinst]{\inst{*} London Mathematical Laboratory \and \inst{\dag} Universit\'{e} Paris-Dauphine \and \inst{\ddag} London Mathematical Laboratory and Santa Fe Institute}
+\date{17 March 2021}
+
+\AtBeginSection[]{
+\frame{
+\ft{Agenda}
+\tableofcontents[currentsection,hideallsubsections]
+}
+}
+
+\makeatletter
+\setbeamertemplate{headline}{%
+  \pgfuseshading{beamer@barshade}%
+  \ifbeamer@sb@subsection%
+    \vskip-9.75ex%
+  \else%
+    \vskip-7ex%
+  \fi%
+    \begin{beamercolorbox}[ht=3.5ex,dp=2.125ex]{section in head/foot}
+     \insertsectionnavigationhorizontal{\textwidth}{}{}%
+  \end{beamercolorbox}%
+  \ifbeamer@sb@subsection%
+    \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+}%
+
+\makeatother
+
+\setbeamertemplate{mini frames}{}
+\setbeamertemplate{itemize items}[triangle]
+
+\begin{document}
+\frame{\titlepage\insertlogo}
+
+\section{Big picture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Price discrimination plan}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Plan: Price discrimination
+\item First we will look at what each kind of discrimination is
+\item How do you price discrminate?
+\item We look at some examples of price discrmination
+\ei
+
+}
+
+
+\section{Definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{\ft{Definition}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Price Discrmination: The pricing of the same or similar goods at different levels
+\item Requires: No arbitrage or resale
+\item No resale requires either: 1) Non transferability, 2) high transaction cost, 3) Resale Illegal
+\ei
+
+}
+
+
+\section{What is price discrimination?}
+
+\frame{\ft{First degree price discrimination}
+\setbeamertemplate{itemize items}[triangle]
+
+Feautures:
+
+\bi
+\item Every consumer charged their highest willingness to pay
+\item No consumer surplus
+\item Efficient but rare
+\item Linguistically: perfect price discrmination or perfect appropriation
+\ei
+
+}
+
+
+
+\frame{\ft{Third degree price discrimination?}
+\setbeamertemplate{itemize items}[triangle]
+
+Feautures:
+
+\bi
+\item Selection by indicator(age, sex, etc)
+\item Different price for each type
+\item Movie tickets for young or old
+\ei
+
+}
+
+
+\frame{\ft{Second degree price discrimination?}
+\setbeamertemplate{itemize items}[triangle]
+
+Feautures:
+
+\bi
+\item Self-selection by consumers
+\item Consumer type unknown to producer
+\item Example: Mobile telephone, subscription services
+\ei
+
+}
+
+\frame{\ft{Types of price discrimination?}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item If goods are homogenous: menu pricing over quantity
+\item Vertically differentated goods 
+\item degree of price discrimination does not neccesarily entail the surplus taken
+\ei
+
+}
+
+\section{First degree price discrmination}
+
+\frame{\ft{Look into the demand}
+\setbeamertemplate{itemize items}[triangle]
+A downward sloping demand curve function can be generated by three different processes
+
+\bie
+\item A single individual with continous demand
+\item Many identical individuals with continous
+\item Heterogenous individuals
+\eie
+
+}
+
+\frame{\ft{Consumer preferences}
+\setbeamertemplate{itemize items}[triangle]
+A single consumer with continous demand interpretation:
+
+\begin{equation}
+U_i = v_iq_i-\frac{q_i^2}{2}-t(q_i)
+\end{equation}
+
+In first degree price discrmination, this equation will always equal 0 in equilibrium
+
+}
+
+
+\frame{\ft{The two part tarrif}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item A two part tarrif can always lead to the monopolist extracting all surplus
+\item Requires a two part tarrif for every type of consumer, then all producer surplus.
+\item $t(q)=T+pq$
+\item The oprimal price is the welfare maximizing quantity
+\item The optimal subscription fee is the individual rationality equation
+\ei
+
+}
+
+\frame{\ft{Two part tarrif}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item The monopolist chooses the welfare maximizing quantity or price
+\item The monopolist charges each type of consumer their exact surplus as a fixed fee
+\item This reasoning works when employed in other industries, lump sum taxes are efficient.
+\ei
+
+}
+
+
+\section{Third degree price discrmination}
+
+\frame{\ft{Look into the demand}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item The producer can distinguish between different kinds of demands. 
+\item Example: Children, senior citizens, etc. 
+\item Compared to monopoly: monopolist better off, some consumers worse off(not always)
+\ei
+}
+
+
+\frame{\ft{Example:}
+\setbeamertemplate{itemize items}[triangle]
+A mini example to gain some intuition
+
+\bi
+\item Suppose consumers have a WTP between $0-1$
+\item Costs of production are $0$. 
+\item Profit whilst blind: $p(1-p)$
+\item Profit whilst distinguishing between upper and lower half: $p_1(1-p_1)$ for upper half and $p_2(\frac{1}{2}-p_2)$ for lower half 
+\ei
+
+}
+
+
+\section{Second degree price discrmination}
+
+\frame{\ft{Second degree price discrimination}
+\setbeamertemplate{itemize items}[triangle]
+More uncertainty 
+
+\bi
+\item Consumers have heterogenous demands
+\item Monopolist cannot differentiate between them
+\item The return of incentive compatibility
+\item Perfect discrimination impossible
+\item '3 for 2', 60p for 1m 1.20 for 3. 
+\ei
+
+}
+
+\frame{\ft{Example of second degree price discrimination}
+\setbeamertemplate{itemize items}[triangle]
+
+Suppose we have two types of consumers in equal proportions
+
+\bi
+\item Utility function: $U_i = \frac{(A_i-p_i)^2}{2}-T_i$
+\item Suppose that $q_l = 2-p;q_h = 3-p$
+\item Firm sets two packages, $(p_1, T_1),(p_2, T_2) $
+\item Individual Rationality L: $\frac{(2-p_1)^2}{2}-T_1>0$
+\item Individual Rationality H: $\frac{(3-p_2)^2}{2}-T_2>0$
+\item Incentive compatibility of low(ICL): $\frac{(2-p_1)^2}{2}-T_1>\frac{(2-p_2)^2}{2}-T_2$
+\item Incentive compatibility of high(ICH): $\frac{(3-p_2)^2}{2}-T_2>\frac{(3-p_1)^2}{2}-T_1$
+\ei
+
+}
+
+\frame{\ft{The profit function}
+\setbeamertemplate{itemize items}[triangle]
+
+It turns out that we only need IRL and ICH
+
+\begin{align}
+T_1 &= \frac{(2-p_1)^2}{2} \\
+T_2 &= \frac{(3-p_2)^2}{2}+\frac{(2-p_1)^2}{2}-\frac{(3-p_1)^2}{2} \\
+\pi &= \frac{1}{2} 
+( 
+(2-p_1)p_1 + (3-p_2)p_2 + T_1+ T_2 ) \\
+\rightarrow & (p_1,T_1) = (1,0.5) \\
+\rightarrow & (p_2,T_2) = (0,3)
+\end{align}
+
+}
+
+\frame{\ft{Result}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Option 1, low fixed cost, high per unit price
+\item Option 2, High fixed cost, low unit price
+\ei
+
+}
+
+
+
+\frame{\ft{Conclusion}
+\setbeamertemplate{itemize items}[triangle]
+
+\bi
+\item Price discrmination increases welfare
+\item From first, to third, to second, the firm loses capacity to discriminate. 
+\ei
+}
+
+\end{document}
