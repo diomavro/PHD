@@ -1,0 +1,195 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[12pt]{article}
+
+% Users of the {thebibliography} environment or BibTeX should use the
+% scicite.sty package, downloadable from *Science* at
+% www.sciencemag.org/about/authors/prep/TeX_help/ .
+% This package should properly format in-text
+% reference calls and reference-list numbers.
+
+\usepackage{scicite}
+
+% Use times if you have the font installed; otherwise, comment out the
+% following line.
+
+\usepackage{times}
+
+% The preamble here sets up a lot of new/revised commands and
+% environments.  It's annoying, but please do *not* try to strip these
+% out into a separate .sty file (which could lead to the loss of some
+% information when we convert the file to other formats).  Instead, keep
+% them in the preamble of your main LaTeX source file.
+
+
+% The following parameters seem to provide a reasonable page setup.
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+
+%The next command sets up an environment for the abstract to your paper.
+
+\newenvironment{sciabstract}{%
+\begin{quote} \bf}
+{\end{quote}}
+
+
+% If your reference list includes text notes as well as references,
+% include the following line; otherwise, comment it out.
+
+\renewcommand\refname{References and Notes}
+
+% The following lines set up an environment for the last note in the
+% reference list, which commonly includes acknowledgments of funding,
+% help, etc.  It's intended for users of BibTeX or the {thebibliography}
+% environment.  Users who are hand-coding their references at the end
+% using a list environment such as {enumerate} can simply add another
+% item at the end, and it will be numbered automatically.
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+
+
+% Include your paper's title here
+
+\title{A simple {\it Science\/} Template} 
+
+
+% Place the author information here.  Please hand-code the contact
+% information and notecalls; do *not* use \footnote commands.  Let the
+% author contact information appear immediately below the author names
+% as shown.  We would also prefer that you don't change the type-size
+% settings shown here.
+
+\author
+{John Smith,$^{1\ast}$ Jane Doe,$^{1}$ Joe Scientist$^{2}$\\
+\\
+\normalsize{$^{1}$Department of Chemistry, University of Wherever,}\\
+\normalsize{An Unknown Address, Wherever, ST 00000, USA}\\
+\normalsize{$^{2}$Another Unknown Address, Palookaville, ST 99999, USA}\\
+\\
+\normalsize{$^\ast$To whom correspondence should be addressed; E-mail:  jsmith@wherever.edu.}
+}
+
+% Include the date command, but leave its argument blank.
+
+\date{}
+
+
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document} 
+
+% Double-space the manuscript.
+
+\baselineskip24pt
+
+% Make the title.
+
+\maketitle 
+
+
+
+% Place your abstract within the special {sciabstract} environment.
+
+\begin{sciabstract}
+  This document presents a number of hints about how to set up your
+  {\it Science\/} paper in \LaTeX\ .  We provide a template file,
+  \texttt{scifile.tex}, that you can use to set up the \LaTeX\ source
+  for your article.  An example of the style is the special
+  \texttt{\{sciabstract\}} environment used to set up the abstract you
+  see here.
+\end{sciabstract}
+
+
+
+% In setting up this template for *Science* papers, we've used both
+% the \section* command and the \paragraph* command for topical
+% divisions.  Which you use will of course depend on the type of paper
+% you're writing.  Review Articles tend to have displayed headings, for
+% which \section* is more appropriate; Research Articles, when they have
+% formal topical divisions at all, tend to signal them with bold text
+% that runs into the paragraph, for which \paragraph* is the right
+% choice.  Either way, use the asterisk (*) modifier, as shown, to
+% suppress numbering.
+
+\section*{Introduction}
+
+
+
+Is ethics an optimization problem? An optimization problem simply means that there is some kind of maximum we are trying to achieve and there are many variables which are levers of control which can help us achieve that maximum. 
+
+Utilitarianism is often framed in a static way. That is, we ought simply to take the action that maximizes the global pleasure pain tradeoff. However, it should be obvious that a corrollary of this axiom is that we ought to bring about the state of affairs which has the maximum long run maximum utility. 
+
+Comparing the future to the present in a utilitarian framework, implicitely or explicitly uses a discount factor. A discount factor is the amount by which you will multiply the future utility such that it is comparable to the present utility. Most utilitarians would probably have a such a function that is between 0 and 1, where a discount factor of 0 entails that they will give zero weight to the future and 1 gives the future equal weight, though there may exist a class of utilitarians which weigh the future higher than the present, this is not a position this author is familiar with. 
+
+A discount factor of $0$ is one way a utilitarian might claim that eugenics is not utility optimizing but this is unlikely to be tenable because the consequences of every action occurs in time, a discount factor of $0$ would in fact entail that the only moral goal is to seek actions which are good directly, and since the only good thing is pleasure, then this would perhaps entail some kind of pleasure button being pressed infinitely. 
+
+A discount factor of $1$ is much more plausible. That is, we weigh the future happiness as heavily as the current happiness. 
+
+
+
+A theory of ethics which simply results in judging some actions as morally permissible could still be classified as an optimization problem. This could occur because there are numerous optima. However it seems unlikely that a utilitarian would classify two mutually exclusive actions as equally maximizing utility. This because the indirect effects of actions could be 
+
+
+Utilitarianism entails eugenics. 
+
+Objections: Utilitarianism is a static framework it cannot take into account long run 
+
+Objections: There may be two or more optima! 
+
+Response: Though this objection is technically valid, in practice, most utilitarians are ex-ante utilitarians, which means they will claim that we ought to choose the action that maximizes expected or that which will maximize the expected growth in utility, this means that to claim there are theoretically two optima is not sufficient to get you out of the bind. This is because at any given point in time, we have differing information about any given action, so to claim that the multiple equilibria as objection, utilitarians have to claim that whatever their epistemological framework is, basyesianism or frequentist or whatever, somehow have equal probabilities of leading to any of the two equilibria. 
+
+Objections: We may not know what the right genes!
+
+Response: In practice, there is often a strict dominance in terms of capacities. For instance, if we have two beings who are identical in all respects except that one of them is genetically blind, it is clear that from a utilitarian point of view, anything the blind person can achieve, so can the non-blind. Of course, one could go into the weeds and say that maybe a blind person is MORE likely to lead to a happy life, even if they have less capacities. Clearly, though higher capacities have potential for higher pleasures, and as such the probability that the higher payoff of the othe one will exactly be compensated by the higher probability of the other seems like mental acrobatics. 
+
+Objections: But resources are not scarce.
+
+Scarcity in economics is defined by wants exceeding stock. This is in fact, always the case, here I would recommend reading up on Says law as formulated by Baumol. 
+
+Objections: This is a feauture of all ethical systems
+
+This is simply not the case, any system which focuses on moral permissibility may result in eugenics simply being permissible. Now it may be true that some systems de facto result in Eugenics 
+
+Objections: This is true of any consequentialist system
+
+A consequentialist system may have numerous consequences it keeps an eye out on, as such, there is nothing inherent in consequentialism that results in requiring the user to weigh the different consequences against each other, indeed one may even have a maxmin or lexicographic ordering. An ethic which relies on a single measure, neccesarily must be able to rank on that specific measure. A special feauture of utilitarianism is the convertibility of all consequences to a single unit, this entails that no consequence is excempt and can be considered independetly of others. 
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
