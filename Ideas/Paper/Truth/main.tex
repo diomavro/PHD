@@ -1,0 +1,353 @@
+%\documentclass[AER]{AEA}
+\documentclass[11pt]{article}
+%\documentclass[12pt]{article}
+%\documentclass[12pt,a4paper]{article}
+
+\usepackage{float}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{mt11p}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage[pdftex]{hyperref}
+%\usepackage{breakurl}
+\usepackage{epigraph}
+\usepackage{xspace}
+\usepackage{amsfonts}
+\usepackage{eurosym}
+\usepackage{ulem}
+\usepackage{footmisc}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{mathrsfs}
+%\usepackage[justification=centering]{caption}
+%\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
+
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{aea}
+\usepackage{enumitem}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+%\usepackage{tikz}
+%\usetikzlibrary{snakes}
+%\usetikzlibrary{patterns}
+
+%\draftSpacing{1.5}
+
+\usepackage{xcolor}
+\hypersetup{
+colorlinks,
+linkcolor={blue!50!black},
+citecolor={blue!50!black},
+urlcolor={blue!50!black}}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\setlength{\parindent}{0.4cm}
+%\setlength{\parindent}{2em}
+%\setlength{\parskip}{1em}
+
+%\normalem
+
+%\doublespacing
+\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} % "decimal" column type
+\renewcommand{\ast}{{}^{\textstyle *}} % for raised "asterisks"
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+
+\epstopdfsetup{outdir=./}
+
+\newcommand{\elabel}[1]{\label{eq:#1}}
+\newcommand{\eref}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
+\newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
+
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+
+\newcommand{\Pref}[1]{Proposition~\ref{prop:#1}}
+\newcommand{\pref}[1]{Prop.~\ref{prop:#1}}
+\newcommand{\preflong}[1]{proposition~\ref{prop:#1}}
+
+\newcommand{\Aref}[1]{Axiom~\ref{ax:#1}}
+
+\newcommand{\clabel}[1]{\label{coro:#1}}
+\newcommand{\Cref}[1]{Corollary~\ref{coro:#1}}
+\newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
+\newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
+
+\newcommand{\etal}{{\it et~al.}\xspace}
+\newcommand{\ie}{{\it i.e.}\ }
+\newcommand{\eg}{{\it e.g.}\ }
+\newcommand{\etc}{{\it etc.}\ }
+\newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+\newcommand{\person}[1]{{\it \sc #1}}
+
+\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
+\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
+
+\newcommand{\flabel}[1]{\label{fig:#1}}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+
+\newcommand{\tlabel}[1]{\label{tab:#1}}
+\newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
+\newcommand{\Tref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\newcommand{\Dt}{\Delta t}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Epsilon}{\mathcal{E}}
+\newcommand{\etau}{\tau^\text{eqm}}
+\newcommand{\wtau}{\widetilde{\tau}}
+\newcommand{\xN}{\ave{x}_N}
+\newcommand{\Sdata}{S^{\text{data}}}
+\newcommand{\Smodel}{S^{\text{model}}}
+
+\newcommand{\del}{D}
+\newcommand{\hor}{H}
+
+\setlength{\parindent}{0.0cm}
+\setlength{\parskip}{0.4em}
+
+\numberwithin{equation}{section}
+\DeclareMathOperator\erf{erf}
+%\let\endtitlepage\relax
+
+\begin{document}
+
+%\onehalfspacing
+\begin{titlepage}
+\title{Truth as an instrumental good}
+\author{Diomides Mavroyiannis\footnote{dmavroyiannis8@gmail.com }}
+%\date{First version: August 26, 2018\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,Last revised: \today}
+%\date{\today\\\href{https://www.dropbox.com/s/epq42goae2px35i/mobility_recov.pdf?dl=0}{Click here for most recent version.}}
+%\date{}
+\date{\today}
+\maketitle
+\begin{abstract}
+\noindent We study the role of truth as an instrumental good. We find that if two agents are communicating and truth is viewed by one agent as an instrumental good, then the other agent only has a reason to trust them if they know they want the same thing. 
+
+
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+%\nopagebreak
+\end{titlepage}
+\pagebreak \newpage
+%\nopagebreak
+
+\section{Introduction}\label{sec:introduction}
+
+Are we ethically obligated to lie? It depends on what our ethical system is. On way of dividing up the world is between theories that view truth as an instrumental good and theories that view it as an end in itself. While it is possible for a consequential to hold that an important consequence is that agents hold true beliefs, this author is not aware of any specific articulation of that view, so in this paper, consequentialism will be assumed to imply that agents holding true beliefs is not a part of consequentialism. 
+
+Somebody else is presented with a moral dilemma. They have decided that they will take an action which does not align with your own ethical framework. However, they do not possess clear information about which action will lead to their given choice. You can communicate truthfully to them, or lie. Communicating truthfully will lead to them acting on their own ethics. However, a lie has a probability of making them act in alignment with your own system. What is one to do? 
+
+Economists have spent the last 50 years studying communication problems yet these problems have direct application to ethical systems. What is often not appreciated is that economists study the behavior of ideal utilitarian agents. This means that economists have attempted to spell out when it is that one can increase utility by lying. The common language of discussing lying is mechanism design. What economists call the incentive compatibility constraint can usually be interpreted as when the utilitarian has the incentive to lie about themselves or lie about what they know. 
+
+In this paper I wish to argue that utilitarians have no reason to tell the truth to non-utilitarians and as a result, there is no reason for a non-utilitarian to believe a utilitarian. 
+
+
+
+\section{When does a utilitarian want to lie?}
+
+
+
+\section{When does a utilitarian want to lie?}
+
+
+
+
+First consider the case where the utilitarian is communicating with another utilitarian. It seems like there is no direct reason to lie, this is because they both agree on the goals and presumably, sharing information can only increase their capacity to achieve their goals. Now, if the interlocutor has some ticks, perhaps they indadvertantly share truth when they should not, then this result could be turned around, but in general if one assumes that more information leads to more effective action, then the reasons to communicate don't seem to exist. 
+
+There is another reason a utilitarian may not wish to communicate the truth to a utilitarian. In a Wollinsky paper, it is shown that if the two agents have different epistemic standards, then one has a strong incentive to lie. For example, if the sender wishes there to be 10 studies before a decision is taken, but the receiver wants there to be 8 studies, then the utilitarian has a strong reason to lie. This has implications for a utilitarian doing scientific work, if each scientist is communicating the results of their own study, there is a strong reason to lie about the results of the study. In other words, a utilitarian has strong reason to lie whenever there is disagreement about the effects of actions. 
+
+This latter point may be objected to. A utilitarian may nevertheless communicate truthfully to the other agent if his own confidence about his own views is weak. Epistemic humility implies that a utilitarian may, in fact be compelled to tell the truth because he would figure that the more truth is communicated, the more utility will increase. This of course entails that the more a knowledgeable a utilitarian perceives himself relative to his interlocutor, the more likely he will be to lie. 
+
+
+
+
+It is also argued that a utilitarian ALSO has no reason to tell the truth to anybody who has a different epistemic standard than themselves. For instance, it may be that both agree that utility may be maximized, but if the agent's disagree about the effects of actions, then a utilitarian wants to lie. There may be an exception to this if the utilitarian has epistemic humility of a very high degree but there is no reason.
+
+
+
+
+
+Now let us consider the case where a utilitarian is communicating with someone who is not a utilitarian but in the specific scenario, non-utilitarian's goals have the effect of increasing utility. Since their goals are aligned in this one case, the utilitarian may have strong reason to truthfully communicate. However, the utilitarian must also be sure that the knowledge that is communicated will not lead the non-utilitarian to make an action that will decrease utility later on. In other words, the utilitarian needs to have a reasonable expectation that others will not use truth to another end. 
+
+But what if the utilitarian is facing someone who will not, in fact, take an action that will maximize utility? 
+
+
+
+
+\section{Is there a reason to believe the utilitarian?}
+
+
+
+
+\section{Verifiability}
+
+
+Anyone agent who holds a moral code which views truth as merely an instrumental good will have a hard time being credible and being given any non-transparent role. 
+
+To facilitate discussion, let us use the sender - receiver distinction made in economics. One agent, the receiver, is about to take an action, and the other agent, the sender, is communicating to the receiver, information about the effects of those actions. We say that the agents are communicating when there is a genuine transfer of information from the sender to the receiver. 
+
+
+\section{Conclusion}
+
+
+
+
+
+Scope of lying for a consequentialist is broad.
+
+Utilitarianism and the hive mind. 
+
+Consider the trolley problem. Now let us modify this problem a little bit, now, we are no longer the ones making a decision. Greg is going to make a decision. Unfortunately, the lever has been replaced by two buttons, one button will lock the tracks so that it will go run over the one person, the other button will shift the train. Unfortunately, the buttons are not labeled. However, you know which of these buttons will save 5, do you lie to the person?
+
+
+
+
+
+
+
+
+
+
+First consider the case where the two agents have the same consequential goals, the sender has no reason to lie. That is, I assume that communicating in itself, will not change the outcomes. This excludes a case where if the receiver acted on his own, he would perhaps learn a new skill, this would be a different consequence. 
+
+Now consider the case where the two agents have different ends. Suppose a scientist with a Singerian moral framework was investigating whether some animal has a different capacity 
+  
+If the agent who is sending claims to hold consequential ethical frameworks, then they are morally obligated not to communicate with agents who may use that information to NOT increase total consequences in the way the sender envisions it. 
+
+Indeed, if for some reason the sender has credibility from the point of view of the receiver, then the sender is morally obligated to lie. If receiver is looking for her child, but the sender things consequences would be better if she did not find her child, then the sender is morally obligated to lie to the receiver. 
+
+However, the problem is exactly one of credibility. Why would the receiver believe the sender if it is known what the ethical framework of the sender is? 
+
+Utilitarianism and other systems of ethics which propose measurements to be optimized all suffer from a well known problem in economics. Cheap talk is what happens when people are sending each other information that cannot be verified. 
+
+When the signal cannot be verified, the most important information the receiver can have is information on what the other person is optimizing. 
+
+If the receiver goals are aligned with the sender, then no issue arises. The sender has no reason to lie and has the incentive to be as truthful as possible. 
+
+If on the other hand, their goals are always opposed, the sender never has any reason to give any truthful information to the receiver. 
+
+If it is verifiable then we have a Bayesian Persuasion case
+
+Throughout this paper we will assume that communicating is relatively costless. This does not have to be strictly true, it just has to be that people generally don't mind communicating, either because they enjoy it or because they find it virtuous or any reason. 
+
+The verifiability of statements is a property about future states of affairs. A statement is verifiable if some action can be taken that allows corroboration of the statement. Though this was initially thought to be the only class of statements that have information, by say Ayer or Popper, this view has since been abandoned. Nevertheless verifiable statements still remain, but what is especially interesting here is the non-verifiability of statements. 
+
+Here we are not only concerned with statements that are not verifiable in principle but also statement that are not practically verifiable. For instance 'I went to the store' may be a non-verifiable statement if nobody has seen you go down there. 
+
+When experts are communicating non-experts there is also an issue of costly verifiability. If for instance the expert is making statements to the layman that the layman would have to study years to confirm or verify then that information is in practice not verifiable by the layman. But this lack of verifiability, in fact changes the incentives of the expert. 
+
+Whether somebody can get away with lying depends on their interlocutors ability to verify. As such, if there is a more symmetric informational situation, then there is less information that cannot be verified. If there is assymetry, perhaps one is a professor at a high ranking institution, and the other is a business owner, then there seems to be almost no reason for the professor to be truthful. 
+
+Indeed, almost any consequentialist theory of ethics has a very limited reason to truthfully communicate. 
+
+Consequentialist theories of ethics, and here I have in mind mostly utilitarians and egalitarians, do have some reason to tell the truth. If the truth can be verified, then one has to worry about future shifts in opinions about truth. Lying about a truth that can be verified is often counterproductive because once it is verified, the liar will be exposed, and hence his future ability to lie will be hindered. If on the other hand, the truth cannot be verified, the utilitarian has a license to lie at will. 
+
+But consequentialist theories have no reason to worry about non-verifiable truths. Indeed, if some truths can in fact increase the consequences they purport to prioritize then there is good reason to suppress or even create false evidence.  
+
+\section{Example}
+
+What would an ethical lawyer do? Let’s say that one of your clients has died. You have two wills they left behind. One will he wrote when he was 50, he said he is utilitarian and wants to give all his assets to the most effective charity. The other will, he wrote when he was 60, changed his mind and wants to give all his assets to his family. The family is not aware he wrote two wills, they only know he has at least one.
+It seems like a utilitarian lawyer would, in fact, NOT respect the wishes of the dead and simply show the family the first will.
+
+If somebody has an ethical system that does not put truth as something that is good in itself, then there is no reason for them to communicate. 
+
+Truth as an instrumental good
+
+\section{The line between organisms}
+
+Consider a grandfather, his only pleasure in life is imagining the continuation of his grand kids. If there is an equilibrium where somebody has the power to re-direct his assets to others, then he would be unhappy. In other words, if a significant portion of peoples happiness is imagining their future offspring living a certain life, then a utilitarian must focus on commitment devices to stop utilitarians from redirecting resources in the future. 
+
+Indeed, perhaps the best commitment device, is stopping the spread of utilitarianism altogether. 
+
+\section{Can you trust a utilitarian?}
+
+Is there any way that somebody can signal that they are in fact non-utilitarians? The only way is by giving a utilitarian significant power and they use that power to signal that they are not utilitarian.
+
+For instance, it may be that they take numerous non-utilitarian actions, to signal to people that they are not utilitarians SO that they can eventually take a utilitarian action. The ONLY way to show that you are not a utilitarian is to take NON-utilitarian action on the first half of the actions you can take.
+
+Since the personal bond usually means nothing relative to the global optimal, this means that there is no sense actually bonding with a utilitarian. Their propensity to help you is independent of your bond.
+
+However, it may be worthwhile to get a utilitarian to have a good opinion of you. If for some reason the utilitarian cannot spend their time improving the global optimal and can spare some time for themselves, then it seems like it would make sense to try to get the utilitarian to like you. If they are too weak to influence other’s happiness, then they can at the very least influence their own.
+
+If somebody owns more than 50 per cent of the wealth, then that person can never have a sufficiently good signal.
+
+\newpage
+
+\bibliography{discountingbib}
+
+
+\clearpage
+
+\appendix
+
+%\section{Relative mobility measures independence}
+%\label{app:app0}
+
+
+\end{document}
