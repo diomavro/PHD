@@ -1,0 +1,358 @@
+\documentclass[twocolumn,journal]{IEEEtran}
+
+%\documentclass[10pt,twoside,openright,titlepage,numbers=noenddot,headinclude,  footinclude=true, cleardoublepage=empty,  paper=letter]{scrbook}
+%\usepackage[eulerchapternumbers,beramono,pdfspacing, parts]{classicthesis}
+           
+%\usepackage{arsclassica}
+
+
+%\usepackage{geometry}
+%\usepackage[paperwidth=8.5in, paperheight=11in,  outer=4 cm, inner=4 cm, top=1.4cm, bottom=1.4cm, footskip=.5cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+%\usepackage[english]{babel}
+\usepackage{supertabular}
+\usepackage{longtable}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{bbm}
+%\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{breqn}
+\usepackage{fixltx2e}
+\usepackage{capt-of}
+%\usepackage{mdframed}
+\setcounter{MaxMatrixCols}{10}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{endnotes}
+\usepackage{soul}
+\usepackage{marginnote}
+%\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{error}{\color{Red} Error}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{property1}{Property}
+
+\newcommand{\mathsym}[1]{}
+\newcommand{\unicode}[1]{}
+\newcommand{\dsum} {\displaystyle\sum}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{graphicx}
+\graphicspath{{figures/}{/Users/nntaleb/Dropbox/Latex/SilentRisk/}}
+ 
+\usepackage[framemethod=TikZ]{mdframed}
+%%%%%%%FRAME%%%%%%%%%%%
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{framed}
+    % \BeforeBeginEnvironment{mdframed}{\begin{minipage}{\linewidth}}
+     %\AfterEndEnvironment{mdframed}{\end{minipage}\par}
+
+%%%%%%%%%%ENUMERATE
+\usepackage{enumitem}
+
+%%%%
+\graphicspath{{figures/}{/Users/nntaleb/Dropbox/Latex/Collectednew/}}
+%%%%
+\mdfsetup{%
+%skipabove=20pt,
+nobreak=true,
+   middlelinecolor=black,
+   middlelinewidth=1pt,
+   backgroundcolor=yellow!20,
+   roundcorner=3pt}
+
+
+%\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+%backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{rule}{Rule}
+
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{theorem}{Theorem}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=gray!10, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{remark}{Rule}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=pink!30, outerlinecolor=black,innertopmargin=0pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{quaestio}{Quaestio}
+
+\mdtheorem[nobreak=true,outerlinewidth=1,%leftmargin=40,rightmargin=40,
+backgroundcolor=yellow!50, outerlinecolor=black,innertopmargin=5pt,splittopskip=\topskip,skipbelow=\baselineskip, skipabove=\baselineskip,ntheorem,roundcorner=5pt,font=\itshape]{background}{Background}
+
+%TRYING TO INCLUDE Ppls IN TOC
+\usepackage{hyperref}
+%
+%%\newtheorem{problemx}{Problem}[section]
+%\newenvironment{principle}[1][]
+% {\expandafter\principle\if\relax\detokenize{#1}\relax\else[#1]\fi
+%  \addcontentsline{toc}{subsection}
+%    {\protect\tocsubsection{}{\theprinciple}{Principle\if\relax\detokenize{#1}\relax\else\ (#1)\fi}}%
+% }
+% {\endprinciple}
+
+%%%%%%%%%%%%DRAFT
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1}
+%%%%%%%%%%DRAFT ENDS HERE
+%----------------------------------------------------------------------------------------
+\title{\color{Brown} 
+Tail Risk of Contagious Diseases 
+}
+
+\author{
+    \IEEEauthorblockN{ Pasquale Cirillo\IEEEauthorrefmark{1} and Nassim Nicholas Taleb\IEEEauthorrefmark{2} }\\
+    
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}Applied Probability Group, Delft University of Technology}
+    
+    \IEEEauthorblockA{\IEEEauthorrefmark{2}Tandon School of Engineering, New York University}
+    
+    \thanks{April 18, 2020. Corresponding author: Nassim Nicholas Taleb: nnt1@nyu.edu}
+    
+Forthcoming, \textit{Nature Physics}}
+
+
+
+
+%\flushbottom
+\begin{document}
+
+
+
+\maketitle 
+
+\begin{mdframed}
+\begin{abstract} 
+Taking up a novel constraint for justice in distribution, which is equality between cultures, we suggest that the Lockean method of appropriation is lacking and suggest a new novel method which solves the issue of cultural equality. 
+\end{abstract} 
+\end{mdframed}
+
+
+% I think I'm the only person I know who is pro-property rights but against Lockean appropriation. Work is a weirdly east european criterion for giving people territorial rights. Hayek actually has the answer, the criteria should be "PLANNING" /1
+
+% Imagine you go into a forest, you like the way it looks, so you decide to just let it be and go once a year, camping there. Well you technically haven't mixed your labor with it... but you DID PLAN to use it. I think this is sufficient to give property rights. /2
+
+% Of course the property right doesn't have to be as strong as a regular property right. If A planned to use it during summer and B planned to use it during Winter, then they should both get their respective property rights. /3
+
+% The idea of the property right is of course, that somebody else can't come and foil your plan, you have a right to your plan.
+
+Structure:
+
+\section{Intro} 
+
+This paper attempts to present an alternative theory of appropriation which solves the main issues presented with Lockean appropriation. 
+
+The purpose of this article is to a present a culturally neutral method of appropriation. The theory simultanously allows for a much wider application of the appropriation principle and solves ethically problematic issues that are present within the criteria that Locke presents. Specifically, the method presented purports to be \textit{Culturally} neutral. 
+
+A method of appropriation which is culturally neutral, and allows for a much wider scope for appropriation. 
+
+The goal of property rights thoery is to justify autonomous project pursuit, indeed there are many paths to property rights, from deontic accounts to \cite{kant1996metaphysics} to utilitarian and virtue ethics acounts. 
+
+Ever since Nozicks seminal book \cite{nozick1974anarchy}, political philosophy has been aiming to correct what is seen as Nozick's most fragile part. Nozick's theory is powerful in that the theory allows is holistic, that is, it is a grand theory of justice, it is coherent with a wide variety of methods. That is, theory requires a method of appropriation which is just, regardless of what the specific method is. The method of appropriation he proposed, what is widely known and critisized and the "Lockean proviso" has severe limitations. 
+
+The structure of the article will be as follows: We will briefly discuss why the Lockean proviso fails the test of cultural neutrality. 
+
+Locke in his theory of appropriating property had the following position. The state should recognize somebody as having a property right over an object if they mix their labor to imrove that object in some way. Now there are a number of issues with this, the definition of "improve", the SCOPE the property right. For instance if I plant a small seed somewhere do I also own something 10m away from the seed, even though I technically did not adjust it? 
+
+If so it seems like this is inherently tilting things in FAVOR of those who can appropriate en masse, for instance somebody with a tractor can just terraform mass amounts of lands and this would meet the appropriation criteria. 
+
+Worse yet, it is notoriously known that Locke himself didn't think indigenous tribes should have property rights over their territory. Clearly any property right rule should be indifferent between people or groups of people. 
+
+So what is the rule that CAN allow for appropriation while remaining neutral? 
+
+\section{The problem of a culturally neutral theory of appropritation appropriation}
+
+In this section we aim to design an original approach to conflict resolution. It is inherently less general than the Rawlsian conception because it uses more information. We assume simply that in the original position, people's cultures, that is, their habits/norms/etc are known by the agents negotiating. Additionally the agents have preferences about the structure of society, alternatively agents have a preference for what they think a virtuous society looks like. 
+
+
+
+\section{Situation}
+
+Amy and Bob are stuck on an island. They will jointly agree on some kind of arrangement through a contract. It seems clear that whaetever they agree to, there should be no alternative contract which will land at least one of them better off \footnote{pareto equilibrium}.
+
+
+\section{Perfect information}
+
+If there is perfect information, that is agents know their own and each others preferences and capabilities, the full set of resources on the island, how all of these resources can be mixed and transofrmed, and know the future outcomes that will occur to either the agents or the different resources. This implies that everything can be contractually settled at this original position. 
+
+Perfect information does not imply that no production occurs. Indeed if an asset can be used to create another asset, this can be incorporated in into it's value. 
+
+What does this mean? If the agents value having an asset for their whole lifetime and having monopoly over their asset, then this can occur in the contract. Amy and Bob can split all the assets as they like in the begining. If they Amy likes apples and Bob likes burbery bushes, they can agree on a pareto point of assets. 
+
+In other words perfect knowledge implies a lack of need for an agreement about a property rights regime. Property rights are ex-post, there is no sense in discussing a property right acquisitional regime if the agents can agree on something before. So for appropriation to be part of the initial contract, it is REQUIRED that either there is imperfect information, or the agents enjoy the process of appropriating in itself. 
+
+To reach a pareto point in negotiation, it is neccesary to have an initial endowment. The source of the initial endowment is not very important for our purposes, but perhaps the most intuitive way Bob and Amy would agree to endow the island would be that they both have half of every type of divisible asset on the island. From this initial endowment they can trade in the standard general equilibrium way. So for example if there are two bushes on the island, they each own one berry bush before trading. If there is an odd number of berry bushes they can assume half a berry bush each and presumably two half a berry bushes are worth a whole bush.  
+
+What if there are non divisible assets? Say there is some asset that loses its value if it's ownership is divided. In this case it seems like the two agents would have to make a mechanism to allocate them. Here we describe a simple such mechanism: both agents choose all possible combinations from the other agents initial set of divisible goods endowments. Amy and Bob look at each others supersets and see if there is a set in there that they prefer to the asset. If there is at least one set that either of the two agents prefer, then the mechanism is done and that transfer occurs. 
+
+If they both cannot find a set which they agree for the transfer, the non-divisible asset can either be randomly allocated, but a more egalitarian outcome would be to flip a coin, Amy's side shows up. All of Amy's assets are transfered to Bob and Amy gets the non-divisible asset. 
+
+The rawlsian method of initial aqcuisition becomes a little more problematic when time becomes a variable. Time often has the effect of creating new agents. One could imagine that the agents agree that they will only use the resources once they exist or are born. There is an issue of what the initial endowment would be. For instance suppose that there is one asset and 4 periods. Agent A is born in period 0 and can consume in period 1,2,3,4. Agent B is born on period 2 can consume in periods 2-4. So the question is, A fully endowed with that asset in period 1 and 2? If both agent are fully endowed then clearly agent A won't consume in the last two periods. If the agents are endowed equally ONLY in the periods in which are they are alive then agent A won't.
+
+\section{Imperfect information}
+
+Amy and Bob run having imperfect information does not have to a imply a change in setup. Perhaps they can simply meet again and have another contractual agreement at every new discovery. This can introduce assymetric information problems, 1) if all new resources are equally split there is no incentive to disclose new discoveries, 2) The cost of contracting at every new information may be high 3) The cost of discovery may be higher than the gain AFTER re-negotiation. All of these reasons make Amy and Bob more interested in using an appropriation rule. 
+
+
+
+Animals are also included in this
+
+% the agents will have an interest in their idea of virtue surviving. 
+
+% In other words, if the rules means that Agents A culture will survive in the long run but agents B culture will not, then Agent B will not agree to that rule. 
+
+Of course there is the issue of innefficient cultures. As a general rule it seems clear that both A and B MUST be present somewhere on island at some point. For some reason it so happens that A and B are never on the same spot in the island at the same time but they do step on the same 
+
+Should they decide on what is owned without knowing what is on the island or WITH knowing? Or just walk around sticking post it notes notifying the other person of intent of use. 
+
+If they met up before scouting, they could just list their preferences then they could simply explain their preferences to each other and come with a way of splitting the goods of the island. Even if they had the same preferneces they would not neccesarily agree to 50-50 due to labor inputs. 
+
+
+Case three: On the other hand if they have identical preferences but imperfect knowledge, then the two agents can just agree that they will meet up again after discovering but suppose that these meetings are too costly so instead they decide to simply make the rules so that they do not need to meet again. 
+
+Without any loss of generality we can simplify the characteristics of the island. Suppose that the island is filled with land that the agents can either pick or terraform so that they can farm. Assume for now that once they get the food in question they have to eat it directly.
+
+Let us introduce a cost of information, in this island context this would simply be the cost of walking around and noticing where the trees are. If the cost of information is zero, they have no need to create a property right at all, they can simply just pick the apple trees as they come upon them. Naturally it seems like if there are few of these trees they may wish to cooperate so that they can increase the probability of finding one. And if there are many such trees there is no need to cooperate. But for now assume that the cost of information is not zero. 
+
+In this case what would they agree to?  Cultivating is effortless, terraforming has effort associated with it. If they both always prefer the natural produce, the natural solution would be to allow the agents to make plans with their discoveries. Perhaps some post-it notes on the apple trees. 
+
+If their preference profile is such that they always prefer cultivating, then they would perhaps 
+
+Appropriation is about establishing rights AFTER the discovery of the asset. 
+
+
+Assume the agents have some function they wish to work towards. The function could take any form such as "write a poem everyday", in economics this could be assumed simply as "leisure". Except that perhaps different leisures require different constraints. 
+
+Of course it could still be that ex-post the culture will not survive anyway. 
+
+
+
+don't reason in the usual static sense, instead they reason in growth rates. 
+
+The problem of a culturally neutral method of appropriation is a notion which often goes ignored. To illustrate the idea of a culturally/preference neutral notion we give a brief example. 
+
+Suppose agent A and agent B are attempting to create a theory of just appropriation, but instead of being completely blind in the veil of ignorance sense, they have some information about their own tendencies or preferences. Specifically, suppose that A is a lazy meditaranean and B is has a strong dose of that Legendary protestant work ethic. 
+
+What would the two agents agree to as a method of appropriation? Would they agree to a Lockean concept? Becaue A is lazy, he doesn't want to tire himself out, instead he just likes to take walks on the island and pick the fruit that naturally grows there. A likes to pick fruits from trees, while B likes to cut trees down and plant crops. Now it seems like B would earn property rights over the territory he destroys and re-creates but A would gain no such rights. 
+
+This is a serious issue, indeed suppose that B gradually becomes more efficient and is able to gradually appropriate all of the land, such that A no longer has any claim to any assets. Perhaps B also values diversity in agriculture so he gradually plants different vegetables over the whole island. 
+
+Take a second situation, suppose now that both our agents have a strong protestant work ethic. However as it so happens agent A, has a large tractor while Agent B has preference for working with his hands. Suppose that once again they agree to the Lockean method of appropriation, it is clear that the agent with the tractor will appropriate the 99% of the land, whilst the other agent will appropriate but a small fraction. Why would the smaller agent agree to such a deal? 
+
+The idea is NOT that the two should have an equal amount of land approrpriated but that both cultures can survive. Indeed if a rule causes one persons preferences to disapear and another ones to thrive, this is not a culturally neutral rule. 
+
+Indeed, if an agent intends for a piece of land to be used by his offspring, this means that another Agent cannot simply come and appropriate it before the offspring is old enough and then limit what the offspring can do. 
+
+Give tractor example, explain how it favors some cultures over others. It ignores some actions but accepts others, one cannot help that the criteria for ownership is inherently biased in favor of the actions which are his own cultural heritage. 
+
+but instead emerges from a process of deliberation  which aims to be neutral AMONG humans.
+
+\section{The problematic Locke}
+
+This section aims to present the problematic context from which Locke emerged and aims to show that his theory is hopelessly tainted by hisown culture. 
+
+More precisely, the theory does not emerge from a process of deliberation which aims to justify ones own culture, indeed Locke was notorious for his silence on the issue of slavery and unapologetic push for the westernization of native lands. 
+
+The limitation of lockean appropriation. 
+
+\section{Hayekian appropriation}
+This section presents a method of appropriation which is culturally neutral. 
+
+More precisely the rule is about intent and planning. That is if agent A plans or intends on using a physical object that no other person intended on using this is sufficient for giving a property right. 
+
+Nor does the intent have to be explicit, if a certain tribe has gone up the mountain for a ritual for thousands of years, this can be taken as cultural intent to use the mountain and they should be given those property rights. 
+
+
+Like Nozicks vision of the locean proviso, this vision is radical, indeed, it entails simultanously that a large majority of current property rights are illegitimate. 
+
+However this intent to use does not give the timeless application of property rights that Lockes theory gives. While the right CAN be permanent it does not have to be active all the time. 
+
+Indeed this makes for a less radical vision of property, for an appropriation to occur, it must simply be that OTHER's plans for the physical asset are not diverted. 
+
+Suppose that a country house of family B is used once a year and it stays unused for the rest of the year. This means that the use of this asset is open for appropriation. However the criteria for appropriation must NOT affect the other use of the asset. 
+
+For instance suppose B want to use an asset A plans to use. Then B must make sure that A's plans are not thwarted, in other words, if B uses the asset and damages it, he is liable to A. So the use of the asset WITHOUT permission is granted as long as B compensates A for the damage that is caused. In other words if A plans to use the asset at time 2, A must be indifferent as to whether B had already used it before. 
+
+The ideolization is deliberate, of course the logistics may make this impracticable. If for instance the asset in question is very fragile, then it cannot be reasonably expected that B can do a follow up appropriation. If A's cultural practice is to PICK a banana from the tree then B can pick another Banana as long as there is a Banana left. If on the other hand A's cultural practice is to pick a single Banana from a COMLPLETE tree then it isn't justified. In other words, strong cultural knowledge is required. 
+
+Indeed unless the culture makes it EXPLICIT that they picking a single Banana is the culture, the LAW should assume that the plan is to pick from a COMPLETE tree. Note however that IF it were ever made explicit, then the law can afford to be more surgical. 
+
+The planning criteria is true Not only for temporal reasons, but state contingent rights as well. For instance it could be that a family a chosen a nice spot that they want to go sun tan on IF the weather is nice. Then they have the right UNDER that circumstance, but this right can be exchanged. 
+
+Of course, as to appropriating thing unders ignorance. That is suppose you see a bench and You do NOT know if anybody has created plans for this bench. What can you appropriate? One can make plans but your OWN plans will be contingent on somebody elses not having plans in the specific state. That is suppose somebody plans to use this at state A but not on state B, and you plan to use it for both state A and B, then one could say that you believe you appropriated for state B and A but you only appropriated for state A. 
+
+Then appropriation carries the risk that somebody else has already appropriated this parcel. 
+
+
+
+Hayek who was notiorious for his defense of prices for their function that it enables agents to create mutually compatible plans, using this is the line of inspiration, I propose a similar method but for appropriation. Agents should have property rights over physical resources which they have PLANNED to use. 
+
+Let us take an example: suppose that an agent wants to go camping in a forest that already exists once a year. Now suppose the agent has planned to go camping there on day 2. Nobody else was planning to use the property on day 2. Perhaps somebody else is interested in going to the spot for a honeymoon on day 2, but the first agent has already made plans, but he may be willing to sell these plans so that the other agent realize his own plans. 
+
+Notice here that the property right that is granted is time and context specific. If for instance the family was planning to go camping and the function of the camping was to be in a rich and natural environment then the property rights on day 1 are bounded that whatever appropriation occurs on day 1 must make sure that it does not violate the property right of the family. 
+
+\section{Superiority of Hayekian vs Lockean appropriation}
+
+In other words, if something is in USE, it cannot be appropriated. Similary if something has been discovered already, it also is not in use. Suppose that the family planned to use the asset at time t. Somebody discovered that the asset has ANOTHER more valuable use and wants to dig it out. What must be done? 
+
+
+\section{Objection to Hayekian appropriation and replies}
+Ambiguous planning
+
+
+\section{Link to the literature}
+
+
+
+\section{Consluson}
+
+This is a theory which aims to bring our understanding of property rights closer to the inituitive notions which everyday people have. For instance, the data of children shouting shutgun while getting in the car. 
+
+
+
+
+\begin{thebibliography}{99} 
+
+\bibitem{AlbertBarabasi} R. Albert and A.-L. Barabasi (2002). Statistical mechanics of complex networks. Reviews of Modern Physics 74: 47.  
+\bibitem{Arshad} M. Arshad , M.T. Rasool, M.I. Ahmad  (2003). Anderson Darling and Modified Anderson Darling Tests for Generalized Pareto Distribution. Journal of Applied Sciences 3, 85-88.
+\bibitem{Cirillo} P. Cirillo (2013). Are your data really Pareto distributed? \textit{Physica A: Statistical Mechanics and its Applications} 392, 5947-5962.
+\bibitem{CiTa} P. Cirillo, N.N. Taleb (2016). On the statistical properties and tail risk of violent conflicts. Physica A: Statistical Mechanics and its Applications 452, 29-45.
+\bibitem{CiTaQF} P. Cirillo, N.N. Taleb (2016). Expected shortfall estimation for apparently infinite-mean models of operational risk. Quantitative Finance 16, 1485-1494.
+\bibitem{Clauset} A. Clauset, C.R. Shalizi, M.E.J. Newman (2009). Power-law distributions in empirical data. SIAM Review 51, 661-703.
+\bibitem{deHaan} L. de Haan, A. Ferreira (2006). \textit{Extreme Value Theory: An Introduction}. Springer.
+\bibitem{Donnat} C. Donnat, S. Holmes (2020). Modeling the heterogeneity in COVID-19 a??s reproductive number and its impact on predictive scenarios. arXiv:2004.05272.
+\bibitem{Embrechts} P. Embrechts, C. Kl\"uppelberg, T. Mikosch (2003). \textit{Modelling Extremal Events}. Springer.
+\bibitem{Falk} M. Falk, J. H\"usler J, R. D. Reiss R-D (2004). \textit{Laws of small numbers: extremes and rare events}, Birkh\"auser.
+\bibitem{Ferguson} N. Ferguson, D. Laydon, G. Nedjati-Gilani et alii (2020). Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand. Available online at \url{https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/2020-03-16-COVID19-Report-9.pdf}
+\bibitem{Goldewijk} K. Goldewijk, K. Beusen, P. Janssen (2010). Long term dynamic modeling of global population and built-up area in a spatially explicit way, hyde 3.1. \textit{The Holocene} 20, 565-573.
+\bibitem{He} H.W. Hethcote (2000). The mathematics of infectious diseases. \textit{SIAM review} 42, 599-653.
+\bibitem{Klein} K. Klein Goldewijk, G. van Drecht (2006). HYDE 3.1: Current and historical population and land cover. In A. F. Bouwman, T. Kram, K. Klein Goldewijk. \textit{Integrated modelling of global environmental change. An overview of IMAGE 2.4}. Netherlands Environmental Assessment Agency.
+\bibitem{Neslehova} J. Ne\u{s}lehov\'a, P. Embrechts, V. Chavez-Demoulin (2006). Infinite-mean models and the LDA for operational risk. Journal of Operational Risk 1, 3-25.
+\bibitem{Prec} J.Norman, Y. Bar-Yam, N.N. Taleb (2020). Systemic Risk of Pandemic via Novel Pathogens - Coronavirus: A Note. New England Complex Systems Institute.
+\bibitem{Scasciamacchia} S. Scasciamacchia, L. Serrecchia, L. Giangrossi, G. Garofolo, A. Balestrucci, G. Sammartino (2012). Plague Epidemic in the Kingdom of Naples, 1656–1658. Emerging Infectious Diseases 18, 186-188.
+\bibitem{Seybolt} T. B. Seybolt, J. D. Aronson, B. Fischhoff, eds. (2013). \textit{Counting Civilian Casualties, An Introduction to Recording and Estimating Nonmilitary Deaths in Conflict}. Oxford University Press.
+\bibitem{TaStat} N.N. Taleb (2020). \textit{Statistical Consequences of Fat Tails}. STEM Academic Press.  
+\bibitem{TaCi} N.N. Taleb, P. Cirillo (2019). The Decline of Violent Conflict: What do the data really say? In A. Toje, N.V.S. B\r{a}rd, eds. The Causes of Peace: What We Know Now. Nobel Symposium Proceedings. Norwegian Nobel Institute, 57-85.
+\bibitem{UN} United Nations - Department of Economic and Social Affairs (2015). \textit{2015 Revision of World Population Prospects}. UN Press.
+\bibitem{Ancient} Ancient History Encyclopedia, retrieved on March 30, 2020: \url{https://www.ancient.eu/article/1528/plague-in-the-ancient--medieval-world/}.       
+\bibitem{capitalist} Visual Capitalist, Visualizing the History of Pandemics, retrieved on March 30, 2020: \url{https://www.visualcapitalist.com/history-of-pandemics-deadliest/}.
+\bibitem{who} World Health Organization, Covid-19 page, retrieved on April 13, 2020: \url{https://www.who.int/emergencies/diseases/novel-coronavirus-2019}
+\bibitem{wiki} Wikipedia List of epidemics, retrieved on March 30, 2020: \url{https://en.wikipedia.org/wiki/List_of_epidemics}.	 
+\bibitem{wiki} Wikipedia Great Northern War plague outbreak, retrieved on March 30, 2020: \url{https://en.wikipedia.org/wiki/Great_Northern_War_plague_outbreak}.
+\bibitem{listfist} Weblist of Epidemics Compared to Coronavirus, retrieved on March 30, 2020: \url{https://listfist.com/list-of-epidemics-compared-to-coronavirus-covid-19}.	
+\bibitem{Wolfram} S. Wolfram (2002). \textit{A New Kind of Science}. Wolfram Media. 
+\end{thebibliography}
+
+
+
+
+\end{document}

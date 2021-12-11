@@ -1,0 +1,293 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{asymptote}
+\usepackage[font=small,skip=0pt]{caption}
+\captionsetup[figure]{font=small,skip=0pt}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{pst-plot,pst-math,pstricks-add}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{arydshln}
+\usepackage{breqn}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{nth}
+\usepackage{enumerate}
+%\usepackage{enuitem}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[affil-it]{authblk}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepgflibrary{arrows}
+\usepackage{float}
+\pgfplotsset{compat=1.12}
+\usepackage{setspace}
+\doublespacing 
+\begin{document}
+\section{The chain network: three firms}
+\textbf{Assumption 1.} \textit{Substituability}\\
+\indent Consider some network \text{g} on $n$ firms. If firm $n+1$ enters the market, and $\text{g}'$ is the resulting network; then the market payoffs of all $n$ firms in $\text{g}$ is larger than in $\text{g}'$. \\ 
+
+\indent Consider the case where there are three potential firms that may enter the market. Let us call by $1,2$ and $3$ these three firms. We denote the royalty paid by firm $i$ to firm $j\neq i$ in the network \text{g} $r^{j}_i(\text{g})$. In this section, we investigate the conditions on the variables of our model for which the chain network is a Nash stable network. Assuming that firms are indexed in the order they enter the market, the chain network $\text{g}^1$ is defined by the vector of placement strategies: $s_1=\emptyset, ~s_2=1$ and $s_3=2$. \\
+\indent The chain network $\text{g}_1$ is Nash stable if the placement strategy played by each firm in the chain is individually rational and compatible: 
+\begin{enumerate}
+    \item Firm 1 enters $(IR_1)$:
+    \begin{equation*}
+        \pi_1(\text{g}_1)\geq 0
+    \end{equation*}
+    \item Firm 2 enters $(IR_2)$, and plays the placement strategy $s_2=1$ $(IC_2)$: 
+    \begin{equation*}
+        \pi_2(\text{g}_1) \geq \max \{0, \pi_2(\text{g}_4), \pi_2(\text{g}_7), \pi_2(\text{g}_8),\pi_2(\text{g}_9)\}.
+    \end{equation*}
+    \item Firm 3 enters $(IR_3)$, and plays the placement strategy $s_3=2$ ($IC_3$):
+    \begin{equation*}
+        \pi_3(\text{g}_1)\geq \max\{0, \pi_3(\text{g}_2), \pi_3(\text{g}_3)\}.  
+    \end{equation*}
+\end{enumerate}
+
+\begin{figure}[H]
+    \begin{tikzpicture}[scale=0.9]
+    \node at (0,-4) {The network $\text{g}_1$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (0,0) {2};
+    \node (1) at (0,3) {1};
+    \node (3) at (0,-3) {3};
+\end{scope}
+
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_1)$} (2);
+    \path [->] (2) edge node {$r^2_3(\text{g}_1)$} (3);
+\end{scope}
+
+\node at (5,-4) {The network $\text{g}_2$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (3,0) {2};
+    \node (1) at (5,3) {1};
+    \node (3) at (7,0) {3};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_2)$} (2);
+    \path [->] (1) edge node {$r^1_3(\text{g}_2)$} (3);
+\end{scope}
+
+
+\node at (11.5,-4) {The network $\text{g}_3$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (10,0) {2};
+    \node (1) at (10,3) {1};
+    \node (3) at (12,3) {3};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_3)$} (2);
+\end{scope}
+
+\node at (16.5,-4) {The network $\text{g}_4$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (15,0) {3};
+    \node (1) at (15,3) {1};
+    \node (2) at (17,3) {2};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_3(\text{g}_4)$} (3);
+\end{scope}
+    
+ \node at (0,-12) {The network $\text{g}_5$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (2) at (0,-10) {2};
+    \node (1) at (0,-7) {1};
+\end{scope}  
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_2(\text{g}_5)$} (2);
+\end{scope}
+
+\node at (5,-12) {The network $\text{g}_6$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (5,-10) {3};
+    \node (1) at (5,-7) {1};
+\end{scope}  
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (1) edge node {$r^1_3(\text{g}_6)$} (3);
+\end{scope}
+
+
+\node at (11,-12) {The network $\text{g}_7$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (10,-7) {1};
+    \node (2) at (12,-7) {2};
+    \node (3) at (11,-10) {3};
+\end{scope}  
+
+
+\node at (16.5,-12) {The network $\text{g}_8$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (3) at (17,-10) {3};
+    \node (1) at (15,-7) {1};
+    \node (2) at (17,-7) {2};
+\end{scope}
+\begin{scope}[>={Stealth[black]},
+              every node/.style={fill=white,circle},
+              every edge/.style={draw=black,very thick}]
+    \path [->] (2) edge node {$r^2_3(\text{g}_8)$} (3);
+\end{scope}
+
+
+\node at (0,-17) {The network $\text{g}_9$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (-1,-15) {1};
+    \node (2) at (1,-15) {2};
+\end{scope}  
+
+\node at (5,-17) {The network $\text{g}_{10}$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (4,-15) {1};
+    \node (3) at (6,-15) {3};
+\end{scope}  
+
+\node at (12,-17) {The network $\text{g}_{11}$};
+    \begin{scope}[every node/.style={circle,thick,draw}]
+    \node (1) at (12,-15) {1};
+\end{scope}  
+    \end{tikzpicture}
+\end{figure}
+
+\indent We solve using backward induction. Consider the case of firm $3$. The network prior to $3$'s entry is one where $2$ is attached to $1$. Firm $3$ must chooses the network between the networks $\text{g}_1, \text{g}_2,\text{g}_3$ and $\text{g}_5$ that maximizes its profit. If $3$ attaches to $2$ (i.e. $3$ has the highest profit in $\text{g}_1$), then the royalty $r^2_3(\text{g}_1)$ must satisfy: 
+\begin{align*}
+    & P_3(3,\text{g}_1)-F -r^2_{3}(\text{g}_1) \geq \max\{0~,~P_3(2,\text{g}_2)-F -r^1_{3}(\text{g}_2) ~,~ P_3(1,\text{g}_3)-F \}\\
+    \Longrightarrow ~~~& r^2_3(\text{g}_1 )  = P_3(3,\text{g}_1)-F - \max\{0~,~P_3(2,\text{g}_2)-F -r^1_{3}(\text{g}_2) ~,~ P_3(1,\text{g}_3)-F \}.
+\end{align*}
+The equality holds since firm $2$ always charges the highest royalty fee that is acceptable to firm $3$. Note that the value of the royalty paid by $3$ in the chain in equilibrium is always positive.  \\
+\indent We study the case of firm $2$. The later knows that if it attaches to firm $1$ and proposes $r^2_3(\text{g}_1)$ to firm $3$, its payoff is $\pi_2(\text{g}_1)$. If $2$ does not attach to $1$ yet $2$ enters the market, either network $\text{g}_4, \text{g}_7$ or $\text{g}_8$ is realized and $2$ never pays any royalty. First, note that $\pi_2(\text{g}_7)\leq \pi_2(\text{g}_9)$. Also, $\text{g}_4$ and $\text{g}_8$ are realized with probability 0.5 each; in any case, $R_2(\text{g}_4)=R_2(\text{g}_8)=0$ by proposition X (Prisoner's Dilemma). But then: $\pi_2(\text{g}_9)\geq \pi_2(\text{g}_4)=\pi_2(\text{g}_8)$ (note that all firms are producers in $\text{g}_4,\text{g}_8$ and $\text{g}_9$). 
+If $2$ attaches to $1$ and offers $r^2_3(\text{g}_1)$ as specified above, then $r^1_2(\text{g}_1)$ must satisfy: 
+\begin{align*}
+   & P_2(2,\text{g}_1)-F -r^1_2(\text{g}_1)+r^2_3(\text{g}_1)\geq \max\{0~,~P_2(1,\text{g}_9)-F\}\\
+   \Longrightarrow~~ & r^1_2(\text{g}_1)= P_2(2,\text{g}_1)-F-\max\{0, P_2(1,\text{g}_9) -F\} + r^2_3(\text{g}_1).
+\end{align*}
+The equality holds in equilibrium since firm $1$ always charges in $\text{g}_1$ the maximal royalty that is accepted by $2$. \\
+\indent Finally, we turn to the case of firm $1$. This firm placement strategy reduces to whether it enters the market or not. Firm $1$ must always get a positive profit in the chain: 
+\begin{align*}
+   & P_1(1,\text{g}_1) -F+ r^1_2(\text{g}_1)\geq 0 \\
+\Longrightarrow ~~ & r^1_2 (\text{g}_1)\geq -[P_1(1,\text{g}_1) -F].   
+\end{align*}
+
+We now set clear the conditions for which the vector of royalties $(r^2_3(\text{g}_1), r^1_2(\text{g}_1))$ is a Nash equilibrium, with: \\
+\textsc{SYNTHESIS 1:}
+\begin{enumerate}
+    \item $r^2_3(\text{g}_1)= P_3(3,\text{g}_1)-F-\max\{0~,~P_3(2,\text{g}_2)-F -r^1_{3}(\text{g}_2) ~,~ P_3(1,\text{g}_3)-F \}$, and
+    \item $r^1_2(\text{g}_1)= P_2(2,\text{g}_1)-F-\max\{0, P_2(1,\text{g}_9) -F\} + r^2_3(\text{g}_1)$, given that $r^1_2 (\text{g}_1)\geq -[P_1(1,\text{g}_1) -F]$. 
+\end{enumerate}
+
+
+Note that this set of deviations is empty for the firm $3$. As long as $r^2_3(\text{g}_1)$ satisfies both $(IR_3)$ and $(IC_3)$ constraints exposed earlier, $3$'s best-response is to get attached to $2$ in the chain. We move on to firm $2$. By charging $r^2_3(\text{g}_1)$, $2$ already extracts the maximal rent possible on firm $3$. If $2$ does not attach to $1$ and the network $\text{g}_7,\text{g}_8$ or $\text{g}_9$ is realized, $2$ never gets any royalty revenue. And among these networks, firm $2$ has the highest payoff in network $\text{g}_9$. Thus $2$ never finds it profitable to deviate from $r^2_3(\text{g}_1)$ whenever $(IR_2)$ and $(IC_2)$ are satisfied. Which is already the case for the values of $r^1_2(\text{g}_1)$ we are examining. \\
+\indent We turn to the case of firm $1$. If $(IR_1)$ is satisfied, which is always the case for the value of $r^1_2(\text{g}_1)$ given above, then $1$ always prefers to enter the market. The profitability of a deviation for $1$ may only come from the royalty the later receives. The networks in the figure
+are all possible networks that may be realized if $1$ deviates from the value $r^1_2(\text{g}_1)$. The royalty value $r^1_2(\text{g}_1)$ is a best-response of firm $1$ if and only if $1$'s payoff in the chain is the larger than the maximum payoff $1$ can get in any of the ten other networks. Note that $1$'s payoff in $\text{g}_{11}$ is always greater than $1$'s payoff in $\text{g}_4,\text{g}_7, \text{g}_8, \text{g}_9$ and $\text{g}_{10}$. In all of these networks, all firms are producers and $1$'s royalty revenue is zero; therefore the least competitors on the market, the larger $1$'s market payoff. \\
+\indent Thus $r^1_2(\text{g}_1)$ is a best-response of $1$ if and only if the following inequality holds: \begin{align*}
+  &  P_1(1,\text{g}_1)-F+r^1_2(\text{g}_1)\geq \max\{0~,~\pi_1(\text{g}_2),\pi_1(\text{g}_3), \pi_1(\text{g}_5), \pi_1(\text{g}_6), \pi_1(\text{g}_{11})\},\\
+  \text{ with : } & r^1_2(\text{g}_1)= P_2(2,\text{g}_1)-F-\max\{0, P_2(1,\text{g}_9) -F\} + r^2_3(\text{g}_1),\\
+  & r^2_3(\text{g}_1)= P_3(3,\text{g}_1)-F-\max\{0~,~P_3(2,\text{g}_2)-F -r^1_{3}(\text{g}_2) ~,~ P_3(1,\text{g}_3)-F \}
+\end{align*}
+\indent First, let us derive $1$'s payoff profile in $\text{g}_2$. This payoff is no better than $1$'s payoff in the chain if: 
+\begin{equation*}
+  \pi_1(\text{g}_1) \geq P_1(1,\text{g}_2) +r^1_2(\text{g}_2)+ r^1_3(\text{g}_2),
+\end{equation*}
+with the first term into squared brackets positive, and with: 
+\begin{enumerate}
+    \item \begin{equation*}
+    r^1_3(\text{g}_2)= P_3(2,\text{g}_2)-F-\max\{0, \pi_3(\text{g}_3)\}, 
+\end{equation*}
+where $\pi_3(\text{g}_3)= P_3(1,\text{g}_3)-F$. Note that the above expression for $r^1_3(\text{g}_2)$ permits to determine the equilibrium value of $r^2_3(\text{g}_1)$. 
+\item \begin{equation*}
+        r^1_2(\text{g}_2)= P_2(2,\text{g}_2)-F-\max\{0,\pi_2(\text{g}_9)\},
+      \end{equation*}
+where $\pi_2(\text{g}_9)=P_2(1,\text{g}_9)-F$.       
+\end{enumerate}
+Note that: $P_3(1,\text{g}_3)\leq P_2(1,\text{g}_9)$ because there is less competition for $2$ in $\text{g}_2$ than for $3$ in $\text{g}_3$; and $P_3(2,\text{g}_2)=P_2(2,\text{g}_2)$. This leads to the conclusion that $r^1_3(\text{g}_2)\geq r^1_2(\text{g}_2)$. In conclusion, $r^1_2(\text{g}_1)$ is a best-response for $1$ when: 
+\begin{equation}
+    \pi_1(\text{g}_1) \geq \sum_{i=1,2,3} \big(P_i(k_i, \text{g}_2)-F\big) -\max\{0, P_3(1,\text{g}_3)-F\} - \max\{0, P_2(1,\text{g}_9)-F\}. \label{dev1}
+\end{equation}
+
+\indent Second, we derive the profit of firm $1$ in $\text{g}_3$. This payoff is given by the right hand side of the inequality just below, and must be lower than $1$'s payoff in the chain: 
+\begin{equation*}
+    \pi_1(\text{g}_1) \geq P_1(1,\text{g}_3)-F +r^1_2(\text{g}_3),
+\end{equation*}
+where the value of $r^1_2(\text{g}_3)$ is: 
+\begin{equation*}
+    r^1_2(\text{g}_3)= P_2(2,\text{g}_3)-F- \max\{0,\pi_2(\text{g}_9)\}. 
+\end{equation*}
+Note that: $r^1_2(\text{g}_3)\geq r^1_2(\text{g}_2)$ since $P_2(2,\text{g}_3)\geq P_2(2,\text{g}_2)$ (firm $3$ is less of a competitor for $2$ in $\text{g}_3$ than in $\text{g}_2$). In conclusion, $1$'s profit in the chain is indeed larger if: 
+\begin{equation*}
+    \pi_1(\text{g}_1)\geq \sum_{i=1,2} \big(P_i(k_i, \text{g}_3)-F\big) - \max\{0,P_2(1,\text{g}_9)-F\}. 
+\end{equation*}
+
+\indent Third, we study $1$'s profit in network $\text{g}_5$. This payoff is no larger than $1$'s equilibrium profit in the chain if: 
+\begin{equation*}
+    \pi_1(\text{g}_1) \geq P_1(1,\text{g}_5) -F +r^1_2(\text{g}_5)
+\end{equation*}
+where: $r^1_2(\text{g}_5)= P_2(2,\text{g}_5)-F - \max\{0, \pi_2(\text{g}_9)\}$. Note that the royalty paid by $2$ to $1$ is more expensive in $\text{g}_5$ than in $\text{g}_3$ (for the reason that $3$ is always a producer in $\text{g}_3$). Thus $1$'s profit in the chain is larger than in $\text{g}_5$ if: 
+\begin{equation*}
+    \pi_1(\text{g}_1) \geq \sum_{i=1,2} \big(P_i(k_i,\text{g}_5) -F \big) -\max\{0,P_2(1,\text{g}_9)-F\}. 
+\end{equation*}
+Note that $1$'s payoff in $\text{g}_5$ turns out to be greater than in $\text{g}_3$ by the substituability assumption. We then disregard $1$'s payoff in $\text{g}_3$ in the remainder of the analysis. \\
+
+\indent Fourth there is $1$'s payoff in $\text{g}_6$. It is easy to see that $1$ charges the royalty: 
+\begin{equation*}
+    r^1_3(\text{g}_6)= P_3(2,\text{g}_6)-F - \max\{0, \pi_3(\text{g}_3)\}. 
+\end{equation*}
+$1$'s payoff in $\text{g}_6$ is lower than in the chain if: 
+\begin{equation}
+    \pi_1(\text{g}_1)\geq \sum_{i=1,2} \big(P_i(k_i,\text{g}_6)-F\big) -\max\{0, P_3(1,\text{g}_3)-F\}.\label{dev2} 
+\end{equation}
+Here, note that $3$'s market profit in $\text{g}_3$ is always less than $2$'s profit in $\text{g}_9$ due to our substituability assumption. Also, the sum of the market profits in the industry is the same in $\text{g}_5$ and $\text{g}_6$. It follows that $1$'s profit is larger in $\text{g}_6$ than in $\text{g}_5$. We then stop considering $1$'s payoff in $\text{g}_5$ from now on. \\
+
+\indent Finally, it remains to consider $1$'s payoff in $\text{g}_{11}$. It is straightforward that $1$ would not benefit from ending up in a monopoly situation compared to as in a chain if:
+\begin{equation}
+    \pi_1(\text{g}_1)\geq P_1(1,\text{g}_{11}) - F. 
+\end{equation}
+
+
+Gathering relevant results only, we find that $1$'s payoff in the chain is larger than any other payoff $1$ would receive if: 
+\begin{align*}
+     & \pi_1(\text{g}_1)\geq \max\{0, \sum_{i=1,2,3} \big(P_i(k_i, \text{g}_2)-F\big) -\max\{0, P_3(1,\text{g}_3)-F\} - \max\{0, P_2(1,\text{g}_9)-F\} ,\\
+      & \sum_{i=1,2} \big(P_i(k_i,\text{g}_6)-F\big) -\max\{0, P_3(1,\text{g}_3)-F\} ~\}.
+\end{align*}
+where the first sum is the expression of $1$'s profit in $\text{g}_2$ (see expression \eqref{dev1}) and the second sum is $1$'s payoff in $\text{g}_6$ (see the expression in \eqref{dev2}). \\
+\indent We rearrange $1$'s profit in the chain; this is: 
+\begin{equation*}
+    \pi_1(\text{g}_1)= \sum_{i=1,2,3} \big(P_i(k_i,\text{g}_1)-F\big) -\max\{0,P_3(2,\text{g}_2)-F-r^1_3(\text{g}_2)~,~P_3(1,\text{g}_3)-F\} - \max\{0, P_2(1,\text{g}_9)-F\},
+\end{equation*}
+where we know now that: $r^1_3(\text{g}_2)=P_3(2,\text{g}_2)-F-\max\{0, P_3(1,\text{g}_3)-F\}$. Rearranging: 
+\begin{equation*}
+    \pi_1(\text{g}_1)= \sum_{i=1,2,3} \big(P_i(k_i,\text{g}_1)-F\big) -\max\{0, P_3(1,\text{g}_3)-F\} - \max\{0, P_2(1,\text{g}_9)-F\},
+\end{equation*}
+We can also rearrange the expression for the vector $(r^1_2(\text{g}_1), r^2_3(\text{g}_1))$ in synthesis 1:
+\begin{enumerate}
+    \item $r^2_3(\text{g}_1)= P_3(3,\text{g}_1)-F-\max\{0, P_3(1,\text{g}_3)-F\}>0$, because $3$ is relatively more efficient than its competitors in $\text{g}_1$ than in $\text{g}_3$, and also because $3$'s market payoff must be positive in $\text{g}_1$.
+    
+    \item $r^1_2(\text{g}_1)= \sum_{i=2,3}\big(P_i(k_i,\text{g}_1)-F\big) -\max\{0,P_3(1,\text{g}_3)\}>0$. Note that it is never the case that $1$ subsidizes $2$ to form the chain. In fact, if so, then $1$ would get a higher profit in let's say network $\text{g}_8$. From this remark, we get that $(IR_1)$ is always satisfied. 
+\end{enumerate}
+\end{document}

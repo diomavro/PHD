@@ -1,0 +1,12 @@
+Section idea: 
+Two firms competing for innovation structure
+
+When are the royalties 0?
+
+Which structure maximizes the number of producers? Claim: Possibly two lines
+
+Consider a section with probababilities? 
+
+Consider a two firm model where firms probabilistically are the ones whose turn it is. 
+
+For instance with probability p, it's firm i's turn, with probability q, it's firm j's turn, with probability 1-q-p, the game ends and payoffs are realized. 
