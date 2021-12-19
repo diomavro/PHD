@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Chapter 1: Piracy and network value}{4}{0}{1}
+\beamer@sectionintoc {2}{Chapter 2: Cost side innovation with project variance}{12}{0}{2}
+\beamer@sectionintoc {3}{Chapter 3: Microfoundations of Discounting}{19}{0}{3}

@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{First and second Laws}{2}{0}{1}
-\beamer@subsectionintoc {1}{2}{Third and fourth laws}{3}{0}{1}
-\beamer@subsectionintoc {1}{3}{Fifth and sixth laws}{4}{0}{1}
-\beamer@subsectionintoc {1}{4}{Seventh law}{5}{0}{1}

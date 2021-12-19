@@ -1,0 +1,49 @@
+\fancyhead[LE]{\textbf{\thepage}}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\leftmark}
+\fancyhead[RO]{\textbf{\thepage}}
+\fancyfoot[C]{} 
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+\makeatletter
+
+\newcommand{\thechaptername}{}
+\newcounter{chapter@last}
+
+\renewcommand{\chaptermark}[1]
+            {
+              \markboth{#1}{}
+              \renewcommand{\thechaptername}{#1}
+            }
+
+\pretocmd{\caption}
+ {\ifnumequal
+  {\value{chapter}}
+  {\value{chapter@last}}
+  {}
+  {
+   \addtocontents{lot}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \addtocontents{lof}
+    {\protect\numberline{\bfseries\thechapter\quad\thechaptername}}
+   \setcounter{chapter@last}{\value{chapter}}
+  }
+  }
+  {}
+  {}
+
+\makeatother
+
+
+\title{Evaluation des politiques actives de l'emploi et des réformes du système de protection sociale dans la région MENA}
+
+\author{Zied CHAKER}
+
+
+
+
+% \jurymember{7}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{8}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{9}{Prénom NOM}{Titre, établissement}{Invité}
+% \jurymember{10}{Prénom NOM}{Titre, établissement}{Invité}
+

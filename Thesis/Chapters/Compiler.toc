@@ -1,0 +1,89 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {0.1}The origins on the debate about private property}{6}{section.0.1}% 
+\contentsline {subsection}{\numberline {0.1.1}What is a property right?}{8}{subsection.0.1.1}% 
+\contentsline {subsection}{\numberline {0.1.2}The language of property rights}{8}{subsection.0.1.2}% 
+\contentsline {section}{\numberline {0.2}The static economics of property rights}{14}{section.0.2}% 
+\contentsline {subsubsection}{Identical and strictly positive subjective value for all agents}{16}{section.0.2}% 
+\contentsline {subsubsection}{Identical and null value for all agents}{16}{section.0.2}% 
+\contentsline {subsubsection}{Identical and negative value for all agents}{16}{section.0.2}% 
+\contentsline {subsubsection}{Variable and weakly positive value for all agents}{16}{section.0.2}% 
+\contentsline {subsubsection}{Variable and weakly negative value for all agents}{16}{section.0.2}% 
+\contentsline {subsubsection}{Variable, positive and negative value}{17}{section.0.2}% 
+\contentsline {subsection}{\numberline {0.2.1}Coasian paradigm}{17}{subsection.0.2.1}% 
+\contentsline {section}{\numberline {0.3}The Dynamic creation of property rights}{20}{section.0.3}% 
+\contentsline {subsection}{\numberline {0.3.1}Incomplete contracting}{24}{subsection.0.3.1}% 
+\contentsline {section}{\numberline {0.4}Intellectual Property}{28}{section.0.4}% 
+\contentsline {subsection}{\numberline {0.4.1}Assumptions of intellectual property}{31}{subsection.0.4.1}% 
+\contentsline {subsection}{\numberline {0.4.2}Mechanism Design}{36}{subsection.0.4.2}% 
+\contentsline {subsection}{\numberline {0.4.3}Scope and evidence}{38}{subsection.0.4.3}% 
+\contentsline {section}{\numberline {0.5}Contrbutions in this thesis}{41}{section.0.5}% 
+\contentsline {subsection}{\numberline {0.5.1}First chapter}{41}{subsection.0.5.1}% 
+\contentsline {subsection}{\numberline {0.5.2}Second chapter}{42}{subsection.0.5.2}% 
+\contentsline {subsubsection}{Numerical example with two time periods}{42}{subsection.0.5.2}% 
+\contentsline {subsection}{\numberline {0.5.3}Third chapter}{43}{subsection.0.5.3}% 
+\contentsline {chapter}{\numberline {1}Piracy and network value}{45}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Introduction}{45}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Literature review}{48}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}The model}{49}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Preliminary Analysis}{51}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Solving the model}{53}{section.1.5}% 
+\contentsline {subsection}{\numberline {1.5.1}Equilibrium when r=0, no piracy cost}{53}{subsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.5.2} Equilibrium when r is high}{54}{subsection.1.5.2}% 
+\contentsline {subsection}{\numberline {1.5.3}Does the firm prefer the high product degradation case or the no product degradation case? }{55}{subsection.1.5.3}% 
+\contentsline {subsection}{\numberline {1.5.4} Equilibrium for intermediate values of the cost of piracy}{56}{subsection.1.5.4}% 
+\contentsline {section}{\numberline {1.6}Extension: Endogenous product improvement}{59}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Discussion and Conclusion}{61}{section.1.7}% 
+\contentsline {section}{\numberline {1.8}Appendix}{65}{section.1.8}% 
+\contentsline {subsection}{\numberline {1.8.1}Buyers and pirates}{65}{subsection.1.8.1}% 
+\contentsline {subsection}{\numberline {1.8.2}Proof of proposition \ref {buyersusersprice}}{66}{subsection.1.8.2}% 
+\contentsline {subsubsection}{corollary:}{67}{subsection.1.8.2}% 
+\contentsline {subsection}{\numberline {1.8.3}Proof of proposition \ref {piracyvsnotproposition}}{67}{subsection.1.8.3}% 
+\contentsline {subsection}{\numberline {1.8.4}Proof of proposition \ref {tdemand}}{69}{subsection.1.8.4}% 
+\contentsline {section}{\numberline {1.9}Endogenous k}{71}{section.1.9}% 
+\contentsline {subsection}{\numberline {1.9.1}case where $r=0$}{71}{subsection.1.9.1}% 
+\contentsline {subsection}{\numberline {1.9.2}Intermediate r}{72}{subsection.1.9.2}% 
+\contentsline {subsection}{\numberline {1.9.3}Some values for k}{72}{subsection.1.9.3}% 
+\contentsline {subsection}{\numberline {1.9.4}Notes}{73}{subsection.1.9.4}% 
+\contentsline {subsubsection}{Why the envelope theorem applies}{73}{subsection.1.9.4}% 
+\contentsline {subsubsection}{Regularly varying functions}{74}{subsection.1.9.4}% 
+\contentsline {subsubsection}{Welfare}{75}{equation.1.9.12}% 
+\contentsline {subsubsection}{First and second order approximations of endogenous k}{76}{equation.1.9.12}% 
+\contentsline {chapter}{\numberline {2}Cost-side innovation with project variance}{78}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Introduction}{78}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Link to the literature}{80}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Setup}{81}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}The dynamic model}{81}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Sequential}{84}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Radical}{85}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}The willingness to lobby for buyouts}{90}{subsection.2.3.4}% 
+\contentsline {subsubsection}{Case 1: Buyouts affect decision to enter: }{91}{subsection.2.3.4}% 
+\contentsline {subsubsection}{Case 2: Buyouts only affect the preference}{92}{proposition.13}% 
+\contentsline {section}{\numberline {2.4}Applications:}{93}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Ex-ante buyout}{93}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Ex-post Bertrand}{94}{subsection.2.4.2}% 
+\contentsline {subsubsection}{When does the buyout option help the incumbent?}{96}{proposition.17}% 
+\contentsline {subsection}{\numberline {2.4.3}Ex-Post Cournot}{98}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Static case: Reduced form version of the Coasian argument}{99}{subsection.2.4.4}% 
+\contentsline {section}{\numberline {2.5}Discussion}{101}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Conclusion}{103}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.6.1}Sequential}{106}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}Radical}{107}{subsection.2.6.2}% 
+\contentsline {subsection}{\numberline {2.6.3}Proof of proposition \ref {propwelfare}}{108}{subsection.2.6.3}% 
+\contentsline {chapter}{\numberline {3}Microfoundations of Discounting}{110}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introduction}{110}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Background}{110}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Our model -- growth rate maximization}{112}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Related literature}{113}{subsection.3.1.3}% 
+\contentsline {section}{\numberline {3.2}Theoretical Framework}{115}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Problem definition}{115}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Model setup}{117}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Results}{119}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Specification}{119}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Case A -- Fixed time frame with additive dynamics}{121}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Case B -- Fixed time frame with multiplicative dynamics}{121}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Case C -- Adaptive time frame with additive dynamics}{122}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}Case D -- Adaptive time frame with multiplicative dynamics}{124}{subsection.3.3.5}% 
+\contentsline {section}{\numberline {3.4}Discussion}{128}{section.3.4}% 
+\contentsline {section}{\numberline {.1}The Transitivity of Growth Rate Maximization}{131}{section.Alph0.1}% 
+\contentsline {chapter}{Bibliography}{133}{appendix*.5}% 
+\contentsfinish 
