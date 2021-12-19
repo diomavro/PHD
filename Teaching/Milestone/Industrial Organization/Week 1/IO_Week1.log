@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  3 FEB 2021 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.13)  9 JUN 2021 13:02
 entering extended mode
 **./IO_Week1.tex
 (IO_Week1.tex
@@ -1569,10 +1569,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28601 strings out of 492969
- 574785 string characters out of 3134358
- 649952 words of memory out of 3000000
- 31726 multiletter control sequences out of 15000+200000
+ 28605 strings out of 492969
+ 574838 string characters out of 3134358
+ 649922 words of memory out of 3000000
+ 31730 multiletter control sequences out of 15000+200000
  15196 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,15n,96p,777b,685s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1585,7 +1585,7 @@ pe1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on IO_Week1.pdf (13 pages, 208397 bytes).
+Output written on IO_Week1.pdf (13 pages, 208375 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
