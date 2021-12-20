@@ -1,0 +1,304 @@
+
+Uniform distribution (continuous)
+From Wikipedia, the free encyclopedia
+Jump to navigationJump to search
+Uniform
+Probability density function
+PDF of the uniform probability distribution using [maximum convention] at the transition points.
+Using maximum convention
+Cumulative distribution function
+CDF of the uniform probability distribution.
+Notation	{\displaystyle {\mathcal {U}}(a,b)} {\mathcal {U}}(a,b) or {\displaystyle \mathrm {unif} (a,b)} \mathrm {unif} (a,b)
+Parameters	{\displaystyle -\infty <a<b<\infty \,} -\infty <a<b<\infty \,
+Support	{\displaystyle x\in [a,b]} x\in [a,b]
+PDF	{\displaystyle {\begin{cases}{\frac {1}{b-a}}&{\text{for }}x\in [a,b]\\0&{\text{otherwise}}\end{cases}}} {\begin{cases}{\frac {1}{b-a}}&{\text{for }}x\in [a,b]\\0&{\text{otherwise}}\end{cases}}
+CDF	{\displaystyle {\begin{cases}0&{\text{for }}x<a\\{\frac {x-a}{b-a}}&{\text{for }}x\in [a,b)\\1&{\text{for }}x\geq b\end{cases}}} {\begin{cases}0&{\text{for }}x<a\\{\frac {x-a}{b-a}}&{\text{for }}x\in [a,b)\\1&{\text{for }}x\geq b\end{cases}}
+Mean	{\displaystyle {\tfrac {1}{2}}(a+b)} {\tfrac {1}{2}}(a+b)
+Median	{\displaystyle {\tfrac {1}{2}}(a+b)} {\tfrac {1}{2}}(a+b)
+Mode	any value in {\displaystyle (a,b)} (a,b)
+Variance	{\displaystyle {\tfrac {1}{12}}(b-a)^{2}} {\tfrac {1}{12}}(b-a)^{2}
+Skewness	0
+Ex. kurtosis	{\displaystyle -{\tfrac {6}{5}}} -{\tfrac {6}{5}}
+Entropy	{\displaystyle \log(b-a)\,} {\displaystyle \log(b-a)\,}
+MGF	{\displaystyle {\begin{cases}{\frac {\mathrm {e} ^{tb}-\mathrm {e} ^{ta}}{t(b-a)}}&{\text{for }}t\neq 0\\1&{\text{for }}t=0\end{cases}}} {\begin{cases}{\frac {\mathrm {e} ^{tb}-\mathrm {e} ^{ta}}{t(b-a)}}&{\text{for }}t\neq 0\\1&{\text{for }}t=0\end{cases}}
+CF	{\displaystyle {\frac {\mathrm {e} ^{itb}-\mathrm {e} ^{ita}}{it(b-a)}}} {\frac {\mathrm {e} ^{itb}-\mathrm {e} ^{ita}}{it(b-a)}}
+In probability theory and statistics, the continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions such that for each member of the family, all intervals of the same length on the distribution's support are equally probable. The support is defined by the two parameters, a and b, which are its minimum and maximum values. The distribution is often abbreviated U(a,b). It is the maximum entropy probability distribution for a random variate X under no constraint other than that it is contained in the distribution's support.[1]
+
+Contents 
+1	Characterization
+1.1	Probability density function
+1.2	Cumulative distribution function
+1.3	Generating functions
+1.3.1	Moment-generating function
+1.3.2	Cumulant-generating function
+2	Properties
+2.1	Moments
+2.2	Order statistics
+2.3	Uniformity
+2.4	Generalization to Borel sets
+3	Standard uniform
+4	Related distributions
+5	Relationship to other functions
+6	Applications
+6.1	Sampling from a uniform distribution
+6.2	Sampling from an arbitrary distribution
+6.3	Quantization error
+7	Estimation
+7.1	Estimation of maximum
+7.1.1	Minimum-variance unbiased estimator
+7.1.2	Maximum likelihood estimator
+7.1.3	Method of moment estimator
+7.2	Estimation of midpoint
+7.3	Confidence interval for the maximum
+8	See also
+9	References
+10	Further reading
+11	External links
+Characterization
+Probability density function
+The probability density function of the continuous uniform distribution is:
+
+{\displaystyle f(x)={\begin{cases}{\frac {1}{b-a}}&\mathrm {for} \ a\leq x\leq b,\\[8pt]0&\mathrm {for} \ x<a\ \mathrm {or} \ x>b\end{cases}}} f(x)={\begin{cases}{\frac {1}{b-a}}&\mathrm {for} \ a\leq x\leq b,\\[8pt]0&\mathrm {for} \ x<a\ \mathrm {or} \ x>b\end{cases}}
+The values of f(x) at the two boundaries a and b are usually unimportant because they do not alter the values of the integrals of f(x) dx over any interval, nor of x f(x) dx or any higher moment. Sometimes they are chosen to be zero, and sometimes chosen to be 1/(b - a). The latter is appropriate in the context of estimation by the method of maximum likelihood. In the context of Fourier analysis, one may take the value of f(a) or f(b) to be 1/(2(b - a)), since then the inverse transform of many integral transforms of this uniform function will yield back the function itself, rather than a function which is equal "almost everywhere", i.e. except on a set of points with zero measure. Also, it is consistent with the sign function which has no such ambiguity.
+
+In terms of mean µ and variance s2, the probability density may be written as:
+
+{\displaystyle f(x)={\begin{cases}{\frac {1}{2\sigma {\sqrt {3}}}}&{\mbox{for }}-\sigma {\sqrt {3}}\leq x-\mu \leq \sigma {\sqrt {3}}\\0&{\text{otherwise}}\end{cases}}} f(x)={\begin{cases}{\frac {1}{2\sigma {\sqrt {3}}}}&{\mbox{for }}-\sigma {\sqrt {3}}\leq x-\mu \leq \sigma {\sqrt {3}}\\0&{\text{otherwise}}\end{cases}}
+Cumulative distribution function
+The cumulative distribution function is:
+
+{\displaystyle F(x)={\begin{cases}0&{\text{for }}x<a\\[8pt]{\frac {x-a}{b-a}}&{\text{for }}a\leq x\leq b\\[8pt]1&{\text{for }}x>b\end{cases}}} F(x)={\begin{cases}0&{\text{for }}x<a\\[8pt]{\frac {x-a}{b-a}}&{\text{for }}a\leq x\leq b\\[8pt]1&{\text{for }}x>b\end{cases}}
+Its inverse is:
+
+{\displaystyle F^{-1}(p)=a+p(b-a)\,\,{\text{ for }}0<p<1} F^{-1}(p)=a+p(b-a)\,\,{\text{ for }}0<p<1
+In mean and variance notation, the cumulative distribution function is:
+
+{\displaystyle F(x)={\begin{cases}0&{\text{for }}x-\mu <-\sigma {\sqrt {3}}\\{\frac {1}{2}}\left({\frac {x-\mu }{\sigma {\sqrt {3}}}}+1\right)&{\text{for }}-\sigma {\sqrt {3}}\leq x-\mu <\sigma {\sqrt {3}}\\1&{\text{for }}x-\mu \geq \sigma {\sqrt {3}}\end{cases}}} F(x)={\begin{cases}0&{\text{for }}x-\mu <-\sigma {\sqrt {3}}\\{\frac {1}{2}}\left({\frac {x-\mu }{\sigma {\sqrt {3}}}}+1\right)&{\text{for }}-\sigma {\sqrt {3}}\leq x-\mu <\sigma {\sqrt {3}}\\1&{\text{for }}x-\mu \geq \sigma {\sqrt {3}}\end{cases}}
+and the inverse is:
+
+{\displaystyle F^{-1}(p)=\sigma {\sqrt {3}}(2p-1)+\mu \,\,{\text{ for }}0\leq p\leq 1} F^{-1}(p)=\sigma {\sqrt {3}}(2p-1)+\mu \,\,{\text{ for }}0\leq p\leq 1
+Generating functions
+Moment-generating function
+The moment-generating function is:[2]
+
+{\displaystyle M_{x}=E(e^{tx})={\frac {e^{tb}-e^{ta}}{t(b-a)}}\,\!} M_{x}=E(e^{tx})={\frac {e^{tb}-e^{ta}}{t(b-a)}}\,\!
+from which we may calculate the raw moments m k
+
+{\displaystyle m_{1}={\frac {a+b}{2}},\,\!} m_{1}={\frac {a+b}{2}},\,\!
+{\displaystyle m_{2}={\frac {a^{2}+ab+b^{2}}{3}},\,\!} m_{2}={\frac {a^{2}+ab+b^{2}}{3}},\,\!
+{\displaystyle m_{k}={\frac {1}{k+1}}\sum _{i=0}^{k}a^{i}b^{k-i}.\,\!} m_{k}={\frac {1}{k+1}}\sum _{i=0}^{k}a^{i}b^{k-i}.\,\!
+For the special case a=-b, that is, for
+
+{\displaystyle f(x)={\begin{cases}{\frac {1}{2b}}&\mathrm {for} \ -b\leq x\leq b,\\[8pt]0&otherwise,\end{cases}}} {\displaystyle f(x)={\begin{cases}{\frac {1}{2b}}&\mathrm {for} \ -b\leq x\leq b,\\[8pt]0&otherwise,\end{cases}}}
+the Moment-generating functions reduces to the simple form
+
+{\displaystyle M_{x}={\frac {\sinh bt}{bt}}.} {\displaystyle M_{x}={\frac {\sinh bt}{bt}}.}
+For a random variable following this distribution, the expected value is then m1 = (a + b)/2 and the variance is m2 - m12 = (b - a)2/12.
+
+Cumulant-generating function
+For n = 2, the nth cumulant of the uniform distribution on the interval [-1/2, 1/2] is bn/n, where bn is the nth Bernoulli number.[3]
+
+Properties
+Moments
+The mean (first moment) of the distribution is:
+
+{\displaystyle E(X)={\frac {1}{2}}(a+b).} E(X)={\frac {1}{2}}(a+b).
+The variance (second central moment) is:
+
+{\displaystyle V(X)={\frac {1}{12}}(b-a)^{2}} V(X)={\frac {1}{12}}(b-a)^{2}
+Order statistics
+Let X1, ..., Xn be an i.i.d. sample from U(0,1). Let X(k) be the kth order statistic from this sample. Then the probability distribution of X(k) is a Beta distribution with parameters k and n - k + 1. The expected value is
+
+{\displaystyle \operatorname {E} (X_{(k)})={k \over n+1}.} \operatorname {E} (X_{(k)})={k \over n+1}.
+This fact is useful when making Q–Q plots.
+
+The variances are
+
+{\displaystyle \operatorname {V} (X_{(k)})={k(n-k+1) \over (n+1)^{2}(n+2)}.} \operatorname {V} (X_{(k)})={k(n-k+1) \over (n+1)^{2}(n+2)}.
+See also: Order statistic § Probability distributions of order statistics
+
+Uniformity
+The probability that a uniformly distributed random variable falls within any interval of fixed length is independent of the location of the interval itself (but it is dependent on the interval size), so long as the interval is contained in the distribution's support.
+
+To see this, if X ~ U(a,b) and [x, x+d] is a subinterval of [a,b] with fixed d > 0, then
+
+{\displaystyle P\left(X\in \left[x,x+d\right]\right)=\int _{x}^{x+d}{\frac {\mathrm {d} y}{b-a}}\,={\frac {d}{b-a}}\,\!} P\left(X\in \left[x,x+d\right]\right)=\int _{x}^{x+d}{\frac {\mathrm {d} y}{b-a}}\,={\frac {d}{b-a}}\,\! which is independent of x. This fact motivates the distribution's name.
+Generalization to Borel sets
+This distribution can be generalized to more complicated sets than intervals. If S is a Borel set of positive, finite measure, the uniform probability distribution on S can be specified by defining the pdf to be zero outside S and constantly equal to 1/K on S, where K is the Lebesgue measure of S.
+
+Standard uniform
+Restricting {\displaystyle a=0} a=0 and {\displaystyle b=1} b=1, the resulting distribution U(0,1) is called a standard uniform distribution.
+
+One interesting property of the standard uniform distribution is that if u1 has a standard uniform distribution, then so does 1-u1. This property can be used for generating antithetic variates, among other things.
+
+Related distributions
+If X has a standard uniform distribution, then by the inverse transform sampling method, Y = - ?-1 ln(X) has an exponential distribution with (rate) parameter ?.
+If X has a standard uniform distribution, then Y = Xn has a beta distribution with parameters (1/n,1). As such,
+If X has a standard uniform distribution, then Y = X is also a special case of the beta distribution with parameters (1,1).
+The Irwin–Hall distribution is the sum of n i.i.d. U(0,1) distributions.
+The sum of two independent, equally distributed, uniform distributions yields a symmetric triangular distribution.
+The distance between two i.i.d. uniform random variables also has a triangular distribution, although not symmetric.
+Relationship to other functions
+As long as the same conventions are followed at the transition points, the probability density function may also be expressed in terms of the Heaviside step function:
+
+{\displaystyle f(x)={\frac {\operatorname {H} (x-a)-\operatorname {H} (x-b)}{b-a}},\,\!} f(x)={\frac {\operatorname {H} (x-a)-\operatorname {H} (x-b)}{b-a}},\,\!
+or in terms of the rectangle function
+
+{\displaystyle f(x)={\frac {1}{b-a}}\,\operatorname {rect} \left({\frac {x-\left({\frac {a+b}{2}}\right)}{b-a}}\right).} f(x)={\frac {1}{b-a}}\,\operatorname {rect} \left({\frac {x-\left({\frac {a+b}{2}}\right)}{b-a}}\right).
+There is no ambiguity at the transition point of the sign function. Using the half-maximum convention at the transition points, the uniform distribution may be expressed in terms of the sign function as:
+
+{\displaystyle f(x)={\frac {\operatorname {sgn} {(x-a)}-\operatorname {sgn} {(x-b)}}{2(b-a)}}.} f(x)={\frac {\operatorname {sgn} {(x-a)}-\operatorname {sgn} {(x-b)}}{2(b-a)}}.
+Applications
+In statistics, when a p-value is used as a test statistic for a simple null hypothesis, and the distribution of the test statistic is continuous, then the p-value is uniformly distributed between 0 and 1 if the null hypothesis is true.
+
+Sampling from a uniform distribution
+There are many applications in which it is useful to run simulation experiments. Many programming languages have the ability to generate pseudo-random numbers which are effectively distributed according to the standard uniform distribution.
+
+If u is a value sampled from the standard uniform distribution, then the value a + (b - a)u follows the uniform distribution parametrised by a and b, as described above.
+
+Sampling from an arbitrary distribution
+Main article: Inverse transform sampling
+The uniform distribution is useful for sampling from arbitrary distributions. A general method is the inverse transform sampling method, which uses the cumulative distribution function (CDF) of the target random variable. This method is very useful in theoretical work. Since simulations using this method require inverting the CDF of the target variable, alternative methods have been devised for the cases where the cdf is not known in closed form. One such method is rejection sampling.
+
+The normal distribution is an important example where the inverse transform method is not efficient. However, there is an exact method, the Box–Muller transformation, which uses the inverse transform to convert two independent uniform random variables into two independent normally distributed random variables.
+
+Quantization error
+Main article: Quantization error
+In analog-to-digital conversion a quantization error occurs. This error is either due to rounding or truncation. When the original signal is much larger than one least significant bit (LSB), the quantization error is not significantly correlated with the signal, and has an approximately uniform distribution. The RMS error therefore follows from the variance of this distribution.
+
+Estimation
+Estimation of maximum
+Minimum-variance unbiased estimator
+Main article: German tank problem
+Given a uniform distribution on [0, b] with unknown b, the minimum-variance unbiased estimator (UMVU) estimator for the maximum is given by
+
+{\displaystyle {\hat {b}}_{UMVU}={\frac {k+1}{k}}m=m+{\frac {m}{k}}} {\hat {b}}_{UMVU}={\frac {k+1}{k}}m=m+{\frac {m}{k}}
+where m is the sample maximum and k is the sample size, sampling without replacement (though this distinction almost surely makes no difference for a continuous distribution). This follows for the same reasons as estimation for the discrete distribution, and can be seen as a very simple case of maximum spacing estimation. This problem is commonly known as the German tank problem, due to application of maximum estimation to estimates of German tank production during World War II.
+
+Maximum likelihood estimator
+The maximum likelihood estimator is given by:
+
+{\displaystyle {\hat {b}}_{ML}=m} {\hat {b}}_{ML}=m
+where m is the sample maximum, also denoted as {\displaystyle m=X_{(n)}} m=X_{(n)} the maximum order statistic of the sample.
+
+Method of moment estimator
+The method of moments estimator is given by:
+
+{\displaystyle {\hat {b}}_{MM}=2{\bar {X}}-a} {\displaystyle {\hat {b}}_{MM}=2{\bar {X}}-a}
+where {\displaystyle {\bar {X}}} {\bar {X}} is the sample mean.
+
+Estimation of midpoint
+The midpoint of the distribution (a + b) / 2 is both the mean and the median of the uniform distribution. Although both the sample mean and the sample median are unbiased estimators of the midpoint, neither is as efficient as the sample mid-range, i.e. the arithmetic mean of the sample maximum and the sample minimum, which is the UMVU estimator of the midpoint (and also the maximum likelihood estimate).
+
+Confidence interval for the maximum
+Let X1, X2, X3, ..., Xn be a sample from U( 0, L ) where L is the population maximum. Then X(n) = max( X1, X2, X3, ..., Xn ) has the density[4]
+
+{\displaystyle f_{n}(X_{(n)})=n{\frac {1}{L}}\left({\frac {X_{(n)}}{L}}\right)^{n-1}=n{\frac {X_{(n)}^{n-1}}{L^{n}}},0<X_{(n)}<L} {\displaystyle f_{n}(X_{(n)})=n{\frac {1}{L}}\left({\frac {X_{(n)}}{L}}\right)^{n-1}=n{\frac {X_{(n)}^{n-1}}{L^{n}}},0<X_{(n)}<L}
+The confidence interval for the estimated population maximum is then ( X(n), X(n) / a1/n ) where 100 ( 1 - a )% is the confidence level sought. In symbols
+
+{\displaystyle X_{(n)}\leq L\leq X_{(n)}/\alpha ^{1/n}} X_{(n)}\leq L\leq X_{(n)}/\alpha ^{1/n}
+See also
+Uniform distribution (discrete)
+Beta distribution
+Box–Muller transform
+Probability plot
+Q-Q plot
+Rectangular function
+Irwin–Hall distribution — In the degenerate case where n=1, the Irwin-Hall distribution generates a uniform distribution between 0 and 1.
+Bates distribution — Similar to the Irwin-Hall distribution, but rescaled for n. Like the Irwin-Hall distribution, in the degenerate case where n=1, the Bates distribution generates a uniform distribution between 0 and 1.
+References
+ Park, Sung Y.; Bera, Anil K. (2009). "Maximum entropy autoregressive conditional heteroskedasticity model". Journal of Econometrics. Elsevier. 150 (2): 219–230. doi:10.1016/j.jeconom.2008.12.014.
+ Casella & Berger 2001, p. 626
+ https://galton.uchicago.edu/~wichura/Stat304/Handouts/L18.cumulants.pdf
+ Nechval KN, Nechval NA, Vasermanis EK, Makeev VY (2002) Constructing shortest-length confidence intervals. Transport and Telecommunication 3 (1) 95-103
+Further reading
+Casella, George; Roger L. Berger (2001), Statistical Inference (2nd ed.), ISBN 0-534-24312-6, LCCN 2001025794
+External links
+Online calculator of Uniform distribution (continuous)
+v t e
+Probability distributions
+List
+Discrete univariate
+with finite support	
+Benford Bernoulli beta-binomial binomial categorical hypergeometric Poisson binomial Rademacher discrete uniform Zipf Zipf–Mandelbrot
+Discrete univariate
+with infinite support	
+beta negative binomial Borel Conway–Maxwell–Poisson discrete phase-type Delaporte extended negative binomial Gauss–Kuzmin geometric logarithmic negative binomial parabolic fractal Poisson Skellam Yule–Simon zeta
+Continuous univariate
+supported on a bounded interval	
+arcsine ARGUS Balding–Nichols Bates beta beta rectangular Irwin–Hall Kumaraswamy logit-normal noncentral beta raised cosine reciprocal triangular U-quadratic uniform Wigner semicircle
+Continuous univariate
+supported on a semi-infinite interval	
+Benini Benktander 1st kind Benktander 2nd kind beta prime Burr chi-squared chi Dagum Davis exponential-logarithmic Erlang exponential F folded normal Flory–Schulz Fréchet gamma gamma/Gompertz generalized inverse Gaussian Gompertz half-logistic half-normal Hotelling's T-squared hyper-Erlang hyperexponential hypoexponential inverse chi-squared scaled inverse chi-squared inverse Gaussian inverse gamma Kolmogorov Lévy log-Cauchy log-Laplace log-logistic log-normal Lomax matrix-exponential Maxwell–Boltzmann Maxwell–Jüttner Mittag-Leffler Nakagami noncentral chi-squared Pareto phase-type poly-Weibull Rayleigh relativistic Breit–Wigner Rice shifted Gompertz truncated normal type-2 Gumbel Weibull Discrete Weibull Wilks's lambda
+Continuous univariate
+supported on the whole real line	
+Cauchy exponential power Fisher's z Gaussian q generalized normal generalized hyperbolic geometric stable Gumbel Holtsmark hyperbolic secant Johnson's SU Landau Laplace asymmetric Laplace logistic noncentral t normal (Gaussian) normal-inverse Gaussian skew normal slash stable Student's t type-1 Gumbel Tracy–Widom variance-gamma Voigt
+Continuous univariate
+with support whose type varies	
+generalized extreme value generalized Pareto Marchenko–Pastur q-exponential q-Gaussian q-Weibull shifted log-logistic Tukey lambda
+Mixed continuous-discrete univariate	
+rectified Gaussian
+Multivariate (joint)	
+Discrete Ewens multinomial Dirichlet-multinomial negative multinomial Continuous Dirichlet generalized Dirichlet multivariate Laplace multivariate normal multivariate stable multivariate t normal-inverse-gamma normal-gamma Matrix-valued inverse matrix gamma inverse-Wishart matrix normal matrix t matrix gamma normal-inverse-Wishart normal-Wishart Wishart
+Directional	
+Univariate (circular) directional Circular uniform univariate von Mises wrapped normal wrapped Cauchy wrapped exponential wrapped asymmetric Laplace wrapped Lévy Bivariate (spherical) Kent Bivariate (toroidal) bivariate von Mises Multivariate von Mises–Fisher Bingham
+Degenerate and singular	
+Degenerate Dirac delta function Singular Cantor
+Families	
+Circular compound Poisson elliptical exponential natural exponential location–scale maximum entropy mixture Pearson Tweedie wrapped
+v t e
+Some common univariate probability distributions
+Continuous	
+beta Cauchy chi-squared exponential F gamma Laplace log-normal normal Pareto Student's t uniform Weibull
+Discrete	
+Bernoulli binomial discrete uniform geometric hypergeometric negative binomial Poisson
+List of probability distributions
+Categories: Continuous distributionsLocation-scale family probability distributions
+Navigation menu
+Not logged inTalkContributionsCreate accountLog inArticleTalkReadEditView historySearch
+
+Search Wikipedia
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Wikipedia store
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact page
+Tools
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Wikidata item
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+In other projects
+Wikimedia Commons
+
+Languages
+???????
+Deutsch
+Español
+Français
+???
+Italiano
+???????
+Ti?ng Vi?t
+??
+28 more
+Edit links
+This page was last edited on 31 May 2018, at 10:45.
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersCookie statementMobile viewWikimedia Foundation Powered by MediaWiki

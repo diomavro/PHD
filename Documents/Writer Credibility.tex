@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots,calc,graphicx}
+\usepackage{preview}	
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}	
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{chronology}
+\usepackage[a4paper,top=3cm,bottom=3cm, right=2cm, left=2cm]{geometry}
+\usepackage[normalem]{ulem}
+\usetikzlibrary{math}
+\bibliographystyle{agsm}
+\usepackage{blindtext}	
+\usepackage{hyperref}
+
+\begin{document}
+\title{Writer Credibility}
+
+Why do different mediums or franchises differ as much as they do in quality even when within the same fictional universe? On a personal point of view it seems quite obvious that often those who consume the same universe through different mediums usually have a favorite of these mediums and this favorite is perhaps not all that subjective in the sense that they usually agree which medium was the most effective. Similarly the revenue of a universe is usually highly skewed, one medium actually makes most of the profit whilst the rest free ride on one mediums success. 
+
+It is perhaps not controversial to note that creators of such universes are in fact not perfectly talented in all possible mediums. Indeed it may often be the case that an author is very talented for books but not at all talented for movies, or even within the same medium, perhaps an author is quite talented at machiavellian scheming but not quite so for slow paced romance. 
+
+However the relative skills of such an author may not always be visible to a firm. Instead the author wants to make believe that he is actually quite good at all of the mediums to maximize his profit. Additionally he may use an excuse such as writer's block to explain why a certain project may not go well but it does not generalize to his whole skill-set. 
+
+More importantly, the firm must invest significant resources to ensure that projects get the attention they need, and it must also plan to invest these resources. That is a firm must put in the effort to make sure a project is as good as it can be. 
+
+Perhaps a trivial first observation to make is that authors of specific works are not multi-talented and cannot write well for every medium. 
+
+Suppose a writer is working on some story but he is not guaranteed to make good chunks at every time. If he signals to the network that his story is of good quality then the network invests more during that time period. On the other hand if he signals that he has mediocre one, then less will be invested. We can suppose that his story is a markov chain. If however the buyer has too high a discount rate the writer will be forced to give a higher portion of the profits. 
+
+The original idea is that the writer has cross convex costs. That is, he actually is only good at writing kind of story. So maybe he is only good at writing one kind of story and is not good at adapting his work to other mediums. So if he matches with a book provider he will be unable to perform as well. However the writer can signal that he has writers block to avoid a too demanding contract. If he has writers block then the firm invest less in the specific project. The question is, does the writer give more or less share of the profit to the buyer if he signals writers block? 
+
+
+\section{Modelling choices}
+
+$\theta$ is the type of the writer in this period. $\tilde{\epsilon}$ is his effort, the $\epsilon$ is the effort of the buyer. There are $k<\infty$ periods and every period is a simultaneous game. The actions are not observable but can be inferred from the project value in the next period but are not externally verifiable. The effort level can be either 
+
+We let the writers utility be $u_w = (1-\gamma) u(\theta, \epsilon, \tilde{\epsilon}) $, where $u(.)$ is continuous, quasi concave in $\tilde{\epsilon}$ and strictly increasing in $\epsilon$ and strictly increasing difference in $(\theta,\tilde{\epsilon})$ and weakly increasing differences in $(\theta, \epsilon)$ and $(\epsilon, \tilde{\epsilon})$
+
+We define the best response function 
+
+\begin{}
+
+\end{}
+
+
+$ \epsilon =  \left[ \epsilon_{min},\epsilon_{max} \right]   \subseteq  \Re $ 
+and 
+$\tilde{\epsilon}  =  \left[ \tilde{\epsilon}_{min},\tilde{\epsilon}_{max}  \right]\subseteq  \Re $. 
+
+Each type lies in a set $
+\Theta \subseteq \overline{\Theta} = \left[ \theta_{min} ,\theta_{max}  \right] $ with $\theta_{min}, \theta_{max} \in \Theta$
+
+Types change according to the Markov Process $\psi:\theta \rightarrow \delta \theta$ which is continuous and strictly increasing. 
+
+The writer has discounted utility functions are given by $\sum_i \delta^i_w u_w(\theta_i, \epsilon_i, \tilde{\epsilon}_i)$. The outcome space is given by $O = (\overline{\Theta} \times X \times Y)^k$: 
+
+The assumptions 
+
+
+
+
+So the writing firm has the signal of the cost of its writing. If it signals a low cost then they will both invest more in the project. Otherwise they will both invest less. If the project has more investment, the next periods project will be of higher value. In reality the project may be of low quality.
+
+\begin{align*}
+\text{The 4th period both firms choose their effort} \\
+(\tilde{\epsilon}_2^*)= \operatorname*{argmax}_{ \tilde{\epsilon}_2 \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon_1} )
++\delta (1-\gamma_2)V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)
+-C(\tilde{\epsilon}_2,\tilde{\epsilon}_1) \\
+= \operatorname*{argmax}_{ \tilde{\epsilon} \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon_1})+
+\delta (1-\gamma_2)V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)
+-(\tilde{\epsilon}_2+\tilde{\epsilon}_1)^2 \\
+\tilde{\epsilon}_2^*=
+\delta (1-\gamma_2) \frac{ \partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \tilde{\epsilon}_2}
+-\frac{\partial c(\tilde{\epsilon}_2,\tilde{\epsilon}_1)}{\partial \tilde{\epsilon}_2 }=0 \\
+=\delta (1-\gamma_2) \frac{ \partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \tilde{\epsilon}_2}
+-2(\tilde{\epsilon}_2+\tilde{\epsilon}_1) \\
+\tilde{\epsilon}_2^* = f(\epsilon_2,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\epsilon_2^*=
+\operatorname*{argmax}_{ \epsilon_2 \geq 0 } \gamma_2 V_2(\epsilon_2,\tilde{\epsilon}_2,V_1) - \epsilon_2   \\
+0= \gamma_2 \frac{\partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \epsilon_2}-1 \\
+\epsilon_2^* = g(\tilde{\epsilon_2},\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= g(f(\epsilon_2^*,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1),\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+\rightarrow \epsilon_2^* = G(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+\rightarrow \tilde{\epsilon}_2^* = f(\epsilon_2,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= f(G(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1),\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= F(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 3rd period period only the upstream firm plays a role} \\
+(\gamma_2^*)= \operatorname*{argmax}_{ \gamma_2 \in [0,1] } \delta (1-\gamma_2)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1) \\
+=-\delta \gamma_2 V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)
++\delta(1-\gamma_2) \frac{\partial V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)}{\partial \gamma_2}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1)}{\partial \gamma_2} \\ 
+\gamma_2^*= h(\epsilon_1,\tilde{\epsilon_1},\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 2nd period period only the upstream firm plays a role} \\
+(\tilde{\epsilon}_1^*)= \operatorname*{argmax}_{ \tilde{\epsilon}_1 \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon}_1)
++\delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)
+-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1) \\
+= (1-\gamma_1)\frac{\partial V_1(\epsilon_1,\tilde{\epsilon}_1) }{\partial \tilde{\epsilon_1}}
++\delta (1-\gamma_2^*)\frac{\partial V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)}{\partial \tilde{\epsilon_1}}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1)}{\partial \tilde{\epsilon_1}} \\
+(\tilde{\epsilon}_1^*)*
+=j(\epsilon_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+(\epsilon_1^*)= \operatorname*{argmax}_{ \epsilon_1 \geq 0 }
+\gamma_1 V_1(\epsilon_1,\tilde{\epsilon}_1)-\epsilon_1 \\
+= \gamma_1 \frac{\partial V_1(\epsilon_1,\tilde{\epsilon}_1)}{\partial \epsilon_1}-1 \\
+(\epsilon_1^*)
+= k(\tilde{\epsilon}_1,\gamma_1)
+=k(j(\epsilon_1,\gamma_1),\gamma_1) \\
+\rightarrow
+\epsilon_1^*=K( \gamma_1) \\
+\rightarrow \tilde{\epsilon}_1 = j(\gamma_1)=j(K(\gamma_1),\gamma_1)=J(\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 1st period period only the upstream firm plays a role} \\
+(\gamma_1^*)= \operatorname*{argmax}_{ \gamma_1 \in [0,1] } 
+(1-\gamma_1)V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)
++\delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1^*)
+-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1^*) \\
+= -V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)
++ (1-\gamma_1)\frac{\partial V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)}{\partial \gamma_1}
++ \frac{\partial \delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1^*)}{\partial \gamma_1}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1^*)}{\partial \gamma_1}
+\end{align*}
+
+\end{document}

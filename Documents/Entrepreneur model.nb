@@ -1,0 +1,173 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5175,        164]
+NotebookOptionsPosition[      4930,        151]
+NotebookOutlinePosition[      5276,        166]
+CellTagsIndexPosition[      5233,        163]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{"\"\<There are n entrepreneurs in n markets who can perfectly \
+see their own markets and have a monopoly in them, and m firms which can \
+enter\>\"", "\[IndentingNewLine]", "\"\<The probability that entrepreneur i \
+will be sampled by each firm is:\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[CapitalPi]", "i"], 
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["p", "1"], ",", 
+     SubscriptBox["p", "2"], ",", "...", ",", 
+     SubscriptBox["p", "i"], ",", "...", ",", 
+     SubscriptBox["p", "n"]}], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Delta]", " ", 
+     SubscriptBox["\[CapitalPi]", "i"]}], 
+    RowBox[{"\[Delta]", " ", 
+     SubscriptBox["p", "i"]}]], "\[LessEqual]", "0"}], ";", " ", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[Delta]", " ", 
+     SubscriptBox["\[CapitalPi]", "i"]}], 
+    RowBox[{"\[Delta]", " ", 
+     SubscriptBox["p", 
+      RowBox[{"-", "i"}]]}]], "\[GreaterEqual]", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[CapitalPi]", "i"], 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["p", "1"], ",", 
+      SubscriptBox["p", "2"], ",", "...", ",", 
+      SubscriptBox["p", "i"], ",", "...", ",", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["p", "n"], "|", 
+        SubscriptBox["p", "1"]}], "=", 
+       RowBox[{
+        RowBox[{
+         SubscriptBox["p", "2"], "..."}], "=", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["p", "i"], "..."}], "=", 
+         SubscriptBox["p", "n"]}]}]}]}], ")"}]}], "=", " ", 
+   FractionBox["1", "n"]}], 
+  ";"}], "\[IndentingNewLine]", "\"\<If m = 1 then it samples k times and \
+chooses the highest price. This threat of entry causes causes the nash \
+equilibrium of all firms to be that they all price at 0. \n\nthis causes the \
+n to not choose its profit maximizing level but to randomize. Randmizing \
+uniformally around the profit maximizing level \>\"", "\[IndentingNewLine]", \
+"\"\<minmax of firm 1:\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["p", "1"], 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"\[CapitalPi]", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["p", "1"], ",", 
+         SubscriptBox["p", "2"]}], ")"}]}]}], ")"}]}], "=", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     RowBox[{"\[CapitalPi]", 
+      RowBox[{"(", 
+       RowBox[{"1", ",", 
+        SubscriptBox["p", "2"]}], ")"}]}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", "\"\<minmax of firm 2:\>\"", "\
+\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["p", "2"], "\[CapitalPi]", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["p", "1"], ",", 
+      SubscriptBox["p", "2"]}], ")"}]}], "=", 
+   RowBox[{"\[CapitalPi]", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["p", "1"], ",", "1"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalPi]", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["p", "1"], ",", 
+      SubscriptBox["p", "2"]}], ")"}]}], "=", 
+   FractionBox[
+    RowBox[{"\[CapitalPi]", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["p", "1"], ",", "1"}], ")"}]}], 
+    SubscriptBox["p", "2"]]}], 
+  ";"}], "\[IndentingNewLine]", "\"\<Subbing in the second minmax function \
+into the first:\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["p", "1"], "-", 
+    RowBox[{
+     SubscriptBox["p", "1"], 
+     FractionBox[
+      RowBox[{"\[CapitalPi]", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["p", "1"], ",", "1"}], ")"}]}], 
+      SubscriptBox["p", "2"]]}]}], "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"\[CapitalPi]", 
+     RowBox[{"(", 
+      RowBox[{"1", ",", 
+       SubscriptBox["p", "2"]}], ")"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQBmIQ7XdJnDPP67Uj0+1GHhB9LJ9XFERHdcRogegsfzkj
+EB321coSRO9ZvcgWRE9SlvcB0W/yJQNAdJFyQiiI5tLijQHr69zcDNb30VU+
+H0gfyMkC00EyDhsnAOk/HHePgeiqLvFzIPr2xcm3wHyjNVsmAuk+5reHQHTT
+wy/HQHR/OvtpEH3smeJjEB3T0PQWRH+bufkTiD7VHP4ZRD+rqwydBKRnXF0O
+ptc4S2SA6JCTs3PA4u87i0H06W7rEhC9qnx7C4gO6DoGpv3sdLtAtEpQ6iwQ
+fe5ayiMQ/TDA4AWIXmbTwDcZSHNPthUA0V7X2qVAtKS4ozyIftcyWxVER/Yb
+q4Fop2X1eiB6xnl1UxBdkxbGOwVI33JZDqadpBcbgWgRmdtguu+uXiyI9o25
+FQ+i4yfxGc0AxU+xiBWIBgD8wM9G
+  "]]
+},
+WindowSize->{978, 660},
+WindowMargins->{{-1116, Automatic}, {-257, Automatic}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4368, 129, 462, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

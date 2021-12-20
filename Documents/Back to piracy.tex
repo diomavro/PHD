@@ -1,0 +1,1187 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{math}
+\usepackage{preview}	
+\usepackage{mathtools}
+
+\usepackage{amsmath, amsfonts, amssymb, mathrsfs,amsthm}
+
+\usepackage[english]{babel}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}	
+
+\usepackage{natbib}
+
+\usepackage{color}
+
+\usepackage[a4paper,top=3cm,bottom=3cm, right=2cm, left=2cm]{geometry}
+\usepackage[normalem]{ulem}
+
+
+
+\usepackage{blindtext}	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+\bibliographystyle{agsm}
+ 
+\newtheorem{theorem}{Theorem}	
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+\newtheorem{assumption}{Assumption}	
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+\title{Piracy model}
+\author{Diomides Mavroyiannis}
+
+\maketitle
+
+\begin{abstract}
+We present a model where consumers have a discrete choice between purchasing, pirating and not consuming. A special feature of this model is that utility is separated into intrinsic and extrinsic value. We show that if the differential network value between buying and pirating is sufficiently high then the firm prefers for piracy to exist. We also show that if the complementary good is high enough, then reducing piracy may be pareto improving. 
+\end{abstract}
+
+\section{Introduction}
+
+The music industry is often seen as the primary victim of piracy. It's long term reduction in profit has been attributed to the large number of pirates whose actions allegedly harm both artists and their representatives\citep{B03}. More recent analysis estimates that as many copies of popular music are being pirated as are being accessed through legal means\citep{O15}.
+
+\iffalse
+Piracy is the term used throughout this paper to describe the copying of a digital good without the permission of the one who owns the intellectual property in question. Since in essence this digital good is an idea, the supply of it is infinite. If for instance somebody pirates a song and plays it, what she really pirated is the specific sequence of frequencies that her speakers are emitting. Fundamentally this is equivalent to a carpenter observing another carpenter construct something and then mimicking the process with his own materials. Piracy is in essence the restructuring of ones  own property without the permission of the person who has originally re-structured his property in that way. 
+
+What makes digital piracy different from merely copying? Whilst copying inherently has a noise to it which makes the copy imperfect, piracy is often considered as a perfect copy. Here we can already perhaps describe why piracy may be less desirable than copying. The process of copying itself may be innovative as an imperfect copy will sometimes create a spin-off which is superior to the original, so the process of copying in itself may be welfare improving. Attempts at approximations may yield outcomes that are superior to the original, this is especially true if there is noise in more than one dimension. 
+
+On the other hand the concept of a perfect copy is often too quickly employed, most purchased goods do not come merely with just an instance of the product but come with a bundle of goods or promise of future services. It is unclear if we can truly call a pirated version of a song and legally downloaded equivalent an identical product because the process of acquisition itself may not be neutral. Things such as accessibility and user interface also undoubtedly play a role. 
+\fi
+
+The magnitude of the damage caused by piracy is ambiguous. Given the fact that some artists choose to give their work away for free, it may be inferred that piracy is not consistently bad for the bottom line. Music is often uploaded for free on public platforms or even freely uploaded on piracy sites by their creators. A plausible non-ideological cause of this could just be that the potential revenue of services, such as concerts would rise, this can be termed as a complementary good. There is a clear case to be made that the revenue from complementary goods rises if the primary good is given for free.  Nevertheless there also exist large movements against piracy, industry experts and artists argue that it is not possible to make a living without this protection. Nevertheless, as consumers own more adjustable property, the cost of policing individual behavior to prevent property adjustment may be considerable. 
+
+The revenue a consumer represents to the firm may not be a function of his willingness to pay. If we don't limit our analysis to a single period a firm may wish to consider effects of repeated interaction such as reputation or complementary goods. However indirect value to the firm may also stem from a single temporal interaction, for instance the firm markets something to the consumer by selling them something then the firm has the direct profits from the sale and the indirect profits for advertising a product from the firm it has advertised to. So when the term "complementary good" is used it will not be in reference to the consumer but in reference to the firm. A good which has no effect on consumer utility but affects firm profits. 
+
+The two main examples of digital goods which have a piracy option are music, movies or televised series. The main alternative to buying usually takes the form of torrents or streaming. Buying on the other hand may take the form of renting or literally purchasing a copy of the product on ones computer, for instance Spotify the music platform is essentially a streaming service which also allows users to download songs. 
+
+Advertisements may play only to buyers and not to pirates however the portion which will change the firms choice is only the revenue which would stem from pirates since if 
+
+To generalize the theory a little, we can distinguish value to the consumer by claiming that it stems essentially from two components, intrinsic valuation and extrinsic valuation. The intrinsic valuation of the good is the part of the valuation which is independent of the actions of other consumers. Conversely the extrinsic portion, is the value which depends on what other consumers are consuming. The ratio of these two types of values would naturally vary enormously between product. Perhaps a bare approximate criteria that may be used in everyday life is the distinction between needs and wants. 
+
+There exist many types of goods which have large extrinsic portion to their value. Following our previous example, the value of a televised series to a consumer is not only the direct experience of watching it but also the socialization that follows it afterward. This is also true of things such as spectator sports, where a more popular following will imply that the associated organizations will be able to charge higher prices for events or membership. It is hard to imagine that the world cup attracts the number of viewers it does because a large portion of the population is interested in the intricacies of a good match, instead this is likely a communal event. The commonly employed example of the QWERTY keyboard is also relevant here but the broad framework of interdependent valuations extends to other things such as the consumption of current events or news. 
+
+Software is another case where the extrinsic valuation may vary substantially. Statistical packages in general are software products which have the value which is directly provided by the firm and the value which leaks from other consumers and is generally dependent on the number of users, this is because the number of packages and versatility of the platforms depends on their respective user base. This partly explains the rise of open source software, with Python, R, Ruby, etc.  The active user base produces packages which increases the value of these platforms. However, this is not to say that proprietary software does not gain value from a richer user base, for instance, STATA hosts events for licensees and there are many authors outside of the company that contribute.  
+
+Digital goods, once they are created, have a trivial marginal cost to distribute and can essentially be distributed to everyone with a computer and access to the Internet. A firm trying to exploit this now existing good would do so by setting the price which will maximize profits. This would depend on how it perceives the distribution of the willingness to pay of consumers to be. In a world where the firm can perfectly price discriminate, it would charge each consumer exactly what their valuation would be and in a world where it would not be able to distinguish at all, it would use the distribution of the willingness to pay to separate the world into buyers and non-buyers. Piracy on the other hand, is somewhere between these two worlds, a form of leakage., where there is a second implicit price which yields on revenue. 
+
+When a firms copyrighted product is being pirated, it has one of two main response mechanisms. Fundamentally a firm can use positive incentives by increasing the surplus of the consumer. This can be done by either decreasing the price or by increasing the value of the good. Alternatively, the firm can try to decrease the opportunity cost of buying by increasing the cost of piracy.  
+
+Product improvement or extra content is quite commonly employed in many industries. An example of this strategy in the entertainment industry is already seen through limited edition sets that include various extra content such as conceptual art or more information on the development process. In the case of sports it usually means higher pixelation or additional functionality such as the ability to pause and rewind games. Often companies structure themselves in a way as to offer a free good of base value and giving an improved product to those who pay extra. This added content is (tautologically) most often coveted by the consumers who have a higher willingness to pay.
+
+The present situation can be framed as a choice between the relative level at which a firm will rely on the stick versus the carrot. Firms with copyright claims on their products have in their arsenal both a carrot and a stick. The carrot, in this case, is the ability to attract consumers by offering a high value product. In contrast, the stick is the ability to increase the cost of piracy; this would incite pirates to switch to buying. 
+
+Conceptually, the carrot is the improvement of the product but also a decreased price and, while improving the product is often costly, changing the price is not. This means that there is automatically a built-in mechanism to incite firms to discover demand using the price. The metaphorical stick means that a firm will choose to chase after consumers. 
+
+A company that decreases the cost of pirating can expect two types of effects. The first is that the consumers who would have bought the product will instead pirate it and similarly the consumers who would have neither pirated nor bought it may decide to obtain it through piracy. The relative importance of these two effects would likely depend on the level of differentiation between the pirated product and bought product.
+
+The bought and pirated product, might differ in value naturally without extraordinary effort from the enterprise or government. For instance acquiring a product from a non-official digital source may entail some risk of downloading a virus or being hacked, this would be a natural level of a priori product degradation. Specific effects differentiating the socialization values between the two product can also be imagined. For instance a social stigma may cause the pirates to derive a lower proportion of value from socializing. Consumers may also derive additional socialization value from the bought product because it may be used as a signaling mechanism.
+
+Data indicates that the consumer who will pirate will most likely be a consumer with a lower willingness to pay. The business software alliance estimates that the developing world has a much higher rate of piracy than the developed world, with countries like the United States, Japan, Luxembourg, New Zealand, Belgium, and Denmark  having a piracy rate below $25$ per cent whilst countries like Bangladesh, Georgia, Armenia, Zimbabwe, Sri Lanka, Azerbaijan have rates exceeding $90$ per cent. \citep{BSA09}
+
+In some domains, the number of users may have no impact on the willingness to pay for the good. In such a case, the firm will merely behave as in the trivial profit maximizing case. This implies setting piracy at a high enough level s that nobody would pirate. Nevertheless these kind of domains are likely the exception and not the rule, mainly due to informational concerns. 
+
+To consider why it may be that an increase in the number of pirates may lead to an increase in the number of buyers we need only consider that the decision to purchase a good depends not only on the intrinsic value of the good but also on the number of consumers who are consuming it. This means that there is a secondary source of utility stemming from the communal aspect of a good. This can be interpreted as a sort of socialization utility.
+
+A network good is a good whose value depends not only on the good itself but also on the number of ties it has. In our case, the ties will simply be the number of other consumer. This paper focuses on cases where firms effectively have a monopoly on the network good in question which may be interpreted as a firm having copyright claims on the product. The main contribution of this paper is to show that a difference in network value between the pirated good and bought produce may imply that it is optimal for a firm to allow piracy. 
+
+The paper is structured as follows. First we go through a brief literature review. We then proceed to describe the setup, we then go through some preliminary analysis to show what equilibria as possible in the model. We then proceed to solve the cases where the cost of pirating is high and the cost is 0. We then look at the intermediate case where product degradation is intermediate and look at when this intermediate degradation implies three segments of consumers and when it does not. Finally we briefly give some comments on welfare and policy implications. 
+
+\section{Literature review}
+
+There exists a fairly rich literature on the pricing of network goods. The classic paper of networks in industrial organization by \citep{KS86} where it is shown that under  competitive paradigm, firms don't have an incentive to make their product compatible with other goods but they do have one to standardize. \cite{FT00} show that under a network good paradigm, the incumbent may decide to keep low prices even without a direct competitor as long as the threat of entry exists. 
+
+There is also work that specifically studies the effect of the quality differential between the legal and illegal copy of a pirated product. \cite{GL03} The differential is said to be quite small when it comes to music, whilst in software this gap is larger. Most piracy models do in fact assume perfect substitution between the two goods when, dropping this assumption does induce different pricing and profit outcomes. 
+
+Similarly \cite{PW06b} use a sampling model to show that giving free samples to consumers may be profitable for firms. \cite{C05} show that much of the potential benefits from piracy can be extracted by the firm if it employs a sampling strategy to draw in consumers and then sell it to them. However in most of the domains this paper discusses, this is likely not a pertinent strategy, mainly because the ability to create samples for your product is very likely to be correlated with the ability to differentiate it.  
+
+There is also work showing that in the digital space, with perfect copying, stronger copyright may act as a coordinating device between firms so that they may collude\citep{J08}. Indeed the work of \citep{S04} shows that prices are reduced in the presence of piracy, a result that is duplicated in this paper.
+
+Perhaps the closest model to our own is the model by \cite{CRP91} where they also have an intermediate option of piracy. However their model does not include a product improvement variable and does not give an explicit solution for a specific distribution. Other models of piracy which mimic our approach are, \cite{MRSS17}, whom mimic our demand approach but focus more on the effects of piracy when open source competition is also a factor. 
+
+There is also work on the diffusion of innovation in more dynamic settings, where piracy is said to boost innovation during the early stages of the product life-cycle process. Studying this setting yields a result that is also found on this paper, mainly that strengthening piracy controls is not necessarily an optimal strategy for digital markets. \citep{G03}  \citep{GMM95} 
+ 
+
+\section{The model}
+
+In this model we linearly separate the products value into intrinsic valuation and network value of the product. The players in this model consist of a continuous spectrum of agents and a monopolistic firm. The firm knows the distribution of consumers valuations and has no  price discriminatory power. 
+
+We define $x_i$ as the norm independent and dependent utility of consumer i associated to the consumption of the good whether it is pirated or bought. It is common knowledge that $x_i$ is distributed according to F on the interval [0,1] with an associated density \textit{f}. We now make our first assumption
+
+\begin{assumption}
+The distribution of agents value, f(x), is continuous and defined on $[0,1]$
+\end{assumption}
+
+When an agent consumes she also derives a socialization utility which depends on the taste for the good $x_i$, the fraction of the population which consumes the good and a socialization parameter,$\alpha$ or $\beta$, that represent the utility from being in a group whose members share common tastes. 
+
+The action of the consumers consists of a selection between three discreet choices, to buy, to pirate and not to consume. Consumers are the standard rational agents. 
+
+Buying the good has an added value k, a 'bonus material' that is added to the product by the firm. It also has a price which is also under control of the firm. 
+
+Though pirates do not pay the price for the product, they incur a cost, r, which can be interpreted as product degradation or the expected cost from pirating the good. 
+
+The difference in the socialization parameters $\alpha$(buying) and $\beta$(pirating) can be interpreted as a more direct access to the network of consumers or just social stigma for pirating, the representation of this is quite different but the motivation for this stigma is similar to  \cite{CRP91}. 
+
+\textbf{We will later assume $\beta$ to be 1. However all results related to $\alpha$ should be interpreted as relative to $\beta$. Absolute changes in $\alpha$ have little qualitative effect, it is only relative changes.}
+
+Finally, the utility associated to no consumption is 0. 
+
+The proportion of agents who are in the network is given by $ \int^{1}_{0}Q(t)f(t)dt $. Where $Q(t)$ is a function that takes the value 0 when agents with valuation t are not consumers and 1 if they are users. Similarly $G(t)$ is a function which takes the the value 0 when consumers are not buying and 1 otherwise. Since Q(t) includes both buying and pirating and G(t) is only buying. It follows that G(t) is stochastically first order dominated by Q(t). 
+
+Unlike the consumers, the monopolist has continuous choices which involve setting of two variables,the price,p, and the product improvement k. However a vital variable that affects these choices is the piracy degradation of the bought product, r. 
+
+For the sake of simplicity we assume that socialization value is linear in the idiosyncratic utility. The consumers utility function is the following \footnote{Note that if the heterogeneity was only in the intrinsic value there would a priori be no reason for the firm to want pirates, however the indifference conditions in the buyer-pirate case is the same as this one}:
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(1+\alpha \left(\int^{1}_{0}Q(t)f(t)dt) +k \right) -p  & if ~ he ~ buys ~ good  \\
+                  x_i(1+\beta \left(\int^{1}_{0}Q(t)f(t)dt) \right) -r &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+
+We now make our second formal assumption: 
+
+\begin{assumption}
+Pirating the product yields less network value than buying the product. $\alpha>\beta$
+\end{assumption}
+
+In the standard literature, the only source of revenue for a firm is to sell the product. Having piracy is indirectly useful to the extent that it motivates buyers into their decision because of the network increased by pirates. However there are situations, especially in the digital world where having a larger user base also allows for additional direct profit opportunities. For instance in a social network, a larger user base allows the network owner to sell advertising slots at a higher price, and the wider the reach the more profitable the enterprise. We parameterize this exogenous source of revenue with the letter $\lambda$. It should be noted that increasing pirates or buyers increase revenue from this source. Finally c(k)is a convex cost function which represents the cost of product improvement. The firms profit function is given by:
+
+\begin{equation} \label{eq:profit1}
+\pi(p,r,k) 
+=p\left(\int^{1}_{0}G(t)f(t)dt\right) 
+\end{equation}
+
+The model assumes there is no value to the firm from having more pirates, however one could easily extend the mode to include it. \footnote{$\pi(p,r,k) 
+=p\left(\int^{1}_{0}G(t)f(t)dt\right) 
++ \lambda \left(\int^{1}_{0}Q(t)f(t)dt\right)- c(k) $} 
+
+\begin{assumption}
+The cost function for product improvement has a simple quadratic form: $c(k)= ck^2$, with $c>0$
+\end{assumption}
+
+Note that for the remainder of this paper, we will be referring to the segment of the population that is either pirating or purchasing as "users".
+
+\section{Preliminary Analysis}
+
+We first note the way the model has been setup, it is never profit maximizing for the firm to be in an equilibrium where there are no users. To see this we need only note that if there were no users, profits would be 0 and the firm merely needs to decrease its price until someone is buying. 
+
+\begin{proposition}
+\label{p1}
+If any of the conditions $\alpha \geq \beta$, $r \geq 0$, and $k \geq 0$ are not binding, this is individually sufficient to ensure that it is never profit maximizing for all users to be pirates, all users to be buyers or all users to be non-users. \footnote{This conclusion would not hold if the value added was additive instead of multiplicative or if the lower bound was not 0} The model implies that it is never optimal for all users to be pirates. If all users are pirates then no user is paying for the product and profits are also 0. 
+\end{proposition}
+
+\begin{proof}
+Let P, NU, and B denote the sub-cases where all users are initially pirates, non-users and buyers respectively. The P sub case can only occur if $r=0$ due to the 0 utility user.  Note that the NU sub-case can only occur if $r>1$, because it implies all users prefer not using to pirating. Finally B sub-case can only occur if all users prefer to buy rather than not use, which can only occur if $p=0$ due to the 0 utility user. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Case where all conditions are binding:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Sub-case P:} First note that if all three conditions hold with equality then, a user will prefer to buy rather than pirate only if $x(1+\alpha)-p=x(1+\beta)-r$. This can only occur if $p = 0$ which implies 0 profits. 
+
+\textit{Sub-case NU:} Since $\exists x,  x>0$ and utility from pirating when no user is pirating is $x$. this is a contradiction. It is never the case that all agents prefer to be non-users because piracy is always preferred as long as r=0.  
+
+\textit{Sub-case B:} So we have that $ \forall x, x(1+\alpha)-p>x(1+\beta) \rightarrow -p \geq 0$, which can only hold when profits are 0. Therefore if all users are buyers, there are no profits. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Case where:$\alpha = \beta$ and $k = 0$, and $r>0$ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Sub-case P:}  Then the agent will prefer to buy rather than pirate only if $x(1+\alpha)-p>x(1+\beta)-r$. Therefore as long as the firm sets p at some arbitrary level below r, it can achieve profits, $p-\epsilon=r$. 
+
+\textit{Sub-case NU:} This implies that $x-r<0, \forall x \in [0,1]$. So these users can be convinces to buy if $x-p>0$ holds. It is easy to see that $\exists$ a price for which this inequality holds as long as $x \neq 0$.
+
+\textit{Sub-case B:} If all users are buyers then: $ \forall x, x(1+\alpha)-p \geq x(1+\beta)-r \rightarrow r \geq p$. It is also true that the utility must be strictly positive, therefore $p=0$. Which implies 0 profits. We need only note that if $0<p \leq r$, will induce a certain segment to buy. We need only see that if the price was less than 1, the highest value consumer would still buy. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\textbf{Case where: $\alpha = \beta$, $k > 0$ and $r=0$:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Sub-case P:}
+Then $\forall x \in [0,1], x(1+\alpha+k)-p<x(1+\beta)-r \text{ or } xk-p<0$. Suppose we take any non 0 utility user $x \neq 0$. Then it is easy to see that $\exists p>0$ for which the inequality is reverted. Therefore the firm can do better. 
+
+\textit{Sub-case NU:}
+Since by assumption r=0, impossible. 
+
+\textit{Sub-case B:}
+Here we have that $\forall x, x(1+\alpha+k)-p>x(1+\beta)-r \rightarrow xk-p>0$. Since, there is a 0 utility user this is implies a price of 0. To note that the firm can do better we need only see that there always exists an x, for which $p \neq 0$ which means that there are positive profits. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\textbf{Case where: $\alpha > \beta$, $k = 0$ and $r=0$:}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{Sub-case P:}
+Then $\forall x \in [0,1], x(1+\alpha+k)-p<x(1+\beta)-r \text{ or } x(a-b)-p<0$. Suppose we take any non 0 utility user, $x \neq 0$. Then it is easy to see that $\exists p>0$ for which the inequality is reverted. Therefore the firm can decrease its price until at least one user is buying. 
+
+\textit{Sub-case NU:}
+This case implies that even the highest user, $x=1$ prefers not to buy. So $1-p>0$. We need only note that if the firm reduces p to be below 1, then it can have a positive amount of profits and users. 
+
+\textit{Sub-case B:}
+If this is the case then we know that, at the very least all users prefer $x(1+\alpha+k)-p>x(1+\beta)-r \rightarrow x(a-b)-p>0$. Since this includes the 0 user, this can only be satisfied if $p=0$ which implies 0 profits. It is also easy to see that $\exists p>0$ for which this inequality is satisfied therefore the firm can do better.
+\end{proof} 
+
+In other words if above conditions are satisfied, only equilibria that are not a priori dominated are those where there are no pure strategies and at least some segment of the population is buying. This means that either there will be buyers and pirates, buyers and non-users or all three. 
+
+The utility function $U_i$ is \textbf{weakly monotonic}  with respect to x. We need only note that if a user with value x is not using, then his utility is 0, if a second non user with value $x'$ where $x'>x$ is also not consuming then, this user will also have a utility of 0, therefore monotonicity is not strict. On the other hand if a user is pirating or buying, a strict monotonicity property is satisfied. When will 
+
+\begin{proposition}
+If there is an equilibrium with positive profit, pirates have a lower utility than buyers. 
+\end{proposition} 
+
+\begin{proof}
+Suppose the opposite. That is that $x'>x$ and $x' \neq x$. where $x'$ strictly prefers to pirate and $x$ prefers to buy. This implies $x'(1+\beta)-r>x'(1+\alpha+k)-p$ and $x'(1+\beta)-r>x'(1+\alpha+k)-p$. Due to 
+\end{proof}
+
+\begin{proposition}
+There is at most one agent who is indifferent between buying and pirating.
+\end{proposition}
+
+\begin{proof}
+Suppose without loss of generality that there are two users who are indifferent between buying and pirating, $x',x$ where $x'>x$. This implies $x(1+a(1-\int^1_0 Q(t)dt+k)-p=x(1+\beta(1-\int^1_0 Q(t)dt)-r$ and $x'(1+a(1-\int^1_0 Q(t)dt+k)-p=x'(1+\beta(1-\int^1_0 Q(t)dt)-r$. Since $\int^1_0 Q(t)dt \neq 1$ , this is a contradiction. 
+\end{proof}
+
+We now establish that the consumer who is indifferent between buying and pirating, $\hat{x}$ is unique. We need only note that if a consumer with value x is indifferent and another consumer value $x'$ is also indifferent where $x'>x$. Clearly $x'$ has higher utility both from pirating and buying. However both $k>0$ and $\alpha>\beta$ are individually sufficient conditions to ensure that the derivative is higher on the buyer side than on the pirate side, we therefore have a contradiction. This leads us to our first observation:
+
+\begin{observation}
+Agents who purchase have a higher ex post utility than agents who pirate.
+\end{observation}
+
+We now establish that the consumer who is indifferent between using and not using, $\check{x}$ is unique. For any given k and p, there exists a ceiling or indifferent consumer between being a user and not being a user. More formally, $\exists \check{x}$ such that $\forall t < \check{x}$ they are not a users and $\forall t> \check{x}$ they are users. To see why the indifferent consumer is unique possibility that there the ceiling is not unique. If we say that there two agents who are indifferent, $\check{x} $ and $\check{x'}$. Consider the possibility that the latter agent has an $x'>x$. However since buying and pirating are  strictly monotonic in $x$, it cannot be the case that both of these agents are simultaneously indifferent. The same reasoning holds for the case where $x'<x$.
+
+We now establish that if both indifference conditions, $\check{x}$ and $\hat{x}$ exist simultaneously, then $\hat{x}>\check{x}$. To see this we need only note if $\check{x}>\hat{x}$ this implies that a higher valuation agent is pirating and a lower valuation agent is buying. However given that buying is strictly preferred to pirating because the socialization value is higher and there bonus material, this is a contradiction. 
+
+To summarize this section, there are always at least two groups of agents and one case where there are three groups three groups. 
+
+\section{Solving the model}
+
+\subsection{Demand functions}
+
+The model is resolved by computing the agents who are indifferent between various choices. This will lead to the agent who is indifferent between buying and pirating and the agent who is indifferent between pirating and not using. Since the agents are distinct through their heterogeneous value, x, they indifferent conditions will be bounded by the interval $[0,1]$. In addition, if $r = 0$ or $r>\tilde{r}$ then only one condition will exist or not be zero. The single indifference condition exists only when $1 \geq \check{x}=\hat{x} \neq 0$ \footnote{It should also be noted that independent of the distribution used, if $\beta = 0, \check{x}=r$. }
+
+The consumer who is indifferent between pirating and not using yields an indifference condition of:
+
+\[
+x_i + x_i\beta \left(1-F(\check{x})\right) -r = 0 
+\]
+
+\begin{equation} \label{eq:indi1}
+\Rightarrow \check{x}(1 + \beta(1-F(\check{x}))) = r
+\end{equation}
+
+We note that for this equality to hold if there are more pirates, the cutoff point decreases. 
+
+Similarly, the consumer who is indifferent between buying and pirating has a valuation of:
+
+\[
+x_i + x_i\alpha \left( 1-F(\check{x}) \right) + x_i k -p = x_i + x_i\beta \left(1-F(\check{x})\right) -r 
+\]
+
+\begin{equation} \label{eq:indi2}
+\Rightarrow \hat{x} = \frac{p-r}{(\alpha - \beta)(1 - F(\check{x}))+k}
+\end{equation}
+
+
+It so a minimum condition we have is that the price has to be higher than the product degradation. 
+
+There are only 3 types of plausible equilibria. These are, Buyers and non-users, buyers and pirates and all three sections. From the bounds above we can deduce that no pirates exist for all $\forall r>\tilde{r}$ . From this point on we will be assuming a uniform distribution, so $1-\check{x}$
+
+\subsection{Equilibrium when there is no product degradation}
+
+In the case where there is no product degradation (r=0), there is only one possible equilibrium, pirates and buyers co-exist. If users can pirate then the firms only option to prevent agents from pirating is to make sure they are buyers.
+
+Since the lower bound indifference condition is 0, we need only worry about the $\hat{x}$. This indifference condition is simply:
+
+\begin{equation*}
+\hat{x} = \frac{p}{\alpha - \beta +k}
+\end{equation*}
+
+The profit function is then simply
+
+\begin{equation*}
+\tilde{\pi} = p\left(1-\frac{p}{\alpha - \beta +k}\right)-c k^2
+\end{equation*}
+
+Then the optimal price is simply  
+
+\begin{equation}
+\begin{array}{ll}
+\tilde{p} = \frac{1+8c\alpha - 8c \beta }{16c} \\
+\end{array}
+\end{equation}
+
+The optimal product improvement is simply. $\tilde{k} = \frac{1}{8c}$. Which leads us to out second observation.
+
+\begin{observation}
+The product improvement pursued does not depend on network values. 
+\end{observation}
+
+These two together imply that the optimal profit is
+\begin{equation}
+\tilde{\pi} = \frac{1}{64} (16 \alpha-16 \beta- \frac{1}{c})
+\end{equation} 
+
+\begin{observation}
+The firm can extract direct profit from consumers even if consumers can freely pirate as long as the network value is higher than $\alpha>\beta + \frac{1}{ 16c}$
+\end{observation}
+
+If we plug these values into $\hat{x}$ we also attain the constant of $\frac{1}{2}$, which is the standard monopolist square. 
+
+\subsection{ Equilibrium when Product Degradation is high}
+
+If $\tilde{r} \leq r$, there is only one possible equilibrium that holds and this is the classic industrial organization case where the firm simply sets a price and product improvement and agents self select into buying and not buying. The results are quite complex so we now make an additional simplifying assumption:
+
+\begin{assumption}
+The linear cost of improving the product is $c = 1$
+\end{assumption}
+
+The indifferent consumer is simply:
+
+\begin{equation*}
+\tilde{x} = \frac{\alpha+k+1-\sqrt{(-\alpha-k-1)^2-4 \alpha p}}{2 \alpha}
+\end{equation*}
+
+We can verify that the indifferent consumer is decreasing in $\alpha$ and conversely, the proportion of users who are buying is increasing in $\alpha$. 
+
+The the optimal price is then: 
+\[
+\tilde{p}= \left\{
+                \begin{array}{ll}
+\frac{9}{16} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\text{ when  } \alpha = 0
+\\
+\frac{(\alpha+k+1)^2+2\alpha(k+1) - \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \text{ when  } \alpha \in ]0,1+k[
+\\
+\frac{(\alpha+k+1)^2+2\alpha(k+1)}{9 \alpha}= \frac{4(k+1)^2+2(k+1)^2}{9 \alpha}=\frac{2(k+1)}{3 }~~~\text{ when: } \alpha =1+k
+                  \\
+\frac{(\alpha+k+1)^2+2\alpha(k+1) + \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \text{ when  } \alpha \in ]1+k,\frac{1}{2} \left(3 k+\sqrt{5} (k+1)+3\right)[ 
+\\
+1+k ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\text{ when  } \alpha \in ]\frac{1}{2} \left(3 k+\sqrt{5} (k+1)+3\right),\infty[ 
+                \end{array}
+\right.
+\]
+
+Price has the opposite effect. While initially the firm uses the increase in network value to decrease its product improvement and slightly increase its price, as the network value increases the price increases more rapidly. This is because there is a double effect of increases in network value on the price level. An increase in the network value, for the same price, increases both the valuation of users and their proportion. Which means that the firm can increase its p and still have a higher proportion of users than before. 
+
+To get the final interval, we need only note that $\tilde{x}<1 \rightarrow p<1+k$. Then using the the price between the interval $\alpha \in ]1+k, \infty[$ and setting that it must be inferior to 1+k, we get the required bound. This yields the only closed form solution for k, which is $\tilde{k} = \frac{a-2}{2 (1 + a)}$. This solution is actually increasing in $\alpha$ and approaches $\frac{1}{2}$. \footnote{Though there is no corresponding closed form solution for the optimal level of product improvement. We can use $\tilde{p}$ to take numerically estimate it at various points. 
+}
+
+However the final interval should not be interpreted as strictly binding as that would imply that all users buy. Instead it is merely that the firm is forced to increase its product improvement so that it can increase the price.  
+
+\begin{proposition}
+Initially when network value is low, an exogenous increase in network value leads to a corresponding increase in product improvement. However after a certain ceiling, $\underline{\alpha}$ the product improvement decreases with the network value. Before once again reaching an $\overline{a}$ after which it is strictly increasing again
+\end{proposition}
+
+To put this another way, when the network value is higher than the base value of the product, 1+k, the firm has less interest in increasing the base value of the product. This has an intuitive interpretation, it says that the firm will only attempt to increase product value when the network value is low. However after a certain peak, increasing k decreases the proportion of users because the corresponding increase in price is too large, and hence the firm begins to reduce its product improvement. However once the maximum is attainable p is reached, then k is forcibly also increased. 
+
+The easiest way to conclude the above proposition is to set $\alpha=0$ and $\alpha=1+k$. By doing this we can infer that k is increasing within the interval $\alpha \in ]0,1+k[$, k is increasing. 
+
+\begin{proof}
+A more heuristic way of seeing the result is to take the limit of the profit function as $\alpha \rightarrow 1+k$ which leads to: $\tilde{\pi} = \frac{2 \sqrt{(k+1)^2}}{3 \sqrt{3}}-k^2$, which is strictly decreasing in k. 
+\end{proof}
+
+A more formal way of seeing is below found in the appendix.
+
+
+The interpretation of this is that initially the firm will increase price a little so that it can also increase the proportion of users. However once the network value is high enough it will pursue a strategy of aggressive pricing and decrease its level of product improvement. So if an increase in k ends up decreasing the proportion of users, then there is no reason for the firm to pursue more of it. 
+
+In the interval $\alpha \in ]1+k,\infty[$ optimal product improvement is decreasing in the network value.
+
+Initially, increases in $\alpha$ lead to increases in the the product improvement 
+
+We can compute the optimal product degradation as a function of $\alpha$. We know that the function is increasing along the interval $\alpha \in ]0,1[$ because at $\alpha=0$, it is $k = \frac{1}{8}$ and as $\alpha=1+k$ it becomes $k = \frac{1}{3 \sqrt{3}} \approx \frac{1}{5}$ and similarly for value of $\alpha$ greater than this the optimum is decreasing $\alpha \rightarrow \infty $, $k \approx 0.11111<\frac{1}{9}$. Therefore, initially, network value and product improvement are complementary and after a certain point they become substitutable until it the optimal product improvement reaches a minimum. 
+\footnote{even at $\alpha=100 000 000, k=.1111111$  }
+
+
+These results imply that profit is increasing in $\alpha$, however a secondary implication is that the proportion of users buying also increases with the network value. In other words, even though the price is convex with respect to $\alpha$ the speed of decay of the optimal price is lower than the speed of the growth of the indifferent consumer. Or more formally: 
+
+$\frac{\partial 1-\tilde{x}}{\partial \alpha} > \frac{\partial p}{\partial a}$
+
+\subsection{Does the firm prefer the high product degradation case or the no product degradation case? }
+
+\begin{proposition}
+There always exists in $\alpha$ after which the firm prefers to be in the piracy equilibrium.
+\end{proposition}
+
+\begin{proof}
+We need first note that $\hat{\pi}$ is actually increasing linearly in $\alpha$. 
+\begin{align*}
+\tilde{\pi} = \tilde{p} \left(\frac{\alpha-\tilde{k}-1+\sqrt{(\alpha+\tilde{k}+1)^2-4\alpha \tilde{p}}}{2 \alpha} \right) - \tilde{k}^2
+\\
+\text{We can now apply the envelope theorem to get:}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \tilde{\pi}}{\partial \alpha} = \frac{\tilde{p}}{2 \alpha^2}\left(
+\tilde{k}+1
+\right) 
++
+\tilde{p} \times \frac{\alpha \left(\frac{2(\alpha+\tilde{k}+1)-4\tilde{p}}{\sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}}} \right)-2 \sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}}}{4 \alpha^2}
+\\
+= \frac{\tilde{p}}{2 \alpha^2}\left(
+\tilde{k}+1
++ \alpha \left(\frac{(\alpha+\tilde{k}+1)-2\tilde{p}}{\sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}}} \right)- \sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}}
+\right) \\
+= \frac{\tilde{p}}{2 \alpha^2}\left(
+\sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}} \left(\tilde{k}+1 \right)
++ (\alpha \left((\alpha+\tilde{k}+1)-2\tilde{p} \right)- (\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p})
+\right) 
+\\
+= \frac{\tilde{p}}{2 \alpha^2}\left(
+\sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}} \left(\tilde{k}+1 \right)
++ \alpha (\alpha+\tilde{k}+1) - (\alpha+ \tilde{k} +1)^2 + 2 \alpha \tilde{p}
+\right) \\
+= \frac{\tilde{p}}{2 \alpha^2}\left(
+\left(\tilde{k}+1 \right) \sqrt{(\alpha+ \tilde{k} +1)^2-4\alpha \tilde{p}} 
+-1 - \tilde{k}^2 -2 \tilde{k} - \alpha \tilde{k} + 2\alpha \tilde{p}
+\right) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+
+We need only note that the highest term with $\alpha$ is in the denominator, therefore, taking the limit of this expression, $\alpha \rightarrow \infty$ gives 0. 
+\end{proof}
+
+In other words, whether the firm prefers there to be piracy pursuit or not depends on the level of the network value. If the network value is too low the firm is better off if it can now better use its monopoly to profit off of the user base. Similarly after some threshold $\overline{\alpha}$, the value of the network becomes too high to ignore and the firm wishes to maximally utilize this value by enabling pirates.  
+
+We can also think of this from the demand curve point of view. If there is no product degradation there is a simple linear inverse demand curve. On the other hand the classical case is left with a concave inverse demand function. More over, the concavity of the demand curve is increasing in $\alpha$. So while the demand curve of the pirates is ever expanding towards the right, the concavity of the inverse demand curve ends up disabling the firm from being able to take advantage of the increasing network value. Which is why, at some point the $\alpha$ just stops adding value to the firm. 
+
+
+\subsection{Equilibrium for intermediate values of r( $0<r<\tilde{r}$)}
+
+\subsubsection{Case where all segments exist}
+
+\begin{proposition}
+%\label{Price}
+When consumer tastes are distributed uniformly between $0$ and $1$;  The proportion of people who are users and consuming, respectively, are denoted by: 
+\begin{equation}\label{eq:1}
+1 - F(\check{x}) =\frac{ \beta  - 1 + \sqrt{ (1+\beta)^{2}- 4 r \beta  }}{2 \beta }
+\end{equation}
+
+\begin{equation}\label{eq:2}
+1 - F(\hat{x})=1-\frac{(p-r)2 \beta}{(\alpha - \beta) \left( \beta  - 1 + \sqrt{ (1+\beta)^{2}- 4 r \beta }\right) +2k \beta}
+\end{equation}
+
+
+\end{proposition}
+
+\begin{proof}
+See appendix 1
+\end{proof}
+
+Like before, the demand functions are bounded at 1. Note that if r is 0, equation \ref{eq:1} reaches unity, regardless of the value of $\beta$. This is intuitive, if there is no cost to pirating then everyone will at least pirate and we collapse into the previous case. Similarly, if p is equal to 0, $k \geq 0$ and $\alpha>\beta$ then the demand function for buying is 1. 
+
+To simplify matters, we now make an additional assumption. 
+
+\begin{assumption}
+The maximum level of the network value for pirates is weakly lower than the intrinsic value of the good, or $\beta=1$
+\end{assumption}
+
+This assumption implies that even if all agents are users, half the utility of pirating will come from the non-network value of the good. The above expressions simplify to the following. It is also required to guarantee that $(1-F(\hat{x}))$ is concave with respect to the price level. This simplifies the demand functions to the following:
+
+\begin{equation}\label{eq:3}
+1 - F(\check{x}) = \sqrt{1-r}
+\end{equation}
+
+\begin{equation}\label{eq:4}
+1 - F(\hat{x})= 1 - \frac{p-r}{(\alpha - 1) \sqrt{1-r} +k}
+\end{equation}
+
+Note that since if no user is purchasing, this implies 0 profits the lower bound of the purchasing function will not bind. Moreover, since the lowest value agent has a value of zero, that agent will only purchase if the price is zero. If the price is zero, there are zero profits, therefore the upper bound constraint is also never binding. This shown using Kuhn Tucker theorem in the appendix. 
+
+\begin{observation}
+$\hat{x}$ increases with $\check{x}$. Or in other words, the less pirates there are, the less buyers.
+\end{observation}
+
+\begin{observation}
+The demand for using must always be greater than the demand for buying because  
+$1-F(\check{x})> 1-F(\hat{x})$
+\end{observation}
+
+The 5th observation will bind for certain values of $\alpha$.Indeed we know that if $\alpha>\beta$ and $r>p$, then no user will be buying. So if r is in the intermediate range, we now have all three segments which co-exist.  
+
+If the constraint does not bind, we have the price. 
+
+\begin{equation}\label{TNB}
+\begin{array}{ll}
+p_{bpn}^* = \frac{1}{2} \left(\alpha \sqrt{1-r}+\check{k}+r-\sqrt{1-r}\right) \\
+\end{array}
+\end{equation}
+
+We can apply the envelope theorem and derive with respect to $\alpha$ to notice that the price is once again strictly increasing in the network value. We can also deduce the following proposition. 
+
+\begin{proposition}
+If $\alpha>2 \sqrt{1-r}+1$, profits are strictly increasing if product degradation is reduced. 
+\end{proposition}
+
+\begin{proof}
+Taking a simple derivative of the price with respect to r yields,$\frac{-\alpha+2 \sqrt{1-r}+1}{4 \sqrt{1-r}}$, we can verify that this is positive only if $\alpha<2 \sqrt{1-r}+1$ and negative otherwise. This implies that the increasing r does not necessarily increase the price. Because we know that increases in r also decreases the proportion of users, both effects are negative and we have the result. 
+\end{proof}
+
+The constraint itself bind when the following function is negative.  
+
+\begin{equation}
+H = \frac{2 \alpha \left(2 r+\sqrt{1-r}-2\right)-2 r \sqrt{1-r} +r+\sqrt{1-r}+1}{2 \alpha \sqrt{1-r}+r-\sqrt{1-r}-1}
+\end{equation}
+
+If H is over 0 then, no pirates exist and we collapse into the buyer-non buyer case. Note that H is strictly increasing in r, this is intuitive because if r is too high then no pirates exist. The usefulness of this exercise is that we can use this constraint to deduce $\tilde{r}$ the point of r where no more pirates exist. 
+
+In the case where there is stigma on the other hand, there begin to exist three segments. That is if the cost of piracy is lower than a certain threshold and there is stigma then the firm begins to leave room for pirates to exist. 
+
+We need only note that, like before, increasing $\alpha$ means the firm has more incentive to increase the proportion of users buying so that it can also increase the value for current users buying. 
+
+The constraint above actually loosens as $\alpha$ increases. However in all cases as product degradation approaches 1 the constraint quickly becomes positive. This is intuitive, it merely shows that users will eventually switch to buying if product degradation is high enough. 
+
+\section{Discussion and analysis}
+
+Welfare in the model is always decreasing with respect to r. It is trivial to note that welfare is highest in the case when r=0. This is because in the model the product already exists and the only value added for the firm is to improve the product. Moreover as we have seen above it may even be profitable for the firm for r to be decreased. Therefore if $\alpha$ is higher we have an even the stronger condition, decreasing r may be a pareto improvement. 
+
+Our model shows that even if the firm has total control of the level of piracy pursuit, they would not necessarily fully utilize this capability. Under the conditions discussed above, the firm often has incentive to not use deterrence to push consumers out of its pool of customers because reducing the number of consumers also decreases the value of the good for those who would buy. 
+
+The intuition behind this carrot and stick approach is that the price has a single effect whilst product degradation has a double effect. The price effect is much less variable because it gives the firm the ability to be more precise in its targeting mechanism. That is, while changing the price only works on the consumers who are marginally on the edge of the choice of buying or pirating, changing the degradation level affects all segments at once. 
+
+Increasing the product degradation both affects both the proportion of users buying while also decreasing the user base. The strength of these two effects depends on their valuation of the network value. The decrease in the user base corresponds to the product becoming less popular and the change in buying behavior represents either a consumer who no longer wishes to undertake the risk of pirating or a consumer who no longer wishes to buy the product because it has less value to her.
+
+Though the more traditional way of seeing pirates is as a competitive force, in the model presented here pirates take the role of the path of least resistance. Indeed controlling the pirates to ensure that they are at the right level is a fine art and the if the instrument is too blunt, it may cause more harm than good. The conditions for piracy to be optimal are relatively mild, the network value need only reach a certain threshold for it to be worthwhile. If the firm does not fight back against them. Indeed though the model assumed that pursuing pirates is costless, in the real world, there are significant costs both from the point of view of the planner and the firm, the presence of these costs would quite clearly only decrease the threshold $\alpha$ for which the firm would prefer piracy to exist. 
+
+This models conclusions are independent of a complementary good. However it is quite clear that the cutoff point on $\alpha$ at which the firm prefers the buyers pirate equilibrium is even lower as a complementary good increases. 
+
+
+In practice, firms likely have the ability to control their products much more than chasing after pirates. If a firms copyright is being infringed upon they may request action to be taken, however they do not control the probability of success of the action. In industries where the pirates are many and are highly decentralized, it is quite plausible that neither government nor the firm can greatly increase their level of piracy pursuit without greatly invading privacy. In the real world, cases such as music or movies better fit into our model, however some Digital Rights management strategies, such as requiring users to use specific platforms to access the content is also a possibility which may stop piracy. These kind of platforms can be interpreted as merely an increase in product degradation as it decreases the probability of consuming the product, however such methods would not be costless and likely decrease the value of the product.\citep{S04}. 
+
+A simple policy implication of the model is that pursuing pirates uniformly for all their activities may be welfare reducing. If the pursuit of piracy can be hererogenous to each firm this would be optimal. Much like how firms only sue specific infringer and let others pass, the same can be encouraged for the consumer side, piracy may be best treated as a civil or corporate issue and not a criminal one.
+
+A plausible effect that weakens the conclusions of this model is that users may self-segregate. That is an implicit assumption in the model is that all users benefit from the presence of all users in the network. In the real world however it may be each users network is narrow and hence high value users only care about other high value users consumption. On the other hand if segregation brings together more diverse valuations such as perhaps a family unit does then this perhaps makes the models conclusions more robust. 
+
+The assumption that utilities are independent is often too readily used. What is termed a "network good" in the industrial organization literature may be interpreted too narrowly. It is not simply digital social networks that have this property. Indeed it is possible to envision most goods as having an intrinsic value and an extrinsic value. The relative ratio of intrinsic to extrinsic value will likely vary substantially between cultures, space and time. The domain in which this is true is likely to extend much farther than what common intuition would entail. For instance, even perishable goods, demand for which is commonly thought of as inelastic, such as food, are not necessarily exempt from this feedback process. Accordingly, much of what can be deemed "group identity" can be represented within a network good framework. Within the framework of network goods, stealing and not consuming are not worth the same to the company, indeed a culture of baguette or chocolate eaters does not represent the same profit opportunities as groups without such culture.  
+
+\section{Conclusion}
+
+A common argument against piracy is that it decreases the number of purchasers. However the implicit assumption between such line of reasoning is that the number of purchasers and the value of the purchasing, are independent. Based on the model presented here it is insufficient to judge that the effect of piracy on profits is linear or even monotonic. The disentanglement between piracy, profits, and the price level is suggested to have positive and negative feedback effects. 
+
+As pointed out in \cite{CRP91} this setup raises strange ethical questions. When we have possible parameter values that imply that higher pursuit of pirates may be worse for consumers and producers at public cost it is unclear that enforcing intellectual property on consumers passes even the cost benefit analysis test. 
+
+
+
+
+\section{Appendices}
+
+\subsection{Buyers and users}
+
+\begin{align*}
+x(1+k+a(1-F(x))) -p = 0 \\
+x^2 \alpha-x(1+\alpha+k) +p \\
+\tilde{x} 
+= \frac{1+\alpha+k}{2\alpha}
+\pm \frac{\sqrt{\left(1+\alpha+k \right)^2-4p\alpha}}{2\alpha} \\
+\text{Since we set x to be between 0 and 1 we can use this as an upper bound. } \\
+\\
+p  \leq 1 +k
+\end{align*}
+
+The lower bound condition on the other hand is clearly not binding because it leaves us with $p\alpha \geq 0$
+
+Profit is then denoted by 
+\begin{align*}
+p(1-\tilde{x}) - k^2 = pG(\tilde{x}(p,k)) - k^2 \\
+w = \sqrt{\left(1+\alpha+k \right)^2-4p\alpha} \\
+\text{So the derivatives of this G functions} \\
+G(\tilde{x}) = 1-\tilde{x} 
+\\
+=1-\frac{1+\alpha+k}{2\alpha}
+\mp \frac{\sqrt{\left(1+\alpha+k \right)^2-4p\alpha}}{2\alpha}
+\\
+=1-\frac{1+\alpha+k}{2\alpha}
+\mp \frac{w}{2\alpha}
+\\
+\frac{\partial G(\tilde{x})}{\partial p} = \pm \frac{4\alpha}{4 \alpha \sqrt{\left(1+\alpha+k \right)^2-4p\alpha}}
+\\
+= \pm \frac{1}{ \sqrt{\left(1+\alpha+k \right)^2-4p \alpha}}
+\\
+= \pm \frac{1}{w}
+\\
+\frac{\partial G(\tilde{x})}{\partial k} = -\frac{1}{2\alpha}
+\mp \frac{2 \left(1+\alpha+k \right)}{4\alpha\sqrt{\left(1+\alpha+k \right)^2-4p\alpha}} \\
+= -\frac{1}{2\alpha}
+\mp \frac{\left(1+\alpha+k \right)}{2 \alpha\sqrt{\left(1+\alpha+k \right)^2-4p\alpha}} \\
+= -\frac{1}{2\alpha}
+\mp \frac{\left(1+\alpha+k \right)}{2 \alpha w} \\
+\end{align*}
+
+We can now derive the profit function. 
+
+
+\begin{align*}
+\frac{\partial \pi}{\partial p} 
+= 
+G(\tilde{x}(p,k))+pG_p(\tilde{x}(p,k))
+=0
+\\
+=
+1-\frac{1+\alpha+k}{2\alpha}
+\mp \frac{w}{2\alpha}
++p \left(\pm \frac{1}{w} \right)
+\\
+\frac{\partial \pi}{\partial k} =pG_k(\tilde{x}(p,k)) -2k
+=0
+\\
+=p\left(-\frac{1}{2\alpha}
+\mp \frac{\left(1+\alpha+k \right)}{2 \alpha w} 
+\right) -2k
+\\
+2k+\frac{p}{2\alpha}=\mp \frac{p \left(1+\alpha+k \right)}{2 \alpha w} 
+\\
+w 
+= \mp \frac{p \left(1+\alpha+k \right)}{4k \alpha +p}
+\\
+`\text{The Lagrangian is then} \\
+\Lambda = p(1-\hat{x})-k^2+H(1+k-p) 
+\\
+\frac{\partial \Lambda}{\partial p}= 1-\frac{1+\alpha+k}{2\alpha}
+\mp \frac{w}{2\alpha}
++p \left(\pm \frac{1}{w} \right)-H =0
+\\
+\frac{\partial \Lambda}{\partial k}=p\left(-\frac{1}{2\alpha}
+\mp \frac{\left(1+\alpha+k \right)}{2 \alpha w} 
+\right) -2k+H =0 
+\\
+\frac{\partial \Lambda}{\partial H} = 1+k-p =0
+\\
+\text{The third condition implies that: }
+w = (1-a+k)
+\\
+\text{The first two FOCs:}
+\\
+1-\frac{1+\alpha+k}{2\alpha}
+\mp \frac{(1-a+k)}{2\alpha}
++p \left(\pm \frac{1}{(1-a+k)} \right)
+=-p\left(-\frac{1}{2\alpha}
+\mp \frac{\left(1+\alpha+k \right)}{2 \alpha ((1-a+k))} 
+\right) +2k \\
+\text{We now take the higher density equilibrium}
+\\
+-\frac{1+k}{(1-a+k)} 
+=\frac{1+k}{2\alpha}
+- \frac{\left(1+\alpha+k \right)(1+k)}{2 \alpha (1-a+k)} 
+ +2k \\
+\Rightarrow
+\\
+\tilde{k} = \frac{2\alpha-1}{1+4\alpha} \\
+\text{This implies}:
+\\
+\tilde{p} = \frac{6\alpha}{1+4\alpha}
+\\
+\text{These two imply: }
+\\
+H = \frac{4(4-\alpha+4\alpha^2)}{(4\alpha-5)(1+4\alpha)}
+\end{align*}
+
+These values imply: 
+
+$\tilde{x}=\frac{6}{1+4\alpha}$
+or $G(\tilde{x})=1-\tilde{x}= \frac{4\alpha-5}{4\alpha+1}$
+
+So profit is 
+\begin{align*}
+\tilde{\pi} =
+\frac{6\alpha}{1+4\alpha}\left(\frac{4\alpha-5}{4\alpha+1}\right)
+-\left(\frac{2\alpha-1}{1+4\alpha} \right)^2 \\
+=\frac{20 \alpha^2-26\alpha-1}{(1+4\alpha)^2} 
+\end{align*}
+
+Social surplus is now:
+
+\begin{align*}
+\tilde{S}=\int_{\tilde{x}}^1(x(1+\alpha(1-\tilde{x})+k)-p)dx 
+\\
+=\int_{\tilde{x}}^1(x(1+\alpha\left(\frac{4\alpha-5}{4\alpha+1}\right)+\frac{2\alpha-1}{4\alpha+1})-\left(\frac{6\alpha}{4\alpha+1}\right))dx
+\\
+=\frac{(5-4\alpha)^2\alpha}{2(1+4\alpha)^2}
+\end{align*}
+
+\footnote{This profit condition can be used to discover the minimum level of $\alpha$,  required to have profits, so whilst the minimum before was .5(from product improvement), the minimum is now 1.33739}
+
+We now show that the proportion of users is not always increasing in k. 
+
+\begin{proof}
+In the interval $\alpha \in ]0,1+k[$ optimal product improvement is increasing in the network value. 
+The proportion of users is then:
+\begin{align*}
+1-\tilde{x} = \frac{\alpha-k-1+\sqrt{(a+k+1)^2-4\alpha \tilde{p}}}{2\alpha} \\
+= \frac{\alpha-k-1+o}{2\alpha}
+\\
+\frac{\partial (1-\tilde{x})}{\partial k} = -\frac{1}{2 \alpha} + \frac{\partial o}{2 \alpha \partial k}
+\\
+o = \sqrt{(a+k+1)^2-4\alpha \left(\frac{(\alpha+k+1)^2+2\alpha(k+1)\pm \sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{9 \alpha} \right)}
+\\
+\frac{1}{3}\sqrt{5\alpha^2+2\alpha(1+k)+5(1+k)^2 \pm \frac{\sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{\alpha}} 
+\\
+\frac{\partial o }{\partial k}=\frac{2 \alpha + 10(1+k) \pm \frac{4(1+k)^3-3\alpha(1+k)^2-\alpha^3}{2\alpha\sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}}{6\sqrt{5\alpha^2+2\alpha(1+k)+5(1+k)^2 \pm \frac{\sqrt{(1-\alpha+k)^2(\alpha^2+\alpha (k+1)+(k+1)^2)}}{\alpha}}} 
+\\
+=\frac{2 \alpha + 10(1+k) \pm \frac{4(1+k)^3-3\alpha(1+k)^2-\alpha^3}{2\alpha U }}{6\sqrt{5\alpha^2+2\alpha(1+k)+5(1+k)^2 \pm \frac{U}{\alpha}}} 
+\\
+=\frac{4 \alpha^2 U + 20\alpha U(1+k) \pm (4(1+k)^3-3\alpha(1+k)^2-\alpha^3 )}{12 Y \alpha U} 
+\\
+\text{When the negative solution is used, } \alpha \in ]0,1[, \text{this makes the derivate positive.} 
+\\
+\text{Whilst } \alpha \in ]1,\infty[ \text{ using the positive solution makes the derivative negative} 
+\end{align*}
+\end{proof}
+
+\subsection{Buyers and pirates}
+
+\begin{equation*}
+\hat{x} = \frac{p}{\alpha-\beta + k}
+\end{equation*}
+
+Therefore the upper condition is: $\alpha-\beta+k \geq p$
+
+Therefore the price is 
+
+\begin{equation*}
+p = \frac{1}{16}\left(
+1+8\alpha-8\beta
+\right)
+\end{equation*}
+
+and the optimal product improvement is 
+
+\begin{equation*}
+k = \frac{1}{8}
+\end{equation*}
+
+Note that these values imply that $\hat{x} = \frac{1}{2}$ regardless of the values of $\beta$ or $\alpha$. 
+
+Profit is then: 
+\begin{align*}
+\pi = p(1-\hat{x})-k^2 \\
+= \left(\frac{1}{16}\left(
+8\alpha-7
+\right)\right) \frac{1}{2} -\frac{1}{64} \\
+= \left(\frac{1}{32}\left(
+8\alpha-7
+\right)\right) -\frac{1}{64} \\
+= \frac{1}{32} \left(
+8\alpha- \frac{15}{2}
+ \right) \\
+= \frac{1}{4}(a-\frac{15}{16})
+\end{align*}
+
+Social Surplus
+\begin{align*}
+\hat{S} = \int_0^{\hat{x}}x(1+\beta)dx+
+\int_{\hat{x}}^{1}x(1+\alpha+k)dx \\
+=\frac{1}{4} +
+\frac{1}{64}\left(41+8 \alpha \right)
+\end{align*}
+
+\subsection{Welfare}
+
+\begin{align*}
+W_{bn} = \int^{\tilde{x}}_0 \left(x(1+\alpha(1-\tilde{x})+\tilde{k})-\tilde{p} \right) dx + \tilde{\pi}  \\
+W_{bp} = \int^{\hat{x}}_0 x(1+\beta) dx +\int^{1}_{\hat{x}} \left(x(1+\alpha+\hat{k}) - \hat{p} \right) dx + \hat{\pi} \\
+W_{bpn} = 
+\int^{\hat{x}}_{\check{x}} \left(x(1+\beta(1-\check{x}))-r \right)dx +\int^{1}_{\hat{x}} \left(x(1+\alpha(1-\check{x})+\check{k}) - \check{p} \right) dx + \check{\pi}
+\end{align*}
+
+$SS_{BP} = \frac{1}{64} (8 \alpha+24 \beta+33)$
+
+\subsection{Three Segments}
+
+\begin{align*}
+x(1+\beta(1-F(x)))-r \\
+x(1+\beta(1-x))-r \\
+x+x\beta-\beta x^2-r=0 \\
+x^2-x\frac{(1+\beta)}{\beta} +\frac{r}{\beta} = 0 \\
+\check{x} = \frac{(1+\beta)}{2 \beta}
+\pm
+\frac{ \sqrt{ \left(\frac{(1+\beta)}{\beta}\right)^2 -4\frac{r}{\beta} } }{2} \\
+\check{x} = \frac{(1+\beta)}{2 \beta}
+\pm
+\frac{ \sqrt{ \left(1+\beta\right)^2 -4r\beta } }{2 \beta} \\
+\text{Note that only the negative solution does not violate the lower bound and that we have a condition $(1+\beta)^2-4r\beta \geq 0$}
+\end{align*}
+
+So the proportion of agents who will be users is: 
+
+\begin{align*}
+1-\check{x}=1-\left( \frac{1+\beta}{2 \beta}
+\pm
+\frac{ \sqrt{ \left(1+\beta\right)^2 -4r\beta } }{2 \beta} \right) \\
+= 1
+- \frac{1+\beta}{2 \beta}
+\mp
+\frac{ \sqrt{ \left(1+\beta\right)^2 -4r\beta } }{2 \beta} \\
+= \frac{\beta-1}{2 \beta}
+\mp
+\frac{ \sqrt{ \left(1+\beta\right)^2 -4r\beta } }{2 \beta}
+\end{align*}
+
+The higher indifference condition can be given by: 
+
+\begin{align*}
+\hat{x}=\frac{p-r}{(\alpha-\beta)(1-F(x))+k} \\
+=\frac{2\beta (p-r)}{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+2\beta k} \\
+\end{align*}
+
+Similarly the demand function for buying can then simply be written as: 
+
+\begin{align*}
+G(\hat{x})=1-\hat{x} =1-\frac{2\beta (p-r)}{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+2\beta k} 
+\end{align*}
+
+This condition must satisfy $\hat{x} \leq 1$
+
+\begin{align*}
+2 \beta (p-r) 
+\leq 
+(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta \\
+p
+\leq 
+\frac{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta+r2\beta}{2\beta}
+\end{align*}
+
+We recall that $\hat{x}>\check{x}$
+\begin{align*}
+\frac{2\beta (p-r)}{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta}
+\geq 
+\frac{(1+\beta)}{2 \beta}
+\pm
+\frac{ \sqrt{ \left(1+\beta\right)^2 -4r\beta } }{2 \beta} \\
+4\beta^2 (p-r)
+\geq 
+\left( 1+\beta
+\pm
+\sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)
+\left(
+(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta
+\right)
+\end{align*}
+
+So we now have our demand function which must be met: 
+
+\begin{align*}
+D(\hat{x})=1-\hat{x}=1-\frac{2\beta (p-r)}{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial D(\hat{x})}{\partial p} =
+-\frac{2\beta }{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial D(\hat{x})}{\partial k} =
+\frac{4 \beta^2(p-r) }{((\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta)^2} \\
+\text{The derivative of the upper bound constraint is:} \\
+\frac{\partial C_1}{\partial p} = - 2 \beta \\
+\frac{\partial C_1}{\partial k} = 2\beta \\
+\text{The derivative of the piracy buyer constraint is :}\\
+\frac{\partial C_2}{\partial p} = 4 \beta^2 \\
+\frac{\partial C_2}{\partial k} = -2 \beta \left( 1+\beta
+\pm
+\sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right) \\
+\end{align*}
+
+We need to also verify that the profit function satisfies the first and second order conditions with respect to the price level. 
+
+\begin{align*}
+\pi = p\left(1-\hat{x}\right) - k^2 \\
+\frac{\partial \pi }{\partial p} = 1-\frac{2\beta (2p-r)}{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta} \\
+\frac{\partial^2 \pi }{\partial p^2}  
+= -\frac{4\beta }{(\alpha-\beta) 
+\left( 
+(\beta-1) \mp \sqrt{ \left(1+\beta\right)^2 -4r\beta } 
+\right)+k2\beta} \\
+\text{Since the profit function has to be concave by assumption.} \\
+\text{We now make an additional assumption to its concavity, we take the limit of this expression as $\beta$=1}. \\
+= -\frac{2 }{(\alpha-1) 
+\sqrt{ 1 -r } 
++k} \\
+\text{So profit with this limit is:} \\
+%%%%%%%%%%%%%%%%%%%%%
+\pi = p\left(1-\frac{ (p-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+k} \right) -k^2 \\
+%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \pi}{\partial p}
+= 1-\frac{ (2p-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+k} \\
+%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \pi}{\partial k} = \frac{ p(p-r)}{((\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+k)^2} -2k \\
+%%%%%%%%%%%%%%%%%%%%%
+\text{The upper bound constraint is:} \\
+%%%%%%%%%%%%%%%%%%%%%
+C_1 = \frac{p-r}{(\alpha-1)\sqrt{1-r}+k} \geq 0 \\
+%%%%%%%%%%%%%%%%%%%%%
+\text{The lower bound constraint is now} \\
+ \frac{p-r}{(\alpha-1)
+\sqrt{1-r}+k 
+} \geq 1 - \sqrt{1-r} \\
+\rightarrow 
+C_2 = p-r-(1-\sqrt{1-r})\left((\alpha-1)\sqrt{1-r} +k \right) \geq 0
+\end{align*}
+
+
+The Lagrangian of this problem is then: 
+
+\begin{align*}
+\Lambda = p\left(1-\frac{ (p-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+k} \right) -k^2 \\ 
++T
+\left(
+\frac{p-r}{(\alpha-1)\sqrt{1-r}+k}
+\right) 
++ H
+\left(
+p-r-(1-\sqrt{1-r})(\alpha-1)\left(\sqrt{1-r} +k \right) 
+\right) \\
+\end{align*}
+
+For the ease of resolution we let $(\alpha-1) 
+\sqrt{ 1-r } = w$
+
+The FOC's are given below:
+
+\begin{align*}
+\frac{\partial \Lambda}{\partial p} = 
+1-\frac{ (2p-r)}{w+k} + \frac{T}{w+k} + H  
+=0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \Lambda}{\partial k} = \frac{ p(p-r)}{(w+k)^2} -2k
+-T\frac{ p-r}{(w+k)^2}
+-H(1-\sqrt{1-r})
+=0\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \Lambda}{\partial T}=\frac{p-r}{(\alpha-1)\sqrt{1-r}+k}
+= 0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \Lambda}{\partial H}=
+p-r-(1-\sqrt{1-r})\left(w +k \right)
+= 0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rightarrow \\
+\text{the Third FOC} \\
+p=r \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\text{Inject this in the 4th FOC}: \\
+k = -w \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\text{Inject the p and k in the first FOC}: \\
+(w+k)-T+H(w+k) -r 
+\rightarrow 
+T=-r \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\text{Therefore it is clearly not binding}
+\end{align*}
+
+Dropping the constraint and starting again: 
+
+\begin{align*}
+\frac{\partial \Lambda}{\partial p} = 
+1-\frac{ (2p-r)}{w+k} + H  
+=0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \Lambda}{\partial k} = \frac{ p(p-r)}{(w+k)^2} -2k
+-H(1-\sqrt{1-r})
+=0\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{\partial \Lambda}{\partial H}=
+p-r-(1-\sqrt{1-r})\left(w +k \right)
+= 0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rightarrow \\
+\text{the Third FOC} \\
+p=r+(1-\sqrt{1-r})(w+k) \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\text{Inject this into the first FOC}: \\
+H = (1-\sqrt{1-r})(w+k) + r-k-w \\
+\text{Inject this in the second FOC along with p to get the optimal k} 
+\end{align*}
+
+Optimal quantities are: 
+\begin{equation}
+p = \frac{(4-\sqrt{1-r})r}{2}
++(1-\sqrt{1-r})((\alpha-1) \sqrt{1-r}-1) 
+\end{equation}
+
+\begin{equation}
+k = \frac{r+\sqrt{1-r}-1}{2}
+\end{equation}
+
+First note that if $\alpha=\beta$ and r is not 0 then pirates always exist. To see this we need only note that piracy condition. 
+
+The firm has two possible equilibria. We first take the case where it has a high amount of buyers. First note that in this case there is a unique r which leads to the solution. If r is too high then there are no pirates and we collapse to the buyers and non-buyers case. 
+
+check: If r is too low then the firm cannot compete with the piracy and must lower its price to 0 and hence makes 0 profits. 
+
+The second solution only works if $\beta>\alpha$ and it implies that 
+
+Profit is then: 
+
+\begin{align*}
+\pi = p\left(1-\frac{ (p-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+k} \right) -k^2 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+= p\left(1-\frac{ (p-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+\frac{r+\sqrt{1-r}-1}{2}} \right) -\left(\frac{r+\sqrt{1-r}-1}{2}\right)^2 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\left(\frac{(4-\sqrt{1-r})r}{2}
++(1-\sqrt{1-r})((\alpha-1) \sqrt{1-r}-1) \right)
+\\
+*\left(1-\frac{ ((\frac{(4-\sqrt{1-r})r}{2}
++(1-\sqrt{1-r})((\alpha-1) \sqrt{1-r}-1) )-r)}{(\alpha-1) 
+\left( \sqrt{ 1-r } 
+\right)+\frac{r+\sqrt{1-r}-1}{2}} \right) -\left(\frac{r+\sqrt{1-r}-1}{2}\right)^2 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\frac{(r-1) \left(-8 \alpha^2
+   \left(r+\sqrt{1-r}-1\right)+\alpha
+   \left(6 r\sqrt{1-r} -4 r+4
+   \sqrt{1-r}-4\right)+r
+   \left(r+\sqrt{1-r}+3\right)\right)}{
+   4 \left(2 \alpha
+   \sqrt{1-r}+r-\sqrt{1-r}-1\right)}
+\end{align*}
+
+The proportion of agents who are users is:
+
+\begin{equation*}
+1-\check{x}= \sqrt{1-r}
+\end{equation*}
+
+The proportion of users who are buyers is: 
+
+\begin{align*}
+1-\hat{x}=1-\frac{2(p-r)}{(\alpha-1)(2\sqrt{1-r})+2k} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=1-\frac{p-r}{(\alpha-1)(\sqrt{1-r})+k} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=1-\frac{\frac{(4-\sqrt{1-r})r}{2}
++(1-\sqrt{1-r})((\alpha-1) \sqrt{1-r}-1) -r}{(\alpha-1)(\sqrt{1-r})+\frac{r+\sqrt{1-r}-1}{2}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\frac{(r-1) \left(-2
+   \alpha+\sqrt{1-r}+1\right)}{2 \alpha   \sqrt{1-r}+r-\sqrt{1-r}-1}
+\end{align*}
+
+Therefore the proportion of users who are buying is decreasing in r. On the other hand, the proportion of users who are buying does not depend on $\alpha$. In other words all the weight of the proportion of users falls on the policy instrument.
+
+The social surplus of pirates is:
+
+\begin{align*}
+SS=\int_{\check{x}}^{\hat{x}}(x(1+(1-\check{x}))-r)dx \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\int_{\check{x}}^{\hat{x}}(x(2-\check{x})-r)dx \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\int_{\check{x}}^{\hat{x}}(x(1+\sqrt{1-r})-r)dx \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\frac{1}{2} \left(\sqrt{1-r}+1-4r \sqrt{1-r} \right)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\frac{1}{2} \left(\sqrt{1-r}(1-4r)+1 \right)
+\end{align*}
+
+
+
+The social surplus of buyers is:
+
+\begin{align*}
+=\int_{\hat{x}}^{1}(x(1+\alpha(1-\check{x})+k)-p)dx \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\int_{\hat{x}}^{1}(x(1+\alpha\sqrt{1-r}+\frac{r+\sqrt{1-r}-1}{2})-p)dx 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\int_{\hat{x}}^{1}(x(1+\alpha\sqrt{1-r}+\frac{r+\sqrt{1-r}-1}{2})-
+\left(
+\frac{(4-\sqrt{1-r})r}{2}
++(1-\sqrt{1-r})((\alpha-1) \sqrt{1-r}-1) 
+\right))dx 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=\frac{1}{4} \left(a \left(\left(6 \sqrt{1-r}-8\right) r-8
+   \sqrt{1-r}+8\right)+r \left(3 r+7
+   \sqrt{1-r}-5\right)\right)
+\end{align*}
+
+\subsection{No stigma}
+
+\begin{align*}
+\hat{x}=p\left( 
+\frac{p-r}{k}
+\right) \\
+\end{align*}
+
+With these conditions in hand we can now summarize the above analysis for the different cases. As a frame of reference we will be using the demand functions for piracy and the demand function for not using, these two conditions are sufficient to represent the possible cases. We cross out the cases that are priori dominated by the firms arsenal.
+
+\begin{tabular}{ | l | l | l | l | l |}
+    \hline
+    $D_p >0$ & $D_0>0$ & $D_p + D_0 < 1$ & Active types & Profit \\ \hline
+    Binding & Not binding & Not binding & Buyers and non-users& $p(1-F(\tilde{x}))+\lambda(1-F(\tilde{x}))$  \\ \hline
+     \sout{Binding} & \sout{Not binding} & \sout{Binding} & \sout{None}& \sout{0}  \\ \hline
+    Binding & Binding & Not binding & Buyers only & $p + \lambda$  \\ \hline
+    Binding & Binding & Binding & Impossible or 0 Mass & N/A  \\ \hline
+    Not binding & Not binding & Not binding & Three Segments exist & $p(1-F(\hat{x}))+\lambda(1-F(\check{x}))$ \\ \hline
+    \sout{Not binding} & \sout{Not binding} & \sout{Binding} & \sout{Pirates and nothing} & \sout{$p(1-F(\check{x}))+\lambda(1-F(\check{x}))$} \\ \hline
+    Not binding & Binding & Not binding & Pirates and buyers & $p(1-F(\hat{x}))+\lambda$  \\ \hline
+    \sout{Not binding} & \sout{Binding} & \sout{Binding} & \sout{Pirates only} & \sout{$\lambda$} \\ \hline
+\end{tabular}
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+
+
+\end{document}

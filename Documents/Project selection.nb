@@ -1,0 +1,294 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9769,        285]
+NotebookOptionsPosition[      8922,        256]
+NotebookOutlinePosition[      9264,        271]
+CellTagsIndexPosition[      9221,        268]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Perfect", " ", "information"}], "Title"]], "Input",
+ CellChangeTimes->{{3.719751220474074*^9, 3.7197512230128546`*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Single", " ", 
+   RowBox[{"firm", ":"}]}], "Section"]], "Input",
+ CellChangeTimes->{{3.7197475033734713`*^9, 3.719747509833031*^9}, {
+  3.7197496641369696`*^9, 3.7197496821357517`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"a", ":=", " ", 
+    RowBox[{"number", " ", "of", " ", "x", " ", "value", " ", "projects"}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"b", ":=", " ", 
+    RowBox[{"number", " ", "of", " ", "y", " ", "value", " ", "projects"}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"where", ":=", " ", 
+    RowBox[{"b", "\[GreaterEqual]", " ", "a"}]}], ";", " ", 
+   RowBox[{"x", "\[GreaterEqual]", "y"}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", ":=", " ", 
+   RowBox[{
+   "number", " ", "of", " ", "projects", " ", "an", " ", "enterprise", " ", 
+    "can", " ", "take"}]}], " ", ";"}]}], "Input",
+ CellChangeTimes->{{3.7197475127034893`*^9, 3.71974751749594*^9}, {
+  3.719747631372605*^9, 3.7197476368814287`*^9}, {3.7197476679077606`*^9, 
+  3.719747763356842*^9}, {3.7197478010787125`*^9, 3.71974783971032*^9}, {
+  3.719748134813156*^9, 3.7197481505938797`*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+  "We", " ", "refer", " ", "to", " ", "a", " ", "rule", " ", "as", " ", "lax",
+    " ", "if", " ", "it", " ", "accepts", " ", "all", " ", "projects", " ", 
+   "and", " ", "as", " ", "tight", " ", "if", " ", "it", " ", "picks", " ", 
+   "only", " ", "the", " ", "good", " ", "ones"}], "Text"]], "Input",
+ CellChangeTimes->{{3.71974854527275*^9, 3.719748564940915*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Case", " ", "if", " ", "b"}], "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["a", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["m", "Subsection"], 
+  StyleBox[
+   RowBox[{" ", 
+    StyleBox[" ", "Subsection"]}]]}]], "Input",
+ CellChangeTimes->{{3.7197480289873447`*^9, 3.719748069780414*^9}, {
+   3.719748491579934*^9, 3.719748493788732*^9}, 3.719749603002754*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Tight", "]"}], ":=", " ", 
+   RowBox[{"x", "*", "m"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Lax", "]"}], ":=", " ", 
+   RowBox[{"y", "*", "m"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.719748431104854*^9, 3.7197484726839113`*^9}, {
+   3.719748505978026*^9, 3.719748536428775*^9}, 3.719748581372411*^9, {
+   3.719748715476016*^9, 3.719748731385953*^9}, {3.7197492046426315`*^9, 
+   3.719749207728612*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Therefore", " ", "tight", " ", "is", " ", "always", " ", 
+   RowBox[{"dominant", "."}]}], "Text"]], "Input",
+ CellChangeTimes->{{3.719748954914098*^9, 3.7197489795235233`*^9}, {
+  3.7197491686987753`*^9, 3.7197492106991835`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Case", " ", "if", " ", "b"}], "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["m", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["a", "Subsection"], " "}]], "Input",
+ CellChangeTimes->{
+  3.7197480120771666`*^9, {3.719748044431349*^9, 3.719748055821329*^9}, {
+   3.7197486612999773`*^9, 3.7197486665468636`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Tight", "]"}], ":=", " ", 
+   RowBox[{"x", "*", "a"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Lax", "]"}], ":=", " ", 
+   RowBox[{"y", "*", "m"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7197487593475547`*^9, 3.7197487667872877`*^9}, {
+  3.7197488838806477`*^9, 3.719748888187029*^9}, {3.7197491017248607`*^9, 
+  3.719749111571236*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Therefore", " ", "tight", " ", "dominates", " ", "only", " ", 
+   RowBox[{"if", " ", ":", " ", 
+    RowBox[{
+     RowBox[{"x", "*", "a"}], "\[GreaterEqual]", " ", 
+     RowBox[{"y", "*", "m"}]}]}]}], "Text"]], "Input",
+ CellChangeTimes->{{3.719749239691984*^9, 3.7197492862993565`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Case", " ", "if", " ", "m"}], "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["b", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["a", "Subsection"], 
+  StyleBox[
+   RowBox[{"  ", 
+    StyleBox[" ", "Subsection"]}]]}]], "Input",
+ CellChangeTimes->{{3.719749254177332*^9, 3.71974926129808*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Tight", "]"}], ":=", " ", 
+   RowBox[{"x", "*", "a"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalEpsilon]", "[", "Lax", "]"}], ":=", " ", 
+   RowBox[{"y", "*", "b"}]}], ";"}]}], "Input",
+ CellChangeTimes->{3.7197494798575363`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Therefore", " ", "tight", " ", "dominates", " ", "only", " ", 
+   RowBox[{"if", " ", ":", " ", 
+    RowBox[{
+     RowBox[{"x", "*", "a"}], "\[GreaterEqual]", " ", 
+     RowBox[{"y", "*", "b"}]}]}]}], "Text"]], "Input",
+ CellChangeTimes->{3.719749635127489*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Two", " ", 
+   RowBox[{"firms", ":"}]}], "Section"]], "Input",
+ CellChangeTimes->{{3.7197496576828628`*^9, 3.7197496609694705`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"a", ":=", " ", 
+    RowBox[{"number", " ", "of", " ", "x", " ", "value", " ", "projects"}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"b", ":=", " ", 
+    RowBox[{"number", " ", "of", " ", "y", " ", "value", " ", "projects"}]}], 
+   ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"where", ":=", " ", 
+    RowBox[{"b", "\[GreaterEqual]", " ", "a"}]}], ";", " ", 
+   RowBox[{"x", "\[GreaterEqual]", "y"}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", ":=", " ", 
+   RowBox[{
+   "number", " ", "of", " ", "projects", " ", "enterprise", " ", "1", " ", 
+    "can", " ", "take", " ", "on"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", ":=", " ", 
+   RowBox[{
+   "number", " ", "of", " ", "projects", " ", "enterprise", " ", "2", " ", 
+    "can", " ", "take", " ", "on"}]}], ";"}], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{
+   RowBox[{
+   "Expectations", " ", "are", " ", "firm", " ", "1", " ", "expectations"}], 
+   ";"}], "Text"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"A", ":=", " ", 
+   RowBox[{
+   "a", " ", "projects", " ", "chosen", " ", "by", " ", "both", " ", 
+    "firms"}]}], "Text"], "\[IndentingNewLine]", 
+ StyleBox[
+  RowBox[{"B", ":=", " ", 
+   RowBox[{
+   "b", " ", "projects", " ", "chosen", " ", "by", " ", "both", " ", "firms", 
+    "\[AliasDelimiter]"}]}], "Text"]}], "Input",
+ CellChangeTimes->{{3.7197503118532248`*^9, 3.7197503381519785`*^9}, {
+   3.7197514424502325`*^9, 3.719751459500308*^9}, {3.7197515213377037`*^9, 
+   3.7197516128184423`*^9}, 3.7197516999979887`*^9, {3.7197517349363046`*^9, 
+   3.719751738544817*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Case", " ", "if", " ", "b"}], "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["a", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["m", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  RowBox[{
+   StyleBox["n", "Subsection"], 
+   StyleBox[" ", "Subsection"], 
+   StyleBox["or", "Subsection"], 
+   StyleBox[
+    RowBox[{
+     StyleBox[" ", "Subsection"], "   "}]], 
+   StyleBox["b", "Subsection"]}], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["a", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["n", "Subsection"], 
+  StyleBox["\[GreaterEqual]", "Subsection"], 
+  StyleBox["m", "Subsection"], 
+  StyleBox[" ", "Subsection"]}]], "Input",
+ CellChangeTimes->{{3.7197504982772455`*^9, 3.7197505195600867`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[CapitalEpsilon]", "[", 
+   RowBox[{"Tight", ",", "Tight"}], "]"}], ":=", " ", 
+  RowBox[{"Projects", " ", "chosen", " "}]}]], "Input",
+ CellChangeTimes->{{3.7197504284051027`*^9, 3.719750429719187*^9}, {
+  3.7197506886414695`*^9, 3.7197507079567013`*^9}, {3.7197514298693323`*^9, 
+  3.7197514365550637`*^9}}]
+},
+WindowSize->{1280, 941},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 155, 3, 76, "Input"],
+Cell[716, 25, 221, 5, 54, "Input"],
+Cell[940, 32, 985, 24, 92, "Input"],
+Cell[1928, 58, 403, 7, 31, "Input"],
+Cell[2334, 67, 466, 12, 34, "Input"],
+Cell[2803, 81, 535, 12, 52, "Input"],
+Cell[3341, 95, 265, 5, 31, "Input"],
+Cell[3609, 102, 412, 10, 34, "Input"],
+Cell[4024, 114, 465, 11, 52, "Input"],
+Cell[4492, 127, 322, 7, 31, "Input"],
+Cell[4817, 136, 392, 11, 34, "Input"],
+Cell[5212, 149, 337, 9, 52, "Input"],
+Cell[5552, 160, 296, 7, 31, "Input"],
+Cell[5851, 169, 168, 4, 54, "Input"],
+Cell[6022, 175, 1686, 44, 172, "Input"],
+Cell[7711, 221, 859, 24, 34, "Input"],
+Cell[8573, 247, 345, 7, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

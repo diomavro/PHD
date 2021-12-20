@@ -1,0 +1,1066 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots,calc,graphicx}
+\usepackage{preview}	
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}	
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{chronology}
+\usepackage[a4paper,top=3cm,bottom=3cm, right=2cm, left=2cm]{geometry}
+\usepackage[normalem]{ulem}
+\usetikzlibrary{math}
+\bibliographystyle{agsm}
+\usepackage{blindtext}	
+\usepackage{hyperref}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+
+\begin{document}
+
+\title{Do firms wish to invest more in intellectual capital or physical capital}
+
+\begin{assumption}
+Assume that each firm can only take on one project. 
+\end{assumption}
+
+First assume that depreciation is $ 100$. Let the value each firm can realize with the asset be $x_1$ and $x_2$. 
+
+\section{Example 1}
+
+If there is some asset and two firms, A and B. If the asset is physical then the potential value is $ max{x_A,x_B}$. 
+
+If firm A has the asset then the firm will use the good if $x_a>x_b.5$ and let firm b use it otherwise. 
+
+If firm B has the asset then it will similarly use the asset if $ x_b>x_a.5 $. Otherwise it will let the other firm. 
+
+Therefore if both investing means that it is $ 50 per cent$ likely to get the asset. So if firm i's value is $x_i>x_j.5$ then it is ready to pay $.5*x_i+.5 x_i .5$. If on the other hand $x_i<x_j.5$ then it is ready to pay $.5{x_j}.5$. All of this times the probability of discovery, $p_2$.
+
+If on the other hand just one invests then the probability of discovery is lower but the probability of getting it is 1. So if $x_i>x_j.5$ then the firm is ready to invest $x_i$, otherwise the firm is ready to invest $.5 x_j$. 
+
+Intellectual assets: 
+
+If on the hand if the asset is intellectual then the potential value is simply $\sum^n_{i=1}x_i$. On the other hand the individual value for a firm i is $x_i+\frac{1}{2}x_j$. 
+
+If both invest then i is ready to invest $.5(x_i+x_j.5)+.5(.5x_i)$. 
+
+If just one invests then i is ready to invest in $.5(x_i+x_j.5)+.5(.5x_i)$
+
+Note:
+The intellectual asset has no cases. 
+
+Question: Is investment concave? 
+
+\chapter*{One asset}
+
+\section*{Rival asset}
+Total investment 
+
+If a firm owns the physical asset it can rent it to the higher value firm and negotiate half the value. 
+
+Let there be n firms which can extract, let $x_j$ be the highest value firm, i.e max\{$x_A,...,x_n$\}$=x_n$
+
+However if any firm gains the asset other than the top firm then they can get at least $x_n-\frac{x_n+x_{n-1}}{2}$
+
+If top firm invests he gets: 
+\begin{align*}
+=\frac{1}{n}x_n+\frac{n-1}{n}( \frac{x_n-x_{n-1}}{2} ) \\
+\text{However the top firm gets  }\frac{x_n-x_{n-1}}{2} \text{even if it doesn't invest.Therefore the willingness to invest is:} \\
+=\frac{1}{n}x_n-\frac{1}{n}( \frac{x_n-x_{n-1}}{2} ) \\
+=\frac{1}{n}(\frac{2x_n}{2}-\frac{x_n-x_{n-1}}{2}) \\
+=\frac{1}{n}(\frac{x_n+x_{n-1}}{2})
+\end{align*}
+
+If any other firm invests their payoff is:
+
+\begin{align*}
+=\frac{1}{n}( x_{n-1}+ \frac{x_n-x_{n-1}}{2} ) \\
+=\frac{1}{n}( \frac{2x_{n-1}}{2}+ \frac{x_n-x_{n-1}}{2} ) \\
+=\frac{1}{n}( \frac{x_n+x_{n-1}}{2} )
+\end{align*}
+
+Therefore the total investment is:
+
+\begin{equation*}
+\frac{x_n+x_{n-1}}{2}
+\end{equation*}
+\section*{Non-rival asset}
+
+For intellectual assets we have that the total potential value of a good is $\sum_{i=1}^my_i$. What each firms payoff if they invest is $\frac{1}{m}(y_i+\frac{1}{2}\sum_{j=1,j\neq i}^my_j)+(1-\frac{1}{m})(\frac{1}{2}y_i)$. If all firms invest, the amount of investment per use i is given by 
+
+\begin{align*}
+=\sum_{i=1}^{m-1}\frac{1}{2m}y_i+\frac{1}{m}y_i+(1-\frac{1}{m})\frac{1}{2}y_i \\
+=\frac{m-1}{2m}y_i+\frac{2}{2m}y_i+\frac{m-1}{2m}y_i \\
+= y_i
+\end{align*}
+
+The total investment if all firms invest is merely the potential value of the good. Therefore if more people can use the asset, there is no loss in incentive to invest. However firms will only invest if their payoff from investing is higher than the payoff from not investing. Since the payoff is inevitably $\frac{y_i}{2}$ if the firm doesn't invest, the difference between the two payoffs is merely $\frac{1}{2n}y_i+\frac{1}{2n}\sum_{j=1,j\neq i}^my_j=\frac{1}{2n}\sum_{j=1}^my_j$. Therefore the total willingness to invest is $\frac{1}{2}\sum_{j=1}^my_j$
+
+\section{Result}
+
+\begin{proposition}
+If a non-rival asset and a rival asset both have the same social value, there will be more investment in the rival asset. 
+\end{proposition}
+
+\begin{proof}
+To see this first note that if two projects have the same social value, then  max\{$x_A,...,x_n$\}$=x_n=\sum_{i=1}^my_i$. The total investment higher in the physical asset case if 
+
+\begin{align*}
+\frac{x_n+x_{n-1}}{2} > \frac{1}{2}\sum_{j=1}^ny_j = \frac{1}{2}x_n \\
+\rightarrow x_n+x_{n-1} > x_n \\
+\rightarrow x_{n-1} > 0
+\end{align*}
+\end{proof}
+
+\chapter{Two assets}
+
+\section{Rival asset}
+We begin with the case where the top utilizes are all separate. 
+\footnote{Need to make sure the subscripts now refer to players.} 
+
+This time there are two assets, $A_1$ and $A_2$. As before the uses from the first asset are \{$x_1,...,x_n$\} where the max is denoted $\chi$ and the use vector of the new asset is {\{$z_1,...,z_n$\}} where the max is denoted by $\zeta$. Additionally there is a use all users can achieve from using both assets, {\{$w_1,...,w_n$\}} where the max is denoted by $\omega$.
+
+\subsection{If~$\omega<\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}$}
+
+\subsubsection{Payoff if investor is not a top user}
+First note that the payoff from investing in $A_1$ for a player i is k:  
+
+\begin{align*}
+\frac{1}{k}\left(\frac{\chi+\chi_{2}}{2}\right) = \frac{1}{2k}\left(\chi+\chi_{2}\right)
+\end{align*}
+
+Similarly the payoff from investing in $A_2$ for a player i is if m players invested in:  
+
+\begin{align*}
+\frac{1}{m}\left(\frac{\zeta+\zeta_{2}}{2}\right)=\frac{1}{2m}\left( \zeta+\zeta_{2}\right)
+\end{align*}
+
+Investing in both gives a payoff of $\hyperref[RIB]{''\text{Simplification procedure}''}$: 
+
+\begin{equation*}
+=
+\frac{m
+\left( \chi + \chi_{2} 
+\right)
++k
+\left( \zeta+\zeta_{2} 
+\right)}{2mk}
+\end{equation*}
+
+\subsubsection{Payoff if investor is a top user}
+
+Payoff from not investing is similarly. 
+
+\begin{align*}
+=\left(\frac{\chi-\chi_{2}}{2}
+\right)
+\end{align*}
+
+By investing in asset 1, the $\chi$ user has a payoff of
+
+\begin{align*}
+\frac{\chi}{k}
++\frac{k-1}{k}
+\left(\frac{\chi-\chi_{2}}{2}
+\right)
+= \frac{1}{2k}
+ \left(
+ 2\chi+(k-1)(\chi-\chi_{2})
+ \right) \\
+= \frac{1}{2k}
+ \left(
+ \chi+\chi_{2}+k(\chi-\chi_{2})
+ \right) \\
+= \frac{1}{2k}
+ \left(
+ \chi(1+k)-\chi_{2}(k-1)
+ \right)
+\end{align*}
+
+Therefore if the top choice is to invest only in own asset, the willingness to invest is: 
+
+\begin{equation}
+\frac{\chi+\chi_{2}}{2k}
+\end{equation}
+
+By investing in asset 2, the $\chi$ user has a payoff of
+
+\begin{align*}
+\frac{\chi-\chi_2}{2}
++\frac{1}{m}
+\left(
+\zeta_2 + \frac{\zeta-\zeta_2}{2}
+\right)
+\end{align*}
+
+The willingness to invest if second asset payoff is dominant is: 
+
+\begin{align*}
+\frac{1}{m}
+\left(
+\zeta_2 + \frac{\zeta-\zeta_2}{2}
+\right)
+\end{align*}
+
+Payoff of investing in two assets: 
+
+\begin{align*}
+=\frac{1}{km}
+\left( 
+\chi + \zeta_2 +\frac{\zeta-\zeta_2}{2}
+\right) 
++
+\frac{1}{k}
+\left(
+1-\frac{1}{m}
+\right)
+\chi 
++
+\left( 
+1-\frac{1}{k}
+\right)
+\frac{1}{m}
+\left( 
+\zeta_2+\frac{\zeta-\zeta_2}{2}+\frac{\chi-\chi_2}{2}
+\right) 
++
+\left( 
+1-\frac{1}{k}
+\right)
+\left(
+1-\frac{1}{m}
+\right)
+\left( 
+\frac{\chi-\chi_2}{2}
+\right) \\
+=
+\frac{1}{km}
+\left( 
+\chi + \zeta_2 +\frac{\zeta-\zeta_2}{2}
+\right) 
++
+\frac{1}{km}
+(m-1)\chi 
++
+\frac{1}{km}
+\left( 
+(k-1)(
+\zeta_2+\frac{\zeta-\zeta_2}{2}+\frac{\chi-\chi_2}{2})
+\right) 
++
+\frac{1}{km}
+\left( 
+(k-1)(m-1)
+\frac{\chi-\chi_2}{2}
+\right) \\
+=
+\frac{1}{km}
+\left( 
+m\chi + \zeta_2 +\frac{\zeta-\zeta_2}{2}
+\right) 
++
+\frac{1}{km}
+\left( 
+(k-1)(
+\zeta_2+\frac{\zeta-\zeta_2}{2}+\frac{\chi-\chi_2}{2})
+\right) 
++
+\frac{1}{km}
+\left( 
+(k-1)(m-1)
+\frac{\chi-\chi_2}{2}
+\right) \\
+=
+\frac{1}{km}
+\left( 
+m\chi + \zeta_2 +\frac{\zeta-\zeta_2}{2}
+\right) 
++
+\frac{(k-1)}{km}
+\left( 
+\zeta_2+\frac{\zeta-\zeta_2}{2}+\frac{\chi-\chi_2}{2}
++(m-1)\frac{\chi-\chi_2}{2}
+\right) \\
+=
+\frac{1}{km}
+\left( 
+m\chi + \zeta_2 +\frac{\zeta-\zeta_2}{2}
++
+(k-1)
+\left( 
+\zeta_2+\frac{\zeta-\zeta_2}{2}+m\frac{\chi-\chi_2}{2}
+\right)
+\right) \\
+=
+\frac{1}{km}
+\left( 
+\frac{m(\chi+\chi_2)}{2} 
++
+k
+\left( 
+\zeta_2+\frac{\zeta-\zeta_2}{2}+m\frac{\chi-\chi_2}{2}
+\right)
+\right) \\
+\end{align*}
+
+The willingness to invest is 
+\begin{equation}
+\frac{\chi+\chi_2}{2k} + \frac{1}{m}\left(\zeta+\frac{\zeta+\zeta_2}{2}  \right)
+\end{equation}
+
+
+\subsection{If~$\omega>\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}$}
+\subsubsection{Payoff of the non-$\omega$ user}
+
+Investing in both gives a payoff of $\hyperref[ROB]{''\text{Simplification procedure}''}$: 
+
+\begin{proposition}  
+Keeping the number of investors constant, the presence of the top users, decreases investment. 
+\end{proposition}
+
+\begin{proposition}
+Keeping the number of investors constant, the presence of the $\omega$ user, increases investment. 
+\end{proposition}
+
+Payoff from investing in first asset if k people are investing in $A_1$ and m investing in $A_2$.
+
+\begin{align*}
+ =
+& \frac{1}{k}
+\left(
+\frac{\chi+\chi_{2}}{2}
++
+\frac{m-2}{m}
+\underbrace{
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{3}
+\right)
+}_{\text{Payoff if other wins}} 
++
+\frac{1}{m}
+\underbrace{
+\left
+(\frac{\omega-\frac{\chi+\chi_2}{2}-\zeta}{3}
+\right)
+}_{\text{Payoff if $\zeta$ wins}} 
++ 
+\frac{1}{m}
+\underbrace{
+\left
+(\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{2}
+\right) 
+}_{\text{Payoff if $\omega$ user wins}} 
+\right)
+\\
+\rightarrow 
+&\frac{(1+4m)(\chi+\chi_2)-\zeta(1+2m)+\zeta_2(3-2m)+\omega(4m-2)}{12km}
+\end{align*}
+
+By symmetry we have that the value of investing in the second asset is: 
+
+\begin{equation*}
+=\frac{\zeta(1+4k)+\zeta_2(1+4k)-\chi(1+2k)+\chi_2(3-2k)+\omega(4k-2)}{12km}
+\end{equation*}
+
+Payoff from investing in both assets: 
+
+$\hyperref[ROB2]{''\text{Simplification procedure}''}$
+
+\begin{align*}
+=
+\frac{1}{k}
+\left 
+(1- \frac{1}{m} 
+\right )
+\pi_i(A,m)
++
+\frac{1}{m}\left (1- \frac{1}{k} \right )
+\pi_i(B,k)
++
+\frac{1}{m}\frac{1}{k} 
+\underbrace{
+\left(
+\frac{\zeta+\zeta_{2}}{2}
++
+\frac{\chi+\chi_{2}}{2}
++
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{2}
+\right)
+\right) }_{\text{Payoff if you win both assets}}
+\\ 
+= 
+\frac{\chi(3k+m+4k^2m-3km-2km^2)+\chi_2(4k^2m+mk+m-k-2km^2)}{12m^2k^2} \\
++\frac{\zeta(3m+k+4m^2k-3km-2mk^2)+\zeta_2(4m^2k+mk+k-m-2mk^2)}{12m^2k^2} \\
++\frac{\omega(2mk+4k^2m+4m^2k-2m-2k)}{12m^2k^2}
+\end{align*} 
+
+Payoff if not investing of these users is simply 0. 
+
+\subsubsection{Payoffs of the omega user}
+
+
+\begin{align*}
+\text{Payoff if investing in asset 1:} \\
+=\frac{1}{k}
+\left( 
+\frac{\chi+\chi_2}{2} 
++ \frac{m-1}{m} 
+\underbrace{
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2} 
+\right)
+}_{\text{Payoff if it isn't user: } \chi}
++
+\frac{1}{m} 
+\underbrace{
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\zeta}{2} 
+\right)
+}_{\text{Payoff if it is user: } \chi}
+\right) \\
+=\frac{\zeta_2(1-m)-\zeta(1+m)+m(\chi+\chi_2+2\omega)}{4km}
+\end{align*}
+
+
+\begin{align*}
+\text{Payoff if investing in asset 2:} \\
+=\frac{\chi_2(1-k)-\chi(1+k)+k(\zeta+\zeta_2+2\omega)}{4km}
+\end{align*}
+
+
+
+\begin{align*}
+\text{Payoff from investing in both assets:} \\
+\frac{\omega}{km}
++\frac{1}{k}
+\left(
+1-\frac{1}{m}
+\right)
+\left( \frac{\chi+\chi_2}{2} +\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}
+\right) 
++\frac{1}{m}
+\left(
+1-\frac{1}{k}\right)\left( \frac{\zeta+\zeta_2}{2} +\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}\right) \\
+\left(
+1-\frac{1}{k}
+\right)
+\left(
+1-\frac{1}{m}
+\right)
+\left(
+\frac{r}{km}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}
+\right)
++
+\frac{km-r}{km}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{3}
+\right)
+\right) \\
+\rightarrow 
+\frac{\chi+\chi_2}{12(km)^{2}}
+\left(
+mk(5m-k(1+2m)-2-r)+r(k+m-1)
+\right) \\
++\frac{\zeta+\zeta_2}{12(km)^{2}}
+\left(
+mk(5k-m(1+2k)-2-r)+r(k+m-1)
+\right) \\
++\frac{2 \omega}{12(km)^{2}}
+\left(
+mk(2(km+1)+m+k)+r(1-m-k)
+\right) \\
+\end{align*}
+
+\begin{align*}
+\text{Payoff if not investing:} \\
+=\frac{r}{km}
+\left(
+\frac{r-2}{r} 
+\left( 
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2} 
+\right)
++\frac{1}{r} 
+\left( 
+\frac{\omega - \chi-\frac{\zeta+\zeta_2}{2}}{2} 
+\right)
++\frac{1}{r} 
+\left( \frac{\omega - \frac{\chi+\chi_2}{2}-\zeta}{2} 
+\right)
+\right) \\
++
+\frac{km-r}{km}
+\left(
+\frac{km-r-2}{km-r}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{3}
+\right)
++
+\frac{1}{km-r}
+\left(
+\frac{\omega -\chi-\frac{\zeta+\zeta_2}{2}}{3}
+\right)
++
+\frac{1}{km-r}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\zeta}{3}
+\right)
+\right) \\
+\end{align*}
+
+
+Question: Do Complementary assets decrease the investment of some users?
+
+\section{General Rival and non-rival case if all activities take up the same space}
+
+\subsection{Individual usages better than total usage}
+
+Assume that the number of usages is even and is given by Q. 
+
+Outline the algorithm: 
+\begin{align*}
+A_1 = \{ x_1+z_1,...,x_n+z_n, w_1,...,w_n \} \\
+max(A_1) \\
+\text{The max will either return: } x_j+z_k~or~w_h \\
+\text{If it returns the former: }c = \{ x_j,z_j,w_j,x_k,z_k,w_k \} \\
+\text{If it returns the latter: }c = \{ x_h,z_h,w_h \} \\
+A_1 \setminus c=A_2
+\end{align*}
+ 
+If owns both assets:
+
+\[ 
+Payoff~if~owns~both~assets~=
+\left \{
+  \begin{tabular}{ccc}
+  $\sum_{i=1}^{\frac{Q}{2}} \frac{max(A_1)-max\left(A_{\frac{Q}{2}+1}\right)}{2}$ & If not a top user \\
+  $\sum_{i=1,i\neq j}^{\frac{Q}{2}-1} \frac{max(A_i)-max\left(A_{\frac{Q}{2}+1}\right)}{2}+\max(A_j)$ & If jth top omega user \\
+  \end{tabular}
+\right \}
+\]
+
+\section{General Rival and non-rival case if assets usage is exclusive to some activities}
+
+\subsection{Individual usages better than total usage}
+
+If the number of uses of an asset is Q and user j is one of the top Q users then his payoff if he does not win any assets is:
+
+\begin{equation}
+\frac{\chi_j-\chi_{Q+1}}{2}
+\end{equation} payoff if he wins the first asset is given by: 
+
+If he wins asset 1 then it is:
+
+\begin{align*}
+=\frac{1}{k} 
+\left(
+(Q-1)\chi_{Q+1}
++\chi_j
++ \sum^{Q}_{i \neq j,i=1}\frac{\chi_i-\chi_{Q+1}}{2} 
+\right) \\
+=\frac{1}{k} 
+\left(
+(Q-1)\frac{\chi_{Q+1}}{2}
++\chi_j
++ \sum^{Q}_{i \neq j,i=1}\frac{\chi_i}{2} 
+\right) 
+\end{align*}
+
+If j is not a high user this the $\chi_j$ becomes another $\chi_{Q+1}$. 
+
+Payoff if user j wins both assets: 
+
+\begin{equation}
+(Q-1)\chi_{Q+1}+\chi_j+\sum^Q_{i\neq j,i=1}\frac{\chi_i-\chi_{Q+1}}{2}+(S-1)\zeta_{S+1}+\zeta_j+\sum^S_{i\neq j,i=1}\frac{\zeta_i-\zeta_{S+1}}{2}
+\end{equation}
+
+\subsection{Joint asset usage better than individual asset usage}
+
+The socially optimal number of uses is trivially just n uses of asset 1 and n uses of asset 2. A difficulty is with this statement is that if the cost of the asset is not worth its added value.  
+
+\subsubsection{Payoffs if assets go to the same user user}
+
+If the user is the omega user then his payoff is simply $\omega$. If it is not the omega user, then the omega user receives a payoff of if $\chi$ user wins $\frac{\omega-\chi-\frac{\zeta+\zeta_2}{2}}{2}$ if $\zeta$ user wins $\frac{\omega-\frac{\chi+\chi_2}{2}-\zeta}{2}$ and if non top user wins: $\frac{\omega-\frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}$
+
+\[ 
+Payoff~of~the~omega~user=
+\left \{
+  \begin{tabular}{ccc}
+  $\frac{\omega -max(\chi+\zeta,...,\omega_2,...,\omega_n)-max_2( \chi + \zeta,...,\omega_2,...,\omega_n)}{2}$ & If not a top user \\
+  0 & 2 & 4 \\
+  3 & 3 & -8 
+  \end{tabular}
+\right \}
+\]
+
+
+\section{The new formalization}
+Lets say a licensee is trying to decide how to license the good. He approaches people one by one makes them an offer. 
+
+Payoff of user:
+Let:
+\begin{align*}
+V_i(e_1^s,e_1^b,\bar{V}_{-i}): \text{effort of seller on project 1} \\
+e_1^s: \text{effort of seller on project 1} \\
+e_1^b: \text{effort of buyer on project 1} \\
+\bar{V}_{-i}: \text{Average quality of projects} \\
+c^s(e^s_1,e^s_2,...,e^s_n) \text{Cost of seller}
+\end{align*}
+
+\begin{align*}
+\text{Assumptions on value: }
+\frac{\partial V_i}{\partial e^b_i} >0 \\
+\frac{\partial^2 V_i}{\partial (e^b_i)^2} <0 \\
+\frac{\partial V_i}{\partial e^s_i} >0 \\
+\frac{\partial^2 V_i}{\partial (e^s_i)^2} <0 \\
+\frac{\partial^2 V_i}{\partial (e^s_i)(e^b_i)} >0 \\
+\frac{\partial V_i}{\partial \bar{V}_{-i}} > 0
+\end{align*}
+
+Perhaps its not necessary to have the linearity. 
+
+\begin{align*}
+\text{Assumptions on cost:} \\
+\frac{ \partial c^{s} }{ \partial e^s_i } > 0 \\
+\frac{ \partial^2 c^s }{ \partial (e^s_i)^2 } = 0 \\
+\frac{ \partial^2 c^s }{\partial (e^s_i)(e^s_j)}>0 \forall i \neq j
+\end{align*}
+
+\begin{align*}
+V_i(e_1^s,e_1^b,\bar{V}_{-i} )\gamma_i-e_1^b \text{  Payoff of downstream} \\
+\sum_{i=1}^n V_i(e_1^s,e_1^b,\bar{V}_{-i} )(1-\gamma_i)-c^s(e^s_1,e^s_2,...,e^s_n) \text{  Payoff of upstream}
+\end{align*} 
+
+\subsection{2 Downstream firms example}
+In the present case there are two downstream firms. The upstream firm contracts with the downstream firms. First it contracts with the first one and then invests, second it contracts with the second one and then invests. We solve by backward induction. The question is: will the upstream firm be more generous or less so over time? 
+
+Say a firm has rights to some product that they can license to one person every period. If the licencees invest loads then the firm will have better. 
+
+The firm will always let the other firm have a share of the profits. It will let the first firm have all the profits if 
+
+Ok so the writing firm has the signal of the cost of its writing. If it signals a low cost then they will both invest more in the project. Otherwise they will both invest less. If the project has more investment, the next periods project will be of higher value. In reality the project may be of low quality.
+
+Why do different mediums or franchises differ as much as they do in quality even when within the same universe? On a personal point of view it seems quite obvious that often those who consume the same universe through different mediums usually have a favorite of these mediums and this favorite is perhaps not all that subjective in the sense that they usually agree which medium was the most effective. Similarly the revenue of a universe is usually highly skewed, one medium actually makes most of the profit whilst the rest free ride on one mediums success. 
+
+It is perhaps not controversial to note that creators of such universes are in fact not perfectly talented in all possible mediums. Indeed it may often be the case that an author is very talented for books but not at all talented for movies, or even within the same medium, perhaps an author is quite talented at machiavellian scheming but not quite so for slow paced romance. 
+
+However the relative skills of such an author may not always be visible to a firm. Instead the author wants to make believe that he is actually quite good at all of the mediums to maximize his profit. Additionally he may use an excuse such as writer's block to explain why a certain project may not go well but it does not generalize to his whole skillset. 
+
+More importantly, the firm must invest significant resources to ensure that projects get the attention they need, and it must also plan to invest these resources. That is a firm must put in the effort to make sure a project is as good as it can be. 
+
+Perhaps a trivial first observation to make is that authors of specific works are not multitalented and cannot write well for every medium. 
+
+Suppose a writer is working on some story but he is not guaranteed to make good chunks at every time. If he signals to the network that his story is of good quality then the network invests more during that time period. On the other hand if he signals that he has mediocre one, then less will be invested. We can suppose that his story is a markov chain. If however the buyer has too high a discount rate the writer will be forced to give a higher portion of the profits. 
+
+The original idea is that the writer has cross convex costs. That is, he actually is only good at writing kind of story. So maybe he is only good at writing one kind of story and is not good at adapting his work to other mediums. So if he matches with a book provider he will be unable to perform as well. However the writer can signal that he has writers block to avoid a too demanding contract. If he has writers block then he will be allowed to learn 
+
+
+
+\begin{align*}
+\text{The 4th period both firms choose their effort} \\
+(\tilde{\epsilon}_2^*)= \operatorname*{argmax}_{ \tilde{\epsilon}_2 \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon_1} )
++\delta (1-\gamma_2)V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)
+-C(\tilde{\epsilon}_2,\tilde{\epsilon}_1) \\
+= \operatorname*{argmax}_{ \tilde{\epsilon} \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon_1})+
+\delta (1-\gamma_2)V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)
+-(\tilde{\epsilon}_2+\tilde{\epsilon}_1)^2 \\
+\tilde{\epsilon}_2^*=
+\delta (1-\gamma_2) \frac{ \partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \tilde{\epsilon}_2}
+-\frac{\partial c(\tilde{\epsilon}_2,\tilde{\epsilon}_1)}{\partial \tilde{\epsilon}_2 }=0 \\
+=\delta (1-\gamma_2) \frac{ \partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \tilde{\epsilon}_2}
+-2(\tilde{\epsilon}_2+\tilde{\epsilon}_1) \\
+\tilde{\epsilon}_2^* = f(\epsilon_2,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\epsilon_2^*=
+\operatorname*{argmax}_{ \epsilon_2 \geq 0 } \gamma_2 V_2(\epsilon_2,\tilde{\epsilon}_2,V_1) - \epsilon_2   \\
+0= \gamma_2 \frac{\partial V_2(\epsilon_2,\tilde{\epsilon}_2,V_1)}{\partial \epsilon_2}-1 \\
+\epsilon_2^* = g(\tilde{\epsilon_2},\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= g(f(\epsilon_2^*,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1),\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+\rightarrow \epsilon_2^* = G(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+\rightarrow \tilde{\epsilon}_2^* = f(\epsilon_2,\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= f(G(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1),\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+= F(\gamma_2,\epsilon_1,\tilde{\epsilon}_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 3rd period period only the upstream firm plays a role} \\
+(\gamma_2^*)= \operatorname*{argmax}_{ \gamma_2 \in [0,1] } \delta (1-\gamma_2)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1) \\
+=-\delta \gamma_2 V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)
++\delta(1-\gamma_2) \frac{\partial V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)}{\partial \gamma_2}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1)}{\partial \gamma_2} \\ 
+\gamma_2^*= h(\epsilon_1,\tilde{\epsilon_1},\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 2nd period period only the upstream firm plays a role} \\
+(\tilde{\epsilon}_1^*)= \operatorname*{argmax}_{ \tilde{\epsilon}_1 \geq 0 } 
+(1-\gamma_1)V_1(\epsilon_1,\tilde{\epsilon}_1)
++\delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)
+-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1) \\
+= (1-\gamma_1)\frac{\partial V_1(\epsilon_1,\tilde{\epsilon}_1) }{\partial \tilde{\epsilon_1}}
++\delta (1-\gamma_2^*)\frac{\partial V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1)}{\partial \tilde{\epsilon_1}}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1)}{\partial \tilde{\epsilon_1}} \\
+(\tilde{\epsilon}_1^*)*
+=j(\epsilon_1,\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+(\epsilon_1^*)= \operatorname*{argmax}_{ \epsilon_1 \geq 0 }
+\gamma_1 V_1(\epsilon_1,\tilde{\epsilon}_1)-\epsilon_1 \\
+= \gamma_1 \frac{\partial V_1(\epsilon_1,\tilde{\epsilon}_1)}{\partial \epsilon_1}-1 \\
+(\epsilon_1^*)
+= k(\tilde{\epsilon}_1,\gamma_1)
+=k(j(\epsilon_1,\gamma_1),\gamma_1) \\
+\rightarrow
+\epsilon_1^*=K( \gamma_1) \\
+\rightarrow \tilde{\epsilon}_1 = j(\gamma_1)=j(K(\gamma_1),\gamma_1)=J(\gamma_1) \\
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+%££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
+\text{The 1st period period only the upstream firm plays a role} \\
+(\gamma_1^*)= \operatorname*{argmax}_{ \gamma_1 \in [0,1] } 
+(1-\gamma_1)V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)
++\delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1^*)
+-C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1^*) \\
+= -V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)
++ (1-\gamma_1)\frac{\partial V_1(\epsilon_1^*,\tilde{\epsilon}_1^*)}{\partial \gamma_1}
++ \frac{\partial \delta (1-\gamma_2^*)V_2(\epsilon_2^*,\tilde{\epsilon}_2^*,V_1^*)}{\partial \gamma_1}
+-\frac{\partial C(\tilde{\epsilon}_2^*,\tilde{\epsilon}_1^*)}{\partial \gamma_1}
+\end{align*}
+
+
+\section{Appendix}
+\subsection{Payoff of investing in two assets  $\omega<\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}$}\label{RIB}
+
+\begin{align*}
+\frac{1}{mk}\left(\frac{\chi_n+\chi_{n-1}+\zeta_n+\zeta_{n-1}}{2}\right)
++
+\frac{1}{k}\left(1-\frac{1}{m}\right)\left(\frac{\chi_n+\chi_{n-1}}{2}\right)
++
+\frac{1}{m}\left(1-\frac{1}{k}\right)\left(\frac{\zeta_n+\zeta_{n-1}}{2}\right) 
+\\
+=
+\frac{1}{mk}\left(
+\frac{\chi_n+\chi_{n-1}+\zeta_n+\zeta_{n-1}}{2}\right)
++
+\frac{1}{k}\left(\frac{m-1}{m}\right)\left(\frac{\chi_n+\chi_{n-1}}{2}\right)
++
+\frac{1}{m}\left(\frac{k-1}{k}\right)\left(\frac{\zeta_n+\zeta_{n-1}}{2}\right)
+\\
+=
+\frac{1}{2mk}
+\left(
+\chi_n + \chi_{n-1}+ \zeta_n + \zeta_{n-1} 
++(m-1)
+\left( \chi_n + \chi_{n-1} 
+\right)
++(k-1)
+\left( \zeta_n+\zeta_{n-1} 
+\right)
+\right) \\
+=
+\frac{m
+\left( \chi_n + \chi_{n-1} 
+\right)
++k
+\left( \zeta_n+\zeta_{n-1} 
+\right)}{2mk}
+\end{align*}
+
+\subsection{Payoff of investing in two assets if $\omega$ is investing in the other asset$\omega>\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}$}
+\label{ROB}
+
+\begin{align*}
+\text{Payoff from investing in first asset if k people are investing in $A_1$ and m investing in $A_2$ and the $\omega$ user is among them. } 
+\\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{m-1}{m}
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{3}
+\right)
++
+\frac{1}{m}
+\left(\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{2}
+\right)\right) \\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{1}{m} 
+\left ( \left(m-1\right) 
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{3}
+\right)
++
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{2}
+\right 
+)
+\right) \\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{1}{6m} 
+\left ( \left(m-1\right) 
+\left(
+2\omega-\chi-\chi_{2}-\zeta-\zeta_{2}
+\right)
++
+3\omega-\frac{3(\chi+\chi_{2})}{2}-\frac{3(\zeta+\zeta_{2})}{2}
+\right 
+)
+\right) \\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{1}{6m} 
+\left ( 2\left(m-1\right) 
+\left(
+\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}
+\right)
++
+3\left(\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}\right)
+\right 
+)
+\right) \\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{\left(\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}\right)}{6m} 
+\left ( 2\left(m-1\right) 
++
+3
+\right 
+)
+\right) \\
+=
+\frac{1}{k}
+\left(\frac{\chi+\chi_{2}}{2}
++
+\frac{\left(\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}\right)}{6m} 
+\left( 2m+1 
+\right)
+\right) \\
+=
+\frac{1}{k}
+\left(\frac{6m(\chi+\chi_{2})}{12m}
++
+\frac{2\left(\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}\right)}{12m} 
+\left( 2m+1 
+\right)
+\right) \\
+=
+\frac{1}{12km}
+\left( 6m(\chi+\chi_{2})
++
+2\left(\omega-\frac{(\chi+\chi_{2})}{2}-\frac{(\zeta+\zeta_{2})}{2}\right) 
+\left( 2m+1 
+\right)
+\right) \\
+=
+\frac{1}{12km}
+\left( 6m(\chi+\chi_{2})
++
+\left(2\omega-(\chi+\chi_{2})-(\zeta+\zeta_{2}) 
+\right)
+\left( 2m+1 
+\right)
+\right) \\
+=
+\frac{(4m-1)(\chi+\chi_{2})+(2m+1)(2\omega-\zeta-\zeta_{2})}{12km}
+\end{align*}
+
+\subsection{Payoff if investing in both assets when $\omega$ is not investing}
+\label{ROB2}
+
+\begin{align*}
+=
+\frac{1}{k}\left (1- \frac{1}{m} \right )
+\left(\frac{\chi+\chi_{2}}{2}
++
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{3}
+\right)
+\right) 
++
+\frac{1}{m}\left (1- \frac{1}{k} \right )
+\left(\frac{\zeta+\zeta_{2}}{2}
++
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{3}
+\right)
+\right) 
+\\
++
+\frac{1}{m}\frac{1}{k} 
+\left(\frac{\zeta+\zeta_{2}}{2}
++
+\frac{\chi+\chi_{2}}{2}
++
+\left(
+\frac{\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}}{2}
+\right)
+\right) 
+\\ 
+=
+\frac{1}{k}\left (1- \frac{1}{m} \right )
+\left(\frac{3(\chi+\chi_{2})}{6}
++
+\left(
+\frac{2\left(\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}\right)}{6}
+\right)
+\right) 
++
+\frac{1}{m}\left (1- \frac{1}{k} \right )
+\left(\frac{3(\zeta+\zeta_{2})}{6}
++
+\left(
+\frac{2\left(\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}\right)}{6}
+\right)
+\right) 
+\\
++
+\frac{1}{2mk} 
+\left(\zeta+\zeta_{2}
++
+\chi+\chi_{2}
++
+\left(
+\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}
+\right)
+\right) \\
+=
+\frac{1}{6k}\left (1- \frac{1}{m} \right )
+\left(3(\chi+\chi_{2})
++
+\left(
+2\left(\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}\right)
+\right)
+\right) 
++
+\frac{1}{6m}\left (1- \frac{1}{k} \right )
+\left(3(\zeta+\zeta_{2})
++
+\left(
+2\left(\omega-\frac{\chi+\chi_{2}}{2}-\frac{\zeta+\zeta_{2}}{2}\right)
+\right)
+\right) 
+\\
++
+\frac{1}{2mk} 
+\left(
+\omega+\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}
+\right) \\
+=
+\frac{1}{6k}\left (1- \frac{1}{m} \right )
+\left(2(\chi+\chi_{2})
++
+\left(2\omega-\zeta-\zeta_{2}\right)
+\right) 
++
+\frac{1}{6m}\left (1- \frac{1}{k} \right )
+\left(2(\zeta+\zeta_{2})
++
+\left(2\omega-\chi-\chi_{2}\right)
+\right) 
+\\
++
+\frac{1}{2mk} 
+\left(
+\omega+\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}
+\right) \\
+=
+\frac{1}{3k}\left (1- \frac{1}{m} \right )
+\left(\omega+\chi+\chi_{2} -\frac{\zeta+\zeta_{2}}{2}
+\right) 
++
+\frac{1}{3m}\left (1- \frac{1}{k} \right )
+\left(\omega+\zeta+\zeta_{2}-\frac{\chi+\chi_{2}}{2}
+\right) 
+\\
++
+\frac{1}{2mk} 
+\left(
+\omega+\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}
+\right) \\
+= 
+\frac{4(m-1)}{12mk}
+\left(\omega+\chi+\chi_{2} -\frac{\zeta+\zeta_{2}}{2}
+\right) 
++
+\frac{4(k-1)}{12mk}
+\left(\omega+\zeta+\zeta_{2}-\frac{\chi+\chi_{2}}{2}
+\right) 
++
+\frac{6}{12mk} 
+\left(
+\omega+\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}
+\right) \\
+= 
+\frac{2}{12mk}\left(
+2(m-1)
+\left(\omega+\chi+\chi_{2} -\frac{\zeta+\zeta_{2}}{2}
+\right) 
++
+2(k-1)
+\left(\omega+\zeta+\zeta_{2}-\frac{\chi+\chi_{2}}{2}
+\right) 
++
+3
+\left(
+\omega+\frac{\chi+\chi_{2}}{2}+\frac{\zeta+\zeta_{2}}{2}
+\right) 
+\right) \\
+= 
+\frac{\omega(4(k+m)-2)+(\chi+\chi_2)(4m-2k+1)+(\zeta+\zeta_2)(4k-2m+1)}{12mk}
+\end{align*} 
+
+
+\subsection{$\omega$ payoff if investing in both assets}
+\label{ROB3}
+
+\begin{align*}
+\text{Payoff from investing in both assets:} \\
+\frac{\omega}{km}
++\frac{1}{k}
+\left(
+1-\frac{1}{m}
+\right)
+\left( \frac{\chi+\chi_2}{2} +\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}
+\right) 
++\frac{1}{m}
+\left(
+1-\frac{1}{k}\right)\left( \frac{\zeta+\zeta_2}{2} +\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}\right) \\
+\left(
+1-\frac{1}{k}
+\right)
+\left(
+1-\frac{1}{m}
+\right)
+\left(
+\frac{r}{km}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{2}
+\right)
++
+\frac{km-r}{km}
+\left(
+\frac{\omega - \frac{\chi+\chi_2}{2}-\frac{\zeta+\zeta_2}{2}}{3}
+\right)
+\right)
+\end{align*}
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+\end{document}

@@ -1,0 +1,27 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Back to piracy.aux
+The style file: agsm.bst
+Illegal, another \bibstyle command---line 51 of file Back to piracy.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
+I couldn't open database file Bibliography.bib
+---line 52 of file Back to piracy.aux
+ : \bibdata{Bibliography
+ :                      }
+I'm skipping whatever remains of this command
+I found no database files---while reading file Back to piracy.aux
+Warning--I didn't find a database entry for "B03"
+Warning--I didn't find a database entry for "O15"
+Warning--I didn't find a database entry for "BSA09"
+Warning--I didn't find a database entry for "KS86"
+Warning--I didn't find a database entry for "FT00"
+Warning--I didn't find a database entry for "GL03"
+Warning--I didn't find a database entry for "PW06b"
+Warning--I didn't find a database entry for "C05"
+Warning--I didn't find a database entry for "J08"
+Warning--I didn't find a database entry for "S04"
+Warning--I didn't find a database entry for "CRP91"
+Warning--I didn't find a database entry for "MRSS17"
+Warning--I didn't find a database entry for "G03"
+Warning--I didn't find a database entry for "GMM95"
+(There were 3 error messages)

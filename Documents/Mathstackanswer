@@ -1,0 +1,22 @@
+import numpy as np
+from matplotlib import pyplot as plt 
+
+# Make sample data
+finalutilityrange = np.random.randn(100)
+discreetlevel = 10
+deter = 0.2
+
+# Manually create `discreetlevel` bins anchored to  `deter`
+binsAbove = round(discreetlevel * np.count_nonzero(finalutilityrange > deter) / finalutilityrange.size)
+binsBelow = discreetlevel - binsAbove
+binwidth = max((x.max() - deter) / binsAbove, (deter - x.min()) / binsBelow)
+bins = np.concatenate([
+           np.arange(deter - binsBelow * binwidth, deter, binwidth),
+           np.arange(deter, deter + (binsAbove + 0.5) * binwidth, binwidth)
+])
+
+# Use the bins to make a single histogram
+h, b, patches = plt.hist(finalutilityrange, bins, color='b')
+
+# Change the appropriate patches to red
+plt.setp([patches[i] for i in range(len(patches)) if b[i] >= deter], color='r')

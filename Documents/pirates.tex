@@ -1,0 +1,1606 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tikz,pgfplots}
+\usepackage{preview}	
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}	
+\usepackage{natbib}
+\usepackage{color}
+\usepackage[a4paper,top=3cm,bottom=3cm, right=2cm, left=2cm]{geometry}
+\usepackage[normalem]{ulem}
+\usetikzlibrary{math}
+
+
+
+\bibliographystyle{agsm}
+ 
+\usepackage{blindtext}						
+
+\newtheorem{theorem}{Theorem}	
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+
+\begin{document}
+
+\title{Piracy model}
+\author{Diomides Mavroyiannis}
+
+\maketitle
+
+notation: \\
+U() - utility function \\
+c() - cost function of adding value to your product or degrading piracy \\
+F() - Cumulative Distribution function of the network \\
+$\pi()$- profit function \\
+p - price of good \\
+x - consumers valuation \\
+$\alpha$ - slope indicating how much consumers enjoy socializing if they buy\\
+$\beta$ - slope indicating how much people enjoy socializing if they pirate \\
+r - value lost by pirating/product degradation controlled by company \\ 
+
+The music industry is often seen as the primary victim of piracy. It's long term reduction in profit has been attributed to the large number of pirates whose allegedly actions harm both artists and their representatives\citep{B03}. More recent analysis estimates that as many copies of popular music is being pirated as is being accessed through legal means\citep{O15}.
+
+Piracy is the term used throughout this paper to describe the the copying a digital good without the permission of the one who owns the intellectual property in question. Since in essence this good is an idea, the supply of it is infinite. If for instance somebody pirates a song and plays it, what she really pirated is the specific sequence of frequencies that her speakers are playing. Fundamentally this is equivalent to a carpenter observing another carpenter construct something and then mimicking the process with his own materials. Piracy is in essence the restructuring of ones  own property without the permission of the person who has originally re-structured his property in that way. 
+
+What makes digital piracy different from merely copying? Whilst copying inherently has a noise to it which makes the copy imperfect, piracy is often considered as a perfect copy. Here we can already perhaps describe why piracy may be less desirable than copying. The process of copying itself may be innovative as an imperfect copy will sometimes create a spin-off which is superior to the original, so the process of copying in itself may be welfare improving. Attempts at approximations may yield outcomes that are superior to the original, this is especially true if there is noise in more than one dimension. 
+
+On the other hand the concept of a perfect copy is often too quickly employed, most purchased goods do not come merely with a copy of the product but come with a bundle of goods or promise of future services. It is unclear if we can truly call a pirated version of a song and legally downloaded equivalent an identical product because the process of acquisition itself may not be neutral. Indeed it is plausible that much of the difference in digital providers of music is not a function of product quality but product delivery, taking into account such things as accesibility or user interface. Nevertheless if we abstract away from such issues we can attempt to understand what issues may arise from the presence of a piracy option. 
+
+The magnitude of the damage caused by piracy is ambiguous. Given the fact that some artists choose to give their work away for free, it may be inferred that piracy is not consistently bad for the bottom line. Music is often uploaded for free on public platforms or even freely uloaded on piracy sites by their creators. A plausible non-ideological cause of this could just be that the potential revenue of services, such as concerts would rise, this can be termed as a complementary good. There is a clear case to be made that the value of complementary goods rises if the primary good is given for free.  Nevertheless there also exist large movement against piracy, industry experts and artists argue that it is not possible to make a living without this protection. Nevertheless, as consumers own more adjustable property, the cost of policing individual behavior to prevent property adjustment may be considerable. 
+
+(this is included in the model but it does not qualitatively change any of the results)
+
+One may also wish to consider that the profit may not necessarily stem from a single temporal interaction with the consumer. The producer may wish to give samples to the consumer so that the consumer will wish to come back at a later time to purchase. Reputation may play a vital role in determining prices, we can also imagine that the price of concerts for a musician is a function of his reputation(which is neesarily an intertemporal phenomenon). Televised series is another plausible example, a boost in reputation due to a more popular following, may lead to increase revenue from advertisers or even derivative toys or music related to the industry. 
+
+note: However there is no reason why this should change the results unless the complementary good is consumed second and consumers don't have imprerfect foresight. 
+
+To genralize the theory a little, we can distinguish value Value to the consumer by claiming that it stems essentially from two components, instrinsic valuation and extrinsic valuation. The intrinsic valuation of the good is the part of the valuation which is independent of the actions of other consumers. Conversely the extrinsic portion, is the value which depends on what other consumers are consuming. The ratio of these two types of values would naturally vary enormously between product. Perhaps a bare approximate criteria that may be used in everyday life is the distinction between needs and wants. 
+
+There exist many types of goods which have large extrinsic portion to their value. Following our previous example, the value of a televised series to  a consumer is not only the direct experience of watching it but also the socialization that follows it afterward. This is also true of things such as spectator sports, where a more popular following will imply that the associated organizations will be able to charge higher prices for events or membership. It is hard to imagine that the world cup attracts the number of viewers it does because a large portion of the population is interested in the intricacies of a good match, instead this is likely a communal event. The commonly employed example of the QWERTY keyboard is also relevant here but the broad framework of interdependent valuations extends to other things such as the consumption of current events or news. 
+
+Software is another case where the extrinsic valuation may vary substantially. Statistical packages in general are software products which have the value which is directly provided by the firm and the value which leaks from other consumers and is generally dependent on the number of users, this is because the number of packages and versatility of the platforms depends on their respective user base. This partly explains the rise of open source software, with Python, R, Ruby, etc.  The active user base produces packages which increases the value of these platforms. However, this is not to say that proprietary software does not gain value from a richer user base, for instance, STATA hosts events for licensees and there are many authors outside of the company that contribute.  
+
+Digital goods, once they are created, have a trivial marginal cost to distribute and can essentially be distributed to everyone with a computer and access to the Internet. A firm trying to exploit this now existing good would do so by setting the price which will maximize profits. This would depend on how it perceives the distribution of the willingness to pay of consumers to be. In a world where the firm can perfectly price discriminate, it would charge each consumer exactly what their valuation would be and in a world where it would not be able to distinguish at all, it would use the distribution of the willingness to pay to separate the world into buyers and non-buyers. Piracy on the other hand, is somewhere between these two worlds, a form of leakage., where there is a second implicit price which yields on revenue. 
+
+When a firms copyrighted product is being pirated, it has one of two main response mechanisms. Fundamentally a firm can use positive incentives by increasing the surplus of the consumer. This can be done by either decreasing the price or by increasing the value of the good. Alternatively, the firm can try to decrease the opportunity cost of buying by increasing the cost of piracy.  
+
+Product improvement or extra content is quite commonly employed in many industries. An example of this strategy in the entertainment industry is already seen through limited edition sets that include various extra content such as conceptual art or more information on the development process. In the case of sports it usually means higher pixelation or additional functionality such as the ability to pause and rewind games. Often companies structure themselves in a way as to offer a free good of base value and giving an improved product to those who pay extra. This added content is (tautologically) most often coveted by the consumers who have a higher willingness to pay.
+
+The present situation can be framed as a choice between the relative level at which a firm will rely on the stick versus the carrot. Firms with copyright claims on their products have in their arsenal both a carrot and a stick. The carrot, in this case, is the ability to attract consumers by offering a high value product. In contrast, the stick is the ability to increase the cost of piracy; this would incite pirates to switch to buying. 
+
+Conceptually, the carrot is the improvement of the product but also a decreased price and, while improving the product is often costly, changing the price is not. This means that there is automatically a built-in mechanism to incite firms to discover demand using the price. The metaphorical stick means that a firm will choose to chase after consumers. 
+
+A company that decreases the cost of pirating can expect two types of effects. The first is that the consumers who would have bought the product will instead pirate it and similarly the consumers who would have neither pirated nor bought it may decide to obtain it through piracy. The relative importance of these two effects would likely depend on the level of differentiation between the pirated product and bought product.
+
+The bought and pirated product, might differ in value naturally without extraordinary effort from the enterprise or government. For instance acquiring a product from a non-official digital source may entail some risk of downloading a virus or being hacked, this would be a natural level of a priori product degradation. Specific effects differentiating the socialization values between the two product can also be imagined. For instance a social stigma may cause the pirates to derive a lower proportion of value from socializing. Consumers may also derive additional socialization value from the bought product because it may be used as a signaling mechanism.
+
+Data indicates that the consumer who will pirate will most likely be a consumer with a lower willingness to pay. The business software alliance estimates that the developing world has a much higher rate of piracy than the developed world, with countries like the United States, Japan, Luxembourg, New Zealand, Belgium, and Denmark  having a piracy rate below $25$ per cent whilst countries like Bangladesh, Georgia, Armenia, Zimbabwe, Sri Lanka, Azerbaijan have rates exceeding $90$ per cent. \citep{BSA09}
+
+In some domains, the number of users may have no impact on the willingness to pay for the good. In such a case, the firm will merely behave as in the trivial profit maximizing case. This implies setting piracy at a high enough level s that nobody would pirate. Nevertheless these kind of domains are likely the exception and not the rule, mainly due to informational concerns. 
+
+To consider why it may be that an increase in the number of pirates may lead to an increase in the number of buyers we need only consider that the decision to purchase a good depends not only on the intrinsic value of the good but also on the number of consumers who are consuming it. This means that there is a secondary source of utility stemming from the communal aspect of a good. This can be interpreted as a sort of socialization utility.
+
+This paper focuses on cases where firms effectively have a monopoly on the network good in question. This may be for various reasons, ranging from intellectual property rights to geographical advantages and leaves the model open for an interpretation where the profit is derived from a complementary good. The main contribution of this paper is a closed form solutions for the optimal level of product improvement and explicit characterization for the conditions under which the optimal level of product degradation is 0 under a quadratic cost function, we also note that our model is more explicit about the ratio of intrinsic value and extrinsic value of the product. We also introduce a complementary good, which a firm can exploit by controlling the number of users it has.
+
+\section{Literature review}
+
+There exists a fairly rich literature on the pricing of network goods. The classic paper of networks in industrial organization by \citep{KS86} where it is shown that under  competitive paradigm, firms don't have an incentive to make their product compatible with other goods but they do have one to standardize. \cite{FT00} show that under a network good paradigm, the incumbent may decide to keep low prices even without a direct competitor as long as the threat of entry exists. 
+
+There is also work that specifically studies the effect of the quality differential between the legal and illegal copy of a pirated product. \cite{GL03} The differential is said to be quite small when it comes to music, whilst in software this gap is larger. Most piracy models do in fact assume perfect substitution between the two goods when, dropping this assumption does induce different pricing and profit outcomes. 
+
+Similarly \cite{PW06b} use a sampling model to show that giving free samples to consumers may be profitable for firms. \cite{C05} show that much of the potential benefits from piracy can be extracted by the firm if it employs a sampling strategy to draw in consumers and then sell it to them. However in most of the domains this paper discusses, this is likely not a pertinent strategy, mainly because the ability to create samples for your product is very likely correlated with the ability to differentiate it.  
+
+There is also work showing that in the digital space, with perfect copying, stronger copyright may act as a coordinating device between firms so that they may collude\citep{J08}. Indeed the work of \citep{S04} shows that prices are reduced in the presence of piracy, a result that is duplicated in this paper.
+
+Perhaps the closest model to our own is the model by \cite{CRP91} where they also have an intermediate option of piracy. However their model does not include a product improvement variable and does not give an explicit solution for a specific distribution. Other models of piracy which mimic our approach are, \cite{MRSS17}, whom mimic our demand approach but focus more on the effects of piracy when open source competition is also a factor. 
+
+There is also work on the diffusion of innovation in more dynamic settings, where piracy is said to boost innovation during the early stages of the product lifecycle process. Studying this setting yields a result that is also found on this paper, mainly that strengthening piracy controls is not necessarily an optimal strategy for digital markets. \citep{G03}  \citep{GMM95} 
+
+
+In the first section we run through what the relevant literature is by discussing both network effects and other more specific piracy models. 
+
+The second section we set up our workhorse model.
+
+In the third section we assume a uniform distribution for the consumers valuations and attempt to tease out the effects of the complementary good. 
+
+In the fourth section we use a degnerate linear distribution to show that a firm may wish to allow piracy even if no complementary good exists. 
+
+Finally we discuss the implications of various results. 
+
+\section{setting up the model}
+
+In this workhorse model we linearly separate the products value into intrinsic valuation and extrinsic value of the product. The players in this model consist of a continuous spectrum of agents and a monopolistic firm. The firm knows the distribution of consumers valuations but  has limited price discriminatory powers. 
+
+We define $x_i$ as the norm independent and dependent utility of consumer i associated to the consumption of the good whether it is pirated or bought. It is common knowledge that $x_i$ is distributed according to F with an associated density \textit{f}. When an agent consumes they derive a socialization utility which depends on the taste for the good $x_i$, the fraction of the population which consumes the good and a socialization parameter which may depend on whether the good has been bought, $\alpha$ or pirated $\beta$. 
+
+The action of the consumers consist of a choice between three discreet choices, to consume, to pirate and not to consume. The consumers are the standard rational agents who can calculate the future movement of all other consumers. Consumption and piracy both have a base value, c. The difference in these two choices in the basic model is that buying the product has a higher socialization slope, $\alpha$ which can be interpreted as more direct access to the network value of the product. Buying the good also has an added value, k a 'bonus material' that is added to the product.  Pirating the good also yields the constant value $x_i$ and a socialization value with its own slope, $\beta$. The difference between these two slopes can be interpreted as stigma from pirating, the representation of this is quite different but the motivation for this stigma is similar to  \cite{CRP91}. After section 3 we will assume $\beta$ to be 1. However all results related to $\alpha$ should be interpreted as relative to $\beta$. Absolute changes in $\alpha$ have little qualitative effect, it is only relative changes. 
+
+Pirating the good also has an additional cost, r which can be interpreted as product degradation or decrease in the probability of pirating or an increase in the penalty if pirating and caught. Finally the consumer has an opportunity cost of 0 where he can always decide not to consume. 
+
+The consumers maximization problem is the following:
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(1+\alpha \left(E(1 - \int^{\overline{x}}_{0}Q(t)f(t)dt)) \right) + k -p  & if ~ he ~ buys ~ good  \\
+                  x_i(1+\beta \left(E(1 - \int^{\overline{x}}_{0}Q(t)f(t)dt)) \right) -r &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+We say that the distribution of x's is on the interval $[0,\overline{x}]$. The base value of the product, which is just the consumer valuation $x_i$, this is the proportion of the value which consumers will benefit from regardless of whether they pirate or purchase. Note that the larger k is, the less important is the gap between the small valuation consumers and the high valuation. 
+
+The proportion of people who are in the network is given by $E(1 - \int^{\overline{x}}_{0}Q(t)f(t)dt) $. Where $Q(t)$ is a monotonic function takes the value 1 when agents with valuation t not consumers and 0 if they are users. Similarly $G(t)$ is a function which takes the the value 1 when consumers are not buying and 0 otherwise. Since Q(t) includes both buying and pirating and G(t) is only buying. It follows that G(t) stochastically first order dominates Q(t). 
+
+Unlike the consumers, the monopolist has continuous choices which involve setting of two variables,the price,p, and the product improvement k. However a vital variable that affects these choices is the piracy of the bought product, r. Something to notice immediately is that an increase in the price does not have the same effect as an increase in the degradation level. \footnote{Note that throughout the model we assume that setting r=0, costs nothing to the firm }
+
+In the literature, the only source of revenue for a firm is to sell the product, having piracy was only useful in that it motivated the buyers into their decision. However there are situations, especially in the digital world where having a larger user base also allows for additional direct profit opportunities. For instance in a social network, a larger user base allows the network owner to sell advertising slots at a higher price, and the wider the reach the more profitable the enterprise. We denote this exogenous source of revenue as $\lambda$. It should be noted that increasing pirates or users increase revenue from this source.  The firms profit function is given by:
+
+\begin{equation} \label{eq:profit1}
+\pi(p,r,k) 
+=p\left(1-E\left(\int^{\overline{x}}_{0}G(t)f(t)dt\right)\right) + \lambda \left(1-E\left(\int^{\overline{x}}_{0}Q(t)f(t)dt\right)\right)- c(k) 
+\end{equation}
+
+The cost function we will be using throughout this paper is a simple quadratic form. $c(k)= k^2$
+
+Note that for the remainder of this paper, we will be referring to the segment of "users" as the proportion of the population that is either pirating or purchasing.
+
+\subsection{Resolving the model}
+
+\subsubsection{Case where all agents are either users or non users}
+
+Start by noting that if the network value for both piracy  and purchasing are identical, $\alpha = \beta$ we are in a case where only one type of using choice occurs. Where either no buying or no piracy is occurring. Users will only purchase if the price is lower than the sum of the product improvement and the product degradation $k+r-p > 0$ and pirate otherwise, however the choice of whether to use or not to use still depends on $x_i$. If there are pirates then the cutoff will be $\check{x}$ and if there are buyers then $\tilde{x}$.  
+
+Since Q(t) is monotonic in t we have three cases: either no agents are users,$Q(t) = 1 \forall t \in [\underline{x},\overline{x}]$. Alternatively, all agents are users,$Q(t)=0 \forall t \in [\underline{x},\overline{x}]$. Or, finally,there exists some agents who are users and others who are not,$\exists t \in [\underline{x},\overline{x}]$ where $Q(t+\epsilon)=0$ and $Q(t-\epsilon)=1$.
+
+The first case, where nobody is using implies that revenue is 0. Since we assume that product degradation is not controlled by the firm, this means that product degradation is high enough that even the highest value agent will be deterred, $r>\overline{x}$. Additionally the firm must set the price high enough so this agent is deterred from purchasing $p>k+\overline{x}$. This option is strictly dominated from the firms point of view as long as either the users have heterogeneous valuation or $\lambda>0$
+
+In the second case where all agents are users, we have three possible sub-cases. Either all consumers are pirates, all consumers are purchasers or there is mix of pirates and purchasers.
+
+If all users are pirates the revenue of the enterprise is $\lambda$, the condition $ U_p(x_i)>U_b(x_i) \forall x \in [\underline{x},\overline{x}] $. Or more specifically the condition, $\overline{x}(1+\alpha)-p+k<0<\underline{x}(1+\beta)-r$ must be met. From the firms point of view, the cost-less way of reaching this condition is to just set the price high enough. This strategy is strictly dominated by decreasing the price until an interval of consumers prefers to buy.
+
+If all users are purchasers the revenue is $p+\lambda$ and the condition is that $ U_p(x_i)<U_b(x_i) \forall x \in [\underline{x},\overline{x}] $ or simply that product improvement is greater than the price, $k>p>0$. 
+
+Finally in the third sub-case revenue is $(1-E(\int^{\overline{x}}_{\underline{x}}G(t)f(t)dt)) p +\lambda$. Where $(1-E(\int^{\overline{x}}_{\underline{x}}G(t)f(t)dt))$ is the proportion of users who are buyers. This third sub-case implies that there exists a second threshold value, $\exists x_i \in [\underline{x},\overline{x}]$ where $U_p = U_b$, we call this $x_i = \hat{x}$, so $E(\int^{\overline{x}}_{0}G(t)f(t)dt)$ = $E(\int^{\hat{x}}_{\underline{x}}G(t)f(t)dt) +E(\int^{\overline{x}}_{\hat{x}}G(t)f(t)dt)$. By definition the first term $G(t) = 1$ and the second term is 0. So we have $E(\int^{\hat{x}}_{\underline{x}}f(t)dt)$, which is just the expectation of the CDF, $E(\int^{\hat{x}}_{\underline{x}}f(t)dt)=E(F(\hat{x}(p,r,k)))=F(\hat{x}(p,r,k))$
+
+\begin{proposition}
+If there exists an equilibrium in which all agents are users, then it is characterized by a value $\hat{x}$ such that an agent has an $x<\hat{x}$ he is a pirate and when $x>\hat{x}$ he is a buyer. 
+\end{proposition}
+
+\begin{proof}
+Suppose there exists a consumer whose valuation is $x$ and a second consumer whose valuation is $x'$. It is easy to see that if $u_p(x')>u_b(x')$ then $u_p(x)>u_b(x)$, while the inverse does not hold.
+\end{proof}
+
+\begin{corollary}
+The buyer has a utility that is strictly higher than the pirate.
+\end{corollary}
+
+This is a standard assumption in the literature, higher valuation consumers will always be the ones purchasing, and only a lower valuation segment will be pirating. This is a reasonable assumption only if the bought product has a higher value than the pirated good. While our model follows this same route this may not necessarily always be true, most  official streaming services have incomplete libraries whilst the pirate libraries are often exhaustive. So while this is quite reasonable for individual network goods, it may not be appropriate for platforms which give access to streaming services. 
+
+Here we can look to the firm, first note that in the case where pirates are on the higher end of the distribution and the case where buyers are on the higher end. The revenue differs only from the price the profit extracted from the complementary good is identical so the difference is in the setting of the price
+
+\subsection{Case where some agents are users and others are not}
+
+The implication of this scenario ($\exists x \in [\underline{x},\overline{x}]$ where $Q(t-\epsilon)=1$ and $Q(t+\epsilon)=0$) is that the firm has chosen some price and some level of deterrence where some consumers will not participate in consuming, whilst others will. 
+
+By a similar argument that we have used to show the existence of $\hat{x}$ we can also assume the existence of a $\check{x}$ which denotes the point at which Q(t) changes value, which also implies a CDF, $F(\check{x}(r))$. We also denote the point at which $F(\check{x}(r))=F(\hat{x}(p,r,k))$ as $\tilde{x}$ and its corresponding value on the distribution as $F(\tilde{x}(p,r,k))$. 
+
+We can interpret the cutoff point $\check{x}$ as the consumer who is indifferent between using and not using. Similarly $\tilde{x}$ is the cutoff point for buying and not using when no pirates exist. To establish which portion of consumers is pirating we need only compute $F(\hat{x})-F(\check{x})$ similarly, the proportion buying is given by $F(\overline{x})-F(\hat{x})=1-F(\hat{x})$. So the number of pirates exceeds the number of buyers if $F(\hat{x})-F(\check{x}) \geq F(\overline{x})-F(\hat{x})=2F(\hat{x})-F(\check{x})-1$.
+
+This case can give rise to 3 sub-cases, either only pirates and non-users exist, either only buyers and non-users or all three types exist. 
+
+If only pirates and non-users exist, then the revenue of the enterprise is $\lambda(1-F(\check{x}(r)))$. This sub-case is strictly dominated by the a pirates only case because the enterprise can reach revenue $\lambda$ by decreasing r, which increases revenue and reduces cost. 
+
+If buyers and non-users exist then revenue is $p(1-F(\tilde{x}(p,r,k)))+\lambda(1-F(\tilde{x}(p,r,k)))$. 
+
+Finally if all three types exist then our profit function takes the following form. 
+
+\begin{equation} \label{eq:profit1}
+\pi(p,r,k) 
+=p(1-F(\hat{x}(r,p,k))) + \lambda (1-F( \check{x}(r) ))- c(k) 
+\end{equation}
+
+Notice the price is only multiplied by the $1 - F(\hat{x})$ term, this is because not all of the $1- F(\check{x})$ users will be paying for the product. Nevertheless, as seen above, $\hat{x}$ depends on $\check{x}$, so a change in $\check{x}$ changes both the first and second term.  The lower indifference condition still has an indirect effect on the level of profit. The firm has to worry that increasing the price will shift some consumers to switch to pirating. 
+
+\subsection{Demand functions}
+
+We now compute explicit demand functions and the indifference conditions, however, the third exists only when $\check{x}=\hat{x}$. By the definitions above, it should be noted that $\check{x}<\hat{x}$. \footnote{It should also be noted that independent of the ditribution used, if $\beta = 0, \check{x}=r$. }
+
+We have three cutoff, points but only up to 2 can be used at one time. The consumer who is indifferent between pirating and not consuming yields an indifference condition of:
+
+\[
+x_i + x_i\beta \left(1-F(\check{x})\right) -r = 0 
+\]
+
+\begin{equation} \label{eq:indi1}
+\Rightarrow \check{x}(1 + \beta(1-F(\check{x}))) = r
+\end{equation}
+
+Similarly, the consumer who is indifferent between buying and pirating has a valuation of:
+
+\[
+x_i + x_i\alpha \left( 1-F(\check{x}) \right) + k -p = x_i + x_i\beta \left(1-F(\check{x})\right) -r 
+\]
+
+\begin{equation} \label{eq:indi2}
+\Rightarrow \hat{x} = \frac{p-r-k}{(\alpha - \beta)(1 - F(\check{x}))}
+\end{equation}
+
+
+It is trivial that if the value added, k, is 0, and the price is greater than the degradation, $p\geq r$, then people will only purchase if $\alpha$ is greater than $\beta$. Otherwise if $\beta>\alpha$ and $p-k>r$ then nobody will be purchasing and everyone will be pirating. 
+
+We can first note that without even observing the demand functions in each case, we can deduce that if $\tilde{x}>\hat{x}$, piracy will only be prefered if the complementary good is high enough that the mass of consumers is more important than the quality of consumers. This is because this relatinship implies there are more buyers. 
+
+\section{Uniform distribution}
+
+Up until now we have not assumed a specific distribution for the willingness to pay of consumers. We now adopt the uniform distribution to get explicit functions for our indifference conditions and derive our demand for each consumer choice. 
+
+
+\begin{proposition}
+%\label{Price}
+When consumer tastes are distributed uniformly between $0$ and $\overline{x}$;  The proportion of people who are users and consuming, respectively, are denoted by: 
+\begin{equation}\label{eq:1}
+1 - F(\check{x}) =\frac{ \beta  - 1 + \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}  }}{2 \beta }
+\end{equation}
+
+\begin{equation}\label{eq:2}
+1 - F(\hat{x})=1-\frac{(p-r-k)2 \beta}{(\alpha - \beta) \left( \beta  - 1 + \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}  }\right) \overline{x} }
+\end{equation}
+
+
+\end{proposition}
+
+\begin{proof}
+See appendix 1
+\end{proof}
+
+\begin{corollary}
+When $\beta=1$ these expressions reduce to:
+\begin{equation}\label{eq:3}
+1 - F(\check{x}) = \sqrt{1-\frac{r}{\overline{x}}}
+\end{equation}
+
+\begin{equation}\label{eq:4}
+1 - F(\hat{x})= 1 - \frac{p-r-k}{\overline{x}(\alpha - 1) \sqrt{\frac{\overline{x}-r}{\overline{x}}} }
+\end{equation}
+
+\end{corollary}
+
+Since only one hundred per cent of consumers can take any one action, demand functions are bounded at 1. Note that if r is 0, equation \ref{eq:1} reaches unity, regardless of the value of $\beta$. This is intuitive, if there is no cost to pirating then everyone will at least pirate. Similarly, if p is equal to 0, and we know that r,k $\geq 0$ and $\alpha>\beta$ then the demand function for buying is 1. 
+
+With the boundedness constrains and the buying demand function we have two additional constraints to ensure boundedness. $(a-1)\sqrt{1-r} \geq p-r-k \geq 0$
+
+The different functions of this model derived in detail in appendix 1 and 2: 
+
+Demand for buying if pirates: 
+$D_b = 1 - F(\hat{x}) = 1 - \frac{p-r-k}{\overline{x}(\alpha - 1)  \sqrt{1-\frac{r}{\overline{x}}}  }$
+
+Demand for buying if no pirates: $ \hat{D}_b =1-F(\tilde{x}) = 1-\frac{p-k}{\overline{x}(1 + \alpha \sqrt{1-\frac{r}{\overline{x}}}) }$
+
+Demand for using: $D_u = 1 - F(\check{x}) =  \sqrt{1-\frac{r}{\overline{x}}}$
+
+Demand for piracy: $D_p = F(\hat{x})-F(\check{x})= \frac{p-r-k}{(\alpha - 1) (  \sqrt{1-\frac{r}{\overline{x}}}) \overline{x}} - 1 +  \sqrt{1-\frac{r}{\overline{x}}}$
+
+Demand for not using with pirates: $D_0 = F(\check{x})=1 - \sqrt{1-\frac{r}{\overline{x}}}$
+
+Without loss of generality, from now on we we be assuming that $\overline{x}=1$.
+
+\begin{observation}
+The demand for purchasing is greater with pirates than without if $\alpha>\frac{p-r-k+(p-k)\sqrt{1-r}}{r\sqrt{1-r}}$ 
+\end{observation}
+
+\begin{observation}
+$\hat{x}$ increases with $\check{x}$. 
+\end{observation}
+
+To see why we need only see that:
+$1- \frac{p-r-k}{(\alpha-1)\sqrt{1-r}}<1- \frac{p-k}{1+\alpha \sqrt{1-r}}$
+$\rightarrow \frac{p-r-k}{(\alpha-1)\sqrt{1-r}}>\frac{p-k}{1+\alpha \sqrt{1-r}}$
+The observation follows from simplifying this expression. 
+
+
+From the boundedness constraints we know that $p>r+k$, however this is still insufficient to know if the demand under piracy is greater than the demand with no piracy. 
+
+With these conditions in hand we can now summarize the above analysis for the different cases. As a frame of reference we will be using the demand functions for piracy and the demand function for not using, these two conditions are sufficient to represent the possible cases. We cross out the cases that are priori dominated by the firms arsenal.
+
+\begin{tabular}{ | l | l | l | l | l |}
+    \hline
+    $D_p >0$ & $D_0>0$ & $D_p + D_0 < 1$ & Active types & Profit \\ \hline
+    Binding & Not binding & Not binding & Buyers and non-users& $p(1-F(\tilde{x}))+\lambda(1-F(\tilde{x}))$  \\ \hline
+     \sout{Binding} & \sout{Not binding} & \sout{Binding} & \sout{None}& \sout{0}  \\ \hline
+    Binding & Binding & Not binding & Buyers only & $p + \lambda$  \\ \hline
+    Binding & Binding & Binding & Impossible or 0 Mass & N/A  \\ \hline
+    Not binding & Not binding & Not binding & Three Segments exist & $p(1-F(\hat{x}))+\lambda(1-F(\check{x}))$ \\ \hline
+    \sout{Not binding} & \sout{Not binding} & \sout{Binding} & \sout{Pirates and nothing} & \sout{$p(1-F(\check{x}))+\lambda(1-F(\check{x}))$} \\ \hline
+    Not binding & Binding & Not binding & Pirates and buyers & $p(1-F(\hat{x}))+\lambda$  \\ \hline
+    \sout{Not binding} & \sout{Binding} & \sout{Binding} & \sout{Pirates only} & \sout{$\lambda$} \\ \hline
+\end{tabular}
+
+
+
+\subsubsection{Bounds}
+
+We can use the following equations to derive the conditions for the optimal profit of the firm: $0<D_p<1$ The upper bound is $p-k-m+\alpha(1-r)-1<(\alpha-1)(1-r) \rightarrow p-r-k<m$ and the lower bound is $p-k-m+ \alpha(1-r)-1>0$.
+
+The bounds for buying are: $0<D_b<1$, the upper bound is $1>1-\frac{p-r-k}{m} \rightarrow p>r+k$ and the lower bound is $0<1-\frac{p-r-k}{m} \rightarrow p-r-k<m$. Notice that this is the same condition as the upper bound for piracy. 
+
+The bounds for not buying are simply $0<D_0<1$. The upper bound is simply $1-\sqrt{1-r}<1 \rightarrow r<1$ and the lower bound is $0<1-\sqrt{1-r} \rightarrow r>0$. So if demand for piracy is less than 1 then demand for purchasing is more than 0. 
+
+
+
+\subsection{ Equilibrium when $r>\tilde{r}$}
+
+There are only 4 types of equilibria. These are, Buyers only, Buyers and non-users, buyers and pirates and all three sections. 
+
+\subsubsection{Case with Buyers and non-users:}
+
+This is the classic case that is find in industrial organization, however due to our utility functions, the solutions are not necessarily trivial. 
+
+In this scenario we have that $D_0>0$, $\tilde{D_b}>0$ and $D_0+\tilde{D_b}=1$, using these conditions we can solve our model. The piracy condition here is different due to the form of the demand curve. The minimal r required for none of the users to deviate into the piracy option is simply to find the consumer who is indifferent between purchasing and not purchasing, $\tilde{x}$ and setting r at the level which gives him utility of 0. 
+
+Using the constraint that $k>0$ we can arrive at the solution that the optimal quantities are: 
+
+\begin{equation}
+k = \frac{1}{3}; p=\frac{2(3+\alpha)}{9};
+\end{equation}
+
+We note that the upper bound constraint gives us: $1 \geq \hat{x} \rightarrow \alpha-1 \geq p-k$. Using the equilibrium values we can can deduce that for the upper bound not to be violated we must have an $\alpha \geq \frac{12}{7}$. 
+
+and the profit is then: 
+
+\begin{equation}
+\pi_{bn} =\frac{9\alpha+4\alpha^2}{27 \alpha}
+\end{equation}
+
+Using the upper bound condition, we can see that the minimum profit the firm can achieve is $\approx 0.58$. 
+
+\subsubsection{Case where only buyers exist:}
+
+For only buyers to exist the firm must set a price low enough so that there is no price discrimination. This can only occur if the heterogenous value of utility is irrelevant. In other words we clearly have that the price must be less than the product improvement so that it is optimal for all consumers to buy. The level of product degradation is irrelevant in this case because to incite the $\underline{x}=0$ consumer to buy, the above condition must be met, therefore we can assume product degradation to be 0. 
+
+In the case where only buyers exist we have that $D_b = 1$,$D_p = 0$ and $D_0 = 0$. The first condition implies that $p=r+k$, the third implies that r=0 and the second disappears once the other two constraints are used. In this scenario the optimal price is equal to the optimal product improvement.  
+
+With the quadratic cost function, we can know that to induce all users to prefer buying, we need to have that $k>p$ and since k*=$\frac{1}{2}$ then at the optimum $p=k$. Therefore the profit in the buyers only case is $ \pi_{b} =\frac{1}{4}$. 
+
+\subsection{Equilibrium when $r=0$}
+
+In the case where there is no product degradation (r=0), there are only two possible equilibria \footnote{this only true because the lower bound consumer has $\underline{x}=0$ } . To see why this is the case we need only consider that the firm never has an incentive to have only pirates because there is more profit to be made by having all users be purchasers with a trivial price and a small level of product improvement. 
+
+\subsubsection{Case where only buyers exist:}
+
+Since in our previous characterization, we deduced that we could assume that $r=0$, now that this is an assumption, the results are unchanged. 
+
+\subsubsection{Case with Buyers and Pirates}
+
+To describe this case we need only note that $D_p > 0$, $D_b>0$ and $D_b+D_p=1$. Using the last of these two conditions we have that r=0. This is intuitive, since there is a consumer who values the good at 0, the only way this consumer will be a pirate is if $r=0$ and $p>k$.  Simplifying the other two constraints we have that $p-k>0$ and $p-k<\alpha-1$. Since we have assumed that $\alpha >1$, the latter condition implies the first. 
+
+With $r=0$ and $p-k<\alpha-1$ we can setup our Lagrangian as $\Lambda = p(1-\frac{p-k}{\alpha-1}) + \lambda + -k^2 +\phi(a-1-p+k)$, which yields that $k=0$ and $p>\alpha-1$ so the profit in this case is $\lambda$. However these solutions imply that the constraint is never binding. 
+
+Dropping the constraint gives the solutions: 
+\begin{equation}
+\begin{array}{ll}
+p = \frac{2*(\alpha-1)^{2}}{4\alpha-5} \\
+k = \frac{\alpha-1}{4\alpha-5}
+\end{array}
+\end{equation}
+
+So if the $\alpha>\frac{5}{4}$ then the firm can price and improve its product, otherwise it simply earns $\lambda$. Notice that the price increases much quicker than product improvement as a function of $\alpha$. Profit with these conditions is 
+
+\begin{equation}
+\pi_{bp} = \frac{ (\alpha -1)^2}{4 \alpha -5}
+\end{equation} 
+
+\begin{observation}
+The firm can extract direct profit from consumers even if consumers can freely pirate. 
+\end{observation}
+
+
+
+\subsection{Equilibrium when: $0<r<1$}
+
+\subsubsection{Threshold $\lambda$ and $r$ }
+
+We can deduce that there is a $\check{\lambda}$ where $\forall \lambda>\check{\lambda}$ the firm prefers all agents to be users. We need only note that if the firm is at the profit maximizing level and not all agents are users, there would be two cases. A decrease in the price level would increase the proportion of users buying or it would increase the number of users buying and pirating, either way it would decrease profits, unless a change $\lambda$  was induced to make up the difference. 
+
+\begin{proposition}
+If $\lambda>\check{\lambda}$, then the firm will always prefer the equilibrium of pirates and buyers. 
+\end{proposition}
+
+To see why this proposition is true, we need first remember that buyers only is prefered to pirates only, so we only need to compare the buyers only equilibrium to the buyers and pirates equilibrium. The buyers-pirates equilibrium is prefered to the buyers only if: $\pi_{bp}-\pi_{b} >0$
+
+$\rightarrow \frac{(\alpha-1)^2}{4\alpha-5}+\lambda-\frac{1}{4}-\lambda=\frac{4\alpha +9-6\alpha}{4(4\alpha-5)}$ which is always positive. 
+
+\begin{corollary}
+The buyers only case strictly increases welfare relative to the buyers and pirates case $\forall \alpha> \frac{5}{4}$
+\end{corollary}
+
+This is detailed in the appendix. 
+
+Social surplus is lower in the buyer-piracy case than the buyers only case, this comes from the fact that less product improvement is pursued. Note that the buyer only case, has a higher product improvement than the piracy buyer case.  However from the welfare point of view this would be over-improvement. 
+
+The above had assumed that r was 0. If r is not equal to 0, then a cascade effect occurs and a mass of consumers will opt not to consume, therefore the only attainable equilibrium is the buyers only case. In other words if product degradation is not 0, and $\lambda>\check{\lambda}$, then the firm prefers the buyer only case, which decreases its profits relative the case with piracy. 
+
+To recap, if r is high when $\lambda>\check{\lambda}$, then this is stricly welfare decreasing. 
+
+If we loosen the complementary good, to be between $0<\lambda<\check{\lambda}$, we now open up the possibility of the other equilibria also being stable or attainable. The other equilibria can only prevail if product degradation is higher than 0. We can also assume that there is some $\tilde{r}$ where $\forall r>\tilde{r} $, no user wishes to pirate. 
+
+If $r>\tilde{r} $ and $\lambda>\check{\lambda}$ we then only have the equilibrium of buyers only once again. If on the other hand we have that $\check{\lambda}>\lambda$ with $r>\tilde{r} $, we now have the classical case of buyers and non-users, the x we have previously labeled as $\tilde{x}$. As a simplifying assumption we let $\lambda=0$, using the the fact that $k>0$ and $p>0$ we have the real solution that $k=\frac{1}{3}$, and $p=\frac{2(3+\alpha)}{9}$ and profits denoted by: $\frac{9\alpha +4\alpha^2}{27 \alpha}$. 
+
+If we are in the paradigm where r is higher than the threshold $\tilde{r}$ then no users will pirate. The threshold value is the marginal users who is detered from buying  $\tilde{r}=\tilde{x}(1+\beta(1-F(\tilde{x})))$. 
+
+Finally, if $r<\tilde{r}$ then we will be in the three segment case. If r is not high enough to deter the marginal pirate like the in previous case then there will be a continuum of users who will prefer pirating to buying and not using. 
+
+The question naturally arises if the firm prefers to be in the paradigm with the higher r or lower r.
+
+
+
+\subsubsection{Case where all segments exist}
+
+When all three segments exist we have $\Lambda=p(1-\frac{p-r-k}{m})+\lambda \sqrt{1-r} - k^2 +\phi_1(m-p+k+r)+\phi_2(p-k-r)+\phi_3(p-k-m+\alpha(1-r)-1)$. Solving this Lagrangian results in the first two constraints being loose, so we can drop them. The remaining constraint is then given by: 
+\begin{equation}
+\phi = \frac{(1-r)(\alpha(1-4m) +1)+2m(m+2-r)}{2m^2}
+\end{equation}
+
+The constraint is convex with respect to product degradation and binds when $\alpha$ is close to 0. However as $\alpha$ grows the required level of r for the constraint to bind increases and eventually the constraint is never binding. The critical level where the constraint is no longer binding for any r is $\alpha>13$. Similarly there exist values of r for which the constraint is not binding only starting from values of $\alpha>1.8$. In other words, there exists a range of r for which the constraint rotates between binding and not binding for the interval $1.8<\alpha<13$. 
+
+\subsubsection{Constraint binds}
+
+If the constraint above binds we are left with the expressions of the following form. 
+
+\begin{proposition}
+\begin{equation}
+\begin{array}{ll}
+k = \frac{(1-r)(\alpha-1)}{2m} \\
+p =\frac{(1-r)(\alpha(1-2m)-1)+2m(m+1)}{2m} \\
+where: m = (\alpha-1)\sqrt{1-r}
+\end{array}
+\end{equation}
+\end{proposition}
+
+The implication for the constraint to bind is that the firm would set its parameters in such a way that no pirates would exist. In other words, the existence of such a possibility entails that even if the parameter values are such that piracy can exist, the firm may drive out the pirates on its own. Note that this is not the same case as the case with only buyers and non-users because the firm must still take into account the potential entry of pirates. 
+
+If it is binding the firm will be trying to push pirates out and we will revert to the buyer-no user case. 
+
+
+\subsubsection{Constraint don't bind}
+
+This case is the case where the firm will allow pirates to exist 
+
+\begin{proposition}
+\begin{equation}\label{TNB}
+\begin{array}{ll}
+k = \frac{m+r}{4m-1} \\
+p = \frac{2m(m+r)}{4m-1} \\
+where: m = (\alpha-1)\sqrt{1-r}
+\end{array}
+\end{equation}
+\end{proposition}
+
+Note here that the value inside the square root will necessarily be between 0 and 1 due to the fact that $r<\overline{x}$. Imposing the fact that prices cannot be negative we can attain the condition  $\alpha>1+\frac{1}{4\sqrt{1-r}}$. If r=0 the second condition is merely that $\alpha>\frac{5}{4}$. However using the condition that $p-r-k>0$ and the optima above, we can attain a stricter condition on $\alpha$, this found below in proposition 7. 
+
+\begin{observation}
+The optimal price is concave with respect to product degradation, said otherwise, there exists an optimal level of r for each $\alpha$. 
+\end{observation}
+
+\begin{observation}
+Higher values of $alpha$ or stigma, decrease the optimal price of the monopolist. 
+\end{observation}
+
+\begin{observation}
+The $\alpha$ required to have market power(defined as the ability to make profits using the price). Is decreasing in the level of product degradation. 
+\end{observation}
+
+\begin{proposition}
+The higher is the product degradation level, the higher the required $\alpha$ for a firm to put a price on its product. 
+\end{proposition}
+
+\begin{proof}
+Using the denominator of the optimal price (\ref{TNB}), and the fact that $\alpha>1$.The optimal price is only positive if $\alpha > 1 + \frac{1}{4 \sqrt{1-r}}$. If we derive this function we obtain: $\frac{\delta \alpha}{\delta r}=\frac{1}{8(1-r)^{\frac{3}{2}}}$. Hence, a firm requires a higher $\alpha$ to price its product.
+\end{proof}
+
+To state this result another way, the higher the level of piracy pursuit the less likely is a firm to put a price on its product. This is a counter-intuitive result, ordinarily we would think that if the it is easier to pirate, would be less inclined to enter the market. This is an entry effect in the market. 
+
+\begin{proposition}
+The optimum is feasible if $\alpha>\frac{1+2r}{2\sqrt{1-r}}+1$
+\end{proposition}
+
+\begin{proof}
+We can use the constraint $p-r-k>0$ to and the optima in \ref{TNB} to see the result.
+\end{proof}
+
+We can see from this proposition that the minimum $\alpha$ for the equilibrium to be feasible is $\alpha=1.5$, which only occurs when $r = 0$. 
+
+\begin{observation}
+If $\alpha>1$, for k to be pursued at all we must have that $\alpha > 1 + \frac{1}{4\sqrt{1-r}}$. 
+\end{observation}
+
+\begin{observation}
+Conditional on  $\alpha > 1 + \frac{4}{\sqrt{1-r}}$ a higher $\alpha$ does not necessarily increase profit. 
+\end{observation}
+
+\begin{observation}
+There are two cases for alpha. 
+Case 1:Alpha is large
+If this happens then the firm has very limited incentive to limit r. 
+Case 2: Alpha is small
+In this case there exists an optimal level of  to optimize profit. 
+\end{observation}
+
+
+These observations also hold if the cost of k is quadratic, this is shown in appendix 5. 
+
+Optimal profit with these conditions is then: 
+
+\begin{equation*}
+\pi^*_{pbn} = \frac{m^2-\lambda \sqrt{1-r} +r^2 +2m(2 \lambda \sqrt{1-r} +r) }{4m-1}
+\end{equation*}
+
+If $r=0$
+
+So far we have determined that if $r=0$ the firm prefers to have only pirates and buyers only between the interval $[\frac{5}{4},1.3]$, the firm prefers to have only pirates and buyers. Between $[1.3,2.3]$, the firm prefers to have non-users and buyers then reverts back to only buyers and pirates for values higher than $\alpha$. 
+
+If we now also consider the case with three segments $\pi^*>\check{\pi}$ we have have that the piracy and buyers case is in fact always higher than the mixing all three segments as long as $r=0$.  
+
+\begin{proposition}
+If product degradation is high then the firm always prefers to have three segments. If product degradation is low, there are two cases, either a is low and the firm prefers $\tilde{\pi}$ or a is high and then the the level of r bounds what can happen. 
+\end{proposition}
+
+
+The welfare of in this case is denoted by: 
+
+\[
+W = \int_{\hat{x}}^{\overline{x}}(t + t\alpha(1-F(\check{x})) +k -p)f(t)dt 
++ \int_{\check{x}}^{\hat{x}}(t+t\beta(1-F( \check{x} )) -r)f(t) dt +\pi^*_{pbn} 
+\] 
+
+The welfare is decreasing 
+\begin{figure}[h!]
+  \caption{Welfare}
+  \centering
+  \includegraphics[width=0.5\textwidth]{C:\\Users\\DavidEttinger02\\Documents\\Welfare1.jpg}
+\end{figure}
+
+\begin{proof}
+
+\end{proof}
+
+
+
+\subsubsection{How many pirates?}
+
+There exists no closed form solution for the optimal product degradation. However through numerical solutions we can observe 
+
+\begin{proposition}
+There exists an $\alpha$, after which, all values higher than this, the optimal r is 0.  
+\end{proposition}
+
+\begin{proof}
+see appendix 6
+\end{proof}
+
+This is a fairly weak condition, if k=0, it is trivial that the price will always be smaller than the largest evaluation otherwise nobody will buy. 
+
+For the case where k is not 0 we have a few more sufficient conditions. From our previous expressions we can note that k is only smaller than p if $((a-1)\sqrt{1-r}c)>1$. 
+
+We can also observe the relative ratio of pirates to users in the three segment case is: $\frac{1-F(\hat{x})}{F(\hat{x})-F(\check{x})}=\frac{2(m+r)}{m(4\sqrt{1-r}-2)-2r-\sqrt{1-r}}$
+
+\subsubsection{Social Surplus and Welfare}
+
+With the general form of the surplus given by the expression: 
+\[
+S = \int_{\hat{x}}^{\overline{x}}(t + t\alpha(1-F(\check{x})) +k -p)f(t)dt 
++ \int_{\check{x}}^{\hat{x}}(t+t\beta(1-F( \check{x} )) -r)f(t) dt - c(k) 
+\] 
+
+Strictly speaking when trying to optimize welfare, our model is identical to a traffic control problem \cite{WD52}. However the first best is quite trivial if the central planner can optimize the direct proportion of users. However in economics this direct optimization is not incentive compatible so we cannot use the aforementioned literature. Nevertheless it is useful to note that in the first best, a strictly positive level of product improvement is pursued. This result is also invariant to the distribution of consumer valuations.   
+
+If the planner had to also worry about the stability of the equilibrium, in the form of incentive compatibility then optimizing yields a different outcome. 
+
+\begin{theorem}
+The incentive compatible social surplus optimizing level of product improvement is k=0. 
+\end{theorem}
+
+Proof: Note that from the FOC's of the social surplus we attain that the optimal price is $p^* = e^{ln((\alpha-1)\sqrt{1-r}) -2} +r+k$, similarly from the second FOC we can attain the condition $e^{ln|(\alpha -1)(\sqrt{1-r})| -2(1+ck)} = p-r-k$, combining these two conditions we attain that the optimal level of k=0. 
+
+$\hfill \square$
+
+This theorem implies that the restriction to be incentive compatible does not make it optimal to pursue any level of product improvement. This is in contrast to the unconstrained social optimal where a positive level is pursued. This suggests that if we wish to be incentive compatible, any level of product improvement in the model specified is purely a result of attempts attract consumers into their various tranches. In effect this is over-investment. 
+
+We can conclude from this that the welfare optimizing level of product improvement depends on the weighting of profit. Since we have found that the incentive compatible profit give us a positive pursuit of product improvement, and the incentive compatible surplus optimizing level of product improvement. We can conclude that welfare optimizing level of product improvement is a function of the relative weight of profit to surplus. 
+
+Finally, although there is no closed form solution for the optimal level of product degradation, we proceed by numerical simulation. The effect of product degradation on social surplus  is inferred by simulation. \\
+
+
+
+We can see here that the effect of product degradation on the surplus depends on $\alpha$. More specifically, if alpha is high there is little incentive to degrade the product and if it is low the surplus maximizer would increase it. Note that no real solutions exist for values of product degradation greater than 1. \\
+
+Although welfare is too complicated to yield a closed form solution we are interested in some specific questions. Mainly what is the effect of a higher $\alpha$ on the optimal level of product degradation? 
+
+\begin{proposition}
+The optimal level of product degradation is decreasing in $\alpha$. 
+\end{proposition}
+
+\begin{proof}
+We need only note that $\frac{\delta^2 W}{\delta r \delta a}<0$
+\end{proof}
+
+This single crossing condition implies that there exists an $\alpha$ where further on of product degradation, will strictly decrease welfare. In other words, there always exists an $\alpha$ after which any increase in the degradation level, decreases piracy. In other words, if stigma is high enough there is a substitution effect between product degradation and social stigma. 
+
+\section{Linear degenerate distribution}
+
+
+The expressions thus far have been explicitly about a uniform distribution. We can also work with a triangle distribution whose area always adds up to 1. We derive a general triangular distribution whose upper bound, z can be freely adjusted. The form of the CDF is: 
+
+$F(x) = \frac{x(2\overline{x}-x)}{\overline{x}^2}$
+
+$1-F(x) = \frac{\overline{x}^2+ x(2\overline{x}-x)}{\overline{x}^2}$
+
+This z can broadly be interpreted as the number of low value users relative to high value users. As z increases, the the number of high value users increases but also the upper bound of these users. Or more intuitively, the expected value of the distribution increases with z. \footnote{The gini of this distribution is constant for all values of z, .4 and the expected value of this distribution is $\frac{z}{3}$}:  
+
+This is an interesting add on to the model because a degenerate distribution causes increases in r to have a greater effect on the pirates depending on the level of z. Once again we follow the same analysis, however we omit the indifference values of x for the appendix. 
+
+Let the general triangle distribution be $1-F(x,y)=G(x,z)$. G(x), is strictly decreasing in x therefore the profit is increasing as x decreases.  
+Once again we can obtain indifference conditions. As before we have that $\check{x}$ is strictly increasing in r. The effect of z on $\check{x}$ is strictly decreasing. In other words, if z is higher, more agents will be incentivized to be users. 
+
+Using this $\check{x}$ we can represent $\hat{x}$ as a function of $\alpha, p$ and $z$. Trivially, once again if $p=0$ then $\hat{x}=0$. 
+
+Surprisingly, there is a single critical point for $\alpha$, where there always exists a z, which causes all increases in r to strictly decrease profit. More generally if we don't fix $\beta=1$ we find that the the gap $\alpha- \beta$ is the crucial element for the piracy to be strictly profitable. 
+
+The resulting effects from the degenerate distribution are now that $\hat{x}$ is decreasing in r as long as z is high. This is an interesting result because it shows that the profitability of piracy is a function of the willingness to pay distribution. Perhaps more importantly, if there are a few very high value consumers, the firm has a strong incentive to prefer the piracy case. 
+
+This is not neccesarily intuitive because as z rises, the proportion people who have a valuation above the median increases. This means that the firm has less incentive to focus on the low value consumers because there are less of them. However there are also more high value consumers, and it seems that this may just occur because the leakage represented by piracy is outweighed by the loss in utility. 
+
+\begin{theorem}
+If $\alpha-\beta>2$
+\end{theorem}
+
+To state the result more clearly. 
+\begin{theorem}
+There exists an $\hat{\alpha}$ where $\forall \alpha>\hat{\alpha} \exists z$ where $\hat{x}_{r}<0$
+\end{theorem}
+
+The reason this arises is that as the z parameter rises, ceteris parabis, the proportion of users who are buying increases. 
+
+Note that the highest possible valuation we can have is not z but $z(1+a)$ if all users are consuming. 
+
+
+
+\section{Discussion}
+We have attempted to model the incentives of the firm in the face of piracy and product improvement. Both of these factors have different effects on profits depending on parameter values. In practice, firms likely have the ability to control their products much more than the ability to chase after pirates. Chasing after pirates is often left up to government agencies with very little input from individual firms, this is especially true for industries where the pirates are numerous and highly decentralized. Our model shows that even if the firm has total control of the level of piracy pursuit, they would not necessarily fully utilize this capability. Under the weak conditions discussed above, the firm often has incentive to not use deterrence to push consumers out of its pool of customers because it bounds the value of its good to the high end customers. 
+
+If we gradually relax the assumption of utilities being independent we have what is called in the literature a 'network good'. It is possible to envision most goods as having an intrinsic value and an extrinsic value. This relative ratio of intrinsic to extrinsic value will likely vary substantially between cultures, space and time. The domain in which this is true is likely to extend much farther than what common intuition would entail. For instance, even perishable goods, demand for which is commonly thought of as inelastic, such as food, are not necessarily exempt from this feedback process. Accordingly, much of what can be deemed "group identity" can be represented within a network good framework. Within the framework of network goods, stealing and not consuming are not worth the same to the company, indeed a culture of baguette or chocolate eaters has value to a company.  
+
+The intuition behind this carrot and stick approach is that the price has a single effect whilst product degradation has a double effect. The price effect is much less variable because it gives the firm the ability to be more precise in its targeting mechanism. That is, while changing the price only works on the consumers who are marginally on the edge of the choice of buying or pirating, changing the degradation level affects all segments at once. Increasing the product degradation may both increase the proportion of people buying while also decreasing the user base. This decrease in the user base corresponds to the product becoming less popular and the increase in buying represents a consumer who no longer wishes to undertake the risk of pirating. However it may also just reduce both the buying segment and the pirating segment.
+
+If the firm is not aware of the exact distribution of consumers valuations or perhaps does not perfectly control the level of product degradation, it will be pushed to become more risk averse. If the firm cannot measure $\alpha$ very accurately then even if it perfectly controls the product degradation level, it will be optimal for the firm to have the level be lower than it would otherwise be. This is because setting the level too high may substantially decrease the value of the good to high value consumers, whilst setting it too low will have the double effect of both increasing the consuming population and decreasing the number of buyers. 
+
+The level of product improvement a firm will choose to pursue will depend on whether pirates exist. As seen in proposition 3, the presence of pirates acts as a competitive force which pushes the firm to improve its bought product. That is if we consider the presence of piracy to be the opportunity cost of consumers, then this conclusion is in sync with standard Industrial Organization conclusions.
+
+For this model to yield real solutions at all, certain parameter values must be used. As in Proposition 6, we can note that for an equilibrium to exist at all there must be a high enough level of network value in the bought product to sustain the equilibrium. If the network value is not sufficiently high, higher values of product degradation will not give real solutions. Therefore a priori, if the product degradation setter knows that the network value of the bought product is not too high, the setter will decide to just set r at 0. 
+
+In our model if the product degradation is high there will be less incentive to improve the product. There is a substitution effect between product improvement and product degradation. If we consider increases in k to be innovative activity, we can make the following empirical prediction, the less a firm can innovate, the more it will aim to use the piracy prevention measures. 
+
+An interesting observational inference that may be made is that the if the firm does not perfectly control the piracy level employed then the policy may be counter productive. This double effect of increasing piracy can be interpreted within an uncertainty framework. That is since the concavity of profit is not symmetric with respect to product degradation, uncertainty would imply a preference for lower levels of of product degradation from both the point of the view of the firm and the planner. This comes from the fact that in the three segment case, the form of the profit function is asymmetric around the peak, if one of the values in the model cannot be perfectly measured, then the profit expectation maximizing level of product degradation would be decreasing the variance of the risk.
+
+The model we employ here is static, however our conclusions can intuitively be extended to some dynamic cases. Our results rely on the fact that consumers have perfect expectations of what the others consumers will do. If we consider that the firm sets its variables and then the consumers continually make choices observing what the others have done, then some results may change. Perhaps most importantly, in a continuum of consumers, though an individual consumer making the wrong choice has no impact on the equilibrium, a mass of consumers can affect the outcome. If the firm makes a slightly wrong choice in p this will not cause a cascade, but if r is set slightly wrong, this can cause a cascade effect. That is, if the optimal $r$ is $r^*$ and the firm sets $r^*+\epsilon$, then there will be some interval of pirates who will no longer find it optimal to pirate and will drop out, this dropping out will reduce the utility of some other consumers and the effect will continue to cascade. This cascade effect will be reducing the proportion of the value which is norm dependent. 
+
+
+
+Plausible extentions: 
+An interesting extension to this model would be to consider cascade effects, similar to the approach of  \cite{N05}. The framework is useful for distinguishing betzeen norm independent and norm dependent utilities, and their relative ratios can induce cascade effects. In a shaking hand equilibrium context the assymetries found in this may change the optimal pricing or deterence mechanisms. An intuitive plausible effect of this is to reduce the  piracy level pursued because if it the over-pursuing it may harm profits more than under-pursuing. 
+
+
+Conclusion: 
+
+A common argument against piracy is that it decreases the number of purchasers. However the implicit assumption between such line of reasoning is that the number of purchasers and the value of the purchasing are independent. Based on the model presented here it is insufficient to judge that the effect of piracy on profits is linear or even monotonic. The disentanglement between piracy, profits, and the price level is suggested to have positive and negative feedback effects.  
+
+Protection in this paradigm is not a choice for the firm however the condition derived in this model is a sufficient condition for not wishing to set the cost of piracy above 0 even from the firms point of view. In the real world, cases such as music or movies better fit into our model, however some Digital Rights management strategies, such as requiring users to use specific platforms to access the content is also a possibility which may stop piracy. These kind of platforms can be interpreted as merely an increase in r as it decreases the probability of consuming the product, however such methods would not be costless and likely decrease the value of the product.\citep{S04}
+
+In our analysis we separate intrinstic value and network value for both the bought product and the pirated product. When we fix the value of $\beta$ to 1 we are in fact saying that the ratio of norm dependent to norm independent utility is approximately 1. This means that a user who is pirating derives equal pleasure from the intrinsic elements of the product as the extrinsic elements, such as the fact that the product can be used to socialize. If we imagine going to the cinema, it is probable that the activity of going to the cinema has a higher weight on the activity of going to the cinema than the film itself, while pirating the same film would give us a lower relative network utility.
+
+As pointed out in \cite{CRP91} this setup raises strange ethical questions. When we have possible parameter values that imply that higher pursuit of pirates may be worse for consumers and producers as well as the aggregate society which must incur the cost of enforcing this policy. 
+
+Further work: 
+While the assumption that people will be mixing with people of all valuations does not seem unreasonable, in the real world there would be a higher probability of mixing with people of ones own valuation. So a more realistic model would be one where people give higher value to those who are closer and lower to those who are further. In such a situation, the effects described in this paper would clearly be weaker. However, there are other structures, such as families, where the mixing is much more random and hence the proximity representation may be not be adequate. It is unclear if self segregation in a social value environment increases or decreases profits, though if the choice is between no socialization value and some, clearly the firms prefer the latter.
+
+\textcolor{blue}{
+The key variables in this model are r, the level of product degradation and the form of product improvement. Firms may have incentives to favor one over the other depending on their cost functions. The intuitive story here is that a firm may have the choice to increase its profit by either limiting the people who consume its product or by finding ways to add value to its buying customers. Trivially, if a firm cannot create the product in such a way where it can offer at least two types of services, then it has no incentive to let consumers realize their socialization value. }
+
+\textcolor{blue}{
+The cost function of r variable is key to setting it at the appropriate level from a profit maximizing perspective. As mentioned earlier, if the cost function is not convex the r will be set at the level $\hat{x}=\check{x}$ which directly maximizes profit. One interpretation of r is the consumers inconvenience in pirating the product, another is the expected loss of being caught and penalized, either way in a world with intellectual property, this cost is not borne by the company. On the contrary this cost is often borne by the government. In the second interpretation the government is the one with the capability of punishing the use of the product, so there is an incentive by the company to set r to the highest level possible. }
+
+What makes this network good paradigm so interesting is that in the presence of specific uncertainties about the exact valuation of consumers, it is a challenge for the firm to completely extract the value its product provides. While in an independent utilities framework it can more or less guarantee a certain revenue by setting a certain price, as utilities become more and more correlated, the firm loses its ability to accurately extract value. While in normal menu pricing, the effect of pricing consumers out of the markets are only direct, in this framework the effects are much more indirect as they shrink the size of the population consuming. If there are uncertainties about the relative ratio of norm dependent and norm independent utilities then the choice of the firm becomes asymmetric. Depending on the level of this uncertainty, a firm may wish to place r lower, as if it places the r too high it risks losing all of its profits, whilst if it places it too low it merely loses a small amount relative to its optimum. In other words, this kind of equilibrium is not a trembling hand equilibrium, imperfectly placing these variables does have cascade effects. 
+
+
+
+
+
+\section{Appendices}
+\subsection{Appendix 1: $\check{x}$, 1 - F($\check{x}$), $\hat{x}$, and 1 - F($\hat{x}$)  under uniform distribution}
+$F(\check{x})=\frac{\check{x}}{\overline{x}}$
+\[
+\check{x}(1 + \beta (1-\frac{\check{x}}{\overline{x}})) = r
+\Rightarrow \check{x} +\check{x}\beta - \beta \frac{\check{x}^2}{\overline{x}} = r
+\Rightarrow \check{x}^2-\frac{\check{x} \overline{x}(1+\beta)}{\beta} + \frac{r \overline{x}}{\beta} = 0
+\]
+
+Using the quadratic equation we have two solutions: 
+\[
+\begin{array}{ll}
+\check{x} = \frac{\overline{x}(1+\beta) \pm \sqrt{\overline{x}^{2}(1+\beta)^{2}-4 r \overline{x} \beta}}{2 \beta} \\
+= \frac{\overline{x}(1+\beta) \pm \sqrt{ \overline{x}(\overline{x}(1+\beta)^{2}-4 r \beta) }}{2 \beta} \\
+= \frac{\overline{x}(1+\beta) \pm \sqrt{ \overline{x}^{2}((1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}) }}{2 \beta} \\
+= \frac{\overline{x}(1+\beta) \pm \overline{x} \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}} }}{2 \beta} \\
+= \frac{\overline{x}(1+\beta + j)}{2 \beta}
+\end{array}
+\]
+
+Where $j =  \pm \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}  } $
+
+From here we can note that we can note that to have real solutions we must meet the condition that: $\overline{x} (1+\beta)^{2} \geq 4 r \beta$. This together with the trivial fact that $\overline{x}>\check{x}$ implies that only the negative solution to j is appropriate for values of $\beta$ greater than 0. 
+
+\[
+F(\check{x})= \frac{\overline{x}(1+\beta + j)}{2 \beta \overline{x}}
+\]
+
+Using this information we specify the network expression: 
+\[
+1 - F(\check{x}) 
+= 1 - \frac{\overline{x}(1+\beta + j)}{\overline{x} 2 \beta}
+= 1 - \frac{(1+\beta + j)}{2 \beta}
+= \frac{ 2 \beta  - 1 -\beta - j}{2 \beta }
+= \frac{ \beta  - 1 - j}{2 \beta }
+\]
+
+Note a local result, that since we want the property that if $r = 0$, everybody consumes as long as $\beta \geq 0$, which implies the use of the negative solution solves, giving that $ 1 - F(\check{x}) =\frac{ \beta  - 1 + \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}  }}{2 \beta }$ \\
+
+\[
+\hat{x} = \frac{p-r-k}{(\alpha - \beta)(1 - F(\check{x}))} 
+= \frac{p-r-k}{(\alpha - \beta) \frac{ \beta  - 1 - j}{2 \beta } }
+= \frac{(p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) }
+\]
+
+\[
+F(\hat{x}) = \frac{(p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x}}
+\]
+
+\[
+1 - F(\hat{x}) 
+= 1 - \frac{(p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} }
+= \frac{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} - (p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} }
+\]
+
+\[
+1 - F(\check{x}) - (1 - F(\hat{x}) )
+= F(\hat{x}) - F(\check{x})
+= \frac{(p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x}} - \frac{\overline{x}(1+\beta + j)}{2 \beta \overline{x}}
+\]
+
+\[
+\tilde{x} = \frac{p-k}{1 + \alpha(1 - F(\tilde{x}))}
+\rightarrow (\frac{1+\alpha}{\alpha}) \pm \sqrt{\frac{(1+\alpha)^2}{\alpha}-\frac{4(p-k)}{\alpha}}
+= \frac{(\frac{1+\alpha}{\alpha}) \pm \sqrt{\frac{(1+\alpha)^2}{\alpha^2}-\frac{4(p-k)}{\alpha}}} {2}
+= \frac{(\frac{1+\alpha}{\alpha}) \pm \sqrt{\frac{1}{\alpha}\left(\frac{(1+\alpha)^2}{\alpha}-4(p-k)\right)}} {2}
+\]
+
+\[
+1-F(\tilde{x}) = 1-\frac{(\frac{1+\alpha}{\alpha}) \pm \sqrt{\frac{1}{\alpha}(\frac{(1+\alpha)^2}{\alpha}-4(p-k))}} {2 \overline{x}}
+\]
+
+The lower bound is 
+\[
+\frac{\alpha-1}{\alpha}\mp\sqrt{\frac{1+\alpha^2+a(2+4k-4p)}{\alpha^2}}>0
+\]
+
+The upper bound is:
+\[
+\frac{1+\alpha}{\alpha}\pm \sqrt{\frac{1+\alpha^2+a(2+4k-4p)}{\alpha^2}}>0
+\]
+
+Note that if we use the upper and lower bounds only the negative solution does not violate our model. 
+
+\[
+1-F(\tilde{x}) = 1-\frac{(\frac{1+\alpha}{\alpha}) - \sqrt{\frac{1}{\alpha}(\frac{(1+\alpha)^2}{\alpha}-4(p-k))}} {2}
+\]  
+
+and the upper bound is $p-k>0$
+
+\subsection{Appendix 3: Buyers only}
+
+$k-p \geq  0$
+
+$\pi_b = p+l-k^2$
+
+$k_b*=p_b*=\frac{1}{2}$
+
+$\pi_b* = \frac{1}{4}+l$
+
+$W_b= \int_0^1x(1+\alpha) -p+k dx +\pi_b* $
+
+At optimum this is
+
+$W_b= \int_0^1x(1+\alpha) dx +\pi_b^*= \frac{3+ 2\alpha }{2} + \lambda $
+
+$W_b= \frac{3+2 \alpha}{4}+ \lambda$
+
+\subsection{Appendix 4: Buyers and pirates}
+
+Since we are still in the all users case. 
+
+$\hat{x} = \frac{p-k}{a+1}$
+
+So profit is:
+$\pi_{bp} = p(1-\frac{p-k}{a+1})+l-k^2$
+
+$p_{bp}^* = \frac{2(1+ \alpha )^2}{3+ 4 \alpha}$
+
+$k_{bp}^* = \frac{1+ \alpha }{3 + 4*\alpha}$
+
+Therefore profit is: 
+$\pi_{bp}^* = \frac{(1+ \alpha)^2 }{3 + 4\alpha} + \lambda $
+
+$W_{bp}= \int^{\hat{x}}_0 2x dx +\int^{1}_{\hat{x}} x(1+\alpha) -p +k dx + \pi_{bp}^* $
+
+$\rightarrow W_{bp}= \frac{6+20 \alpha+21\alpha^2 + 6 \alpha^3}{(3+4\alpha)^2} + \lambda$
+
+$\pi_{bp}^* -\pi_b^* = \frac{(1+ \alpha)^2 }{3 + 4*\alpha}-\frac{1}{4}$
+
+Even in the case where  $\alpha=\beta=1$, we have that $\frac{2}{7}>\frac{2}{8}$, therefore the buyer piracy case is always higher. 
+
+$W_{bp}-W_b<0$, therefore we have that welfare is always lower in the buyers and pirates case. 
+
+
+\subsection{Appendix 5: Buyers and non-users}
+If we use 
+\[
+\tilde{\pi} = p(1-F({\tilde{x}}))+\lambda(1-F({\tilde{x}}))+\phi(p-k)
+\]
+
+Note that only the negative solution yields profits. 
+
+\begin{align}
+\rightarrow p = k = \frac{1}{2} \\
+\phi = \frac{1}{2+2 \alpha}(2 \lambda - 2 \alpha -1)
+\end{align}
+
+\[\tilde{\pi}^* = \frac{a(\sqrt{\frac{(1-\alpha)^2}{\alpha}}+2\lambda(\sqrt{\frac{(1-\alpha)^2}{\alpha}}+1))- 2\lambda-1}{4 \alpha} \]
+
+This constraint is non-binding 
+
+If the constraint does not bind we then have 
+
+\[
+k = 0
+\]
+
+\[
+p= \frac{a^2+\sqrt{a^4+3 a^3 \lambda-a^3-6 a^2 \lambda+3 a \lambda-a+1}-3 a \lambda+4 a+1}{9 a}
+\]
+
+\[
+\tilde{\pi}^*=\frac{\left(\sqrt{(a-1)^2 \left(a^2+3 a \lambda+a+1\right)}+a^2+a (6 \lambda+4)+1\right) \left(a \left(\sqrt{\frac{-4
+   \sqrt{(a-1)^2 \left(a^2+3 a \lambda+a+1\right)}+5 a^2+12 a \lambda+2 a+5}{a^2}}+3\right)-3\right)}{54 a^2}
+\]
+
+\subsection{Appendix 6: $\beta$=1 and $\overline{x}$=1}
+\[
+\begin{array}{ll}
+
+
+j = \pm 2 \sqrt{1-\frac{r}{\overline{x}}} 
+
+= - 2 \sqrt{1-r} \\
+
+\check{x}= \overline{x}(1 \pm \sqrt{(1-\frac{r}{\overline{x}})} )
+
+= 1 - \sqrt{1-r}   \\
+
+1 - F(\check{x}) =  \sqrt{1-\frac{r}{\overline{x}}} 
+
+= \sqrt{1-r} \\
+
+\hat{x}=  \frac{(p-r-k) }{(\alpha - 1) (\pm \sqrt{1-\frac{r}{\overline{x}}} )}
+
+=  \frac{(p-r-k) }{(\alpha - 1) ( \sqrt{1-r} )} \\
+
+1 - F(\hat{x}) 
+
+= 1 - \frac{p-r-k}{(\alpha - 1) ( \sqrt{1-\frac{r}{\overline{x}}}) \overline{x} } 
+
+= 1 - \frac{p-r-k}{(\alpha - 1) ( \sqrt{1-r})  }\\
+
+F(\hat{x}) - F(\check{x})
+= \frac{(p-r-k)2 }{(\alpha - 1) (  2 \sqrt{1-\frac{r}{\overline{x}}}) \overline{x}} - \frac{\overline{x}(2 - 2 \sqrt{1-\frac{r}{\overline{x}}})}{2  \overline{x}}
+= \frac{p-r-k}{(\alpha - 1) (  \sqrt{1-r}) } - 1 +  \sqrt{1-r}\\
+
+\tilde{x} = \frac{(\frac{1+\alpha}{\alpha}) \pm \sqrt{\frac{1}{\alpha}\left(\frac{(1+\alpha)^2}{\alpha}-4(p-k)\right)}} {2} \\
+
+1-F(\tilde{x}) = \frac{(\frac{\alpha-1}{\alpha}) \mp \sqrt{\frac{1}{\alpha}(\frac{(1+\alpha)^2}{\alpha}-4(p-k))}} {2 } \\
+
+\end{array}
+\]
+
+$\hfill \square$
+
+\subsection{Appendix 7: Proof that $U_0(x)<U_p(x')<U_b(x'')$ implies $x<x'<x''$ } 
+
+\begin{proof}
+Let $U_p$ denote the utility from pirating, $U_b$ from buying, and $U_0$ from not consuming.
+
+$x'>x''$
+
+$x' \in I[\tilde{x}+\epsilon,\hat{x}-\epsilon] \rightarrow U_p(x')<U_b(x')$ 
+
+$x'' \in I[\hat{x}+\epsilon,\overline{x}-\epsilon] \rightarrow U_b(x'')<U_p(x'')$ 
+
+$U_p(x')=x'(1+\beta(1-F(\check{x}))-r< x'(1+\alpha(1-F(\check{x})-p + k = U_b(x') $
+
+$\rightarrow x' < \frac{r-p+k}{(\beta-\alpha)(1-F(\check{x}))}$
+
+$U_b(x'')=x''(1+\alpha(1-F\check{x}))-p+k < x''(1+\beta(1-F(\check{x}))-r = U_p(x'') $
+
+$\rightarrow x'' > \frac{r-p+k}{(\beta-\alpha)(1-F(\check{x}))}$
+
+$\frac{r-p+k}{(\beta-\alpha)(1-F(\check{x}))}>x'>x''>\frac{r-p+k}{(\beta-\alpha)(1-F(\check{x}))}$
+
+Contradiction. 
+\end{proof}
+
+Proof that pirates cannot be lower than 0. 
+\begin{proof}
+$x'<x''$
+
+$x' \in I[\underline{x} + \epsilon, \check{x}-\epsilon] 
+\rightarrow U_0(x')<U_p(x')$ 
+
+$x'' \in I[\check{x}+\epsilon,\tilde{x} -\epsilon]
+\rightarrow U_p(x'')<U_0(x'')$  
+
+$U_0(x')=0<x'(1+\beta(1-F(\check{x})))-r =U_p(x')$
+
+$\rightarrow \frac{r}{(1+\beta(1-F(\check{x})))}<x'$
+
+$U_p(x'')=x''(1+\beta(1-F(\check{x})))-r<0=U_0(x'')$
+
+$\rightarrow x''<\frac{r}{(1+\beta(1-F(\check{x})))}$
+
+$\frac{r}{(1+\beta(1-F(\check{x})))}<x'<x''<\frac{r}{(1+\beta(1-F(\check{x})))}$
+
+Contradiction. 
+\end{proof}
+
+
+
+\subsection{Appendix 8: Finding the optimal price}
+
+The firm profit function is given by:
+\[
+\begin{array}{ll}
+\pi(r,k) 
+=p(1-F(\hat{x})) + \lambda (1-F(\check{x}) )- c(k) \\
+=p(\frac{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} - (p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} }) + \lambda (1-F(\check{x}) )- c(k) \\
+= p(1 - \frac{(p-r-k)2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} }) + \lambda (1-F(\check{x}) )- ck^2 \\
+\end{array}
+\]
+
+Derivative is:
+\[
+\frac{\delta \pi(r,k)}{\delta p} 
+= 0
+= 1 - \frac{4p \beta}{(\alpha - \beta)( \beta -1- j)\overline{x}} +\frac{(r+k) 2\beta}{(\alpha - \beta)( \beta -1- j)\overline{x}}
+\]
+
+\[
+\frac{\delta \pi(r,k)}{\delta k} 
+= 0
+=  \frac{p 2 \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} } - 2kc 
+\]
+With the first FOC:
+\[
+\Rightarrow p = \frac{r+k}{2} +  \frac{(\alpha - \beta)( \beta -1- j)\overline{x}}{4 \beta}
+=\frac{1}{2}\left(r+k + \frac{(\alpha - \beta)( \beta -1 + \sqrt{ (1+\beta)^{2}- \frac{4 r \beta}{\overline{x}}  })\overline{x}}{2 \beta}\right)
+\]
+With second FOC:
+\[
+k = \frac{p \beta}{(\alpha - \beta) ( \beta  - 1 - j) \overline{x} c}
+\]
+
+With $\overline{x}=1$ and $c=1$ we combine these conditions to obtain: 
+
+$p=\frac{2d}{2d-\beta}\left(\frac{2 r \beta +d}{4 \beta} \right)$
+
+$k = \frac{2 \beta }{2d-\beta}\left(\frac{2r\beta + d}{4 \beta} \right) = \frac{2r\beta + d}{2(2d-\beta)}$
+
+$where d = (\alpha-\beta)(\beta -1-j)$
+
+Set if we also set $\beta = 1$ and, we get $j=-2\sqrt{1-r}$
+
+Which simplifies to: 
+\[
+p = \frac{2(\alpha-1)\sqrt{1-r}}{(\alpha-1)4\sqrt{1-r}-1}\left(r+(\alpha-1)\sqrt{1-r} \right)
+\]
+
+\[
+k = \frac{r+(\alpha -1)\sqrt{1-r}}{(\alpha-1)4\sqrt{1-r}-1}
+\]
+
+\subsection{Appendix for three segments}
+
+\[ 
+\begin{array}{ll}
+p-k-m+\alpha(1-r)-1>0 \\
+\Lambda = p(1-\frac{p-r-k}{m})+\lambda \sqrt{1-r}-k^2+\phi(p-k-m+\alpha(1-r)-1) \\
+\frac{\delta \Lambda}{\delta p} =0=\frac{m-2p+r+k}{m} + \phi \rightarrow \phi = \frac{2p-m-r-k}{m} \\
+\frac{\delta \Lambda}{\delta k} =0= \frac{p}{m}-2k-\phi \rightarrow \phi = \frac{p}{m}-2k \\
+\frac{\delta \Lambda}{\delta \phi} = 0 = p+\alpha(1-r)-k-m-1 \\
+\rightarrow 2p-m-r-k=p-2km \rightarrow p=m+r+k-2km=m+r+k(1-2m) \\
+\rightarrow 0 = m+r+k(1-2m)+\alpha(1-r)-k-m-1= r-k2m+\alpha(1-r)-1=(1-r)(\alpha-1)-2km \\
+k = \frac{(1-r)(\alpha-1)}{2m} \\
+\rightarrow p=\frac{(1-r)(\alpha-1)}{2m}+m+1-\alpha(1-r) = \frac{(1-r)(\alpha-1)+2m^2+2m-2m\alpha(1-r)}{2m} 
+=\frac{(1-r)(\alpha(1-2m)-1)+2m(m+1)}{2m} \\
+\rightarrow \phi = \frac{(1-r)(\alpha(1-4m) +1)+2m(m+2-r)}{2m^2}
+\end{array}
+\]
+
+\subsection{Appendix 5: Profit with price, when $\beta=1$}
+
+\[1-F(\check{x})= \sqrt{1-r}\]
+
+\[Define:~ 
+m = (a-1)\sqrt{1-r}
+\]
+
+\[
+p = \frac{2m}{4m-1}\left(r+m \right)
+\]
+
+\[
+k = \frac{r+m}{m4-1}
+\]
+
+\[
+\begin{array}{ll}
+1-F(\hat{x})= 1-\frac{p-r-k}{m} \\
+=1-\frac{2(r+m)}{4m-1} + \frac{r}{m} + \frac{r+m}{(4m-1)m} \\
+=1-\frac{r+m}{4m-1}\left(\frac{1}{m} -2 \right) + \frac{r}{m}
+\end{array}
+\]
+
+\[
+\begin{array}{ll}
+\pi(r) = \frac{2m}{4m-1}\left(r+m \right) \left(1-\frac{r+m}{4m-1}\left(\frac{1}{m} -2 \right) + \frac{r}{m} \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\ 
+= \frac{2m}{4m-1}\left(r+m \right) \left(\frac{r+m}{m}-\frac{r+m}{4m-1}\left(\frac{1}{m} -2 \right)  \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{2m}{4m-1}\left(r+m \right)^2 \left(\frac{1}{m}-\frac{1}{4m-1}\left(\frac{1}{m} -2 \right)   \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{2}{4m-1}\left(r+m \right)^2 \left(1-\frac{m}{4m-1}\left(\frac{1}{m} -2 \right)   \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{2}{4m-1}\left(r+m \right)^2 \left(1-\frac{1}{4m-1}\left(1 -m2 \right)   \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{2}{4m-1}\left(r+m \right)^2 \left(\frac{4m-1-1+2m}{4m-1}  \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{2}{4m-1}\left(r+m \right)^2 \left( \frac{6m-2}{4m-1}  \right) + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+= \frac{12m-4}{(4m-1)^2}\left(r+m \right)^2 + \lambda \sqrt{1-r} - \left(\frac{r+m}{m4-1} \right)^2 \\
+\end{array}
+\]
+
+\subsection{Appendix 7: Profit with free $\beta$}
+
+$d = (\alpha-\beta)(\beta -1-j)$
+
+$j =  - \sqrt{ (1+\beta)^{2}- 4 r \beta } $
+
+\[
+\begin{array}{ll}
+1-F(\hat{x}) = 1 - \frac{(p-r-k)2\beta}{d} \\
+= 1 - \frac{p2\beta}{d} + \frac{r2\beta}{d} + \frac{k2\beta}{d} \\
+= 1 - \frac{p2\beta}{d} + \frac{r2\beta}{d} + \frac{k2\beta}{d} \\
+= 1 - \frac{2\beta}{d}\frac{2d}{2d-\beta}\frac{2r\beta+d}{4\beta} + \frac{r2\beta}{d} + \frac{2\beta}{d}\frac{2r\beta+d}{2(2d-\beta)} \\
+= 1 - \frac{2r\beta + d}{2d-\beta}+\frac{2r\beta}{d}+\frac{2r\beta^2+d \beta}{2d^2+d\beta} \\
+=\left(\frac{d+2\beta r}{ 2d-\beta} \right)
+\end{array}
+\]
+
+$1-F(\check{x}) = \frac{\beta-1-j}{2\beta}$
+
+\[
+\begin{array}{ll}
+\pi(r) =  p(1-F(\hat{x})) + \lambda (1-F(\check{x})) -  k^2 \\
+=  -p\left(\frac{d+2\beta r}{\beta - 2d}\right) + \lambda \left(\frac{\beta-1-j}{2\beta} \right) -  \left(\frac{2r\beta + d}{2(2d-\beta)}\right)^2 \\
+=-\frac{2d}{2d-\beta}\left(\frac{2 r \beta +d}{4 \beta} \right)\left(\frac{d+2\beta r}{\beta - 2d}\right)+ \lambda \left(\frac{\beta-1-j}{2\beta} \right) -  \left(\frac{2r\beta + d}{2(2d-\beta)}\right)^2 \\
+= \frac{d (d+2 \beta r)^2 }{2\beta (\beta-2 d)^2}+ \lambda \left(\frac{\beta-1-j}{2\beta} \right) -  \left(\frac{2r\beta + d}{2(2d-\beta)}\right)^2 \\
+= -\frac{d^2+4d((\beta -1-j)\lambda+\beta r)+2 \beta((1-\beta +j)\lambda+2 \beta r^2) }{4 \beta (\beta - 2d)}
+\end{array}
+\]
+
+\subsection{Appendix 6: Profit with bounds}
+\[
+\begin{array}{ll}
+\pi(r,k) = p(1 - \frac{p-r-k}{(\alpha - \beta) \sqrt{1-r} }) + \lambda \sqrt{1-r}- k^2 \\
+We~impose~the~first~condition:  \\
+p=r+k \\
+\pi(r,k)=r+k + \lambda (1-F(\check{x}) )- k^2 \\
+= r + \frac{r+m}{4m-1} + \lambda \sqrt{1-r}- k^2\\
+= \frac{m(4r+1)}{4m-1} + \lambda \sqrt{1-r}- (\frac{r+m}{4m-1})^2\\
+We~impose~the~second~condition: \\ 
+p = (\alpha-1)\sqrt{1-r}+r+k \\
+\pi(r,k)= \lambda \sqrt{1-r}- k^2 \\
+= \lambda \sqrt{1-r}- k^2 \\
+= \lambda \sqrt{1-r}- (\frac{r+m}{4m-1})^2 \\
+\end{array}
+\]
+
+If $4m>1$
+Then the first condition is the upper bound. 
+\[
+\begin{array}{ll}
+\lambda \sqrt{1-r}- (\frac{r+m}{4m-1})^2 \leq \pi(r) \leq \frac{m(4r+1)}{4m-1} + \lambda \sqrt{1-r}- (\frac{r+m}{4m-1})^2 \\
+\rightarrow 0 \leq \frac{12m-4}{(4m-1)^2}\left(r+m \right)^2 \leq \frac{m(4r+1)}{4m-1} \\
+0 \leq \frac{12m-4}{(4m-1)}\left(r+m \right)^2 \leq m(4r+1)
+\end{array}
+\]
+
+$\hfill \square$
+
+
+
+\subsection{Appendix 6: Determining r}
+
+\[
+\begin{array}{ll}
+\pi(p^*,k^*,r) = p^*D_b(p^*,k^*,r) + \lambda D_p(r) - c(k^*) \\
+=\pi(p^*,k^*,r) = p^*(1-\frac{p^*-r-k^*}{(\alpha -1)\sqrt{1-r}}) + \lambda \sqrt{1-r} - c(k^*) \\
+We~can~apply~the~envelope~theorem~here~:\\
+\frac{\delta \pi(p^*,k^*,r)}{\delta r}  = -p^*\left(\frac{p^*-r-k^*}{2*(\alpha-1)*(1-r)^{\frac{3}{2}}} \right)+\frac{p^*}{(\alpha-1)\sqrt{1-r}} - \lambda \frac{1}{2(1-r)^{\frac{3}{2}}} = 0 \\
+\rightarrow -p^*\left(\frac{p^*-r-k^*}{(\alpha-1)} \right)+\frac{2p^*(1-r)}{(\alpha-1)} - \lambda = 0 \\
+\rightarrow \frac{p^*}{\alpha-1}\left(2-2r-p^*+r+k^* \right) -\lambda = 0 \\
+= \frac{p^*}{\alpha-1}\left(2-r-p^*+k^* \right) -\lambda = 0
+\end{array}
+\]
+
+The necessary condition for the slope of the profit function to be negative with respect to product degradation is: 
+\[
+\begin{array}{ll}
+\frac{p^*}{\alpha-1}(r+p^*)+\lambda  \geq \frac{p^*}{\alpha-1}(2+k^*)  \\
+\end{array}
+\]
+
+
+\[
+\frac{\delta \pi(p^*,k^*,r)}{\delta r} = \frac{\delta p^*D_b(p^*,k^*,r)}{\delta r}  + \frac{\delta \lambda D_u(r)}{\delta r} - \frac{\delta c(k^*)}{\delta r} 
+\]
+
+\[
+\begin{array}{ll}
+\frac{\delta D_u(r)}{\delta r} = \frac{1}{2 \beta^2}-\frac{\sqrt{(1+\beta)^2-\frac{4 r \beta}{\overline{x}}}}{2 \beta^2} - \frac{4 \beta}{4 \overline{x} \beta \sqrt{(1+\beta)^2-\frac{4r\beta}{\overline{x}}}} \\
+
+= \frac{1}{2 \beta^2}-\frac{\sqrt{(1+\beta)^2-\frac{4 r \beta}{\overline{x}}}}{2 \beta^2} - \frac{1}{ \overline{x} \sqrt{(1+\beta)^2-\frac{4r\beta}{\overline{x}}}}
+\end{array}
+\]
+
+This term is negative if 
+
+\[\sqrt{(1+\beta)^2-\frac{4r \beta}{\overline{x}}} +\frac{2\beta^2}{\overline{x}\sqrt{(1+\beta)^2-\frac{4r \beta}{\overline{x}}}} >1
+\]
+
+If $\beta = 0$, then the terms are equal. 
+
+If $\beta=1$
+\[
+\begin{array}{ll}
+\sqrt{4-\frac{4r}{\overline{x}}} +\frac{2}{\overline{x}\sqrt{4-\frac{4r}{\overline{x}}}} >1 \\
+2\sqrt{1-\frac{r}{\overline{x}}} +\frac{2}{\overline{x}2\sqrt{1-\frac{r }{\overline{x}}}} >1 \\
+2\sqrt{1-\frac{r}{\overline{x}}} +\frac{1}{\overline{x}\sqrt{1-\frac{r }{\overline{x}}}} >1 \\
+If~r~\leq~\frac{3\overline{x}}{4}~then~the~condition~is~always~met. 
+\end{array}
+\]
+
+For all values of $\beta$ greater than 1, this holds true. 
+
+\[
+\begin{array}{ll}
+\frac{\delta p^* D_b(r)}{\delta r} = 
+p^* \left(\frac{2 \beta}{\overline{x} (\alpha-\beta) \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)}
+-\frac{4 \beta^2(-k+p-r)}{\overline{x}^2 (\alpha-\beta) \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)^2   \sqrt{(1+\beta)^2-\frac{4\beta r}{\overline{x}}}} \right) \\
+= \frac{p^*2 \beta}{\overline{x} (\alpha-\beta) \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)} \left(1
+-\frac{2 \beta(-k+p-r)}{\overline{x} \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)   \sqrt{(1+\beta)^2-\frac{4\beta r}{\overline{x}}}} \right) \\
+= \frac{p^*2 \beta}{\overline{x} (\alpha-\beta) \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)} \left(1
++\frac{2 \beta(k+r-p)}{\overline{x} \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)   \sqrt{(1+\beta)^2-\frac{4\beta r}{\overline{x}}}} \right) \\
+
+if~\beta~=~0,~then ~this~ term~ is~ 0: \\
+= \frac{p^*2 \beta}{\overline{x} (\alpha-\beta) \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)} \left(1
++\frac{2 \beta(k+r-p)}{\overline{x} \left(\beta-1+\sqrt{(1+\beta)^2-\frac{4 \beta r}{\overline{x}}}\right)   \sqrt{(1+\beta)^2-\frac{4\beta r}{\overline{x}}}} \right) \\
+
+if~\beta~=~1,~then ~this~ term~ is: \\
+= \frac{p^*2 }{\overline{x} (\alpha-1) \left(\sqrt{4-\frac{4 r}{\overline{x}}}\right)} \left(1
++\frac{2 (k+r-p)}{\overline{x} \left(\sqrt{4-\frac{4 r}{\overline{x}}}\right)   \sqrt{4-\frac{4 r}{\overline{x}}}} \right) \\ 
+= \frac{p^* }{\overline{x} (\alpha-1) \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)} \left(1
++\frac{2 (k+r-p)}{\overline{x} 4 \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)   \sqrt{1-\frac{ r}{\overline{x}}}} \right) \\ 
+= \frac{p^* }{\overline{x} (\alpha-1) \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)} \left(1
++\frac{2 (k+r-p)}{ \overline{x} 4 \left( 1-\frac{ r}{ \overline{x} } \right)} \right) \\
+= \frac{p^* }{\overline{x} (\alpha-1) \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)} \left(1
++\frac{k+r-p}{ \overline{x} 2 \left( 1-\frac{ r}{ \overline{x} } \right)} \right) \\
+= \frac{p^* }{\overline{x} (\alpha-1) \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)} \left(1
++\frac{k+r-p}{ 2(\overline{x} -r) } \right)    \\ 
+= \frac{p^* }{\overline{x} (\alpha-1) \left(\sqrt{1-\frac{ r}{\overline{x}}}\right)} \left(\frac{k+ 2\overline{x} -r-p}{ 2(\overline{x} -r) } \right)    \\ 
+
+The~neccesary~condition~for~this~term~to~be~negative~is:  \\
+k^* + 2 \overline{x} -p^* -r >0 \\
+We~can~use~the~fact~that~\overline{x}>r~to~simplify~into: 
+k^* + 2 \overline{x} -p^* -r >k^* + \overline{x} -p^*>0 \\
+Note~that~a~sufficient~condition~for~this~term~to~be~negative~is~that~k^*>p^*. \\
+This~occurs~when~\beta > (\alpha-\beta)(\beta-1-j)\overline{x}c \\
+
+\rightarrow  \frac{\beta}{(\alpha-\beta)(\beta-1-j)\overline{x}} > c \\
+
+\end{array}
+\]
+
+$\hfill \square$
+
+
+\subsection{Appendix 7: Surplus}
+\textcolor{blue}{
+General form of surplus is: 
+\[
+S = \int_{\hat{x}}^{\overline{x}}(t + t\alpha(1-F(\check{x})) +k -p)f(t)dt 
++ \int_{\check{x}}^{\hat{x}}(t+t\beta(1-F( \check{x} )) -r)f(t) dt - c(k) 
+\]
+With uniform this is: 
+\[
+\begin{array}{ll}
+S 
+= \int_{\hat{x}}^{\overline{x}}(t + t\alpha(1-F(\check{x})) +k-p)\frac{1}{t}dt + \int_{\check{x}}^{\hat{x}}(t+t\beta(1-F( \check{x} )) -r)\frac{1}{t} dt - c(k)  \\
+= \int_{\hat{x}}^{\overline{x}}(1 + \alpha(1-F(\check{x})) +\frac{k}{t}-\frac{p}{t})dt + \int_{\check{x}}^{\hat{x}}(1+\beta(1-F( \check{x} )) -\frac{r}{t}) dt - c(k) \\
+= (\overline{x} - \hat{x})+\alpha(1-F(\check{x}))(\overline{x} - \hat{x}) +[ kln|t|- pln|t|]^{\overline{x}}_{\hat{x}}
++ (\hat{x}-\check{x})+\beta(1-F( \check{x} ))(\hat{x}-\check{x}) + [-rln|t|]^{\hat{x}}_{\check{x}} - c(k)  \\
+= (\overline{x} - \hat{x})+\alpha(1-\frac{\check{x}}{\overline{x}}))(\overline{x} - \hat{x}) +[ + kln|t|- pln|t|]^{\overline{x}}_{\hat{x}}
++ (\hat{x}-\check{x})+ \beta(1-\frac{\check{x}}{\overline{x}} ))(\hat{x}-\check{x}) + [ -rln|t|]^{\hat{x}}_{\check{x}} - c(k) \\
+= (\hat{x}-\check{x})+(\overline{x} - \hat{x})+ (1-\frac{\check{x}}{\overline{x}})(\alpha(\overline{x} - \hat{x}) + \beta(\hat{x}-\check{x}))
++[ + kln|\overline{x}|- pln|\overline{x}|] - [ + kln|\hat{x}|- pln|\hat{x}|] \\
++ [ -rln|\hat{x}|] - [ -rln|\check{x}|] - c(k) \\
+= (\hat{x}-\check{x})+(\overline{x} - \hat{x})+(1-\frac{\check{x}}{\overline{x}})(\alpha(\overline{x} - \hat{x}) + \beta(\hat{x}-\check{x}))
+ + kln|\frac{\overline{x}}{\hat{x}}| - pln|\frac{\overline{x}}{\hat{x}}| 
+ - rln|\frac{\hat{x}}{\check{x}}| - c(k) \\
+=(\hat{x}-\check{x})+(\overline{x} - \hat{x})+ (1-\frac{\check{x}}{\overline{x}})(\alpha(\overline{x} - \hat{x}) + \beta(\hat{x}-\check{x}))
+ + kln|\frac{\overline{x}}{\hat{x}}| - pln|\frac{\overline{x}}{\hat{x}}| 
+ - rln|\frac{\hat{x}}{\check{x}}| - c(k) \\
+=(\overline{x} - \check{x})+ (1-\frac{\check{x}}{\overline{x}})(\alpha(\overline{x} - \hat{x}) + \beta(\hat{x}-\check{x}))
+ + kln|\frac{\overline{x}}{\hat{x}}| - pln|\frac{\overline{x}}{\hat{x}}| 
+ - rln|\frac{\hat{x}}{\check{x}}| - c(k) \\
+=(\overline{x} - \check{x})+ (1-\frac{\check{x}}{\overline{x}})(\alpha(\overline{x} - \hat{x}) + \beta(\hat{x}-\check{x}))
+ + kln|\frac{\overline{x}}{\hat{x}}| - pln|\frac{\overline{x}}{\hat{x}}| 
+ - rln|\frac{\hat{x}}{\check{x}}| - c(k) \\
+= \sqrt{1-r}(\frac{\alpha}{m}(m-p+r+k)+\frac{p-r-k-m}{m}+\sqrt{1-r}) - kln\hat{x}+pln \hat{x}-r ln \frac{\hat{x}}{\check{x}}-k^2 \\
+=\sqrt{1-r}(\frac{p-r-k-m}{m}(1-\alpha)+\sqrt{1-r}) - kln\hat{x}+pln \hat{x}-r ln \frac{\hat{x}}{\check{x}}-k^2 \\
+=k+m-p + 1 - kln(\frac{p-r-k}{m})+pln (\frac{p-r-k}{m})-r ln (\frac{p-r-k}{(a-1)(1-r)})-k^2
+\end{array}
+\]}
+
+\[ 
+\frac{\delta S}{\delta p} \rightarrow (p-r-k)ln(p-r-k)=1+ln(m)
+\]
+
+\[ 
+\frac{\delta S}{\delta k} \rightarrow 1-(p-r-k)ln(p-r-k)=ln(m) + 2k
+\]
+
+If we use $\tilde{x}$ instead we have a different expression:
+\[
+\tilde{S}=(1-\tilde{x})+(1-\tilde{x})^2 \alpha-p ln \frac{1}{\tilde{x}}
+\]
+$\hfill \square$
+
+\subsection{Appendix Lagrange case where only buyers exist }
+\[
+\begin{array}{ll}
+let~m=(\alpha-1)\sqrt{1-r} \\
+\Lambda = p(1-\frac{p-r-k}{m})+\lambda\sqrt{1-r}-ck^2+\phi_1(\frac{p-r-k}{m})  \\
+\frac{\delta \Lambda}{\delta p} = m-2p+r+k+\phi_1=0 \\
+\frac{\delta \Lambda}{\delta k} = p - \phi_1-2mkc=0 \rightarrow \phi_1=2mkc-p \\
+\frac{\delta \Lambda}{\delta \phi_1} = p-r-k=0 \\
+\textnormal{Combine the first two using the first multiplier to attain:}\\ 
+= m-2p+r+k+2mkc-p \\
+= m-3p+r+k+2mkc \\
+= m-2r-2k+2mkc \\
+\rightarrow k = \frac{m-2r}{2(1-mc)} \\
+k = \frac{1}{c}(\frac{\phi_2}{m}-\frac{m}{2}) \\
+\textnormal{Combine the second with the third to attain: }\\
+\phi_1=2mkc-r-k-\phi_2 \\
+\textnormal{Combine the first with the third to attain: }\\
+m-r-k+\phi_1-\phi_2=0 \\
+\end{array}
+\]
+
+\subsection{Appendix Lagrange case where pirates and buyers exist }
+\[
+\begin{array}{ll}
+\Lambda = p(1-\frac{p-k}{\alpha-1})+\lambda-ck^2+\phi_1(1-\frac{p-k}{\alpha-1})  \\
+
+\frac{\delta \Lambda}{\delta p} = p-\frac{2p}{\alpha-1}+\frac{k}{\alpha-1}-\frac{\phi_1}{\alpha-1}=0 
+\rightarrow p(\alpha-1)-2p+k=\alpha p - 3p+k=\phi_1\\
+
+\frac{\delta \Lambda}{\delta k} = -\frac{p}{\alpha-1} - 2k+\frac{\phi_1}{\alpha-1}=0 
+\rightarrow (\alpha-1)2k+p=\phi_1\\ 
+
+\frac{\delta \Lambda}{\delta \phi_1} =1-\frac{p-k}{\alpha-1}
+\rightarrow (\alpha-1)+k=p\\
+
+\textnormal{Combine these to attain:}\\ 
+k = \frac{\alpha^2-3a+4}{3} \\
+p = \frac{\alpha^2+1}{3}
+\end{array}
+\]
+
+
+\subsection{Appendix 9: Welfare}
+\textcolor{blue}{
+So under uniform the welfare of this economy is denoted by: 
+\[
+\begin{array}{ll}
+W
+= S + \pi \\
+=  k+m-p + 1 - kln(\frac{p-r-k}{m})+pln (\frac{p-r-k}{m})-r ln (\frac{p-r-k}{(a-1)(1-r)}) + p(1-\frac{p-r-k}{m}) + \lambda (\sqrt{1-r})-k^2 \\
+\end{array} 
+\]}
+
+We can set $\check{x}=0$ since from planners point of view there is never an advantage to have consumers not consume. 
+
+\[
+W =\gamma_1(1+ \alpha(1 - \hat{x}) + \hat{x}
+ + kln|\frac{1}{\hat{x}}| - pln|\frac{1}{\hat{x}}| 
+ - rln|\hat{x}|)
++ \gamma_2(p(1-\hat{x})+\lambda) - c(k)
+\]
+
+Since the welfare optimize does not need to worry about incentives, we can just set r =0 since r strictly decreases welfare.  
+
+\[
+W =\gamma_1(1+ \alpha(1 - \hat{x}) + \hat{x}
+ + kln|\frac{1}{\hat{x}}| - pln|\frac{1}{\hat{x}}| )
++ \gamma_2(p(1-\hat{x})+\lambda) - c(k)
+\]
+
+\begin{align*}
+\frac{\delta W}{\delta \hat{x}}= -\gamma_1 a + \gamma_1 + k \hat{x}-p\hat{x}-\gamma_2 p \\ 
+\rightarrow \hat{x} = \frac{\gamma_1 a + \gamma_2p}{k-p} 
+\end{align*} 
+
+\begin{align*}
+\frac{\delta W}{\delta k}= \gamma_1ln|\frac{1}{\hat{x}}| - c'(k) =0 \\
+\frac{\gamma_1}{2c}ln|\frac{1}{\hat{x}}| = k \\
+\end{align*} 
+
+\begin{align*}
+\frac{\delta W}{\delta p}= - \gamma_1 ln|\frac{1}{\hat{x}}| 
++ \gamma_2(1-\hat{x}) \\
+\rightarrow 
+\gamma_1 ln|\frac{1}{\hat{x}}| ) = \gamma_2(1-\hat{x}) 
+\end{align*}
+
+We can combine the two latter conditions: 
+\[
+\frac{\gamma_2(1-\hat{x}) }{2c} = k
+\]
+
+\begin{align*}
+\hat{x} = \frac{\gamma_2 p + \gamma_1 a }{\frac{\gamma_2(1-\hat{x})}{2c} -p} \\
+\rightarrow
+\hat{x} = \frac{\gamma_2 -2cp \pm \sqrt{(2cp-\gamma_2)^2-4\gamma_2(2ac \gamma_1+2cp\gamma_2)}}{2 \gamma_2}
+\end{align*}
+
+This expression is strictly negative for all values of $\gamma_i \geq 0$ therefore the optimal $\hat{x} = 0$
+
+
+With conditions of $0 \leq \hat{x} \leq 1$
+
+FOC with respect to the flows: 
+\[
+\begin{array}{ll}
+\frac{\delta W}{ \delta \check{x} } = \\
+0 = \gamma_1(-1-\alpha-\beta+\alpha2\check{x}-\beta \hat{x}+2\beta\check{x}-\frac{r}{\check{x}}) -\gamma_2 \lambda  \\
+= \gamma_1(-1-\alpha-\beta+2\check{x}(\alpha+\beta)-\beta \hat{x}-\frac{r}{\check{x}}) -\gamma_2 \lambda \\
+= -1-\alpha-\beta+2\check{x}(\alpha+\beta)-\beta \hat{x}-\frac{r}{\check{x}} -\frac{\gamma_2}{\gamma_1} \lambda \\
+= -\check{x}-\check{x}\alpha-\check{x}\beta+2\check{x}^2(\alpha+\beta)-\check{x} \beta \hat{x}-r -\check{x}\frac{\gamma_2}{\gamma_1} \lambda-\\
+= 2\check{x}^2(\alpha+\beta)-\check{x}(1+\alpha+\beta+\beta \hat{x}+\frac{\gamma_2}{\gamma_1} \lambda) -r\\
+= 2\check{x}^2(\alpha+1)-\check{x}(2+\alpha+ \hat{x}+\frac{\gamma_2}{\gamma_1} \lambda) -r\\
+= 2\check{x}^2(\alpha+1)-\check{x}\xi -r \\
+= \check{x}^2 \frac{2(\alpha+\beta)}{\xi}-\check{x}-\frac{r}{\xi} \\
+\rightarrow 
+\check{x} = \frac{1 \pm \sqrt{1-4\frac{r2(\alpha+1)}{\xi^2}}}{2\frac{2(\alpha+1)}{\xi}} \\
+\check{x} = \frac{\xi \left(1 \pm \sqrt{1-\frac{r8(\alpha+1)}{\xi^2}}\right)}{4(\alpha+1)}
+\end{array}
+\]
+
+
+
+\subsection{Appendix proportional proportion}
+
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p  & if ~ he ~ buys ~ good  \\
+                  x_i(h+(1-h)(1-F(\check{x})))-r &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+
+$\check{x}= \frac{1 \pm \sqrt{1-4(1-h)r}}{2(1-h)}$ 
+
+This implies the following condition:
+
+$\frac{r}{h}+h>1+r$
+
+$1-F(\check{x})= 1-\frac{1 \pm \sqrt{1-4(1-h)r}}{2(1-h)}=\frac{1-2h \mp \sqrt{1-4(1-h)r}}{2(1-h)}$ 
+
+$\hat{x}=\frac{p-r}{hi+(1-h)(1-F(\check{x}))v}=\frac{2(p-r)}{2hi+v(1-2h \mp \sqrt{1-4(1-h)r})}$
+
+$1-F(\hat{x})=1-\frac{2(p-r)}{2hi+v(1-2h \mp \sqrt{1-4(1-h)r})}$
+
+This implies the following price:
+
+$p = \frac{1}{2}(2hi+r+v-hv \mp \sqrt{1-4r+4hr} v)$
+
+The expression for the profit is then: 
+
+$\pi = \frac{1}{2}\left( \frac{\lambda(2h-1 + o)}{h-1} + \frac{(2hi+r+v-hv-o)^2}{2(2hi+v-hv-o)} \right)$
+
+$o = \pm \sqrt{1-4(1-h)*4}$ 
+
+\subsection{Appendix relative proportion}
+
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p  & if ~ he ~ buys ~ good  \\
+                  x_i(h+(1-h)(1-F(\check{x}))-rj) &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+
+\begin{align*}
+x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p = x_i(h+(1-h)(1-F(\check{x})))-rj \\
+\rightarrow 
+\hat{x} = \frac{p-rj}{hi+(1-h)v(1-F(\check{x}))} \\
+For~the~lower~indifference~condition:\\
+x_i(h+(1-h)(1-F(\check{x}))-rj)=0 \\
+x_i(1-F(\check{x})(1-h)-rj)=0 \\
+1-F(\check{x})(1-h)-rj=0 \\
+If~uniform [0,1]: \\
+\check{x}= \frac{1-rj}{1-h} \\
+1-F(\check{x}) = \frac{rj-h}{1-h} \\
+\hat{x} = \frac{p-rj}{hi+v(1-rj)} \\
+1-F(\hat{x})=\frac{p-rj}{hi+v(1-rj)} \\
+If~Pareto:\\ 
+F(\check{x})= \frac{1-rj}{1-h} \\
+\frac{1-\underline{x}^\alpha x^{-\alpha}}{1-(\frac{\underline{x}}{\overline{x}})^a}= \frac{1-rj}{1-h} \\
+1-\underline{x}^\alpha x^{-\alpha} = \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right) \\
+\underline{x}^\alpha x^{-\alpha} =1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right) \\
+\check{x}=\left(\frac{1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)}{\underline{x}^\alpha}\right)^{-\frac{1}{\alpha}} \\
+\check{x}=\left(\frac{\underline{x}^\alpha}{1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)}\right)^{\frac{1}{\alpha}} \\
+\check{x}=\frac{\underline{x}}{\left(1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)\right)^\frac{1}{\alpha}} \\
+If~\underline{x}=1 \\
+\check{x}=\frac{1}{\left(1- \frac{1-rj}{1-h}\left(1-\left(\frac{1}{\overline{x}}\right)^a \right)\right)^\frac{1}{\alpha}} \\
+F(\check{x}) = \frac{1-((1+d(\zeta-1))^{-\frac{1}{\alpha}})^{-\alpha}}{1-\zeta} \\
+\zeta = (\frac{1}{\overline{x}})^{\alpha} \\
+d = \frac{1-rj}{1-h} \\
+\end{align*}
+
+\subsection{Appendix Old  proportion}
+
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p  & if ~ he ~ buys ~ good  \\
+                  x_i(h+(1-h)(1-F(\check{x})))-r &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+
+$\check{x}= \frac{1 \pm \sqrt{1-4(1-h)r}}{2(1-h)}$ 
+
+This implies the following condition:
+
+$\frac{r}{h}+h>1+r$
+
+$1-F(\check{x})= 1-\frac{1 \pm \sqrt{1-4(1-h)r}}{2(1-h)}=\frac{1-2h \mp \sqrt{1-4(1-h)r}}{2(1-h)}$ 
+
+$\hat{x}=\frac{p-r}{hi+(1-h)(1-F(\check{x}))v}=\frac{2(p-r)}{2hi+v(1-2h \mp \sqrt{1-4(1-h)r})}$
+
+$1-F(\hat{x})=1-\frac{2(p-r)}{2hi+v(1-2h \mp \sqrt{1-4(1-h)r})}$
+
+This implies the following price:
+
+$p = \frac{1}{2}(2hi+r+v-hv \mp \sqrt{1-4r+4hr} v)$
+
+The expression for the profit is then: 
+
+$\pi = \frac{1}{2}\left( \frac{\lambda(2h-1 + o)}{h-1} + \frac{(2hi+r+v-hv-o)^2}{2(2hi+v-hv-o)} \right)$
+
+$o = \pm \sqrt{1-4(1-h)*4}$ 
+
+\subsection{Appendix relative proportion}
+
+\[
+U_i= \left\{
+                \begin{array}{ll}
+                  x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p  & if ~ he ~ buys ~ good  \\
+                  x_i(h+(1-h)(1-F(\check{x}))-rj) &  if ~ he ~ pirates ~ good \\
+									0 & if ~ no ~ consumption  \\ 
+                \end{array}
+\right.
+\]
+
+\begin{align*}
+x_i(h(1+i)+(1-h)(1-F(\check{x})(1+v)))-p = x_i(h+(1-h)(1-F(\check{x})))-rj \\
+\rightarrow 
+\hat{x} = \frac{p-rj}{hi+(1-h)v(1-F(\check{x}))} \\
+For~the~lower~indifference~condition:\\
+x_i(h+(1-h)(1-F(\check{x}))-rj)=0 \\
+x_i(1-F(\check{x})(1-h)-rj)=0 \\
+1-F(\check{x})(1-h)-rj=0 \\
+If~uniform [0,1]: \\
+\check{x}= \frac{1-rj}{1-h} \\
+1-F(\check{x}) = \frac{rj-h}{1-h} \\
+\hat{x} = \frac{p-rj}{hi+v(1-rj)} \\
+1-F(\hat{x})=\frac{p-rj}{hi+v(1-rj)} \\
+If~Pareto:\\ 
+F(\check{x})= \frac{1-rj}{1-h} \\
+\frac{1-\underline{x}^\alpha x^{-\alpha}}{1-(\frac{\underline{x}}{\overline{x}})^a}= \frac{1-rj}{1-h} \\
+1-\underline{x}^\alpha x^{-\alpha} = \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right) \\
+\underline{x}^\alpha x^{-\alpha} =1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right) \\
+\check{x}=\left(\frac{1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)}{\underline{x}^\alpha}\right)^{-\frac{1}{\alpha}} \\
+\check{x}=\left(\frac{\underline{x}^\alpha}{1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)}\right)^{\frac{1}{\alpha}} \\
+\check{x}=\frac{\underline{x}}{\left(1- \frac{1-rj}{1-h}\left(1-\left(\frac{\underline{x}}{\overline{x}}\right)^a \right)\right)^\frac{1}{\alpha}} \\
+If~\underline{x}=1 \\
+\check{x}=\frac{1}{\left(1- \frac{1-rj}{1-h}\left(1-\left(\frac{1}{\overline{x}}\right)^a \right)\right)^\frac{1}{\alpha}} \\
+F(\check{x}) = \frac{1-((1+d(\zeta-1))^{-\frac{1}{\alpha}})^{-\alpha}}{1-\zeta} \\
+\zeta = (\frac{1}{\overline{x}})^{\alpha} \\
+d = \frac{1-rj}{1-h} \\
+\end{align*}
+
+
+
+
+
+There are two cases for the firm to pursue here. Either it wishes to let all users purchase because the complementary good is of high value or it prefers to use the price level to induce high value agents to consume. In the former case the firm will just set the price equal to the product improvement and optimize.
+
+Why would a firm prefer the former case over the latter? Because the complementary good is sufficiently high that the mass of consumers is more important than their value. The specific condition is that $\lambda-\alpha-\frac{1}{2}>0$
+
+\begin{equation}\label{BUB}
+\begin{array}{ll}
+p = k = \frac{1}{2}
+\end{array}
+\end{equation}
+
+These imply profits of 
+
+\begin{equation}
+\tilde{\pi} =\frac{a(\sqrt{\frac{(1-\alpha)^2}{\alpha}}+2\lambda(\sqrt{\frac{(1-\alpha)^2}{\alpha}}+1))- 2\lambda-1}{4 \alpha} 
+\end{equation} 
+
+\begin{proposition}
+The firm strictly prefers for product degradation to be set at a high level so that it is not pushed into the pirates and buyers cases.  
+\end{proposition}
+
+\begin{proof}
+To see why we need only take the difference between $\tilde{x}-\check{x}>0$ whilst abiding by the constraint that $2 \lambda -2\alpha-1$ to see that this constraint is true. 
+\end{proof} 
+
+\begin{proof}
+Note that if $r =0 $ the profit from the buyers and non-users $\tilde{\pi} = \frac{1}{2} + \lambda$. We then take the difference between $\tilde{\pi}-\check{\pi}=\frac{4 \pm \sqrt{2}}{2} \approx \frac{4 \pm 0.7}{2} $
+\end{proof}
+
+So the value of th stigma is crucial is determining which one of these two regimes will be favored. 
+
+
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+
+
+\end{document}

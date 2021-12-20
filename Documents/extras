@@ -1,0 +1,45 @@
+distribution = []
+x_vector = []
+y_vector = []
+
+"Each object contains a y coordinate and two x coordinates to indicate the boxes"
+class Distributionpoints(object):
+	"""docstring for distributionpoints"""
+	def __init__(self, y_coordinate, x_coordinate_lower,x_coordinate_upper):
+		self.y_coordinate = y_coordinate
+		self.x_coordinate_lower = x_coordinate_lower
+		self.x_coordinate_upper = x_coordinate_upper
+	def __str__(self):
+		return "<Y-coordinate: %s. X-coordinate-lower: %s. X-coordinate-upper: %s.>" % (self.y_coordinate,self.x_coordinate_lower,self.x_coordinate_upper)
+
+
+"""Create an array of distributionpoints objects and returns it as an array"""
+def createdistribution(array,partitions):
+	distribution = []
+	print('Max and Min')
+	maxi = max(array)
+	print(maxi)
+	mini = min(array)
+	print(mini)
+	interval = (maxi - mini)/(partitions-1)
+	for x in range(0,partitions):
+		"""Coutns how many numbers are in the interval"""
+		numbersinrange = sum(1 for i in range(0,len(array)) if array[i-1] > mini + interval*(x-1) and array[i-1] <= mini + interval*x)
+		freq.append(numbersinrange)
+		distribution.append(Distributionpoints(numbersinrange,mini + interval*(x-1),mini + interval*x))
+	totalfreq = np.sum(freq)
+	print('frequency is:')
+	print(totalfreq)
+	return distribution
+
+"""Transform utility into distribution"""
+dist = createdistribution(finalutilityrange,discreetlevel)
+
+"""Create a y vector for the distribution"""
+for x in range(0,len(dist)):
+	y_vector.append(dist[x].y_coordinate)
+	pass
+
+
+for x in range(0,len(dist)):
+		print(dist[x]) 
