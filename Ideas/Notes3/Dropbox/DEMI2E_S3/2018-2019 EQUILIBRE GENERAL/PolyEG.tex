@@ -1,0 +1,1941 @@
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[applemac]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{amssymb,amsfonts,amsmath}
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Définition}[section]
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{corollary}{Corollaire}[section]
+\newtheorem{example}{Exemple}[section]
+
+\newtheorem{lemma}{Lemme}[section]
+
+\newtheorem{remark}{Remarque}[section]
+\newtheorem{property}{Propriété}
+
+
+
+\newcommand\R{\mathbb R}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, March 25, 2009 15:50:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\def \L { {\mathcal L}}
+\setlength{\unitlength}{1cm} \setlength{\textwidth}{17cm}
+\setlength{\oddsidemargin}{0cm} \setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-45pt} \setlength{\textheight}{23.5cm}
+\renewcommand{\baselinestretch}{1.3}
+
+%\input{tcilatex}
+
+\begin{document}
+
+
+\title{Aide-m\'{e}moire de Micro\'{e}conomie: théorie de l'équilibre général}
+\author{Cours de Vincent Iehl\'e\footnote{{\sf Contact: Vincent.Iehle@dauphine.fr}. \newline Notes mises à jour du cours de Fran\c coise Forges (année 2008).}}
+\date{Diplôme L2 MI2E, Année 2015-2016}
+\maketitle
+
+\begin{itemize}\item {\bf Manuel de r\'{e}f\'{e}rence:} Jean-Marc  Tallon, {\it  
+Equilibre g\'{e}n\'{e}ral: une introduction}, Eds Vuibert,
+(1997).
+\item[]\item {\bf Calcul de la note finale:} 0.5 Examen + 0.3 Partiel + 0.2 Contrôle Continu
+\item[]\item {\bf Document supplémentaire:} Brochure d'exercices pour les travaux dirigés
+\end{itemize}
+
+\newpage
+\tableofcontents
+\newpage
+\newpage
+
+
+
+
+\section*{Introduction, notations}
+
+\bigskip
+
+Equilibre \textit{g\'{e}n\'{e}ral}:\begin{itemize}
+
+\item \textit{Tous} les biens $l=1,...,L$
+
+\item \textit{Tous} les agents $i=1,...,N$
+
+\item Dans un premier temps: \'{e}conomie d'\'{e}change pur:
+
+\begin{quote}Les biens, initialement d\'{e}tenus par les agents (ou consommateurs) sont 
+\'{e}chang\'{e}s entre ceux-ci, de mani\`{e}re \`{a} maximiser leur
+satisfaction individuelle, compte tenu des ressources disponibles.\end{quote}
+\end{itemize}
+\bigskip
+
+Donn\'{e}es:
+
+\begin{itemize}\item  $e^{i}\in \mathbb{R}_{+}^{L}$: dotation initiale de $i$, $%
+i=1,...,N$
+
+\item  $\succsim ^{i}$: pr\'{e}f\'{e}rences de $i$ sur les paniers de
+biens, $i=1,...,N$
+\end{itemize}
+\bigskip
+
+Equilibre concurrentiel $(p,z^{1},...,z^{N})$:
+
+\begin{itemize}
+\item $p=(p_{1},...,p_{L})\in \mathbb{R}_{+}^{L}$ vecteur de prix
+\item $(z^{1},...,z^{N})\in (\mathbb{R}_{+}^{L})^{N}$: allocation de biens
+tels que\begin{enumerate}\item  $z^{i}$ ($i=1,...,N$) maximise les pr\'{e}f\'{e}rences $\succsim ^{i}$
+de $i$ sous sa contrainte budg\'{e}taire
+\item les march\'{e}s ($l=1,...,L$) s'apurent
+\end{enumerate}
+\end{itemize}
+
+\bigskip
+
+Conditions garantissant l'existence (et, \'{e}ventuellement, l'unicit\'{e})
+d'un tel \'{e}quilibre? Propri\'{e}t\'{e}s d'un tel \'{e}quilibre?
+Conditions d'application? Quels résultats si les marchés fonctionnent imparfaitement?\newpage
+
+\section{Le consommateur}
+
+\subsection{Pr\'{e}f\'{e}rences, fonction d'utilit\'{e}}
+
+On consid\`{e}re un consommateur typique (on omet donc l'indice $i$).
+\begin{itemize}
+\item $z=(z_{1},...,z_{L})\in $ $\mathbb{R}_{+}^{L}$ d\'{e}signe un panier de biens.
+
+\item $z_{l}$: quantit\'{e} de bien $l$.
+\end{itemize}
+
+Le consommateur a des pr\'{e}f\'{e}rences $\succsim $ sur $\mathbb{R}%
+_{+}^{L} $:
+
+\begin{itemize}
+\item $z$ $\succsim z^{\prime }$: le consommateur pr\'{e}f\`{e}re $z$ \`{a} $%
+z^{\prime }$ (et peut \^{e}tre indiff\'{e}rent entre $z$ et $z^{\prime }$)
+
+\item $z\thicksim z^{\prime }\Leftrightarrow z$ $\succsim z^{\prime }$ et $%
+z^{\prime }$ $\succsim z$: il est indiff\'{e}rent entre $z$ et $z^{\prime }$
+
+\item $z\succ z^{\prime }\Leftrightarrow z$ $\succsim z^{\prime }$ et non $%
+z^{\prime }\succsim z$: il pr\'{e}f\`{e}re strictement $z$ \`{a} $z^{\prime
+} $
+\end{itemize}
+
+\bigskip
+
+\begin{definition} Une fonction d'utilit\'{e} $u:\mathbb{R}_{+}^{L}\rightarrow 
+\mathbb{R}$ repr\'{e}sente $\succsim $ si $z$ $\succsim z^{\prime
+}\Leftrightarrow u(z)\geq u(z^{\prime })$.
+\end{definition}
+
+\begin{remark} Si $u$ repr\'{e}sente $\succsim $ et $f:\mathbb{R}\rightarrow 
+\mathbb{R}$ est une fonction strictement croissante, $f\circ u$ repr\'{e}%
+sente aussi $\succsim $.\end{remark}
+
+Hypoth\`{e}ses: $\succsim $ est une relation (binaire) qui est
+\begin{itemize}
+\item[$\bullet$]  transitive: $\forall z,z^{\prime },z^{\prime \prime }\in $ $%
+\mathbb{R}_{+}^{L}$ : $z$ $\succsim z^{\prime }$ et $z^{\prime }$ $\succsim
+z^{\prime \prime }\Rightarrow z$ $\succsim z^{\prime \prime }$
+
+\item[$\bullet$]   compl\`{e}te: $\forall z,z^{\prime }\in $ $\mathbb{R}_{+}^{L}$ : $%
+z$ $\succsim z^{\prime }$ ou $z^{\prime }$ $\succsim z$
+
+\item[$\bullet$]   continue: $\forall $ suites $z_{t}\rightarrow z$, $z_{t}^{\prime
+}\rightarrow z^{\prime }$: $z_{t}$ $\succsim z_{t}^{\prime }$, $%
+t=1,2,...\Rightarrow z$ $\succsim z^{\prime }$
+
+\end{itemize}
+\bigskip
+
+\begin{proposition} Si $\succsim $ satisfait les hypoth\`{e}ses ci-dessus, $\exists
+u:\mathbb{R}_{+}^{L}\rightarrow \mathbb{R}$ continue qui repr\'{e}sente $%
+\succsim $. \end{proposition}
+
+\bigskip
+
+Autres propri\'{e}t\'{e}s usuelles des pr\'{e}f\'{e}rences $\succsim $ :
+\begin{itemize}
+\item[$\bullet$]   monotones ($\Leftrightarrow $ $u$ est croissante): $z\gg
+z^{\prime }$ (c.\`{a}.d. $z_{l}>z_{l}^{\prime }$, $l=1,...,L$) $\Rightarrow
+z\succ z^{\prime }$ ($\Leftrightarrow $ $u(z)>u(z^{\prime })$ )
+
+\item[$\bullet$]   strictement monotones ($\Leftrightarrow $ $u$ est strictement
+croissante): $z>z^{\prime }$ (c.\`{a}.d. $z\geq z^{\prime }$ et $z\neq
+z^{\prime }$) $\Rightarrow z\succ z^{\prime }$ ($\Leftrightarrow $ $%
+u(z)>u(z^{\prime })$ )
+
+\item[$\bullet$]   convexes: $\forall z\in \mathbb{R}_{+}^{L}$: $P=\{z^{\prime
+}:z^{\prime }\succsim z\}$ est un ensemble convexe, c.\`{a}.d. $z^{\prime
+}\succsim z$ et $z^{\prime \prime }\succsim z\Rightarrow \lambda z^{\prime
+}+(1-\lambda )z^{\prime \prime }\succsim z$, $\forall $ $0<\lambda <1$
+
+\end{itemize}
+
+\begin{itemize}
+\item[$\bullet$]  En termes d'une fonction d'utilit\'{e} $u$ repr\'{e}sentant $\succsim $:  si $%
+\{z^{\prime }:u(z^{\prime })\geq r\}$ convexe $\forall r\in \mathbb{R}$; on
+dit que $u$ est quasi-concave.
+\end{itemize}
+
+
+\begin{proposition} $u$ est quasi-concave $\Leftrightarrow \forall z\neq z^{\prime
+} $ $u(\lambda z+(1-\lambda )z^{\prime })\geq \min \{u(z),u(z^{\prime })\}$, 
+$\forall $ $0<\lambda <1$. \end{proposition}\textit{D\'{e}monstration: exercice.}
+
+\bigskip
+
+\begin{itemize}
+\item[$\bullet$] strictement convexes: $z^{\prime }\succsim z$, $z^{\prime \prime
+}\succsim z$ et $z^{\prime }\neq z^{\prime \prime }\Rightarrow \lambda
+z^{\prime }+(1-\lambda )z^{\prime \prime }\succ z$, $\forall $ $0<\lambda <1$%
+; $u$ repr\'{e}sentant $\succsim $ est alors strictement quasi-concave (in%
+\'{e}galit\'{e} ci-dessus stricte)\end{itemize}
+
+
+\bigskip
+
+Autres propri\'{e}t\'{e}s de la fonction d'utilit\'{e} $u$:
+\begin{itemize}
+\item[$\bullet$]  $u$ est diff\'{e}rentiable
+\item[$\bullet$]  $u$ est concave: $\forall z,z^{\prime }$ $u(\lambda z+(1-\lambda
+)z^{\prime })\geq \lambda u(z)+(1-\lambda )u(z^{\prime })$, $\forall $ $%
+0<\lambda <1$
+\end{itemize}
+
+\begin{proposition} $u$ concave $\Rightarrow u$ quasi-concave, mais l'inverse n'est
+pas vrai.\end{proposition} \textit{D\'{e}monstration: exercice.}
+
+\begin{proposition} Si $u$ est diff\'{e}rentiable deux fois contin\^{u}ment, $u$
+est concave $\Leftrightarrow D^{2}u(z)$ est semi-d\'{e}finie n\'{e}gative pour tout  $%
+z$ \end{proposition}
+
+\bigskip
+
+\subsection{Le taux marginal de substitution}
+
+Pour fixer les id\'{e}es: $L=2$.$\ $On note les paniers de biens $z=(x,y)\in 
+\mathbb{R}_{+}^{2}$.
+
+\begin{definition}  Le taux marginal de substitution du second bien, $y$, pour
+le premier, $x$, en un point $(x_{0},y_{0})$, not\'{e} $TMS_{y\rightarrow
+x}(x_{0},y_{0})$, est la quantit\'{e} de bien $y$ qu'il faut donner au
+consommateur pour compenser la perte marginale d'une unit\'{e} de bien $x$
+en ce point.
+\end{definition}
+
+Si la fonction d'utilit\'{e} $u$ est diff\'{e}rentiable, $TMS_{y\rightarrow
+x}(x_{0},y_{0})$ correspond \`{a} la valeur absolue de la pente de la courbe
+d'indiff\'{e}rence en $(x_{0},y_{0})$:
+
+$TMS_{y\rightarrow x}(x_{0},y_{0})=-\frac{dy}{dx}%
+%TCIMACRO{\U{a6}}%
+%BeginExpansion
+{\vert}%
+%EndExpansion
+_{u(x,y)=u(x_{0},y_{0})}$
+
+\bigskip
+
+En diff\'{e}rentiant $u(x,y)=c$ (o\`{u} $c$ est une constante), on trouve:
+
+$\frac{\partial u}{\partial x}(x,y)dx+\frac{\partial u}{\partial y}%
+(x,y)dy=0\Leftrightarrow -\frac{dy}{dx}=\frac{\frac{\partial u}{\partial x}%
+(x,y)}{\frac{\partial u}{\partial y}(x,y)}$
+
+On d\'{e}duit:
+
+$$TMS_{y\rightarrow x}(x_{0},y_{0})=\frac{\frac{\partial u}{\partial x}%
+(x_{0},y_{0})}{\frac{\partial u}{\partial y}(x_{0},y_{0})}$$
+
+\bigskip
+
+\subsection{La contrainte budg\'{e}taire}
+
+\begin{itemize}
+
+\item $L$ biens; $p=(p_{1},...,p_{L})\in \mathbb{R}_{++}^{L}$: vecteur de prix,
+donn\'{e}
+
+\item $p_{l}$: prix d'une unit\'{e} de bien $l$, quelle qu'en soit la quantit\'{e}
+
+\item $w\in \mathbb{R}_{+}^{L}$: revenu du consommateur, provenant par exemple
+d'une dotation initiale $e=(e_{1},...,e_{L})\in \mathbb{R}_{+}^{L}$: $%
+w=p_{1}e_{1}+...+p_{L}e_{L}=p.e$
+
+\end{itemize}
+
+\bigskip
+
+Le consommateur peut acqu\'{e}rir les paniers de biens $z=(z_{1},...,z_{L})%
+\in \mathbb{R}_{+}^{L}$ dont la valeur ne d\'{e}passe pas le revenu
+disponible $w$, c.\`{a}.d. tels que $p.z\leq w$.\ C'est la contrainte budg%
+\'{e}taire (C.B.) du consommateur.
+
+\begin{itemize}
+\item
+Si $L=2$, on note le panier de biens $z=(x,y)$, et le prix $p=(p_{x},p_{y})$. La contrainte budg\'{e}taire est $p_{x}x+p_{y}y\leq w$.
+
+\item 
+En fonction d'une dotation initiale $e=(e_{x},e_{y})$: $p_{x}x+p_{y}y\leq
+p_{x}e_{x}+p_{y}e_{y}$.
+
+\item
+La C.B. correspond donc \`{a} une droite de pente $\frac{-p_{x}}{p_{y}}$,
+passant par le point $e=(e_{x},e_{y})$.
+
+\item $\frac{p_{x}}{p_{y}}=$ quantit\'{e} de bien $y$ qu'on peut acqu\'{e}rir avec 
+$1$ unit\'{e} de bien $x$.
+
+\end{itemize}
+
+\subsection{L'optimisation du consommateur}
+
+Pour fixer les id\'{e}es: $L=2$. Le probl\`{e}me du consommateur qui dispose
+d'un revenu $w$ est
+
+$$\left\{\begin{array}{l}
+\max_{(x,y)}u(x,y)\\
+s.c. x\geq 0
+\\ y\geq 0\\
+p_{x}x+p_{y}y\leq w\end{array}\right.$$
+
+\bigskip
+\begin{itemize}
+\item[$\bullet$] Ce probl\`{e}me a une solution d\`{e}s lors que $u$ est continue et $p_{x}>0$%
+, $p_{y}>0$
+
+\item[$\bullet$] On suppose $u$ croissante, de sorte que la C.B. sera satur\'{e}e: $%
+p_{x}x+p_{y}y=w$ ({\it à savoir démontrer}).
+\end{itemize}
+
+\bigskip
+
+Supposons de plus $u$ diff\'{e}rentiable; on dispose alors de conditions 
+\textit{n\'{e}cessaires} pour un optimum \textquotedblleft \textit{int\'{e}%
+rieur\textquotedblright\ }$x^{\ast }>0$, $y^{\ast }>0$ : $\exists \lambda
+^{\ast }>0$ tel que $(x^{\ast },y^{\ast },\lambda ^{\ast })$ maximise le
+lagrangien $$\mathcal{L}(x,y,\lambda )=u(x,y)-\lambda (p_{x}x+p_{y}y-w)$$
+
+Les conditions du premier ordre sont:
+
+ $$\frac{\partial \mathcal{L}}{\partial x}%
+=\frac{\partial \mathcal{L}}{\partial y}=\frac{\partial \mathcal{L}}{%
+\partial \lambda }=0$$
+
+C'est-à-dire:
+\begin{description}
+\item $\frac{\partial \mathcal{L}}{\partial \lambda }(x,y,\lambda
+)=0\Leftrightarrow $ C.B.
+
+\item $\frac{\partial \mathcal{L}}{\partial x}(x,y,\lambda )=\frac{\partial u}{%
+\partial x}(x,y)-\lambda p_{x}=0$\hfill (*)
+
+\item $\frac{\partial \mathcal{L}}{\partial y}(x,y,\lambda )=\frac{\partial u}{%
+\partial y}(x,y)-\lambda p_{y}=0$\hfill (**)
+\end{description}
+\bigskip
+
+(*) et (**) $\Leftrightarrow \lambda =\frac{\frac{\partial u}{\partial x}(x,y)%
+}{p_{x}}=\frac{\frac{\partial u}{\partial y}(x,y)}{p_{y}}$ d'o\`{u}, \`{a}
+l'optimum $(x^{\ast },y^{\ast })$:
+
+\begin{equation}\label{tms}\frac{p_{x}}{p_{y}}=\frac{\frac{\partial u}{\partial x}(x^{\ast },y^{\ast })%
+}{\frac{\partial u}{\partial y}(x^{\ast },y^{\ast })}\:\:\:\:\:\:\Bigl (=TMS_{y\rightarrow x}
+(x^{\ast },y^{\ast })\Bigr )\end{equation}
+
+\bigskip
+
+Intuition de $\frac{p_{x}}{p_{y}}=TMS_{y\rightarrow x}$ $(x^{\ast },y^{\ast
+})$ : supposons $TMS_{y\rightarrow x}$ $(x^{\ast },y^{\ast })<\frac{p_{x}}{%
+p_{y}}$.\ En vendant 1 unit\'{e} de bien $x$, le consommateur obtiendrait un
+revenu $p_{x}$ qui lui permettrait d'acheter $\frac{p_{x}}{p_{y}}$ unit\'{e}%
+s de bien $y$ et $\frac{p_{x}}{p_{y}}>$ la quantit\'{e} de bien $y$ qui
+compense la perte d'1 unit\'{e} de bien $x$: $(x^{\ast },y^{\ast })$ ne peut 
+\^{e}tre un optimum
+
+\bigskip
+
+\begin{proposition} Si les pr\'{e}f\'{e}rences du consommateur sont \textit{%
+strictement convexes}, c.\`{a}.d. si $u$ est \textit{strictement
+quasi-concave}, le probl\`{e}me d'optimisation du consommateur a une
+solution unique. \end{proposition}
+
+Dans ce cas, Eq. (\ref{tms}) et la C.B. permettent de d\'{e}duire la \textit{fonction}
+de demande du consommateur:%
+\[
+x^{\ast }=d_{x}(p,w)\text{, }y^{\ast }=d_{y}(p,w) 
+\]%
+ou, en rempla\c{c}ant $w$ par $p_{x}e_{x}+p_{y}e_{y}$, 
+\[
+x^{\ast }=D_{x}(p,e)\text{, }y^{\ast }=D_{y}(p,e) 
+\]
+
+\begin{remark}Si $u$ n'est pas strictement quasi-concave, le probl\`{e}me
+d'optimisation du consommateur peut avoir plusieurs solutions et on fait
+face \`{a} une \textit{correspondance} de demande. \end{remark}
+
+\begin{remark} Le probl\`{e}me d'optimisation est soluble d\`{e}s que $u$ est 
+\textit{continue}, m\^{e}me si $u$ n'est pas diff\'{e}rentiable, mais alors,
+on ne peut pas recourir aux conditions du premier ordre (voir par exemple
+les fonctions d'utilit\'{e} de Leontief ou \textquotedblleft
+min\textquotedblright\ en T.D.).\end{remark}
+
+\begin{remark} Si $u$ est diff\'{e}rentiable, les conditions du premier ordre
+sont juste \textit{n\'{e}cessaires} pour une solution \textit{\ }$x^{\ast
+}>0 $, $y^{\ast }>0$ mais \textit{\ }$x^{\ast }=0$ ou $y^{\ast }=0$ est
+concevable (voir par exemple les fonctions d'utilit\'{e} lin\'{e}aires en
+T.D.). \end{remark}
+
+\bigskip
+
+\underline{R\'{e}sum\'{e} et g\'{e}n\'{e}ralisation \`{a} $L$ %
+\ biens:}
+\bigskip
+
+\begin{itemize}
+
+\item
+$p\in \mathbb{R}_{++}^{L}$, $w\in \mathbb{R}_{+}$ fix\'{e}s
+
+\item
+ $d(p,w)=\{z^{\ast }\in \mathbb{R}_{+}^{L}:u(z^{\ast })=\max_{z\geq 0}u(z)$
+sous $p.z\leq w\}$
+
+d\'{e}finit la \textit{demande} du consommateur
+
+\item
+Supposons $u$ diff\'{e}rentiable; si les conditions du premier ordre
+
+$\frac{\partial u}{\partial z_{l}}(z^{\ast })=\lambda ^{\ast }p_{l}$, $%
+l=1,...,L$ (C.P.O.) et $p.z^{\ast }=w$ (C.B.)
+
+sont satisfaites en $z^{\ast }\gg 0$, alors $z^{\ast }\in d(p,w)$
+ $\Rightarrow $ $$TMS_{k\rightarrow l}(z^{\ast })=\frac{\frac{%
+\partial u}{\partial z_{l}}(z^{\ast })}{\frac{\partial u}{\partial z_{k}}%
+(z^{\ast })}=\frac{p_{l}}{p_{k}}\:\:\forall k,l$$
+
+\item
+Si $d(p,w)$ est un singleton, $z^{\ast }(p,w)$, $\forall p$, on peut parler
+de \textit{fonction de demande} du consommateur: $d(.,w):p\rightarrow
+d(p,w)\in \mathbb{R}_{+}^{L}$
+
+\end{itemize}
+\bigskip
+
+\underline{Interpr\'{e}tation du multiplicateur de Lagrange:}
+
+\bigskip
+
+
+On suppose $u$ diff\'{e}rentiable et la fonction de demande bien d\'{e}%
+finie; on fixe $p$ et on note $z^{\ast }(w)=d(p,w)$ pour ce prix $p$; $u(z^{\ast
+}(w))$ repr\'{e}sente le niveau d'utilit\'{e} du consommateur \`{a} l'optimum:
+
+$$\begin{array}{lll}
+\frac{du(z^{\ast }(w))}{dw}&=&\sum_{l}\frac{\partial u}{\partial z_{l}} (z^{\ast }(w))\frac{dz_{l}^{\ast }(w)}{dw}\\
+&=&\sum_{l}\lambda ^{\ast }p_{l}%
+\frac{dz_{l}^{\ast }(w)}{dw}\\
+&=&\lambda ^{\ast }\frac{d}{dw}[\sum_{l}p_{l}z_{l}^{\ast }(w)]\\
+&=&\lambda ^{\ast} \end{array}$$ Il s'agit  donc l'\textit{utilit\'{e} marginale} du revenu.
+
+\bigskip
+
+\underline{Propri\'{e}t\'{e}s de la fonction de demande (suppos\'{e}e
+bien d\'{e}finie)}
+
+\bigskip
+
+
+\begin{itemize}
+\item[$\bullet $] Homog\`{e}ne de degr\'{e} 0 par rapport au prix et au revenu: $%
+d(\alpha p,\alpha w)=d(p,w)$ $\forall \alpha >0$.\ De m\^{e}me, en fonction
+des dotations initiales, $D(\alpha p,e)=D(p,e)$\textit{.\ D\'{e}monstration:
+exercice}
+
+\item[$\bullet $] Loi de Walras: $p.d(p,w)=w$ ou $p.[D(p,e)-e]=0$; $D(p,e)-e$
+s'appelle la \textquotedblleft demande exc\'{e}dentaire\textquotedblright .\ 
+\textit{D\'{e}monstration: exercice}
+
+\item[$\bullet $] Continuit\'{e} par rapport \`{a} $p\gg 0$: sous nos hypoth\`{e}%
+ses de pr\'{e}f\'{e}rences continues et monotones. Attention: $%
+p_{l}\rightarrow 0\Rightarrow d_{l}(p,w)\rightarrow \infty $!
+
+\end{itemize}
+
+\section{Economies d'\'{e}change}
+
+Une \'{e}conomie d'\'{e}change $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq
+N}\}$ consiste en
+\begin{itemize}
+
+\item $L$ biens, $l=1,...,L$
+
+\item $N$ agents (ou consommateurs) $i=1,...,N$ caract\'{e}ris\'{e}s
+chacun par une dotation initiale $e^{i}\in \mathbb{R}_{+}^{L}$ et des pr\'{e}%
+f\'{e}rences $\succsim ^{i}$ sur $\mathbb{R}_{+}^{L}$, repr\'{e}sent\'{e}es
+par une fonction d'utilit\'{e} $u^{i}$
+\end{itemize}
+\bigskip
+
+\subsection{Equilibre concurrentiel}
+
+\begin{definition} Un \'{e}quilibre concurrentiel $%
+(p,z^{1},...,z^{N})$ pour $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$
+consiste en
+\begin{itemize}
+\item
+un vecteur de prix $p=(p_{1},...,p_{L})\in \mathbb{R}_{+}^{L}$
+
+\item
+ une allocation $z=(z^{1},...,z^{N})\in (\mathbb{R}_{+}^{L})^{N}$
+tels que:
+
+\begin{enumerate}
+\item $\forall i=1,...,N$, $z^{i}$ maximise l'utilit\'{e} $u^{i}$ de $i$
+sous sa contrainte budg\'{e}taire: $z^{i}$ est solution de $\max_{\zeta \in 
+\mathbb{R}_{+}^{L}}u^{i}(\zeta )$ sous $p.\zeta \leq p.e^{i}$ c.\`{a}.d. $%
+\sum_{l=1}^{L}p_{l}\zeta _{l}\leq \sum_{l=1}^{L}p_{l}e_{l}^{i}$, $i=1,...,N$
+
+\item les march\'{e}s ($l=1,...,L$) s'apurent: $\sum_{i=1}^{N}z^{i}=%
+\sum_{i=1}^{N}e^{i}$ c.\`{a}.d. $\sum_{i=1}^{N}z_{l}^{i}=%
+\sum_{i=1}^{N}e_{l}^{i}$, $l=1,...,L$
+\end{enumerate}
+\end{itemize}
+\end{definition}
+
+Interpr\'{e}tation: \textquotedblleft main invisible\textquotedblright
+\begin{itemize}
+\item Le syst\'{e}me de prix suffit \`{a} \'{e}quilibrer les demandes des
+agents, qui n'agissent que pour maximiser leurs pr\'{e}f\'{e}rences
+individuelles.
+\item Les agents sont n\'{e}gligeables, ils n'ont pas d'influence sur les prix
+(par exemple, ils sont tr\`{e}s nombreux).
+\end{itemize}
+\bigskip
+
+\begin{theorem}[Existence]
+
+Si l'\'{e}conomie $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$
+satisfait:
+\begin{itemize}
+
+\item $\sum_{i=1}^{N}e^{i}\gg 0$ (c.\`{a}.d. $\sum_{i=1}^{N}e_{l}^{i}>0 
+$, $l=1,...,L$ : tous les biens sont pr\'{e}sents dans l'\'{e}conomie)
+
+\item  la fonction d'utilit\'{e} $u^{i}$ de chaque agent $i$ ($i=1,...,N$%
+) est continue, strictement croissante et strictement quasi-concave
+\end{itemize}
+Alors $\mathcal{E}$ a (au moins) un \'{e}quilibre concurrentiel.
+
+\end{theorem}
+
+\begin{remark} Le th\'{e}or\`{e}me donne simplement des conditions \textit{%
+suffisantes} pour l'\textit{existence} d'un \'{e}quilibre. Une d\'{e}%
+monstration standard du r\'{e}sultat fait appel \`{a} un th\'{e}or\`{e}me de
+point fixe; nous y reviendrons. Une \'{e}conomie qui ne satisfait pas les
+conditions ci-dessus peut n\'{e}anmoins avoir un \'{e}quilibre (voir par
+exemple les fonctions d'utilit\'{e} de Leontief ou lin\'{e}aires en T.D.).\
+L'unicit\'{e}, question d\'{e}licate, fait l'objet d'\'{e}nonc\'{e}s de
+nature tout \`{a} fait diff\'{e}rente.\end{remark}
+
+\bigskip
+
+\subsection{Calcul pratique d'\'{e}quilibres et bo\^{\i}te d'Edgeworth}
+
+\begin{itemize}
+\item
+2 biens $x$, $y$
+
+\item 2 consommateurs 1,2 de dotations initiales respectives $%
+e^{1}=(e_{x}^{1},e_{y}^{1})$, $e^{2}=(e_{x}^{2},e_{y}^{2})$ et de fonctions
+d'utilit\'{e} respectives $u^{1}$, $u^{2}$
+
+\item On se place dans le cas \textquotedblleft r\'{e}gulier\textquotedblright : $%
+e_{x}^{1}+e_{x}^{2}>0$, $e_{y}^{1}+e_{y}^{2}>0$, $u^{1}$, $u^{2}$ continues,
+strictement croissantes, strictement quasi-concaves et de plus, contin\^{u}%
+ment diff\'{e}rentiables
+
+\item Un \'{e}quilibre consiste en une paire de prix $p=(p_{x},p_{y})$ et une
+allocation $((x^{1},y^{1}),(x^{2},y^{2}))$
+
+\end{itemize}
+\bigskip
+
+\begin{description}\item {\bf Etape 1.} La r\'{e}solution des probl\`{e}mes d'optimisation individuels
+fournit les demandes $(x^{1}(p),y^{1}(p))$ et $(x^{2}(p),y^{2}(p))$ de
+chaque consommateur, en fonction de $p$:
+
+En supposant une solution $x^{i}>0$, $y^{i}>0$, $i=1,2$:
+
+$TMS_{y\rightarrow x}^{i}$ $(x^{i},y^{i})=\frac{\frac{\partial u^{i}}{%
+\partial x}(x^{i},y^{i})}{\frac{\partial u^{i}}{\partial y}(x^{i},y^{i})}=%
+\frac{p_{x}}{p_{y}}$ (C.P.O.)
+
+$p_{x}x^{i}+p_{y}y^{i}=p_{x}e_{x}^{i}+p_{y}e_{y}^{i}$ (C.B.)
+
+En particulier, $TMS_{y\rightarrow x}^{1}$ $(x^{1},y^{1})=TMS_{y\rightarrow
+x}^{2}$ $(x^{2},y^{2})=\frac{p_{x}}{p_{y}}$
+
+\item {\bf Etape 2.}Les conditions d'apurement des march\'{e}s:
+
+$(i)$: $x^{1}(p)+x^{2}(p)=e_{x}^{1}+e_{x}^{2}$ , $(ii)$: $%
+y^{1}(p)+y^{2}(p)=e_{y}^{1}+e_{y}^{2}$ (ii)
+
+permettent de d\'{e}duire $p=(p_{x},p_{y})$.
+
+$(i)$ et $(ii)$ ne sont pas ind\'{e}pendantes: chaque agent sature sa contrainte
+budg\'{e}taire, d'o\`{u}:
+
+$%
+p_{x}[x^{1}(p)+x^{2}(p)-e_{x}^{1}-e_{x}^{2}]+p_{y}[y^{1}(p)+y^{2}(p)-e_{y}^{1}-e_{y}^{2}]=0.
+$
+
+on garde donc un degr\'{e} de libert\'{e} pour le vecteur de prix, qu'on
+peut normaliser; par exemple, $p_{x}+p_{y}=1$, $p_{x}=1$ (bien $x$ num\'{e}%
+raire), etc.
+
+Ayant d\'{e}termin\'{e} $p$, on trouve l'allocation d'\'{e}quilibre $%
+((x^{\ast 1},y^{\ast 1}),(x^{\ast 2},y^{\ast 2}))$ en rempla\c{c}ant $p$
+dans l'expression des demandes des consommateurs.
+
+\end{description}
+
+\begin{remark} Si les fonctions d'utilit\'{e} ne sont pas diff\'{e}rentiables, ou
+si la solution du probl\`{e}me d'optimisation d'un des deux consommateurs
+n'est pas strictement positive, on peut suivre la m\^{e}me d\'{e}marche, c.%
+\`{a}.d.
+
+- Etape 1: d\'{e}terminer la (fonction de) demande de chacun des
+consommateurs.
+
+- Etape 2: v\'{e}rifier pour quel(s) prix ces demandes sont compatibles, au
+sens o\`{u} les march\'{e}s s'apurent.
+
+MAIS on ne peut plus \'{e}galiser d'embl\'{e}e les $TMS$ !!! (voir exemples
+en T.D.).
+
+\end{remark}
+
+
+\subsection{Eléments de d\'{e}monstration du th\'{e}or%
+\`{e}me d'existence}
+
+\noindent R\'{e}sultat auxiliaire (th\'{e}or\`{e}me de point fixe de
+Brouwer): Soit $S\subseteq \mathbb{R}^{L}$, $S\neq \emptyset $, compact,
+convexe et $g:S\rightarrow S$ une fonction continue. Sous ces hypoth\`{e}%
+ses, $g$ a un point fixe, c.\`{a}.d. $\exists $ $p^{\ast }\in S$ tel que $%
+g(p^{\ast })=p^{\ast}$.
+
+\begin{remark} La continuit\'{e} de $g$ est essentielle, y compris
+\textquotedblleft au bord \textquotedblright. \end{remark}
+
+
+Soit $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ une \'{e}conomie d'%
+\'{e}change satisfaisant les hypoth\`{e}ses du th\'{e}or\`{e}me. 
+
+\begin{itemize}
+\item Les
+dotations initiales $e^{i}$ resteront fix\'{e}es.
+
+\item Soit $S$ l'ensemble des prix normalis\'{e}s: $S=\{p\in \mathbb{R}_{+}^{L}$: $%
+\sum_{l}p_{l}=1\}$ et
+$ \mathrm{Int} S=\{p\in S$: $p\gg 0\}$.
+
+\item Comme $u^{i}$ est strictement croissante et strictement quasi-concave, la
+fonction de demande du consommateur $i$, $d^{i}:S\rightarrow \mathbb{R}%
+_{+}^{L}$, est bien d\'{e}finie et satisfait la loi de Walras $%
+p.d^{i}(p)=p.e^{i}$, $\forall $ $p\gg 0$.
+
+\item La fonction de demande exc\'{e}dentaire $f^{i}$ est d\'{e}finie par $%
+f^{i}(p)=d^{i}(p)-e^{i}$.\ Par la loi de Walras, $p.f^{i}(p)=0$, $\forall $ $%
+p\gg 0$.
+
+\item Les hypoth\`{e}ses garantissent que $f^{i}:S\rightarrow \mathbb{R}_{+}^{L}$
+est continue sur int $S$.\ Cependant, si $p_{l}\rightarrow 0$, $%
+f_{l}^{i}(p)\rightarrow \infty $, ce qui est de nature \`{a} poser quelques
+probl\`{e}mes techniques.\ Dans ces \'{e}l\'{e}ments de d\'{e}monstration,
+nous les n\'{e}gligerons.
+
+\item Soit $f=$ $\sum_{i=1}^{N}f^{i}$ la demande exc\'{e}dentaire agr\'{e}g\'{e}e.
+
+\begin{itemize}\item Par la loi de Walras, $p.f(p)=0$, c.\`{a}.d. $\sum_{l}p_{l}^{\ast
+}f_{l}(p^{\ast })=0$ $\forall $ $p\gg 0$
+
+\item $p^{\ast }$ est un prix d'\'{e}quilibre concurrentiel $\Leftrightarrow $ $%
+f(p^{\ast })=0$
+
+\item Un tel prix existe d\`{e}s que $\exists $ $p^{\ast }\gg 0$: $f(p^{\ast
+})\leq 0$
+
+\item En effet, on a alors $p_{l}^{\ast }f_{l}(p^{\ast })\leq 0$, $l=1,...,L$; par
+la loi de Walras ($\sum_{l}p_{l}^{\ast }f_{l}(p^{\ast })=0$), on d\'{e}duit $%
+f_{l}(p^{\ast })=0$, $l=1,...,L$
+\end{itemize}
+\end{itemize}
+\bigskip
+
+\noindent Etape principale du raisonnement: lemme
+
+\begin{lemma} Supposons que $h:S\rightarrow S$ soit une fonction continue (sur tout $S$)
+telle que $p.h(p)=0$ $\forall $ $p\in S$; alors $\exists $ $p^{\ast }\in S$
+tel que $h(p^{\ast })\leq 0$, c.\`{a}.d. $h_{l}(p^{\ast })\leq 0$, $%
+l=1,...,L $. \end{lemma}
+
+\begin{remark} Le lemme ne s'applique pas directement \`{a} la fonction de
+demande exc\'{e}dentaire agr\'{e}g\'{e}e dans la mesure o\`{u} sa d\'{e}%
+finition au bord pose probl\`{e}me.
+\end{remark}
+
+{\it D\'{e}monstration du lemme:} on d\'{e}finit une fonction $g:S\rightarrow S$%
+\[
+g_{l}(p)=\frac{p_{l}+\max \{0,h_{l}(p)\}}{1+\sum_{k}\max \{0,h_{k}(p)\}}%
+\text{ \ \ }l=1,...,L 
+\]%
+Intuition: si $h_{l}(p)\leq 0$, on maintient le prix du bien $l$; si $%
+h_{l}(p)>0$, on l'augmente
+
+Par le th\'{e}or\`{e}me de Brouwer, $\exists $ $p^{\ast }\in S$ : $p^{\ast
+}=g(p^{\ast })$%
+\[
+p_{l}^{\ast }\sum\nolimits_{k}\max \{0,h_{k}(p)\}=\max \{0,h_{l}(p^{\ast })\}%
+\text{ }l=1,...,L 
+\]%
+En multipliant par $h_{l}(p^{\ast })$ et en sommant sur $l$%
+\[
+\sum\nolimits_{l}p_{l}^{\ast }h_{l}(p^{\ast })\sum\nolimits_{k}\max
+\{0,h_{k}(p)\}=\sum\nolimits_{l}h_{l}(p^{\ast })\max \{0,h_{l}(p^{\ast })\} 
+\]%
+Comme $p.h(p)=0$, 
+\[
+0=\sum\nolimits_{l}h_{l}(p^{\ast })\max \{0,h_{l}(p^{\ast })\}\Rightarrow
+h_{l}(p^{\ast })\leq 0\text{ \ \ }l=1,...,L 
+\]%
+ce qui \'{e}tablit le lemme.
+
+\bigskip
+
+\subsection{Unicité}
+
+ L'unicit\'{e} (globale) de l'\'{e}quilibre n'est
+pas garantie par les hypoth\`{e}ses du th\'{e}or\`{e}me d'existence.
+
+\bigskip
+
+Exemple: $u^{1}(x,y)=(\alpha x^{\rho }+y^{\rho })^{\frac{1}{\rho }}$, $%
+u^{2}(x,y)=(x^{\rho }+\alpha y^{\rho })^{\frac{1}{\rho }}$ (fonctions
+d'utilit\'{e} \`{a} \'{e}lasticit\'{e} de substitution constante, voir T.D.)
+avec $\rho =-2$
+
+$e^{1}=(1,0)$, $e^{2}=(0,1)$
+
+$d_{x}^{1}(p)+d_{x}^{2}(p)=1\Leftrightarrow ar^{3}-r^{2}+r-a=0$, o\`{u} $r=(%
+\frac{p_{x}}{p_{y}})^{\frac{1}{3}}$ et $a=\alpha ^{-\frac{1}{3}}$
+
+$\Leftrightarrow (r-1)(ar^{2}+(a-1)r+a)=0$
+
+Pour $\alpha =64$, $a=\frac{1}{4}$, $(r-1)(r^{2}-3r+1)=0$ a 3 racines: $r=1$%
+; $\frac{3+\sqrt{5}}{2}=2,62$; $\frac{3-\sqrt{5}}{2}=0,38$. On a donc 3 prix
+d'\'{e}quilibre possibles.
+
+
+\section{Optimalit\'{e} de Pareto}
+
+Economie d'\'{e}change: $$\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$$
+
+\begin{definition} Une allocation $z=(z^{1},...,z^{N})\in (\mathbb{R}_{+}^{L})^{N}$ est \textit{%
+r\'{e}alisable} si $\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}$ c.\`{a}.d. $%
+\sum_{i=1}^{N}z_{l}^{i}=\sum_{i=1}^{N}e_{l}^{i}$, $l=1,...,L$.
+
+Soient $z$ et $\widetilde{z}$ des allocations r\'{e}alisables; $\widetilde{z}
+$ \textit{Pareto-domine} $z$ si $\forall $ $1\leq i\leq N$, $u^{i}(%
+\widetilde{z}^{i})\geq u^{i}(z^{i})$ et $\exists $ $1\leq j\leq N$, $u^{j}(%
+\widetilde{z}^{j})>u^{j}(z^{j})$.
+
+Une allocation (r\'{e}alisable) $z$ est \textit{Pareto-optimale} si elle
+n'est Pareto-domin\'{e}e par aucune allocation (r\'{e}alisable).
+\end{definition}
+
+\begin{remark} La Pareto-dominance ne permet pas n\'{e}cessairement de comparer
+deux allocations donn\'{e}es.\end{remark}
+
+\begin{remark} Le concept d'optimum de Pareto ne fait pas appel \`{a} la notion
+de prix. \end{remark}
+
+\begin{remark} A un optimum de Pareto, il n'existe plus d'\'{e}change
+mutuellement avantageux. \end{remark}
+
+\begin{remark} Les optima de Pareto d\'{e}pendent de la dotation initiale
+totale des agents, non de la r\'{e}partition de cette dotation entre les
+agents.\end{remark}
+
+\subsection{Les deux théorèmes du bien-être}
+
+\begin{theorem}[Premier th\'{e}or\`{e}me du bien-\^{e}tre]
+Soit $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ une \'{e}conomie
+dans laquelle les fonctions d'utilit\'{e} $u^{i}$ , $i=1,...,N$, sont
+croissantes; si $(p,\widetilde{z})$ est un \'{e}quilibre concurrentiel, $%
+\widetilde{z}$ est une allocation Pareto-optimale.\end{theorem}
+
+{\it D\'{e}monstration: }
+\begin{itemize}
+\item Puisque $(p,\widetilde{z})$ est un \'{e}quilibre, on a,
+pour chaque $i$, compte tenu de la croissance de $u^{i}$, $\forall $ $\zeta
+^{i}\in \mathbb{R}_{+}^{L}$
+
+\item  $p.\zeta ^{i}\leq p.e^{i}\Rightarrow u^{i}(\zeta ^{i})\leq u^{i}(\widetilde{z%
+}^{i})$
+
+\item  $p.\zeta ^{i}<p.e^{i}\Rightarrow u^{i}(\zeta ^{i})<u^{i}(\widetilde{z}^{i})$
+
+\item  Par l'absurde, supposons que $\widetilde{z}$ soit Pareto-domin\'{e}e par $z$%
+: $\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}$. $\forall $ $1\leq i\leq N$, $%
+u^{i}(z^{i})\geq u^{i}(\widetilde{z}^{i})$ et $\exists $ $1\leq j\leq N$, $%
+u^{j}(z^{j})>u^{j}(\widetilde{z}^{j})$
+
+\item  On doit avoir $\forall $ $1\leq i\leq N$, $p.z^{i}\geq p.e^{i}$ et $\exists $
+$1\leq j\leq N$, $p.z^{j}>p.e^{j}$
+
+\item  En sommant, $\sum_{i=1}^{N}(p.z^{i})>\sum_{i=1}^{N}(p.e^{i})$, c.\`{a}.d. $%
+p.\sum_{i=1}^{N}z^{i}>p.\sum_{i=1}^{N}e^{i}$ , mais ceci contredit $%
+\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}$ 
+
+\end{itemize}
+\bigskip
+
+R\'{e}sultat auxiliaire: th\'{e}or\`{e}me de s\'{e}paration:
+
+
+\begin{theorem} Soit $A,B\subseteq \mathbb{R}^{N}$ deux ensembles convexes
+disjoints ($A\cap B=\emptyset $). Il existe $\gamma \in \mathbb{R}^{N}$, $%
+\gamma \neq 0$ et $c\in \mathbb{R}$ tels que $\gamma .x>c$ $\forall x\in A$
+et $\gamma .y<c$ $\forall y\in B$. \end{theorem}
+
+\begin{corollary}Soit $B\subseteq \mathbb{R}^{N}$ un ensemble convexe et $x\notin
+int(B)$. Il existe $\gamma \in \mathbb{R}^{N}$, $\gamma \neq 0$, tel que $%
+\gamma .x\geq \gamma .y$ $\forall y\in B$. \end{corollary}
+
+
+\begin{theorem}[Second th\'{e}or\`{e}me du bien-\^{e}tre]
+Soit $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ une \'{e}conomie
+dans laquelle les fonctions d'utilit\'{e} $u^{i}$ , $i=1,...,N$, sont
+strictement croissantes et quasi-concaves; si $\widetilde{z}=(\widetilde{z}%
+^{1},...,\widetilde{z}^{N})$ est une allocation Pareto-optimale telle que $%
+\widetilde{z}^{i}\gg 0$, $i=1,...,N$, $\widetilde{z}$ est une allocation d'%
+\'{e}quilibre concurrentiel de $\mathcal{E}^{\prime }=\{L,N,(\widetilde{z}%
+^{i},u^{i})_{1\leq i\leq N}\}$, c.\`{a}.d. $\exists $ $p$ tel que $%
+\widetilde{z}^{i}$ maximise $u^{i}(z^{i})$ sous $p.z^{i}\leq p.\widetilde{z}%
+^{i}$ $i=1,...,N$.\end{theorem}
+
+{\it Base de la d\'{e}monstration: }
+
+\begin{itemize}
+\item $P^{i}=\{z^{i}\in \mathbb{R}%
+_{+}^{L}:u^{i}(z^{i})>u^{i}(\widetilde{z}^{i})\}$, $i=1,...,N$
+
+\item $P^{i}$ est convexe par la quasi-concavit\'{e} de $u^{i}$
+
+\item $P=\sum_{i}P^{i}=\{z\in \mathbb{R}_{+}^{L}:z=\sum_{i}z^{i}$, $z^{i}\in P^{i}$, $i=1,...,N\}$
+
+\item $P$ est \'{e}galement convexe
+
+\item Soit $\zeta =\sum_{i}\widetilde{z}^{i}$; comme $\widetilde{z}$ est
+Pareto-optimale, $\zeta \notin P$
+
+\item Par le th\'{e}or\`{e}me de s\'{e}paration, $\exists $ $p\in \mathbb{R}^{L}$, 
+$p\neq 0$, tel que $p.\zeta \leq p.z$, $\forall z\in P$
+
+\item On v\'{e}rifie ensuite (\textit{exercice}): $p>0$ et la condition d'optimalit%
+\'{e} de chaque consommateur: $\forall $ $i=1,...,N$, $u^{i}(z^{i})>u^{i}(%
+\widetilde{z}^{i})\Rightarrow p.z^{i}>p.\widetilde{z}^{i}$
+
+\end{itemize}
+\bigskip
+
+\begin{remark}Le second th\'{e}or\`{e}me du bien-\^{e}tre n'est pas n\'{e}%
+cessairement vrai dans une \'{e}conomie o\`{u} les pr\'{e}f\'{e}rences ne
+sont pas convexes (voir exemple graphique).\end{remark}
+
+\begin{remark} Pour faire de $\widetilde{z}$ une allocation d'\'{e}quilibre, on
+a modifi\'{e} les dotations initiales de $e^{i}$ \`{a} $\widetilde{z}^{i}$, $%
+i=1,...,N$, ce qui peut \^{e}tre lourd \`{a} r\'{e}aliser.\ Il suffit en
+fait d'effectuer des \textit{transferts forfaitaires} de richesse, compte
+tenu des prix $p$ qui permettent la \textit{d\'{e}centralisation} de $%
+\widetilde{z}$. \end{remark}
+
+Pour \'{e}noncer pr\'{e}cis\'{e}ment ce r\'{e}sultat: $(p,z)\in \mathbb{R}%
+_{+}^{L}\times (\mathbb{R}_{+}^{L})^{N}$ est un \'{e}quilibre avec
+transferts de $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ s'il
+existe $w^{1}\in \mathbb{R}$, ...,$w^{N}\in \mathbb{R}$ tels que
+
+\begin{itemize}
+\item
+ $\sum_{i=1}^{N}w^{i}=p.\sum_{i=1}^{N}e^{i}$
+
+\item $\forall i=1,...,N$, $z^{i}$ est solution de $\max_{\zeta \in 
+\mathbb{R}_{+}^{L}}u^{i}(\zeta )$ sous $p.\zeta \leq w^{i}$, $i=1,...,N$
+
+\item $\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}$
+
+\end{itemize}
+
+\bigskip
+
+Le transfert \`{a} l'agent $i$ est $t^{i}=w^{i}-p.e^{i}$, $i=1,...,N$; qui satisfait :$%
+\sum_{i=1}^{N}t^{i}=0$.
+
+\bigskip
+
+\begin{itemize}
+\item[$\bullet$] Si $(p,z)$ est un \'{e}quilibre concurrentiel, avec $%
+(p,z) $ est un \'{e}quilibre avec transferts (il suffit de prendre $%
+w^{i}=p.e^{i}$, $i=1,...,N$). 
+\end{itemize}
+
+
+
+\begin{theorem}[Variante du second th\'{e}or\`{e}me du bien-\^{e}tre] Soit $\mathcal{E}%
+=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ une \'{e}conomie dans laquelle les
+fonctions d'utilit\'{e} $u^{i}$ , $i=1,...,N$, sont strictement croissantes
+et quasi-concaves; si $\widetilde{z}=(\widetilde{z}^{1},...,\widetilde{z}%
+^{N})$ est une allocation Pareto-optimale telle que $\widetilde{z}^{i}\gg 0$%
+, $i=1,...,N$, $\widetilde{z}$ est une allocation d'\'{e}quilibre avec
+transferts de $\mathcal{E}$. \end{theorem}
+
+D\'{e}monstration: Il suffit de prendre $w^{i}=p.\widetilde{z}^{i}$, $%
+i=1,...,N$, o\`{u} $p$ est le prix qu'on a construit dans la d\'{e}%
+monstration pr\'{e}c\'{e}dente. Le transfert \`{a} l'agent $i$ est $t^{i}=p.%
+\widetilde{z}^{i}-p.e^{i}$
+
+\bigskip
+
+\subsection{Caract\'{e}risation des optima de Pareto}
+
+Rappel: une \textit{allocation} $z=(z^{1},...,z^{N})\in (\mathbb{R}%
+_{+}^{L})^{N}$ de $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$ est 
+\textit{r\'{e}alisable} si $$\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}$$
+
+On consid\`{e}re l'ensemble des \textit{utilit\'{e}s r\'{e}alisables}:
+
+\begin{itemize}
+\item 
+$V=\{(v^{1},...,v^{N})\in \mathbb{R}^{N}$ : $\exists $ une allocation r\'{e}%
+alisable $z$ telle que $v^{i}\leq u^{i}(z^{i})$, $i=1,...,N\}$
+
+\item 
+$V$ est \textit{monotone}: $y\leq v$, $v\in V\Rightarrow y\in V$
+
+\item
+$PV$: fronti\`{e}re de Pareto de $V$
+
+\item
+$PV=\{(v^{1},...,v^{N})\in V$ : $\nexists $ $(\widetilde{v}^{1},...,%
+\widetilde{v}^{N})\in V$ tel que $\forall $ $i$ $\widetilde{v}^{i}\geq v^{i}$
+et $\exists $ $j$ $\widetilde{v}^{j}>v^{j}\}$
+
+\end{itemize}
+\begin{proposition} Une allocation r\'{e}alisable $z$ est Pareto-optimale $%
+\Leftrightarrow $ $(u^{1}(z^{1}),...,u^{N}(z^{N}))\in PV$.\end{proposition} \textit{D\'{e}%
+monstration: exercice.}
+
+\bigskip
+
+On introduit $\gamma ^{i}\geq 0$, le poids du consommateur $i$, $i=1,...,N$ et on  consid\`{e}re le probl\`{e}me d'\textit{optimisation sociale }$\max_{v\in
+V}\sum_{i=1}^{N}\gamma ^{i}v^{i}$ (O.S.)
+
+\begin{proposition} Si $\exists $ $\gamma ^{i}>0$, $i=1,...,N$ tels que $v_{\ast
+}=(v_{\ast }^{1},...,v_{\ast }^{N})$ soit solution de (O.S.), $v_{\ast }\in
+PV$.\end{proposition}
+{\it D\'{e}monstration:} Par l'absurde, supposons $v_{\ast }\notin PV$.\ Alors $%
+\exists $ $(\widetilde{v}^{1},...,\widetilde{v}^{N})\in V$ tel que $\forall $
+$i$ $\widetilde{v}^{i}\geq v_{\ast }^{i}$ et $\exists $ $j$ $\widetilde{v}%
+^{j}>v_{\ast }^{j}$.\ Comme $\gamma ^{i}>0$ $\forall $ $i$, on en d\'{e}duit 
+$\sum_{i}\gamma ^{i}\widetilde{v}^{i}>\sum_{i}\gamma ^{i}v_{\ast }^{i}$,
+contradiction, 
+
+\begin{proposition} Si $V$ est convexe, $\forall $ $\widetilde{v}\in PV$, $\exists $
+$\gamma ^{i}\geq 0$, $i=1,...,N$ , non tous nuls ($\gamma \neq 0$), tels que 
+$\widetilde{v}$ soit solution de (O.S.)\end{proposition}
+{\it D\'{e}monstration:} Soit $\widetilde{v}\in PV$; $\widetilde{v}\notin int(V)$%
+.\ Par le th\'{e}or\`{e}me de s\'{e}paration, $\exists $ $\gamma \neq 0$ tel
+que $\sum_{i=1}^{N}\gamma ^{i}\widetilde{v}^{i}\geq \sum_{i=1}^{N}\gamma
+^{i}v^{i}$ $\forall v\in V$.\ Il reste \`{a} montrer que $\gamma ^{i}\geq 0$%
+, $\forall $ $i$. Par l'absurde, supposons $\gamma ^{j}<0$ pour un certain $%
+j $; en prenant $v\in V$ tel que $v^{j}<0$, $|v^{j}|$ tr\`{e}s grand, on
+aurait $\gamma ^{j}v^{j}>\gamma ^{j}\widetilde{v}^{j}$, contradiction.
+
+\begin{remark} Les propri\'{e}t\'{e}s ci-dessus s'appliquent m\^{e}me si
+l'ensemble des utilit\'{e}s r\'{e}alisables ne provient pas d'une \'{e}%
+conomie d'\'{e}change, mais d'un probl\`{e}me de d\'{e}cision collective
+quelconque.\end{remark}
+
+\begin{proposition} Si, dans l'\'{e}conomie d'\'{e}change $\mathcal{E}%
+=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$, les fonctions d'utilit\'{e} $u^{i}$
+sont concaves, $V$ est convexe.\end{proposition} \textit{D\'{e}monstration: exercice.}
+
+\bigskip
+
+\underline{Le probl\`{e}me d'\textit{optimisation sociale }dans une \'{e}%
+conomie d'\'{e}change}
+
+\bigskip
+
+Soit $\gamma ^{i}>0$, $i=1,...,N$; si $\widetilde{z}$ est solution de $$\left\{\begin{array}{l}\max_{z\geq 0}\sum_{i=1}^{N}\gamma ^{i}u^{i}(z^{i})\\
+s.c.\:\: \sum_{i=1}^{N}z^{i}\leq \sum_{i=1}^{N}e^{i}\\
+\Bigl (\hbox{ équiv. à }
+\sum_{i=1}^{N}z_{\ell}^{i}\leq \sum_{i=1}^{N}e_{\ell}^{i}\:\: \forall \ell=1,...,L\Bigr )\end{array}\right.$$
+
+alors 
+$\widetilde{z}$ est une allocation Pareto-optimale.
+
+Supposons les fonctions d'utilit\'{e} $u^{i}$ croissantes et concaves, $%
+i=1,...,N$. Soit $\widetilde{z}$ une allocation Pareto-optimale; $\exists $ $%
+\gamma ^{i}\geq 0$, $i=1,...,N$, non tous nuls ($\gamma \neq 0$), tels que $%
+\widetilde{z}$ soit solution de $$\left\{\begin{array}{l}\max_{z\geq 0}\sum_{i=1}^{N}\gamma ^{i}u^{i}(z^{i})\\
+s.c.\:\: \sum_{i=1}^{N}z^{i}\leq \sum_{i=1}^{N}e^{i}\end{array}\right.$$
+
+% $\max_{z\geq 0}\sum_{i=1}^{N}\gamma^{i}u^{i}(z^{i})$ sous $\sum_{i=1}^{N}z^{i}\leq \sum_{i=1}^{N}e^{i}$
+
+Si les fonctions d'utilit\'{e} $u^{i}$ sont diff\'{e}rentiables, on consid%
+\`{e}re les conditions du premier ordre associ\'{e}es au probl\`{e}me
+d'optimisation sociale en $z\gg 0$:
+
+$\mathcal{L}=\sum_{i=1}^{N}\gamma ^{i}u^{i}(z^{i})-\sum_{l=1}^{L}\lambda
+_{l}\left( \sum_{i=1}^{N}z_{l}^{i}-\sum_{i=1}^{N}e_{l}^{i}\right) $
+
+$\frac{\partial \mathcal{L}}{\partial z_{l}^{i}}=\gamma ^{i}\frac{\partial
+u^{i}}{\partial z_{l}^{i}}(z^{i})-\lambda _{l}=0$ $i=1,...,N$, $l=1,...,L$
+
+$\Leftrightarrow \lambda _{l}=\gamma ^{i}\frac{\partial u^{i}}{\partial
+z_{l}^{i}}(z^{i})$ $i=1,...,N$, $l=1,...,L$
+
+$\Rightarrow$ $$TMS_{k\rightarrow \ell}^{i}(z^{i})=\frac{\frac{\partial u^{i}}{%
+\partial z_{l}^{i}}(z^{i})}{\frac{\partial u^{i}}{\partial z_{k}^{i}}(z^{i})}%
+=\frac{\lambda _{l}}{\lambda _{k}}\:\:\forall i=1,...,N, \:\forall k,l=1,...,L$$
+
+Donc pour couple de consommateurs $i,j=1,...,N$, et couples de biens $k,l=1,...,L$, on a:
+
+$$TMS_{k\rightarrow \ell}^{i}(z^{i})=\frac{\frac{\partial u^{i}}{%
+\partial z_{l}^{i}}(z^{i})}{\frac{\partial u^{i}}{\partial z_{k}^{i}}(z^{i})}=\frac{\frac{\partial u^{j}}{%
+\partial z_{l}^{j}}(z^{j})}{\frac{\partial u^{j}}{\partial z_{k}^{j}}(z^{j})}=TMS_{k\rightarrow \ell}^{j}(z^{j})
+$$
+
+En une solution $z\gg 0$, les $TMS$ des agents (relatifs \`{a} une paire de
+biens quelconques) sont \'{e}gaux entre eux. On se rappelle que cette
+condition est satisfaite en une allocation d'\'{e}quilibre concurrentiel $z$
+($TMS_{k\rightarrow \ell}^{i}(z^{i})=\frac{p_{l}}{p_{k}}$, o\`{u} $p$ est le
+prix d'\'{e}quilibre).\ Par le premier th\'{e}or\`{e}me du bien-\^{e}tre, on
+s'attend \`{a} cette propri\'{e}t\'{e}.\ Elle indique aussi comment calculer
+le prix qui permet de d\'{e}centraliser une allocation Pareto-optimale en un 
+\'{e}quilibre concurrentiel, suivant le second th\'{e}or\`{e}me du bien-\^{e}%
+tre: $\frac{p_{l}}{p_{k}}=\frac{\lambda _{l}}{\lambda _{k}}$.
+
+Exercice: soit $e_{l}=\sum_{i=1}^{N}e_{l}^{i}$ la dotation totale en bien $l$%
+, $l=1,...,L$ et $\widetilde{z}=\widetilde{z}(\gamma ,e)\gg 0$ l'allocation
+Pareto-optimale d\'{e}riv\'{e}e ci-dessus; montrer que $\lambda _{l}$ est
+l'utilit\'{e} sociale marginale de $e_{l}$, c.\`{a}.d. $\lambda _{l}=\frac{d%
+}{de_{l}}[\sum_{i=1}^{N}\gamma ^{i}u^{i}(\widetilde{z}^{i})]$.
+
+\bigskip
+\underline{Interpr\'{e}tation du poids $\gamma ^{i}$ de l'agent $i$ \`{a} un
+optimum $\widetilde{z}\gg 0$}
+
+On a vu que $$\frac{\partial u^{i}}{\partial z_{l}^{i}}(z^{i})=\frac{\lambda
+_{l}}{\gamma ^{i}}\:\:\:\:\:\:\: (*)$$
+
+Par le second th\'{e}or\`{e}me du bien-\^{e}tre, $\widetilde{z}$ est une
+allocation d'\'{e}quilibre; on peut prendre $\widetilde{p}=\lambda $ comme
+prix associ\'{e}; soit $\mu ^{i}$ le multiplicateur de la contrainte budg%
+\'{e}taire de l'agent $i$: $$\frac{\partial u^{i}(\widetilde{z}^{i})}{%
+\partial z_{l}^{i}}=\mu ^{i}\widetilde{p}_{l}=\mu ^{i}\lambda _{l} \:\:\:\:\:\:\: (**)$$
+
+(*) et (**) $\Rightarrow $ $\gamma ^{i}=\frac{1}{\mu ^{i}}$ c.\`{a}.d. $%
+\gamma ^{i}$ est l'inverse de l'utilit\'{e} marginale du revenu de l'agent $%
+i $.
+
+
+\section{Economies avec production}
+
+Une \'{e}conomie avec production (et propri\'{e}t\'{e} priv\'{e}e)
+
+$\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq
+M},(\theta ^{ij})_{1\leq i\leq N,1\leq j\leq M}\}$ consiste en
+\begin{itemize}
+\item $L$ biens, $l=1,...,L$
+
+\item $N$ agents (ou consommateurs) $i=1,...,N$ caract\'{e}ris\'{e}s
+chacun par une dotation initiale $e^{i}\in \mathbb{R}_{+}^{L}$ et une
+fonction d'utilit\'{e} $u^{i}$
+
+\item $M$ entreprises $j=1,...,M$ caract\'{e}ris\'{e}es chacune par un
+ensemble de production $Q^{j}\subseteq \mathbb{R}^{L}$
+
+\item une part $\theta ^{ij}\geq 0$ de l'entreprise $j$ pour chaque
+agent $i$: $\sum_{i=1}^{N}\theta ^{ij}=1$, $j=1,...,M$
+
+\end{itemize}
+
+\subsection{Le producteur}
+
+On consid\`{e}re un producteur typique (on omet donc l'indice $j$) caract%
+\'{e}ris\'{e} par son ensemble de production $Q\subseteq \mathbb{R}^{L}$.\ $%
+Q $ d\'{e}crit la technologie de l'entreprise, qui permettra de transformer
+les dotations initiales des agents
+
+\bigskip
+
+Les inputs sont compt\'{e}s n\'{e}gativement et les outputs, positivement.
+\bigskip
+
+Exemple: si $L=3$, $(-1;1;-0,5)\in Q$ signifie qu'on peut produire 1 unit%
+\'{e} de bien 2 \`{a} partir d'1 unit\'{e} de bien 1 et de 0,5 unit\'{e} de
+bien 3
+
+\bigskip
+
+Exemple: $Q=\{(-x,y)$ : $x\in \mathbb{R}_{+}^{K}$, $y\in \mathbb{R}_{+}$, $%
+y\leq g(x)\}$ d\'{e}crit la production d'un seul output \`{a} partir de $K$
+inputs, gr\^{a}ce \`{a} une fonction de production $g:\mathbb{R}%
+_{+}^{K}\rightarrow \mathbb{R}_{+}$
+
+\bigskip
+
+Propri\'{e}t\'{e}s usuelles d'un ensemble de production:
+\begin{itemize}
+\item[$\bullet$] $0\in Q$: il est possible de ne rien produire
+\item[$\bullet$] $Q\cap \mathbb{R}_{+}^{L}\subseteq \{0\}$: il n'est pas possible
+de produire sans input
+\item[$\bullet$] $Q-\mathbb{R}_{+}^{L}\subseteq Q$: \'{e}limination libre
+\item[$\bullet$] $Q$ est ferm\'{e}
+\item[$\bullet$] $Q$ est convexe
+\item[$\bullet$]Rendements d'\'{e}chelle: $Q$ est \`{a} rendements d\'{e}%
+croissants si $q\in Q$, $0\leq \rho \leq 1\Rightarrow \rho q\in Q$; $Q$ est 
+\`{a} rendements croissants si $q\in Q$, $\rho \geq 1\Rightarrow \rho q\in Q$%
+; $Q$ est \`{a} rendements constants si $q\in Q$, $\rho \geq 0\Rightarrow
+\rho q\in Q$
+\end{itemize}
+
+\bigskip
+
+\begin{proposition}\begin{enumerate}\item
+Si $0\in Q$ et $Q$ est convexe, $Q$ est \`{a} rendements d\'{e}%
+croissants.
+
+\item  Si $Q$ est d\'{e}crit par une fonction de production $g$:
+
+\begin{enumerate} \item $Q=\{(-x,y)$ : $x\in \mathbb{R}_{+}^{K}$, $y\in \mathbb{R}_{+}$, $y\leq
+g(x)\}$.
+
+\item $Q$ est convexe $\Leftrightarrow $ $g$ est concave.
+
+\item $Q$ est \`{a} rendements d\'{e}croissants $\Leftrightarrow g(\lambda x)\leq
+\lambda g(x)$ $\forall $ $\lambda \geq 1$ (ce qui explique la terminologie). 
+\end{enumerate}\end{enumerate}
+\end{proposition}
+\textit{D\'{e}monstration: exercice.}
+
+\bigskip
+
+\underline{Plan de production efficace}
+
+\begin{itemize}
+\item[$\bullet$] analogue \`{a} l'optimalit\'{e} de Pareto vue dans une \'{e}conomie d'\'{e}%
+change:
+
+$q\in Q$ est efficace $\Leftrightarrow $ $\nexists $ $q^{\prime }\in Q$: $%
+q^{\prime }>q$ (c.\`{a}.d. $q^{\prime }\geq q$, $q^{\prime }\neq q$)
+
+\item[$\bullet$]  $\Leftrightarrow $ il n'est pas possible d'augmenter la production d'un
+output sans diminuer celle d'un autre output ou sans accro\^{\i}tre la
+consommation d'un input, il n'est pas possible de r\'{e}duire la quantit\'{e}
+utilis\'{e}e d'un input sans augmenter celle d'un autre input ou sans
+diminuer la production d'un output
+
+\item[$\bullet$]  Si $Q$ est d\'{e}crit par une fonction de production $g$, l'ensemble des
+plans de production efficaces correspond \`{a} une partie de la fronti\`{e}%
+re de $Q$, o\`{u} $y=g(x)$
+
+\end{itemize}
+\subsection{Optimum du producteur}
+
+Soit $p=(p_{l})_{1\leq l\leq L}\in \mathbb{R}_{+}^{L}$ un vecteur de prix;
+le producteur, comme le consommateur est \textquotedblleft preneur de
+prix\textquotedblright\ (hypoth\`{e}se de concurrence parfaite).
+
+Le plan $q\in Q$ procure un profit $\pi (p)=p.q=\sum_{l=1}^{L}p_{l}q_{l}$ au
+producteur.
+
+\bigskip
+
+Exemple: Si les prix sont $(1,10,2)$, $(-1;1;-0,5)$ procure un profit de $%
+1\times (-1)+10\times 1+2\times (-0,5)=8$
+
+\bigskip
+
+L'objectif du producteur est de maximiser son profit sous ses contraintes
+technologiques:$$\max_{q\in Q}p.q$$
+
+\bigskip
+
+Justification: On suppose que les consommateurs $1,...,N$ sont propri\'{e}%
+taires de l'entreprise; soit $\theta ^{i}\geq 0$ la part du consommateur $i$
+($\sum_{i=1}^{N}\theta ^{i}=1$); le consommateur re\c{c}oit la part $\theta
+^{i}p.q$ du profit de l'entreprise, qui contribue \`{a} son revenu.\ Comme
+les consommateurs maximisent leur utilit\'{e} sous la contrainte de ne pas d%
+\'{e}passer leur revenu, ils ont int\'{e}r\^{e}t \`{a} avoir le revenu le
+plus \'{e}lev\'{e} possible et sont donc unanimes pour que l'entreprise
+maximise son profit.
+
+\bigskip 
+
+
+\begin{itemize}
+\item[$\bullet$] Le probl\`{e}me d'optimisation du producteur $\max_{q\in Q}p.q$ n'a pas n%
+\'{e}cessairement de solution car $Q$ n'est pas born\'{e}.
+
+\item[$\bullet$] Si les rendements sont croissants, le probl\`{e}me n'a pas de solution; mais
+ceci peut arriver m\^{e}me si les rendements sont d\'{e}croissants.
+
+\item[$\bullet$] Si $Q$ est \`{a} rendements constants, le profit maximal, s'il existe, est n%
+\'{e}cessairement nul. 
+\end{itemize}
+\textit{D\'{e}monstration: exercice.}
+\bigskip
+
+
+
+Conditions n\'{e}cessaires pour un optimum dans le cas d'une
+fonction de production $g$, diff\'{e}rentiable, d'un seul output
+
+$Q=\{(-x,y)$ : $x\in \mathbb{R}_{+}^{K}$, $y\in \mathbb{R}_{+}$, $y\leq
+g(x)\}$
+
+$r=$ prix de l'output; $w_{k}=$ prix de l'input $k$, $k=1,...,K$; $%
+p=(r,w_{1},...,w_{K})$
+
+Le probl\`{e}me du producteur est $$\left\{\begin{array}{l}
+\max_{x,y}ry-w.x\\
+s.c. \:\: y=g(x)\end{array}\right.$$.
+
+On
+s'int\'{e}resse aux solutions $(x,y)\gg 0$
+
+$$\mathcal{L}(x,y,\lambda )=ry-w.x-\lambda
+(y-g(x))=ry-\sum_{k=1}^{K}w_{k}x_{k}-\lambda (y-g(x))$$
+
+Conditions du premier ordre: \begin{description}
+\item $\frac{\partial \mathcal{L}}{\partial x_{k}}%
+(x,y,\lambda )=-w_{k}+\lambda \frac{\partial g}{\partial x_{k}}(x)=0$ $%
+\forall $ $k$ \item $\frac{\partial \mathcal{L}}{\partial y}(x,y,\lambda
+)=r-\lambda =0$
+\end{description}
+
+\bigskip
+
+En un optimum $(x^{\ast },y^{\ast })$: \begin{enumerate}\item $TMST_{k\rightarrow \ell}(x^{\ast
+})=_{\text{d\'{e}f }}\frac{\frac{\partial g}{\partial x_{\ell}}(x^{\ast })}{%
+\frac{\partial g}{\partial x_{k}}(x^{\ast })}=\frac{w_{\ell}}{w_{k}}$, $\forall k,l$ : le taux marginal de substitution technique de l'input $k$ \`{a}
+l'input $l$ est \'{e}gal au rapport du prix de ces inputs et \item  $\frac{%
+\partial g}{\partial x_{k}}(x^{\ast })=\frac{w_{k}}{r}$ : la productivit\'{e}
+marginale de chaque input est \'{e}gale au rapport du prix de ce facteur au
+prix de l'output.
+\end{enumerate}
+\bigskip
+
+Fonction d'offre du producteur:
+Si $\forall $ $p$, $\max_{q\in Q}p.q$ a une solution, et que cette solution
+soit unique, on la note $q^{\ast }(p)$; $q^{\ast }$ d\'{e}finit alors la 
+\textit{fonction d'offre} (nette) du producteur.
+
+\begin{proposition} Si $Q$ est strictement convexe ($q$, $q^{\prime }\in Q$, $%
+0<\alpha <1$, $\alpha q+(1-\alpha )q^{\prime }\in $ int$Q$) et que $%
+\max_{q\in Q}p.q$ ait une solution, cette solution est unique. \end{proposition}\textit{D\'{e}%
+monstration: exercice}
+
+\bigskip
+
+\noindent Propri\'{e}t\'{e}s de la fonction d'offre $q^{\ast }(.)$, suppos%
+\'{e}e bien d\'{e}finie (c.\`{a}.d.$\forall $ $p$, $\max_{q\in Q}p.q$ a une
+solution unique):
+\begin{itemize}\item[$\bullet $] Homog\`{e}ne de degr\'{e} 0 par rapport au prix $q^{\ast }(\alpha
+p)=q^{\ast }(p)$ $\forall \alpha >0$\textit{.\ D\'{e}monstration: exercice}.
+
+\item[$\bullet $] Efficacit\'{e}: soit $p\gg 0$; $q^{\ast }(p)$ est efficace. 
+\textit{D\'{e}monstration: exercice}.
+
+\item[$\bullet $] Loi de l'offre: quand le prix d'un bien augmente, l'offre (nette)
+de ce bien ne peut diminuer.\ Formellement, $(p-p^{\prime
+}).(q(p)-q(p^{\prime }))\geq 0$ $\forall $ $p,p^{\prime }$.\ En particulier, 
+$(p_{l}-p_{l}^{\prime })(q_{l}(p)-q_{l}(p^{\prime }))\geq 0$ $l=1,...,L$.
+
+{\it D\'{e}monstration}: $p.q(p^{\prime })\leq p.q(p)$ car $q(p)$ est l'optimum en 
+$p$; de m\^{e}me, $p^{\prime }.q(p)\leq p^{\prime }.q(p^{\prime })$, ce qui 
+\'{e}quivaut \`{a} $-p^{\prime }.q(p)\geq -p^{\prime }.q(p^{\prime })$; il
+suffit alors de sommer.
+
+\end{itemize}
+\subsection{Plusieurs producteurs: offre agr\'{e}g\'{e}e}
+
+Nous supposons maintenant qu'il y a $M$ entreprises $j=1,...,M$, caract\'{e}%
+ris\'{e}es chacune par un ensemble de production $Q^{j}\subseteq \mathbb{R}%
+^{L}$. 
+\bigskip
+
+
+On d\'{e}finit l'ensemble de production agr\'{e}g\'{e} par:
+
+$Q_{AG}=\sum_{j=1}^{M}Q^{j}=\{q\in \mathbb{R}^{L}\vert\exists 
+$ $q^{j}\in Q^{j}$, $j=1,...,M$ : $q=\sum_{j=1}^{M}q^{j}\}$
+
+\begin{proposition} Soit $p$ un vecteur de prix, $q^{j\ast }\in Q^{j}$, $j=1,...,M$
+et $q_{AG}^{\ast }=\sum_{j=1}^{M}q^{j\ast }$. $q_{AG}^{\ast }$ est solution
+de $\max_{q\in Q_{AG}}p.q$ $\Leftrightarrow $ $q^{j\ast }$ est solution de $%
+\max_{q\in Q^{j}}p.q$, $\forall $ $j=1,...,M$.\ En particulier, l'offre agr%
+\'{e}g\'{e}e $q_{AG}^{\ast }(p)=\sum_{j=1}^{M}q^{j\ast }(p)$, d\'{e}finie 
+\`{a} partir des fonctions d'offre $q^{j\ast }(p)$ de chaque firme $j$, peut
+se voir comme la fonction d'offre d'une entreprise repr\'{e}sentative et
+satisfait la loi de l'offre.\end{proposition}
+
+{\it D\'{e}monstration:}
+
+$\Rightarrow $: supposons par l'absurde qu'une entreprise, $m$, r\'{e}alise
+un profit strictement plus \'{e}lev\'{e} en choisissant $q^{m}$ plut\^{o}t
+que $q^{m\ast }$, c.\`{a}.d. $p.q^{m}>p.q^{m\ast }$.\ Soit $%
+q_{AG}=\sum_{j\neq m}q^{j\ast }+q^{m}$; $p.q_{AG}>p.q_{AG}^{\ast }$,
+contradiction.
+
+$\Leftarrow $: supposons par l'absurde qu'il existe $q_{AG}\in Q_{AG}$ tel
+que $p.q_{AG}>p.q_{AG}^{\ast }$.\ Par d\'{e}finition de $Q_{AG}$, $%
+q_{AG}=\sum_{j=1}^{M}q^{j}$, avec $q^{j}\in Q^{j}$, $j=1,...,M$; $%
+p.\sum_{j=1}^{M}q^{j}>p.\sum_{j=1}^{M}q^{j\ast }\Rightarrow \exists $ $m$: $%
+p.q^{m}>p.q^{m\ast }$, contradiction.\ cqfd
+
+
+\subsection{Equilibre concurrentiel avec production}
+
+Soit $\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq
+M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$. 
+
+\begin{definition} Un \'{e}quilibre
+concurrentiel $(p,q,z)$ pour $\mathcal{E}$ consiste en
+\begin{itemize}
+\item  un vecteur de prix $%
+p=(p_{1},...,p_{L})\in \mathbb{R}_{+}^{L}$ \item  une allocation $%
+(q,z)=(q^{1},...,q^{M},z^{1},...,z^{N})\in (\mathbb{R}^{L})^{M}\times (%
+\mathbb{R}_{+}^{L})^{N}$, o\`{u} $q$ est un plan de production, tels que:
+
+\begin{enumerate}\item
+ $\forall j=1,...,M$, $q^{j}$ maximise le profit $p.\chi ^{j}$ de
+l'entreprise $j$ sous $\chi ^{j}\in Q^{j}$
+
+\item
+ $\forall i=1,...,N$, $z^{i}$ maximise l'utilit\'{e} $u^{i}(\zeta
+) $ du consommateur $i$ sous sa contrainte budg\'{e}taire $p.\zeta \leq
+p.e^{i}+$ $\sum_{j=1}^{M}\theta ^{ij}(p.q^{j})$
+
+\item
+ les march\'{e}s ($l=1,...,L$) s'apurent: $\sum_{i=1}^{N}z^{i}=%
+\sum_{i=1}^{N}e^{i}+\sum_{j=1}^{M}q^{j}$
+
+\end{enumerate}
+\end{itemize}
+\end{definition}
+\begin{remark} On peut récrire les inégalités plus explicitement:\begin{description}
+\item 
+Le profit de l'entreprise $j$ s'\'{e}crit $p.\chi
+^{j}=\sum_{l=1}^{L}p_{l}\chi _{l}^{j}$
+\item 
+La contrainte budg\'{e}taire du consommateur $i$ s'\'{e}crit
+
+$\sum_{l=1}^{L}p_{l}\zeta _{l}\leq \sum_{l=1}^{L}p_{l}e_{l}^{i}$ $+$ $%
+\sum_{j=1}^{M}\theta ^{ij}\sum_{l=1}^{L}p_{l}q_{l}^{j}$
+\item
+La condition d'apurement des march\'{e}s s'\'{e}crit
+
+$\sum_{i=1}^{N}z_{l}^{i}=\sum_{i=1}^{N}e_{l}^{i}+\sum_{j=1}^{M}q_{l}^{j}$, $%
+l=1,...,L$
+\end{description}
+\end{remark}
+
+L'existence d'un \'{e}quilibre suppose que la maximisation du profit des
+entreprises ait une solution et exclut donc les rendements croissants.\ En
+ajoutant des hypoth\`{e}ses (typiquement de convexit\'{e}) sur les ensembles
+de production, on g\'{e}n\'{e}ralise le th\'{e}or\`{e}me fondamental
+d'existence vu dans le cadre des \'{e}conomies d'\'{e}change.
+
+\bigskip
+
+\subsection{L'\'{e}conomie de Robinson Cruso\'{e}}
+
+\begin{description}
+
+\item
+Un consommateur, une entreprise poss\'{e}d\'{e}e par le consommateur.
+\item
+
+Deux biens: nourriture ($x$) et loisir ($y$); travail $t=24-y$.
+\item
+
+$r$ = prix d'une unit\'{e} de nourriture; $w$ = salaire horaire.
+\item
+
+Robinson-firme est d\'{e}crit par une fonction de production $g:t\rightarrow
+g(t)$ qui transforme du travail en nourriture; il maximise son profit $\pi
+=rx-wt=rx-w(24-y)$ sous $g(t)=x$.
+\item
+
+Les droites d'isoprofit, dans le plan $(y,x)$ ont une pente $\frac{-w}{r}$
+(voir graphique).
+\item
+
+Robinson-consommateur a une dotation initiale $(e_{x},e_{y})=(0,24)$ et une
+fonction d'utilit\'{e} $u$; il maximise $u(x,y)=u(x,24-t)$ sous $%
+rx+wy=24w+\pi \Leftrightarrow rx=wt+\pi $ : il consacre son salaire et son
+profit d'actionnaire \`{a} l'achat du bien de consommation; la pente de la
+contrainte budg\'{e}taire dans le plan $(y,x)$ est $\frac{-w}{r}$ (voir
+graphique).
+\end{description}
+
+\bigskip
+
+
+{\bf Exemple 1.} la fonction de production $g$ est (strictement) concave et $%
+g(0)=0 $; les rendements sont \textit{d\'{e}croissants} (voir graphique).
+
+A l'\'{e}quilibre, les quantit\'{e}s de nourriture produite (output) et de
+nourriture consomm\'{e}e doivent \^{e}tre \'{e}gales et la quantit\'{e} de
+travail utilis\'{e}e comme input doit \^{e}tre \'{e}gale \`{a} $24$ - la
+quantit\'{e} de loisir consomm\'{e}e; de plus, le profit $\pi $ de
+Robinson-firme appara\^{\i}t dans la contrainte budg\'{e}taire de
+Robinson-consommateur.\ L'\'{e}quilibre est une solution du probl\`{e}me
+unifi\'{e} de Robinson, c.\`{a}.d. un optimum de Pareto (voir graphique).
+
+\bigskip 
+
+{\bf Exemple 2.} la fonction de production $g$ est une droite; les rendements sont 
+\textit{constants}; les droites d'isoprofit, dans le plan $(t,x)$ ont une
+pente $\frac{w}{r}>0$; \`{a} l'optimum du producteur, le profit doit \^{e}%
+tre nul.
+
+Si la pente de $g$ est $>\frac{w}{r}$, il n'y a pas de solution: $\pi
+\rightarrow \infty $.
+
+Si la pente de $g$ est $<\frac{w}{r}$, la seule solution possible est de ne
+rien produire (ce qui ne peut constituer un \'{e}quilibre, vu les pr\'{e}f%
+\'{e}rences de Robinson-consommateur).
+
+Il faut donc que la pente de $g$ soit $=\frac{w}{r}$; si un \'{e}quilibre
+existe, son prix est d\'{e}termin\'{e} ind\'{e}pendamment des pr\'{e}f\'{e}%
+rences du consommateur (voir graphique).
+
+\bigskip
+
+
+{\bf Exemple 3.} la fonction de production $g$ est convexe; les rendements sont 
+\textit{croissants}.\ On peut encore trouver une solution au probl\`{e}me
+unifi\'{e} de Robinson, c.\`{a}.d. un optimum de Pareto, mais celui-ci n'est
+pas d\'{e}centralisable par un syst\`{e}me de prix: il n'y a pas d'\'{e}%
+quilibre (voir graphique).
+
+\bigskip
+
+\subsection{Optimalit\'{e} de Pareto}
+
+\begin{definition}
+Soit $\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq
+M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$
+
+Soit $(q,z)=(q^{1},...,q^{M},z^{1},...,z^{N})\in (\mathbb{R}^{L})^{M}\times (%
+\mathbb{R}_{+}^{L})^{N}$ une allocation; $(q,z)$ est \textit{r\'{e}alisable}
+(dans $\mathcal{E}$) si $q^{j}\in Q^{j}$, $j=1,...,M$ et $%
+\sum_{i=1}^{N}z^{i}=\sum_{i=1}^{N}e^{i}+\sum_{j=1}^{M}q^{j}$ c.\`{a}.d. $$%
+\sum_{i=1}^{N}z_{l}^{i}=\sum_{i=1}^{N}e_{l}^{i}+\sum_{j=1}^{M}q_{l}^{j},\:\:
+l=1,...,L$$
+
+Une allocation $(q,z)$ r\'{e}alisable est \textit{Pareto-optimale }(dans%
+\textit{\ }$\mathcal{E}$) si
+
+$\nexists $ $(\widetilde{q},\widetilde{z})$ r\'{e}alisable tel que $\forall $
+$1\leq i\leq N$, $u^{i}(\widetilde{z}^{i})\geq u^{i}(z^{i})$ et $\exists $ $%
+1\leq j\leq N$, $u^{j}(\widetilde{z}^{j})>u^{j}(z^{j})$.
+\end{definition}
+Le bien-\^{e}tre est donc celui des consommateurs, qui poss\`{e}dent les
+entreprises.\ Celles-ci sont juste des technologies de transformation des
+dotations en biens produits, source de satisfaction pour les consommateurs.
+
+\bigskip
+
+\begin{theorem}[Premier th\'{e}or\`{e}me du bien-\^{e}tre]\-\\
+Soit $\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq
+M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$ une \'{e}conomie dans
+laquelle les fonctions d'utilit\'{e} $u^{i}$ , $i=1,...,N$, sont
+croissantes; si $(\widetilde{p},\widetilde{q},\widetilde{z})$ est un \'{e}%
+quilibre concurrentiel, $(\widetilde{q},\widetilde{z})$ est Pareto-optimale.\end{theorem}
+{\it D\'{e}monstration}: On proc\`{e}de comme dans le cas d'une \'{e}conomie d'%
+\'{e}change. Soit $(\widetilde{p},\widetilde{q},\widetilde{z})$ un \'{e}%
+quilibre; supposons, par l'absurde, que $(\widetilde{q},\widetilde{z})$ soit
+Pareto-domin\'{e}e par $(q,z)$.\ On montre que $p.\sum_{j=1}^{M}q^{j}>p.%
+\sum_{j=1}^{M}\widetilde{q}^{j}$, ce qui contredit que $\widetilde{q}^{j}$
+maximise le profit du producteur $j$, $j=1,...,N$. cqfd
+
+
+\begin{theorem}[Second th\'{e}or\`{e}me du bien-\^{e}tre]\-\\
+Soit $\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq
+M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$ une \'{e}conomie dans
+laquelle les fonctions d'utilit\'{e} $u^{i}$ , $i=1,...,N$, sont strictement
+croissantes et quasi-concaves et les ensembles de production $Q^{j}$, $%
+j=1,...,M$ sont convexes; si l'allocation $(\widetilde{q},\widetilde{z})$
+est Pareto-optimale dans $\mathcal{E}$ et telle que $\widetilde{z}^{i}\gg 0$%
+, $i=1,...,N$, il existe un vecteur de prix $\widetilde{p}$ tel que
+
+\begin{enumerate}\item $\widetilde{q}^{j}$ maximise $\widetilde{p}.q^{j}$ sous $q^{j}\in Q^{j}$
+
+\item  $\widetilde{z}^{i}$ maximise $u^{i}(z^{i})$ sous $p.z^{i}\leq p.%
+\widetilde{z}^{i}$, $i=1,...,N$.\end{enumerate}
+\end{theorem}
+
+Comme dans le cas d'une \'{e}conomie d'\'{e}change, une variante du second th%
+\'{e}or\`{e}me du bien-\^{e}tre s'\'{e}nonce sous la forme: si $(\widetilde{q%
+},\widetilde{z})$ est une allocation Pareto-optimale dans $\mathcal{E}$,
+telle que $\widetilde{z}^{i}\gg 0$, $i=1,...,N$, $(\widetilde{q},\widetilde{z%
+})$ est une allocation d'\'{e}quilibre avec transferts de $\mathcal{E}$.
+
+\bigskip
+
+\subsection{Caract\'{e}risation des optima de Pareto}
+
+On suppose que les ensembles de production $Q^{j}$, $j=1,...,M$, sont de la
+forme $Q^{j}=\{q^{j}\in \mathbb{R}^{L}:G^{j}(q^{j})\leq 0\}$ o\`{u} $G^{j}:%
+\mathbb{R}^{L}\rightarrow \mathbb{R}$ est une fonction convexe (d'o\`{u} $%
+Q^{j}$ est un ensemble convexe) et telle que $G^{j}(0)\leq 0$; en un plan de
+production $q^{j}$ efficace, $G^{j}(q^{j})=0$. On suppose aussi que les
+fonctions d'utilit\'{e} $u^{i}$ sont croissantes et concaves, $i=1,...,N$.
+
+\bigskip
+
+Soit $(\widetilde{q},\widetilde{z})$ une allocation Pareto-optimale.\ En proc%
+\'{e}dant comme pour une \'{e}conomie d'\'{e}change, on montre que $\exists $
+$\gamma ^{i}\geq 0$, $i=1,...,N$, non tous nuls ($\gamma \neq 0$), tels que $%
+\widetilde{z}$ soit solution du probl\`{e}me d'optimisation sociale:
+
+$$\left\{\begin{array}{l}
+\max_{q,z}\sum_{i=1}^{N}\gamma ^{i}u^{i}(z^{i})\\
+s.c. \:\: G^{j}(q^{j})=0, \:j=1,...,M\\
+\sum_{i=1}^{N}z_{l}^{i}=\sum_{i=1}^{N}e_{l}^{i}+\sum_{j=1}^{M}q_{l}^{j}, \:\:l=1,...,L\end{array}\right.$$
+
+Si les fonctions $G^{j}$ et $u^{i}$ sont diff\'{e}rentiables, on consid\`{e}%
+re les conditions du premier ordre associ\'{e}es au probl\`{e}me, en $z\gg 0$:
+
+$$\mathcal{L}=\sum_{i=1}^{N}\gamma ^{i}u^{i}(z^{i})-\sum_{j=1}^{M}\mu
+^{j}G^{j}(q^{j})-\sum_{l=1}^{L}\lambda _{l}\left(
+\sum_{i=1}^{N}z_{l}^{i}-\sum_{i=1}^{N}e_{l}^{i}-\sum_{j=1}^{M}q_{l}^{j}%
+\right) $$
+
+\begin{description}
+\item $$\frac{\partial \mathcal{L}}{\partial z_{l}^{i}}=\gamma ^{i}\frac{\partial
+u^{i}}{\partial z_{l}^{i}}(z^{i})-\lambda _{l}=0 \hbox{ pour  }i=1,...,N, \:\:l=1,...,L$$
+
+$$\Longleftrightarrow \lambda _{l}=\gamma ^{i}\frac{\partial u^{i}}{\partial
+z_{l}^{i}}(z^{i})\hbox{ pour  }i=1,...,N, \:\:l=1,...,L$$
+
+$\Longrightarrow$
+\begin{equation}\label{eq1} TMS_{k\rightarrow l}^{i}(z^{i})=\frac{\frac{\partial u^{i}}{%
+\partial z_{l}^{i}}(z^{i})}{\frac{\partial u^{i}}{\partial z_{k}^{i}}(z^{i})}%
+=\frac{\lambda _{l}}{\lambda _{k}}\:\:\forall i,k,l\end{equation}
+
+\item\item De m\^{e}me, $$\frac{\partial \mathcal{L}}{\partial q_{l}^{j}}=\mu ^{j}\frac{%
+\partial G^{j}}{\partial q_{l}^{j}}(q^{j})-\lambda _{l}=0 \hbox{ pour } j=1,...,M,\:\:
+l=1,...,L$$
+
+$$\Longleftrightarrow \lambda _{l}=\mu ^{j}\frac{\partial G^{j}}{\partial
+q_{l}^{j}}(q^{j})\hbox{ pour } j=1,...,M,\:\:
+l=1,...,L$$
+
+$\Longrightarrow$
+\begin{equation}\label{eq2} TMT_{k\rightarrow l}^{j}(q^{j})=\frac{\frac{\partial G^{j}}{%
+\partial q_{l}^{j}}(q^{j})}{\frac{\partial G^{j}}{\partial q_{k}^{j}}(q^{j})}%
+=\frac{\lambda _{l}}{\lambda _{k}}\:\:\forall j,k,l\end{equation}
+\item
+\item 
+Eq. (\ref{eq1}) et (\ref{eq2}) $\Longrightarrow $ En un optimum $(\widetilde{q},\widetilde{z})$: $$%
+TMS_{k\rightarrow l}^{i}(\widetilde{z}^{i})=TMT_{k\rightarrow l}^{j}(%
+\widetilde{q}^{j})\:\:\:\forall i,j,k,l$$
+
+\end{description}
+Le taux marginal de substitution de \textit{chaque} agent entre deux biens
+quelconques doit \^{e}tre \'{e}gal au taux marginal de \textit{transformation%
+} de chaque entreprise entre ces deux biens.\ En particulier, les taux
+marginaux de substitution des diff\'{e}rents agents sont \'{e}gaux entre eux.
+
+
+\section{Défaillances du marché: effets externes et biens publics}
+
+On étend le modèle canonique vu aux chapitres précédents pour prendre en compte 2 aspects importants des préférences et de la nature des biens:
+
+
+\begin{quote}
+\begin{description}
+\item Effets externes: effet indirect d'une activité de production ou de consommation sur les préférences ou les technologies de production des agents (exemple: pollution).
+\item Biens publics: l'usage par un agent n'empêche pas son usage par un autre agent (exemple: éclairage public).
+\end{description}
+
+
+\end{quote}
+
+\begin{remark} La présence d'effets externes et de biens publics complique sensiblement l'analyse. Dans ce chapitre, on n'établit pas de résultat général, on raisonnera sur des exemples simples, dans des économies à 2 agents et 2 biens. {\bf voir Tallon chapitre XI}.
+\end{remark}
+
+\subsection{Effets externes}
+
+Illustrations classiques:
+\begin{enumerate}
+\item Apiculteurs et cultivateurs: externalités de production, positive et réciproque.
+\item Pollution: externalité de production ou de consommation, négative.
+\end{enumerate}
+
+\bigskip
+
+Formellement, on peut définir une économie d'échange avec des effets externes en considérant des fonctions d'utilité de chaque agent définies sur l'ensemble des paniers de consommations des agents. C'est à dire pour l'agent $i$:  $(x^1,...,x^i,..,x^N)\in (\R^L_+)^N\rightarrow u^i(x^1,...., x^i,...,x^N)$.
+
+La consommation des paniers de biens $(x^j)_{j\neq i}$ modifie les préférences de l'agent $i$. Par contre, le comportement microéconomique de l'agent $i$ est inchangé, il cherche toujours à maximiser son utilité sous contrainte budgétaire, mais il prend comme donnée l'externalité produite par les autres.
+
+La définition de l'équilibre concurrentiel est donc inchangée: un prix et une allocation tels que chaque chaque maximise son utilité sous contrainte budgétaire (étant donnés le prix et les consommations des autres agents), les marchés s'apurent (définition inchangée).
+
+
+\bigskip
+
+
+{\bf Message principal:} en présence d'externalités, l'équilibre concurrentiel n'est pas néces\-sairement optimal.
+
+\bigskip
+\subsubsection{Exemple}
+ \begin{itemize}
+\item 2 consommateurs \item 2 biens $x$ et $y$ \item les dotations sont $e^1=(1,0)$ et $e^2=(0,1)$\end{itemize}
+
+\bigskip
+
+Jusqu'ici les agents n'avaient d'utilité que pour leur propre consommation:
+\begin{itemize}
+\item $x^i$: quantité de bien $x$ consommée par l'agent $i$
+\item $y^i$: quantité de bien $y$ consommée par l'agent $i$
+\end{itemize}
+
+\bigskip
+
+A présent, l'utilité de l'agent 1 dépend de la consommation en bien $x$ de l'agent 2:
+$$u^1(x^1,y^1;x^2)=\sqrt{x^1y^1}- x^2 \:\:\:\:\:\:\hbox{ et }\:\:\:\:\:\:\:\:\:u^2(x^2,y^2)=\sqrt{x^2y^2}$$
+
+\bigskip
+
+La définition d'équilibre est inchangée mais l'agent $1$ ne contrôle pas $x^2$ lorsqu'il maximise son utilité!
+
+\begin{description}
+\item $(x^1,y^1)$ solution de $\max u^1(x^1,y^1; x^2)$ sous la contrainte $p_xx^1+p_yy^1\leq p_x$
+
+ i.e. $(x^1,y^1)$ solution de $\max \sqrt{x^1y^1}-x^2$ sous la contrainte $p_xx^1+p_yy^1\leq p_x$
+
+ Rem.: identique à $\max \sqrt{x^1y^1}$ sous la contrainte $p_xx^1+p_yy^1\leq p_x$
+
+ $\Longrightarrow$ solution: $d^1_x(p)=\frac{1}{2}$ et $d^1_y(p)=\frac{p_x}{2p_y}$
+\item Pour le consommateur 2, pas d'externalité
+
+$\Longrightarrow$ solution: $d^2_x(p)=\frac{p_y}{2p_x}$ et $d^2_y(p)=\frac{1}{2}$
+\item $\Longrightarrow$ $p_x=p_y$, chaque agent obtient $(\frac{1}{2},\frac{1}{2})$, exactement comme sans externalité ({\bf ce n'est pas un résultat général!}) mais les utilités à l'équilibre sont : $u^1_*=\sqrt{\frac{1}{2}\frac{1}{2}}-\frac{1}{2}=0$ et $u^2_*=\sqrt{\frac{1}{2}\frac{1}{2}}=\frac{1}{2}$.
+\end{description}
+
+\bigskip
+
+\underline{L'équilibre n'est pas Pareto optimal:}
+ 
+ Prenons par exemple $(x_0^1, y_0^1)=(\frac{2}{3}, \frac{1}{5})$ et $(x_0^2, y_0^2)=(\frac{1}{3}, \frac{4}{5})$. L'allocation est réalisable: $\frac{2}{3}+\frac{1}{3}=1$ et $\frac{1}{5}+\frac{4}{5}=1$; et on a $u_0^1=\sqrt{\frac{2}{3}.\frac{1}{5}}-\frac{1}{3}$, $u_0^2=\sqrt{\frac{1}{3}.\frac{4}{5}}$.
+
+ On remarque que $u_0^1>u_*^1$ ssi $\frac{2}{3}.\frac{1}{5}>\frac{1}{9}$ ssi ${2}>\frac{15}{9}$ (OK)
+ 
+ Et, 
+ $u_0^2>u_*^2$ ssi $\frac{1}{3}.\frac{4}{5}>\frac{1}{4}$ ssi $\frac{1}{15}>\frac{1}{16}$ (OK) 
+
+
+\begin{remark}
+Lorsque les utilités avec externalités sont séparables, c'est-à-dire que les effets externes entrent dans les préférences des agents sous forme additive comme dans l'exemple précédent, l'équilibre correspond à l'équilibre dans le modèle sans externalité. Pourquoi? (écrire le programme de maximisation du consommateur pour s'en convaincre).
+\end{remark}
+
+
+\subsubsection{Externalités: conditions d'optimalité de Pareto}
+
+A partir d'un exemple qui généralise le précédent.
+
+
+\begin{itemize}
+\item 2 agents 1 et 2
+\item 2 biens ($x$ et $y$)
+\item la consommation de bien $x$ par un agent affecte l'autre
+\end{itemize}
+
+\bigskip
+
+Le programme d'optimisation social peut s'écrire:
+
+$$\left\{\begin{array}{lll}
+\max_{x,y} & \rho^1u^1(x^1,y^1; x^2)+\rho^2u^2(x^2,y^2;x^1)\\
+ s.c. & x^1+x^2=e_x\\ & y^1+y^2=e_y\end{array}\right.$$
+où $\rho^1,\rho^2>0$
+
+
+\bigskip
+On obtient:
+
+\begin{description}\item $\mathcal{L}=\rho^1u^1(x^1,y^1; x^2)+\rho^2u^2(x^2,y^2;x^1)-\lambda_x(x^1+x^2-e_x)-\lambda_y(y^1+y^2-e_y)$
+\item CNS:
+\begin{equation}\label{eq4} \frac{\partial\mathcal{L}}{\partial x^1}=\rho^1\frac{\partial u^1}{\partial x^1}+\rho^2\frac{\partial u^2}{\partial x^1}-\lambda_x=0\end{equation}
+\begin{equation}\label{eq5} \frac{\partial\mathcal{L}}{\partial x^2}=\rho^1\frac{\partial u^1}{\partial x^2}+\rho^2\frac{\partial u^2}{\partial x^2}-\lambda_x=0\end{equation}
+\begin{equation}\label{eq6} \frac{\partial\mathcal{L}}{\partial y^1}=\rho^1\frac{\partial u^1}{\partial y^1}-\lambda_y=0\end{equation}
+\begin{equation}\label{eq7} \frac{\partial\mathcal{L}}{\partial y^2}=\rho^2\frac{\partial u^2}{\partial y^2}-\lambda_y=0\end{equation}
+\item En utilisant (\ref{eq4}), (\ref{eq6}) et (\ref{eq7}), on obtient:
+$$\frac{\lambda_x}{\lambda_y}=\frac{\rho^1\frac{\partial u^1}{\partial x^1}}{\rho^1\frac{\partial u^1}{\partial y^1}}+ \frac{\rho^2\frac{\partial u^2}{\partial x^1}}{\rho^2\frac{\partial u^2}{\partial y^2}}$$ C'est-à-dire:
+\begin{equation}\label{eq8}\frac{\lambda_x}{\lambda_y}=TMS^1_{y^1\rightarrow x^1}+TMS^2_{y^2\rightarrow x^1}\end{equation}
+
+\item En procédant de même avec (\ref{eq5}), (\ref{eq6}) et (\ref{eq7})
+\begin{equation}\label{eq9}\frac{\lambda_x}{\lambda_y}=TMS^1_{y^1\rightarrow x^2}+TMS^2_{y^2\rightarrow x^2}\end{equation}
+\end{description}
+
+\bigskip
+\underline{La notion de TMS social}
+
+\bigskip
+
+ A l'optimum on a donc $$TMS^1_{y^1\rightarrow x^1}+TMS^2_{y^2\rightarrow x^1}=TMS^1_{y^1\rightarrow x^2}+TMS^2_{y^2\rightarrow x^2}$$
+
+Cette équation signifie que la somme (sur les agents) des TMS doit être constante : 
+lorsque, par exemple, la consommation en bien 1 du premier consommateur augmente, 
+il faut tenir compte du fait que cela affecte également le bien-être du second consommateur. On peut voir la quantité:
+
+$$ \frac{\frac{\partial u^1}{\partial x^1}}{\frac{\partial u^1}{\partial y^1}}+ \frac{\frac{\partial u^2}{\partial x^1}}{\frac{\partial u^2}{\partial y^2}}$$
+comme étant le TMS social du bien 1 détenu par le premier consommateur. C'est ce TMS qui est déterminant dans l'allocation  des ressources dans une économie avec 
+externalités. Les prix d'équilibre concurrentiel, dans une économie où chacun ne tient 
+pas compte du fait quíil affecte, par ses décisions, le bien-être d'autrui, ne reflètent 
+pas cette dimension sociale de la consommation de certains biens. L'inefficacité de 
+l'équilibre provient précisément de ceci. 
+
+
+\bigskip
+
+ On rappelle que dans l'exemple initial, à l'équilibre concurrentiel on a:
+$$TMS^1_{y^1\rightarrow x^1}=TMS^2_{y^2\rightarrow x^2}=\frac{p_x}{p_y}=1$$
+
+$$TMS^2_{y^2\rightarrow x^1}=0$$
+
+$$TMS^1_{y^1\rightarrow x^2}=\frac{-1}{\frac{1}{2}}=-2$$
+
+ On remarque que (\ref{eq8}) donne $1+0\neq -2+1$ qui est (\ref{eq9}). Donc  l'équilibre concurrentiel de l'économie avec externalité n'est pas Pareto optimal.
+ 
+ \bigskip
+ 
+
+ CONC. Optimum de Pareto: notion tout à fait générale - Equilibre concurrentiel: approprié quand il y a des marchés.
+
+
+
+
+\begin{remark}
+A savoir faire: retrouver les conditions d'optimalité dans une économie à 2 agents et 2 biens, interpréter ces conditions comme un TMS social et les comparer avec la caractérisation de l'équilibre.\end{remark}
+
+\subsection{Biens publics}
+
+
+\subsubsection{Allocations Pareto optimales: conditions de Bowen-Lindahl-Samuelson}
+
+Exemple:
+
+\begin{itemize}
+\item 2 agents 1 et 2
+\item 2 biens $x$ et $y$, le bien $x$ est un bien privé, le bien $y$ est un bien public
+\item $x^i$: quantité de bien $x$ consommée par l'agent $i$
+\item $y$: quantité de bien public
+\item Préférences des agents: $u^i(x^i,y)$, $u^i$ strictement croissantes et différentiables.
+\item Le bien public est produit (financé)à partir de bien privé: $y=g(z)$ où $z$ est l'input de bien privé et $y$ est l'output en bien public.
+\item donc $z=g^{-1}(y)$: quantité de bien privé nécessaire à la production de $y$ unités de bien public.
+\item $g^{-1}$: "fonction de coût" (du bien public en bien privé).
+\item On suppose que la dotation totale initiale en bien privé est $e$.
+
+\item Allocation: $(x^1,x^2, z, y)$, avec $x^i\geq 0$, $z\geq 0$, $y\geq 0$. Elle est réalisable si $$\left\{\begin{array}{l}
+x^1+x^2+z=e\\g(z)=y\end{array}\right.$$
+
+\end{itemize}
+
+
+\bigskip
+
+
+\underline{Optima de Pareto de cette économie:}
+
+
+$$\left\{\begin{array}{lll}
+\max_{x^1,x^2,y,z} & a^1u^1(x^1,y)+a^2u^2(x^2,y) &\\ 
+s.c. & x^1+x^2+z=e&  (\lambda)\\
+& g(z)=y & (\nu)\end{array}\right.$$
+
+On obtient:
+\begin{description}
+\item $$\frac{\partial\mathcal{L}}{\partial x^i}=a^i\frac{\partial u^i}{\partial x^i}(x^i,y)-\lambda=0 \hbox{ avec } i=1,2$$
+
+\item $$\frac{\partial\mathcal{L}}{\partial y}=a^1\frac{\partial u^1}{\partial y}(x^1,y)+a^2\frac{\partial u^2}{\partial y}(x^2,y)-\nu=0$$ 
+
+$$\frac{\partial\mathcal{L}}{\partial z}=-\lambda +g^\prime(z)=0$$
+
+ \item En combinant les équations on obtient les {\bf conditions BLS:}
+$$\frac{\frac{\partial u^1}{\partial y}(x^1,y)}{\frac{\partial u^1}{\partial x^1}(x^1,y)}+\frac{\frac{\partial u^2}{\partial y}(x^2,y)}{\frac{\partial u^2}{\partial x^2}(x^2,y)}=\frac{1}{g^\prime(z)}$$
+
+\end{description}
+
+
+\bigskip
+\underline{Interprétation des conditions BLS}
+
+\bigskip
+
+On sait que: $$\frac{\frac{\partial u^i}{\partial y}(x^i,y)}{\frac{\partial u^i}{\partial x^i}(x^i,y)}:=TMS^i_{x^i\rightarrow y}$$
+\begin{description}
+\item
+= le taux marginal de substitution du bien privé au bien public, pour l'agent $i$
+\item 
+= contribution supplémentaire maximale en $x^i$ que le consommateur accepte pour bénéficier d'une unité supplémentaire de bien public
+\item
+= disponibilité marginale à payer de la part du consommateur $i$
+\end{description}
+
+\bigskip
+
+Par ailleurs, on a:
+
+$$\frac{1}{g^\prime(z)}=(g^{-1})^\prime(g(z))=(g^{-1})^\prime(y)$$
+\begin{description}
+\item
+=coût marginal de production du bien public
+\end{description}
+
+
+\bigskip
+
+CONC. les conditions BLS représentent la somme des disponibilités marginales à payer est égale au coût marginal du bien public.
+
+
+
+
+\subsubsection{Equilibre de Lindhal}
+
+Définition informelle: pseudo équilibre concurrentiel pour une économie avec biens publics, avec des prix personnalisés pour le bien public (assez artificiels).
+
+\bigskip
+
+On reprend l'exemple précédent, avec $e=e^1+e^2$ et $p_x=1$.
+
+Chaque consommateur résout:
+
+$$\left\{\begin{array}{ll}
+\max_{x^i,y} u^i(x^i,y)\\
+s.c. \:\:x^i\geq 0$, $y\geq 0\\
+x^i+p^iy=e^i\end{array}\right.$$ où $p^i$ est le prix d'une unité de bien public pour le consommateur $i$. 
+
+$\Longrightarrow$ les demandes  $x^i(p^i)$ et $y^i(p^i)$ pour $i=1,2$.
+
+\bigskip
+
+Le bien public est produit par une entreprise, qui considère que le prix d'une unité d'output $(y)$ est $p=p^1+p^2$. L'entreprise maximise son profit: 
+$$\left\{\begin{array}{l}
+\max_{y,z} (p^1+p^2)y - z\\
+s.c.\:\:g(z)=y\\
+z,y\geq 0\end{array}\right.$$
+
+$\Longrightarrow$ offre de bien public $y(p^1+p^2)$; demande d'input $z(p^1+p^2)$.
+
+\bigskip
+
+
+DEF.
+Un équilibre de Lindhal est un système de prix personnalisés $(\tilde p^1,\tilde p^2)$ et une allocation associée telle $$y(\tilde p^1+\tilde p^2)=y^1(\tilde p^1)=y^2(\tilde p^2)$$
+et 
+$$x^1(\tilde p^1)+x^2(\tilde p^2)+z(\tilde p^1+\tilde p^2)=e^1+e^2$$
+
+
+En écrivant les conditions du 1er ordre des consommateurs et des producteurs, on montre que l'allocation de l'équilibre de Lindahl satisfait BLS: elle donc Pareto optimale mais la mise en \oe uvre du mécanisme de marché sous-jacent paraît difficile en pratique!
+
+
+\subsubsection{Equilibre avec souscription}
+
+Problème de décision interactive: chaque agent choisit la quantité de bien privé qu'il consacre au bien public.
+
+Les ingrédients principaux sont les suivants:
+
+\begin{itemize}
+\item
+On suppose les choix indépendants et simultanées. $\neq $ équilibre concurrentiel.
+\item 
+Externalité: la décision d'un agent influence le sort des autres.
+\item
+Equilibre de Nash: chaque agent détermine sa contribution au bien public comme une réponse optimale à celle des autres agents, considérée comme donnée.
+\end{itemize}
+
+\bigskip 
+
+En reprenant l'exemple précédent:
+\bigskip
+
+
+L'agent 1 cherche sa réponse optimale à la contribution $z^2$ de l'agent 2:
+
+$$\left\{\begin{array}{ll}
+\max_{x^1,z^1,y} u^1(x^1,y) \\
+s.c. \:\:  x^1=e^1-z^1\\
+y=g(z^1+z^2)\\
+z^1, x^1\geq 0\end{array}\right.$$
+
+$\Longrightarrow$ solution $ \tilde z^1(z^2)$: fonction de meilleure réponse.
+
+\bigskip
+
+
+Pour chaque contribution possible $z^2$ de l'agent 2 au bien public, l'agent 1 calcule sa contribution optimale $\tilde z^1(z^2)$ qui maximise son utilité $u^1$. De même , pour chaque contribution $z^1$ de l'agent 1, l'agent 2 calcule sa contribution optimale $\tilde z^2(z^1)$.
+
+\bigskip
+
+DEF.
+Un équilibre avec souscription est une paire de contributions $(z^{1*},z^{2*})$ telle que $z^{1*}=\tilde z^1(z^{2*})$; $z^{2*}=\tilde z^2(z^{1*})$.
+
+
+\bigskip La solution semble plus réaliste en terme de mise en \oe uvre et de comportements par rapport à la solution de Lindahl. Mais on remarque que par les contraintes, $x^{1*}=e^1-z^{1*}$; $x^{2*}=e^2-z^{2*}$; $y^*=g(z^{1*}+z^{2*})$, l'équilibre n'est pas Pareto optimal en général!
+
+\section{Bibliographie}
+
+
+\begin{enumerate}
+\item Pierre Picard: {\it Eléments de microéconomie}, tome I, 7e édition. Montchrestien, 2007
+\item Bruno Jullien, Pierre Picard: {\it Microéconomie} , tome 2 Exercices et Corrigés, 3e édition. Montchrestien, 2002.
+\item Jean-Marc Tallon: {\it Équilibre général : une introduction}. Vuibert, 1997.
+\item Hal Varian: {\it Analyse microéconomique}, 2e édition. De Boeck Université, 2008.
+\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
