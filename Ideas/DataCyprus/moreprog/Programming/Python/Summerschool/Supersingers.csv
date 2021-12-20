@@ -1,0 +1,6 @@
+;John;James;Jess;Jill;Jack
+John;0;0;1;1;1
+James;0;0;0;1;0
+Jess;1;0;0;0;1
+Jill;1;1;0;0;0
+Jack;1;0;1;0;0

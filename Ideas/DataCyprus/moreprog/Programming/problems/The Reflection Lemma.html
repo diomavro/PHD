@@ -1,0 +1,323 @@
+
+<!-- saved from url=(0079)https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml -->
+<html class="gr__cut-the-knot_org"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+   <title>The Reflection Lemma</title>
+<link rel="meta" href="https://www.cut-the-knot.org/labels.rdf" type="application/rdf+xml" title="ICRA labels">
+ <meta http-equiv="pics-Label" content="(pics-1.1 &quot;https://www.icra.org/pics/vocabularyv03/&quot; l gen true for &quot;https://cut-the-knot.org&quot; r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 1) gen true for &quot;https://www.cut-the-knot.org&quot; r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 1))">
+   <meta http-equiv="revisit-after" content="15 days">
+   <link rel="shortcut icon" href="https://www.cut-the-knot.org/gifs/favicon.jpg">
+   <meta name="Author" content="Alexander Bogomolny">
+   <meta name="Copyright" content="1996-2018 Alexander Bogomolny">
+   <meta name="Title" content="The Reflection Lemma">
+   <meta name="Description" content="The Reflection Lemma is concerned with counting the number of random walks that satisfy certain conditions. It is quite common to denote the number of walks from A = (0, a) to B = (n, b) as N_n(a, b). A walk (S1, S2, ..., S3), for which sk = S1 + S2 + ... + Sk = 0, for some positive k is said to touch or cross the x-axis, depending as whether the next value S_(k+1) is either +1 or -1. The set of walks that touch or cross the x-axis is complementary to the set of walks that stay on the same side of the axis. The latter set is the subject of the Ballot Lemma">
+   <meta name="KeyWords" content="mathematics,math help,Mathematics, fun, puzzles, random walk,binomial coefficient">
+<style>
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body{font-family:lucida,courier new,trebuchet ms,Verdana,Arial,Helvetica,sans-serif;font-size:120%;color:#000000;position:relative;}
+h1{font-size:16pt;font-family:verdana,arial;margin-top:10px}
+h2{font-size:15pt;font-family:verdana,arial;margin-top:10px;line-height:140%}
+h3{font-size:12pt;font-family:verdana,arial}
+h4{font-size:11pt;font-family:verdana,arial}
+div.eqBox{width:100%;margin:0px;}
+div.boxed{width:100%; margin:1px; border:1px solid gray ;}
+div.boxed2{width:99%; margin:1px; border:9px solid white ;}
+a {text-decoration:none}
+.note{border:.1em solid purple;color:black;padding:1em;margin-left:60px;font-style:italic;width:570}
+.shift{margin-left:60px;}
+.theorem{width:96%;border:1px dotted purple;background:#FFe8cc;color:black;padding:1em;margin-left:40px;font-style:italic;}
+td {line-height:150%}
+td.menuLine{background:lightblue;z-index:5;cursor:pointer;min-width:4em;}
+table.menu{font-size:100%;position:fixed;visibility:hidden;border:1px solid black;min-width:5em;text-align:center;z-index:5;}
+span.menu{background:lightblue;cursor:pointer;border:0px;z-index:5;line-height:110%}
+span.handSelected{cursor:pointer;}
+#centerDiv{position:absolute;top:95;left:30px;width:1180px;border:0px;padding:0px}
+#content{position:absolute;left:10px;width:770px;border:0px;padding-top:0px}
+#menuContainer{left:160px;width:770px;height:40px;}
+#rightColumn{position:absolute;width:200px;left:782px;}
+#leftColumn{position:absolute;width:160px;left:2px}
+#leftColumnBottom{position:relative;float:left;width:160px;margin-left:5px}
+#logo{left:0px;width:120;float:left}
+#header{position:absolute;top:2;left:30px;width:1020px;vertical-align:top;display:inline;height:90px}
+#footer{height:0px}
+#donate{position:absolute;left:905px;width:150px;}
+#rightFloater {position:relative;padding:0px;}
+.mainFrame {margin:auto;width:740px;margin-top:50px;}
+.FirstLineIndent {text-indent:20px;}
+a:link {color:#0000ff;font-style:italic;}
+a:hover {font-size:105%;color:#aa0000;}
+p {padding-bottom:2px; padding-top:5px;line-height:150%}
+</style>
+
+<link href="./The Reflection Lemma_files/bootstrap.min.css" rel="stylesheet">
+<link href="./The Reflection Lemma_files/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+</head>
+
+<body text="#000000" bgcolor="#ffffff" link="#4444aa" vlink="#8844aa" alink="#008080" data-gr-c-s-loaded="true" style="zoom: 1;"><div id="StayFocusd-infobar" style="display:none;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">masquer définitivement</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">masquer une&nbsp;fois</a>
+    </span>
+</div>
+
+<div id="centerDiv">
+
+<div id="content">
+
+<div id="menuContainer">
+<div class="navbar navbar-default" role="navigation">
+<div class="navbar-collapse collapse">
+
+<ul class="nav navbar-nav sm" data-smartmenus-id="15723620554138154">
+	<li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml#" class="has-submenu">Site<span class="sub-arrow">...</span></a>
+		<ul class="dropdown-menu">
+			<li><a href="https://www.cut-the-knot.org/changes.shtml">What's new</a>
+			</li><li><a href="https://www.cut-the-knot.org/content.shtml">Content page</a>
+			</li><li><a href="https://www.cut-the-knot.org/front.shtml">Front page</a>
+			</li><li><a href="https://www.cut-the-knot.org/index.shtml">Index page</a>
+			<!-- <li><a href="https://www.cut-the-knot.org/wiki-math/index.php">CTK wiki-math</a> -->
+			</li><li><a href="https://www.cut-the-knot.org/wanted.shtml">About</a>
+			</li><li><a href="https://www.cut-the-knot.org/Privacy.shtml">Privacy policy</a>
+			</li><li><a href="https://www.cut-the-knot.org/MathHelp.shtml">Help with math</a>
+		</li></ul>
+	</li>
+	<li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml#" class="has-submenu">Subjects<span class="sub-arrow">...</span></a>
+		<ul class="dropdown-menu">
+			<li><a href="https://www.cut-the-knot.org/arithmetic.shtml">Arithmetic</a>
+			</li><li><a href="https://www.cut-the-knot.org/algebra.shtml">Algebra</a>
+			</li><li><a href="https://www.cut-the-knot.org/geometry.shtml">Geometry</a>
+			</li><li><a href="https://www.cut-the-knot.org/probability.shtml">Probability</a>
+			</li><li><a href="https://www.cut-the-knot.org/WhatIs/WhatIsTrigonometry.shtml">Trigonometry</a>
+			</li><li><a href="https://www.cut-the-knot.org/VisualIllusions.shtml">Visual illusions</a>
+		</li></ul>
+	</li>
+	<li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml#" class="has-submenu">Articles<span class="sub-arrow">...</span></a>
+		<ul class="dropdown-menu">
+			<li><a href="https://www.cut-the-knot.org/ctk/index.shtml">Cut the knot!</a>
+			</li><li><a href="https://www.cut-the-knot.org/WhatIs/index.shtml">What is what?</a>
+			</li><li><a href="https://www.cut-the-knot.org/manifesto/index.shtml">Manifesto</a>
+			</li><li><a href="https://www.cut-the-knot.org/Generalization/epairs.shtml">Inventor's paradox</a>
+			</li><li><a href="https://www.cut-the-knot.org/language/index.shtml">Math as language</a>
+			<!-- <li><a href="http://www.mathteacherctk.com/blog/">CTK Insights blog</a> -->
+			</li><li><a href="https://www.cut-the-knot.org/m/ProblemSolving.shtml">Problem solving</a>
+		</li></ul>
+	</li>
+	<li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml#" class="has-submenu">Collections<span class="sub-arrow">...</span></a>
+		<ul class="dropdown-menu">
+			<li><a href="https://www.cut-the-knot.org/Outline/index.shtml">Outline mathematics</a>
+			</li><li><a href="https://www.cut-the-knot.org/books/Reviews/index.shtml">Book reviews</a>
+			</li><li><a href="https://www.cut-the-knot.org/Curriculum/index.shtml">Interactive activities</a>
+			</li><li><a href="https://www.cut-the-knot.org/do_you_know/index.shtml">Did you know?</a>
+			</li><li><a href="https://www.cut-the-knot.org/pythagoras/tricky.shtml">Eye opener</a>
+			</li><li><a href="https://www.cut-the-knot.org/pythagoras/ellipse.shtml">Analogue gadgets</a>
+			<!-- <li><a href="https://www.cut-the-knot.org/wiki-math/index.php?n=MathematicalOlympiads.MathematicalOlympiads">Math Olympiads</a> -->
+      </li><li><a href="https://www.cut-the-knot.org/proofs/index.shtml">Proofs in mathematics</a>
+			</li><li><a href="https://www.cut-the-knot.org/impossible/index.shtml">Things impossible</a>
+			</li><li><a href="https://www.cut-the-knot.org/glossary/atop.shtml">Index/Glossary</a>
+		</li></ul>
+	</li>
+	<li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/ReflectionPrinciple.shtml#" class="has-submenu">Simple math<span class="sub-arrow">...</span></a>
+		<ul class="dropdown-menu">
+			<li><a href="https://www.cut-the-knot.org/arithmetic/rapid/index.shtml">Fast Arithmetic Tips</a>
+			</li><li><a href="https://www.cut-the-knot.org/ForYoung/Introduction.shtml">Stories for young</a>
+			</li><li><a href="https://www.cut-the-knot.org/arithmetic/WProblem.shtml">Word problems</a>
+			</li><li><a href="https://www.cut-the-knot.org/games.shtml">Games and puzzles</a>
+			</li><li><a href="https://www.cut-the-knot.org/logo.shtml">Our logo</a>
+			</li><li><a href="https://www.cut-the-knot.org/Curriculum/Arithmetic/MakeIdentity/index.shtml">Make an identity</a>
+			</li><li><a href="https://www.cut-the-knot.org/Curriculum/index.shtml#ElementaryGeometry">Elementary geometry</a>
+		</li></ul>
+	</li>
+	<!-- <li><a href="#">Misc</a>
+		<ul class="dropdown-menu">
+		  <li><a href="https://www.facebook.com/CutTheKnotMath/">CutTheKnotMath facebook page</a>
+			<li><a href="https://twitter.com/CutTheKnotMath">CutTheKnotMath twitter account</a>
+      <li><a href="http://mathteacherctk.com/blog">CTK Insights blog</a>
+    	<li><a href="/PHP/SpeakLoud.php"  title="Tell a friend about it" target=_top>
+Tell a friend</a></li>
+    	<li><a href="#spotim"  title="Talk about it" target=_top>
+Talk about it</a></li> -->
+<!--
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.cut-the-knot.org%2F%23.VNvfpq1i_NQ.facebook&p[title]=CutTheKnotMath&display=popup"><img src="/gifs/facebook.png" alt="facebook.png"></a></li>
+-->
+    <!-- </ul>
+	</li> -->
+ </ul>
+ 
+ <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="15723620554258203">
+<!--
+    <li><nobr><a href="https://www.facebook.com/CutTheKnotMath"><img src="/gifs/facebook.png" alt="facebook.png"></a>
+	    <a href="https://twitter.com/CutTheKnotMath"><img src="/gifs/tweeter.png" alt="tweeter.png"></a>
+-->			
+	  	<a href="https://plus.google.com/u/0/109711444617285651208/posts"><img src="./The Reflection Lemma_files/googleplus.png" alt="googleplus.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</ul>
+</div><!--/.nav-collapse -->
+</div>
+
+
+
+
+</div>
+
+<div class="mainFrame">
+
+<h2>The Reflection Lemma</h2>
+
+<p>The <em>Reflection Lemma</em> is concerned with counting the number of random walks that satisfy certain conditions. It is quite common to denote the number of walks from <nobr>A = (0, a)</nobr> to <nobr>B = (n, b)</nobr> as <nobr>N<sub>n</sub>(a, b).</nobr> A walk <nobr>(S<sub>1</sub>, S<sub>2</sub>, ..., S<sub>n</sub>),</nobr> for which <nobr>s<sub>k</sub> = S<sub>1</sub> + S<sub>2</sub> + ... + S<sub>k</sub> = 0,</nobr> for some k &gt; 0 is said to touch or cross the x-axis, depending as whether the next value S<sub>k+1</sub> is ±1. The set of walks that touch or cross the x-axis is complementary to the set of walks that stay on the same side of the axis. The latter set is the subject of the <em>Ballot Lemma</em>.</p>
+
+<table><tbody><tr><td width="80">&nbsp;</td><td>
+<applet code="ReflectionPrinciple" width="560" height="500" codebase="../../classes" archive="JCTKUtility.zip,CTKGeometry.zip,ReflectionPrinciple.zip,CTKGeometryPlus.zip">
+    <param name="fcolor" value="000000">
+    <param name="bcolor" value="ffffff">
+    <param name="rows" value="8">
+<hr>
+<h3>
+This applet requires Sun's Java VM 2 which your browser may perceive as a popup. Which it is not. If you want to see the applet work, visit Sun's website at https://www.java.com/en/download/index.jsp, download and install Java VM and enjoy the applet.
+</h3>
+<hr>
+</applet>
+</td></tr></tbody></table>
+<table width="100%"><tbody><tr><td align="right"><font face="verdana"><!--<a href="https://www.cut-the-knot.org/PHP/Referrer.php">Buy this applet</a><br>--><a href="https://www.cut-the-knot.org/HelpWithJava.shtml">What if applet does not run?</a></font></td></tr></tbody></table>
+
+<h3>The Reflection Lemma</h3>
+
+<p class="note" style="border:1px dotted;background:#ffffff;width:170pt">
+For a &gt; 0, b &gt; 0,<br>
+M<sub>n</sub>(a, b) = N<sub>n</sub>(-a, b),
+</p>
+
+<p>where M<sub>n</sub>(a, b) is the number of walks from <nobr>A = (0, a)</nobr> to <nobr>B = (n, b)</nobr> that cross or touch the x-axis.</p>
+
+<p>The applet provides a graphical illustration for a proof of the Reflection Lemma. Let <nobr>A' = (0, -a).</nobr> If, for a walk starting at A, s<sub>k</sub> = 0, for some k, there is the first k for which this happens. For such a walk, say &#945;, there is a uniquely define walk &#945;' that starts at A' and, up to the point <nobr>(k, 0)</nobr> is a reflection of &#945; in x-axis, after which it coincides with &#945;. As every walk from A' to B crosses the axis, it is uniquely relates to a walk from A to B that crosses or touches the x-axis.</p>
+
+<p>The applet actually illustrates the Lemma for walks from <nobr>(x, a)</nobr> to <nobr>(x + n, b)</nobr> that do not necessarily start at the y-axis.</p>
+
+<h3>References</h3>
+<ol>
+<li><a name="Feller"></a>W. Feller, <a href="https://www.amazon.com/exec/obidos/ISBN=0471257087/ctksoftwareincA/"><em>An Introduction to Probability Theory and Its Applications</em></a>, Vol. 1, 3rd Edition, Wiley, 1968
+</li></ol>
+<center><img src="./The Reflection Lemma_files/tbow_sh.gif" border="0" height="18" width="240"></center>
+
+<h3>Pascal's Triangle and the Binomial Coefficients</h3>
+
+<ul>
+
+<li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/BinomialTheorem.shtml">Binomial Theorem</a>
+
+</li><li><a href="https://www.cut-the-knot.org/Curriculum/Geometry/ArithDisguise.shtml">Arithmetic in Disguise</a>
+
+</li><li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/PascalTriangle.shtml">Construction of Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/Curriculum/Algebra/DotPatterns.shtml">Dot Patterns, Pascal Triangle and Lucas Theorem</a>
+
+</li><li><a href="https://www.cut-the-knot.org/SimpleGames/IntIter.shtml">Integer Iterations on a Circle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/LeibnitzTriangle.shtml">Leibniz and Pascal Triangles</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/LucasTheorem.shtml">Lucas' Theorem</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/LucasTheorem.shtml">Lucas'  Theorem II</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/PascalTriangleProperties.shtml">Patterns in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/RandomWalk.shtml">Random Walks</a>
+
+<ul>
+
+  <li><a href="https://www.cut-the-knot.org/Curriculum/Combinatorics/BallotLemma.shtml">The Ballot Lemma</a>
+
+</li><li><font color="0xaa0000">The Reflection Lemma</font>
+</li></ul>
+
+</li><li><a href="https://www.cut-the-knot.org/triangle/Hanoi.shtml">Sierpinski Gasket and Tower of Hanoi</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/PascalTriangle.shtml">Treatise on Arithmetical Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/ProofsForBinomialIdentity.shtml">Ways To Count</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/AnotherBinomialIdentity.shtml">Another Binomial Identity with Proofs</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/VandermondeConvolution.shtml">Vandermonde's Convolution Formula</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/CountingFatSets.shtml">Counting Fat Sets</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/HarlanBrothers.shtml">e in the Pascal Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/CatalanInPascal.shtml">Catalan Numbers in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/BinomialReciprocalsInPascal.shtml">Sums of Binomial Reciprocals in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/SquaresInPascal.shtml">Squares in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/CubesInPascal.shtml">Cubes in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/PiInPascal.shtml">Pi in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/TriPiInPascal.shtml">Pi  in Pascal's Triangle via Triangular Numbers</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/algebra/ExponentsInPascal.shtml">Ascending Bases and Exponents in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/combinatorics/DeterminantsInPascalTriangle.shtml">Determinants in Pascal's Triangle</a>
+
+</li><li><a href="https://www.cut-the-knot.org/arithmetic/TonyFosterPowersInPascalTriangle.shtml">Tony Foster's Integer Powers in Pascal's Triangle</a>
+
+</li></ul>
+
+
+
+<center><img src="./The Reflection Lemma_files/tbow_sh.gif" border="0" height="18" width="240"></center>
+
+<p align="right">
+<a href="https://www.cut-the-knot.org/Curriculum/index.shtml">|Activities|</a>
+<a href="https://www.cut-the-knot.org/MailNotificationPage.shtml">|Contact|</a>
+<a href="https://www.cut-the-knot.org/front.shtml">|Front page|</a>
+<a href="https://www.cut-the-knot.org/content.shtml">|Contents|</a>
+<a href="https://www.cut-the-knot.org/algebra.shtml">|Algebra|</a>
+<a href="https://www.cut-the-knot.org/probability.shtml">|Up|</a>
+
+</p>
+
+<p>
+<font size="-1">Copyright © 1996-2018 <a href="https://www.cut-the-knot.org/index.shtml">Alexander Bogomolny</a></font></p>
+
+</div>
+
+<p><span style="background-color:#00aaaa; display:inline-block; padding:0px 2px;">65711769</span></p>
+<div id="footer">
+<br>
+<!-- #include virtual="/cgi-bin/runHiddenCounter.sh"-->
+<!-- #include virtual="/PHP/Footer.php"-->
+</div> <!-- footer -->
+</div> <!-- "content" -->
+
+
+<div id="rightColumn">
+<!-- #include virtual="/PHP/RightColumn.php"-->
+</div>
+
+</div> <!-- centerDiv -->
+
+<div id="header">
+<nobr>
+
+<div id="logo" style="display:inline">
+<a href="https://www.cut-the-knot.org/manifesto/index.shtml">&nbsp;&nbsp;<img src="./The Reflection Lemma_files/NewLogoOpal.gif" width="4" height="4" border="0" alt="Cut the knot: learn to enjoy mathematics"></a>
+</div>
+
+
+</nobr></div><nobr>
+
+
+<p style="height:20em"></p>
+<script type="text/javascript" src="./The Reflection Lemma_files/jquery-2.1.0.min.js.téléchargement"></script>
+<script type="text/javascript" src="./The Reflection Lemma_files/bootstrap.min.js.téléchargement"></script>
+<script type="text/javascript" src="./The Reflection Lemma_files/jquery.smartmenus.js.téléchargement"></script>
+<script type="text/javascript" src="./The Reflection Lemma_files/jquery.smartmenus.bootstrap.js.téléchargement"></script>
+
+
+</nobr></body></html>
