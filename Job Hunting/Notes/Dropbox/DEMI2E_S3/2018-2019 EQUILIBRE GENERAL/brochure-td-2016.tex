@@ -1,0 +1,1160 @@
+
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[applemac]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{amssymb,amsfonts,amsmath}
+\newcommand\R{\mathbb R}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, March 25, 2009 15:50:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\def \L { {\mathcal L}}
+\setlength{\unitlength}{1cm} \setlength{\textwidth}{17cm}
+\setlength{\oddsidemargin}{0cm} \setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-45pt} \setlength{\textheight}{23.5cm}
+\renewcommand{\baselinestretch}{1.3}
+
+%\input{tcilatex}
+
+\begin{document}
+
+ Diplôme de L2 MI2E\hfill  Université Paris-Dauphine
+
+Microéconomie: théorie de l'équilibre général\hfill Année 2015-2016
+
+Cours de Vincent {\sc Iehlé} 
+
+\bigskip
+
+
+Enseignants chargés des travaux dirigés:
+\begin{itemize}
+\item Laurent {\sc Brembilla}
+\item Diomides {\sc Mavroyiannis}
+\item Julien {\sc Trouillet}
+\end{itemize}
+
+
+
+ 
+ 
+ %Cours de Vincent Iehlé
+ 
+ 
+ 
+ 
+ 
+ 
+ \vskip 4cm
+ 
+ 
+ \centerline{\bf\LARGE FEUILLES D'EXERCICES\footnote{Les exercices  sont à préparer d'une semaine à l'autre en suivant une liste établie par l'enseignant chargé des travaux dirigés. Les examens (partiel, final, rattrapage) des trois dernières années se trouvent à la fin de la brochure.}}
+ \vskip 2cm
+ \setcounter{tocdepth}{1}
+ \tableofcontents
+ 
+ 
+ 
+ \newpage
+% \setcounter{section}{1}
+\section{Le consommateur}
+
+
+\subsection{Fonction d'utilité Cobb-Douglas}\label{cobb1}
+
+Les préférences d'un consommateur sur des paniers de 2 biens sont représentées par une fonction d'utilité $$u:\: \R^2_+\longrightarrow \R \::\: (x,y)\longrightarrow u(x,y)$$ avec
+
+
+$$u(x,y)=x^\alpha y^{1-\alpha}$$ où $0<\alpha<1$
+
+\begin{enumerate}
+\item Déterminer les propriétés de la fonction $u$: continuité (justifier rapidement), différentiabilité (sur $\R^2_{++}$), (strictement) monotone, (strictement) (quasi)-concave.
+\item Représenter graphiquement les courbes d'indifférence du consommateur.
+\item Déterminer la demande du consommateur $d(p,w)$, en fonction du prix $p=(p_x,p_y)$ et d'un revenu $w\in \R_+$, en calculant le cas échéant le taux marginal de substitution $TMS_{y\rightarrow x}$. Analyser les propriétés de cette demande et l'exprimer en fonction d'une dotation initiale $e=(e_x,e_y)\in\R^2_+$ du consommateur.
+\item Montrer que la fonction suivante représente les mêmes préférences:  $u(x,y)=\alpha\ln x+(1-\alpha)\ln y$. Refaire les calculs de la question 3 en utilisant cette spécification.
+\end{enumerate}
+
+
+
+\subsection{Fonction d'utilité linéaire}
+$$u(x,y)=ax+y$$ où $a>0$
+
+Mêmes questions que précédemment (sauf 4.).
+
+
+
+
+\subsection{Fonction d'utilité à élasticité de substitution constante}\label{ces}
+
+$$u(x,y)=(ax^\rho+by^\rho)^{\frac{1}{\rho}}$$ 
+où $a,b>0$ et $0\neq \rho\leq 1$
+
+Mêmes questions que précédemment (sauf 4.).
+
+
+
+
+\subsection{Fonction d'utilité Leontief}
+
+Dans une \'{e}conomie \`{a} 2 biens ($x$ et $y$), on
+consid\`{e}re un consommateur qui dispose d'une dotation intiale $%
+e^{1}=(1,2) $; sa fonction d'utilit\'{e} est $u:\mathbb{R}%
+_{+}^{2}\rightarrow \mathbb{R}$: $u(x,y)=\min (3x,y).$
+
+\begin{enumerate}
+\item  Repr\'{e}sentez graphiquement quelques courbes d'indiff\'{e}%
+rence du consommateur.
+
+\item  A partir de la repr\'{e}sentation graphique, \'{e}tudiez les
+propri\'{e}t\'{e}s de la fonction d'utilit\'{e} $u$ du consommateur.
+
+\item  D\'{e}terminez la demande du consommateur en fonction de sa
+dotation initiale et du prix $p=(p_{x},p_{y})$ pour $p_{x}>0$ et $p_{y}>0$.
+Une repr\'{e}sentation graphique est souhaitable.
+
+\item M\^{e}me question qu'en 3. pour un prix $p=(p_{x},p_{y})$ tel
+que $p_{x}=0$ et $p_{y}>0$, c'est-\`{a}-dire d\'{e}terminez toutes les
+solutions du probl\`{e}me d'optimisation du consommateur dans ce cas. Une
+repr\'{e}sentation graphique est souhaitable.
+\end{enumerate}
+
+
+\subsection{Exercice supplémentaire: Unicité}
+On considère une économie avec $L$ biens .
+On rappelle qu'une fonction $u\: : \mathbb{R}^L_+\longrightarrow \mathbb{R}$ est strictement quasi-concave si et seulement si  pour tout $z,z^\prime \in \mathbb{R}^L_+$,  on a $u(\lambda z+(1-\lambda) z^\prime)>\min\{u(z),u(z^\prime)\}$ pour tout  $0<\lambda<1$. La fonction d'utilité $u$ de l'agent est continue, différentiable, croissante et strictement quasi-concave. La richesse de l'agent est $R>0$. Les prix sont strictement positifs, $p\in \mathbb{R}^L_{++}$.
+
+\begin{enumerate}
+\item Ecrire le programme de l'agent, montrer que le programme admet une solution et que cette solution sature la contrainte budgétaire de l'agent.
+\item Montrer que cette solution est unique.
+\item On suppose le panier de biens $z^*=(z_1^*,z_2^*,...,z_L^*)\in\mathbb{R}^L_{++}$ vérifie $TMS_{z_2\to z_1}(z^*)>\frac{p_1}{p_2}$. Expliquer pourquoi le panier ne peut pas être solution du programme et comment l'agent veut modifier ses consommations en bien 1 et 2, toutes choses égales par ailleurs.
+\end{enumerate}
+
+
+
+\subsection{Exercice supplémentaire: Fonction d'utilité particulière (difficile)}
+ 
+ On considère la fonction d'utilité suivante:  $$u(x,y)=x+\sqrt{y}$$
+ 
+ Déterminer la demande du consommateur $d(p,w)$ ({\sf  Il est impératif de tracer précisément les courbes d'indifférences pour se donner une idée des solutions (plusieurs cas à traiter)}).
+
+ \newpage
+% \setcounter{section}{1}
+\section{Economies d'échange}
+\subsection{Fonction d'utilité Cobb-Douglas}
+
+
+On considère une économie d'échange à 2 agents (1 et 2) et 2 biens ($x$ et $y$). Les dotations initiales des agents sont notées $e^i=(e^i_x,e^i_y)\in \R^2_+$ et leurs fonctions d'utilité $u^i\::\R^2_+\longrightarrow \R$ $i=1,2$.
+
+
+
+$$u^1(x,y)=x^{\frac{1}{3}}y^{\frac{2}{3}},\:u^2(x,y)=x^{\frac{2}{3}}y^{\frac{1}{3}}$$
+$$e^1=(1,1), \: e^2=(1,2)$$
+
+ \begin{enumerate}\item Vérifier si l'économie possède un équilibre concurrentiel.\item Si oui, déterminer {\bf les prix} et {\bf les allocations } correspondantes.\item Représenter les différentes quantités dans une boîte d'Edgeworth.\end{enumerate}
+
+\subsection{Fonction d'utilité de Leontief}
+
+$$u^1(x,y)=u^2(x,y)=\min(x,y)$$
+$$e^1=(2,6), \: e^2=(1,2)$$
+
+Mêmes questions que précédemment
+
+\subsection{Fonction d'utilité linéaire}
+
+ On considère une économie avec 2 agents (1 et 2) et  2 biens ($x$ et $y$). Les
+fonctions d'utilit\'e sont $u^1(x,y)= x+y$ et $u^2(x,y)= x$; les dotations initiales sont  $e^1
+= (1,1)$ et $e^2
+= (1,1)$. \begin{enumerate}
+\item Peut-on appliquer le théorème d'existence? Pourquoi? 
+
+\item Dans la boîte d'Edgeworth, dessiner précisément les courbes d'indifférence passant par les dotations initiales.
+
+
+\item En raisonnant dans la boîte d'Edgeworth, déterminer explicitement, mais sans calculs, l'équilibre concurrentiel (prix et allocation d'équilibre).
+
+
+\end{enumerate}
+
+
+
+
+\subsection{Fonction d'utilité à élasticité de substitution constante}
+On consid\`{e}re une \'{e}conomie d'échange
+comprenant deux consommateurs (1 et 2)  et deux biens ($x$ et $y$). Les dotations initiales sont $e^1=(e^1_x,e^1_y)\in\mathbb{R}^2_+$ et $e^2=(e^2_x,e^2_y)\in\mathbb{R}^2_+$. Les fonctions d'utilité des deux consommateurs sont données par $u^1(x,y)=u^2(x,y)=\frac{xy}{x+4y}$ pour tout $(x,y)\in\mathbb{R}^2_+$. 
+
+\begin{enumerate}
+\item \noindent Ecrire la fonction
+d'utilit\'{e} des consommateurs de mani\`{e}re \`{a} montrer qu'elle est \`{a} 
+\'{e}lasticit\'{e} de substitution constante; indiquer la valeur des param%
+\`{e}tres.
+\item Repr\'{e}senter {\bf précisément} au moins 3 courbes d'indiff\'{e}%
+rence. 
+\item Vérifier par le calcul que les courbes d'indifférence sont strictement décroissantes et strictement convexes. Que peut-on en déduire sur la fonction d'utilit\'{e} des consommateurs?
+
+%\item (0,5 pt)  Rappeler sans justification les propriétés de la fonction d'utilité du consommateur 2.
+
+\item Peut-on dire, \textit{sans faire aucun calcul}, que cette 
+\'{e}conomie poss\`{e}de un \'{e}quilibre concurrentiel? 
+\item D\'{e}terminer la demande de chacun des agents en fonction du
+prix $p=(p_{x},p_{y})$, pour $p_x>0$ et $p_y>0$, et de sa dotation initiale, en donnant les \'{e}tapes
+du calcul. 
+
+\item Ecrire les équations d'équilibre sur les marchés des biens en fonctions du prix $(p_x,p_y)$. Montrer que le prix $(p^*,1)$ (on normalise du prix du bien $y$) est un prix d'équilibre si et seulement si $p^*=4\frac{(e^1_y+e^2_y)^2}{(e^1_x+e^2_x)^2}$.
+ 
+ 
+%\item (0,5 pt) L'équilibre trouvé à la question précédente est-il Pareto optimal? Pourquoi?
+ 
+ \item Pour les dotations $e^1=(3,1)$ et $e^2=(5,1)$ déterminer l'équilibre concurrentiel et représenter {\bf précisément} l'économie et l'équilibre  dans la boîte d'Edgeworth (boîte, dotations initiales, courbes d'indifférence, contraintes budgétaires, allocations).
+
+\end{enumerate}
+
+
+
+\newpage
+% \setcounter{section}{1}
+\section{Optimalité de Pareto}
+
+
+ 
+ 
+\subsection{Fonction d'utilité Cobb-Douglas: }
+
+ On considère une économie d'échange à 2 agents (1 et 2) et 2 biens ($x$ et $y$).  Les dotations initiales des agents sont notées $e^i=(e^i_x,e^i_y)\in \R^2_+$ et leurs fonctions d'utilité $u^i\::\R^2_+\longrightarrow \R$ $i=1,2$.
+ Une allocation est désignée par $z=[(x^1,y^1),(x^2,y^2)]$.
+
+
+$$u^1(x,y)=x^\frac{1}{3}y^\frac{2}{3},\:u^2(x,y)=x^\frac{2}{3}y^\frac{1}{3}$$
+$$e^1=(1,1), \: e^2=(1,2)$$
+
+$$z=[({1},\frac{12}{5}),({1},\frac{3}{5})]$$
+
+
+\begin{enumerate}
+\item Déterminer la courbe des contrats et la représenter dans une boîte d'Edgeworth.\item Vérifier si vous disposez des données nécessaires, que les équilibres concurrentiels éventuels sont Pareto-optimaux.
+\item Le cas échéant, montrer que l'allocation $z$ correspond à un équilibre concurrentiel moyennant un transfert approprié de richesse. Déterminer ce transfert.
+ 
+ \end{enumerate}
+ 
+
+
+
+\subsection{Fonction d'utilité linéaire:}
+On consid\`{e}re une \'{e}conomie d'\'{e}change \`{a} deux agents (1 et 2)
+et deux biens (1 et 2).$\ $On note $x^{i}$ la consommation de bien 1 de
+l'agent $i$ et $y^{i}$, la consommation de bien 2 de l'agent $i$ ($i=1,2$).
+Les dotations initiales des agents sont $e^{1}=(e_{x}^{1},e_{y}^{1})=(0,3)$
+et $e^{2}=(e_{x}^{2},e_{y}^{2})=(2,1)$ et leurs fonctions d'utilit\'{e} $%
+u^{i}:\mathbb{R}_{+}^{2}\rightarrow \mathbb{R}$, $i=1,2$ sont
+
+\begin{equation*}
+u^{1}(x^{1},y^{1})=x^{1}+5y^{1}\text{, }u^{2}(x^{2},y^{2})=5x^{2}+y^{2}
+\end{equation*}
+
+\noindent D\'{e}terminez la courbe des contrats et repr\'{e}sentez-la dans
+une bo\^{\i}te d'Edgeworth, dans laquelle vous indiquerez aussi les
+dotations initiales.
+
+
+ \subsection{Décentralisation}
+ On considère une économie à deux consommateurs et deux biens.
+Les dotations initiales sont données par $e^1=(1,1)$ et $e^2=(1,1)$. Les fonctions d'utilité sont données par: $u^1(x,y)=x^{\frac{1}{3}}y^{\frac{2}{3}}$ et  $u^2(a,b)=x^{\frac{1}{4}}y^{\frac{3}{4}}$.
+
+
+\begin{enumerate}
+\item Déterminer la courbe des contrats et la représenter dans la boîte d'Edgeworth.
+
+
+\item Pour des raisons d'équité, l'Etat souhaiterait privilégier l'optimum de Pareto qui garantit une quantité égale de bien $x$ aux deux consommateurs. De quel optimum s'agit-il? 
+
+
+\item Pour décentraliser cet optimum, l'Etat a la possibilité d'effectuer un transfert dans les dotations initiales en bien $x$. Déterminer ce transfert et l'équilibre concurrentiel correspondant.
+
+
+\end{enumerate}
+ 
+ 
+ 
+ \newpage
+% \setcounter{section}{1}
+\section{Economies avec production}
+
+
+\subsection{Rendements}
+
+Soit la fonction de production Cobb-Douglas $g :\: \R^2_+\longrightarrow \R$ définie par $g(x,y)=x^\alpha y^\beta$, avec $\alpha,\beta>0$.\begin{enumerate}\item Décrire l'ensemble de production, en fonction des paramètres $\alpha,\beta$.\item A quelles conditions sur les paramètres les rendements sont-ils décroissants? constants? croissants?\end{enumerate}
+
+\subsection{Rendements (II)} Soit la fonction de production à élasticité de substitution constante $g: \:\R^2_+\longrightarrow \R$ définie par $g(x,y)=(ax^\rho+by^\rho)^\frac{1}{\rho}$, $\rho<1$. Montrer que les rendements sont constants.
+
+
+\subsection{Maximisation du profit}
+\begin{enumerate}
+\item Dans le cas de fonctions de production linéaires, déterminer graphiquement et analytiquement les solutions du problème de maximisation du profit en dessinant les courbes d'iso-profit (dans $\R^2$). 
+\item Soit la fonction de production Cobb-Douglas $g :\: \R_+\longrightarrow \R$ définie par $g(x)=x^\alpha$ où $0<\alpha<1$. Déterminer l'offre de l'entreprise et le profit associé en fonction des prix.
+\end{enumerate}
+
+
+
+
+
+
+\subsection{Equilibre avec un producteur}
+ On consid\`{e}re une \'{e}conomie avec production,
+comprenant un consommateur, une entreprise et deux biens. Le consommateur a
+une dotation initiale $e=(e_{x},e_{y})=(10,0)$ et une fonction d'utilit\'{e} 
+$u(x,y)=\frac{xy}{x+4y}$. L'entreprise produit une quantit\'{e} $y=g(x)$ du
+second bien \`{a} partir de $x$ unit\'{e}s du premier. On normalise le prix
+du premier bien $p_{x}$ \`{a} $1$ et on note $p_{y}=p$ le prix du second
+bien.\ 
+
+\begin{enumerate}
+\item \noindent  D\'{e}finissez la notion d'\textquotedblleft \'{e}%
+lasticit\'{e} de substitution\textquotedblright\ et \'{e}crivez la fonction
+d'utilit\'{e} du consommateur de mani\`{e}re \`{a} montrer qu'elle est \`{a} 
+\'{e}lasticit\'{e} de substitution constante; indiquez la valeur des param%
+\`{e}tres.
+
+\item D\'{e}terminez la fonction de demande $(d_{x}(p,\pi
+),d_{y}(p,\pi ))$ du consommateur en fonction du prix $p$ et du profit $\pi $
+de l'entreprise.
+
+\item  On suppose que $g(x)=9x$.\ Repr\'{e}sentez graphiquement
+l'ensemble de production et les droites d'isoprofit de l'entreprise.\ D\'{e}%
+terminez, en fonction du prix $p$, l'offre (ou les offres) $(x^{\ast
+}(p),y^{\ast }(p))$ et le profit maximal $\pi ^{\ast }(p)$ de l'entreprise
+(pour autant que ces quantit\'{e}s existent).
+
+\item Calculez l'\'{e}quilibre (ou les \'{e}quilibres)
+concurrentiel(s) \'{e}ventuel(s), en supposant toujours que $g(x)=9x$.
+
+\item Calculez l'\'{e}quilibre (ou les \'{e}quilibres)
+concurrentiel(s) \'{e}ventuel(s), en supposant \`{a} pr\'{e}sent que $%
+g(x)=e^{x}-1$.
+\end{enumerate}
+
+
+\subsection{Equilibre avec deux producteurs}
+On considère une économie à deux consommateurs , deux biens de consommation, un facteur de production (le travail) et deux entreprises. On note $x^i$ la consommation
+de bien 1 du consommateur $i$ et $y^i$, la consommation de bien 2 du consommateur $i$, $(i = 1; 2)$. La
+dotation initiale du consommateur 1 est d'une unité de travail ; celle du consommateur 2, de 2 unités de travail.
+Leurs fonctions d'utilité sont $u^i(x^i; y^i) =
+\sqrt{x^iy^i}$, $i = 1; 2$. L'entreprise 1 produit le premier bien de
+consommation à l'aide de travail, suivant la technologie $q_1 = z_1$ ; l'entreprise 2 produit le second bien de
+consommation à l'aide de travail, suivant la technologie $q_2 =\frac{1}{2}
+z_2$ ($q_k$ désigne l'output de bien $k$ et $z_k$,
+l'input de travail, $k = 1; 2$). On suppose enfin que le consommateur 1 possède les entreprises.
+
+\begin{enumerate}
+\item  (1 pt) Ecrire les conditions que doit satisfaire une allocation $(x^1; y^1; x^2; y^2; q_1; z_1; q_2; z_2)$ pour être
+réalisable dans cette économie. En déduire qu'une allocation $(x^1; y^1; x^2; y^2)$ en biens de consom-
+mation est réalisable si et seulement si, $x^1 + x^2 + 2(y^1 + y^2) = 3$.
+
+\item (3 pts) Montrer que l'économie possède un équilibre concurrentiel, en fixant le prix du travail à 1 et
+en notant $p_k$ le prix du bien de consommation $k$, $k = 1; 2$. Calculer l'utilité de chaque consommateur
+à l'équilibre.
+
+\item (1 pt) Sans faire de calcul, peut-on affirmer que l'équilibre concurrentiel est Pareto-optimal ?
+\item (3 pts) En utilisant le point 1., écrire le programme d'optimisation sociale qui permet de déduire les optima de Pareto. Déterminer les allocations  Pareto optimales intérieures et montrer qu'une paire de niveaux d'utilités $(v^1; v^2)$ pour les consommateurs est Pareto-optimale si et seulement si $v^1 + v^2 = \frac{3}{2\sqrt{2}}$, $v^1,v^2\geq 0$. Représenter graphiquement
+l'ensemble des niveaux d'utilités réalisables dans l'économie et les niveaux d'utilités de l'équilibre
+concurrentiel. Vérifier que l'équilibre est Pareto optimal.
+
+\end{enumerate}
+
+
+
+
+ \newpage
+% \setcounter{section}{1}
+\section{Défaillances du marché: effets externes et biens publics}
+
+\subsection{Externalité}
+
+On considère une économie  consistant en deux consommateurs (1 et 2), un producteur et deux biens (1 et 2). Les dotation initiales des consommateurs sont $e^1=(10,20)$ et $e^2=(10,32)$, respectivement. Le consommateur 1 possède l'entreprise, qui produit du bien 1 à partir du bien 2 suivant la technologie $q=g(z)=2\sqrt{z}$ (pour éviter toute confusion, on désigne par $z$ l'input en bien 2  et par $q$ l'output en bien 1). La fonction d'utilité du consommateur 1 est $u^1(x,y)=\sqrt{xy}$; le consommateur 2 subit maintenant une externalité de la part de l'entreprise: sa fonction d'utilité devient $u^2(x,y,z)=\sqrt{xy}-2z$, où $z$ est la quantité de bien 2 utilisée par l'entreprise (et comme précédemment, $x$ et $y$, les quantités de bien 1 et bien 2 respectivement consommées par le consommateur 2).
+
+\begin{enumerate}
+
+\item Déterminer l'équilibre  de cette économie avec externalité (on pourra simplifier les calculs en considérant la version sans externalité, après justification).
+\item Vérifier que l'allocation suivante: $q=2$, $z=1$, $(x^1,y^1)=(12,22)$, $(x^2,y^2)=(10,29)$ est réalisable et Pareto-domine l'équilibre trouvé à la question précédente. 
+\end{enumerate}
+
+
+
+\subsection{Externalité}
+
+On considère une économie, consistant en deux entreprises (1 et 2), un consommateur, un facteur de production et deux biens de consommation (1 et 2). Le consommateur détient initialement $k$ unités du facteur de production (où $k>0$ est un paramètre fixé); l'entreprise $h$, $h=1,2$. La fonction de production de l'entreprise 1 est $y_1=g_1(z_1)=z_1$ tandis que celle de l'entreprise 2 est $y_2=g_2(z_2)=az_2$ où $a>0$ est perçu comme un paramètre fixé par l'entreprise 2. En fait, $a=y_1$ où $y_1$ est la quantité de bien 1 produite par l'entreprise 1 et représente donc une externalité de production. Le consommateur ne tire d'utilité que des biens de consommation; sa fonction d'utilité est $u(x_1,x_2)=x_1x_2$.
+
+\begin{enumerate}
+
+\item Déterminer (en fonction de $k$) l'équilibre concurrentiel de l'économie en normalisant à 1 le prix de facteur de production. (Indication: ne tenir compte de l'externalité qu'après avoir déterminé l'équilibre en traitant $a$ comme un paramètre). 
+\item Déterminer (en fonction de $k$) et représenter graphiquement l'ensemble des productions $(y_1,y_2)$ réalisables ($y_h$ désignant la quantité de bien de consommation $h$ produit par l'entreprise $h$, $h=1,2$).
+\item En identifiant la quantité de bien $h$ consommée par le consommateur avec la quantité de bien $h$ produite, déterminer (en fonction de $k$) la ou les productions réalisables $(y^*_1,y^*_2)$ qui maximisent l'utilité du consommateur.
+\item Comparer les solutions obtenues en 1. et 4.
+\item On modifie l'économie en taxant le bien 2. Pour ce bien, on distingue le prix à la production $p_2$ et le prix à la consommation $p_2+t$, où $t$ désigne une taxe unitaire. Les recettes fiscales sont redistribuées au consommateur sous forme de transfert forfaitaire. Déterminer (en fonction de $k$ et $t$) l'équilibre avec taxe.
+\item Montrer qu'on peut choisir la taxe $t$ pour que l'équilibre avec taxe calculé en 5. coïncide avec l'optimum calculé en 3.
+
+\end{enumerate}
+
+
+\subsection{Bien public} On considère une économie comprenant deux consommateurs (1 et 2) dont les fonctions d'utilité sont respectivement: $$u^1(x^1,y)=\ln x^1+2\ln y$$
+$$u^2(x^2,y)=2\ln x^2+\ln y$$ où $x^i>0$ désigne la quantité de bien privé consommé par l'agent $i$ et $y>0$ la quantité de bien public produit dans l'économie. La fonction de production du bien public à partir du bien privé est $y=g(z)=z$. La dotation initiale de chaue consommateur est de 15 unités de bien privé. 
+
+\begin{enumerate}
+
+\item Caractériser l'ensemble des allocations $(x^1,x^2,y,z)$ réalisables dans l'économie.\item Caractériser l'ensemble des allocations $(x^1,x^2,y,z)$ Pareto-optimales.\item Déterminer l'optimum de Pareto associé à des prélèvements identiques pour les deux consommateurs. 
+\item Déterminer l'équilibre de Lindahl et montrer que c'est un optimum de Pareto.\item Déterminer l'équilibre avec souscription (en déterminant au préalable les fonctions de réaction $z^1(z^2)$ et $z^2(z^1)$) et montrer que ce n'est pas un optimum de Pareto.
+\end{enumerate}
+
+
+\subsection{Bien public}  On consid\`{e}re une \'{e}conomie comprenant deux
+consommateurs (1 et 2), un bien priv\'{e} et un bien public.\ Les fonctions
+d'utilit\'{e} des consommateurs, $u^{i}:\mathbb{R}_{+}^{2}\rightarrow 
+\mathbb{R}$, $i=1,2$, sont $u^{1}(x_{1},y)=x_{1}^{\frac{1}{3}}y^{\frac{2}{3}}$ et 
+$u^{2}(x_{2},y)=x_{2}^{\frac{2}{3}}y^{\frac{1}{3}}$
+o\`{u} $x_{i}$ d\'{e}signe la quantit\'{e} de bien priv\'{e} consomm\'{e}e
+par l'agent $i$ et $y>0$, la quantit\'{e} du bien public. La fonction de
+production du bien public \`{a} partir du bien priv\'{e} est $y=g(z)=\sqrt{z}
+$. La dotation initiale globale des deux consommateurs est de 10 unit\'{e}s
+de bien priv\'{e}. V\'{e}rifiez si chacune des cinq allocations $%
+(x_{1},x_{2},y)$ suivantes est r\'{e}alisable et/ou Pareto-optimale: $(3,3,2)
+$; $(5,5,0)$; $(2,8,2)$; $(2,4,2)$; $(3,3.2,\sqrt{3.8})$. Justifiez bri\`{e}%
+vement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \newpage
+% \setcounter{section}{1}
+\section{Annales d'examens}
+
+
+
+
+\begin{center}
+\textbf{Novembre 2012 (2 heures)}
+\end{center}
+
+
+\bigskip
+
+
+
+
+
+%\noindent{\bf Questions de cours (4 points)}\begin{enumerate}\item (1pt) Rappeler la définition d'une fonction homogène de degré $0$. Montrer que la fonction de demande du consommateur est homogène de degré $0$. Comment interprète-t-on cette propriété en général?\item (1pt) Rappeler la définition d'un équilibre concurrentiel d'une économie d'échange \newline$\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$. \item (1pt) Rappeler le théorème d'existence d'un équilibre concurrentiel d'une économie d'échange $\mathcal{E}$. \item (1pt) Rappeler la définition d'un optimum de Pareto d'une économie d'échange  $\mathcal{E}$  (on définira tous les termes de la définition) .\end{enumerate}
+
+
+\bigskip
+\noindent{\bf Exercice 1 (5 points)}
+ On considère une économie d'échange $\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$, avec $L=2$ et $N=10$ où la fonction d'utilité de chaque agent $i$ est donnée par: $$u^i(x^i)=(x_1^i)^{\alpha_i}(x_2^i)^{1-\alpha_i}, \:\: 0<\alpha_i<1$$
+ 
+ \begin{enumerate}
+ \item (2pts) Pour chaque agent $i=1,\hdots, 10$, déterminer la fonction de demande en fonction des prix $(p_1,p_2)$, de la dotations initiale $(e^i_1,e^i_2)$ et  de $\alpha_i$, en justifiant rapidement. (on ne fera les calculs que pour un seul agent quelconque $i$)
+\item On suppose que pour chaque agent $i$, $\alpha_i=\frac{i}{11}$ et $e^i=(1,1)$. \begin{enumerate}\item (1pt)   Ecrire les conditions d'équilibre sur les marchés seulement en fonction des prix $(p_1,p_2)$. \item (2pts) Déterminer les prix d'équilibre (on pourra normaliser le prix du bien 2 à $1$) et en déduire les allocations d'équillibre.\end{enumerate}
+
+ \end{enumerate}
+
+
+\bigskip 
+\noindent{\bf Exercice 2 (5 points)}  On considère la fonction d'utilité suivante:  $$u(x,y)=x+\sqrt{y}$$  \begin{enumerate} \item (1pt) Montrer que la fonction d'utilité est strictement croissante et strictement quasi-concave. \item (2pts) Tracer précisément les 2 courbes d'indifférence du consommateur qui donnent les utilités $\bar u=1$ et $\bar u=2$. On précisera notamment en quels points ces courbes intersectent les axes des abscisses et des ordonnées et on donnera les pentes des courbes en ces points. \item (2pts) On suppose que le revenu $w$ est égal à $1$, déterminer la demande du consommateur $D(p,w)$ dans les 2 cas de figure suivants $p=(1,1)$ et $p=(3,1)$. On pourra s'aider du dessin  précédent.
+%{\sf Indication. Il existe une solution {\it intérieure} que l'on peut déterminer par le calcul et une solution {\it en coin} que l'on pourra déterminer par déduction.} 
+
+\end{enumerate}
+
+\bigskip 
+\noindent{\bf Exercice 3 (10 points)} On considère une économie avec $L$ biens. 
+
+
+\bigskip
+
+ {\bf Partie A. (questions de cours)}
+
+On suppose qu'il existe un consommateur dont la fonction d'utilité est croissante et strictement quasi-concave. 
+\begin{enumerate}
+
+\item (1pt) Montrer que la solution du programme du consommateur sature la contrainte budgétaire. \item (2pts) Montrer que la solution du programme du consommateur est unique.
+\end{enumerate}
+
+\bigskip
+
+ {\bf Partie B.}
+
+On suppose qu'un économiste observe les prix et les choix du consommateur sur 2 périodes $t=1,2$. Il observe le panier $x(1)$ et les prix $p(1)$ en $t=1$, et le panier $x(2)$ et les prix $p(2)$ en $t=2$. 
+\begin{enumerate}
+\item[3.] (2pts) Considérons l'exemple suivant avec $L=2$, $p(1)=(2,1)$ et $p(2)=(1,2)$, et,  $x(1)=(2,1)$ et $x(2)=(1,2)$. Représenter sur un même dessin les deux contraintes budgétaires et les choix de l'agent en $t=1$ et $t=2$. Expliquer pourquoi ces choix ne sont pas compatibles avec l'hypothèse d'un consommateur rationnel, c'est-à-dire qui maximise son utilité sous contrainte budgétaire. (on utilisera les questions précédentes). \item[4.] (1pt) Plus généralement, avec $L$ biens, montrer que les choix $x(1)$ et $x(2)$ observés doivent nécessairement vérifier: \begin{equation}p(1)\cdot x(2)\leq p(1)\cdot x(1)\hbox{ avec } x(1)\neq x(2) \Rightarrow p(2)\cdot x(1)>p(2)\cdot x(2)\end{equation}
+
+
+{\bf Remarque. }  La propriété (1), appelée axiome faible des préférences révélées, est très importante en pratique. Elle permet à l'économiste de savoir si le consommateur est bien rationnel dans ses choix à partir des seules données observées (sans connaître explicitement la fonction d'utilité).  
+
+%Cependant, l'économiste n'observe pas toujours les demandes individuelles des agents, mais plutôt la demande agrégée. C'est-à-dire, à chaque date $t$ il observe la quantité  $Z(t)=\sum_{i=1}^Nx(t)^i$ où $x(t)^i$ est la demande de l'agent $i$ à la date $t$, avec $i=1,\hdots,N$  et  $t=1,2$, .
+
+\end{enumerate}
+\bigskip
+
+{\bf Partie C.}
+
+
+On considère maintenant une économie d'échange $\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$ où les fonctions d'utilité sont croissantes. On appelle  fonction de demande agrégée excédentaire la fonction $Z\::\: \mathbb{R}^L_+\rightarrow \mathbb{R}^L_+$ qui à tout prix $p\in \mathbb{R}^L_+$ associe les quantités: $$Z(p)=\sum_{i=1}^N\bigl ( D^i(p)-e^i\bigr )$$ où $D^i$ est la fonction de demande de l'agent $i$ que l'on suppose bien définie.
+
+%Un résultat de microéconomie (non vu en cours) établit que les prix d'équilibre concurrentiel d'une économie est {\bf unique} si la fonction de demande agrégée excédentaire satisfait la condition de substituabilité suivante:
+
+
+
+
+\begin{enumerate} \item[5.] (1pt) Montrer que $p\cdot Z(p)=0$ pour tout prix $p\in \mathbb{R}^L_+$ (on utilisera la question 1 de la partie A).\item[6.] (1pt) Montrer que $Z(p^*)=0$ pour tout prix d'équilibre concurrentiel $p^*$. \item[7.] (2pts) En déduire que le prix d'équilibre est unique
+si  la propriété suivante est vérifiée:$$\forall p,p^\prime\in \mathbb{R}^L_+,\:  p\cdot \sum_{i=1}^N D^i(p^\prime)\leq p\cdot \sum_{i=1}^ND^i(p)\Rightarrow p=p^\prime \hbox{ ou } p^\prime\cdot \sum_{i=1}^N D^i(p)>p^\prime \cdot \sum_{i=1}^N D^i(p^\prime)$$
+{\bf Remarque.}  Cette propriété  est une version {\it agrégée} de l'équation (1). 
+
+\end{enumerate}
+
+\newpage
+\begin{center}
+\textbf{Janvier 2013 (2 heures)}
+\end{center}
+
+
+\bigskip
+
+
+
+
+
+\noindent{\bf Questions de cours (4 points)}
+
+\begin{enumerate}
+ \item (1pt) Rappeler le théorème d'existence d'un équilibre concurrentiel dans économie d'échange $\mathcal{E}$. 
+ \item (1pt) Rappeler le premier théorème du bien-être dans une économie de production $\mathcal{E}$.%=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$ 
+\item Soit une économie de production avec 1 agent et 1 entreprise et 2 biens. L'utilité du consommateur est donnée par $u(x,y)=\min\{x,y\}$, la fonction de production de l'entreprise qui produit du bien $y$ à partir du bien 
+$x$ est donnée par $g(x)=3x$. La dotation de l'agent est $e=(3,1)$.
+\begin{enumerate}
+\item (1pt) Rappeler la définition d'un optimum de Pareto dans cette économie.
+\item (1pt) L'allocation initiale dans l'économie, c'est-à-dire la dotation initiale $e=(3,1)$ avec le plan de production $(0,0)$, est-elle Pareto optimale?
+Si ce n'est pas le cas trouver une allocation réalisable qui la Pareto-domine.
+\end{enumerate}
+\end{enumerate}
+
+
+\bigskip
+\noindent{\bf Exercice 1 (Economie de Production) (11 points)}
+On considère une économie avec 2 consommateurs, 3 entreprises et 2 biens ($x$ et $y$).
+% Soit une économie de production \newline $\mathcal{E}=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leqM},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$ avec $L=2$, $N=2$ et $M=3$.
+
+La fonction d'utilité du consommateur $1$ est donnée par $u^1(x^1,y^1)=(x^1)^{\frac{1}{2}}(y^1)^{\frac{1}{2}}$.
+Celle du  consommateur $2$ par $u^2(x^2,y^2)=(x^2)^{\frac{1}{3}}(y^2)^{\frac{2}{3}}$. La dotation initiale de chaque consommateur est $(1,1)$. La part de l'entreprise $j=1;2;3$ détenue par le consommateur $i=1;2$ est notée $\theta^{ij}$.
+ 
+
+
+Chaque entreprise $j=1;2;3$  produit du bien $y$ à partir du bien $x$ suivant la technologie $g^j$; on notera respectivement $x^j_e$ et $y^j_e$ les quantités de bien $x$ et de bien $y$ choisies. Les fonctions de production sont données par : $g^1(x^1_e)=\sqrt{x^1_e}$; $g^2(x^2_e)=2\sqrt{x^2_e}$; et $g^3(x^3_e)=3\sqrt{x^3_e}$. %Etant donnée la quantité d'input $y^j_1$ l'entreprise $j$ produit  $y^j_2= g^j(y^j_1)=j\sqrt{(y^j_1)}$ unités de bien $2$, $0<\alpha^j<1$.
+ \begin{enumerate}
+% \item (2pts)  Déterminer pour chaque entreprise la nature des rendements d'échelles. ({\bf sans calculs}) Pensez-vous qu'à l'équilibre l'une des trois entrepises peut ne pas produire quand les deux autres produisent?
+  \item (3pts) Pour chaque entreprise $j=1;2;3$, déterminer la fonction d'offre et le profit maximal en fonction d'un prix donné $(p_x,p_y)$ (1 point par entreprise). On notera $\pi^j(p_x,p_y)$ le profit maximal de l'entreprise $j$.
+\ \item (2pts) Pour chaque consommateur $i=1;2$, déterminer la fonction de demande en fonction d'un  prix donné  $(p_x,p_y)$ et des $\theta^{ij}$ et $\pi^j(p_x,p_y)$ pour $j=1;2;3$ (1 point par consommateur).
+\item On suppose que $\theta^{ij}=0.5$ pour tout $i=1;2$ et tout  $j=1;2;3$.\begin{enumerate}\item (2pt)   Ecrire les conditions d'équilibre sur les marchés seulement en fonction des prix $(p_x,p_y)$. \item (2pts) Ecrire, sans la résoudre, l'équation du second degré qui sert à  déterminer le prix d'équilibre du bien $x$ (le prix du bien $y$ est normalisé à $1$). %et en déduire les allocations d'équillibre (plans de consommation et de production).
+\end{enumerate}
+\item (2pts) On suppose maintenant que les 3 entreprises sont entièrement détenues par le consommateur 2. 
+ A l'équilibre, produit-on ici plus ou moins  de bien $y$ que dans la situation précédente?  Justifier précisément (sans calculs).
+ %{\sf (ce n'est pas forcément la bonne réponse que l'on attend ici mais plutôt des raisonnements pour justifier l'une des deux possibilités}) 
+%  \item (2pts) Reprendre les questions 3(a) et 3(b) dans ce cas de figure. %Votre réponse à 4.(a) était elle satisfaisante? Souhaitez-vous la compléter?
+
+
+ \end{enumerate}
+
+
+\bigskip 
+\noindent{\bf Exercice 2 (Externalités) (5 points)}  Soit une économie d'échange avec  2 agents et 2 biens ($x$ et $y$). La consommation de bien $y$ par l'agent 1 affecte l'agent 2. %, tandis que  la consommation de bien $x$ par l'agent 2 affecte l'agent 1. 
+Le programme d'optimisation social peut alors s'écrire:
+$$\left\{\begin{array}{lll}
+\max_{x,y} & \rho^1u^1(x^1,y^1)+\rho^2u^2(x^2,y^2;y^1)\\
+ s.c. & x^1+x^2=e_x\\ & y^1+y^2=e_y\end{array}\right.$$
+où $\rho^1,\rho^2>0$ et $e_x,e_y$ désignent les dotations globales en biens.
+
+
+\begin{enumerate}
+\item (3pts) En suivant la méthode vue en cours, déterminer les condition nécessaire d'optimalité, en termes de TMS, satisfaites par tout optimum de Pareto (intérieur) (pour des fonctions d'utilités différentiables).
+\item (2pts) On suppose que l'externalité  produite par l'agent 1 sur l'agent 2 est positive. En utilisant l'équation trouvée à la question 1, comment les consommations  varient-elles à l'optimum, en tendance, par rapport au cas sans externalité? Illustrer votre propos en représentant les courbes des contrats dans la même boîte d'Edgeworth pour les cas \textquotedblleft avec\textquotedblright\- et \textquotedblleft sans\textquotedblright\-  externalités.
+\end{enumerate}
+
+
+\newpage
+
+\begin{center}
+\textbf{Septembre 2013 (2 heures)}
+\end{center}
+
+
+
+\bigskip
+
+
+
+
+
+\noindent{\bf Questions de cours} (3 points)
+
+\begin{enumerate}
+ \item (1pt) Rappeler la définition d'une fonction quasi-concave $f\::\: \mathbb{R}^L_+\rightarrow \mathbb{R}$.
+ \item (1 pt) Sous quelle condition, le problème du consommateur admet-il une solution unique? Quelles sont alors  les propriétés principales de la fonction de demande?
+ \item (1pt) Rappeler le second théorème du bien-être dans une économie de production $\mathcal{E}$.%=\{L,N,M,(e^{i},u^{i})_{1\leq i\leq N},(Q^{j})_{1\leq j\leq M},(\theta ^{ij})_{1\leq i\leq N},_{1\leq j\leq M}\}$ 
+\end{enumerate}
+
+\bigskip
+
+
+
+\noindent{\bf Exercice 1} (12 pts) On consid\`{e}re une \'{e}conomie d'\'{e}change \`{a}
+2 agents (1 et 2) et 2 biens ($x$ et $y$). Les dotations initiales des
+agents, not\'{e}es $e^{i}=(e_{x}^{i},e_{y}^{i})\in \mathbb{R}_{+}^{2}$, sont%
+\begin{equation*}
+e^{1}=(1,0)\qquad e^{2}=(0,1)
+\end{equation*}%
+Les fonctions d'utilit\'{e} $u^{i}:\mathbb{R}_{+}^{2}\rightarrow \mathbb{R}$%
+, $i=1,2$, sont \ 
+\begin{equation*}
+u^{1}(x,y)=x^{\frac{1}{3}}y^{\frac{2}{3}},\quad u^{2}(x,y)=x^{\frac{1}{2}}y^{%
+\frac{1}{2}}
+\end{equation*}
+
+\begin{enumerate}
+\item (2 pts) V\'{e}rifier \textbf{explicitement} si la fonction d'utilit%
+\'{e} du premier agent est: croissante, strictement croissante,
+quasi-concave, strictement quasi-concave.
+
+\item (2 pts) D\'{e}terminer la demande de chacun des agents en fonction du
+prix $p=(p_{x},p_{y})$ et de sa dotation initiale, en donnant les \'{e}tapes
+du calcul.
+
+\item (1 pt) Peut-on dire, \textit{sans faire aucun calcul}, que cette 
+\'{e}conomie poss\`{e}de un \'{e}quilibre concurrentiel? Pourquoi?
+
+\item (2 pts) Le cas \'{e}ch\'{e}ant, d\'{e}terminer l'\'{e}quilibre (ou les 
+\'{e}quilibres) concurrentiel(s) de cette \'{e}conomie.
+
+\item (2 pts) D\'{e}terminer l'\'{e}quation de la courbe des contrats, en
+donnant les \'{e}tapes du calcul.
+
+\item (1 pt) Quelles sont les propri\'{e}t\'{e}s de l'allocation $\left[ (%
+\frac{1}{4},\frac{3}{5}),(\frac{3}{4},\frac{2}{5})\right] $?
+
+\item (2 pts) Repr\'{e}senter dans une bo\^{\i}te d'Edgeworth: les dotations
+initiales, quelques courbes d'indiff\'{e}rence des agents, l'\'{e}quilibre
+(ou les \'{e}quilibres) concurrentiel(s) \'{e}ventuels (droite budg\'{e}%
+taire et allocations), la courbe des contrats.
+\end{enumerate}
+
+\bigskip
+
+\noindent{\bf Exercice 2} (2 pts) Soit une économie de production avec 1 agent et 1 entreprise et 2 biens. L'utilité du consommateur est donnée par $u(x,y)=\min\{x,y\}$, la fonction de production de l'entreprise qui produit du bien $y$ à partir du bien 
+$x$ est donnée par $g(x)=3x$. La dotation de l'agent est $e=(3,1)$.
+\begin{enumerate}
+\item (1pt) Rappeler la définition d'une allocation réalisable et d'un optimum de Pareto {\bf dans cette économie}.
+\item (1pt) L'allocation initiale dans l'économie, c'est-à-dire la dotation initiale $e=(3,1)$ avec le plan de production $(0,0)$, est-elle Pareto optimale?
+Si ce n'est pas le cas trouver une allocation réalisable qui la Pareto-domine.
+\end{enumerate}
+
+\bigskip
+\noindent{\bf Exercice 3} (3 pts)
+Rappeler brièvement les ingrédients du modèle d'économie avec externalités vu en cours. Expliquer pourquoi l'équilibre concurrentiel n'est pas toujours  Pareto optimal dans ce cadre (sans utiliser d'équations mais en donnant plutôt l'intuition générale).
+
+
+
+\newpage
+
+
+
+\begin{center}
+\textbf{Novembre 2013 (2 heures)}
+\end{center}
+
+
+
+
+
+
+%\noindent{\bf Questions de cours (4 points)}\begin{enumerate}\item (1pt) Rappeler la définition d'une fonction homogéne de degré $0$. Montrer que la fonction de demande du consommateur est homogéne de degré $0$. Comment interpréte-t-on cette propriété en général?\item (1pt) Rappeler la définition d'un équilibre concurrentiel d'une économie d'échange \newline$\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$. \item (1pt) Rappeler le théoréme d'existence d'un équilibre concurrentiel d'une économie d'échange $\mathcal{E}$. \item (1pt) Rappeler la définition d'un optimum de Pareto d'une économie d'échange  $\mathcal{E}$  (on définira tous les termes de la définition) .\end{enumerate}
+
+\noindent{\bf Exercice 1 (4 points)} 
+On considère un consommateur doté d'une fonction d'utilité $u\::\: \mathbb{R}^L_+\rightarrow \mathbb{R}$ strictement quasi-concave. On fixe les prix des biens $p_\ell> 0$, pour tout $\ell=1,\hdots,L$, et le revenu $R>0$. 
+\begin{enumerate}
+\item (1pt) Ecrire le programme du consommateur.
+\item (1pt) Rappeler la caractérisation d'une fonction strictement quasi-concave donnée en cours.
+\item (2pts) Montrer que la solution du programme du consommateur (si elle existe) est unique. 
+%\item (1pt) Quelle est la propriété supplémentaire qui garantit l'existence d'une solution?
+\end{enumerate}
+
+\vskip .1in
+
+\noindent{\bf Exercice 2 (6 points)} 
+On considère une économie avec deux biens ($x$ et $y$) et un consommateur doté d'une  fonction d'utilité $u\::\: \mathbb{R}^2_+\rightarrow \mathbb{R}$ continue et strictement croissante. On suppose que $p_x=0$, $p_y=3$ et $R=4$.
+\begin{enumerate}
+\item (1pt) Représenter l'ensemble de budget. 
+%\item  On suppose que la fonction d'utilité est croissante. \begin{enumerate} \item (1pt) Rappeler la définition de fonction croissante\item (2pts) Trouver un exemple tel que le programme du consommateur admet une solution. (donner la fonction d'utilité et déterminer le ou les solutions, éventuellement en vous aidant d'un dessin)
+%\item (2pts) Trouver un exemple tel que le probléme du consommateur n'admet pas de solution. (donner la fonction d'utilité et expliquer pourquoi il n'existe pas de solution)\end{enumerate}
+%\item On suppose que la fonction d'utilité est strictement croissante. \begin{enumerate}
+\item (1pt) Rappeler la définition de la stricte croissance de la fonction d'utilit\'e. \item (2pts) Montrer que le problème du consommateur n'admet jamais de solution. %(on pourra utiliser un raisonnement par l'absurde en supposant qu'une telle solution existe)
+\item (2pts) Montrer que le résultat précédent n'est pas toujours vérifié si l'on suppose seulement que la fonction d'utilité est continue et croissante. (donner un exemple de fonction d'utilité et déterminer la (les) solution(s), éventuellement en vous aidant d'un dessin)
+\end{enumerate}%\end{enumerate}
+
+\vskip .1in
+
+\noindent{\bf Exercice 3 (10 points)}
+ On considère une économie d'échange avec 2 agents (1 et 2) et 3 biens ($x$, $y$ et $z$). La fonction d'utilité de l'agent 1 est donnée par $$u^1(x,y,z)=x^{\frac{4}{5}}y^{\frac{8}{5}} z^{\frac{12}{5}}$$
+  La fonction d'utilité de l'agent 2 est donnée par $$u^2(x,y,z)=\frac{1}{5}\ln (x) +\frac{2}{5}\ln (y) +\frac{3}{5}\ln (z)$$
+  
+  Les dotations initiales  sont données par $e^1=(0,150,150)$ et $e^2=(100,150,50)$
+
+ 
+ \begin{enumerate}
+ \item (2pts) Montrer que les deux agents ont les m\^emes préférences, c'est-à-dire que la fonction $u^2$ représente les mêmes préférences que la fonction d'utilité $u^1$. 
+ 
+ {\it Dans la suite,  on considérera $u^2$ comme étant la fonction d'utilité de l'agent 1.}
+ 
+ \item (1pt) Quelles sont les conditions qui garantissent l'existence d'un équilibre concurrentiel dans une économie d'échange? Sont-elles vérifiées ici (sans détailler)?
+ 
+ \item (1pt) Sans calculs et en raisonnant seulement sur les fonctions d'utilité et les dotations initiales, peut-on dire que les agents ont intérêt à échanger? 
+ 
+ \item (1pt) Sans calculs et en raisonnant seulement sur les fonctions d'utilité et les dotations initiales, montrer que les fonctions de demande des deux agents sont nécessairement strictement positives en tout bien, c'est-à-dire $D^1(p,e^1)\gg 0$ et $D^2(p,e^2)\gg 0$ pour tout $p\in \mathbb{R}^3_{++}$.
+ 
+ 
+  \item (3pts) Déterminer la fonction de demande de l'agent 1, $D^1(p,e^1)$ pour tout $p\in \mathbb{R}^3_{++}$, en détaillant la méthode et les calculs. En déduire sans calculs la fonction de demande de l'agent 2. 
+  
+% (les agents ayant les même préférences, on ne détaillera les calculs que pour l'agent 1). %(utiliser la notation $(x^1,y^1,z^1)$ pour un panier de biens de l'agent 1, et $(x^2,y^2,z^2)$ pour l'agent 2)
+ \item (2pts)  Poser les conditions d'équilibre sur les marchés, déterminer les  prix d'équilibre, puis les allocations d'équilibre. (on normalisera le prix du bien $x$: $p_x^*=1$)
+ \end{enumerate}
+ 
+ 
+ \newpage
+ 
+ 
+\begin{center}
+\textbf{Février 2014 (2 heures)}
+\end{center}
+
+
+
+
+
+%\noindent{\bf Questions de cours (4 points)}\begin{enumerate}\item (1pt) Rappeler la définition d'une fonction homogéne de degré $0$. Montrer que la fonction de demande du consommateur est homogéne de degré $0$. Comment interpréte-t-on cette propriété en général?\item (1pt) Rappeler la définition d'un équilibre concurrentiel d'une économie d'échange \newline$\mathcal{E}=\{L,N,(u^i,e^i)_{i=1,...,N}\}$. \item (1pt) Rappeler le théoréme d'existence d'un équilibre concurrentiel d'une économie d'échange $\mathcal{E}$. \item (1pt) Rappeler la définition d'un optimum de Pareto d'une économie d'échange  $\mathcal{E}$  (on définira tous les termes de la définition) .\end{enumerate}
+
+\noindent{\bf Exercice 1 (6 points)} 
+On observe un consommateur durant 2 périodes $t=1,2$. Ses préférences ne sont pas connues mais on suppose qu'elles sont {\bf monotones} et qu'elles restent inchangées durant les 2 périodes. Le consommateur peut choisir 2 biens ($x$ et $y$). On connaît les prix $p_x(t)$ et $p_y(t)$ et le revenu $R(t)$ à chaque date $t$: $p_x(1)=2$; $p_y(1)=1$; $R(1)=4$; $p_x(2)=1$; $p_y(2)=2$; $R(2)=3$. %Par contre, on ne connaît que trés partiellement ses choix de consommation.
+
+\begin{enumerate}
+\item (1pt) Représenter précisément sur un même dessin les ensembles de budget pour les 2 périodes.
+\item (1pt) Déterminer le panier de biens qui sature simultanément la contrainte de budget du consommateur aux 2 périodes. On notera ce panier $(x^*,y^*)$.
+\end{enumerate}
+
+On suppose que le consommateur a choisi de consommer exactement $\frac{11}{6}$ unités de bien $x$ à la période 1. 
+\begin{enumerate}
+\item[3.] (1pt) Quelle est sa consommation en bien $y$ en $t=1$? Justifier sans démontrer.
+\item[4.] (2pts) Expliquer pourquoi sa consommation en bien $x$ à la période 2 ne pourra excéder $y^*$. Justifier précisément, éventuellement en vous aidant du dessin.
+\item[5.] (1pt) En déduire l'ensemble des paniers de biens possibles choisis à la date 2 (les représenter sur le dessin).
+\end{enumerate}
+
+
+\vskip .1in
+
+\noindent{\bf Exercice 2 (14 points)} 
+
+On considére une économie de production avec 2 consommateurs (1 et 2), 1 entreprise ($e$), et 2 biens ($x$ et $y$). 
+Chaque consommateur $i=1,2$ est doté d'une  fonction d'utilité $u^i\::\: \mathbb{R}^2_+\rightarrow \mathbb{R}$ croissante, un panier de biens sera noté $(x^i,y^i)$. L'ensemble de production de l'entreprise est $Q$, un plan de production sera noté $(x^e,y^e)$. Chaque consommateur possède la moitié de l'entreprise. Les dotations initiales du consommateur $i$, $i=1,2$, sont $e^i=(e^i_x,e^i_y)$.
+
+\begin{enumerate}
+\item (1pt) Rappeler la définition d'un équilibre concurrentiel $\bigl ((x^1,y^1),(x^2,y^2),(x^e,y^e),(p_x,p_y)\bigr )$ pour cette économie.
+\item  (1pt) Rappeler la définition d'une allocation réalisable $\bigl ((x^1,y^1),(x^2,y^2),(x^e,y^e)\bigr )$ pour cette économie. 
+\item (1pt) Rappeler la définition d'une allocation Pareto optimale $\bigl ((x^1,y^1),(x^2,y^2),(x^e,y^e)\bigr )$ pour cette économie. 
+\item (2pts) Soit $\bigl ((x^1,y^1),(x^2,y^2),(x^e,y^e),(p_x,p_y)\bigr )$ un équilibre concurrentiel de cette économie. Montrer que l'allocation $\bigl ((x^1,y^1),(x^2,y^2),(x^e,y^e)\bigr )$ est Pareto optimale.
+\end{enumerate}
+On suppose que, pour tout $i=1,2$, $u^i(x^i,y^i)=\sqrt{x^iy^i}$, $e^i=(1,1)$, et que la technologie de production peut être représentée par une fonction de production $g$: $g(x^e)=3\sqrt{x^e}$ (le bien $x^e$ est un input utilisé pour produire du bien: $y^e=g(x^e)$).
+\begin{enumerate}
+\item[5.] (2pts) Déterminer la fonction d'offre et le profit de l'entreprise en fonction des prix,  en détaillant les calculs.
+\item[6.] (1pt) Déterminer les fonctions de demandes en fonction des prix (on détaillera le calcul à partir de la relation TMS égal rapport des prix pour un seul consommateur).
+\item[7.] (1pt) En déduire l'équilibre concurrentiel de cette économie.
+
+\item[8.] (1pt)  (sans calculs) Expliquer pourquoi les consommateurs ont toujours intérêt à utiliser l'entreprise pour produire du bien $y$ en tout optimum de Pareto. 
+\item[9.] (3pts) On admet que les allocations Pareto optimales (avec $x^1,y^1,x^2,y^2> 0$) sont données par les solutions du problème d'optimisation sociale suivant, avec $\gamma^1,\gamma^2\neq 0$:$$\left\{\begin{array}{l}\max_{x^1,y^1,x^2,y^2;x^e,y^e> 0} \gamma^1u^1(x^1,y^1)+\gamma^2u^2(x^2,y^2)\\ y^e=g(x^e)\\ x^1+x^2=e^1_x+e^2_x-x^e\\
+y^1+y^2=e^1_y+e^2_y+y^e\\
+\end{array}\right.$$
+
+Déterminer l'ensemble des allocations Pareto optimales (telles que $x^1,y^1,x^2,y^2> 0$) de cette économie en suivant la  méthode de calcul habituelle du cours.
+
+\item[10.] (1pt) Vérifier que l'allocation d'équilibre trouvée à la question 7 est bien Pareto optimale.
+
+\end{enumerate}
+
+
+\newpage
+
+\begin{center}
+\textbf{Septembre 2014 (2 heures)}
+\end{center}
+
+
+
+
+\noindent{\bf Questions de cours} (9 points)
+
+\begin{enumerate}
+ \item (1pt) Rappeler la définition d'une fonction quasi-concave et d'une fonction strictement quasi-concave $f\::\: \mathbb{R}^L_+\rightarrow \mathbb{R}$.
+ \item (1pt) Rappeler la définition d'une fonction croissante et d'une fonction strictement croissante $f\::\: \mathbb{R}^L_+\rightarrow \mathbb{R}$.
+ \item (1pt) Donner un exemple d'une fonction d'utilité croissante mais non strictement croissante (avec au moins deux biens).
+ \item (1pt) Rappeler la définition d'une équilibre concurrentiel dans une économie d'échange $\mathcal{E}=\{L,N,(e^{i},u^{i})_{1\leq i\leq N}\}$.
+\item (1pt) Expliquer en trois lignes (max) ce que signifie {\it être à l'équilibre} dans une économie d'échange.
+\item (1pt) Rappeler la définition d'une allocation réalisable et d'une allocation Pareto optimale dans une économie d'échange.
+ \item (1pt) Rappeler le premier théorème du bien-être dans une économie d'échange.
+ \item (1pt) Rappeler le second théorème du bien-être dans une économie d'échange.
+\item (1pt) Dans quel cas de figure, vu en cours, l'allocation d'équilibre n'est-elle pas nécessairement Pareto optimale? Expliquer pourquoi brièvement.
+\end{enumerate}
+
+\bigskip
+\noindent{\bf Exercice 1} (3 pts)
+
+ On consid\`{e}re une \'{e}conomie d'\'{e}change \`{a}
+2 consommateurs (1 et 2) et 2 biens ($x$ et $y$). Les dotations initiales des
+consommateurs sont  $e^{i}=(e_{x}^{i},e_{y}^{i})\in \mathbb{R}_{+}^{2}$, $i=1,2$, et vérifient  $e^2_y=0$.
+%\begin{equation*}e^{1}=(1,0)\qquad e^{2}=(0,1)\end{equation*}%
+Les fonctions d'utilit\'{e} $u^{i}:\mathbb{R}_{+}^{2}\rightarrow \mathbb{R}$%
+, $i=1,2$, sont \ 
+\begin{equation*}
+u^{1}(x,y)=x^{\frac{1}{3}}y^{\frac{2}{3}},\quad u^{2}(x,y)=x^{\frac{1}{2}}
+\end{equation*}
+
+On dit qu'un équilibre est autarcique si l'allocation d'équilibre correspond à $(e^1,e^2)$.
+Montrer que l'équilibre est autarcique dans cette économie d'échange et donner le ou les prix d'équilibre.
+
+\bigskip
+
+\noindent{\bf Exercice 2} (8 pts)
+On consid\`{e}re une \'{e}conomie d'\'{e}change \`{a}
+2 consommateurs (1 et 2) et 2 biens ($x$ et $y$).
+Les préférences du premier consommateur sont représentées par la fonction d’utilité
+$u^1(x, y) = xy$ et celles du deuxième par la fonction $u^2(x,y) = \min\{x, y\}$. On suppose que $e^1+e^2 = (2, 4)$ et $e^i_x,e^i_y>0$, $i=1,2$.
+ 
+
+\begin{enumerate}
+
+\item (1pt) Tracer la boite d’Edgeworth et tracer dans cette boite la courbe
+d’indifférence des deux consommateurs pour le niveau d’utilité 1.
+\item (2pts)  Soit $ ((p_x,p_y),(x^1,y^1),(x^2,y^2))$, un équilibre concurrentiel. Montrer qu’il existe un réel
+$t\in ]0, 2[ $ tel que $(x^2,y^2) = (t, t)$ et donc tel que $ (x^1,y^1) = (2- t, 4- t)$.
+\item (1pt)
+En utilisant la condition du premier ordre qui donne l'égalité entre TMS du premier consommateur  et rapport des prix, montrer que le prix d'équilibre $(p_x,p_y)$ est colinéaire au vecteur
+$(4- t, 2 -t)$.
+
+\item (1pt) Justifier pourquoi $(p_x,p_y)\cdot (x^1,y^1) =(p_x,p_y)\cdot (e^1_x,e^1_y)$. En déduire que $t$ vérifie l'équation suivante :
+$(4- t)e^1_x + (2-t)e^1_y-2(2- t)(4-t)=0$
+
+\item  (1pt)
+Montrer que cette équation a toujours une unique solution appartenant à $]0, 2[$ (on ne cherchera pas à calculer cette solution). En déduire que l'économie a toujours un
+unique équilibre.
+
+\item (2pts)
+Calculer les allocations d’équilibre et le prix d'équilibre lorsque $e^1 = (\frac{3}{2},\frac{3}{2})$. Représenter l'équilibre dans la boîte d'Edgeworth.
+
+\end{enumerate}
+ \newpage
+ 
+ 
+
+\begin{center}
+\textbf{Novembre 2014 (2 heures)}
+\end{center}
+
+
+
+
+
+\noindent \textbf{Exercice} $\mathbf{1}$
+
+
+
+Soit une économie d'échange $E=\{L,N,(u^i,e^i)_{i=1,...,N}\}$.
+ Rappeler le premier théorème du bien-être et le démontrer.
+
+
+\bigskip
+
+\noindent \textbf{Exercice} $\mathbf{2}$
+
+
+
+On considère une économie d'échange avec 3 agents (1, 2 et 3) et 2 biens ($x$ et $y$). Les dotations initiales sont telles que $e^1=(2,2)$, $e^2=(2+t,2)$ et $e^3=(2-t,2)$ oô $0\leq t\leq 1$; leurs fonctions d'utilité sont données par $u^1(x,y)=xy^2$, $u^2(x,y)=xy^3$ et  $u^3(x,y)=x^3y$.
+
+\begin{enumerate}
+
+\item Expliquez pourquoi les préférences des 3 agents pourraient aussi être représentées par les fonctions d'utilité $u^1(x,y)=\ln(x)+ 2\ln(y)$, $u^2(x,y)=\ln(x)+ 3\ln(y)$ et  $u^3(x,y)=3\ln(x)+\ln(y)$.
+
+\item  Montrer que les fonctions sont strictement croissantes et strictement quasi-concaves (le montrer précisément pour l'une d'elles seulement).
+Peut-on en déduire sans calcul que l'économie possède un équilibre concurrentiel?
+
+
+
+
+\item Après en avoir rappelé l'interprétation économique, calculer les taux marginaux de substitution du bien $y$ pour le bien $x$ pour chacun des agents.
+\item Déterminer les fonctions de demande des agents en fonction des prix (et de $t$).
+\item Déterminer le prix d'équilibre en fonction de $t$. (on normalise le prix du bien $y$, $p_y=1$)
+\item  Dessiner dans le plan  la fonction du prix d'équilibre du bien $x$ en fonction de $t$. 
+
+
+\item  Déterminer l'allocation d'équilibre en fonction de $t$. Comment évolue l'utilité d'équilibre de l'agent 2 avec $t$ ?
+
+
+\end{enumerate}
+
+
+\bigskip
+
+\noindent \textbf{Exercice} $\mathbf{3}$
+
+ \begin{enumerate}
+ \item Rappeler {\bf précisément} la définition d'une allocation réalisable, d'une allocation qui Pareto-domine une autre allocation,  d'une allocation Pareto optimale dans une économie d'échange.
+
+     \medskip
+
+
+ \noindent On consid\`{e}re une \'{e}conomie d'échange  avec 2 agents (1 et 2) et 2 biens ($x$ et $y$). Les préférences sont données par $$u^1(x,y)=u^2(x,y)=\min\{x,y\}$$ et la dotation globale par $e=(4,4)$.
+
+  \item  Représenter l'économie dans la boîte d'Edgeworth (boîte, courbes d'indifférence).
+
+ \item En utilisant la définition de Pareto optimalité, trouver une allocation qui est Pareto optimale, et une qui ne l'est pas ({\bf expliquer précisément}).
+
+ \item Soient les dotations initiales suivantes : $e^1=(4;0)$ et $e^2=(0;4)$. Trouver un équilibre concurrentiel de l'économie (prix et allocations) en vous aidant de la représentation graphique.
+ 
+ \item Supposons que l'agent 1 reçoive une unité de plus du bien 1 si bien que les dotations initiales deviennent $e^1=(5;0)$ et $e^2=(0;4)$, trouver un équilibre concurrentiel de l'économie (prix et allocations). Vous pouvez vous aider d'une représentation graphique.
+
+
+ \end{enumerate}
+
+\newpage
+
+
+\begin{center}
+\textbf{Janvier 2015 (2 heures)}
+\end{center}
+
+
+
+\noindent {\bf Exercice 1 (Cours)}
+
+Pour cet exercice, aucune justification ne vous est demandée. Vous indiquerez clairement des nombres de 1 à 16, sur deux colonnes séparées d'environ 10 cm avec dans la première colonne, les nombres de 1 à 8 et dans la seconde ceux de 9 à 16. A côté de chacun de ces nombres, vous écrirez, au choix : vrai, faux ou rien (sachant qu'une réponse erronée vous fait perdre autant points qu'une réponse exacte vous en fait gagner).
+
+Sauf s'ils sont mentionnés, on supposera qu'externalités et biens publics sont absents.
+
+ \begin{enumerate}
+
+\item Soit une économie d'échange avec $n \geq 2$ consommateurs ayant des préférences strictement croissantes et un nombre fini de biens disponibles en quantités finies et strictement positives. Cette économie a nécessairement plusieurs optima de Pareto.
+
+\item Si un ensemble de production est convexe alors il est à rendements d'échelle décroissants.
+
+\item Soit un ensemble de production avec des rendements d'échelle constants. En concurrence pure et parfaite, si l'entreprise disposant de cette ensemble de production a un optimum de production strictement positif et fini, elle obtiendra en produisant cette quantité un profit strictement positif.
+
+\item En présence d'externalités strictement positives avec des individus ayant des préférences qui peuvent être représentées par une fonction d'utilité strictement quasi-concave, l'équilibre général d'une économie n'est pas nécessairement un optimum de Pareto.
+
+\item La loi de Walras implique que, dans une économie d'échange, avec des prix strictement positifs pour tous les biens, si les marchés de tous les biens sauf un sont équilibrés (c-à-d : offre = demande pour les marchés des biens en question), alors le marché du dernier bien est aussi équilibré.
+
+\item L'hypothèse de substituabilité brute est une condition nécessaire pour l'unicité de l'équilibre d'une économie d'échange.
+
+\item Soit une vecteur $a=(a_1; ...;a_H)$ avec $a_h>0$ $\forall h$. Si $x^*$ est une solution au probléme de maximisation de $\max_x  \Sigma_{h=1}^H a_hu_h(x_h)$ sous les contraintes que $\Sigma_{h=1}^H x_h \leq \Sigma_{h=1}^H e_h$ et $x_h \geq 0$ $\forall h=1; ...; H$, alors c'est un optimum de Pareto.
+
+\item En présence d'externalités, la notion d'optimum de Pareto n'a pas de sens.
+
+\item En concurrence pure et parfaite, lorsque le prix d'un bien (output) augmente, sa production augmente.
+
+\item En concurrence pure et parfaite, lorsque le prix d'un bien augmente, sa demande augmente.
+
+\item Si on considère un optimum intérieur (chaque consommateur est doté d'une quantité strictement positive de chacun des biens disponibles dans l'économie), les TMS des consommateurs, s'ils sont définis, sont nécessairement égaux.
+
+\item Un consommateur ne peut consommer d'un bien public qu'en proportion de la quantité d'argent qu'il a versé pour le financer.
+
+\item En présence d'externalités strictement positives, l'équilibre général d'une économie (avec au moins 2 consommateurs et au moins 2 biens) ne peut pas être un optimum de Pareto.
+
+\item La condition BLS dit que, à un optimum de Pareto, la somme des TMS entre le bien public et le bien privé, s'ils sont définis, est égale à l'inverse de la productivité marginale du bien public.
+
+\item Si un individu a des préférences qui peuvent être représentées par une fonction d'utilité strictement quasi-concave, son programme d'optimisation a une solution unique.
+
+\item Le concept Pareto dominance ne permet pas toujours de comparer deux allocations de richesses distinctes.
+
+
+
+ \end{enumerate}
+
+\bigskip
+
+\noindent {\bf Exercice 2 (Production)}
+
+\medskip
+
+On considère une économie à deux consommateurs ($i = 1; 2$), deux biens de consommation
+($k = 1; 2$), un facteur de production (le travail) et deux entreprises ($j = 1; 2$). On note $x^i$ la consommation de bien $1$ du consommateur $i$ et $y^i$, la consommation de bien $2$ du consommateur $i$ ($i = 1; 2$).
+La dotation initiale de chaque consommateur est de une unité de travail et de la propriété de la moitié des deux entreprises. Leurs fonctions d'utilité (qui
+portent exclusivement sur les biens de consommation) sont respectivement $u^1(x^1; y^1) =\ln(x^1)+2\ln(y^1)$
+et $u^2(x^2; y^2) = 2\ln(x^2)+\ln(y^2)$. L'entreprise $1$ produit le premier bien de consommation à l'aide de travail,
+suivant la technologie $q_1 = 3\sqrt{z_1}$ ; l'entreprise $2$ produit le second bien de consommation à l'aide de travail,
+suivant la technologie $q_2 = 6\sqrt{z_2}$ ($q_k$ désigne l'output de bien $k$ et $z_k$ l'input de travail pour l'entreprise $k$, $k = 1; 2$). On fixe le prix du travail
+à $1$ (en l'absence de loisirs, on supposera que l'ensemble de la dotation de l'économie en travail est consommé par les entreprises) et on note $p_k$ le prix du bien de consommation $k$, $k = 1; 2$.
+
+\medskip
+
+ \begin{enumerate}
+ \item Résoudre le programme de maximisation du profit de chaque entreprise, de manière à déduire les offres $(\hat z_k, \hat q_k)$, $k = 1; 2$, en fonction des prix.
+
+\item  Résoudre les programmes d'optimisation des consommateurs de manière à déduire leurs demandes ($\hat x^i$, $\hat y^i$) pour  $i = 1; 2$, en fonction de leurs revenus $R^i$ (que vous ne détaillerez pas pour le moment) et des prix.
+
+\item  Exprimer le revenu $R^i$ du consommateur $i = 1; 2$, en fonction des prix.
+
+\item  Ecrire les conditions d'apurement des marchés en fonction des prix.
+
+\end{enumerate}
+
+
+
+\bigskip
+\medskip
+\noindent {\bf Exercice 3 (Biens publics)}
+
+\medskip
+
+On considère une économie comprenant deux consommateurs (1 et 2) dont les fonctions d'utilité sont respectivement : $u^1(x^1;y)=x^1 y$ et $u^2(x^2;y)=x^2 y$  où $x^i>0$ désigne la quantité de bien privé consommé par l'agent $i$ et $y>0$ la quantité de bien public produit dans l'économie. La fonction de production du bien public à partir du bien privé est $y=g(z)=z$. La dotation initiale de l'ensemble de l'économie est de 40 unités de bien privé.
+
+\medskip
+\begin{enumerate}
+
+\item  Caractériser l'ensemble des allocations $(x^1,x^2,y)$ réalisables dans l'économie.
+
+\item  Caractériser l'ensemble des allocations $(x^1,x^2,y)$ Pareto-optimales en spécifiant précisément les valeurs possibles de $y$.
+
+\item  En déduire, sans calculs, l'ensemble des allocations $(x^1,x^2,y)$ Pareto-optimales pour une  dotation initiale de l'ensemble de l'économie en bien privé égale à $K>0$.
+
+\end{enumerate}
+
+\newpage
+
+
+\begin{center}
+\textbf{Aout 2015 (2 heures)}
+\end{center}
+
+
+
+
+
+\noindent {\bf Exercice 1 (Cours)}
+
+\noindent Pour cet exercice, aucune justification ne vous est demandée. Vous indiquerez clairement des nombres de 1 à 12, sur deux colonnes séparées d'environ 10 cm avec dans la première colonne, les nombres de 1 à 6 et dans la seconde ceux de 7 à 12. A côté de chacun de ces nombres, vous écrirez, au choix : vrai, faux ou rien (sachant qu'une réponse erronée vous fait perdre autant points qu'une réponse exacte vous en fait gagner).
+
+\noindent  Sauf s'ils sont mentionnés, on supposera qu'externalités et biens publics sont absents.
+
+ \begin{enumerate}
+
+
+
+\item Si un ensemble de production est concave alors il est à rendements d'échelle croissants.
+
+\item Soit un ensemble de production avec des rendements d'échelle constants. En concurrence pure et parfaite, si l'entreprise disposant de cette ensemble de production a un optimum de production strictement positif et fini, elle obtiendra en produisant cette quantité un profit strictement positif.
+
+\item Il est possible de définir la notion d'optimum de Pareto sans faire appel à la notion de prix.
+
+\item En présence d'externalités strictement positives avec des individus ayant des préférences qui peuvent être représentées par une fonction d'utilité strictement quasi-concave, l'équilibre général d'une économie ne peut pas être un optimum de Pareto.
+
+\item La loi de Walras implique que, dans une économie d'échange, avec des prix strictement positifs pour tous les biens, si les marchés de tous les biens sauf un sont équilibrés (c-à-d : offre = demande pour les marchés des biens en question), alors le marché du dernier bien est aussi équilibré.
+
+\item L'hypothèse de substituabilité brute est une condition suffisante pour l'unicité de l'équilibre d'une économie d'échange.
+
+\item En concurrence pure et parfaite, lorsque le prix d'un bien augmente strictement, sa demande diminue strictement.
+
+\item Un consommateur ne peut consommer d'un bien public qu'en proportion de la quantité d'argent qu'il a versé pour le financer.
+
+\item La condition BLS dit que, à un optimum de Pareto, la somme des TMS entre le bien public et le bien privé, s'ils sont définis, est strictement supérieur à l'inverse de la productivité marginale du bien public.
+
+\item Si un individu a des préférences qui peuvent être représentées par une fonction d'utilité strictement quasi-concave, son programme d'optimisation a une solution unique.
+
+\item Le concept Pareto dominance permet toujours de comparer deux allocations de richesses distinctes.
+
+\item Soient une économie d'échange et $x^j_i$, la quantité de bien $i$ consommée par l'agent $j$, à l'équilibre, si $\frac{x_2^a}{x_1^a}>\frac{x_2^b}{x_1^b}$ alors $TMS_{2;1}^a>TMS_{2;1}^b$
+
+
+ \end{enumerate}
+
+\bigskip
+
+\noindent {\bf Exercice 2}
+
+\medskip
+
+\noindent On considère une économie consistant en deux consommateurs (1 et 2), un producteur et deux biens ($x$ et $y$). Les dotations initiales des consommateurs, notées $e^i=(e^i_x;e^i_y)\in R^2_{+}$ sont $e^1=(10;20)$ et $e^2=(10;32)$; leur fonction d'utilité est $u^i(x;y)=x^{1/2}y^{1/2}$ pour $i=1;2$. Le consommateur 1 possède une entreprise qui produit du bien 1 à partir du bien 2 suivant la technologie $q=g(z)=2\sqrt(z)$ ($z$ est l'input de bien 2 et $q$ l'output de bien 1).
+
+ %$e^i=(e^i_x,e^i_y)\in\R^2_{+}$, sont $e^1=(10,20)$ et $e^2=(10,32)$; leur fonction d'utilité est $u^i(x,y)=x^\frac{1}{2}y^\frac{1}{2}$, $i=1,2$. Le consommateur 1 possède l'entreprise qui produit du bien $x$ à partir du bien $y$ suivant la technologie $q=g(z)=2\sqrt{z}$ ($z$ est l'input bien 2 et $q$ l'output en bien 1).
+
+\begin{enumerate}
+\item Déterminer la fonction de demande $(
+d_{x}^{i}( p,\pi ) ,d_{y}^{i}( p,\pi ) ) $
+ de chaque consommateur  $i$, en termes des biens $x$
+et $y$, en fonction du vecteur de prix $p=(p_{x},p_{y}) $ et du profit $\pi$ de l'entreprise.
+
+\item Déterminer la fonction d'offre $ (x^{\ast }(
+p)$,  $y^{\ast }(p) )$ (certains termes peuvent être négatifs) et le profit maximal $%
+\pi ^{\ast }(p) $  de l'entreprise en fonction du
+vecteur de prix $p=( p_{x},p_{y}) $. 
+
+\item Montrer qu'il existe un équilibre concurrentiel et le déterminer (rappel lorsque l'entreprise produit du bien 1, la quantité d'input en bien 2 réduit la quantité totale de bien 2 disponible et la quantité d'output augmente la quantité totale de bien 1 disponible). Vérifier que cet équilibre est Pareto-optimal.  ({\it Vous normaliserez le vecteur de prix en supposant que $p_y^{\ast}=1$.})
+
+
+
+\medskip
+
+\noindent On introduit une variante. Tous les éléments du modèle sont inchangés sauf la fonction d'utilité du consommateur 2 qui subit maintenant une externalité de la part de l'entreprise: sa fonction d'utilité devient $u^2(x;y;z)=\sqrt{xy}-2z$ (oô $z$ est la quantité de bien 2 utilisée par l'entreprise $x$ et $y$, les quantités de bien 1 et bien 2 respectivement consommées par le consommateur 2).
+
+\medskip
+\item Montrer que l'équilibre concurrentiel calculé à la question précédente est encore un équilibre dans l'économie avec externalité.
+\item Vérifier que l'allocation suivante: $q=2$, $z=1$, $(x^1,y^1)=(12,22)$, $(x^2,y^2)=(10,29)$ est réalisable et Pareto-domine l'équilibre trouvé précédemment.
+\end{enumerate}
+
+
+
+
+
+\bigskip
+\medskip
+\noindent {\bf Exercice 3 }
+
+\medskip
+
+\noindent On considère une économie d'échange avec 2 agents (1 et 2) et 3 biens ($x$, $y$ et $z$). La fonction d'utilité de l'agent 1 est donnée par $$u^1(x,y,z)=x^{\frac{4}{7}}y^{\frac{8}{7}} z^{\frac{12}{7}}$$
+  La fonction d'utilité de l'agent 2 est donnée par $$u^2(x,y,z)=\frac{1}{4}\ln (x) +\frac{1}{2}\ln (y) +\frac{3}{4}\ln (z)$$
+
+\noindent   Les dotations initiales  sont données par $e^1=(0,150,150)$ et $e^2=(100,150,50)$
+
+
+ \begin{enumerate}
+ \item  Montrer que les deux agents ont les mêmes préférences, c'est-à-dire que la fonction $u^2$ représente les mêmes préférences que la fonction d'utilité $u^1$.
+
+ {\it Dans la suite,  on considérera $u^2$ comme étant la fonction d'utilité des deux agents.}
+
+ \item Sans calculs et en raisonnant seulement sur les fonctions d'utilité et les dotations initiales, peut-on dire que les agents ont intérêt à échanger?
+
+  \item Déterminer la fonction de demande de l'agent 1, $D^1(p,e^1)$ pour tout $p\in \mathbb{R}^3_{++}$, en détaillant la méthode et les calculs. En déduire sans calculs la fonction de demande de l'agent 2.
+
+% (les agents ayant les même préférences, on ne détaillera les calculs que pour l'agent 1). %(utiliser la notation $(x^1,y^1,z^1)$ pour un panier de biens de l'agent 1, et $(x^2,y^2,z^2)$ pour l'agent 2)
+ \item  Poser les conditions d'équilibre sur les marchés, déterminer les  prix d'équilibre, puis les allocations d'équilibre. (on normalisera le prix du bien $x$: $p_x^*=1$)
+ \end{enumerate}
+
+
+
+
+
+
+
+\end{document}

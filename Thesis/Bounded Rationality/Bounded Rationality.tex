@@ -1,0 +1,52 @@
+%% Basierend auf einer TeXnicCenter-Vorlage von Tino Weinkauf.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,twoside,10pt]{report}
+% Alternative Optionen:
+%	Papiergröße: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Grundlegende Fontgrößen: 10pt / 11pt / 12pt
+
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\begin{document}
+
+
+$p_n > p_{n-1} >...> p_1> p_0$
+
+firm k's profits is:
+
+$p_{ k }  a  (1 - a_ {0} )(1-a)^{k-1}$
+
+Man mix payoff is:
+
+$ a  (1 - a_ {0} )(1-a)^{n-1}$
+
+$G(p) = \frac{1}{a} - \frac{1-a}{a}p^{-\frac{1}{n-1}}$
+
+Over support:   
+[$(1-a)^{n-1}$, 1]
+
+This leads to:
+
+\[ 
+E(p) = 
+\begin{cases}
+    - \frac{1-a}{a}ln(1-a),& n=2\\
+    \frac{1-a}{a(n-2)}[1-(1-a)^{n-2}],              & n \geq 3
+\end{cases}
+\]
+
+Welfare Analysis:
+if $a = a_ {0}$ : \\
+then $ na(1-a)^{n}$
+
+
+
+\end{document}
+
