@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:cwsp="http://www.dspace.org/xmlns/cwspace_imscp"
+          xmlns:ocw="https://ocw.mit.edu/xmlns/ocw_imscp"
+          xmlns:lom="https://ocw.mit.edu/xmlns/LOM"
+          identifier="urn_edu.mit.ocw_14-382-econometrics-spring-2017"
+          version="2021-12-10T22:12:56"
+          cwsp:packageType="Course"
+          xml:base="14-382-spring-2017/"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p1.xsd  http://www.adlnet.org/xsd/adlcp_rootv1p2 http://www.adlnet.org/xsd/adlcp_rootv1p2.xsd http://www.dspace.org/xmlns/cwspace_imscp http://www.dspace.org/xsd/cwspace_imscp/version10/cwspace_imscpv10.xsd https://ocw.mit.edu/xmlns/ocw_imscp https://ocw.mit.edu/xsd/ocw_imscp/version10/ocw_imscpv10.xsd https://ocw.mit.edu/xmlns/LOM https://ocw.mit.edu/xsd/LOM/lomv1.0/lomv1.0.xsd">
+   	<metadata>
+   		<schema>IMS Content</schema>
+        <schemaversion>1.1</schemaversion>
+        <cwsp:packageMetadata>
+            <cwsp:sourceSystem>OCW</cwsp:sourceSystem>
+            <cwsp:profile>CWSpace</cwsp:profile>
+            <cwsp:profileVersion>0.1</cwsp:profileVersion>
+        </cwsp:packageMetadata>
+        <lom:general uniqueElementName="general">
+            <lom:title uniqueElementName="title">
+				<lom:string language="en">Econometrics</lom:string>
+			</lom:title>
+			<lom:identifier>
+				<lom:catalog uniqueElementName="catalog">OCW Master Course Number</lom:catalog>
+		      	<lom:entry uniqueElementName="entry">14.382</lom:entry>
+			</lom:identifier>
+        </lom:general>
+        <lom:lifecycle uniqueElementName="lifeCycle">
+            <lom:version uniqueElementName="version">
+				<lom:string language="en">Spring 2017</lom:string>
+			</lom:version>
+            <lom:contribute>
+	            <lom:role>
+	                <lom:source uniqueElementName="source">OCW_LOMv1.0</lom:source>
+	                <lom:value uniqueElementName="value">Author</lom:value>
+	            </lom:role>
+	            <lom:entity>Chernozhukov, Victor</lom:entity>
+	            <lom:date uniqueElementName="date">
+	                <lom:dateTime uniqueElementName="dateTime">2021-12-10</lom:dateTime>
+	            </lom:date>
+        	</lom:contribute>
+        </lom:lifecycle>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Social Science</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Economics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            
+        </lom:taxonPath>
+        <lom:taxonPath>
+            <lom:source uniqueElementName="source">
+                <lom:string language="en">OCW Course Topics</lom:string>
+            </lom:source>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Social Science</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Economics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+            <lom:taxon>
+                <lom:entry uniqueElementName="entry">
+                    <lom:string language="en">Econometrics</lom:string>
+                </lom:entry>
+            </lom:taxon>
+        </lom:taxonPath>        
+        <adlcp:location>contents/index.htm.xml</adlcp:location>
+    </metadata>
+    <organizations default="ocw_14-382-econometrics-spring-2017">
+        <organization identifier="ocw_14-382-econometrics-spring-2017">
+            <title>Econometrics</title>
+            <item identifier="i_14-382-econometrics-spring-2017.CourseHome"
+                  identifierref="r_contents.index.htm"
+                  ocw:sectionTemplateType="CourseHomePage"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Econometrics</title>
+				<item identifier="i_14-382-econometrics-spring-2017.14-382s17.jpg"
+          identifierref="r_contents.14-382s17.jpg">
+				<title>14-382s17.jpg</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.14-382s17-th.jpg"
+          identifierref="r_contents.14-382s17-th.jpg">
+				<title>14-382s17-th.jpg</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.related-resources"
+                  identifierref="r_contents.related-resources.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Related Resources</title>
+				<item identifier="i_14-382-econometrics-spring-2017.related-resources.MIT14_382S17_GMMslides.pdf"
+          identifierref="r_contents.related-resources.MIT14_382S17_GMMslides.pdf">
+				<title>14.382 Spring 2017-Slides on GMM Estimation in Stata</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.related-resources.MIT14_382S17_14381notes.pdf"
+          identifierref="r_contents.related-resources.MIT14_382S17_14381notes.pdf">
+				<title>14.382 Spring 2017: Notes from 14.381</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.exams"
+                  identifierref="r_contents.exams.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Exams</title>
+				<item identifier="i_14-382-econometrics-spring-2017.exams.MIT_14_382S17_midterm06.pdf"
+          identifierref="r_contents.exams.MIT_14_382S17_midterm06.pdf">
+				<title>14.382 Midterm from 2006</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.exams.MIT_14_382S17_Final04.pdf"
+          identifierref="r_contents.exams.MIT_14_382S17_Final04.pdf">
+				<title>14.382 Final Exam from 2004</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.exams.MIT_14_382S17_ExamF16.pdf"
+          identifierref="r_contents.exams.MIT_14_382S17_ExamF16.pdf">
+				<title>Final Exam from 14.382 Fall 2016</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.recitations"
+                  identifierref="r_contents.recitations.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Recitations</title>
+				<item identifier="i_14-382-econometrics-spring-2017.recitations.MIT_14_382S17_rec4.pdf"
+          identifierref="r_contents.recitations.MIT_14_382S17_rec4.pdf">
+				<title>14.382 Spring 2017 Recitation Notes 4: Asymptotics, Take 1</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.recitations.MIT_14_382S17_rec1.pdf"
+          identifierref="r_contents.recitations.MIT_14_382S17_rec1.pdf">
+				<title>14.382 Spring 2017 Recitation 1 Notes: Overview of regression</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.recitations.MIT_14_382S17_rec3.pdf"
+          identifierref="r_contents.recitations.MIT_14_382S17_rec3.pdf">
+				<title>14.382 Spring 2017 Recitation 3 Notes: Graphical formulation of SEMs</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.assignments"
+                  identifierref="r_contents.assignments.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Assignments</title>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-4"
+          identifierref="r_contents.assignments.homework-4.index.htm">
+				<title>Homework 4</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-4.ccapm-ready-to-use.csv"
+          identifierref="r_contents.assignments.homework-4.ccapm-ready-to-use.csv">
+				<title>ccapm-ready-to-use.csv</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-4.ccapm-v2.R"
+          identifierref="r_contents.assignments.homework-4.ccapm-v2.R">
+				<title>ccapm-v2.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-4.L5-BoostrapExamples-sem.R"
+          identifierref="r_contents.assignments.homework-4.L5-BoostrapExamples-sem.R">
+				<title>L5-BoostrapExamples-sem.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-5"
+          identifierref="r_contents.assignments.homework-5.index.htm">
+				<title>Homework 5</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-5.mortgage.dta"
+          identifierref="r_contents.assignments.homework-5.mortgage.dta">
+				<title>mortgage.dta</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-5.Mortgage.R"
+          identifierref="r_contents.assignments.homework-5.Mortgage.R">
+				<title>Mortgage.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-1"
+          identifierref="r_contents.assignments.homework-1.index.htm">
+				<title>Homework 1</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-1.PartiallingOut-GenderWageGap_v5.R"
+          identifierref="r_contents.assignments.homework-1.PartiallingOut-GenderWageGap_v5.R">
+				<title>PartiallingOut-GenderWageGap_v5.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-1.penn_jae.dat"
+          identifierref="r_contents.assignments.homework-1.penn_jae.dat">
+				<title>penn_jae.dat</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-1.MIT_14_382S17_Hmwk1_data.pdf"
+          identifierref="r_contents.assignments.homework-1.MIT_14_382S17_Hmwk1_data.pdf">
+				<title>14.382 Spring 2017 Homework 1 Data Descripton</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-1.CPS2015.csv"
+          identifierref="r_contents.assignments.homework-1.CPS2015.csv">
+				<title>CPS2015.csv</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-1.penn46-mert.R"
+          identifierref="r_contents.assignments.homework-1.penn46-mert.R">
+				<title>penn46-mert.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-2"
+          identifierref="r_contents.assignments.homework-2.index.htm">
+				<title>Homework 2</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-2.AJR.R"
+          identifierref="r_contents.assignments.homework-2.AJR.R">
+				<title>AJR.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-2.acemoglu_col.txt"
+          identifierref="r_contents.assignments.homework-2.acemoglu_col.txt">
+				<title>acemoglu_col.txt</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-2.MIT_14_382S17_Hmwk2_data.pdf"
+          identifierref="r_contents.assignments.homework-2.MIT_14_382S17_Hmwk2_data.pdf">
+				<title>14.382 Spring 2017 Homework 2 Data Description</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-2.QOB.R"
+          identifierref="r_contents.assignments.homework-2.QOB.R">
+				<title>QOB.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-3"
+          identifierref="r_contents.assignments.homework-3.index.htm">
+				<title>Homework 3</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-3.fishdata.dta"
+          identifierref="r_contents.assignments.homework-3.fishdata.dta">
+				<title>fishdata.dta</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-3.fish-mert-sem.R"
+          identifierref="r_contents.assignments.homework-3.fish-mert-sem.R">
+				<title>fish-mert-sem.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-3.bigfish.csv"
+          identifierref="r_contents.assignments.homework-3.bigfish.csv">
+				<title>bigfish.csv</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.homework-6"
+          identifierref="r_contents.assignments.homework-6.index.htm">
+				<title>Homework 6</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.cps2012.csv"
+          identifierref="r_contents.assignments.homework-6.cps2012.csv">
+				<title>cps2012.csv</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.cps2012.Rdata"
+          identifierref="r_contents.assignments.homework-6.cps2012.Rdata">
+				<title>cps2012.Rdata</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.TestScores-v9.R"
+          identifierref="r_contents.assignments.homework-6.TestScores-v9.R">
+				<title>TestScores-v9.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.democracy-balanced-l4.dta"
+          identifierref="r_contents.assignments.homework-6.democracy-balanced-l4.dta">
+				<title>democracy-balanced-l4.dta</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.TestScores.dta"
+          identifierref="r_contents.assignments.homework-6.TestScores.dta">
+				<title>TestScores.dta</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.gender-gap.R"
+          identifierref="r_contents.assignments.homework-6.gender-gap.R">
+				<title>gender-gap.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.assignments.assignments.homework-6.Democracy-v4.R"
+          identifierref="r_contents.assignments.homework-6.Democracy-v4.R">
+				<title>Democracy-v4.R</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.lecture-notes"
+                  identifierref="r_contents.lecture-notes.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Lecture Notes</title>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec1.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec1.pdf">
+				<title>14.382 Spring 2017 Lecture 1: Least Squares, Adaptive Partialling Out, Simultaneous Inference</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec6.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec6.pdf">
+				<title>14.38Spring 2017 Lecture 6: Nonlinear and Binary Regression, Predictive Effects, and M-Estimation</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec11.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec11.pdf">
+				<title>14.382 Spring 2017 Lecture 11: Inference for High-Dimensional Sparse Econometric Models</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec2.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec2.pdf">
+				<title>14.382 Spring 2017 Lecture 2: Structural Equations Models and IV, Take 1</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec4.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec4.pdf">
+				<title>14.382 Spring 2017 Lecture 4: Euler Equations, Nonlinear GMM, and Other Adventures</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec3.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec3.pdf">
+				<title>14.382 Spring 2017 Lecture 3: Structural Equations Models and GMM</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec10.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec10.pdf">
+				<title>14.382 Spring 2017 Lecture 10: Nonlinear Panel Data</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec5.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec5.pdf">
+				<title>14.382 Spring 2017 Lecture 5: Bootstrapping</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec7.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec7.pdf">
+				<title>14.382 Spring 2017 Lecture 7: Distribution Regression and Counterfactual Analysis</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec9.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec9.pdf">
+				<title>14.382 Spring 2017 Lecture 9: GMM Under Moderately High Dimensions</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec12.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec12.pdf">
+				<title>14.382 Spring 2017 Lecture 12: Treatment Effects</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.MIT14_382S17_lec8.pdf"
+          identifierref="r_contents.lecture-notes.MIT14_382S17_lec8.pdf">
+				<title>14.382 Spring 2017 Lecture 8: Linear Panel Data Models Under Strict and Weak Exogeneity</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.R-NPA-functions-1se-union-rweight.R"
+          identifierref="r_contents.lecture-notes.R-NPA-functions-1se-union-rweight.R">
+				<title>R-NPA-functions-1se-union-rweight.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.401k-ATE-v3.R"
+          identifierref="r_contents.lecture-notes.401k-ATE-v3.R">
+				<title>401k-ATE-v3.R</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.sipp1991.dta"
+          identifierref="r_contents.lecture-notes.sipp1991.dta">
+				<title>sipp1991.dta</title>
+				</item>
+				<item identifier="i_14-382-econometrics-spring-2017.lecture-notes.401k-QTE.R"
+          identifierref="r_contents.lecture-notes.401k-QTE.R">
+				<title>401k-QTE.R</title>
+				</item>
+			</item>
+            <item identifier="i_14-382-econometrics-spring-2017.syllabus"
+                  identifierref="r_contents.syllabus.index.htm"
+                  ocw:sectionTemplateType="CourseSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Syllabus</title>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Legal Notices</title>
+			</item>
+            <item identifier="i_terms"
+                  identifierref="r_common.terms.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Privacy Statement</title>
+			</item>
+            <item identifier="i_terms.trademarks"
+                  identifierref="r_common.terms.trademarks.index.htm"
+                  ocw:sectionTemplateType="GlobalSection"
+                  ocw:sectionTemplateVersion="2021-12-10">
+				<title>Trademark Notices</title>
+			</item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="r_contents.related-resources.MIT14_382S17_14381notes.pdf"
+                  type="other"
+                  href="contents/related-resources/MIT14_382S17_14381notes.pdf">
+            <metadata>
+                <adlcp:location>contents/related-resources/MIT14_382S17_14381notes.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/related-resources/MIT14_382S17_14381notes.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-4.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-4/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-4/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-4/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.syllabus.index.htm"
+                  type="webcontent"
+                  href="contents/syllabus/index.htm">
+            <metadata>
+                <adlcp:location>contents/syllabus/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/syllabus/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-2.acemoglu_col.txt"
+                  type="other"
+                  href="contents/assignments/homework-2/acemoglu_col.txt">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-2/acemoglu_col.txt.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-2/acemoglu_col.txt"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-2.AJR.R"
+                  type="other"
+                  href="contents/assignments/homework-2/AJR.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-2/AJR.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-2/AJR.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.sipp1991.dta"
+                  type="other"
+                  href="contents/lecture-notes/sipp1991.dta">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/sipp1991.dta.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/sipp1991.dta"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.cps2012.Rdata"
+                  type="other"
+                  href="contents/assignments/homework-6/cps2012.Rdata">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/cps2012.Rdata.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/cps2012.Rdata"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-2.QOB.R"
+                  type="other"
+                  href="contents/assignments/homework-2/QOB.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-2/QOB.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-2/QOB.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.401k-QTE.R"
+                  type="other"
+                  href="contents/lecture-notes/401k-QTE.R">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/401k-QTE.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/401k-QTE.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-1/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-4.ccapm-v2.R"
+                  type="other"
+                  href="contents/assignments/homework-4/ccapm-v2.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-4/ccapm-v2.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-4/ccapm-v2.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-2.MIT_14_382S17_Hmwk2_data.pdf"
+                  type="other"
+                  href="contents/assignments/homework-2/MIT_14_382S17_Hmwk2_data.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-2/MIT_14_382S17_Hmwk2_data.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-2/MIT_14_382S17_Hmwk2_data.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-5.mortgage.dta"
+                  type="other"
+                  href="contents/assignments/homework-5/mortgage.dta">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-5/mortgage.dta.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-5/mortgage.dta"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.401k-ATE-v3.R"
+                  type="other"
+                  href="contents/lecture-notes/401k-ATE-v3.R">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/401k-ATE-v3.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/401k-ATE-v3.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.PartiallingOut-GenderWageGap_v5.R"
+                  type="other"
+                  href="contents/assignments/homework-1/PartiallingOut-GenderWageGap_v5.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/PartiallingOut-GenderWageGap_v5.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/PartiallingOut-GenderWageGap_v5.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.cps2012.csv"
+                  type="other"
+                  href="contents/assignments/homework-6/cps2012.csv">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/cps2012.csv.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/cps2012.csv"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec6.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec6.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec6.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec6.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.index.htm"
+                  type="webcontent"
+                  href="contents/lecture-notes/index.htm">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.TestScores-v9.R"
+                  type="other"
+                  href="contents/assignments/homework-6/TestScores-v9.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/TestScores-v9.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/TestScores-v9.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec5.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec5.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec5.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec5.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-3.fish-mert-sem.R"
+                  type="other"
+                  href="contents/assignments/homework-3/fish-mert-sem.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-3/fish-mert-sem.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-3/fish-mert-sem.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.democracy-balanced-l4.dta"
+                  type="other"
+                  href="contents/assignments/homework-6/democracy-balanced-l4.dta">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/democracy-balanced-l4.dta.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/democracy-balanced-l4.dta"/>
+                        
+        </resource>
+        <resource identifier="r_contents.recitations.index.htm"
+                  type="webcontent"
+                  href="contents/recitations/index.htm">
+            <metadata>
+                <adlcp:location>contents/recitations/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/recitations/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.exams.MIT_14_382S17_ExamF16.pdf"
+                  type="other"
+                  href="contents/exams/MIT_14_382S17_ExamF16.pdf">
+            <metadata>
+                <adlcp:location>contents/exams/MIT_14_382S17_ExamF16.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/exams/MIT_14_382S17_ExamF16.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.TestScores.dta"
+                  type="other"
+                  href="contents/assignments/homework-6/TestScores.dta">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/TestScores.dta.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/TestScores.dta"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.Democracy-v4.R"
+                  type="other"
+                  href="contents/assignments/homework-6/Democracy-v4.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/Democracy-v4.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/Democracy-v4.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-5.Mortgage.R"
+                  type="other"
+                  href="contents/assignments/homework-5/Mortgage.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-5/Mortgage.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-5/Mortgage.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-2.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-2/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-2/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-2/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-3.fishdata.dta"
+                  type="other"
+                  href="contents/assignments/homework-3/fishdata.dta">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-3/fishdata.dta.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-3/fishdata.dta"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.gender-gap.R"
+                  type="other"
+                  href="contents/assignments/homework-6/gender-gap.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/gender-gap.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/gender-gap.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec7.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec7.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec7.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec7.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.14-382s17-th.jpg"
+                  type="other"
+                  href="contents/14-382s17-th.jpg">
+            <metadata>
+                <adlcp:location>contents/14-382s17-th.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/14-382s17-th.jpg"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec10.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec10.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec10.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec10.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.recitations.MIT_14_382S17_rec3.pdf"
+                  type="other"
+                  href="contents/recitations/MIT_14_382S17_rec3.pdf">
+            <metadata>
+                <adlcp:location>contents/recitations/MIT_14_382S17_rec3.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/recitations/MIT_14_382S17_rec3.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.exams.MIT_14_382S17_midterm06.pdf"
+                  type="other"
+                  href="contents/exams/MIT_14_382S17_midterm06.pdf">
+            <metadata>
+                <adlcp:location>contents/exams/MIT_14_382S17_midterm06.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/exams/MIT_14_382S17_midterm06.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.penn_jae.dat"
+                  type="other"
+                  href="contents/assignments/homework-1/penn_jae.dat">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/penn_jae.dat.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/penn_jae.dat"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec4.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec4.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec4.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec4.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec12.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec12.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec12.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec12.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec2.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec2.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec2.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec2.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.penn46-mert.R"
+                  type="other"
+                  href="contents/assignments/homework-1/penn46-mert.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/penn46-mert.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/penn46-mert.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-6.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-6/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-6/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-6/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.index.htm"
+                  type="webcontent"
+                  href="contents/index.htm">
+            <metadata>
+                <adlcp:location>contents/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.CPS2015.csv"
+                  type="other"
+                  href="contents/assignments/homework-1/CPS2015.csv">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/CPS2015.csv.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/CPS2015.csv"/>
+                        
+        </resource>
+        <resource identifier="r_contents.exams.MIT_14_382S17_Final04.pdf"
+                  type="other"
+                  href="contents/exams/MIT_14_382S17_Final04.pdf">
+            <metadata>
+                <adlcp:location>contents/exams/MIT_14_382S17_Final04.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/exams/MIT_14_382S17_Final04.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec11.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec11.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec11.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec11.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-1.MIT_14_382S17_Hmwk1_data.pdf"
+                  type="other"
+                  href="contents/assignments/homework-1/MIT_14_382S17_Hmwk1_data.pdf">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-1/MIT_14_382S17_Hmwk1_data.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-1/MIT_14_382S17_Hmwk1_data.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-3.bigfish.csv"
+                  type="other"
+                  href="contents/assignments/homework-3/bigfish.csv">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-3/bigfish.csv.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-3/bigfish.csv"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec3.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec3.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec3.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec3.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec8.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec8.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec8.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec8.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.exams.index.htm"
+                  type="webcontent"
+                  href="contents/exams/index.htm">
+            <metadata>
+                <adlcp:location>contents/exams/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/exams/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.recitations.MIT_14_382S17_rec1.pdf"
+                  type="other"
+                  href="contents/recitations/MIT_14_382S17_rec1.pdf">
+            <metadata>
+                <adlcp:location>contents/recitations/MIT_14_382S17_rec1.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/recitations/MIT_14_382S17_rec1.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-3.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-3/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-3/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-3/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.related-resources.index.htm"
+                  type="webcontent"
+                  href="contents/related-resources/index.htm">
+            <metadata>
+                <adlcp:location>contents/related-resources/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/related-resources/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.assignments.homework-4.ccapm-ready-to-use.csv"
+                  type="other"
+                  href="contents/assignments/homework-4/ccapm-ready-to-use.csv">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-4/ccapm-ready-to-use.csv.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-4/ccapm-ready-to-use.csv"/>
+                        
+        </resource>
+        <resource identifier="r_contents.related-resources.MIT14_382S17_GMMslides.pdf"
+                  type="other"
+                  href="contents/related-resources/MIT14_382S17_GMMslides.pdf">
+            <metadata>
+                <adlcp:location>contents/related-resources/MIT14_382S17_GMMslides.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/related-resources/MIT14_382S17_GMMslides.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-4.L5-BoostrapExamples-sem.R"
+                  type="other"
+                  href="contents/assignments/homework-4/L5-BoostrapExamples-sem.R">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-4/L5-BoostrapExamples-sem.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-4/L5-BoostrapExamples-sem.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec1.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec1.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec1.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec1.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.assignments.homework-5.index.htm"
+                  type="webcontent"
+                  href="contents/assignments/homework-5/index.htm">
+            <metadata>
+                <adlcp:location>contents/assignments/homework-5/index.htm.xml</adlcp:location>
+            </metadata>
+            <file href="contents/assignments/homework-5/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_contents.lecture-notes.MIT14_382S17_lec9.pdf"
+                  type="other"
+                  href="contents/lecture-notes/MIT14_382S17_lec9.pdf">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/MIT14_382S17_lec9.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/MIT14_382S17_lec9.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.recitations.MIT_14_382S17_rec4.pdf"
+                  type="other"
+                  href="contents/recitations/MIT_14_382S17_rec4.pdf">
+            <metadata>
+                <adlcp:location>contents/recitations/MIT_14_382S17_rec4.pdf.xml</adlcp:location>
+            </metadata>
+            <file href="contents/recitations/MIT_14_382S17_rec4.pdf"/>
+                        
+        </resource>
+        <resource identifier="r_contents.lecture-notes.R-NPA-functions-1se-union-rweight.R"
+                  type="other"
+                  href="contents/lecture-notes/R-NPA-functions-1se-union-rweight.R">
+            <metadata>
+                <adlcp:location>contents/lecture-notes/R-NPA-functions-1se-union-rweight.R.xml</adlcp:location>
+            </metadata>
+            <file href="contents/lecture-notes/R-NPA-functions-1se-union-rweight.R"/>
+                        
+        </resource>
+        <resource identifier="r_contents.14-382s17.jpg"
+                  type="other" href="contents/14-382s17.jpg">
+            <metadata>
+                <adlcp:location>contents/14-382s17.jpg.xml</adlcp:location>
+            </metadata>
+            <file href="contents/14-382s17.jpg"/>
+                        
+        </resource>        
+        <resource identifier="r_common.search.AdvancedSearch.htm"
+                  type="webcontent"
+                  href="common/search/AdvancedSearch.htm">
+            <file href="common/search/AdvancedSearch.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_common.jsp.feedback.htm"
+                  type="webcontent"
+                  href="common/jsp/feedback.htm">
+            <file href="common/jsp/feedback.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_common.terms.index.htm"
+                  type="webcontent"
+                  href="common/terms/index.htm">
+            <file href="common/terms/by.png"/>
+            <file href="common/terms/nc.png"/>
+            <file href="common/terms/sa.png"/>
+            <file href="common/terms/deedheadyellow.png"/>
+            <file href="common/terms/freedomsheader.png"/>
+            <file href="common/terms/limitationsheader.png"/>
+            <file href="common/terms/understandingheader.jpg"/>
+            <file href="common/terms/deedfootyellow.png"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="r_common.terms.trademarks.index.htm"
+                  type="webcontent"
+                  href="common/terms/trademarks/index.htm">
+            <file href="common/terms/trademarks/index.htm"/>
+            <dependency identifierref="webrenderrequirements.14-382-econometrics-spring-2017"/>            
+        </resource>
+        <resource identifier="webrenderrequirements.14-382-econometrics-spring-2017"
+                  type="webcontent">
+        	<file href="common/styles/base.css"/>
+        	<file href="common/styles/courses.css"/>
+        	<file href="common/styles/courses_new.css"/>
+        	<file href="common/styles/educator.css"/>
+        	<file href="common/styles/global.css"/>
+        	<file href="common/styles/grid.css"/>
+        	<file href="common/styles/highslide.css"/>
+        	<file href="common/styles/highslide-ie6.css"/>
+        	<file href="common/styles/jquery.bubblepopup.css"/>
+        	<file href="common/styles/jquery.jscrollpane.css"/>
+        	<file href="common/styles/jquery-ui.css"/>
+        	<file href="common/styles/menu.css"/>
+        	<file href="common/styles/scholar2.css"/>
+        	<file href="common/styles/media_tabs.css"/>
+        	<file href="common/styles/three_play.css"/>
+        	<file href="common/scripts/bubble-popup-offline.js"/>
+        	<file href="common/scripts/jquery.js"/>
+        	<file href="common/scripts/ocw-media-utils.js"/>
+        	<file href="common/scripts/ocw-media-utils-offline.js"/>
+        	<file href="common/scripts/highslide-with-gallery.js"/>
+        	<file href="common/scripts/jquery.bubblepopup.min.js"/>
+        	<file href="common/scripts/jquery.jscrollpane.min.js"/>
+        	<file href="common/scripts/jquery-ui.min.js"/>
+        	<file href="common/scripts/jQuizMe-uncompressed.js"/>
+        	<file href="common/scripts/ocw-offline.js"/>
+        	<file href="common/scripts/expandy.js"/>
+        	<file href="common/scripts/chart.js"/>
+        	<file href="common/scripts/jquery.anythingslider.js"/>
+        	<file href="common/images/ocw_mast.png"/>
+        	<file href="common/images/button_subscribe.png"/>
+        	<file href="common/images/icon_fb.png"/>
+        	<file href="common/images/icon_gp.png"/>
+        	<file href="common/images/icon_pin.png"/>
+        	<file href="common/images/icon_tw.png"/>
+        	<file href="common/images/icon-question-ovt.png"/>
+        	<file href="common/images/icon-question-svt.png"/>
+        	<file href="common/images/icon-question-avt.png"/>
+        	<file href="common/images/icon-question-cl.png"/>
+        	<file href="common/images/top-nav_home.png"/>
+        	<file href="common/images/button_search.png"/>
+        	<file href="common/images/bg_top.png"/>
+        	<file href="common/images/bg_social.png"/>
+        	<file href="common/images/bg_social2.png"/>
+        	<file href="common/images/bg_mega-courses.png"/>
+        	<file href="common/images/bg_center2.png"/>
+        	<file href="common/images/bg_course-nav_current.png"/>
+        	<file href="common/images/button_donate-now.png"/>
+        	<file href="common/images/logo_mit.png"/>
+        	<file href="common/images/logo_ocwc.gif"/>
+        	<file href="common/images/cc_by-nc-sa.png"/>
+        	<file href="common/images/logo_dow.png"/>
+        	<file href="common/images/logo_lockheed.png"/>
+        	<file href="common/images/logo_mathworks.png"/>
+        	<file href="common/images/logo_abinitio.png"/>
+        	<file href="common/images/logo_sapient.png"/>
+        	<file href="common/images/bg_bottom.png"/>
+        	<file href="common/images/nav_arrow.png"/>
+        	<file href="common/images/news-subscibe_bg.png"/>
+        	<file href="common/images/3play_logo.png"/>
+        	<file href="common/images/black-arrow.gif"/>
+        	<file href="common/images/trans.gif"/>
+        	<file href="common/images/arrow-bullet.gif"/>
+        	<file href="common/images/apple-touch-icon.png"/>
+        	<file href="common/images/highslide/graphics/zoomin.cur"/>
+        	<file href="common/images/highslide/graphics/zoomout.cur"/>
+        	<file href="common/images/highslide/graphics/controlbar2.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar3.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar4-hover.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-black-border.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white.gif"/>
+        	<file href="common/images/highslide/graphics/controlbar-white-small.gif"/>
+        	<file href="common/images/highslide/graphics/fullexpand.gif"/>
+        	<file href="common/images/highslide/graphics/icon.gif"/>
+        	<file href="common/images/highslide/graphics/loader.gif"/>
+        	<file href="common/images/highslide/graphics/loader.white.gif"/>
+        	<file href="common/images/highslide/graphics/resize.gif"/>
+        	<file href="common/images/highslide/graphics/close.png"/>
+        	<file href="common/images/highslide/graphics/closeX.png"/>
+        	<file href="common/images/highslide/graphics/controlbar-text-buttons.png"/>
+        	<file href="common/images/highslide/graphics/geckodimmer.png"/>
+        	<file href="common/images/highslide/graphics/scrollarrows.png"/>
+        	<file href="common/images/highslide/graphics/outlines/beveled.png"/>
+        	<file href="common/images/highslide/graphics/outlines/drop-shadow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/glossy-dark.png"/>
+        	<file href="common/images/highslide/graphics/outlines/outer-glow.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-black.png"/>
+        	<file href="common/images/highslide/graphics/outlines/rounded-white.png"/>
+        	<file href="common/images/highslide/graphics/outlines/Outlines.psd"/>
+        	<file href="common/images/button_continue.jpg"/>
+        	<file href="common/images/button_donate.jpg"/>
+        	<file href="common/images/button_start.jpg"/>
+        	<file href="common/images/scholar_bar_chp.png"/>
+        	<file href="common/images/scholar_bar.png"/>
+        	<file href="common/images/logo_pdf.jpg"/>
+        	<file href="common/images/h2_trigger_open_close.gif"/>
+        	<file href="common/images/bookmark.gif"/>
+        	<file href="common/images/check.png"/>
+        	<file href="common/images/lightbulb.png"/>
+        	<file href="common/images/audio_file.gif"/>
+        	<file href="common/images/audio_only_slate.gif"/>
+        	<file href="common/images/video_file.gif"/>
+        	<file href="common/images/back-5.png"/>
+        	<file href="common/images/btn_next_resource.png"/>
+        	<file href="common/images/btn_previous_resource.png"/>
+        	<file href="common/images/close.png"/>
+        	<file href="common/images/inacessible.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/bottom-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/middle-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-bottom.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/tail-top.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-left.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-middle.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/ie/top-right.gif"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/bottom-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/middle-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-bottom.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-right.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/tail-top.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-left.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-middle.png"/>
+        	<file href="common/images/jquerybubblepopup-theme/grey/top-right.png"/>
+        	<file href="common/images/educator/classroom_next.png"/>
+        	<file href="common/images/educator/classroom_next_dim.png"/>
+        	<file href="common/images/educator/classroom_prev.png"/>
+        	<file href="common/images/educator/classroom_prev_dim.png"/>
+        	<file href="common/images/educator/edu_b-blank.png"/>
+        	<file href="common/images/educator/edu_b-blank-key.png"/>
+        	<file href="common/images/educator/edu_b-duedate.png"/>
+        	<file href="common/images/educator/edu_b-duedate-key.png"/>
+        	<file href="common/images/educator/edu_b-exam.png"/>
+        	<file href="common/images/educator/edu_b-exam-key.png"/>
+        	<file href="common/images/educator/edu_b-lab.png"/>
+        	<file href="common/images/educator/edu_b-lab-key.png"/>
+        	<file href="common/images/educator/edu_b-lab-team.png"/>
+        	<file href="common/images/educator/edu_b-lab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-leclab.png"/>
+        	<file href="common/images/educator/edu_b-leclab-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture.png"/>
+        	<file href="common/images/educator/edu_b-lecture-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecture-exam.png"/>
+        	<file href="common/images/educator/edu_b-lecture-key.png"/>
+        	<file href="common/images/educator/edu_b-lecture-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lecture-preslab.png"/>
+        	<file href="common/images/educator/edu_b-lecture-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lecture-team.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-key.png"/>
+        	<file href="common/images/educator/edu_b-leclab-duedate.png"/>
+        	<file href="common/images/educator/edu_b-lecrec.png"/>
+        	<file href="common/images/educator/edu_b-lecrec-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-quiz.png"/>
+        	<file href="common/images/educator/edu_b-lunch.png"/>
+        	<file href="common/images/educator/edu_b-lunch-key.png"/>
+        	<file href="common/images/educator/edu_b-noclass.png"/>
+        	<file href="common/images/educator/edu_b-noclass-duedate.png"/>
+        	<file href="common/images/educator/edu_b-noclass-exam.png"/>
+        	<file href="common/images/educator/edu_b-noclass-key.png"/>
+        	<file href="common/images/educator/edu_b-office.png"/>
+        	<file href="common/images/educator/edu_b-office-key.png"/>
+        	<file href="common/images/educator/edu_b-present.png"/>
+        	<file href="common/images/educator/edu_b-present-duedate.png"/>
+        	<file href="common/images/educator/edu_b-present-key.png"/>
+        	<file href="common/images/educator/edu_b-preslab.png"/>
+        	<file href="common/images/educator/edu_b-preslab-key.png"/>
+        	<file href="common/images/educator/edu_b-quiz-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-key.png"/>
+        	<file href="common/images/educator/edu_b-reclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-reclab.png"/>
+        	<file href="common/images/educator/edu_b-noclass-concert.png"/>
+        	<file href="common/images/educator/edu_b-leclab-concert.png"/>
+        	<file href="common/images/educator/edu_b-concert-key.png"/>
+        	<file href="common/images/educator/edu_b-concert.png"/>
+        	<file href="common/images/educator/edu_b-recitation.png"/>
+        	<file href="common/images/educator/edu_b-recitation-duedate.png"/>
+        	<file href="common/images/educator/edu_b-recitation-exam.png"/>
+        	<file href="common/images/educator/edu_b-recitation-key.png"/>
+        	<file href="common/images/educator/edu_b-team.png"/>
+        	<file href="common/images/educator/edu_b-team-key.png"/>
+        	<file href="common/images/educator/edu_b-team-preslab.png"/>
+        	<file href="common/images/educator/edu_b-work.png"/>
+        	<file href="common/images/educator/edu_b-work-key.png"/>
+        	<file href="common/images/educator/icon-question-cih.png"/>
+        	<file href="common/images/educator/icon-question-cihw.png"/>
+        	<file href="common/images/educator/icon-question-cim.png"/>
+        	<file href="common/images/educator/icon-question-collab.png"/>
+        	<file href="common/images/educator/icon-question-coop.png"/>
+        	<file href="common/images/educator/icon-question-fas.png"/>
+        	<file href="common/images/educator/icon-question-gir.png"/>
+        	<file href="common/images/educator/icon-question-hass.png"/>
+        	<file href="common/images/educator/icon-question-hass-s.png"/>
+        	<file href="common/images/educator/icon-question-iap.png"/>
+        	<file href="common/images/educator/icon-question-lab.png"/>
+        	<file href="common/images/educator/icon-question-urop.png"/>
+        	<file href="common/images/educator/icon-question-active.png"/>
+        	<file href="common/images/educator/icon-question-clickq.png"/>
+        	<file href="common/images/educator/icon-question-conq.png"/>
+        	<file href="common/images/educator/icon-question-flip.png"/>
+        	<file href="common/images/educator/icon-question-form.png"/>
+        	<file href="common/images/educator/icon-question-immed.png"/>
+        	<file href="common/images/educator/icon-question-learn.png"/>
+        	<file href="common/images/educator/icon-question-ped.png"/>
+        	<file href="common/images/educator/icon-question-readq.png"/>
+        	<file href="common/images/educator/icon-question-service.png"/>
+        	<file href="common/images/educator/icon-question-sum.png"/>
+        	<file href="common/images/educator/icon-question-unrestricted-elective-credits.png"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L002-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.eot"/>
+        	<file href="common/webfonts/TitilliumText22L003-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.woff"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.ttf"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.svg"/>
+        	<file href="common/webfonts/TitilliumText22L005-webfont.eot"/>
+        </resource>        
+  </resources>
+</manifest>
