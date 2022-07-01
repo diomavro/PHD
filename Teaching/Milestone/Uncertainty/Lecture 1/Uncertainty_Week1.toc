@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Power}{2}{0}{1}
+\beamer@sectionintoc {2}{Efficiencies}{5}{0}{2}
