@@ -1,0 +1,18 @@
+can you add code so that it can be made into an executable
+Yes, you can use the pyinstaller library to convert your python script into an executable file.
+
+First, you will need to install pyinstaller by running pip install pyinstaller in your terminal or command prompt.
+
+Then, in the same directory where your script is located, run the following command in the terminal or command prompt:
+
+Copy code
+pyinstaller --onefile scriptname.py
+The --onefile option tells pyinstaller to create a single executable file, instead of a folder with multiple files. Replace scriptname.py with the actual name of your script.
+
+After running the above command, a dist folder will be created in the same directory where your script is located. Inside the dist folder, you will find the executable file of your script.
+
+You can then distribute this executable file to others, and they will be able to run it without needing to have python or your script installed on their machine.
+
+Please note that, when using pyinstaller, the executable file will only work on the same type of operating system that it was created on.
+
+Also, make sure that you have all the dependencies installed on the machine where you are creating the executable file, otherwise the executable file may not work on other machines.

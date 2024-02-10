@@ -1,0 +1,83 @@
+import json
+
+class DialogueTree:
+    def __init__(self, file_name):
+        with open(file_name, 'r') as f:
+            self.data = json.load(f)
+        self.current_node = self.data
+        
+    def play(self):
+        while True:
+            print(self.current_node['prompt'])
+            for i, option in enumerate(self.current_node['options']):
+                print(f'{i+1}. {option["text"]}')
+            choice = input("Enter the number of your choice: ")
+            try:
+                choice = int(choice)
+                if choice < 1 or choice > len(self.current_node['options']):
+                    raise ValueError
+                self.current_node = self.current_node['options'][choice - 1]['next_node']
+                if self.current_node == None:
+                    print("End of dialogue.")
+                    break
+            except ValueError:
+                print("Invalid choice. Please enter a number between 1 and", len(self.current_node['options']))
+
+tree = DialogueTree("dialogue.txt")
+tree.play()
+'''
+This script creates a DialogueTree class that takes in a file name as a parameter, loads the data from the file, which should be in json format, and creates a dialogue tree with the data. The class has a play method that displays the prompt, options, and allows the user to choose an option by entering the corresponding number. The script then moves the current node to the next node based on the user's choice. The dialogue stops when the next_node is None.
+
+The dialogue.txt file should be in json format and should have the following structure:
+
+Copy code
+'''
+{
+    "prompt": "This is the starting prompt",
+    "options": [
+        {
+            "text": "Option 1",
+            "next_node": {
+                "prompt": "This is the prompt for option 1",
+                "options": [
+                    {
+                        "text": "Option 1.1",
+                        "next_node": {
+                            "prompt": "This is the prompt for option 1.1",
+                            "options": [
+                                {
+                                    "text": "Option 1.1.1",
+                                    "next_node": None
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "text": "Option 1.2",
+                        "next_node": {
+                            "prompt": "This is the prompt for option 1.2",
+                            "options": [
+                                {
+                                    "text": "Option 1.2.1",
+                                    "next_node": None
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "text": "Option 2",
+            "next_node": {
+                "prompt": "This is the prompt for option 2",
+                "options": [
+                    {
+                        "text": "Option 2.1",
+                        "next_node": None
+                    }
+                ]
+            }
+        }
+    ]
+}

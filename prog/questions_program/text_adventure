@@ -1,0 +1,52 @@
+class Game:
+    def __init__(self):
+        self.location = 'outside'
+        self.inventory = []
+
+    def outside(self):
+        print("You are outside. There is a house in front of you.")
+        print("What do you want to do? (enter 'enter house' or 'explore woods')")
+        action = input()
+        if action == 'enter house':
+            self.location = 'inside'
+            self.inside()
+        elif action == 'explore woods':
+            self.location = 'woods'
+            self.woods()
+        else:
+            print("Invalid action")
+            self.outside()
+
+    def inside(self):
+        print("You are inside the house.")
+        print("What do you want to do? (enter 'go outside' or 'search room')")
+        action = input()
+        if action == 'go outside':
+            self.location = 'outside'
+            self.outside()
+        elif action == 'search room':
+            print("You find a key.")
+            self.inventory.append('key')
+            self.inside()
+        else:
+            print("Invalid action")
+            self.inside()
+
+    def woods(self):
+        print("You are in the woods.")
+        if 'key' in self.inventory:
+            print("You use the key to open a chest and find a treasure.")
+            print("Congratulations, you have won the game!")
+        else:
+            print("You wander around but don't find anything of interest.")
+            print("What do you want to do? (enter 'go back' to return to the outside)")
+            action = input()
+            if action == 'go back':
+                self.location = 'outside'
+                self.outside()
+            else:
+                print("Invalid action")
+                self.woods()
+
+game = Game()
+game.outside()

@@ -1,0 +1,89 @@
+'''
+Yes, the parameters of the Vasicek IRB model (a, b, and sigma) can be estimated from the loan data.
+
+One way to do this is to use a optimization algorithm such as scipy's minimize function, which finds the minimum of a given function. You can use this to find the set of parameter values that minimize the difference between the simulated default probabilities and the actual default rates.
+
+Here's an example of how this could be done in the provided code:
+'''
+import numpy as np
+import pandas as pd
+
+def vasicek_irb(r, a, b, sigma, t, n=12):
+    """
+    Function to simulate default probabilities using the Vasicek IRB model
+    """
+    dt = t/n
+    r = np.zeros(n+1)
+    r[0] = r
+    for i in range(1, n+1):
+        r[i] = r[i-1] + a*(b-r[i-1])*dt + sigma*np.sqrt(dt)*np.random.normal()
+    return r
+
+# Read loan data from CSV file
+loan_data = pd.read_csv('C:\\Users\\DioandNono\\Documents\\GitHub\\PHD\\Teaching\\Finance\\vasicek_model\\' + 'loan_data.csv')
+
+# Assign parameter values for the Vasicek IRB model
+a = 0.1
+b = 0.04
+sigma = 0.02
+
+# Calculate default probabilities for each loan
+default_probs = []
+for index, row in loan_data.iterrows():
+    r = row["Interest Rate"]
+    t = row["Loan Term"]
+    r_sim = vasicek_irb(r, a, b, sigma, t)
+    default_prob = np.mean(r_sim[-1] < r)
+    default_probs.append(default_prob)
+
+'''
+Note: the above code is an example and may not reflect the real world scenario, this code is also not tested.
+
+The above program reads loan data from a CSV file called "loan_data.csv" and uses the Pandas library to store the data in a DataFrame. The "vasicek_irb" function takes in the current interest rate, parameters a, b, and sigma, the loan term, and the number of time steps to simulate. It returns an array of simulated interest rates, which is used to calculate the default probability for each loan. The default probabilities are then added to the loan data and the results are printed.
+'''
+
+from scipy.optimize import minimize
+
+# Define a function to calculate the error between simulated and actual default rates
+def calc_error(params, loan_data):
+    a, b, sigma = params
+    default_probs = []
+    for index, row in loan_data.iterrows():
+        r = row["Interest Rate"]
+        t = row["Loan Term"]
+        r_sim = vasicek_irb(r, a, b, sigma, t)
+        default_prob = np.mean(r_sim[-1] < r)
+        default_probs.append(default_prob)
+    error = np.mean((default_probs - loan_data["Default Rate"])**2)
+    return error
+
+# Initial guess for parameters
+params_init = [0.1, 0.04, 0.02]
+
+# Optimize parameters
+params_opt = minimize(calc_error, params_init, args=(loan_data,), method='BFGS')
+
+# Extract optimized parameter values
+a_opt, b_opt, sigma_opt = params_opt.x
+
+# Use the optimized parameters to calculate default probabilities
+default_probs = []
+for index, row in loan_data.iterrows():
+    r = row["Interest Rate"]
+    t = row["Loan Term"]
+    r_sim = vasicek_irb(r, a_opt, b_opt, sigma_opt, t)
+    default_prob = np.mean(r_sim[-1] < r)
+    default_probs.append(default_prob)
+
+# Add default probabilities to loan data
+loan_data["Default Probability"] = default_probs
+
+# Print results
+print(loan_data)
+'''
+Note that the above code is an example and may not reflect the real-world scenario, this code is also not tested, and it may require fine-tuning and testing before it can be used in a production environment.
+
+In the above code, I defined a function "calc_error" that calculates the mean squared error between the simulated default probabilities and the actual default rates. I passed this function as the first argument to the minimize function, along with an initial guess for the parameters and the loan data as an additional argument. The minimize function then finds the set of parameter values that minimize the error function. Once the optimal parameters are obtained, they can be used to calculate the default probabilities for each loan.
+'''
+
+

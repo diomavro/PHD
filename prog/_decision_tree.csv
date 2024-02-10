@@ -1,0 +1,4 @@
+question,answers,follow_ups
+Question 1: Do you prefer A or B?,"A,B","question2,question3"
+Question 2: Why do you prefer A?,"Reason 1,Reason 2",","
+Question 3: Why do you prefer B?,"Reason 1,Reason 2",

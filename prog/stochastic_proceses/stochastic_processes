@@ -1,0 +1,347 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from PyQt5 import QtWidgets, QtGui, QtCore
+
+class StochasticProcessSimulator(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        
+    def initUI(self):
+        # Set the window title and geometry
+        self.setWindowTitle("Stochastic Process Simulator")
+        self.setGeometry(300, 300, 300, 300)
+
+        # Create process selection combo box
+        self.process_label = QtWidgets.QLabel("Select process:", self)
+        self.process_label.move(10, 10)
+        self.process_combo = QtWidgets.QComboBox(self)
+        self.process_combo.addItem("Random Walk")
+        self.process_combo.addItem("Geometric Brownian Motion")
+        self.process_combo.move(10, 30)
+        
+        # Create parameter input fields
+        self.steps_label = QtWidgets.QLabel("Steps:", self)
+        self.steps_label.move(10, 60)
+        self.steps_input = QtWidgets.QLineEdit(self)
+        self.steps_input.move(50, 60)
+        self.steps_input.setValidator(QtGui.QIntValidator())
+        
+        self.mu_label = QtWidgets.QLabel("mu:", self)
+        self.mu_label.move(10, 90)
+        self.mu_input = QtWidgets.QLineEdit(self)
+        self.mu_input.move(50, 90)
+        self.mu_input.setValidator(QtGui.QDoubleValidator())
+        
+        self.sigma_label = QtWidgets.QLabel("sigma:", self)
+        self.sigma_label.move(10, 120)
+        self.sigma_input = QtWidgets.QLineEdit(self)
+        self.sigma_input.move(50, 120)
+        self.sigma_input.setValidator(QtGui.QDoubleValidator())
+
+        
+    # Create simulate button
+    self.simulate_button = QtWidgets.QPushButton("Simulate", self)
+    self.simulate_button.move(10, 150)
+    self.simulate_button.clicked.connect(self.simulate)
+    
+    self.show()
+    
+def simulate(self):
+    process = self.process_combo.currentText()
+    steps = int(self.steps_input.text())
+    mu = float(self.mu_input.text())
+    sigma = float(self.sigma_input.text())
+    
+    if process == "Random Walk":
+        self.simulate_random_walk(steps, mu, sigma)
+    elif process == "Geometric Brownian Motion":
+        self.simulate_geometric_brownian_motion(steps, mu, sigma)
+        
+def simulate_random_walk(self, steps, mu, sigma):
+    x = np.zeros(steps)
+    for i in range(1, steps):
+        x[i] = x[i-1] + np.random.normal(mu, sigma)
+    plt.plot(x)
+    plt.title("Random Walk")
+    plt.show()
+    
+def simulate_geometric_brownian_motion(self, steps, mu, sigma):
+    x = np.zeros(steps)
+    x[0] = 1
+    for i in range(1, steps):
+        x[i] = x[i-1] * np.exp((mu - 0.5*sigma**2)*1 + sigma*np.random.normal(0, 1))
+    plt.plot(x)
+    plt.title("Geometric Brownian Motion")
+    plt.show()
+    
+if name == 'main':
+app = QtWidgets.QApplication([])
+sim = StochasticProcessSimulator()
+app.exec_()
+
+'''
+This class creates a GUI that allows the user to select a stochastic process (either a random walk or geometric brownian motion) and input the necessary parameters. When the user clicks the "Simulate" button, the corresponding process is simulated with the given parameters and the resulting time series is plotted using the `matplotlib` library.
+
+The `initUI` method creates the widgets and layout of the user interface, while the `simulate` method is called when the user clicks the "Simulate" button. It reads the user input, selects the corresponding process, and calls the corresponding simulation method.
+
+The `simulate_random_walk` and `simulate_geometric_brownian_motion` methods simulate the corresponding processes and generate the time series data. They then use the `matplotlib` library to plot the data.
+
+Please note that this is a basic example and you can expand it by adding more processes, more options, and more complexity to the class depending on your needs.
+
+You will also need to have PyQt5, numpy and matplotlib library installed.
+'''
+
+import numpy as np
+from typing import List, Tuple
+
+def payoff_call(strike_price: float, spot_price: float) -> float:
+    """Calculate the payoff for a call option given the strike price and spot price"""
+    return max(0.0, spot_price - strike_price)
+
+def payoff_put(strike_price: float, spot_price: float) -> float:
+    """Calculate the payoff for a put option given the strike price and spot price"""
+    return max(0.0, strike_price - spot_price)
+
+def price_put(strike_price: float, spot_prices: List[float]) -> float:
+    """Calculate the average price of a put option given the strike price and a list of spot prices"""
+    res = sum([payoff_put(strike_price, spot_price) for spot_price in spot_prices])
+    return res / len(spot_prices)
+
+def price_call(strike_price: float, spot_prices: List[float]) -> float:
+    """Calculate the average price of a call option given the strike price and a list of spot prices"""
+    res = sum([payoff_call(strike_price, spot_price) for spot_price in spot_prices])
+    return res / len(spot_prices)
+
+def portfolio_payoff(options: Tuple[List[Tuple[float, int]], List[Tuple[float, int]]], spot_prices: List[float]) -> float:
+    """Calculate the total payoff of a portfolio of options given the spot prices"""
+    put_options, call_options = options
+    total_payoff = sum([n * payoff_put(strike_price, spot_prices) for strike_price, n in put_options])
+    total_payoff += sum([n * payoff_call(strike_price, spot_prices) for strike_price, n in call_options])
+    return total_payoff
+
+def portfolio_cost(options: Tuple[List[Tuple[float, int]], List[Tuple[float, int]]], spot_prices: List[float], markup: float) -> float:
+    """Calculate the total cost of a portfolio of options given the spot prices and markup"""
+    put_options, call_options = options
+    total_cost = sum([n * price_put(strike_price, spot_prices) for strike_price, n in put_options])
+    total_cost += sum([n * price_call(strike_price, spot_prices) for strike_price, n in call_options])
+    total_cost *= 1 + markup
+    return total_cost
+
+def hedge(data: List[Tuple[float, float]], options: Tuple[List[Tuple[float, int]], List[Tuple[float, int]]], markup: float = 0.1, debug: bool = False) -> List[float]:
+    """Hedge a portfolio of options given historical data and return a list of incomes"""
+    spot_prices = [price for _, price in data]
+    total_cost = portfolio_cost(options, spot_prices, markup)
+    portfolio_values = [portfolio_payoff(options, spot_price) - total_cost for spot_price in spot_prices]
+    incomes = [yield_rate * price + portfolio_value for (yield_rate, market_price), portfolio_value in zip(data, portfolio_values)]
+    return incomes
+
+def calculate_10p_ES_income_with_hedges(data: List[Tuple[float, float]], strikes: List[float], option_quantities: List[int]) -> float:
+    """Calculate the 10% expected shortfall income with hedges given historical data, strikes, and option quantities"""
+    options = (list(zip(strikes, tuple(option_quantities))), ())
+    incomes = np.array(hedge(data, options, markup=0.1, debug=False))
+    incomes = np.sort(incomes)
+    num_incomes = len(incomes)
+    es
+
+import numpy as np
+from typing import List, Tuple
+
+
+def calculate_10p_ES_income_with_hedges(data: List[Tuple[Tuple[float, float], float]],
+                                        option_strikes: List[float],
+                                        option_quantiles: List[float],
+                                        markup: float = 0.1) -> float:
+    """
+    Calculate the expected shortfall (ES) of income when using options to hedge a portfolio, assuming a 10% tail risk.
+    
+    Args:
+    - data: a list of tuples of the form ((yield, market_price), portfolio_value) representing the yield, market price, 
+            and value of the portfolio at a given point in time
+    - option_strikes: a list of option strike prices
+    - option_quantiles: a list of the desired quantiles of the option payoffs to purchase
+    - markup: a markup percentage to add to the cost of purchasing options
+    
+    Returns:
+    - The expected shortfall (ES) of the portfolio income after hedging with options
+    
+    """
+    
+    # Extract the market prices from the data
+    market_prices = [market_price for (_, market_price), _ in data]
+
+    # Calculate the cost of the option portfolio
+    option_prices = []
+    for strike, quantile in zip(option_strikes, option_quantiles):
+        option_prices.append(calculate_option_price(strike, market_prices, quantile))
+    option_portfolio_cost = sum(option_prices) * (1 + markup)
+
+    # Calculate the payoff of the option portfolio at each market price
+    option_portfolio_payoffs = []
+    for market_price in market_prices:
+        option_portfolio_payoff = calculate_option_portfolio_payoff(option_strikes, option_quantiles, market_price)
+        option_portfolio_payoffs.append(option_portfolio_payoff)
+
+    # Calculate the value of the hedged portfolio at each market price
+    hedged_portfolio_values = []
+    for (yield_, market_price), portfolio_value in data:
+        hedged_portfolio_value = portfolio_value - option_portfolio_cost + option_portfolio_payoffs[market_prices.index(market_price)]
+        hedged_portfolio_values.append(hedged_portfolio_value)
+
+    # Calculate the expected shortfall of the hedged portfolio income at the 10% tail risk level
+    hedged_portfolio_incomes = np.array([yield_ * market_price + hedged_portfolio_value for (yield_, market_price), hedged_portfolio_value in zip(data, hedged_portfolio_values)])
+    hedged_portfolio_incomes_sorted = sorted(hedged_portfolio_incomes)
+    tail_start_index = int(len(hedged_portfolio_incomes_sorted) * 0.9)
+    tail_incomes = hedged_portfolio_incomes_sorted[:tail_start_index]
+    expected_shortfall = np.mean(tail_incomes)
+
+    return expected_shortfall
+
+
+def calculate_option_price(strike: float, market_prices: List[float], quantile: float) -> float:
+    """
+    Calculate the price of an option with the given strike price that pays off at the specified quantile of the 
+    distribution of market prices.
+    
+    Args:
+    - strike: the strike price of the option
+    - market_prices: a list of market prices at which to calculate the option payoff
+    - quantile: the desired quantile of the market price distribution at which the option should pay off
+    
+    Returns:
+    - The price of the option
+    
+    """
+    option_payoffs = []
+    for market_price in market_prices:
+        option_payoff = max(0.0, market_price - strike)
+        option_payoffs.append(option_payoff)
+    option_payoffs_sorted = sorted(option_payoffs)
+    option_quantile_index = int(len(option_payoffs_sorted)
+
+
+
+from typing import List
+
+def calculate_10p_ES_income_with_hedges(option_quantiles: List[float]) -> float:
+    """
+    Calculates the 10% expected shortfall income using the hedge function.
+
+    Args:
+        option_quantiles (list): A list of option quantiles.
+
+    Returns:
+        float: The 10% expected shortfall income.
+    """
+    # Hedge the portfolio
+    hedge_results = np.array(hedge(global_data, (list(zip(strikes, tuple(option_quantiles))), ()), markup=0.1, DBG=False))
+
+    # Sort the results
+    hedge_results.sort()
+
+    # Calculate the best case in the bottom 10%
+    n_bottom10 = hedge_results.shape[0] // 10
+    bottom10 = hedge_results[n_bottom10-1]
+
+    # Calculate the average of the bottom 10%
+    avg_bottom10 = sum(hedge_results[:n_bottom10]) / 10
+
+    # Return the 10% expected shortfall income
+    return (-1) * avg_bottom10
+%%%%%%%%%%%%%%%%%%
+
+from typing import List, Tuple
+import numpy as np
+
+def payoff_call(strike: float, spot: float) -> float:
+    """
+    Calculates the payoff of a call option.
+
+    Args:
+        strike (float): The strike price of the call option.
+        spot (float): The spot price of the underlying asset.
+
+    Returns:
+        float: The payoff of the call option.
+    """
+    return max(0.0, spot - strike)
+
+def payoff_put(strike: float, spot: float) -> float:
+    """
+    Calculates the payoff of a put option.
+
+    Args:
+        strike (float): The strike price of the put option.
+        spot (float): The spot price of the underlying asset.
+
+    Returns:
+        float: The payoff of the put option.
+    """
+    return max(0.0, strike - spot)
+
+def price_put(strike: float, prices: List[float]) -> float:
+    """
+    Calculates the price of a put option.
+
+    Args:
+        strike (float): The strike price of the put option.
+        prices (list): A list of spot prices for the underlying asset.
+
+    Returns:
+        float: The price of the put option.
+    """
+    res = sum([payoff_put(strike, s) for s in prices])
+    return res/len(prices)
+
+def price_call(strike: float, prices: List[float]) -> float:
+    """
+    Calculates the price of a call option.
+
+    Args:
+        strike (float): The strike price of the call option.
+        prices (list): A list of spot prices for the underlying asset.
+
+    Returns:
+        float: The price of the call option.
+    """
+    res = sum([payoff_call(strike, s) for s in prices])
+    return res/len(prices)
+
+def portfolio_payoff(options: Tuple[List[Tuple[float, int]], List[Tuple[float, int]]], prices: List[float]) -> float:
+    """
+    Calculates the portfolio payoff.
+
+    Args:
+        options (tuple): A tuple of lists of put options and call options.
+        prices (list): A list of spot prices for the underlying asset.
+
+    Returns:
+        float: The portfolio payoff.
+    """
+    puts, calls = options
+    val = sum([n*payoff_put(k, prices) for k, n in puts])
+    val += sum([n*payoff_call(k, prices) for k, n in calls])
+    return val
+
+def portfolio_cost(options: Tuple[List[Tuple[float, int]], List[Tuple[float, int]]], prices: List[float], markup: float) -> float:
+    """
+    Calculates the cost of the portfolio.
+
+    Args:
+        options (tuple): A tuple of lists of put options and call options.
+        prices (list): A list of spot prices for the underlying asset.
+        markup (float): The markup to apply to the portfolio cost.
+
+    Returns:
+        float: The cost of the portfolio.
+    """
+    puts, calls = options
+    val = sum([n*price_put(k,prices) for k, n in puts])
+    val += sum([n*price_call(k,prices) for k, n in calls])
+    val *= 1 + markup
+    return val
+
+
+
+
+    
