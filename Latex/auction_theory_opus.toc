@@ -1,0 +1,34 @@
+\beamer@sectionintoc {1}{Why Auctions Matter}{4}{1}{1}
+\beamer@sectionintoc {2}{Game-Theoretic Framework}{9}{2}{2}
+\beamer@sectionintoc {3}{Order Statistics}{18}{2}{3}
+\beamer@sectionintoc {4}{Envelope Theorem}{22}{2}{4}
+\beamer@sectionintoc {5}{Information Structures}{24}{2}{5}
+\beamer@sectionintoc {6}{Knowledge and Common Knowledge}{28}{2}{6}
+\beamer@sectionintoc {7}{Key Assumptions}{34}{3}{7}
+\beamer@sectionintoc {8}{English Auction}{36}{3}{8}
+\beamer@sectionintoc {9}{Second-Price Sealed-Bid}{39}{3}{9}
+\beamer@sectionintoc {10}{First-Price Sealed-Bid}{41}{3}{10}
+\beamer@sectionintoc {11}{Dutch Auction}{45}{3}{11}
+\beamer@sectionintoc {12}{All-Pay Auctions}{47}{3}{12}
+\beamer@sectionintoc {13}{War of Attrition}{52}{3}{13}
+\beamer@sectionintoc {14}{Contests}{56}{3}{14}
+\beamer@sectionintoc {15}{Strategic and Outcome Equivalences}{64}{4}{15}
+\beamer@sectionintoc {16}{Revenue Equivalence}{66}{4}{16}
+\beamer@sectionintoc {17}{Optimal Reserve Prices}{75}{4}{17}
+\beamer@sectionintoc {18}{Entry and Participation}{83}{4}{18}
+\beamer@sectionintoc {19}{Optimal Auction Design}{89}{4}{19}
+\beamer@sectionintoc {20}{Strategic Equivalences}{95}{4}{20}
+\beamer@sectionintoc {21}{Relaxing Risk Neutrality}{99}{5}{21}
+\beamer@sectionintoc {22}{Relaxing Symmetry}{103}{5}{22}
+\beamer@sectionintoc {23}{Relaxing Independent Private Values}{105}{5}{23}
+\beamer@subsectionintoc {23}{1}{Linkage Principle}{108}{5}{23}
+\beamer@sectionintoc {24}{Entry and Participation Costs}{110}{5}{24}
+\beamer@sectionintoc {25}{Multi-Unit Auctions}{114}{6}{25}
+\beamer@sectionintoc {26}{Position Auctions}{116}{6}{26}
+\beamer@sectionintoc {27}{Combinatorial Auctions}{128}{6}{27}
+\beamer@sectionintoc {28}{Collusion in Auctions}{139}{6}{28}
+\beamer@sectionintoc {29}{Real-World Examples}{144}{7}{29}
+\beamer@sectionintoc {30}{Procurement}{148}{7}{30}
+\beamer@sectionintoc {31}{Marketplace Design}{149}{7}{31}
+\beamer@sectionintoc {32}{Business Decision Framework}{151}{7}{32}
+\beamer@sectionintoc {33}{Key Takeaways}{166}{9}{33}

@@ -1,0 +1,40 @@
+\BOOKMARK [1][]{Outline1}{Introduction}{}% 1
+\BOOKMARK [2][]{Outline1.1}{Why Auctions Matter}{Outline1}% 2
+\BOOKMARK [1][]{Outline2}{Foundations}{}% 3
+\BOOKMARK [2][]{Outline2.2}{Game-Theoretic Framework}{Outline2}% 4
+\BOOKMARK [2][]{Outline2.3}{Order Statistics}{Outline2}% 5
+\BOOKMARK [2][]{Outline2.4}{Envelope Theorem}{Outline2}% 6
+\BOOKMARK [2][]{Outline2.5}{Information Structures}{Outline2}% 7
+\BOOKMARK [2][]{Outline2.6}{Knowledge and Common Knowledge}{Outline2}% 8
+\BOOKMARK [1][]{Outline3}{Single Item}{}% 9
+\BOOKMARK [2][]{Outline3.7}{Key Assumptions}{Outline3}% 10
+\BOOKMARK [2][]{Outline3.8}{English Auction}{Outline3}% 11
+\BOOKMARK [2][]{Outline3.9}{Second-Price Sealed-Bid}{Outline3}% 12
+\BOOKMARK [2][]{Outline3.10}{First-Price Sealed-Bid}{Outline3}% 13
+\BOOKMARK [2][]{Outline3.11}{Dutch Auction}{Outline3}% 14
+\BOOKMARK [2][]{Outline3.12}{All-Pay Auctions}{Outline3}% 15
+\BOOKMARK [2][]{Outline3.13}{War of Attrition}{Outline3}% 16
+\BOOKMARK [2][]{Outline3.14}{Contests}{Outline3}% 17
+\BOOKMARK [1][]{Outline4}{Core Results}{}% 18
+\BOOKMARK [2][]{Outline4.15}{Strategic and Outcome Equivalences}{Outline4}% 19
+\BOOKMARK [2][]{Outline4.16}{Revenue Equivalence}{Outline4}% 20
+\BOOKMARK [2][]{Outline4.17}{Optimal Reserve Prices}{Outline4}% 21
+\BOOKMARK [1][]{Outline5}{Relaxing Assumptions}{}% 22
+\BOOKMARK [2][]{Outline5.18}{Relaxing Risk Neutrality}{Outline5}% 23
+\BOOKMARK [2][]{Outline5.19}{Relaxing Symmetry}{Outline5}% 24
+\BOOKMARK [2][]{Outline5.20}{Relaxing Independent Private Values}{Outline5}% 25
+\BOOKMARK [3][]{Outline5.20.1.79}{Linkage Principle}{Outline5.20}% 26
+\BOOKMARK [2][]{Outline5.21}{Entry and Participation Costs}{Outline5}% 27
+\BOOKMARK [1][]{Outline6}{Numerous Items}{}% 28
+\BOOKMARK [2][]{Outline6.22}{Multi-Unit Auctions}{Outline6}% 29
+\BOOKMARK [2][]{Outline6.23}{Position Auctions}{Outline6}% 30
+\BOOKMARK [2][]{Outline6.24}{Combinatorial Auctions}{Outline6}% 31
+\BOOKMARK [2][]{Outline6.25}{Collusion in Auctions}{Outline6}% 32
+\BOOKMARK [1][]{Outline7}{Applications}{}% 33
+\BOOKMARK [2][]{Outline7.26}{Real-World Examples}{Outline7}% 34
+\BOOKMARK [2][]{Outline7.27}{Procurement}{Outline7}% 35
+\BOOKMARK [2][]{Outline7.28}{Marketplace Design}{Outline7}% 36
+\BOOKMARK [2][]{Outline7.29}{Business Decision Framework}{Outline7}% 37
+\BOOKMARK [1][]{Outline8}{Double Auctions}{}% 38
+\BOOKMARK [1][]{Outline9}{Summary}{}% 39
+\BOOKMARK [2][]{Outline9.30}{Key Takeaways}{Outline9}% 40

@@ -1,0 +1,42 @@
+\beamer@sectionintoc {1}{Game-Theoretic Foundations}{8}{2}{1}
+\beamer@sectionintoc {2}{Order Statistics Theory}{10}{2}{2}
+\beamer@sectionintoc {3}{Information Structures}{15}{2}{3}
+\beamer@sectionintoc {4}{Auction Formats}{19}{2}{4}
+\beamer@sectionintoc {5}{Equilibrium Concepts}{20}{2}{5}
+\beamer@sectionintoc {6}{Mathematical Tools and Techniques}{22}{2}{6}
+\beamer@sectionintoc {7}{Extensions and Applications}{24}{2}{7}
+\beamer@sectionintoc {8}{Game Theory Preliminaries}{27}{2}{8}
+\beamer@sectionintoc {9}{Epistemic Foundations and Knowledge Operators}{31}{2}{9}
+\beamer@sectionintoc {10}{Information Structure and Game-Theoretic Setup}{37}{2}{10}
+\beamer@sectionintoc {11}{Standard Auction Formats}{40}{3}{11}
+\beamer@subsectionintoc {11}{1}{English Auction}{41}{3}{11}
+\beamer@subsectionintoc {11}{2}{Dutch Auction}{44}{3}{11}
+\beamer@subsectionintoc {11}{3}{Sealed-Bid First price}{47}{3}{11}
+\beamer@subsectionintoc {11}{4}{Sealed-Bid Second-Price }{56}{3}{11}
+\beamer@subsectionintoc {11}{5}{All Pay}{59}{3}{11}
+\beamer@subsectionintoc {11}{6}{All Pay Second price/War of attrition}{66}{3}{11}
+\beamer@subsectionintoc {11}{7}{Tullock contests}{71}{3}{11}
+\beamer@subsectionintoc {11}{8}{Rank - Order Tournaments}{77}{3}{11}
+\beamer@subsectionintoc {11}{9}{Summary}{89}{3}{11}
+\beamer@sectionintoc {12}{Private Value Insights}{91}{5}{12}
+\beamer@subsectionintoc {12}{1}{Revenue Equivalence}{93}{5}{12}
+\beamer@subsectionintoc {12}{2}{Auction Trilemma}{97}{5}{12}
+\beamer@subsectionintoc {12}{3}{Reserve Prices}{98}{5}{12}
+\beamer@sectionintoc {13}{Common value Insights}{105}{5}{13}
+\beamer@subsectionintoc {13}{1}{Common Values and Winner's Curse}{105}{5}{13}
+\beamer@subsectionintoc {13}{2}{Information Revelation in Auctions}{109}{5}{13}
+\beamer@subsectionintoc {13}{3}{Affiliated Values and the Linkage Principle}{111}{5}{13}
+\beamer@subsectionintoc {13}{4}{Strategic Considerations}{115}{5}{13}
+\beamer@subsectionintoc {13}{5}{Summary and Key Takeaways}{117}{5}{13}
+\beamer@sectionintoc {14}{Multi Unit}{120}{6}{14}
+\beamer@sectionintoc {15}{Summary and Key Takeaways}{124}{6}{15}
+\beamer@sectionintoc {16}{Multi-Unit and Combinatorial Auctions}{126}{6}{16}
+\beamer@sectionintoc {17}{Relaxing the Assumptions}{128}{7}{17}
+\beamer@subsectionintoc {17}{1}{Relaxing risk neutrality}{129}{7}{17}
+\beamer@subsectionintoc {17}{2}{Asymmetric Bidders}{133}{7}{17}
+\beamer@subsectionintoc {17}{3}{Relaxing Independent Private Values}{136}{7}{17}
+\beamer@subsectionintoc {17}{4}{Relaxing Other Key Assumptions}{140}{7}{17}
+\beamer@sectionintoc {18}{Real-World Applications}{144}{8}{18}
+\beamer@sectionintoc {19}{Procurement Applications}{146}{8}{19}
+\beamer@sectionintoc {20}{Marketplace Design}{147}{8}{20}
+\beamer@sectionintoc {21}{Business Frameworks \& Action Items}{149}{9}{21}

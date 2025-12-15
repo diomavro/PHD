@@ -1,0 +1,41 @@
+class MyClass:
+    def __init__(self, attribute1, attribute2=None):
+        self.attribute1 = attribute1
+        if self.attribute1 == 'x':
+            if attribute2 is None:
+                raise ValueError("attribute2 is required when attribute1 is 'x'")
+        self.attribute2 = attribute2
+
+    @classmethod
+    def create_instance(cls, attribute1, **kwargs):
+        if attribute1 == 'x' and 'attribute2' not in kwargs:
+            raise ValueError("attribute2 is required when attribute1 is 'x'")
+        return cls(attribute1, **kwargs)
+
+# Usage examples
+try:
+    obj1 = MyClass('a')  # attribute2 is optional
+    obj2 = MyClass('x', 'required_value')  # attribute2 is required
+    print(obj1.__dict__)
+    print(obj2.__dict__)
+except ValueError as e:
+    print(e)
+
+try:
+    obj3 = MyClass('x')  # This should raise an error
+except ValueError as e:
+    print(e)  # Output: attribute2 is required when attribute1 is 'x'
+
+# Using class method
+try:
+    obj4 = MyClass.create_instance('x', attribute2='required_value')
+    print(obj4.__dict__)
+    obj5 = MyClass.create_instance('a')  # attribute2 is optional
+    print(obj5.__dict__)
+except ValueError as e:
+    print(e)
+
+try:
+    obj6 = MyClass.create_instance('x')  # This should raise an error
+except ValueError as e:
+    print(e)  # Output: attribute2 is required when attribute1 is 'x'

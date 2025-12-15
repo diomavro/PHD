@@ -1,0 +1,51 @@
+\BOOKMARK [1][]{Outline1}{Why Auctions Matter}{}% 1
+\BOOKMARK [1][]{Outline2}{prereq}{}% 2
+\BOOKMARK [2][]{Outline2.1}{Game-Theoretic Foundations}{Outline2}% 3
+\BOOKMARK [2][]{Outline2.2}{Order Statistics Theory}{Outline2}% 4
+\BOOKMARK [2][]{Outline2.3}{Information Structures}{Outline2}% 5
+\BOOKMARK [2][]{Outline2.4}{Auction Formats}{Outline2}% 6
+\BOOKMARK [2][]{Outline2.5}{Equilibrium Concepts}{Outline2}% 7
+\BOOKMARK [2][]{Outline2.6}{Mathematical Tools and Techniques}{Outline2}% 8
+\BOOKMARK [2][]{Outline2.7}{Extensions and Applications}{Outline2}% 9
+\BOOKMARK [2][]{Outline2.8}{Game Theory Preliminaries}{Outline2}% 10
+\BOOKMARK [2][]{Outline2.9}{Epistemic Foundations and Knowledge Operators}{Outline2}% 11
+\BOOKMARK [2][]{Outline2.10}{Information Structure and Game-Theoretic Setup}{Outline2}% 12
+\BOOKMARK [1][]{Outline3}{Definitions}{}% 13
+\BOOKMARK [2][]{Outline3.11}{Standard Auction Formats}{Outline3}% 14
+\BOOKMARK [3][]{Outline3.11.1.41}{English Auction}{Outline3.11}% 15
+\BOOKMARK [3][]{Outline3.11.2.44}{Dutch Auction}{Outline3.11}% 16
+\BOOKMARK [3][]{Outline3.11.3.47}{Sealed-Bid First price}{Outline3.11}% 17
+\BOOKMARK [3][]{Outline3.11.4.56}{Sealed-Bid Second-Price }{Outline3.11}% 18
+\BOOKMARK [3][]{Outline3.11.5.59}{All Pay}{Outline3.11}% 19
+\BOOKMARK [3][]{Outline3.11.6.66}{All Pay Second price/War of attrition}{Outline3.11}% 20
+\BOOKMARK [3][]{Outline3.11.7.71}{Tullock contests}{Outline3.11}% 21
+\BOOKMARK [3][]{Outline3.11.8.77}{Rank - Order Tournaments}{Outline3.11}% 22
+\BOOKMARK [3][]{Outline3.11.9.89}{Summary}{Outline3.11}% 23
+\BOOKMARK [1][]{Outline4}{Assumptions}{}% 24
+\BOOKMARK [1][]{Outline5}{Results}{}% 25
+\BOOKMARK [2][]{Outline5.12}{Private Value Insights}{Outline5}% 26
+\BOOKMARK [3][]{Outline5.12.1.93}{Revenue Equivalence}{Outline5.12}% 27
+\BOOKMARK [3][]{Outline5.12.2.97}{Auction Trilemma}{Outline5.12}% 28
+\BOOKMARK [3][]{Outline5.12.3.98}{Reserve Prices}{Outline5.12}% 29
+\BOOKMARK [2][]{Outline5.13}{Common value Insights}{Outline5}% 30
+\BOOKMARK [3][]{Outline5.13.1.105}{Common Values and Winner's Curse}{Outline5.13}% 31
+\BOOKMARK [3][]{Outline5.13.2.109}{Information Revelation in Auctions}{Outline5.13}% 32
+\BOOKMARK [3][]{Outline5.13.3.111}{Affiliated Values and the Linkage Principle}{Outline5.13}% 33
+\BOOKMARK [3][]{Outline5.13.4.115}{Strategic Considerations}{Outline5.13}% 34
+\BOOKMARK [3][]{Outline5.13.5.117}{Summary and Key Takeaways}{Outline5.13}% 35
+\BOOKMARK [1][]{Outline6}{Extensions}{}% 36
+\BOOKMARK [2][]{Outline6.14}{Multi Unit}{Outline6}% 37
+\BOOKMARK [2][]{Outline6.15}{Summary and Key Takeaways}{Outline6}% 38
+\BOOKMARK [2][]{Outline6.16}{Multi-Unit and Combinatorial Auctions}{Outline6}% 39
+\BOOKMARK [1][]{Outline7}{Relaxing assumptions}{}% 40
+\BOOKMARK [2][]{Outline7.17}{Relaxing the Assumptions}{Outline7}% 41
+\BOOKMARK [3][]{Outline7.17.1.129}{Relaxing risk neutrality}{Outline7.17}% 42
+\BOOKMARK [3][]{Outline7.17.2.133}{Asymmetric Bidders}{Outline7.17}% 43
+\BOOKMARK [3][]{Outline7.17.3.136}{Relaxing Independent Private Values}{Outline7.17}% 44
+\BOOKMARK [3][]{Outline7.17.4.140}{Relaxing Other Key Assumptions}{Outline7.17}% 45
+\BOOKMARK [1][]{Outline8}{Applications}{}% 46
+\BOOKMARK [2][]{Outline8.18}{Real-World Applications}{Outline8}% 47
+\BOOKMARK [2][]{Outline8.19}{Procurement Applications}{Outline8}% 48
+\BOOKMARK [2][]{Outline8.20}{Marketplace Design}{Outline8}% 49
+\BOOKMARK [1][]{Outline9}{Business applications}{}% 50
+\BOOKMARK [2][]{Outline9.21}{Business Frameworks \046 Action Items}{Outline9}% 51

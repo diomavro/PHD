@@ -1,0 +1,31 @@
+\beamer@sectionintoc {1}{Why Auctions Matter}{3}{1}{1}
+\beamer@sectionintoc {2}{Game-Theoretic Framework}{7}{2}{2}
+\beamer@sectionintoc {3}{Order Statistics}{15}{2}{3}
+\beamer@sectionintoc {4}{Envelope Theorem}{18}{2}{4}
+\beamer@sectionintoc {5}{Information Structures}{19}{2}{5}
+\beamer@sectionintoc {6}{Knowledge and Common Knowledge}{22}{2}{6}
+\beamer@sectionintoc {7}{Key Assumptions}{27}{3}{7}
+\beamer@sectionintoc {8}{English Auction}{29}{3}{8}
+\beamer@sectionintoc {9}{Second-Price Sealed-Bid}{32}{3}{9}
+\beamer@sectionintoc {10}{First-Price Sealed-Bid}{34}{3}{10}
+\beamer@sectionintoc {11}{Dutch Auction}{38}{3}{11}
+\beamer@sectionintoc {12}{All-Pay Auctions}{40}{3}{12}
+\beamer@sectionintoc {13}{War of Attrition}{45}{3}{13}
+\beamer@sectionintoc {14}{Contests}{49}{3}{14}
+\beamer@sectionintoc {15}{Strategic and Outcome Equivalences}{54}{4}{15}
+\beamer@sectionintoc {16}{Revenue Equivalence}{56}{4}{16}
+\beamer@sectionintoc {17}{Optimal Reserve Prices}{62}{4}{17}
+\beamer@sectionintoc {18}{Relaxing Risk Neutrality}{70}{5}{18}
+\beamer@sectionintoc {19}{Relaxing Symmetry}{74}{5}{19}
+\beamer@sectionintoc {20}{Relaxing Independent Private Values}{76}{5}{20}
+\beamer@subsectionintoc {20}{1}{Linkage Principle}{79}{5}{20}
+\beamer@sectionintoc {21}{Entry and Participation Costs}{81}{5}{21}
+\beamer@sectionintoc {22}{Multi-Unit Auctions}{85}{6}{22}
+\beamer@sectionintoc {23}{Position Auctions}{87}{6}{23}
+\beamer@sectionintoc {24}{Combinatorial Auctions}{99}{6}{24}
+\beamer@sectionintoc {25}{Collusion in Auctions}{110}{6}{25}
+\beamer@sectionintoc {26}{Real-World Examples}{115}{7}{26}
+\beamer@sectionintoc {27}{Procurement}{119}{7}{27}
+\beamer@sectionintoc {28}{Marketplace Design}{120}{7}{28}
+\beamer@sectionintoc {29}{Business Decision Framework}{122}{7}{29}
+\beamer@sectionintoc {30}{Key Takeaways}{137}{9}{30}
